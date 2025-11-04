@@ -1,0 +1,185 @@
+---
+title: "Reddit - Brazil"
+subtitle: "Platform Evaluation Report"
+---
+
+```{python}
+#| label: setup
+#| include: false
+
+# Add parent directory to path to import utils
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path.cwd().parent))
+
+# Import scoring utilities
+from utils.scoring import calculate_platform_score
+import pandas as pd
+
+# Calculate scores for Reddit Brazil
+results = calculate_platform_score(
+    platform='reddit',
+    country='BR'
+)
+
+# Extract data for easy access
+metadata = results['metadata']
+```
+
+# Executive Summary
+
+**Platform:** `{python} metadata['platform']`
+**Country:** `{python} metadata['country_name']` (`{python} metadata['country_code']`)
+**Evaluation Date:** `{python} metadata['evaluation_date']`
+
+## Overall Score
+
+```{python}
+#| label: overall-score
+#| echo: false
+
+print(f"**Total Score:** {results['total_score']:.2f} / {results['total_max']:.2f} ({results['total_percentage']:.1f}%)")
+```
+
+::: {.callout-note}
+## Score Interpretation
+- **75-100%**: Excellent compliance
+- **50-74%**: Moderate compliance
+- **25-49%**: Limited compliance
+- **0-24%**: Poor compliance
+:::
+
+# User-Generated Content (UGC)
+
+```{python}
+#| label: ugc-summary
+#| echo: false
+
+print(f"**UGC Score:** {results['ugc_score']:.2f} / {results['ugc_max']:.2f} ({results['ugc_percentage']:.1f}%)")
+```
+
+## Detailed UGC Results
+
+```{python}
+#| label: ugc-table
+#| echo: false
+
+# Create DataFrame for UGC results
+ugc_df = pd.DataFrame(results['ugc_details'])
+
+# Display formatted table
+display_df = ugc_df[[
+    'question_code',
+    'question_text',
+    'selected_label',
+    'question_weight',
+    'answer_weight',
+    'question_score',
+    'question_max'
+]].copy()
+
+display_df.columns = [
+    'Code', 'Question', 'Answer',
+    'Q Weight', 'A Weight', 'Score', 'Max'
+]
+
+display_df
+```
+
+### Key Findings - UGC
+
+```{python}
+#| label: ugc-findings
+#| echo: false
+#| results: asis
+
+for item in results['ugc_details']:
+    print(f"\n**{item['question_code']}**: {item['question_text']}")
+    print(f"\n- **Answer**: {item['selected_label']}")
+    print(f"- **Score**: {item['question_score']:.2f} / {item['question_max']:.2f}")
+    if item['notes']:
+        print(f"- **Notes**: {item['notes']}")
+```
+
+# Advertising (ADS)
+
+```{python}
+#| label: ads-summary
+#| echo: false
+
+print(f"**ADS Score:** {results['ads_score']:.2f} / {results['ads_max']:.2f} ({results['ads_percentage']:.1f}%)")
+```
+
+## Detailed ADS Results
+
+```{python}
+#| label: ads-table
+#| echo: false
+
+# Create DataFrame for ADS results
+ads_df = pd.DataFrame(results['ads_details'])
+
+# Display formatted table
+display_df = ads_df[[
+    'question_code',
+    'question_text',
+    'selected_label',
+    'question_weight',
+    'answer_weight',
+    'question_score',
+    'question_max'
+]].copy()
+
+display_df.columns = [
+    'Code', 'Question', 'Answer',
+    'Q Weight', 'A Weight', 'Score', 'Max'
+]
+
+display_df
+```
+
+### Key Findings - ADS
+
+```{python}
+#| label: ads-findings
+#| echo: false
+#| results: asis
+
+for item in results['ads_details']:
+    print(f"\n**{item['question_code']}**: {item['question_text']}")
+    print(f"\n- **Answer**: {item['selected_label']}")
+    print(f"- **Score**: {item['question_score']:.2f} / {item['question_max']:.2f}")
+    if item['notes']:
+        print(f"- **Notes**: {item['notes']}")
+```
+
+# Conclusions
+
+```{python}
+#| label: conclusions
+#| echo: false
+#| results: asis
+
+# Provide automated conclusions based on scores
+if results['total_percentage'] >= 75:
+    print("Reddit demonstrates **excellent compliance** with evaluation criteria in Brazil.")
+elif results['total_percentage'] >= 50:
+    print("Reddit shows **moderate compliance** with evaluation criteria in Brazil, with room for improvement.")
+elif results['total_percentage'] >= 25:
+    print("Reddit has **limited compliance** with evaluation criteria in Brazil and needs significant improvements.")
+else:
+    print("Reddit shows **poor compliance** with evaluation criteria in Brazil and requires substantial policy changes.")
+
+# Compare UGC vs ADS
+if results['ugc_percentage'] > results['ads_percentage'] + 10:
+    print("\n\nUGC policies are notably stronger than advertising transparency measures.")
+elif results['ads_percentage'] > results['ugc_percentage'] + 10:
+    print("\n\nAdvertising transparency measures are notably stronger than UGC policies.")
+else:
+    print("\n\nUGC and advertising measures show similar levels of development.")
+```
+
+# References
+
+::: {#refs}
+:::

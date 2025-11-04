@@ -1,0 +1,22 @@
+# Custom brand colors for Social Media Evaluation reports
+# These colors are used throughout HTML output
+
+scss:
+  # Primary brand colors
+  primary: "#2C5F8D"           # Deep blue for headers
+  secondary: "#45B7D1"         # Light blue for accents
+
+  # Semantic colors for scoring
+  success: "#27AE60"           # Green for high scores
+  warning: "#F39C12"           # Orange for medium scores
+  danger: "#E74C3C"            # Red for low scores
+  info: "#3498DB"              # Blue for informational elements
+
+  # Background and text
+  body-bg: "#FFFFFF"           # White background
+  body-color: "#2C3E50"        # Dark gray text
+  link-color: "#2C5F8D"        # Links match primary
+
+  # Code blocks
+  code-bg: "#F8F9FA"           # Light gray for code backgrounds
+  code-color: "#E83E8C"        # Pink for inline code

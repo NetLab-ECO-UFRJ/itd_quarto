@@ -1,0 +1,51 @@
+---
+title: "Social Media Platform Evaluation"
+subtitle: "Comparative Analysis Framework"
+---
+
+# Overview
+
+This research reporting system evaluates social media platforms across multiple dimensions:
+
+- **User-Generated Content (UGC)**: Content moderation, reporting mechanisms, transparency
+- **Advertising (ADS)**: Ad transparency, political ad labeling, targeting restrictions
+
+## Methodology
+
+Each platform is evaluated using a **weighted scoring system**:
+
+1. **Questions** are defined in `data/questions.yml` with importance weights
+2. **Answers** are selected for each platform/country combination
+3. **Scores** are calculated as: `question_weight × answer_weight`
+4. **Category scores** aggregate all questions in UGC or ADS categories
+5. **Total scores** combine both categories for overall assessment
+
+## Scoring Scale
+
+- **Answer weights**: 0.0 (worst) to 1.0 (best)
+- **Question weights**: 1.0 (standard) to 2.5+ (critical importance)
+- **Final scores**: Presented as actual/max and percentage
+
+## Regional Coverage
+
+This system supports evaluation across multiple regions:
+
+- **BR**: Brazil
+- **UK**: United Kingdom
+- **EU**: European Union
+
+## Platform Reports
+
+Navigate to specific platform reports in the sidebar to view detailed evaluations.
+
+## Data Sources
+
+Evaluations are based on:
+
+- Platform policy documents
+- Transparency reports
+- Independent audits
+- Regulatory filings
+- User testing
+
+See the bibliography for specific references.
