@@ -34,12 +34,7 @@ metadata = results['metadata']
 
 ## Overall Score
 
-```{python}
-#| label: overall-score
-#| echo: false
-
-print(f"**Total Score:** {results['total_score']:.2f} / {results['total_max']:.2f} ({results['total_percentage']:.1f}%)")
-```
+**Total Score:** `{python} f"{results['total_score']:.2f}"` / `{python} f"{results['total_max']:.2f}"` (`{python} f"{results['total_percentage']:.1f}"`%)
 
 ::: {.callout-note}
 ## Score Interpretation
@@ -51,12 +46,7 @@ print(f"**Total Score:** {results['total_score']:.2f} / {results['total_max']:.2
 
 # User-Generated Content (UGC)
 
-```{python}
-#| label: ugc-summary
-#| echo: false
-
-print(f"**UGC Score:** {results['ugc_score']:.2f} / {results['ugc_max']:.2f} ({results['ugc_percentage']:.1f}%)")
-```
+**UGC Score:** `{python} f"{results['ugc_score']:.2f}"` / `{python} f"{results['ugc_max']:.2f}"` (`{python} f"{results['ugc_percentage']:.1f}"`%)
 
 ## Detailed UGC Results
 
@@ -86,29 +76,25 @@ display_df.columns = [
 display_df
 ```
 
-### Key Findings - UGC
+## Key Findings - UGC
 
 ```{python}
 #| label: ugc-findings
 #| echo: false
-#| results: asis
+#| output: asis
 
 for item in results['ugc_details']:
-    print(f"\n**{item['question_code']}**: {item['question_text']}")
-    print(f"\n- **Answer**: {item['selected_label']}")
-    print(f"- **Score**: {item['question_score']:.2f} / {item['question_max']:.2f}")
+    print(f"\n#### {item['question_code']}: {item['question_text']}\n")
+    print(f"**Answer:** {item['selected_label']}  ")
+    print(f"**Score:** {item['question_score']:.2f} / {item['question_max']:.2f} ({item['question_score']/item['question_max']*100:.1f}%)  ")
     if item['notes']:
-        print(f"- **Notes**: {item['notes']}")
+        print(f"**Notes:** {item['notes']}  ")
+    print()
 ```
 
 # Advertising (ADS)
 
-```{python}
-#| label: ads-summary
-#| echo: false
-
-print(f"**ADS Score:** {results['ads_score']:.2f} / {results['ads_max']:.2f} ({results['ads_percentage']:.1f}%)")
-```
+**ADS Score:** `{python} f"{results['ads_score']:.2f}"` / `{python} f"{results['ads_max']:.2f}"` (`{python} f"{results['ads_percentage']:.1f}"`%)
 
 ## Detailed ADS Results
 
@@ -138,19 +124,20 @@ display_df.columns = [
 display_df
 ```
 
-### Key Findings - ADS
+## Key Findings - ADS
 
 ```{python}
 #| label: ads-findings
 #| echo: false
-#| results: asis
+#| output: asis
 
 for item in results['ads_details']:
-    print(f"\n**{item['question_code']}**: {item['question_text']}")
-    print(f"\n- **Answer**: {item['selected_label']}")
-    print(f"- **Score**: {item['question_score']:.2f} / {item['question_max']:.2f}")
+    print(f"\n#### {item['question_code']}: {item['question_text']}\n")
+    print(f"**Answer:** {item['selected_label']}  ")
+    print(f"**Score:** {item['question_score']:.2f} / {item['question_max']:.2f} ({item['question_score']/item['question_max']*100:.1f}%)  ")
     if item['notes']:
-        print(f"- **Notes**: {item['notes']}")
+        print(f"**Notes:** {item['notes']}  ")
+    print()
 ```
 
 # Conclusions
@@ -158,25 +145,25 @@ for item in results['ads_details']:
 ```{python}
 #| label: conclusions
 #| echo: false
-#| results: asis
+#| output: asis
 
 # Provide automated conclusions based on scores
 if results['total_percentage'] >= 75:
-    print("Reddit demonstrates **excellent compliance** with evaluation criteria in Brazil.")
+    print("Reddit demonstrates **excellent compliance** with evaluation criteria in Brazil.\n")
 elif results['total_percentage'] >= 50:
-    print("Reddit shows **moderate compliance** with evaluation criteria in Brazil, with room for improvement.")
+    print("Reddit shows **moderate compliance** with evaluation criteria in Brazil, with room for improvement.\n")
 elif results['total_percentage'] >= 25:
-    print("Reddit has **limited compliance** with evaluation criteria in Brazil and needs significant improvements.")
+    print("Reddit has **limited compliance** with evaluation criteria in Brazil and needs significant improvements.\n")
 else:
-    print("Reddit shows **poor compliance** with evaluation criteria in Brazil and requires substantial policy changes.")
+    print("Reddit shows **poor compliance** with evaluation criteria in Brazil and requires substantial policy changes.\n")
 
 # Compare UGC vs ADS
 if results['ugc_percentage'] > results['ads_percentage'] + 10:
-    print("\n\nUGC policies are notably stronger than advertising transparency measures.")
+    print("\nUGC policies are notably stronger than advertising transparency measures.")
 elif results['ads_percentage'] > results['ugc_percentage'] + 10:
-    print("\n\nAdvertising transparency measures are notably stronger than UGC policies.")
+    print("\nAdvertising transparency measures are notably stronger than UGC policies.")
 else:
-    print("\n\nUGC and advertising measures show similar levels of development.")
+    print("\nUGC and advertising measures show similar levels of development.")
 ```
 
 # References

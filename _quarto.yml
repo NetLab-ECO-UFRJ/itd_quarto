@@ -9,6 +9,10 @@ book:
   date: today
   chapters:
     - index.qmd
+    - part: "Framework"
+      chapters:
+        - introduction.qmd
+        - methodology.qmd
     - part: "Country Reports"
       chapters:
         - reports/reddit_br.qmd

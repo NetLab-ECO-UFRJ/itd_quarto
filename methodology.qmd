@@ -1,0 +1,242 @@
+---
+title: "Methodology"
+---
+
+# Evaluation Framework
+
+This evaluation system uses a **weighted scoring methodology** that accounts for both the importance of different questions and the quality of platform responses. This approach provides nuanced, comparable assessments across platforms and regions.
+
+## Core Principles
+
+The methodology is built on three principles:
+
+1. **Not all questions are equally important** — Some aspects of platform governance (e.g., political ad transparency) may be more critical than others
+2. **Not all answers are equally good** — Partial compliance should be distinguished from full compliance
+3. **Scores should be transparent and reproducible** — The calculation method must be explicit and verifiable
+
+## Two-Level Weighting System
+
+### Question Weights
+
+Each evaluation question is assigned an **importance weight** reflecting its significance for platform accountability and user protection.
+
+**Weight Scale:**
+
+- **1.0**: Standard importance
+- **1.5**: Elevated importance
+- **2.0**: High importance
+- **2.5+**: Critical importance
+
+**Example:**
+```yaml
+- code: ADS_01
+  text: "Does the platform provide ad transparency tools?"
+  weight: 2.5  # Critical importance
+```
+
+Question weights are determined based on:
+
+- Regulatory requirements (e.g., DSA mandates)
+- Research evidence on harm reduction
+- Best practices in platform governance
+- Stakeholder input from civil society and academia
+
+### Answer Weights
+
+Each possible answer to a question receives a **performance weight** representing the quality of implementation.
+
+**Weight Scale:**
+
+- **1.0**: Best practice / Full compliance
+- **0.7-0.9**: Strong implementation with minor gaps
+- **0.4-0.6**: Moderate implementation with notable limitations
+- **0.1-0.3**: Minimal implementation
+- **0.0**: No implementation / Non-compliance
+
+**Example:**
+```yaml
+answers:
+  - value: "no"
+    label: "No ad transparency tools"
+    weight: 0.0
+  - value: "limited"
+    label: "Basic tools with limited information"
+    weight: 0.4
+  - value: "comprehensive"
+    label: "Comprehensive ad library and tools"
+    weight: 1.0
+```
+
+## Score Calculation
+
+### Individual Question Score
+
+For each question, the score is calculated by multiplying the question weight by the selected answer weight:
+
+$$
+\text{Question Score} = \text{Question Weight} \times \text{Answer Weight}
+$$
+
+**Example Calculation:**
+
+- **Question**: "Does the platform provide ad transparency tools?"
+- **Question Weight**: 2.5 (critical importance)
+- **Selected Answer**: "limited"
+- **Answer Weight**: 0.4 (moderate implementation)
+- **Question Score**: $2.5 \times 0.4 = 1.0$
+- **Maximum Possible**: $2.5 \times 1.0 = 2.5$
+- **Percentage**: $1.0 / 2.5 = 40\%$
+
+### Category Scores
+
+Questions are grouped into two categories:
+
+1. **UGC (User-Generated Content)**: Content moderation, reporting, transparency
+2. **ADS (Advertising)**: Ad transparency, political ads, targeting restrictions
+
+The category score is the sum of all question scores within that category:
+
+$$
+\text{Category Score} = \sum_{i=1}^{n} (\text{Question Weight}_i \times \text{Answer Weight}_i)
+$$
+
+### Total Platform Score
+
+The total score combines both categories:
+
+$$
+\text{Total Score} = \text{UGC Score} + \text{ADS Score}
+$$
+
+### Percentage Scores
+
+For easier interpretation, scores are also expressed as percentages:
+
+$$
+\text{Percentage} = \frac{\text{Actual Score}}{\text{Maximum Possible Score}} \times 100\%
+$$
+
+## Worked Example
+
+Consider a simplified evaluation with three questions:
+
+| Code | Category | Question | Q Weight | Answer | A Weight | Score | Max |
+|------|----------|----------|----------|--------|----------|-------|-----|
+| UGC_01 | UGC | Content policies? | 2.0 | yes | 1.0 | 2.0 | 2.0 |
+| UGC_02 | UGC | Reporting tools? | 1.5 | moderate | 0.6 | 0.9 | 1.5 |
+| ADS_01 | ADS | Ad transparency? | 2.5 | limited | 0.4 | 1.0 | 2.5 |
+
+**Category Scores:**
+
+- UGC Score: $2.0 + 0.9 = 2.9$ out of $3.5$ (83%)
+- ADS Score: $1.0$ out of $2.5$ (40%)
+
+**Total Score:**
+
+- Combined: $2.9 + 1.0 = 3.9$ out of $6.0$ (65%)
+
+**Interpretation:**
+
+This platform shows strong UGC practices but significant gaps in advertising transparency.
+
+## Data Collection Process
+
+### Question Definition
+
+Questions are defined collaboratively through:
+
+1. Review of regulatory requirements
+2. Analysis of platform policy documents
+3. Consultation with domain experts
+4. Pilot testing with sample platforms
+
+### Answer Selection
+
+For each platform and country, answers are selected based on:
+
+- **Platform policy documents**: Terms of service, community guidelines, ad policies
+- **Transparency reports**: Published data on moderation and enforcement
+- **Platform features**: Direct testing of reporting mechanisms, ad libraries, etc.
+- **Third-party audits**: Independent assessments and research studies
+- **Regulatory filings**: Submissions to government agencies
+
+### Quality Assurance
+
+To ensure reliability:
+
+- **Documentation**: All answer selections include notes with evidence sources
+- **Dual review**: Assessments reviewed by multiple evaluators
+- **Temporal tracking**: Evaluations dated to enable longitudinal analysis
+- **Regular updates**: Quarterly or biannual reassessment
+
+## Score Interpretation Guidelines
+
+### Overall Score Ranges
+
+- **75-100%**: **Excellent compliance** — Platform demonstrates strong practices across most areas
+- **50-74%**: **Moderate compliance** — Platform has foundational policies but with notable gaps
+- **25-49%**: **Limited compliance** — Platform shows minimal implementation of accountability measures
+- **0-24%**: **Poor compliance** — Platform lacks basic transparency and accountability mechanisms
+
+### Category Comparison
+
+Comparing UGC vs. ADS scores can reveal platform priorities:
+
+- **UGC >> ADS**: Strong content moderation but weak advertising oversight
+- **ADS >> UGC**: Strong ad transparency but gaps in content governance
+- **UGC ≈ ADS**: Balanced approach to both dimensions
+
+## Limitations and Considerations
+
+### What This Methodology Captures
+
+- Presence and quality of **formal policies and tools**
+- **Public-facing transparency** mechanisms
+- **Documented practices** and commitments
+
+### What This Methodology Does Not Capture
+
+- **Actual enforcement consistency** in practice
+- **Response times** or efficiency of moderation
+- **User satisfaction** with platform governance
+- **Scale of moderation** relative to platform size
+- **Content accuracy** of moderation decisions
+
+### Addressing Limitations
+
+Users of this evaluation system should:
+
+- Combine quantitative scores with **qualitative analysis**
+- Consider **multiple data sources** beyond platform self-reporting
+- Account for **resource constraints** affecting smaller platforms
+- Recognize that **policy does not equal practice**
+
+## Technical Implementation
+
+The scoring system is implemented in Python with the following components:
+
+- **data/questions.yml**: Question definitions with weights and answer options
+- **data/answers/*.yml**: Platform-specific answer selections
+- **utils/loader.py**: YAML parsing and data loading
+- **utils/scoring.py**: Score calculation engine
+
+This modular design enables:
+
+- Easy addition of new questions
+- Straightforward platform evaluations
+- Reproducible calculations
+- Integration with Quarto for report generation
+
+## Future Development
+
+Planned methodology enhancements include:
+
+- Additional question categories (e.g., data privacy, algorithmic transparency)
+- Longitudinal trend analysis across evaluation periods
+- Cross-platform comparative rankings
+- Integration with automated policy monitoring tools
+- Expanded regional coverage
+
+## References
+
+For detailed information on regulatory frameworks and platform governance research, see the bibliography.

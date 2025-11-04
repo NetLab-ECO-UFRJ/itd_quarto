@@ -3,49 +3,52 @@ title: "Social Media Platform Evaluation"
 subtitle: "Comparative Analysis Framework"
 ---
 
-# Overview
+# Welcome
 
-This research reporting system evaluates social media platforms across multiple dimensions:
+This book presents a systematic framework for evaluating social media platforms across multiple regions, with a focus on accountability, transparency, and user protection.
 
-- **User-Generated Content (UGC)**: Content moderation, reporting mechanisms, transparency
-- **Advertising (ADS)**: Ad transparency, political ad labeling, targeting restrictions
+## What This Book Covers
 
-## Methodology
+This evaluation system assesses platforms across two critical dimensions:
 
-Each platform is evaluated using a **weighted scoring system**:
+- **User-Generated Content (UGC)**: Content moderation policies, reporting mechanisms, and transparency
+- **Advertising (ADS)**: Ad transparency tools, political ad labeling, and targeting restrictions
 
-1. **Questions** are defined in `data/questions.yml` with importance weights
-2. **Answers** are selected for each platform/country combination
-3. **Scores** are calculated as: `question_weight × answer_weight`
-4. **Category scores** aggregate all questions in UGC or ADS categories
-5. **Total scores** combine both categories for overall assessment
+## How to Use This Book
 
-## Scoring Scale
+Navigate through the sections using the sidebar:
 
-- **Answer weights**: 0.0 (worst) to 1.0 (best)
-- **Question weights**: 1.0 (standard) to 2.5+ (critical importance)
-- **Final scores**: Presented as actual/max and percentage
+### Framework
+Start here to understand the evaluation approach:
 
-## Regional Coverage
+- **Introduction and Context**: Background on the regulatory landscape and project scope
+- **Methodology**: Detailed explanation of the weighted scoring system
 
-This system supports evaluation across multiple regions:
+### Country Reports
+Review platform-specific evaluations:
 
-- **BR**: Brazil
-- **UK**: United Kingdom
-- **EU**: European Union
+- Comprehensive assessments for each platform and region
+- Detailed scores and findings
+- Evidence-based recommendations
 
-## Platform Reports
+## Key Features
 
-Navigate to specific platform reports in the sidebar to view detailed evaluations.
+- **Weighted scoring methodology** that accounts for question importance and answer quality
+- **Transparent calculations** with clear formulas and examples
+- **Multi-regional coverage** (Brazil, United Kingdom, European Union)
+- **Reproducible framework** built with Quarto and Python
+- **Evidence-based evaluations** with documented sources
 
-## Data Sources
+## Quick Overview
 
-Evaluations are based on:
+Platforms are evaluated using a two-level weighting system:
 
-- Platform policy documents
-- Transparency reports
-- Independent audits
-- Regulatory filings
-- User testing
+- **Question weights** (1.0 to 2.5+) reflect importance
+- **Answer weights** (0.0 to 1.0) reflect implementation quality
+- **Scores** = question weight × answer weight
 
-See the bibliography for specific references.
+Results are presented as both raw scores and percentages for easy interpretation.
+
+---
+
+**Begin by reading the [Introduction and Context](#) to understand the project background, or jump directly to the [Methodology](#) to learn about the scoring system.**
