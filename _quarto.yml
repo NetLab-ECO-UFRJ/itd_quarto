@@ -3,9 +3,9 @@ project:
   output-dir: _output
 
 book:
-  title: "Social Media Platform Evaluation"
-  subtitle: "Comparative Analysis Across Regions"
-  author: "Research Team"
+  title: "ITD"
+  subtitle: "XXXXXx"
+  author: "NetLab/UFRJ"
   date: today
   chapters:
     - index.qmd
@@ -16,8 +16,8 @@ book:
     - part: "Country Reports"
       chapters:
         - reports/reddit_br.qmd
-  page-footer:
-    center: "© 2025 Social Media Evaluation Project"
+  # page-footer:
+  #   center: "© 2025 Social Media Evaluation Project"
 
 bibliography:
   - bib/references_global.bib
@@ -25,7 +25,6 @@ bibliography:
 format:
   html:
     theme:
-      - cosmo
       - _brand.yml
     toc: true
     toc-depth: 3

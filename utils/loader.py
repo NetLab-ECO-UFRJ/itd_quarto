@@ -10,6 +10,10 @@ from pathlib import Path
 from typing import Dict, List, Any
 
 
+# Get the project root directory (parent of utils/)
+PROJECT_ROOT = Path(__file__).parent.parent
+
+
 def load_questions(questions_path: str = "data/questions.yml") -> Dict[str, Any]:
     """
     Load the global questions configuration.
@@ -30,7 +34,9 @@ def load_questions(questions_path: str = "data/questions.yml") -> Dict[str, Any]
             }
         }
     """
-    with open(questions_path, 'r', encoding='utf-8') as f:
+    # Resolve path relative to project root
+    full_path = PROJECT_ROOT / questions_path
+    with open(full_path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
 
     # Convert list to dictionary indexed by question code for easier lookup
@@ -64,7 +70,8 @@ def load_answers(platform: str, country: str,
     """
     # Build filename: platform_country.yml (lowercase)
     filename = f"{platform.lower()}_{country.lower()}.yml"
-    filepath = Path(answers_dir) / filename
+    # Resolve path relative to project root
+    filepath = PROJECT_ROOT / answers_dir / filename
 
     if not filepath.exists():
         raise FileNotFoundError(f"Answer file not found: {filepath}")
