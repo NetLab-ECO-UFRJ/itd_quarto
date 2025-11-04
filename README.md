@@ -67,13 +67,13 @@ questions:
 ```
 
 ### 2. Create Answer Files
-Create `data/answers/{platform}_{country}.yml`:
+Create `data/answers/{platform}_{region}.yml`:
 
 ```yaml
 metadata:
   platform: "Reddit"
-  country_code: "BR"
-  country_name: "Brazil"
+  region_code: "BR"
+  region_name: "Brazil"
   evaluation_date: "2025-01-15"
 
 ugc_answers:
@@ -88,11 +88,11 @@ ads_answers:
 ```
 
 ### 3. Create Report File
-Create `reports/{platform}_{country}.qmd`:
+Create `reports/{platform}_{region}.qmd`:
 
 ```markdown
 ---
-title: "Platform - Country"
+title: "Platform - Region"
 ---
 
 \```{python}
@@ -100,7 +100,7 @@ from utils.scoring import calculate_platform_score
 
 results = calculate_platform_score(
     platform='reddit',
-    country='BR'
+    region='BR'
 )
 \```
 
@@ -155,8 +155,8 @@ print(f"ADS: {results['ads_percentage']:.1f}%")
 
 ## Adding New Platforms
 
-1. **Create answer file**: `data/answers/{platform}_{country}.yml`
-2. **Create report**: `reports/{platform}_{country}.qmd`
+1. **Create answer file**: `data/answers/{platform}_{region}.yml`
+2. **Create report**: `reports/{platform}_{region}.qmd`
 3. **Update** `_quarto.yml` to include new report
 4. **Render**: `quarto render`
 

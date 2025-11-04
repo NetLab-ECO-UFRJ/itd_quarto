@@ -4,8 +4,8 @@
 
 metadata:
   platform: "Reddit"
-  country_code: "BR"
-  country_name: "Brazil"
+  region_code: "BR"
+  region_name: "Brazil"
   evaluation_date: "2025-01-15"
   evaluator: "Research Team"
 

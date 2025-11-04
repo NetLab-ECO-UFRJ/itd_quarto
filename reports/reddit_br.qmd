@@ -22,17 +22,20 @@ import pandas as pd
 # Calculate scores for Reddit Brazil
 results = calculate_platform_score(
     platform='reddit',
-    country='BR'
+    region='BR'
 )
 
 # Extract data for easy access
 metadata = results['metadata']
 ```
 
-# Executive Summary
+This evaluation is based on Reddit's publicly available policies and documentation [@reddit_content_policy], as well as international regulatory frameworks [@dsa_regulation].
+
 
 **Platform:** `{python} metadata['platform']`
-**Country:** `{python} metadata['country_name']` (`{python} metadata['country_code']`)
+
+**Region:** `{python} metadata['region_name']` (`{python} metadata['region_code']`)
+
 **Evaluation Date:** `{python} metadata['evaluation_date']`
 
 ## Overall Score
@@ -63,34 +66,6 @@ for item in results['ugc_details']:
 
 **ADS Score:** `{python} f"{results['ads_score']:.2f}"` / `{python} f"{results['ads_max']:.2f}"` (`{python} f"{results['ads_percentage']:.1f}"`%)
 
-## Detailed ADS Results
-
-```{python}
-#| label: ads-table
-#| echo: false
-
-# Create DataFrame for ADS results
-ads_df = pd.DataFrame(results['ads_details'])
-
-# Display formatted table
-display_df = ads_df[[
-    'question_code',
-    'question_text',
-    'selected_label',
-    'question_weight',
-    'answer_weight',
-    'question_score',
-    'question_max'
-]].copy()
-
-display_df.columns = [
-    'Code', 'Question', 'Answer',
-    'Q Weight', 'A Weight', 'Score', 'Max'
-]
-
-display_df
-```
-
 ## Key Findings - ADS
 
 ```{python}
@@ -107,9 +82,6 @@ for item in results['ads_details']:
     print()
 ```
 
-# Conclusions
-
-This evaluation is based on Reddit's publicly available policies and documentation [@reddit_content_policy], as well as international regulatory frameworks [@dsa_regulation].
 
 # References
 

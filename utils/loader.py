@@ -48,14 +48,14 @@ def load_questions(questions_path: str = "data/questions.yml") -> Dict[str, Any]
     return questions_dict
 
 
-def load_answers(platform: str, country: str,
+def load_answers(platform: str, region: str,
                  answers_dir: str = "data/answers") -> Dict[str, Any]:
     """
-    Load platform-specific answers for a given country.
+    Load platform-specific answers for a given region.
 
     Args:
         platform: Platform name (e.g., 'reddit', 'facebook')
-        country: Country code (e.g., 'BR', 'UK', 'EU')
+        region: Region code (e.g., 'BR', 'UK', 'EU')
         answers_dir: Directory containing answer files
 
     Returns:
@@ -68,8 +68,8 @@ def load_answers(platform: str, country: str,
             'ads_answers': [...]
         }
     """
-    # Build filename: platform_country.yml (lowercase)
-    filename = f"{platform.lower()}_{country.lower()}.yml"
+    # Build filename: platform_region.yml (lowercase)
+    filename = f"{platform.lower()}_{region.lower()}.yml"
     # Resolve path relative to project root
     filepath = PROJECT_ROOT / answers_dir / filename
 

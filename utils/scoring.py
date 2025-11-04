@@ -94,22 +94,22 @@ def calculate_category_scores(
 
 def calculate_platform_score(
     platform: str,
-    country: str,
+    region: str,
     questions_path: str = "data/questions.yml",
     answers_dir: str = "data/answers"
 ) -> Dict[str, Any]:
     """
-    Calculate complete scores for a platform in a specific country.
+    Calculate complete scores for a platform in a specific region.
 
     Args:
         platform: Platform name (e.g., 'reddit')
-        country: Country code (e.g., 'BR')
+        region: Region code (e.g., 'BR', 'EU')
         questions_path: Path to questions.yml
         answers_dir: Directory with answer files
 
     Returns:
         Dictionary containing:
-        - metadata: Platform and country info
+        - metadata: Platform and region info
         - ugc_score: UGC category actual score
         - ugc_max: UGC category maximum possible score
         - ugc_percentage: UGC score as percentage
@@ -124,7 +124,7 @@ def calculate_platform_score(
     """
     # Load data
     questions_dict = load_questions(questions_path)
-    answers_data = load_answers(platform, country, answers_dir)
+    answers_data = load_answers(platform, region, answers_dir)
 
     # Calculate UGC scores
     ugc_score, ugc_max, ugc_details = calculate_category_scores(

@@ -24,12 +24,9 @@ Start here to understand the evaluation approach:
 - **Introduction and Context**: Background on the regulatory landscape and project scope
 - **Methodology**: Detailed explanation of the weighted scoring system
 
-### Country Reports
-Review platform-specific evaluations:
+### Regional reports
 
-- Comprehensive assessments for each platform and region
-- Detailed scores and findings
-- Evidence-based recommendations
+XXX 
 
 ## Key Features
 
@@ -48,7 +45,3 @@ Platforms are evaluated using a two-level weighting system:
 - **Scores** = question weight × answer weight
 
 Results are presented as both raw scores and percentages for easy interpretation.
-
----
-
-**Begin by reading the [Introduction and Context](#) to understand the project background, or jump directly to the [Methodology](#) to learn about the scoring system.**
