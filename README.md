@@ -108,20 +108,8 @@ results = calculate_platform_score(
 Score: `{python} results['total_percentage']`%
 ```
 
-### 4. Update _quarto.yml
-Add new report to book chapters:
 
-```yaml
-book:
-  chapters:
-    - index.qmd
-    - part: "Country Reports"
-      chapters:
-        - reports/reddit_br.qmd
-        - reports/facebook_uk.qmd  # Add new reports here
-```
-
-### 5. Render Reports
+### Render Reports
 
 ```bash
 # Render to HTML (uv ensures Python dependencies are available)

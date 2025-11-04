@@ -13,7 +13,7 @@ book:
       chapters:
         - introduction.qmd
         - methodology.qmd
-    - part: "Country Reports"
+    - part: "Brazil"
       chapters:
         - reports/reddit_br.qmd
   # page-footer:
@@ -21,6 +21,7 @@ book:
 
 bibliography:
   - bib/references_global.bib
+  - bib/reddit.bib
 
 format:
   html:

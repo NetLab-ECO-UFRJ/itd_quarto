@@ -3,3 +3,11 @@ title: "Methodology"
 ---
 
 TBD
+
+::: {.callout-note}
+## Score Interpretation
+- **75-100%**: Excellent compliance
+- **50-74%**: Moderate compliance
+- **25-49%**: Limited compliance
+- **0-24%**: Poor compliance
+:::
