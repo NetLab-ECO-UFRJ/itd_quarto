@@ -3,6 +3,7 @@ _output/
 /.quarto/
 *_cache/
 *_files/
+_freeze/
 
 # Python
 __pycache__/
@@ -13,7 +14,7 @@ __pycache__/
 venv/
 env/
 ENV/
-.venv
+.venv/
 
 # IDE
 .vscode/
@@ -32,7 +33,3 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
-
-uv.lock
-
-_freeze/

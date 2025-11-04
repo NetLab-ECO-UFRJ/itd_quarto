@@ -2,42 +2,9 @@
 title: "Introduction and Context"
 ---
 
-# Background
+XXX
 
-Social media platforms have become central to global communication, information dissemination, and democratic discourse. With billions of users worldwide, these platforms wield significant influence over public opinion, political processes, and social movements. However, this influence brings important responsibilities regarding content moderation, transparency, and accountability.
-
-## The Regulatory Landscape
-
-Recent years have witnessed growing regulatory attention to social media platforms across multiple jurisdictions:
-
-- **European Union**: The Digital Services Act (DSA) establishes comprehensive obligations for platform transparency and accountability
-- **United Kingdom**: Online Safety Bill introduces new requirements for content moderation and user protection
-- **Brazil**: Marco Civil da Internet and subsequent legislation address platform responsibilities
-
-These regulatory frameworks share common objectives:
-
-1. Protecting users from harmful content
-2. Ensuring transparency in content moderation decisions
-3. Preventing misuse of advertising systems
-4. Safeguarding democratic processes from manipulation
-
-## The Need for Systematic Evaluation
-
-Despite these regulatory efforts, significant challenges remain:
-
-- **Inconsistent implementation** across jurisdictions
-- **Limited transparency** in platform practices
-- **Difficulty comparing** different platforms' approaches
-- **Rapid evolution** of platform features and policies
-
-Systematic, comparable evaluation across platforms and regions is essential for:
-
-- **Researchers** studying platform governance
-- **Policymakers** developing evidence-based regulation
-- **Civil society** advocating for platform accountability
-- **Users** making informed choices about platform use
-
-## Project Scope
+## Evaluation Scope
 
 This evaluation system focuses on two critical dimensions:
 
@@ -95,11 +62,3 @@ Users should be aware of several limitations:
 - Platform policies may **differ from actual enforcement practices**
 - Some aspects of platform operation remain **opaque** despite evaluation efforts
 - **Resource constraints** may limit frequency of updates
-
-## Structure of This Report
-
-The remainder of this book is organized as follows:
-
-- **Methodology**: Detailed explanation of the weighted scoring system
-- **Country Reports**: Platform-specific evaluations for each region
-- **References**: Citations for policy documents, research, and data sources
