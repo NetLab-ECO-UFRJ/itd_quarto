@@ -7,6 +7,8 @@ book:
   subtitle: "XXXXXx"
   author: "NetLab/UFRJ"
   date: today
+  repo-url: https://github.com/NetLab-ECO-UFRJ/transparency-index
+  repo-actions: [issue]
   chapters:
     - index.qmd
     - introduction.qmd
@@ -30,6 +32,7 @@ format:
     number-sections: true
     code-fold: true
     code-tools: true
+    code-copy: false
     embed-resources: false
   pdf:
     documentclass: report
