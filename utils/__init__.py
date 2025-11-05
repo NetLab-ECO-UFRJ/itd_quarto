@@ -7,6 +7,7 @@ Provides data loading and scoring functions for Quarto reports.
 from .loader import (
     load_questions,
     load_answers,
+    load_categories,
     get_answer_weight,
     get_answer_label
 )
@@ -20,6 +21,7 @@ from .scoring import (
 __all__ = [
     'load_questions',
     'load_answers',
+    'load_categories',
     'get_answer_weight',
     'get_answer_label',
     'calculate_question_score',

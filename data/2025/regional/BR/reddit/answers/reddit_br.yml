@@ -1,6 +1,6 @@
 # Answer file for Reddit - Brazil
 # Each answer references a question code from questions.yml
-# and selects one of the predefined answer values
+# Answers are now organized by category taxonomy
 
 metadata:
   platform: "Reddit"
@@ -9,30 +9,36 @@ metadata:
   evaluation_date: "2025-01-15"
   evaluator: "Research Team"
 
-# User-Generated Content answers
-ugc_answers:
+# Consistency category answers
+consistency_answers:
   - question_code: UGC_01
     selected_answer: "yes"
     notes: "Reddit provides clear community guidelines and content policy at https://www.redditinc.com/policies/content-policy"
-
-  - question_code: UGC_02
-    selected_answer: "moderate"
-    notes: "Reporting is available through menu options, but requires multiple clicks and is not immediately visible"
-
-  - question_code: UGC_03
-    selected_answer: "regular"
-    notes: "Reddit publishes bi-annual transparency reports covering content removals and government requests"
-
-# Advertising answers
-ads_answers:
-  - question_code: ADS_01
-    selected_answer: "limited"
-    notes: "Reddit has basic ad transparency but no comprehensive searchable ad library like Facebook or Google"
 
   - question_code: ADS_02
     selected_answer: "inconsistent"
     notes: "Political ads are labeled but the labeling system is not always consistent across different ad formats"
 
+# Timeliness category answers
+timeliness_answers:
+  - question_code: UGC_03
+    selected_answer: "regular"
+    notes: "Reddit publishes bi-annual transparency reports covering content removals and government requests"
+
+# Reproducibility category answers
+reproducibility_answers:
+  - question_code: ADS_01
+    selected_answer: "limited"
+    notes: "Reddit has basic ad transparency but no comprehensive searchable ad library like Facebook or Google"
+
+# Accessibility category answers
+accessibility_answers:
+  - question_code: UGC_02
+    selected_answer: "moderate"
+    notes: "Reporting is available through menu options, but requires multiple clicks and is not immediately visible"
+
+# Granularity category answers
+granularity_answers:
   - question_code: ADS_03
     selected_answer: "some"
     notes: "Reddit restricts targeting for alcohol, gambling, and healthcare ads, but allows broad demographic targeting"

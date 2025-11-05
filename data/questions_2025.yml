@@ -1,0 +1,124 @@
+# Hierarchical questions taxonomy with weighted scoring system
+# Structure:
+#   categories: top-level evaluation dimensions
+#     - name: category identifier (consistency, timeliness, etc.)
+#     - label: human-readable category name
+#     - description: what this category evaluates
+#     - questions: list of questions within this category
+#       - code: unique identifier
+#       - text: question description
+#       - weight: importance multiplier (higher = more important)
+#       - answers: possible answers with weights (0.0 = worst, 1.0 = best)
+
+categories:
+  # ===== CONSISTENCY =====
+  - name: consistency
+    label: "Consistency"
+    description: "Evaluates how consistently the platform applies and enforces its policies"
+    questions:
+      - code: UGC_01
+        text: "Does the platform provide clear content moderation policies?"
+        weight: 2.0
+        answers:
+          - value: "no"
+            label: "No policy available"
+            weight: 0.0
+          - value: "partial"
+            label: "Policy exists but unclear"
+            weight: 0.5
+          - value: "yes"
+            label: "Clear and comprehensive policy"
+            weight: 1.0
+
+      - code: ADS_02
+        text: "Are political ads clearly labeled and distinguishable?"
+        weight: 2.0
+        answers:
+          - value: "no"
+            label: "No labeling of political ads"
+            weight: 0.0
+          - value: "inconsistent"
+            label: "Inconsistent or unclear labeling"
+            weight: 0.5
+          - value: "yes"
+            label: "Clear and consistent labeling"
+            weight: 1.0
+
+  # ===== TIMELINESS =====
+  - name: timeliness
+    label: "Timeliness"
+    description: "Assesses how quickly and regularly the platform updates users on its practices"
+    questions:
+      - code: UGC_03
+        text: "Does the platform publish transparency reports on content moderation?"
+        weight: 1.0
+        answers:
+          - value: "no"
+            label: "No transparency reports"
+            weight: 0.0
+          - value: "irregular"
+            label: "Reports published irregularly"
+            weight: 0.4
+          - value: "regular"
+            label: "Regular transparency reports"
+            weight: 1.0
+
+  # ===== REPRODUCIBILITY =====
+  - name: reproducibility
+    label: "Reproducibility"
+    description: "Measures the ability to verify and reproduce platform's claims and data"
+    questions:
+      - code: ADS_01
+        text: "Does the platform provide ad transparency tools (e.g., ad library)?"
+        weight: 2.5
+        answers:
+          - value: "no"
+            label: "No ad transparency tools"
+            weight: 0.0
+          - value: "limited"
+            label: "Basic tools with limited information"
+            weight: 0.4
+          - value: "comprehensive"
+            label: "Comprehensive ad library and tools"
+            weight: 1.0
+
+  # ===== ACCESSIBILITY =====
+  - name: accessibility
+    label: "Accessibility"
+    description: "Evaluates how easily users can access and use platform features and information"
+    questions:
+      - code: UGC_02
+        text: "Are reporting mechanisms easily accessible to users?"
+        weight: 1.5
+        answers:
+          - value: "no"
+            label: "No reporting mechanism"
+            weight: 0.0
+          - value: "limited"
+            label: "Reporting available but hard to find"
+            weight: 0.3
+          - value: "moderate"
+            label: "Reporting available with some friction"
+            weight: 0.6
+          - value: "yes"
+            label: "Easy and intuitive reporting"
+            weight: 1.0
+
+  # ===== GRANULARITY =====
+  - name: granularity
+    label: "Granularity"
+    description: "Assesses the level of control and detail provided in platform tools and policies"
+    questions:
+      - code: ADS_03
+        text: "Does the platform restrict targeting for sensitive ad categories?"
+        weight: 1.5
+        answers:
+          - value: "no"
+            label: "No targeting restrictions"
+            weight: 0.0
+          - value: "some"
+            label: "Some restrictions in place"
+            weight: 0.6
+          - value: "strict"
+            label: "Strict targeting restrictions"
+            weight: 1.0

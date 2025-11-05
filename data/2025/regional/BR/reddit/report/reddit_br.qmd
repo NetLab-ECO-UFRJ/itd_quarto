@@ -1,0 +1,76 @@
+---
+title: "Reddit - Brazil"
+subtitle: "Platform Evaluation Report"
+bibliography:
+  - ../../../../../bib/references_global.bib
+  - ../../../../../bib/reddit.bib
+---
+
+```{python}
+#| label: setup
+#| include: false
+
+# Add project root to path to import utils
+import sys
+from pathlib import Path
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+sys.path.insert(0, str(project_root))
+
+# Import scoring utilities
+from utils.scoring import calculate_platform_score
+import pandas as pd
+
+# Calculate scores for Reddit Brazil
+results = calculate_platform_score(
+    platform='reddit',
+    region='BR',
+    year='2025',
+    scope='regional'
+)
+
+# Extract data for easy access
+metadata = results['metadata']
+```
+
+This evaluation is based on Reddit's publicly available policies and documentation [@reddit_content_policy], as well as international regulatory frameworks [@dsa_regulation].
+
+
+**Platform:** `{python} metadata['platform']`
+
+**Region:** `{python} metadata['region_name']` (`{python} metadata['region_code']`)
+
+**Evaluation Date:** `{python} metadata['evaluation_date']`
+
+## Overall Score
+
+**Total Score:** `{python} f"{results['total_score']:.2f}"` / `{python} f"{results['total_max']:.2f}"` (`{python} f"{results['total_percentage']:.1f}"`%)
+
+# Category Scores
+
+```{python}
+#| label: category-scores
+#| echo: false
+#| output: asis
+
+for category_name, category_data in results['categories'].items():
+    print(f"\n## {category_data['label']}\n")
+    print(f"*{category_data['description']}*\n")
+    print(f"**Score:** {category_data['score']:.2f} / {category_data['max']:.2f} ({category_data['percentage']:.1f}%)\n")
+    print(f"\n### Key Findings - {category_data['label']}\n")
+
+    for item in category_data['details']:
+        print(f"\n#### {item['question_code']}: {item['question_text']}\n")
+        print(f"**Answer:** {item['selected_label']}  ")
+        print(f"**Score:** {item['question_score']:.2f} / {item['question_max']:.2f} ({item['question_score']/item['question_max']*100:.1f}%)  ")
+        if item['notes']:
+            print(f"**Notes:** {item['notes']}  ")
+        print()
+```
+
+
+# References
+
+::: {#refs}
+:::
