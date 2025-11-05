@@ -1,0 +1,78 @@
+---
+title: "Report with Embedded Validation (Example)"
+subtitle: "Demonstrates lightweight validation in reports"
+---
+
+This is an example showing how to add minimal validation to reports.
+
+```{python}
+#| label: setup
+#| include: false
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path.cwd().parent))
+
+from utils.scoring import calculate_platform_score
+from utils.validators import validate_platform_results, ValidationError
+import pandas as pd
+
+# Calculate scores
+results = calculate_platform_score(platform='reddit', region='BR')
+
+# LIGHTWEIGHT VALIDATION - Only critical checks
+try:
+    validate_platform_results(results)
+except ValidationError as e:
+    # This will stop report rendering if data is invalid
+    raise ValueError(f"❌ Data validation failed: {e}")
+
+# Extract data for easy access
+metadata = results['metadata']
+```
+
+::: {.callout-tip}
+## Validation Passed
+✓ Data integrity checks passed successfully. The scores shown below are validated.
+:::
+
+**Platform:** `{python} metadata['platform']`
+
+**Region:** `{python} metadata['region_name']` (`{python} metadata['region_code']`)
+
+**Overall Score:** `{python} f"{results['total_percentage']:.1f}"`%
+
+---
+
+## What Gets Validated?
+
+The embedded validation (hidden in the setup chunk) checks:
+
+1. **Required fields exist** - All expected keys in results dictionary
+2. **Score bounds** - Percentages are between 0-100%
+3. **Score consistency** - Total = UGC + ADS
+4. **Math correctness** - Percentage calculation matches score/max
+
+## What Doesn't Get Validated?
+
+Comprehensive tests are in `tests/notebooks/` and `tests/pytest/`:
+
+- ❌ Schema validation of YAML files
+- ❌ Unit tests of utility functions
+- ❌ Cross-platform consistency checks
+- ❌ Edge cases and error handling
+- ❌ Performance benchmarks
+
+---
+
+## Key Benefits
+
+This approach provides:
+
+- **Fast validation** - Only critical checks, runs in milliseconds
+- **Clean reports** - Validation hidden with `include: false`
+- **Fail-fast behavior** - Report won't render if data is invalid
+- **Professional output** - No test code visible to readers
+- **Automatic execution** - Runs every time report renders
+
+For comprehensive testing, see `tests/README.md`.
