@@ -126,10 +126,10 @@ def load_answers(platform: str, region: str, year: str = "2025",
             filename = f"{platform.lower()}.yml"
             filepath = PROJECT_ROOT / "data" / year / "global" / filename
         else:
-            # Regional structure: data/2025/regional/REGION/platform/answers/platform_region.yml
+            # Regional structure: data/2025/regional/REGION/platform/platform_region.yml
             filename = f"{platform.lower()}_{region.lower()}.yml"
             filepath = (PROJECT_ROOT / "data" / year / "regional" /
-                       region.upper() / platform.lower() / "answers" / filename)
+                       region.upper() / platform.lower() / filename)
     else:
         # Legacy path support
         filename = f"{platform.lower()}_{region.lower()}.yml"

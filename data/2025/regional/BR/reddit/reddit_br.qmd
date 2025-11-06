@@ -2,8 +2,8 @@
 title: "Reddit - Brazil"
 subtitle: "Platform Evaluation Report"
 bibliography:
-  - ../../../../../bib/references_global.bib
-  - ../../../../../bib/reddit.bib
+  - ../../../../bib/references_global.bib
+  - ../../../../bib/reddit.bib
 ---
 
 ```{python}

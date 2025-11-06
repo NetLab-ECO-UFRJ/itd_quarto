@@ -17,10 +17,8 @@ social-media-eval/
 │       └── regional/        # Regional evaluations
 │           ├── BR/          # Brazil region
 │           │   └── reddit/
-│           │       ├── answers/
-│           │       │   └── reddit_br.yml
-│           │       └── report/
-│           │           └── reddit_br.qmd
+│           │       ├── reddit_br.yml  # Answers
+│           │       └── reddit_br.qmd  # Report
 │           ├── UK/          # United Kingdom region
 │           └── EU/          # European Union region
 ├── bib/
@@ -81,7 +79,7 @@ categories:
 ### 2. Create Answer Files
 
 For **regional** evaluations, create:
-`data/2025/regional/{REGION}/{platform}/answers/{platform}_{region}.yml`
+`data/2025/regional/{REGION}/{platform}/{platform}_{region}.yml`
 
 For **global** evaluations, create:
 `data/2025/global/{platform}.yml`
@@ -109,10 +107,10 @@ timeliness_answers:
 ### 3. Create Report File
 
 For **regional** evaluations, create:
-`data/2025/regional/{REGION}/{platform}/report/{platform}_{region}.qmd`
+`data/2025/regional/{REGION}/{platform}/{platform}_{region}.qmd`
 
 For **global** evaluations, create:
-`data/2025/global/report/{platform}.qmd`
+`data/2025/global/{platform}.qmd`
 
 ```markdown
 ---
@@ -201,17 +199,16 @@ for category_name, category_data in results['categories'].items():
 
 ### For Regional Evaluation
 1. **Create platform directory**: `data/2025/regional/{REGION}/{platform}/`
-2. **Create answer file**: `data/2025/regional/{REGION}/{platform}/answers/{platform}_{region}.yml`
-3. **Create report**: `data/2025/regional/{REGION}/{platform}/report/{platform}_{region}.qmd`
+2. **Create answer file**: `data/2025/regional/{REGION}/{platform}/{platform}_{region}.yml`
+3. **Create report**: `data/2025/regional/{REGION}/{platform}/{platform}_{region}.qmd`
 4. **Update** `_quarto.yml` to include new report
 5. **Render**: `quarto render`
 
 ### For Global Evaluation
 1. **Create answer file**: `data/2025/global/{platform}.yml`
-2. **Create report directory** (if needed): `data/2025/global/report/`
-3. **Create report**: `data/2025/global/report/{platform}.qmd`
-4. **Update** `_quarto.yml` to include new report
-5. **Render**: `quarto render`
+2. **Create report**: `data/2025/global/{platform}.qmd`
+3. **Update** `_quarto.yml` to include new report
+4. **Render**: `quarto render`
 
 ## Adding New Questions
 
