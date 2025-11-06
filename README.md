@@ -1,6 +1,14 @@
 # Social Media Platform Evaluation System
 
-A Quarto-based research reporting system for evaluating social media platforms across multiple regions using weighted scoring methodology.
+A Quarto-based research reporting system for evaluating social media platforms across multiple regions using a weighted scoring methodology.
+
+## Para fazer
+
+- The data/{year}/global folder should have a subfolder for each plataform
+
+- Review taxonomy of question and answers YAML files
+
+- Review scripts that calculate the score
 
 ## Project Structure
 
