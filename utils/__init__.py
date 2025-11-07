@@ -18,6 +18,12 @@ from .scoring import (
     calculate_platform_score
 )
 
+from .quarto_helpers import (
+    setup_quarto_environment,
+    load_platform_results,
+    generate_category_scores
+)
+
 __all__ = [
     'load_questions',
     'load_answers',
@@ -26,5 +32,8 @@ __all__ = [
     'get_answer_label',
     'calculate_question_score',
     'calculate_category_scores',
-    'calculate_platform_score'
+    'calculate_platform_score',
+    'setup_quarto_environment',
+    'load_platform_results',
+    'generate_category_scores'
 ]

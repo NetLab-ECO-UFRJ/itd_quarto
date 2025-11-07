@@ -1,9 +1,7 @@
 ---
-title: "Social Media Platform Evaluation"
+title: "Evaluating Data Access"
 subtitle: "Comparative Analysis Framework"
 ---
-
-# Welcome
 
 This book presents a systematic framework for evaluating social media platforms across multiple regions, with a focus on accountability, transparency, and user protection.
 
@@ -12,16 +10,6 @@ This evaluation system assesses platforms across two critical dimensions:
 - **User-Generated Content (UGC)**: Content moderation policies, reporting mechanisms, and transparency
 
 - **Advertising (ADS)**: Ad transparency tools, political ad labeling, and targeting restrictions
-
-## Browsing
-
-Navigate through the sections using the sidebar:
-
-### Framework
-Start here to understand the evaluation approach:
-
-- **Introduction and Context**: Background on the regulatory landscape and project scope
-- **Methodology**: Detailed explanation of the weighted scoring system
 
 ### Global and regional assessments
 
@@ -36,3 +24,23 @@ Platforms are evaluated using a two-level weighting system:
 - **Scores** = question weight × answer weight
 
 Results are presented as both raw scores and percentages for easy interpretation.
+
+## How to Cite
+
+If you use this evaluation framework or report in your research or work, please cite as:
+
+```bibtex
+@misc{netlab_platform_eval_2025,
+  title = {Social Media Platform Evaluation: Comparative Analysis Framework},
+  author = {{NetLab}},
+  year = {2025},
+  url = {https://example.com/platform-evaluation},
+  note = {Accessed: YYYY-MM-DD}
+}
+```
+
+**APA Style:**
+NetLab. (2025). *Social Media Platform Evaluation: Comparative Analysis Framework*. Retrieved from https://example.com/platform-evaluation
+
+**ABNT Style:**
+NETLAB. *Social Media Platform Evaluation: Comparative Analysis Framework*. 2025. Disponível em: https://example.com/platform-evaluation. Acesso em: DD MMM. YYYY.

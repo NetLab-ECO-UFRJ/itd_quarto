@@ -9,34 +9,23 @@ ads_answers_file: "data/2025/global/kwai/ads.yml"
 #| label: setup
 #| include: false
 
-# Add project root to path to import utils
 import sys
 from pathlib import Path
+
+# Add project root to path
 project_root = Path.cwd()
 while not (project_root / 'utils').exists() and project_root != project_root.parent:
     project_root = project_root.parent
-sys.path.insert(0, str(project_root))
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
 
-# Import scoring utilities
-from utils.scoring import calculate_platform_score
-import pandas as pd
+# Import helpers and load results
+from utils.quarto_helpers import load_platform_results
 
-# Answer file paths (configured in YAML frontmatter)
-ugc_file = "data/2025/global/kwai/ugc.yml"
-ads_file = "data/2025/global/kwai/ads.yml"
-
-# Calculate scores for Kwai Global - UGC
-results_ugc = calculate_platform_score(
-    year='2025',
-    question_type='ugc',
-    answers_file=ugc_file
-)
-
-# Calculate scores for Kwai Global - ADS
-results_ads = calculate_platform_score(
-    year='2025',
-    question_type='ads',
-    answers_file=ads_file
+results_ugc, results_ads = load_platform_results(
+    ugc_file="data/2025/global/kwai/ugc.yml",
+    ads_file="data/2025/global/kwai/ads.yml",
+    year='2025'
 )
 
 ```
@@ -44,65 +33,43 @@ results_ads = calculate_platform_score(
 This evaluation is based on Kwai's publicly available policies and documentation, as well as international regulatory frameworks [@dsa_regulation].
 
 
-# User-Generated Content (UGC) Evaluation
+## User-Generated Content (UGC) Evaluation
 
-## Overall UGC Score
+### Overall UGC Score
 
 **Total score:** `{python} f"{results_ugc['total_score']:.2f}"` / `{python} f"{results_ugc['total_max']:.2f}"` (`{python} f"{results_ugc['total_percentage']:.1f}"`%)
 
-## UGC Category Scores
+### UGC Category Scores
 
 ```{python}
 #| label: ugc-category-scores
 #| echo: false
 #| output: asis
 
-for category_name, category_data in results_ugc['categories'].items():
-    print(f"\n### {category_data['label']}\n")
-    print(f"*{category_data['description']}*\n")
-    print(f"**Score:** {category_data['score']:.2f} / {category_data['max']:.2f} ({category_data['percentage']:.1f}%)\n")
-    print(f"\n#### Key Findings - {category_data['label']}\n")
-
-    for item in category_data['details']:
-        print(f"\n**{item['question_code']}: {item['question_text']}**\n")
-        print(f"- **Answer:** {item['selected_label']}  ")
-        print(f"- **Score:** {item['question_score']:.2f} / {item['question_max']:.2f} ({item['question_score']/item['question_max']*100:.1f}%)  ")
-        if item['notes']:
-            print(f"- **Notes:** {item['notes']}  ")
-        print()
+from utils.quarto_helpers import generate_category_scores
+generate_category_scores(results_ugc, heading_level=3)
 ```
 
 
-# Advertising (ADS) Evaluation
+## Advertising (ADS) Evaluation
 
-## Overall ADS Score
+### Overall ADS Score
 
 **Total score:** `{python} f"{results_ads['total_score']:.2f}"` / `{python} f"{results_ads['total_max']:.2f}"` (`{python} f"{results_ads['total_percentage']:.1f}"`%)
 
-## ADS Category Scores
+### ADS Category Scores
 
 ```{python}
 #| label: ads-category-scores
 #| echo: false
 #| output: asis
 
-for category_name, category_data in results_ads['categories'].items():
-    print(f"\n### {category_data['label']}\n")
-    print(f"*{category_data['description']}*\n")
-    print(f"**Score:** {category_data['score']:.2f} / {category_data['max']:.2f} ({category_data['percentage']:.1f}%)\n")
-    print(f"\n#### Key Findings - {category_data['label']}\n")
-
-    for item in category_data['details']:
-        print(f"\n**{item['question_code']}: {item['question_text']}**\n")
-        print(f"- **Answer:** {item['selected_label']}  ")
-        print(f"- **Score:** {item['question_score']:.2f} / {item['question_max']:.2f} ({item['question_score']/item['question_max']*100:.1f}%)  ")
-        if item['notes']:
-            print(f"- **Notes:** {item['notes']}  ")
-        print()
+from utils.quarto_helpers import generate_category_scores
+generate_category_scores(results_ads, heading_level=3)
 ```
 
 
-# References
+## References
 
 ::: {#refs}
 :::

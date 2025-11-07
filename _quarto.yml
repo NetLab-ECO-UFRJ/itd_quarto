@@ -12,11 +12,18 @@ book:
   chapters:
     - index.qmd
     - introduction.qmd
+    - background.qmd
     - methodology.qmd
-    - global_assessments.qmd
-    - data/2025/global/kwai/kwai.qmd
-    - brazil.qmd
-    - data/2025/regional/BR/reddit/reddit_br.qmd
+    - part: "Global Assessments"
+      chapters:
+        - data/2025/global/kwai/kwai.qmd
+    - part: "Brazil"
+      chapters:
+        - data/2025/regional/BR/reddit/reddit_br.qmd
+    - part: "European Union"
+      chapters: []
+    - part: "United Kingdom"
+      chapters: []
   # page-footer:
   #   center: "© 2025 Social Media Evaluation Project"
 
