@@ -7,14 +7,13 @@ subtitle: "Comparative Analysis Framework"
 
 This book presents a systematic framework for evaluating social media platforms across multiple regions, with a focus on accountability, transparency, and user protection.
 
-## What This Book Covers
-
 This evaluation system assesses platforms across two critical dimensions:
 
 - **User-Generated Content (UGC)**: Content moderation policies, reporting mechanisms, and transparency
+
 - **Advertising (ADS)**: Ad transparency tools, political ad labeling, and targeting restrictions
 
-## How to Use This Book
+## Browsing
 
 Navigate through the sections using the sidebar:
 
@@ -24,19 +23,11 @@ Start here to understand the evaluation approach:
 - **Introduction and Context**: Background on the regulatory landscape and project scope
 - **Methodology**: Detailed explanation of the weighted scoring system
 
-### Regional reports
+### Global and regional assessments
 
 XXX 
 
-## Key Features
-
-- **Weighted scoring methodology** that accounts for question importance and answer quality
-- **Transparent calculations** with clear formulas and examples
-- **Multi-regional coverage** (Brazil, United Kingdom, European Union)
-- **Reproducible framework** built with Quarto and Python
-- **Evidence-based evaluations** with documented sources
-
-## Quick Overview
+## Method
 
 Platforms are evaluated using a two-level weighting system:
 

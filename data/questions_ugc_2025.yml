@@ -1,0 +1,53 @@
+# User-Generated Content (UGC) questions taxonomy with weighted scoring system
+# Structure: Section-based organization (no categories wrapper)
+
+consistency:
+- code: UGC_01
+  title: "Does the platform provide clear content moderation policies?"
+  description: "Evaluates how consistently the platform applies and enforces its policies"
+  weight: 2.0
+  answers:
+    - value: "no"
+      label: "No policy available"
+      weight: 0.0
+    - value: "partial"
+      label: "Policy exists but unclear"
+      weight: 0.5
+    - value: "yes"
+      label: "Clear and comprehensive policy"
+      weight: 1.0
+
+timeliness:
+- code: UGC_03
+  title: "Does the platform publish transparency reports on content moderation?"
+  description: "Assesses how quickly and regularly the platform updates users on its practices"
+  weight: 1.0
+  answers:
+    - value: "no"
+      label: "No transparency reports"
+      weight: 0.0
+    - value: "irregular"
+      label: "Reports published irregularly"
+      weight: 0.4
+    - value: "regular"
+      label: "Regular transparency reports"
+      weight: 1.0
+
+accessibility:
+- code: UGC_02
+  title: "Are reporting mechanisms easily accessible to users?"
+  description: "Evaluates how easily users can access and use platform features and information"
+  weight: 1.5
+  answers:
+    - value: "no"
+      label: "No reporting mechanism"
+      weight: 0.0
+    - value: "limited"
+      label: "Reporting available but hard to find"
+      weight: 0.3
+    - value: "moderate"
+      label: "Reporting available with some friction"
+      weight: 0.6
+    - value: "yes"
+      label: "Easy and intuitive reporting"
+      weight: 1.0

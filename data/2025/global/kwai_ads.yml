@@ -1,0 +1,18 @@
+metadata:
+  platform: "Kwai"
+  region_code: null
+  scope: "ADS"
+  evaluation_date: "2025-11"
+
+special-criteria_answers:
+- code: ADS_SC1
+  selected_answer: "no"
+  notes: "TODO: Evaluate if Kwai provides API access for advertising data"
+- code: ADS_SC2
+  selected_answer: "no"
+  notes: "TODO: Evaluate scope of advertising data extraction"
+
+accessibility_answers:
+- code: ADS_OC1
+  selected_answer: "no"
+  notes: "TODO: Evaluate advertising data format accessibility"

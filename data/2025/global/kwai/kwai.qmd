@@ -1,5 +1,5 @@
 ---
-title: "Reddit"
+title: "Kwai"
 subtitle: "Platform Evaluation Report"
 ---
 
@@ -19,27 +19,27 @@ sys.path.insert(0, str(project_root))
 from utils.scoring import calculate_platform_score
 import pandas as pd
 
-# Calculate scores for Reddit Brazil - UGC
+# Calculate scores for Kwai Global - UGC
 results_ugc = calculate_platform_score(
-    platform='reddit',
-    region='BR',
+    platform='kwai',
+    region=None,
     year='2025',
-    scope='regional',
+    scope='global',
     question_type='ugc'
 )
 
-# Calculate scores for Reddit Brazil - ADS
+# Calculate scores for Kwai Global - ADS
 results_ads = calculate_platform_score(
-    platform='reddit',
-    region='BR',
+    platform='kwai',
+    region=None,
     year='2025',
-    scope='regional',
+    scope='global',
     question_type='ads'
 )
 
 ```
 
-This evaluation is based on Reddit's publicly available policies and documentation [@reddit_content_policy], as well as international regulatory frameworks [@dsa_regulation].
+This evaluation is based on Kwai's publicly available policies and documentation, as well as international regulatory frameworks [@dsa_regulation].
 
 
 # User-Generated Content (UGC) Evaluation

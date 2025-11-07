@@ -52,7 +52,7 @@ def calculate_category_scores(
     detailed_results = []
 
     for answer_item in answers_list:
-        question_code = answer_item['question_code']
+        question_code = answer_item['code']
         selected_value = answer_item['selected_answer']
         notes = answer_item.get('notes', '')
 
@@ -95,7 +95,7 @@ def calculate_platform_score(
     region: str,
     year: str = "2025",
     scope: str = "regional",
-    questions_path: str = None,
+    question_type: str = "all",
     answers_dir: str = None
 ) -> Dict[str, Any]:
     """
@@ -106,7 +106,7 @@ def calculate_platform_score(
         region: Region code (e.g., 'BR', 'EU', 'UK') or 'GLOBAL' for global scope
         year: Year of the evaluation (default: '2025')
         scope: Either 'regional' or 'global' (default: 'regional')
-        questions_path: Override path to questions YAML file (optional)
+        question_type: Type of questions to evaluate - 'ugc', 'ads', or 'all' (default: 'all')
         answers_dir: Override directory with answer files (optional, for legacy support)
 
     Returns:
@@ -118,12 +118,9 @@ def calculate_platform_score(
         - total_max: Combined maximum score
         - total_percentage: Overall percentage
     """
-    if questions_path is None:
-        questions_path = f"data/questions_{year}.yml"
-
-    questions_dict = load_questions(questions_path, year)
-    categories_list = load_categories(questions_path, year)
-    answers_data = load_answers(platform, region, year, scope, answers_dir)
+    questions_dict = load_questions(year=year, question_type=question_type)
+    categories_list = load_categories(year=year, question_type=question_type)
+    answers_data = load_answers(platform, region, year, scope, question_type, answers_dir)
 
     category_results = {}
     total_score = 0.0

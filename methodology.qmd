@@ -4,47 +4,53 @@ title: "Methodology"
 
 
 # UGC
-```
-`\textbf{Special Criteria Score (75\% weight):}`  
-`\begin{equation}`  
-`S_{SC} = 75 \sum_{i=1}^{4} w_i \cdot SC_i`  
-`\end{equation}`  
-`\text{where } w_1 = w_2 = w_3 = 0.30 \text{ and } w_4 = 0.10``\textbf{Other Criteria Score (25\% weight):}`  
-`\begin{equation}`  
-`S_{OC} = 25 \cdot \frac{\sum_{j=1}^{27} OC_j}{27}`  
-`\end{equation}``\textbf{Total Score:}`  
-`\begin{equation}`  
-`\text{Total Score} = S_{SC} + S_{OC}`  
-	`\end{equation}`
-```
+
+**Special Criteria Score (75% weight):**
+
+$$
+S_{SC} = 75 \sum_{i=1}^{4} w_i \cdot SC_i
+$$
+
+where $w_1 = w_2 = w_3 = 0.30$ and $w_4 = 0.10$
+
+**Other Criteria Score (25% weight):**
+
+$$
+S_{OC} = 25 \cdot \frac{\sum_{j=1}^{27} OC_j}{27}
+$$
+
+**Total Score:**
+
+$$
+\text{Total Score} = S_{SC} + S_{OC}
+$$
 
 # Ads
-```
-\textbf{Special Criteria Score (75\% weight):}
-\begin{equation}
+
+**Special Criteria Score (75% weight):**
+
+$$
 S_{SC} = 75 \sum_{i=1}^{3} w_i \cdot SC_i
-\end{equation}
-\text{where } w_1 = 0.50, w_2 = 0.30, \text{ and } w_3 = 0.20
+$$
 
-\\
+where $w_1 = 0.50$, $w_2 = 0.30$, and $w_3 = 0.20$
 
-\textbf{Other Criteria Score (25\% weight):}
-\begin{equation}
+**Other Criteria Score (25% weight):**
+
+$$
 S_{OC} = 25 \cdot \frac{\sum_{j=1}^{34} OC_j}{34}
-\end{equation}
+$$
 
-\textbf{Total Score:}
-\begin{equation}
+**Total Score:**
+
+$$
 \text{Total Score} = S_{SC} + S_{OC}
-\end{equation}
+$$
 
-\textbf{Scoring Rules:}
-\begin{itemize}
-\item Special Criteria: $SC_i \in \{0, 0.5, 1\}$ where 0.5 is awarded for partial ad data
-\item Other Criteria: $OC_j \in \{0, 0.5, 1\}$ where 0.5 is awarded when feature is available through only API or GUI, and 1.0 when available through both
-\end{itemize}
+**Scoring Rules:**
 
-```
+- Special Criteria: $SC_i \in \{0, 0.5, 1\}$ where 0.5 is awarded for partial ad data
+- Other Criteria: $OC_j \in \{0, 0.5, 1\}$ where 0.5 is awarded when feature is available through only API or GUI, and 1.0 when available through both
 
 
 

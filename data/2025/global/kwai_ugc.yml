@@ -1,0 +1,20 @@
+metadata:
+  platform: "Kwai"
+  region_code: null
+  scope: "UGC"
+  evaluation_date: "2025-11"
+
+consistency_answers:
+- code: UGC_01
+  selected_answer: "no"
+  notes: "TODO: Evaluate Kwai's content moderation policies"
+
+timeliness_answers:
+- code: UGC_03
+  selected_answer: "no"
+  notes: "TODO: Evaluate Kwai's transparency reports"
+
+accessibility_answers:
+- code: UGC_02
+  selected_answer: "no"
+  notes: "TODO: Evaluate Kwai's reporting mechanisms"

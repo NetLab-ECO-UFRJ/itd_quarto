@@ -1,0 +1,50 @@
+# Advertising (ADS) questions taxonomy with weighted scoring system
+# Structure:
+
+special-criteria:
+- code: ADS_SC1
+  title: "Does the platform offer an API for collecting public user-generated content data?"
+  description: "This item verifies whether the platform provides an API with at least one endpoint for programmatically extracting public user-generated content to the users’ infrastructure. Public user-generated content is defined here as any publicly visible publication accessible by any platform user. The assessment should verify that the endpoint allows retrieval and storage of this content without requiring privileged or internal access beyond standard developer registration."
+  weight: 0.30
+  answers:
+    - value: "no"
+      label: "No"
+      weight: 0.0
+    - value: "partially"
+      label: "Yes, but only for approved researchers"
+      weight: 0.5
+    - value: "yes"
+      label: "Yes"
+      weight: 1.0
+
+- code: ADS_SC2
+  title: "Can the full scope of public content data be extracted through the platform’s API?"
+  description: "This item verifies whether the platform enables programmatic discovery and extraction of data from the complete set of public user-generated content. The assessment should confirm that the API provides access to all types of public content on the platform, without exclusions or artificial restrictions that limit data completeness."
+  weight: 0.30
+  answers:
+    - value: "no"
+      label: "No"
+      weight: 0.0
+    - value: "partially"
+      label: "Yes, but only for approved researchers"
+      weight: 0.5
+    - value: "yes"
+      label: "Yes"
+      weight: 1.0
+
+accessibility:
+- code: ADS_OC1
+  title: "OC2: Can the requested data be extracted directly from the platform’s API response?"
+  description: "This item verifies whether the API returns structured data directly in its response, rather than only providing a redirect link to the data. Audiovisual media (e.g., images, videos, and audio) are excluded from this assessment. The assessment should check sample API responses to confirm that the requested public data is included in the returned payload itself."
+  weight: 0.30
+  answers:
+    - value: "no"
+      label: "No"
+      weight: 0.0
+    - value: "partially"
+      label: "Yes, but only for approved researchers"
+      weight: 0.5
+    - value: "yes"
+      label: "Yes"
+      weight: 1.0
+

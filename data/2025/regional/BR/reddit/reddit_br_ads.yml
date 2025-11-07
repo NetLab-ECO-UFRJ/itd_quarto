@@ -1,0 +1,18 @@
+metadata:
+  platform: "Reddit"
+  region_code: "BR"
+  scope: "ADS"
+  evaluation_date: "2025-11"
+
+special-criteria_answers:
+- code: ADS_SC1
+  selected_answer: "yes"
+  notes: "Reddit provides an API for collecting public user-generated content data at https://www.reddit.com/dev/api/"
+- code: ADS_SC2
+  selected_answer: "yes"
+  notes: "The Reddit API allows full scope extraction of public content data through various endpoints"
+
+accessibility_answers:
+- code: ADS_OC1
+  selected_answer: "yes"
+  notes: "Reddit API returns structured JSON data directly in the response"

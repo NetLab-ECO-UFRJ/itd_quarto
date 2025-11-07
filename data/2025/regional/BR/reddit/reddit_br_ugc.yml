@@ -1,0 +1,20 @@
+metadata:
+  platform: "Reddit"
+  region_code: "BR"
+  scope: "UGC"
+  evaluation_date: "2025-11"
+
+consistency_answers:
+- code: UGC_01
+  selected_answer: "yes"
+  notes: "Reddit provides clear community guidelines and content policy at https://www.redditinc.com/policies/content-policy"
+
+timeliness_answers:
+- code: UGC_03
+  selected_answer: "regular"
+  notes: "Reddit publishes transparency reports regularly at https://www.redditinc.com/policies/transparency"
+
+accessibility_answers:
+- code: UGC_02
+  selected_answer: "yes"
+  notes: "Reporting mechanisms are easily accessible through the report button on all posts and comments"

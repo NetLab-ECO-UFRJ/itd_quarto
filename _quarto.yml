@@ -3,8 +3,8 @@ project:
   output-dir: _output
 
 book:
-  title: "ITD"
-  subtitle: "XXXXXx"
+  title: "Data Transparency Index"
+  #subtitle: "XX"
   author: "NetLab/UFRJ"
   date: today
   repo-url: https://github.com/NetLab-ECO-UFRJ/transparency-index
@@ -13,9 +13,12 @@ book:
     - index.qmd
     - introduction.qmd
     - methodology.qmd
+    - part: "Global Assessments"
+      chapters:
+        - data/2025/global/kwai/kwai.qmd
     - part: "Brazil"
       chapters:
-        - reports/reddit_br.qmd
+        - data/2025/regional/BR/reddit/reddit_br.qmd
   # page-footer:
   #   center: "© 2025 Social Media Evaluation Project"
 
@@ -26,7 +29,8 @@ bibliography:
 format:
   html:
     theme:
-      - _brand.yml
+    - cosmo
+      # - _brand.yml
     toc: true
     toc-depth: 3
     number-sections: true

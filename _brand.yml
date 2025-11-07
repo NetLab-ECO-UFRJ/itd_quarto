@@ -1,33 +1,34 @@
+# Placeholder for future brand configuration
 meta:
-  name: "NetLab"
-  tagline: "Laboratorio de Estudos de Internet e Redes Sociais"
+ name: "NetLab"
+ tagline: "Laboratorio de Estudos de Internet e Redes Sociais"
 
-color:
-  palette:
-    roxo: "#6849FC"
-    verde: "#27BAA4"
-    grafite: "#434343"
-    branco: "#FFFFFF"
-  primary: roxo
-  secondary: verde
-  foreground: grafite
-  background: branco
+# color:
+#   palette:
+#     roxo: "#6849FC"
+#     verde: "#27BAA4"
+#     grafite: "#434343"
+#     branco: "#FFFFFF"
+#   primary: roxo
+#   secondary: verde
+#   foreground: grafite
+#   background: branco
 
-typography:
-  fonts:
-    - family: "Helvetica Neue"
-      source: "google"
-    - family: "Merriweather"
-      source: "google"
-    - family: "Source Code Pro"
-      source: "google"
-  base:
-    family: "Merriweather"
-    size: "11pt"
-    weight: 400
-  headings:
-    family: "Helvetica Neue"
-    weight: 600
-  monospace:
-    family: "Source Code Pro"
-    size: "0.9em"
+# typography:
+#   fonts:
+#     - family: "Helvetica Neue"
+#       source: "google"
+#     - family: "Merriweather"
+#       source: "google"
+#     - family: "Source Code Pro"
+#       source: "google"
+#   base:
+#     family: "Merriweather"
+#     size: "11pt"
+#     weight: 400
+#   headings:
+#     family: "Helvetica Neue"
+#     weight: 600
+#   monospace:
+#     family: "Source Code Pro"
+#     size: "0.9em"

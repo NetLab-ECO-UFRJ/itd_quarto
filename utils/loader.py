@@ -14,17 +14,18 @@ from typing import Dict, List, Any
 PROJECT_ROOT = Path(__file__).parent.parent
 
 
-def load_questions(questions_path: str = "data/questions_2025.yml", year: str = "2025") -> Dict[str, Any]:
+def load_questions(year: str = "2025", question_type: str = "all") -> Dict[str, Any]:
     """
-    Load the global questions configuration.
+    Load questions configuration from separate UGC and ADS files.
+    Both files use section-based structure (no 'categories' wrapper).
 
     Args:
-        questions_path: Path to questions YAML file (default uses year-specific file)
-        year: Year of the evaluation (used if questions_path is not provided)
+        year: Year of the evaluation (default: '2025')
+        question_type: Type of questions to load - 'ugc', 'ads', or 'all' (default: 'all')
 
     Returns:
         Dictionary with question code as keys and question data as values.
-        Each question includes its parent category information.
+        Each question includes its parent category (section) information.
 
     Example structure:
         {
@@ -37,42 +38,61 @@ def load_questions(questions_path: str = "data/questions_2025.yml", year: str = 
                 'answers': [...]
             }
         }
+
+    Note: Questions use 'title' field in YAML, which is loaded into 'text' field here.
     """
-    full_path = PROJECT_ROOT / questions_path
-    with open(full_path, 'r', encoding='utf-8') as f:
-        data = yaml.safe_load(f)
-
     questions_dict = {}
-    for category in data['categories']:
-        category_name = category['name']
-        category_label = category['label']
-        category_description = category['description']
 
-        for question in category['questions']:
-            code = question['code']
-            questions_dict[code] = {
-                'category': category_name,
-                'category_label': category_label,
-                'category_description': category_description,
-                'code': code,
-                'text': question['text'],
-                'weight': question['weight'],
-                'answers': question['answers']
-            }
+    # Determine which files to load
+    files_to_load = []
+    if question_type in ["ugc", "all"]:
+        files_to_load.append(f"data/questions_ugc_{year}.yml")
+    if question_type in ["ads", "all"]:
+        files_to_load.append(f"data/questions_ads_{year}.yml")
+
+    if not files_to_load:
+        raise ValueError(f"Invalid question_type: {question_type}. Must be 'ugc', 'ads', or 'all'")
+
+    # Load each file
+    for questions_path in files_to_load:
+        full_path = PROJECT_ROOT / questions_path
+        with open(full_path, 'r', encoding='utf-8') as f:
+            data = yaml.safe_load(f)
+
+        # Section-based structure (consistency, accessibility, special-criteria, etc.)
+        for section_name, questions_list in data.items():
+            if isinstance(questions_list, list):
+                # Convert section name to label (e.g., "special-criteria" -> "Special Criteria")
+                category_label = section_name.replace('-', ' ').title()
+
+                for question in questions_list:
+                    code = question['code']
+                    question_text = question.get('title', '')
+
+                    questions_dict[code] = {
+                        'category': section_name,
+                        'category_label': category_label,
+                        'category_description': question.get('description', ''),
+                        'code': code,
+                        'text': question_text,
+                        'weight': question['weight'],
+                        'answers': question['answers']
+                    }
 
     return questions_dict
 
 
-def load_categories(questions_path: str = "data/questions_2025.yml", year: str = "2025") -> List[Dict[str, str]]:
+def load_categories(year: str = "2025", question_type: str = "all") -> List[Dict[str, str]]:
     """
-    Load the list of all categories.
+    Load categories from separate UGC and ADS question files.
 
     Args:
-        questions_path: Path to questions YAML file (default uses year-specific file)
-        year: Year of the evaluation (used if questions_path is not provided)
+        year: Year of the evaluation (default: '2025')
+        question_type: Type of questions to load categories from - 'ugc', 'ads', or 'all' (default: 'all')
 
     Returns:
-        List of category dictionaries with name, label, and description
+        List of category dictionaries with name, label, and description.
+        Categories are deduplicated by name when loading from multiple files.
 
     Example:
         [
@@ -83,23 +103,45 @@ def load_categories(questions_path: str = "data/questions_2025.yml", year: str =
             }
         ]
     """
-    full_path = PROJECT_ROOT / questions_path
-    with open(full_path, 'r', encoding='utf-8') as f:
-        data = yaml.safe_load(f)
+    categories_dict = {}
 
-    categories = []
-    for category in data['categories']:
-        categories.append({
-            'name': category['name'],
-            'label': category['label'],
-            'description': category['description']
-        })
+    # Determine which files to load
+    files_to_load = []
+    if question_type in ["ugc", "all"]:
+        files_to_load.append(f"data/questions_ugc_{year}.yml")
+    if question_type in ["ads", "all"]:
+        files_to_load.append(f"data/questions_ads_{year}.yml")
 
-    return categories
+    if not files_to_load:
+        raise ValueError(f"Invalid question_type: {question_type}. Must be 'ugc', 'ads', or 'all'")
+
+    # Load each file and merge categories (deduplicate by name)
+    for questions_path in files_to_load:
+        full_path = PROJECT_ROOT / questions_path
+        with open(full_path, 'r', encoding='utf-8') as f:
+            data = yaml.safe_load(f)
+
+        # Section-based structure: extract sections as categories
+        for section_name, questions_list in data.items():
+            if isinstance(questions_list, list) and questions_list:
+                if section_name not in categories_dict:
+                    # Convert section name to label (e.g., "special-criteria" -> "Special Criteria")
+                    category_label = section_name.replace('-', ' ').title()
+                    # Use first question's description as category description
+                    category_desc = questions_list[0].get('description', '')
+
+                    categories_dict[section_name] = {
+                        'name': section_name,
+                        'label': category_label,
+                        'description': category_desc
+                    }
+
+    return list(categories_dict.values())
 
 
 def load_answers(platform: str, region: str, year: str = "2025",
-                 scope: str = "regional", answers_dir: str = None) -> Dict[str, Any]:
+                 scope: str = "regional", question_type: str = None,
+                 answers_dir: str = None) -> Dict[str, Any]:
     """
     Load platform-specific answers for a given region.
 
@@ -108,6 +150,7 @@ def load_answers(platform: str, region: str, year: str = "2025",
         region: Region code (e.g., 'BR', 'UK', 'EU') or 'GLOBAL' for global scope
         year: Year of the evaluation (default: '2025')
         scope: Either 'regional' or 'global' (default: 'regional')
+        question_type: Type of answers to load - 'ugc' or 'ads' (optional, for split files)
         answers_dir: Override directory containing answer files (optional)
 
     Returns:
@@ -122,12 +165,18 @@ def load_answers(platform: str, region: str, year: str = "2025",
     """
     if answers_dir is None:
         if scope == "global":
-            # Global structure: data/2025/global/platform.yml
-            filename = f"{platform.lower()}.yml"
+            # Global structure: data/2025/global/platform.yml or platform_ugc/ads.yml
+            if question_type:
+                filename = f"{platform.lower()}_{question_type.lower()}.yml"
+            else:
+                filename = f"{platform.lower()}.yml"
             filepath = PROJECT_ROOT / "data" / year / "global" / filename
         else:
-            # Regional structure: data/2025/regional/REGION/platform/platform_region.yml
-            filename = f"{platform.lower()}_{region.lower()}.yml"
+            # Regional structure: data/2025/regional/REGION/platform/platform_region_ugc/ads.yml
+            if question_type:
+                filename = f"{platform.lower()}_{region.lower()}_{question_type.lower()}.yml"
+            else:
+                filename = f"{platform.lower()}_{region.lower()}.yml"
             filepath = (PROJECT_ROOT / "data" / year / "regional" /
                        region.upper() / platform.lower() / filename)
     else:
