@@ -152,7 +152,7 @@ def load_answers(platform: str = None, region: str = None, year: str = "2025",
         scope: Either 'regional' or 'global' (default: 'regional')
         question_type: Type of answers to load - 'ugc' or 'ads' (optional, for split files)
         answers_dir: Override directory containing answer files (optional, legacy)
-        answers_file: Direct path to answer file (e.g., 'data/2025/global/kwai/kwai_ugc.yml')
+        answers_file: Direct path to answer file (e.g., 'data/2025/global/kwai/ugc.yml')
                      If provided, all path auto-discovery is skipped
 
     Returns:
@@ -176,7 +176,7 @@ def load_answers(platform: str = None, region: str = None, year: str = "2025",
             else:
                 filename = f"{platform.lower()}.yml"
 
-            # Try platform subfolder first (e.g., kwai/kwai_ads.yml)
+            # Try platform subfolder first (e.g., kwai/ads.yml)
             filepath = PROJECT_ROOT / "data" / year / "global" / platform.lower() / filename
             if not filepath.exists():
                 # Fall back to root global folder (e.g., platform_ads.yml)
