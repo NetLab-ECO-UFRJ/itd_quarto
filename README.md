@@ -4,8 +4,6 @@ A Quarto-based research reporting system for evaluating social media platforms a
 
 ## Para fazer
 
-- The data/{year}/global folder should have a subfolder for each platform.
-
 - Review the taxonomy of question and answers YAML files.
 
 - Review scripts that calculate the score
