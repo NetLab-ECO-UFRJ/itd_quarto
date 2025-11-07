@@ -14,31 +14,7 @@ A Quarto-based research reporting system for evaluating social media platforms a
 
 ## Project Structure
 
-```
-social-media-eval/
-├── _quarto.yml              # Main Quarto configuration
-├── _brand.yml               # Custom color theme
-├── index.qmd                # Landing page
-├── data/
-│   ├── questions_2025.yml   # Global weighted questions (year-specific)
-│   └── 2025/                # Year-based organization
-│       ├── global/          # Global platform evaluations
-│       │   └── kwai.yml     # Sample global template
-│       └── regional/        # Regional evaluations
-│           ├── BR/          # Brazil region
-│           │   └── reddit/
-│           │       ├── reddit_br.yml  # Answers
-│           │       └── reddit_br.qmd  # Report
-│           ├── UK/          # United Kingdom region
-│           └── EU/          # European Union region
-├── bib/
-│   ├── references_global.bib # Global bibliography
-│   └── reddit.bib           # Platform-specific bibliography
-└── utils/
-    ├── __init__.py
-    ├── loader.py            # YAML data loading
-    └── scoring.py           # Weighted score calculation
-```
+TBC
 
 ## Installation
 
