@@ -8,7 +8,7 @@ A Quarto-based research reporting system for evaluating social media platforms a
 
 - Review scripts that calculate the score
 
-- Script to convert to/from YAML <> CSV
+- Script/methods to convert to/from YAML <> CSV
 
 ## Project Structure
 

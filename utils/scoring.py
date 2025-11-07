@@ -91,23 +91,26 @@ def calculate_category_scores(
 
 
 def calculate_platform_score(
-    platform: str,
-    region: str,
+    platform: str = None,
+    region: str = None,
     year: str = "2025",
     scope: str = "regional",
     question_type: str = "all",
-    answers_dir: str = None
+    answers_dir: str = None,
+    answers_file: str = None
 ) -> Dict[str, Any]:
     """
     Calculate complete scores for a platform in a specific region.
 
     Args:
-        platform: Platform name (e.g., 'reddit')
-        region: Region code (e.g., 'BR', 'EU', 'UK') or 'GLOBAL' for global scope
+        platform: Platform name (e.g., 'reddit') - optional if answers_file is provided
+        region: Region code (e.g., 'BR', 'EU', 'UK') or 'GLOBAL' for global scope - optional if answers_file is provided
         year: Year of the evaluation (default: '2025')
         scope: Either 'regional' or 'global' (default: 'regional')
         question_type: Type of questions to evaluate - 'ugc', 'ads', or 'all' (default: 'all')
         answers_dir: Override directory with answer files (optional, for legacy support)
+        answers_file: Direct path to answer file (e.g., 'data/2025/global/kwai/kwai_ugc.yml')
+                     If provided, platform/region/scope are ignored for path discovery
 
     Returns:
         Dictionary containing:
@@ -120,7 +123,7 @@ def calculate_platform_score(
     """
     questions_dict = load_questions(year=year, question_type=question_type)
     categories_list = load_categories(year=year, question_type=question_type)
-    answers_data = load_answers(platform, region, year, scope, question_type, answers_dir)
+    answers_data = load_answers(platform, region, year, scope, question_type, answers_dir, answers_file)
 
     category_results = {}
     total_score = 0.0

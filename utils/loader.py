@@ -46,9 +46,9 @@ def load_questions(year: str = "2025", question_type: str = "all") -> Dict[str, 
     # Determine which files to load
     files_to_load = []
     if question_type in ["ugc", "all"]:
-        files_to_load.append(f"data/questions_ugc_{year}.yml")
+        files_to_load.append(f"data/{year}/questions_ugc_{year}.yml")
     if question_type in ["ads", "all"]:
-        files_to_load.append(f"data/questions_ads_{year}.yml")
+        files_to_load.append(f"data/{year}/questions_ads_{year}.yml")
 
     if not files_to_load:
         raise ValueError(f"Invalid question_type: {question_type}. Must be 'ugc', 'ads', or 'all'")
@@ -108,9 +108,9 @@ def load_categories(year: str = "2025", question_type: str = "all") -> List[Dict
     # Determine which files to load
     files_to_load = []
     if question_type in ["ugc", "all"]:
-        files_to_load.append(f"data/questions_ugc_{year}.yml")
+        files_to_load.append(f"data/{year}/questions_ugc_{year}.yml")
     if question_type in ["ads", "all"]:
-        files_to_load.append(f"data/questions_ads_{year}.yml")
+        files_to_load.append(f"data/{year}/questions_ads_{year}.yml")
 
     if not files_to_load:
         raise ValueError(f"Invalid question_type: {question_type}. Must be 'ugc', 'ads', or 'all'")
@@ -139,19 +139,21 @@ def load_categories(year: str = "2025", question_type: str = "all") -> List[Dict
     return list(categories_dict.values())
 
 
-def load_answers(platform: str, region: str, year: str = "2025",
+def load_answers(platform: str = None, region: str = None, year: str = "2025",
                  scope: str = "regional", question_type: str = None,
-                 answers_dir: str = None) -> Dict[str, Any]:
+                 answers_dir: str = None, answers_file: str = None) -> Dict[str, Any]:
     """
     Load platform-specific answers for a given region.
 
     Args:
-        platform: Platform name (e.g., 'reddit', 'facebook')
-        region: Region code (e.g., 'BR', 'UK', 'EU') or 'GLOBAL' for global scope
+        platform: Platform name (e.g., 'reddit', 'facebook') - optional if answers_file is provided
+        region: Region code (e.g., 'BR', 'UK', 'EU') or 'GLOBAL' for global scope - optional if answers_file is provided
         year: Year of the evaluation (default: '2025')
         scope: Either 'regional' or 'global' (default: 'regional')
         question_type: Type of answers to load - 'ugc' or 'ads' (optional, for split files)
-        answers_dir: Override directory containing answer files (optional)
+        answers_dir: Override directory containing answer files (optional, legacy)
+        answers_file: Direct path to answer file (e.g., 'data/2025/global/kwai/kwai_ugc.yml')
+                     If provided, all path auto-discovery is skipped
 
     Returns:
         Dictionary containing metadata and categorized answers
@@ -163,14 +165,22 @@ def load_answers(platform: str, region: str, year: str = "2025",
             'timeliness_answers': [...]
         }
     """
-    if answers_dir is None:
+    if answers_file:
+        # Use direct file path
+        filepath = PROJECT_ROOT / answers_file
+    elif answers_dir is None:
         if scope == "global":
-            # Global structure: data/2025/global/platform.yml or platform_ugc/ads.yml
+            # Global structure: data/2025/global/platform/platform_ugc/ads.yml or platform_ugc/ads.yml
             if question_type:
                 filename = f"{platform.lower()}_{question_type.lower()}.yml"
             else:
                 filename = f"{platform.lower()}.yml"
-            filepath = PROJECT_ROOT / "data" / year / "global" / filename
+
+            # Try platform subfolder first (e.g., kwai/kwai_ads.yml)
+            filepath = PROJECT_ROOT / "data" / year / "global" / platform.lower() / filename
+            if not filepath.exists():
+                # Fall back to root global folder (e.g., platform_ads.yml)
+                filepath = PROJECT_ROOT / "data" / year / "global" / filename
         else:
             # Regional structure: data/2025/regional/REGION/platform/platform_region_ugc/ads.yml
             if question_type:

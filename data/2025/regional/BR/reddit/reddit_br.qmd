@@ -1,6 +1,8 @@
 ---
 title: "Reddit"
 subtitle: "Platform Evaluation Report"
+ugc_answers_file: "data/2025/regional/BR/reddit/reddit_br_ugc.yml"
+ads_answers_file: "data/2025/regional/BR/reddit/reddit_br_ads.yml"
 ---
 
 ```{python}
@@ -19,22 +21,22 @@ sys.path.insert(0, str(project_root))
 from utils.scoring import calculate_platform_score
 import pandas as pd
 
+# Answer file paths (configured in YAML frontmatter)
+ugc_file = "data/2025/regional/BR/reddit/reddit_br_ugc.yml"
+ads_file = "data/2025/regional/BR/reddit/reddit_br_ads.yml"
+
 # Calculate scores for Reddit Brazil - UGC
 results_ugc = calculate_platform_score(
-    platform='reddit',
-    region='BR',
     year='2025',
-    scope='regional',
-    question_type='ugc'
+    question_type='ugc',
+    answers_file=ugc_file
 )
 
 # Calculate scores for Reddit Brazil - ADS
 results_ads = calculate_platform_score(
-    platform='reddit',
-    region='BR',
     year='2025',
-    scope='regional',
-    question_type='ads'
+    question_type='ads',
+    answers_file=ads_file
 )
 
 ```

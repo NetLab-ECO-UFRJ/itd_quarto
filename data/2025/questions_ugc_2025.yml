@@ -1,6 +1,3 @@
-# User-Generated Content (UGC) questions taxonomy with weighted scoring system
-# Structure: Section-based organization (no categories wrapper)
-
 consistency:
 - code: UGC_01
   title: "Does the platform provide clear content moderation policies?"
