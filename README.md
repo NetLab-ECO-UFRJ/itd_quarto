@@ -4,7 +4,7 @@ A Quarto-based research reporting system for evaluating social media platforms a
 
 ## Para fazer
 
-- Review the taxonomy of question and answers YAML files.
+- Update the import script to get as parameter the name of the platform to be processed and the scope target (global or regional with the region code)
 
 - Review scripts that calculate the score
 

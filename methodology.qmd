@@ -3,7 +3,6 @@ title: "Methodology"
 ---
 
 
-
 # UGC
 
 **Special Criteria Score (75% weight):**
