@@ -17,7 +17,7 @@ book:
     - part: "Global Assessments"
       chapters:
         - data/2025/global/kwai/kwai.qmd
-        - data/2025/global/discord/discord.qmd
+    #    - data/2025/global/discord/discord.qmd
     # - part: "Brazil"
     #   chapters:
     #     - data/2025/regional/BR/reddit/reddit_br.qmd

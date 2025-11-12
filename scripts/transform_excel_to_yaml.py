@@ -4,7 +4,6 @@ Transform Excel assessment responses to YAML format.
 
 This script reads Excel files containing platform assessment responses
 and generates YAML files in the required format for each platform and scope.
-It also generates a summary report of the assessments.
 """
 
 import pandas as pd
@@ -232,7 +231,7 @@ class ExcelToYAMLTransformer:
 
     def _write_yaml_file(self, platform: str, scope: str, yaml_data: Dict):
         """Write YAML data to file."""
-        platform_dir = self.global_dir / platform
+        platform_dir = self.output_dir / platform
         platform_dir.mkdir(parents=True, exist_ok=True)
 
         output_file = platform_dir / f"{scope.lower()}.yml"
@@ -247,7 +246,7 @@ class ExcelToYAMLTransformer:
         Create QMD file from template if both ads.yml and ugc.yml exist.
         Returns True if QMD was created, False otherwise.
         """
-        platform_dir = self.global_dir / platform
+        platform_dir = self.output_dir / platform
         ads_file = platform_dir / "ads.yml"
         ugc_file = platform_dir / "ugc.yml"
 
@@ -273,71 +272,22 @@ class ExcelToYAMLTransformer:
         print(f"✓ Created QMD: {output_file}")
         return True
 
-    def _generate_report(self, all_assessments: List[Dict], qmd_created: List[str] = None) -> str:
-        """Generate assessment report in markdown format."""
-        report = ["# Assessment Transformation Report\n"]
-        report.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-
-        report.append("## Summary\n")
-
-        ads_count = sum(1 for a in all_assessments if a['scope'] == 'ADS')
-        ugc_count = sum(1 for a in all_assessments if a['scope'] == 'UGC')
-
-        report.append(f"- Total assessments processed: {len(all_assessments)}")
-        report.append(f"- ADS assessments: {ads_count}")
-        report.append(f"- UGC assessments: {ugc_count}")
-
-        platforms = set(a['platform'] for a in all_assessments)
-        report.append(f"- Platforms covered: {', '.join(sorted(platforms))}")
-
-        if qmd_created:
-            report.append(f"- QMD files created: {len(qmd_created)} ({', '.join(sorted(qmd_created))})\n")
-        else:
-            report.append("")
-
-        report.append("## Assessments by Platform\n")
-
-        for platform in sorted(platforms):
-            platform_assessments = [a for a in all_assessments if a['platform'] == platform]
-            report.append(f"### {platform.capitalize()}\n")
-
-            for assessment in platform_assessments:
-                report.append(f"**Scope:** {assessment['scope']}")
-                report.append(f"- Region: {assessment['region_code']}")
-                report.append(f"- Evaluation Date: {assessment['evaluation_date']}")
-                report.append(f"- Analysts: {assessment['analysts']}")
-
-                total_questions = sum(len(answers) for answers in assessment['answers_by_category'].values())
-                answered = sum(
-                    1 for answers in assessment['answers_by_category'].values()
-                    for answer in answers
-                    if answer['notes'] and answer['notes'] != 'nan'
-                )
-
-                report.append(f"- Questions: {total_questions}")
-                report.append(f"- With justifications: {answered} ({answered/total_questions*100:.1f}%)\n")
-
-                report.append("**Answers by category:**")
-                for category, answers in assessment['answers_by_category'].items():
-                    yes_count = sum(1 for a in answers if a['selected_answer'] in ['yes', 'full'])
-                    partial_count = sum(1 for a in answers if a['selected_answer'] == 'partial')
-                    no_count = sum(1 for a in answers if a['selected_answer'] == 'no')
-
-                    report.append(f"- {category}: {len(answers)} questions "
-                                f"(Yes/Full: {yes_count}, Partial: {partial_count}, No: {no_count})")
-
-                report.append("")
-
-        return "\n".join(report)
-
-    def transform_all(self):
+    def transform_all(self, platform_filter: str, ads_file: str = None, ugc_file: str = None):
         """Process all Excel files and generate YAML outputs."""
         print("Starting transformation...\n")
 
-        excel_files = {
-            'ads': self.xlsx_dir / "answers_BR_ads.xlsx",
-            'ugc': self.xlsx_dir / "answers_BR_ugc.xlsx"
-        }
+        if self.scope_type == "regional" and self.region_code:
+            excel_files = {
+                'ads': self.xlsx_dir / f"answers_{self.region_code}_ads.xlsx",
+                'ugc': self.xlsx_dir / f"answers_{self.region_code}_ugc.xlsx"
+            }
+        else:
+            if not ads_file or not ugc_file:
+                raise ValueError("For global scope, both ads_file and ugc_file parameters must be provided")
+            excel_files = {
+                'ads': self.xlsx_dir / ads_file,
+                'ugc': self.xlsx_dir / ugc_file
+            }
 
         all_assessments = []
         platforms_processed = set()
@@ -351,12 +301,16 @@ class ExcelToYAMLTransformer:
             assessments = self._process_excel_file(excel_path, scope)
 
             for assessment in assessments:
+                if assessment['platform'] != platform_filter.lower():
+                    continue
+
                 yaml_data = self._generate_yaml_content(assessment)
                 self._write_yaml_file(assessment['platform'], scope, yaml_data)
                 all_assessments.append(assessment)
                 platforms_processed.add(assessment['platform'])
 
-            print(f"  Processed {len(assessments)} {scope.upper()} assessments\n")
+            filtered_count = len([a for a in assessments if a['platform'] == platform_filter.lower()])
+            print(f"  Processed {filtered_count} {scope.upper()} assessment(s) for {platform_filter}\n")
 
         print("\nGenerating QMD files from template...")
         qmd_created = []
@@ -373,20 +327,56 @@ class ExcelToYAMLTransformer:
         if qmd_skipped:
             print(f"  Skipped {len(qmd_skipped)} platforms (incomplete data)")
 
-        report_content = self._generate_report(all_assessments, qmd_created)
-        report_path = self.base_dir / "data" / "2025" / "assessment_report.md"
-
-        with open(report_path, 'w', encoding='utf-8') as f:
-            f.write(report_content)
-
-        print(f"\n✓ Report generated: {report_path}\n")
-        print("Transformation complete!")
+        print("\nTransformation complete!")
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Transform Excel assessment responses to YAML format"
+    )
+    parser.add_argument(
+        "--platform",
+        required=True,
+        help="Platform name to process (e.g., reddit, youtube, tiktok)"
+    )
+    parser.add_argument(
+        "--scope-type",
+        choices=["global", "regional"],
+        default="global",
+        help="Scope type: global or regional (default: global)"
+    )
+    parser.add_argument(
+        "--region",
+        help="Region code (required for regional scope, e.g., BR, EU, UK)"
+    )
+    parser.add_argument(
+        "--ads-file",
+        help="ADS Excel filename in xlsx_backups (required for global scope)"
+    )
+    parser.add_argument(
+        "--ugc-file",
+        help="UGC Excel filename in xlsx_backups (required for global scope)"
+    )
+
+    args = parser.parse_args()
+
+    if args.scope_type == "regional" and not args.region:
+        parser.error("--region is required when --scope-type is regional")
+
+    if args.scope_type == "global" and (not args.ads_file or not args.ugc_file):
+        parser.error("--ads-file and --ugc-file are required when --scope-type is global")
+
     base_dir = Path(__file__).parent.parent
-    transformer = ExcelToYAMLTransformer(base_dir)
-    transformer.transform_all()
+    transformer = ExcelToYAMLTransformer(
+        base_dir,
+        scope_type=args.scope_type,
+        region_code=args.region
+    )
+    transformer.transform_all(
+        platform_filter=args.platform,
+        ads_file=args.ads_file,
+        ugc_file=args.ugc_file
+    )
 
 
 if __name__ == "__main__":

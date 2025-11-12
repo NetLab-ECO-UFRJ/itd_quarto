@@ -12,14 +12,12 @@ ads_answers_file: "data/2025/global/kwai/ads.yml"
 import sys
 from pathlib import Path
 
-# Add project root to path
 project_root = Path.cwd()
 while not (project_root / 'utils').exists() and project_root != project_root.parent:
     project_root = project_root.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-# Import helpers and load results
 from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
