@@ -1,0 +1,393 @@
+#!/usr/bin/env python3
+"""
+Transform Excel assessment responses to YAML format.
+
+This script reads Excel files containing platform assessment responses
+and generates YAML files in the required format for each platform and scope.
+It also generates a summary report of the assessments.
+"""
+
+import pandas as pd
+import yaml
+from pathlib import Path
+from datetime import datetime
+from typing import Dict, List, Any, Optional
+import re
+import argparse
+
+
+class ExcelToYAMLTransformer:
+    def __init__(self, base_dir: Path, scope_type: str = "global", region_code: Optional[str] = None):
+        self.base_dir = base_dir
+        self.xlsx_dir = base_dir / "data" / "2025" / "xlsx_backups"
+        self.scope_type = scope_type.lower()
+        self.region_code = region_code.upper() if region_code else None
+
+        if self.scope_type == "global":
+            self.output_dir = base_dir / "data" / "2025" / "global"
+        elif self.scope_type == "regional" and self.region_code:
+            self.output_dir = base_dir / "data" / "2025" / "regional" / self.region_code
+        else:
+            raise ValueError("For regional scope, region_code must be provided")
+
+        self.questions_dir = base_dir / "data" / "2025"
+        self.template_dir = base_dir / "templates"
+
+        self.questions_ads = self._load_questions("questions_ads_2025.yml")
+        self.questions_ugc = self._load_questions("questions_ugc_2025.yml")
+
+    def _load_questions(self, filename: str) -> Dict:
+        """Load question definitions from YAML."""
+        filepath = self.questions_dir / filename
+        with open(filepath, 'r', encoding='utf-8') as f:
+            return yaml.safe_load(f)
+
+    def _normalize_answer(self, raw_answer: str, question_code: str, scope: str) -> str:
+        """
+        Normalize answer values based on question definition.
+        Maps Excel responses to YAML answer options.
+        """
+        if pd.isna(raw_answer) or raw_answer == "":
+            return "no"
+
+        raw_lower = str(raw_answer).strip().lower()
+
+        questions = self.questions_ads if scope == "ads" else self.questions_ugc
+
+        question_def = self._find_question_definition(question_code, questions)
+        if not question_def:
+            if "yes" in raw_lower:
+                return "yes"
+            elif "partial" in raw_lower:
+                return "partial"
+            else:
+                return "no"
+
+        answer_options = question_def.get('answers', {})
+        if isinstance(answer_options, list):
+            available_options = [opt.get('value', '') for opt in answer_options]
+        else:
+            available_options = list(answer_options.keys()) if answer_options else []
+
+        if "full" in available_options and "partial" in available_options:
+            if "full" in raw_lower or raw_lower == "yes":
+                return "full"
+            elif "partial" in raw_lower:
+                return "partial"
+            else:
+                return "no"
+
+        elif "yes" in available_options:
+            if "yes" in raw_lower:
+                return "yes"
+            elif "no" in raw_lower:
+                # Check if 'no' is an available option
+                if "no" in available_options:
+                    return "no"
+                else:
+                    return "no_or_not_applicable"
+            else:
+                return "no_or_not_applicable"
+
+        else:
+            # Check if we have 'no_or_not_applicable' as an option
+            if "no_or_not_applicable" in available_options:
+                return "no_or_not_applicable"
+            return "no"
+
+    def _find_question_definition(self, code: str, questions: Dict) -> Dict:
+        """Find question definition by code."""
+        for category in questions.values():
+            if isinstance(category, list):
+                for q in category:
+                    if q.get('code') == code:
+                        return q
+        return {}
+
+    def _extract_question_code(self, column_name: str) -> str:
+        """Extract question code (e.g., SC1, OC1) from column header."""
+        match = re.search(r'\b(SC\d+|OC\d+)\b', column_name)
+        return match.group(1) if match else None
+
+    def _categorize_question(self, code: str, scope: str) -> str:
+        """Determine which category a question belongs to."""
+        questions = self.questions_ads if scope == "ads" else self.questions_ugc
+
+        # Use AD_ for ads scope, UGC_ for ugc scope
+        if scope.lower() == 'ads':
+            full_code = f"AD_{code}" if not code.startswith("AD_") else code
+        else:
+            full_code = f"{scope.upper()}_{code}" if not code.startswith(scope.upper()) else code
+
+        for category_name, category_questions in questions.items():
+            if isinstance(category_questions, list):
+                for q in category_questions:
+                    if q.get('code') == full_code:
+                        return category_name
+
+        if code.startswith("SC"):
+            return "special_criteria"
+        elif code.startswith("OC"):
+            return "accessibility"
+
+        return "accessibility"
+
+    def _process_excel_file(self, excel_path: Path, scope: str) -> List[Dict]:
+        """Process a single Excel file and return list of assessments."""
+        df = pd.read_excel(excel_path)
+
+        assessments = []
+
+        for idx, row in df.iterrows():
+            platform = row.get('Which platform is being analyzed?')
+            region = row.get('Which region is being analyzed?')
+            timestamp = row.get('Carimbo de data/hora')
+            analysts = row.get('Identification of analysts')
+
+            if pd.isna(platform) or platform == "":
+                continue
+
+            platform_clean = str(platform).strip().lower()
+            region_code = str(region).strip().upper() if not pd.isna(region) else "BR"
+
+            eval_date = None
+            if not pd.isna(timestamp):
+                try:
+                    dt = pd.to_datetime(timestamp)
+                    eval_date = dt.strftime("%Y-%m")
+                except:
+                    eval_date = "2025-11"
+            else:
+                eval_date = "2025-11"
+
+            answers_by_category = {}
+
+            for col in df.columns:
+                if 'Justification' in col or 'Notes' in col:
+                    continue
+
+                question_code = self._extract_question_code(col)
+                if not question_code:
+                    continue
+
+                answer_value = row[col]
+
+                justification_col = None
+                for next_col in df.columns:
+                    if question_code in next_col and ('Justification' in next_col or 'Notes' in next_col):
+                        justification_col = next_col
+                        break
+
+                justification = ""
+                if justification_col:
+                    just_val = row[justification_col]
+                    justification = str(just_val) if not pd.isna(just_val) else ""
+
+                # Use AD_ for ads scope, UGC_ for ugc scope
+                if scope.lower() == 'ads':
+                    full_code = f"AD_{question_code}"
+                else:
+                    full_code = f"{scope.upper()}_{question_code}"
+                category = self._categorize_question(question_code, scope)
+                normalized_answer = self._normalize_answer(answer_value, full_code, scope)
+
+                if category not in answers_by_category:
+                    answers_by_category[category] = []
+
+                answers_by_category[category].append({
+                    'code': full_code,
+                    'selected_answer': normalized_answer,
+                    'notes': justification
+                })
+
+            assessments.append({
+                'platform': platform_clean,
+                'region_code': region_code,
+                'scope': scope.upper(),
+                'evaluation_date': eval_date,
+                'analysts': str(analysts) if not pd.isna(analysts) else "",
+                'answers_by_category': answers_by_category
+            })
+
+        return assessments
+
+    def _generate_yaml_content(self, assessment: Dict) -> Dict:
+        """Generate YAML structure for an assessment."""
+        yaml_data = {
+            'metadata': {
+                'platform': assessment['platform'].capitalize(),
+                'region_code': assessment['region_code'],
+                'scope': assessment['scope'],
+                'evaluation_date': assessment['evaluation_date']
+            }
+        }
+
+        for category, answers in assessment['answers_by_category'].items():
+            # Convert underscores to hyphens in category name for YAML keys
+            category_with_hyphens = category.replace('_', '-')
+            key = f"{category_with_hyphens}_answers"
+            yaml_data[key] = sorted(answers, key=lambda x: x['code'])
+
+        return yaml_data
+
+    def _write_yaml_file(self, platform: str, scope: str, yaml_data: Dict):
+        """Write YAML data to file."""
+        platform_dir = self.global_dir / platform
+        platform_dir.mkdir(parents=True, exist_ok=True)
+
+        output_file = platform_dir / f"{scope.lower()}.yml"
+
+        with open(output_file, 'w', encoding='utf-8') as f:
+            yaml.dump(yaml_data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+        print(f"✓ Created: {output_file}")
+
+    def _create_qmd_from_template(self, platform: str) -> bool:
+        """
+        Create QMD file from template if both ads.yml and ugc.yml exist.
+        Returns True if QMD was created, False otherwise.
+        """
+        platform_dir = self.global_dir / platform
+        ads_file = platform_dir / "ads.yml"
+        ugc_file = platform_dir / "ugc.yml"
+
+        if not ads_file.exists() or not ugc_file.exists():
+            return False
+
+        template_file = self.template_dir / "platform_template.qmd"
+        if not template_file.exists():
+            print(f"⚠ Warning: Template file not found: {template_file}")
+            return False
+
+        with open(template_file, 'r', encoding='utf-8') as f:
+            template_content = f.read()
+
+        platform_title = platform.capitalize()
+        qmd_content = template_content.replace("{PLATFORM_NAME}", platform)
+        qmd_content = qmd_content.replace("{PLATFORM_TITLE}", platform_title)
+
+        output_file = platform_dir / f"{platform}.qmd"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(qmd_content)
+
+        print(f"✓ Created QMD: {output_file}")
+        return True
+
+    def _generate_report(self, all_assessments: List[Dict], qmd_created: List[str] = None) -> str:
+        """Generate assessment report in markdown format."""
+        report = ["# Assessment Transformation Report\n"]
+        report.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+
+        report.append("## Summary\n")
+
+        ads_count = sum(1 for a in all_assessments if a['scope'] == 'ADS')
+        ugc_count = sum(1 for a in all_assessments if a['scope'] == 'UGC')
+
+        report.append(f"- Total assessments processed: {len(all_assessments)}")
+        report.append(f"- ADS assessments: {ads_count}")
+        report.append(f"- UGC assessments: {ugc_count}")
+
+        platforms = set(a['platform'] for a in all_assessments)
+        report.append(f"- Platforms covered: {', '.join(sorted(platforms))}")
+
+        if qmd_created:
+            report.append(f"- QMD files created: {len(qmd_created)} ({', '.join(sorted(qmd_created))})\n")
+        else:
+            report.append("")
+
+        report.append("## Assessments by Platform\n")
+
+        for platform in sorted(platforms):
+            platform_assessments = [a for a in all_assessments if a['platform'] == platform]
+            report.append(f"### {platform.capitalize()}\n")
+
+            for assessment in platform_assessments:
+                report.append(f"**Scope:** {assessment['scope']}")
+                report.append(f"- Region: {assessment['region_code']}")
+                report.append(f"- Evaluation Date: {assessment['evaluation_date']}")
+                report.append(f"- Analysts: {assessment['analysts']}")
+
+                total_questions = sum(len(answers) for answers in assessment['answers_by_category'].values())
+                answered = sum(
+                    1 for answers in assessment['answers_by_category'].values()
+                    for answer in answers
+                    if answer['notes'] and answer['notes'] != 'nan'
+                )
+
+                report.append(f"- Questions: {total_questions}")
+                report.append(f"- With justifications: {answered} ({answered/total_questions*100:.1f}%)\n")
+
+                report.append("**Answers by category:**")
+                for category, answers in assessment['answers_by_category'].items():
+                    yes_count = sum(1 for a in answers if a['selected_answer'] in ['yes', 'full'])
+                    partial_count = sum(1 for a in answers if a['selected_answer'] == 'partial')
+                    no_count = sum(1 for a in answers if a['selected_answer'] == 'no')
+
+                    report.append(f"- {category}: {len(answers)} questions "
+                                f"(Yes/Full: {yes_count}, Partial: {partial_count}, No: {no_count})")
+
+                report.append("")
+
+        return "\n".join(report)
+
+    def transform_all(self):
+        """Process all Excel files and generate YAML outputs."""
+        print("Starting transformation...\n")
+
+        excel_files = {
+            'ads': self.xlsx_dir / "answers_BR_ads.xlsx",
+            'ugc': self.xlsx_dir / "answers_BR_ugc.xlsx"
+        }
+
+        all_assessments = []
+        platforms_processed = set()
+
+        for scope, excel_path in excel_files.items():
+            if not excel_path.exists():
+                print(f"⚠ Warning: {excel_path} not found, skipping...")
+                continue
+
+            print(f"Processing {scope.upper()}: {excel_path.name}")
+            assessments = self._process_excel_file(excel_path, scope)
+
+            for assessment in assessments:
+                yaml_data = self._generate_yaml_content(assessment)
+                self._write_yaml_file(assessment['platform'], scope, yaml_data)
+                all_assessments.append(assessment)
+                platforms_processed.add(assessment['platform'])
+
+            print(f"  Processed {len(assessments)} {scope.upper()} assessments\n")
+
+        print("\nGenerating QMD files from template...")
+        qmd_created = []
+        qmd_skipped = []
+
+        for platform in sorted(platforms_processed):
+            if self._create_qmd_from_template(platform):
+                qmd_created.append(platform)
+            else:
+                qmd_skipped.append(platform)
+                print(f"  Skipped {platform}: missing ads.yml or ugc.yml")
+
+        print(f"\n✓ Created {len(qmd_created)} QMD files")
+        if qmd_skipped:
+            print(f"  Skipped {len(qmd_skipped)} platforms (incomplete data)")
+
+        report_content = self._generate_report(all_assessments, qmd_created)
+        report_path = self.base_dir / "data" / "2025" / "assessment_report.md"
+
+        with open(report_path, 'w', encoding='utf-8') as f:
+            f.write(report_content)
+
+        print(f"\n✓ Report generated: {report_path}\n")
+        print("Transformation complete!")
+
+
+def main():
+    base_dir = Path(__file__).parent.parent
+    transformer = ExcelToYAMLTransformer(base_dir)
+    transformer.transform_all()
+
+
+if __name__ == "__main__":
+    main()

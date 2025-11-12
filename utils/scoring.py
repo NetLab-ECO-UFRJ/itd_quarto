@@ -2,8 +2,8 @@
 Scoring utilities for Social Media Evaluation project.
 
 Implements the methodology scoring system:
-- UGC: 75% special criteria (4 items: 0.30, 0.30, 0.30, 0.10) + 25% other criteria (27 items)
-- Ads: 75% special criteria (3 items: 0.50, 0.30, 0.20) + 25% other criteria (34 items)
+- UGC: 75% special criteria (4 items: 0.30, 0.30, 0.30, 0.10) + 25% other criteria (26 items)
+- Ads: 75% special criteria (3 items: 0.50, 0.30, 0.20) + 25% other criteria (33 items)
 """
 
 from typing import Dict, List, Any, Tuple
@@ -11,9 +11,9 @@ from .loader import load_questions, load_answers, load_categories, get_answer_we
 
 
 UGC_SPECIAL_WEIGHTS = [0.30, 0.30, 0.30, 0.10]
-UGC_OTHER_COUNT = 27
+UGC_OTHER_COUNT = 26
 ADS_SPECIAL_WEIGHTS = [0.50, 0.30, 0.20]
-ADS_OTHER_COUNT = 34
+ADS_OTHER_COUNT = 33
 
 
 def calculate_question_score(question: Dict[str, Any], selected_value: str) -> float:
