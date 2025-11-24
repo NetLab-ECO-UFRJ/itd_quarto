@@ -77,6 +77,9 @@ accessibility:
   - value: 'no'
     label: 'No'
     weight: 0.0
+  - value: not_applicable
+    label: Not applicable
+    weight: 0.0
   - value: 'yes'
     label: 'Yes'
     weight: 1.0
