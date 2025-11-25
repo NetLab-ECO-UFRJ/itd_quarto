@@ -18,7 +18,7 @@ while not (project_root / 'utils').exists() and project_root != project_root.par
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from utils.quarto_helpers import load_platform_results
+from utils.quarto_helpers import load_platform_results, format_score
 
 results_ugc, results_ads = load_platform_results(
     ugc_file="data/2025/global/bluesky/ugc.yml",
@@ -28,14 +28,14 @@ results_ugc, results_ads = load_platform_results(
 
 ```
 
-**User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
+**User-generated transparency score:** `{python} format_score(results_ugc)`
 
-**Advertising transparency score:** `{python} f"{results_ads['total_score']:.0f}"` / `{python} f"{results_ads['total_max']:.0f}"` (`{python} f"{results_ads['total_percentage']:.0f}"`%)
+**Advertising transparency score:** `{python} format_score(results_ads)`
 
 
 ## Executive Summary
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Bluesky distinguishes itself from other major social media platforms by operating without an advertising-based business model [@Kleppmann_2024]. Our evaluation assessed the platform's transparency regarding user-generated content (UGC) data accessibility only, as Bluesky does not offer advertising services, the advertising transparency framework was not applicable. Due to its open architecture, the platform demonstrates strong transparency in UGC data access. Key strengths include comprehensive endpoint coverage for extracting posts, author profiles, and search-based content; minimal authentication barriers requiring only standard login credentials; and consistent and reliable data retrieval with high performance. The API provides documented response schemas and clear rate limit specifications, with all user interface parameters accessible programmatically. However, several limitations constrain full transparency. The platform lacks comprehensive API documentation, with insufficient method explanations and no API-specific terms of use. The documentation is available only in English and lacks an official change log. Functional gaps include the absence of a graphical interface for data access and no location-based filtering capabilities. Additionally, the platform does not provide labels for AI-generated content. These limitations may present challenges for certain research applications and oversight requirements, particularly for non-technical stakeholders or studies requiring geographic analysis.
 
 ## User-Generated Content Summary
 
