@@ -75,6 +75,55 @@ def load_platform_results(
     return results_ugc, results_ads
 
 
+def generate_summary_table(results: Dict[str, Any]):
+    """
+    Generate separate summary tables for each category showing questions with answers and notes.
+
+    Args:
+        results: Results dictionary from calculate_platform_score
+    """
+    for category_name, category_data in results['categories'].items():
+        print(f"\n### {category_data['label']}\n")
+        print('```{=html}')
+        print('<table style="width: 100% !important; max-width: 100% !important; table-layout: fixed; border-collapse: collapse; font-size: 0.9em;">')
+        print('<colgroup>')
+        print('<col style="width: 45% !important;">')
+        print('<col style="width: 15% !important;">')
+        print('<col style="width: 40% !important;">')
+        print('</colgroup>')
+        print('<thead>')
+        print('<tr style="border-bottom: 2px solid #ddd;">')
+        print('<th style="text-align: left; padding: 8px; width: 45% !important;">Question</th>')
+        print('<th style="text-align: left; padding: 8px; width: 15% !important;">Answer</th>')
+        print('<th style="text-align: left; padding: 8px; width: 40% !important;">Notes</th>')
+        print('</tr>')
+        print('</thead>')
+        print('<tbody>')
+
+        for item in category_data['details']:
+            topic = item['question_text']
+            answer = item['selected_label']
+            notes = item.get('notes', '').replace('\n', ' ').replace('\r', ' ')
+
+            answer_icon = ""
+            if answer.lower() in ["yes", "full"]:
+                answer_icon = "✅ "
+            elif answer.lower() in ["partial"]:
+                answer_icon = "⚠️ "
+            elif answer.lower() in ["no", "no or not applicable"]:
+                answer_icon = "❌ "
+
+            print('<tr style="border-bottom: 1px solid #eee;">')
+            print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; width: 45% !important;">{topic}</td>')
+            print(f'<td style="padding: 8px; vertical-align: top; width: 15% !important;">{answer_icon}{answer}</td>')
+            print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; width: 40% !important;">{notes}</td>')
+            print('</tr>')
+
+        print('</tbody>')
+        print('</table>')
+        print('```\n')
+
+
 def generate_category_scores(results: Dict[str, Any], heading_level: int = 3):
     """
     Generate markdown output for category scores with details.
@@ -105,13 +154,14 @@ def generate_category_scores(results: Dict[str, Any], heading_level: int = 3):
     for category_name, category_data in results['categories'].items():
         print(f"\n{h1} {category_data['label']}\n")
         print(f"*{category_data['description']}*\n")
-        print(f"**Score:** {category_data['score']:.2f} / {category_data['max']:.2f} ({category_data['percentage']:.1f}%)\n")
+        print(f"**Score:** {category_data['score']:.0f} / {category_data['max']:.0f} ({category_data['percentage']:.0f}%)\n")
         print(f"\n{h2} Key Findings - {category_data['label']}\n")
 
         for item in category_data['details']:
             print(f"\n**{item['question_code']}: {item['question_text']}**\n")
             print(f"- **Answer:** {item['selected_label']}  ")
-            print(f"- **Score:** {item['question_score']:.2f} / {item['question_max']:.2f} ({item['question_score']/item['question_max']*100:.1f}%)  ")
+            print(f"- **Score:** {item['question_score']:.0f} / {item['question_max']:.0f} ({item['question_score']/item['question_max']*100:.0f}%)  ")
             if item['notes']:
-                print(f"- **Notes:** {item['notes']}  ")
+                notes_cleaned = item['notes'].replace('\n', ' ').replace('\r', ' ')
+                print(f"- **Notes:** {notes_cleaned}  ")
             print()
