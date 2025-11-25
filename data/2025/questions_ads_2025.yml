@@ -14,7 +14,7 @@ special_criteria:
       - value: partial
         label: "Yes, with partial availability"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -33,7 +33,7 @@ special_criteria:
       - value: partial
         label: "Yes, with partial availability"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -52,7 +52,7 @@ special_criteria:
       - value: partial
         label: "Yes, with partial availability"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -66,10 +66,10 @@ accessibility:
       browser-based tool that allows users to search, access, and view ad content.
     weight: 1.0
     answers:
-      - value: yes
+      - value: 'yes'
         label: "Yes"
         weight: 1.0
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -88,7 +88,7 @@ accessibility:
       - value: gui
         label: "Free GUI access"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -108,7 +108,7 @@ accessibility:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -121,10 +121,10 @@ accessibility:
       interrupt or compromise data access.
     weight: 1.0
     answers:
-      - value: yes
+      - value: 'yes'
         label: "Yes"
         weight: 1.0
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -143,7 +143,7 @@ accessibility:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -161,7 +161,7 @@ accessibility:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -179,7 +179,7 @@ accessibility:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -198,7 +198,7 @@ accessibility:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -217,7 +217,7 @@ completeness:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -234,7 +234,7 @@ completeness:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -252,7 +252,7 @@ completeness:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -270,7 +270,7 @@ completeness:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -287,7 +287,7 @@ completeness:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -306,7 +306,7 @@ compliance:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -324,7 +324,7 @@ compliance:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -342,7 +342,7 @@ compliance:
       - value: gui
         label: "Yes, the GUI documentation"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -360,7 +360,7 @@ compliance:
       - value: gui
         label: "Yes, the GUI documentation"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -378,7 +378,7 @@ compliance:
       - value: gui
         label: "Yes, the GUI documentation"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -396,7 +396,7 @@ compliance:
       - value: gui
         label: "Yes, the GUI documentation"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -412,7 +412,7 @@ compliance:
       - value: yes
         label: "Yes"
         weight: 1.0
-      - value: no
+      - value: 'no'
         label: "No or not applicable"
         weight: 0.0
 
@@ -427,7 +427,7 @@ compliance:
       - value: yes
         label: "Yes"
         weight: 1.0
-      - value: no
+      - value: 'no'
         label: "No or not applicable"
         weight: 0.0
 
@@ -444,7 +444,7 @@ compliance:
       - value: yes
         label: "Yes"
         weight: 1.0
-      - value: no
+      - value: 'no'
         label: "No or not applicable"
         weight: 0.0
 
@@ -462,7 +462,7 @@ consistency:
       - value: yes
         label: "Yes"
         weight: 1.0
-      - value: no
+      - value: 'no'
         label: "No or not applicable"
         weight: 0.0
 
@@ -480,7 +480,7 @@ consistency:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -498,7 +498,7 @@ consistency:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -517,7 +517,7 @@ relevance:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -535,7 +535,7 @@ relevance:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No or not applicable"
         weight: 0.0
 
@@ -553,7 +553,7 @@ relevance:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -571,7 +571,7 @@ accuracy:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -589,7 +589,7 @@ accuracy:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -608,7 +608,7 @@ accuracy:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -630,7 +630,7 @@ accuracy:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0
 
@@ -651,6 +651,6 @@ accuracy:
       - value: api
         label: "Yes, through the API"
         weight: 0.5
-      - value: no
+      - value: 'no'
         label: "No"
         weight: 0.0

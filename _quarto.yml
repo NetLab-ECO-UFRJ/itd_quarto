@@ -13,14 +13,21 @@ book:
     - index.qmd
     - introduction.qmd
     - background.qmd
+    - recommendations.qmd
     - methodology.qmd
     - part: "Global Assessments"
       chapters:
+        - data/2025/global/telegram/telegram.qmd
+        - data/2025/global/bluesky/bluesky.qmd
+        - data/2025/global/discord/discord.qmd
         - data/2025/global/kwai/kwai.qmd
-    #    - data/2025/global/discord/discord.qmd
-    # - part: "Brazil"
-    #   chapters:
-    #     - data/2025/regional/BR/reddit/reddit_br.qmd
+    - part: "Brazil"
+      chapters:
+        - data/2025/regional/BR/linkedin/linkedin.qmd
+        - data/2025/regional/BR/pinterest/pinterest.qmd
+        - data/2025/regional/BR/snapchat/snapchat.qmd
+        - data/2025/regional/BR/tiktok/tiktok.qmd
+        - data/2025/regional/BR/x/x.qmd
     # - part: "European Union"
     #   chapters: []
     # - part: "United Kingdom"

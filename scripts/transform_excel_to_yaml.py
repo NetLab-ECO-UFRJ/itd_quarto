@@ -262,7 +262,13 @@ class ExcelToYAMLTransformer:
             template_content = f.read()
 
         platform_title = platform.capitalize()
-        qmd_content = template_content.replace("{PLATFORM_NAME}", platform)
+
+        if self.scope_type == "regional":
+            platform_path = f"data/2025/regional/{self.region_code}/{platform}"
+        else:
+            platform_path = f"data/2025/global/{platform}"
+
+        qmd_content = template_content.replace("data/2025/global/{PLATFORM_NAME}", platform_path)
         qmd_content = qmd_content.replace("{PLATFORM_TITLE}", platform_title)
 
         output_file = platform_dir / f"{platform}.qmd"

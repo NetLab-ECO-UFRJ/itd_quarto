@@ -4,11 +4,7 @@ A Quarto-based research reporting system for evaluating social media platforms a
 
 ## Para fazer
 
-- Update the import script to get as parameter the name of the platform to be processed and the scope target (global or regional with the region code)
-
 - Review scripts that calculate the score
-
-- Script/methods to convert to/from YAML <> CSV
 
 ## Project Structure
 
@@ -55,6 +51,103 @@ quarto render
 ```
 
 Output will be in `_output/` directory.
+
+## Importing Data from Excel
+
+### Overview
+
+The project includes a script to import platform assessment data from Excel files and generate YAML files and QMD reports automatically.
+
+### Before Importing
+
+**Important:** To avoid conflicts or issues with existing data, remove the platform directory before reimporting.
+
+```bash
+# Remove existing platform data 
+rm -rf data/2025/global/*
+
+# For regional data 
+rm -rf data/2025/regional/BR/*
+```
+
+### Excel File Location
+
+Place your Excel files in the `data/2025/xlsx_backups/` directory. The script expects two files:
+- One for UGC (User-Generated Content) framework responses
+- One for ADS (Advertising) framework responses
+
+### Import Commands
+
+#### Bulk Import (All Platforms)
+
+Import all global platforms:
+
+```bash
+for platform in telegram bluesky discord kwai; do uv run python scripts/transform_excel_to_yaml.py --platform $platform --scope-type global --ads-file "Advertising Framework (respostas).xlsx" --ugc-file "UGC Framework (respostas).xlsx"; done
+```
+
+Import regional in Brazil:
+
+```bash
+for platform in x tiktok linkedin pinterest snapchat; do uv run python scripts/transform_excel_to_yaml.py --platform $platform --scope-type regional --region br --ads-file "Advertising Framework (respostas).xlsx" --ugc-file "UGC Framework (respostas).xlsx"; done
+```
+
+This command:
+- Imports **global scope**: Telegram, Bluesky, Discord, TikTok, Kwai, LinkedIn, Pinterest, Snapchat
+
+#### Individual Platform Import
+
+##### Global Scope
+
+For global assessments:
+
+```bash
+uv run python scripts/transform_excel_to_yaml.py \
+  --platform bluesky \
+  --scope-type global \
+  --ads-file "Advertising Framework (respostas).xlsx" \
+  --ugc-file "UGC Framework (respostas).xlsx"
+```
+
+##### Regional Scope
+
+For regional assessments (e.g., Brazil):
+
+```bash
+uv run python scripts/transform_excel_to_yaml.py \
+  --platform facebook \
+  --scope-type regional \
+  --region BR \
+  --ads-file "Advertising Framework (respostas).xlsx" \
+  --ugc-file "UGC Framework (respostas).xlsx"
+```
+
+Note: Both global and regional scopes now use the same Excel file parameters.
+
+### What the Script Does
+
+1. **Reads Excel files** from `data/2025/xlsx_backups/`
+2. **Creates YAML files** with normalized answers:
+   - `data/2025/global/{platform}/ugc.yml`
+   - `data/2025/global/{platform}/ads.yml`
+3. **Generates QMD report** from template:
+   - `data/2025/global/{platform}/{platform}.qmd`
+
+### After Import
+
+Once imported, update `_quarto.yml` to include the new platform in the book chapters:
+
+```yaml
+- part: "Global Assessments"
+  chapters:
+    - data/2025/global/bluesky/bluesky.qmd
+```
+
+Then render the report:
+
+```bash
+uv run quarto render data/2025/global/bluesky/bluesky.qmd --to html
+```
 
 ## Python API
 

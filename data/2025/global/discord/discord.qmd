@@ -1,8 +1,8 @@
 ---
-title: "Kwai"
+title: "Discord"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/global/kwai/ugc.yml"
-ads_answers_file: "data/2025/global/kwai/ads.yml"
+ugc_answers_file: "data/2025/global/discord/ugc.yml"
+ads_answers_file: "data/2025/global/discord/ads.yml"
 ---
 
 ```{python}
@@ -21,8 +21,8 @@ if str(project_root) not in sys.path:
 from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
-    ugc_file="data/2025/global/kwai/ugc.yml",
-    ads_file="data/2025/global/kwai/ads.yml",
+    ugc_file="data/2025/global/discord/ugc.yml",
+    ads_file="data/2025/global/discord/ads.yml",
     year='2025'
 )
 

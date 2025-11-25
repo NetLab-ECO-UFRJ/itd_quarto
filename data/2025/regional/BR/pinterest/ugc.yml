@@ -1,0 +1,168 @@
+metadata:
+  platform: Pinterest
+  region_code: BRAZIL
+  scope: UGC
+  evaluation_date: 2025-10
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: 'no'
+  notes: 'Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country. It only provides management for "pins" of the "operation user_account".
+    The only possible exception could be the /search/partner/pins endpoint, but it
+    is still in beta and was not considered. Also, the documentation provides insufficient
+    explanations about its behavior, but seems to be related to request for content
+    from brand partnerships. Source: https://developers.pinterest.com/docs/api/v5/search_partner_pins,
+    https://developers.pinterest.com/docs/key-concepts/using-beta-and-restricted-features/
+    and https://help.pinterest.com/en/business/article/approve-or-remove-paid-partnership-tags'
+- code: UGC_SC2
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_SC3
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_SC4
+  selected_answer: 'no'
+  notes: In the same way that it does not provide an API enabling programmatic access
+    to or extraction of public user-generated content data, Pinterest likewise does
+    not offer a graphical interface for this purpose.
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC2
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC3
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC4
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC5
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC6
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC7
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+compliance_answers:
+- code: UGC_OC10
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC11
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC12
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC13
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC14
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC15
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC8
+  selected_answer: no_or_not_applicable
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC9
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+completeness_answers:
+- code: UGC_OC16
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC17
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC18
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC19
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+consistency_answers:
+- code: UGC_OC20
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC21
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+relevance_answers:
+- code: UGC_OC22
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC23
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC24
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+- code: UGC_OC25
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
+timeliness_answers:
+- code: UGC_OC26
+  selected_answer: 'no'
+  notes: Pinterest does not provide an API that enables programmatic access to or
+    extraction of public user-generated content data, either in Brazil or in any other
+    country
