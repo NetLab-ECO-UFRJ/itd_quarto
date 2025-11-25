@@ -37,7 +37,12 @@ book:
 
 bibliography:
   - bib/references_global.bib
+  - bib/bluesky.bib
+  - bib/discord.bib
+  - bib/kwai.bib
   - bib/reddit.bib
+  - bib/tiktok.bib
+  - bib/whatsapp.bib
 
 format:
   html:
