@@ -122,7 +122,7 @@ def generate_summary_table(results: Dict[str, Any]):
         for item in category_data['details']:
             topic = item['question_text']
             answer = item['selected_label']
-            notes = item.get('notes', '').replace('\n', ' ').replace('\r', ' ')
+            notes = (item.get('notes') or '').replace('\n', ' ').replace('\r', ' ')
 
             answer_icon = ""
             if answer.lower() in ["yes", "full"]:
