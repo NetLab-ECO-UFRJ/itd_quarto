@@ -35,9 +35,9 @@ results_ugc, results_ads = load_platform_results(
 
 ## Executive Summary
 
-Bluesky distinguishes itself from other major social media platforms by operating without an advertising-based business model [@Kleppmann_2024]. Our evaluation assessed the platform's transparency regarding user-generated content (UGC) data accessibility only, as Bluesky does not offer advertising services, the advertising transparency framework was not applicable. Due to its open architecture, the platform demonstrates strong transparency in UGC data access. Key strengths include comprehensive endpoint coverage for extracting posts, author profiles, and search-based content; minimal authentication barriers requiring only standard login credentials; and consistent and reliable data retrieval with high performance. The API provides documented response schemas and clear rate limit specifications, with all user interface parameters accessible programmatically. However, several limitations constrain full transparency. The platform lacks comprehensive API documentation, with insufficient method explanations and no API-specific terms of use. The documentation is available only in English and lacks an official change log. Functional gaps include the absence of a graphical interface for data access and no location-based filtering capabilities. Additionally, the platform does not provide labels for AI-generated content. These limitations may present challenges for certain research applications and oversight requirements, particularly for non-technical stakeholders or studies requiring geographic analysis.
+Bluesky distinguishes itself from other major social media platforms by operating descentralized and without an advertising-based business model [@Kleppmann_2024]. Therefore, our evaluation assessed the platform's transparency regarding user-generated content (UGC) data accessibility only, as Bluesky does not offer advertising services, the advertising transparency framework was not applicable. Due to its open architecture, the platform demonstrates strong transparency in UGC data access. Key strengths include comprehensive endpoint coverage for extracting posts and author feeds [@bluesky_api_get_posts; @bluesky_api_get_author_feed], as well as search-based content retrieval capabilities. The platform requires minimal authentication barriers, using only standard login credentials, and direct messages from users can be retrieved through the API [@atproto_dm_docs]. The platform demonstrates consistent and reliable data retrieval with high performance. The API provides documented response schemas [@bluesky_api_get_profile] and clear rate limit specifications [@bluesky_api_get_started]. Its documentation is publicly accessible without requiring registration [@bluesky_api_docs]. However, several limitations constrain full transparency. The API documentation is available only in English and is limited, with some endpoints lacking detailed explanations [@bluesky_api_get_messages] and no API-specific terms of use. While Bluesky includes links to its terms of use, privacy policy, copyright policy, and developer guidelines, these are not specific to API usage [@bluesky_tos; @bluesky_privacy; @bluesky_copyright; @bluesky_developer_guidelines]. Functional gaps include the absence of a graphical interface for data access and no location-based filtering capabilities. Additionally, while the platform offers self-labeling capabilities for post content [@atproto_selflabel], it does not provide specific labels for AI-generated content [@lockhart2025human]. These limitations may present challenges for certain research applications and oversight requirements, particularly for non-technical stakeholders or studies requiring geographic analysis.
 
-## User-Generated Content Summary
+## User-Generated Content 
 
 ```{python}
 #| label: ugc-summary-table
@@ -48,8 +48,10 @@ from utils.quarto_helpers import generate_summary_table
 generate_summary_table(results_ugc)
 ```
 
-## Advertising Summary
+## Advertising 
 
+Not applicable.
+<!-- 
 ```{python}
 #| label: ads-summary-table
 #| echo: false
@@ -57,6 +59,7 @@ generate_summary_table(results_ugc)
 
 generate_summary_table(results_ads)
 ```
+ -->
 
 ## References
 
