@@ -146,7 +146,7 @@ class ExcelToYAMLTransformer:
             if pd.isna(platform) or platform == "":
                 continue
 
-            platform_clean = str(platform).strip().lower()
+            platform_clean = str(platform).strip().lower().replace('/', '_').replace(' ', '_')
             region_code = str(region).strip().upper() if not pd.isna(region) else "BR"
 
             eval_date = None
@@ -276,18 +276,13 @@ class ExcelToYAMLTransformer:
         """Process all Excel files and generate YAML outputs."""
         print("Starting transformation...\n")
 
-        if self.scope_type == "regional" and self.region_code:
-            excel_files = {
-                'ads': self.xlsx_dir / f"answers_{self.region_code}_ads.xlsx",
-                'ugc': self.xlsx_dir / f"answers_{self.region_code}_ugc.xlsx"
-            }
-        else:
-            if not ads_file or not ugc_file:
-                raise ValueError("For global scope, both ads_file and ugc_file parameters must be provided")
-            excel_files = {
-                'ads': self.xlsx_dir / ads_file,
-                'ugc': self.xlsx_dir / ugc_file
-            }
+        if not ads_file or not ugc_file:
+            raise ValueError("Both ads_file and ugc_file parameters must be provided")
+
+        excel_files = {
+            'ads': self.xlsx_dir / ads_file,
+            'ugc': self.xlsx_dir / ugc_file
+        }
 
         all_assessments = []
         platforms_processed = set()
@@ -351,20 +346,19 @@ def main():
     )
     parser.add_argument(
         "--ads-file",
-        help="ADS Excel filename in xlsx_backups (required for global scope)"
+        required=True,
+        help="ADS Excel filename in xlsx_backups"
     )
     parser.add_argument(
         "--ugc-file",
-        help="UGC Excel filename in xlsx_backups (required for global scope)"
+        required=True,
+        help="UGC Excel filename in xlsx_backups"
     )
 
     args = parser.parse_args()
 
     if args.scope_type == "regional" and not args.region:
         parser.error("--region is required when --scope-type is regional")
-
-    if args.scope_type == "global" and (not args.ads_file or not args.ugc_file):
-        parser.error("--ads-file and --ugc-file are required when --scope-type is global")
 
     base_dir = Path(__file__).parent.parent
     transformer = ExcelToYAMLTransformer(

@@ -28,44 +28,35 @@ results_ugc, results_ads = load_platform_results(
 
 ```
 
-This evaluation is based on {PLATFORM_TITLE}'s publicly available policies and documentation, as well as international regulatory frameworks [@dsa_regulation].
+**User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
+
+**Advertising transparency score:** `{python} f"{results_ads['total_score']:.0f}"` / `{python} f"{results_ads['total_max']:.0f}"` (`{python} f"{results_ads['total_percentage']:.0f}"`%)
 
 
-## User-Generated Content (UGC) Evaluation
+## Executive Summary
 
-### Overall UGC Score
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-**Total score:** `{python} f"{results_ugc['total_score']:.2f}"` / `{python} f"{results_ugc['total_max']:.2f}"` (`{python} f"{results_ugc['total_percentage']:.1f}"`%)
-
-### UGC Category Scores
+## User-Generated Content Summary
 
 ```{python}
-#| label: ugc-category-scores
+#| label: ugc-summary-table
 #| echo: false
 #| output: asis
 
-from utils.quarto_helpers import generate_category_scores
-generate_category_scores(results_ugc, heading_level=3)
+from utils.quarto_helpers import generate_summary_table
+generate_summary_table(results_ugc)
 ```
 
-
-## Advertising (ADS) Evaluation
-
-### Overall ADS Score
-
-**Total score:** `{python} f"{results_ads['total_score']:.2f}"` / `{python} f"{results_ads['total_max']:.2f}"` (`{python} f"{results_ads['total_percentage']:.1f}"`%)
-
-### ADS Category Scores
+## Advertising Summary
 
 ```{python}
-#| label: ads-category-scores
+#| label: ads-summary-table
 #| echo: false
 #| output: asis
 
-from utils.quarto_helpers import generate_category_scores
-generate_category_scores(results_ads, heading_level=3)
+generate_summary_table(results_ads)
 ```
-
 
 ## References
 
