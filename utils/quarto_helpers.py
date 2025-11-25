@@ -75,6 +75,25 @@ def load_platform_results(
     return results_ugc, results_ads
 
 
+def format_score(results: Dict[str, Any]) -> str:
+    """
+    Format a score result, returning "Not applicable" if all answers are N/A.
+
+    Args:
+        results: Results dictionary from calculate_platform_score
+
+    Returns:
+        Formatted score string: either "Not applicable" or "X / Y (Z%)"
+    """
+    if results.get('is_not_applicable', False):
+        return "Not applicable"
+    else:
+        score = results['total_score']
+        max_score = results['total_max']
+        percentage = results['total_percentage']
+        return f"{score:.0f} / {max_score:.0f} ({percentage:.0f}%)"
+
+
 def generate_summary_table(results: Dict[str, Any]):
     """
     Generate separate summary tables for each category showing questions with answers and notes.
@@ -112,11 +131,13 @@ def generate_summary_table(results: Dict[str, Any]):
                 answer_icon = "⚠️ "
             elif answer.lower() in ["no", "no or not applicable"]:
                 answer_icon = "❌ "
+            elif answer.lower() in ["not applicable"]:
+                answer_icon = "➖ "
 
             print('<tr style="border-bottom: 1px solid #eee;">')
-            print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; width: 45% !important;">{topic}</td>')
+            print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; width: 45% !important;">{topic}</td>')
             print(f'<td style="padding: 8px; vertical-align: top; width: 15% !important;">{answer_icon}{answer}</td>')
-            print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; width: 40% !important;">{notes}</td>')
+            print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; max-width: 0; width: 40% !important;">{notes}</td>')
             print('</tr>')
 
         print('</tbody>')
