@@ -184,13 +184,33 @@ def calculate_methodology_score(
 
     total_score = special_score + other_score
 
+    all_not_applicable = True
+    for answer_item in special_answers:
+        if answer_item['selected_answer'] != 'not_applicable':
+            all_not_applicable = False
+            break
+
+    if all_not_applicable:
+        for category_name, category_answers in answers_data.items():
+            if category_name == 'metadata' or category_name == 'special-criteria_answers':
+                continue
+            if not category_name.endswith('_answers'):
+                continue
+            for answer_item in category_answers:
+                if answer_item['selected_answer'] != 'not_applicable':
+                    all_not_applicable = False
+                    break
+            if not all_not_applicable:
+                break
+
     return {
         'special_score': special_score,
         'other_score': other_score,
         'total_score': total_score,
         'special_max': 75.0,
         'other_max': 25.0,
-        'total_max': 100.0
+        'total_max': 100.0,
+        'is_not_applicable': all_not_applicable
     }
 
 
@@ -267,7 +287,8 @@ def calculate_platform_score(
             'total_max': methodology_scores['total_max'],
             'total_percentage': methodology_scores['total_score'],
             'special_score': methodology_scores['special_score'],
-            'other_score': methodology_scores['other_score']
+            'other_score': methodology_scores['other_score'],
+            'is_not_applicable': methodology_scores.get('is_not_applicable', False)
         }
     else:
         total_score = sum(cat['score'] for cat in category_results.values())
