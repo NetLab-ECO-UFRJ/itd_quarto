@@ -1,6 +1,6 @@
 metadata:
   platform: Telegram
-  region_code: BRAZIL
+  # region_code: BRAZIL
   scope: UGC
   evaluation_date: 2025-11
 special-criteria_answers:
