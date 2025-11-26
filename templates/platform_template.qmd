@@ -32,11 +32,6 @@ results_ugc, results_ads = load_platform_results(
 
 **Advertising transparency score:** `{python} f"{results_ads['total_score']:.0f}"` / `{python} f"{results_ads['total_max']:.0f}"` (`{python} f"{results_ads['total_percentage']:.0f}"`%)
 
-
-## Executive Summary
-
-Describe how the platform’s architecture or business model influences the evaluation scope. Example elements: centralized/decentralized design, presence/absence of advertising model. Specify which transparency dimensions are relevant or excluded based on platform characteristics (e.g., UGC data access, advertising transparency, algorithmic transparency). Highlight transparency Strengths and Limitations. Concise overview of the platform’s overall transparency posture. Highlight how strengths and limitations impact potential research, auditing, or governance applications.
-
 ## User-Generated Content 
 
 ```{python}
@@ -57,8 +52,3 @@ generate_summary_table(results_ugc)
 
 generate_summary_table(results_ads)
 ```
-
-## References
-
-::: {#refs}
-:::

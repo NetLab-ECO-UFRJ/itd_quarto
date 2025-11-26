@@ -12,27 +12,35 @@ book:
   repo-actions: [issue]
   chapters:
     - index.qmd
-    - chapters/introduction.qmd
-    - chapters/background.qmd
+    - chapters/executive-summary.qmd
     - chapters/recommendations.qmd
+    - chapters/key-findings.qmd
+    - chapters/context.qmd
     - chapters/methodology.qmd
-    - part: "Global Assessments"
+    - chapters/framework.qmd
+    - chapters/findings.qmd
+    - chapters/conclusion.qmd
+    - part: "Platforms"
+      chapters:
+        - chapters/platforms/bluesky.qmd
+        - chapters/platforms/telegram.qmd
+    - part: "Appendix - Global Assessments"
       chapters:
         - data/2025/global/bluesky/bluesky.qmd
         #- data/2025/global/discord/discord.qmd
         #- data/2025/global/kwai/kwai.qmd
         - data/2025/global/telegram/telegram.qmd
-    - part: "Brazil"
+    - part: "Appendix - Brazil Assessments"
       chapters:
         - data/2025/regional/BR/linkedin/linkedin.qmd
         # - data/2025/regional/BR/pinterest/pinterest.qmd
         # - data/2025/regional/BR/snapchat/snapchat.qmd
         # - data/2025/regional/BR/tiktok/tiktok.qmd
         # - data/2025/regional/BR/x/x.qmd
-    # - part: "European Union"
-    #   chapters: []
-    # - part: "United Kingdom"
-    #   chapters: []
+        # - part: "European Union"
+        #   chapters: []
+        # - part: "United Kingdom"
+        #   chapters: []
   # page-footer:
   #   center: "--- "
 
