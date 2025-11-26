@@ -12,25 +12,26 @@ book:
   repo-actions: [issue]
   chapters:
     - index.qmd
-    - chapters/executive-summary.qmd
-    - chapters/recommendations.qmd
-    - chapters/key-findings.qmd
-    - chapters/context.qmd
-    - chapters/methodology.qmd
-    - chapters/framework.qmd
-    - chapters/findings.qmd
-    - chapters/conclusion.qmd
+    # - chapters/executive-summary.qmd
+    # - chapters/recommendations.qmd
+    # - chapters/key-findings.qmd
+    # - chapters/context.qmd
+    # - chapters/methodology.qmd
+    # - chapters/framework.qmd
+    # - chapters/findings.qmd
+    # - chapters/conclusion.qmd
     - part: "Platforms"
       chapters:
         - chapters/platforms/bluesky.qmd
         - chapters/platforms/telegram.qmd
-    - part: "Appendix - Global Assessments"
+  appendices: 
+    - part: "Global Assessments"
       chapters:
         - data/2025/global/bluesky/bluesky.qmd
         #- data/2025/global/discord/discord.qmd
         #- data/2025/global/kwai/kwai.qmd
         - data/2025/global/telegram/telegram.qmd
-    - part: "Appendix - Brazil Assessments"
+    - part: "Brazil Assessments"
       chapters:
         - data/2025/regional/BR/linkedin/linkedin.qmd
         # - data/2025/regional/BR/pinterest/pinterest.qmd

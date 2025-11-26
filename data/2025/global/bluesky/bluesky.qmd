@@ -28,6 +28,8 @@ results_ugc, results_ads = load_platform_results(
 
 ```
 
+**Region:** `{python} results_ugc['metadata'].get('region_code', 'N/A')`
+
 **User-generated transparency score:** `{python} format_score(results_ugc)`
 
 **Advertising transparency score:** `{python} format_score(results_ads)`
@@ -55,8 +57,3 @@ Not applicable.
 generate_summary_table(results_ads)
 ```
  -->
-
-## References
-
-::: {#refs}
-:::
