@@ -1,6 +1,7 @@
 project:
   type: book
   output-dir: _output
+  # render: 
 
 book:
   title: "Data Transparency Index"
@@ -11,38 +12,41 @@ book:
   repo-actions: [issue]
   chapters:
     - index.qmd
-    - introduction.qmd
-    - background.qmd
-    - recommendations.qmd
-    - methodology.qmd
+    - chapters/introduction.qmd
+    - chapters/background.qmd
+    - chapters/recommendations.qmd
+    - chapters/methodology.qmd
     - part: "Global Assessments"
       chapters:
-        - data/2025/global/telegram/telegram.qmd
         - data/2025/global/bluesky/bluesky.qmd
-        - data/2025/global/discord/discord.qmd
-        - data/2025/global/kwai/kwai.qmd
+        #- data/2025/global/discord/discord.qmd
+        #- data/2025/global/kwai/kwai.qmd
+        - data/2025/global/telegram/telegram.qmd
     - part: "Brazil"
       chapters:
         - data/2025/regional/BR/linkedin/linkedin.qmd
-        - data/2025/regional/BR/pinterest/pinterest.qmd
-        - data/2025/regional/BR/snapchat/snapchat.qmd
-        - data/2025/regional/BR/tiktok/tiktok.qmd
-        - data/2025/regional/BR/x/x.qmd
+        # - data/2025/regional/BR/pinterest/pinterest.qmd
+        # - data/2025/regional/BR/snapchat/snapchat.qmd
+        # - data/2025/regional/BR/tiktok/tiktok.qmd
+        # - data/2025/regional/BR/x/x.qmd
     # - part: "European Union"
     #   chapters: []
     # - part: "United Kingdom"
     #   chapters: []
   # page-footer:
-  #   center: "© 2025 Social Media Evaluation Project"
+  #   center: "--- "
 
 bibliography:
   - bib/references_global.bib
   - bib/bluesky.bib
-  - bib/discord.bib
-  - bib/kwai.bib
-  - bib/reddit.bib
-  - bib/tiktok.bib
-  - bib/whatsapp.bib
+  # - bib/discord.bib
+  # - bib/kwai.bib
+  # - bib/reddit.bib
+  # - bib/tiktok.bib
+  # - bib/whatsapp.bib
+
+# Render each chapter in its own scope so citations stay with the file
+# file-scope: true
 
 format:
   html:
