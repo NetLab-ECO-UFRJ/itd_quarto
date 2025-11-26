@@ -62,8 +62,8 @@ def load_questions(year: str = "2025", question_type: str = "all") -> Dict[str, 
         # Section-based structure (consistency, accessibility, special-criteria, etc.)
         for section_name, questions_list in data.items():
             if isinstance(questions_list, list):
-                # Convert section name to label (e.g., "special-criteria" -> "Special Criteria")
-                category_label = section_name.replace('-', ' ').title()
+                # Convert section name to label (e.g., "special-criteria" or "special_criteria" -> "Special Criteria")
+                category_label = section_name.replace('-', ' ').replace('_', ' ').title()
 
                 for question in questions_list:
                     code = question['code']
@@ -125,8 +125,8 @@ def load_categories(year: str = "2025", question_type: str = "all") -> List[Dict
         for section_name, questions_list in data.items():
             if isinstance(questions_list, list) and questions_list:
                 if section_name not in categories_dict:
-                    # Convert section name to label (e.g., "special-criteria" -> "Special Criteria")
-                    category_label = section_name.replace('-', ' ').title()
+                    # Convert section name to label (e.g., "special-criteria" or "special_criteria" -> "Special Criteria")
+                    category_label = section_name.replace('-', ' ').replace('_', ' ').title()
                     # Use first question's description as category description
                     category_desc = questions_list[0].get('description', '')
 

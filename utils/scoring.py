@@ -257,8 +257,13 @@ def calculate_platform_score(
         category_name = category_info['name']
         answers_key = f"{category_name}_answers"
 
+        # Handle both underscore and hyphen variants for category names
+        # (e.g., both "special_criteria_answers" and "special-criteria_answers")
         if answers_key not in answers_data:
-            continue
+            answers_key_alt = answers_key.replace('_', '-', 1)  # Try hyphen variant
+            if answers_key_alt not in answers_data:
+                continue
+            answers_key = answers_key_alt
 
         score, max_score, details = calculate_category_scores(
             questions_dict,
