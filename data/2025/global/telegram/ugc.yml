@@ -1,6 +1,6 @@
 metadata:
   platform: Telegram
-  # region_code: BRAZIL
+  region_code: GLOBAL
   scope: UGC
   evaluation_date: 2025-11
 special-criteria_answers:
@@ -120,11 +120,8 @@ completeness_answers:
     of large message volumes, such as 10,000 publications in 24 hours."
 consistency_answers:
 - code: UGC_OC20
-  selected_answer: 'no'
-  notes: 'Because messages can be edited or deleted (including by users, chat owners,
-    or due to auto-delete settings) and Telegram API treats deleted messages as if
-    they had never existed, identical queries at different times may return different
-    results or miss content that has been removed.'
+  selected_answer: 'yes'
+  notes: 'The same request was made five consecutive times and the same results were retrieved.'
 - code: UGC_OC21
   selected_answer: 'yes'
   notes: 'Our tests showed that the API results are consistent with the parameters

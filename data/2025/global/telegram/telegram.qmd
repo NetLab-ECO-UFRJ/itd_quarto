@@ -32,11 +32,6 @@ results_ugc, results_ads = load_platform_results(
 
 **Advertising transparency score:** `{python} f"{results_ads['total_score']:.0f}"` / `{python} f"{results_ads['total_max']:.0f}"` (`{python} f"{results_ads['total_percentage']:.0f}"`%)
 
-
-## Executive Summary
-
-Telegram provides an API for third-party apps to display sponsored messages that replicate Telegram functionality. However, the API endpoints do not provide access to a comprehensive ad database. The ad-related endpoints return only active ads in known channels so that the Telegram clients can show them to their users. Telegram also offers the [Telegram Ad Platform](ads.telegram.org) for creating and managing sponsored messages in public channels, enabling advertisers to manage their ads and budgets and monitor performance. However, this is also not a public ad repository for extracting data about all advertising content promoted on the platform.
-
 ## User-Generated Content Summary
 
 ```{python}
@@ -57,8 +52,3 @@ generate_summary_table(results_ugc)
 
 generate_summary_table(results_ads)
 ```
-
-## References
-
-::: {#refs}
-:::
