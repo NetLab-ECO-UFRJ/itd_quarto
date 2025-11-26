@@ -2,6 +2,9 @@
 title: "Methodology"
 ---
 
+### Writing Executive Summaries
+
+Describe how the platform’s architecture or business model influences the evaluation scope. Specify which transparency dimensions are relevant or excluded based on platform characteristics (e.g., UGC data access, advertising transparency). Highlight transparency Ssrengths and Limitations. Concise overview of the platform’s overall transparency posture. Highlight how strengths and limitations impact potential research, auditing, or governance applications.
 
 # UGC
 
