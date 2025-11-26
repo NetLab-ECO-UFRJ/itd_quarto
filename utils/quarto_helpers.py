@@ -10,6 +10,7 @@ Provides functions to simplify Python code blocks in QMD files by:
 import sys
 from pathlib import Path
 from typing import Dict, Any, Tuple
+import markdown
 from .scoring import calculate_platform_score
 
 
@@ -122,7 +123,8 @@ def generate_summary_table(results: Dict[str, Any]):
         for item in category_data['details']:
             topic = item['question_text']
             answer = item['selected_label']
-            notes = (item.get('notes') or '').replace('\n', ' ').replace('\r', ' ')
+            notes_text = (item.get('notes') or '').replace('\n', ' ').replace('\r', ' ')
+            notes = markdown.markdown(notes_text, extensions=['extra'])
 
             answer_icon = ""
             if answer.lower() in ["yes", "full"]:
