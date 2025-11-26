@@ -35,7 +35,7 @@ results_ugc, results_ads = load_platform_results(
 
 ## Executive Summary
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Describe how the platform’s architecture or business model influences the evaluation scope. Example elements: centralized/decentralized design, presence/absence of advertising model. Specify which transparency dimensions are relevant or excluded based on platform characteristics (e.g., UGC data access, advertising transparency, algorithmic transparency). Highlight transparency Strengths and Limitations. Concise overview of the platform’s overall transparency posture. Highlight how strengths and limitations impact potential research, auditing, or governance applications.
 
 ## User-Generated Content 
 
