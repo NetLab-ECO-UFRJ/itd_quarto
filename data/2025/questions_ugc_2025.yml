@@ -331,9 +331,7 @@ completeness:
 consistency:
 - code: UGC_OC20
   title: Are the results returned by the API consistently reproducible?
-  description: Verifies whether data extracted at different times using comparable
-    requests yield consistent results, or relies on recent external studies demonstrating
-    such reproducibility.
+  description: Verifies whether data extracted via the platform’s API at any given time is consistent with other collections performed similarly. The assessment should conduct repeated test queries to confirm the reproducibility of results or ground the response based on recent (less than 2 years) experiments published in peer-reviewed journals.
   weight: 1.0
   answers:
   - value: 'no'
