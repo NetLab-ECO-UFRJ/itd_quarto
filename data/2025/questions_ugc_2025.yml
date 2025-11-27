@@ -152,6 +152,7 @@ accessibility:
     weight: 1.0
 - code: UGC_OC7
   title: Does the API use locale-neutral data representations?
+  # https://www.w3.org/TR/ltli/
   description: Verifies whether locale-sensitive data (such as timestamps, currency,
     and numbers) are returned in a locale-neutral format or accompanied by relevant
     locale metadata.
