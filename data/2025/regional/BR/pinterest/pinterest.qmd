@@ -1,8 +1,8 @@
 ---
-title: "X/Twitter"
+title: "Pinterest"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/regional/BR/x/ugc.yml"
-ads_answers_file: "data/2025/regional/BR/x/ads.yml"
+ugc_answers_file: "data/2025/regional/BR/pinterest/ugc.yml"
+ads_answers_file: "data/2025/regional/BR/pinterest/ads.yml"
 ---
 
 ```{python}
@@ -21,8 +21,8 @@ if str(project_root) not in sys.path:
 from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
-    ugc_file="data/2025/regional/BR/x/ugc.yml",
-    ads_file="data/2025/regional/BR/x/ads.yml",
+    ugc_file="data/2025/regional/BR/pinterest/ugc.yml",
+    ads_file="data/2025/regional/BR/pinterest/ads.yml",
     year='2025'
 )
 
@@ -47,4 +47,10 @@ generate_summary_table(results_ugc)
 
 ## Advertising 
 
-Not available.
+```{python}
+#| label: ads-summary-table
+#| echo: false
+#| output: asis
+
+generate_summary_table(results_ads)
+```

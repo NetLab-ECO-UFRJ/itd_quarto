@@ -1,0 +1,17 @@
+# Pinterest
+
+## Advertising Transparency Notes
+
+The platform only provides an API dedicated to business to manage your own ads. Source: https://developers.pinterest.com/docs/api/v5/introduction/?
+
+The platform does not offer a GUI.
+
+As the platform does not provide an ad repository anywhere in the world, this item does not apply to our assessment of transparency and data access in any context.
+
+## User-Generated Content Transparency Notes
+
+Pinterest does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country. It only provides management for "pins" of the "operation user_account". The only possible exception could be the /search/partner/pins endpoint, but it is still in beta and was not considered. Also, the documentation provides insufficient explanations about its behavior, but seems to be related to request for content from brand partnerships. Source: https://developers.pinterest.com/docs/api/v5/search_partner_pins, https://developers.pinterest.com/docs/key-concepts/using-beta-and-restricted-features/ and https://help.pinterest.com/en/business/article/approve-or-remove-paid-partnership-tags
+
+Pinterest does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country
+
+In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data, Pinterest likewise does not offer a graphical interface for this purpose.
