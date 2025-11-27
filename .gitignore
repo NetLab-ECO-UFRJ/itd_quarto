@@ -1,3 +1,6 @@
+# LLM assistants
+agents/
+
 # Quarto output
 _output/
 /.quarto/
