@@ -24,12 +24,13 @@ book:
       chapters:
         - chapters/platforms/bluesky.qmd
         - chapters/platforms/telegram.qmd
+        - chapters/platforms/kwai.qmd 
   appendices: 
     - part: "Global Assessments"
       chapters:
         - data/2025/global/bluesky/bluesky.qmd
         #- data/2025/global/discord/discord.qmd
-        #- data/2025/global/kwai/kwai.qmd
+        - data/2025/global/kwai/kwai.qmd
         - data/2025/global/telegram/telegram.qmd
     - part: "Brazil Assessments"
       chapters:
@@ -49,7 +50,7 @@ bibliography:
   - bib/references_global.bib
   - bib/bluesky.bib
   # - bib/discord.bib
-  # - bib/kwai.bib
+  - bib/kwai.bib
   # - bib/reddit.bib
   # - bib/tiktok.bib
   # - bib/whatsapp.bib

@@ -1,0 +1,8 @@
+# Kwai
+
+Kwai does not provide an ad repository, either in Brazil or in any other country. At one point, the platform briefly introduced a transparency tool for political and electoral ads in Brazil, in order to comply with Resolution No. 23.732/2024 of the Brazilian Electoral Court (TSE), but the tool was discontinued approximately one month after its launch (Nóbrega, 2024). Additionally, Kwai does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country [@Hale_2024_AnalyzingMisinformation]. Only third-party, scraping-based APIs are available, which fall outside the scope of this work. In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data, Kwai likewise does not offer a graphical interface for this purpose. Furthermore, Kwai does not provide any form of access to or extraction of non-public user-generated content data, either in Brazil or in any other country. As the platform does not provide an ad repository or any API for data access anywhere in the world, assessment items do not apply to our evaluation of transparency and data access in any context. Consequently, all assessment criteria receive negative scores, reflecting the complete absence of data access and transparency mechanisms.
+
+## References
+
+::: {#refs}
+:::
