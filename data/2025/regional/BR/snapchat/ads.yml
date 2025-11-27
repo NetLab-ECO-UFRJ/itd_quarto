@@ -1,0 +1,162 @@
+metadata:
+  platform: Snapchat
+  region_code: BRAZIL
+  scope: ADS
+  evaluation_date: 2025-10
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: 'no'
+  notes: 'Snapchat mostly offers an Ads API for business purpose but provide a few
+    endpoint for accessing its Ads Library. Nevertheless, these endpoint only retrieve
+    ads from the European Union countries, as stated in its documentation. Also, it''s
+    only possible to search for an advertiser ads and for the details of an specific
+    ad (through its id). Source: https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api'
+- code: AD_SC2
+  selected_answer: 'no'
+  notes: 'Snapchat only provides an Ad Library interface for the European Union countries''
+    ads. Like the API, it''s only possible to retrieve ads searching for advertisers,
+    and get ads delivered in the last 12 months. Snapchat also offers csv files with
+    all ads considered political and advocacy from 2018 to 2024 and a few ads that
+    ran in Brazil can be found.  Source: https://adsgallery.snap.com/ https://www.snap.com/political-ads'
+- code: AD_SC3
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: 'no'
+  notes: 'Snachat only provides an interface for ads that ran in the European Union
+    countries. Snapchat doesn''t provide GUI for ads that ran in Brazil. Source: https://adsgallery.snap.com/'
+- code: AD_OC2
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC4
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC5
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC6
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC7
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC8
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+completeness_answers:
+- code: AD_OC10
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC11
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC12
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC13
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC9
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+compliance_answers:
+- code: AD_OC14
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC16
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC17
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC18
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC19
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC20
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC21
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC22
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC24
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC25
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+relevance_answers:
+- code: AD_OC26
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC27
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC31
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: 'Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
+    https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/'
