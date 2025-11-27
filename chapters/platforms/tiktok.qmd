@@ -1,0 +1,13 @@
+# TikTok
+
+The platform provides an API to access its ad repository, but it only includes data from ads served to users in the European Economic Area, Switzerland and the United Kingdom. The TikTok Commercial Content Library (n.d.), launched in 2023 to comply with the Digital Services Act (DSA), does not include data from other regions (TikTok, n.d.).
+
+As the platform's ad repository only includes data from ads served to users in the European Union (TikTok, n.d.), this item does not apply to the assessment of transparency and data access in the Brazilian context.
+
+TikTok does offer research tools, but access is limited to researchers who are based in or affiliated with academic institutions in the United States, the European Economic Area, the United Kingdom, or Switzerland, as well as those affiliated with non-profit or independent research institutions, organizations, associations, or bodies within the European Union (TikTok, n.d.). As Brazil – and most of the world – fall outside this scope, researchers in other regions are limited to data scraping capabilities (Chemillier et al., 2022).
+
+TikTok does not provide an API that enables programmatic access to or extraction of public user-generated content data for researchers based in Brazil or affiliated with Brazilian institutions (TikTok, n.d.).
+
+In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data for researchers based in Brazil or affiliated with Brazilian institutions, TikTok likewise does not offer a graphical interface for this purpose.
+
+TikTok does not provide any form of access to or extraction of non-public user-generated content data for researchers based in Brazil or affiliated with Brazilian institutions.
