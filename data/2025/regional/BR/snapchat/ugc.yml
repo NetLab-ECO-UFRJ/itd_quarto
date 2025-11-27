@@ -6,324 +6,97 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'no'
-  notes: 'Snapchat provides no public API for UGC extraction. The available API products
-    (Snap Kit, Marketing API, Public Profile API, and Conversions API) serve primarily
-    for marketing purposes and operate through allowlist-controlled partnerships.
-    There is a set of Public Profile API endpoints that do not require profile owner
-    authorization, but they provide access only to basic metadata and metrics for
-    public profiles, not UGC.
-
-    Source: https://developers.snap.com/api/home https://developers.snap.com/api/marketing-api/Public-Profile-API/GetStarted
-    https://developers.snap.com/api/marketing-api/Public-Profile-API/CreatorDiscovery'
+  notes: '-'
 - code: UGC_SC2
   selected_answer: 'no'
-  notes: 'Snap provides a dedicated program that allows approved academic researchers
-    to request and obtain data through a formal process in accordance with the Digital
-    Services Act (DSA). However, all vetting and application processes are handled
-    by the national authority of EU Member States where the researcher is “based”
-    or where the VLOP/VLOSE is established. Additionally, the purpose must be research
-    on systemic risks in the EU. Therefore, research conducted outside the European
-    Union is generally not eligible to apply directly for access under the DSA research
-    provisions.
-
-    Source: https://values.snap.com/privacy/transparency/researcher-access'
+  notes: '-'
 - code: UGC_SC3
   selected_answer: 'no'
-  notes: 'The platform offers free data access to vetted researchers in accordance
-    with the Digital Services Act (DSA). The data catalog includes different types
-    of content, such as public stories, comments, and public profile information.
-    However, research conducted outside the European Union is generally not eligible
-    to apply directly for access under the DSA research provisions.
-
-    Source: https://values.snap.com/privacy/transparency/researcher-access'
+  notes: '-'
 - code: UGC_SC4
   selected_answer: 'no'
-  notes: Snapchat provides no official graphical user interface or tools for researchers
-    to extract data.
+  notes: '-'
 accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
-  notes: 'The platform offers free data access to vetted researchers under the DSA
-    provisions, but only for public content.
-
-    Source: https://values.snap.com/privacy/transparency/researcher-access'
+  notes: '-'
 - code: UGC_OC2
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC3
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC4
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC5
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC6
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC7
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC11
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC12
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC13
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC14
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC15
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC8
   selected_answer: no_or_not_applicable
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC9
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC17
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC18
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC19
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC21
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC23
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC24
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 - code: UGC_OC25
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'no'
-  notes: Although the platform offers APIs, these are primarily designed for commercial
-    and business integration purposes, rather than for open data access or research
-    use. While Snapchat provides a formal data access program for vetted academic
-    researchers under the DSA, this mechanism is strictly limited to studies on systemic
-    risks within the European Union. There is no equivalent framework or public API
-    enabling external researchers or the general public to access user-generated content
-    or platform data for independent analysis outside the EU. Therefore, this criterion
-    does not apply to the assessment of transparency and data access in the Brazilian
-    context.
+  notes: '-'
