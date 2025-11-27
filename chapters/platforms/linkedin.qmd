@@ -1,3 +1,11 @@
 # LinkedIn
 
 https://www.linkedin.com/ad-library
+
+## User-Generated Content Transparency Notes
+
+LinkedIn only offers an API for collecting your own posts. The objective of the current API (Posts API) is to help business to manage their own pages and profiles. LinkedIn informs that this API is "restricted to organizations in which the authenticated member has one of the following company page roles: ADMINISTRATOR, DIRECT_SPONSORED_CONTENT_POSTER, CONTENT_ADMIN". Profiles also can "retrieve posts, comments, and likes on behalf of an authenticated member. [But] this permission is restricted and is available to approved users only". We conducted tests to confirm these limitations. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+
+(SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+
+(SC1) LinkedIn only offers an API for collecting your own posts and does not offer a graphical interface for extracting data. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http

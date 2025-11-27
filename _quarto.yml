@@ -25,6 +25,7 @@ book:
         - chapters/platforms/bluesky.qmd
         - chapters/platforms/discord.qmd
         - chapters/platforms/kwai.qmd
+        - chapters/platforms/linkedin.qmd
         - chapters/platforms/meta.qmd
         - chapters/platforms/pinterest.qmd
         # - chapters/platforms/reddit.qmd
@@ -39,7 +40,7 @@ book:
         - data/2025/global/telegram/telegram.qmd
     - part: "Brazil Assessments"
       chapters:
-        # - data/2025/regional/BR/linkedin/linkedin.qmd
+        - data/2025/regional/BR/linkedin/linkedin.qmd
         - data/2025/regional/BR/pinterest/pinterest.qmd
         - data/2025/regional/BR/snapchat/snapchat.qmd
         # - data/2025/regional/BR/tiktok/tiktok.qmd
