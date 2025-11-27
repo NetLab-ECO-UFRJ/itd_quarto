@@ -6,188 +6,115 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
-  notes: The platform provides an API to access its ad repository, but it only includes
-    data from ads served to users in the European Union. The X Ads Repository, launched
-    in 2023 to comply with the Digital Services Act (DSA), does not include data from
-    other regions (X Business, n.d.).
+  notes: -
 - code: AD_SC2
   selected_answer: 'no'
-  notes: The X Ads Repository includes a graphical user interface that allows users
-    to extract advertising content data, but it is limited to ads served to users
-    within the European Union (X Ads Repository, n.d.).
+  notes: -
 - code: AD_SC3
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 accessibility_answers:
 - code: AD_OC1
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC2
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC3
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC4
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC5
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC6
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC7
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC8
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 completeness_answers:
 - code: AD_OC10
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC11
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC12
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC13
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC9
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC15
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC16
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC17
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC18
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC19
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC20
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC21
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC22
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC24
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC25
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 relevance_answers:
 - code: AD_OC26
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC27
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC28
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 accuracy_answers:
 - code: AD_OC29
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC30
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC31
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC32
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 
 - code: AD_OC33
   selected_answer: 'no'
-  notes: As the platform’s ad repository only includes data from ads served to users
-    in the European Union (X Business, n.d.), this item does not apply to the assessment
-    of transparency and data access in the Brazilian context.
+  notes: 

@@ -36,11 +36,11 @@ book:
         - data/2025/global/telegram/telegram.qmd
     - part: "Brazil Assessments"
       chapters:
-        - data/2025/regional/BR/linkedin/linkedin.qmd
+        # - data/2025/regional/BR/linkedin/linkedin.qmd
         # - data/2025/regional/BR/pinterest/pinterest.qmd
         # - data/2025/regional/BR/snapchat/snapchat.qmd
         # - data/2025/regional/BR/tiktok/tiktok.qmd
-        # - data/2025/regional/BR/x/x.qmd
+        - data/2025/regional/BR/x/x.qmd
         # - part: "European Union"
         #   chapters: []
         # - part: "United Kingdom"

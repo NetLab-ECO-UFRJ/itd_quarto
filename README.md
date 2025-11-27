@@ -111,11 +111,11 @@ uv run python scripts/transform_excel_to_yaml.py \
 
 ##### Regional Scope
 
-For regional assessments (e.g., Brazil):
+For regional assessments:
 
 ```bash
 uv run python scripts/transform_excel_to_yaml.py \
-  --platform facebook \
+  --platform x \
   --scope-type regional \
   --region BR \
   --ads-file "Advertising Framework (respostas).xlsx" \

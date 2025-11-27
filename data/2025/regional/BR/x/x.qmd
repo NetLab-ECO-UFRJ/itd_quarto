@@ -47,10 +47,4 @@ generate_summary_table(results_ugc)
 
 ## Advertising 
 
-```{python}
-#| label: ads-summary-table
-#| echo: false
-#| output: asis
-
-generate_summary_table(results_ads)
-```
+Not available.

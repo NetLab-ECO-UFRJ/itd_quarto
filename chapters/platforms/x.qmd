@@ -1,0 +1,10 @@
+# X
+
+As the platform’s ad repository only includes data from ads served to users
+    in the European Union (X Business, n.d.), this item does not apply to the assessment
+    of transparency and data access in the Brazilian context.The X Ads Repository includes a graphical user interface that allows users
+    to extract advertising content data, but it is limited to ads served to users
+    within the European Union (X Ads Repository, n.d.).The platform provides an API to access its ad repository, but it only includes
+    data from ads served to users in the European Union. The X Ads Repository, launched
+    in 2023 to comply with the Digital Services Act (DSA), does not include data from
+    other regions (X Business, n.d.).
