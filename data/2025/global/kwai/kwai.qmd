@@ -37,8 +37,8 @@ results_ugc, results_ads = load_platform_results(
 
 ## User-Generated Content 
 
-Not applicable.
+Not available.
 
 ## Advertising 
 
-Not applicable.
+Not available.

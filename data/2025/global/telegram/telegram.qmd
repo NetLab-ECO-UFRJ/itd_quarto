@@ -54,3 +54,8 @@ generate_summary_table(results_ugc)
 
 generate_summary_table(results_ads)
 ```
+
+
+## Advertising 
+
+Not available.
