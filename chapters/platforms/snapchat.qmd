@@ -1,3 +1,5 @@
+# Snapchat
+
 Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
     https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/
     Snapchat mostly offers an Ads API for business purpose but provide a few

@@ -6,10 +6,10 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
-  notes: -
+  notes: ""
 - code: AD_SC2
   selected_answer: 'no'
-  notes: -
+  notes: ""
 - code: AD_SC3
   selected_answer: 'no'
   notes: 
