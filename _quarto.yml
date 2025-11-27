@@ -25,6 +25,7 @@ book:
         - chapters/platforms/bluesky.qmd
         - chapters/platforms/discord.qmd
         - chapters/platforms/kwai.qmd
+        - chapters/platforms/meta.qmd
         - chapters/platforms/telegram.qmd 
   appendices: 
     - part: "Global Assessments"
