@@ -32,6 +32,7 @@ book:
         - chapters/platforms/snapchat.qmd
         - chapters/platforms/telegram.qmd
         - chapters/platforms/tiktok.qmd 
+        - chapters/platforms/youtube.qmd
   appendices: 
     - part: "Global Assessments"
       chapters:
@@ -46,6 +47,7 @@ book:
         - data/2025/regional/BR/snapchat/snapchat.qmd
         - data/2025/regional/BR/tiktok/tiktok.qmd
         - data/2025/regional/BR/x/x.qmd
+        - data/2025/regional/BR/youtube/youtube.qmd
         # - part: "European Union"
         #   chapters: []
         # - part: "United Kingdom"

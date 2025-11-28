@@ -1,0 +1,177 @@
+metadata:
+  platform: Youtube
+  region_code: BRAZIL
+  scope: ADS
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: 'no'
+  notes: 'Google provides access to data from its Ads Transparency Center via BigQuery,
+    but no data is available for ads shown in Brazil. Therefore, the platform does
+    not meet the evaluation requirements in Brazil.
+
+    The publicly available tables from the BigQuery Ads Transparency Center dataset
+    are two: “bigquery-public-data.google_ads_transparency_center.creative_stats”
+    and "bigquery-public-data.google_ads_transparency_center.removed_creative_stats".
+    But as stated before, these tables contain no data when filtering for the Brazil
+    region.
+
+    https://cloud.google.com/bigquery?hl=pt_br
+
+    https://adstransparency.google.com/?hl=pt-BR&region=BR
+
+    '
+- code: AD_SC2
+  selected_answer: 'no'
+  notes: Google provides the Ads Transparency Center, which is a web-based GUI that
+    allows users to search and view ads from Google products, including YouTube. Users
+    can filter by advertiser, date range, region, and ad format to view advertising
+    content, but the tool does not provide native export functionality for ad data.
+- code: AD_SC3
+  selected_answer: 'no'
+  notes: Google provides the Ads Transparency Center, which is a web-based GUI that
+    allows users to search and view ads from Google products, including YouTube. Users
+    can filter by advertiser, date range, region, and ad format to view advertising
+    content, but the tool does not provide native export functionality for ad data.
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: 'yes'
+  notes: The Ads Transparency Center is a browser-based tool that lets users access
+    and view ads across Google platforms, such as YouTube. It includes ads from verified
+    advertisers shown within the past 365 days (or up to seven years for political
+    ads) and from unverified advertisers in Europe and Turkey. Therefore, Brazilian
+    users have limited availability due to the restrictions on unverified advertisers.
+- code: AD_OC2
+  selected_answer: 'no'
+  notes: The Ads Transparency Center GUI is publicly available and free to use, with
+    no payment or subscription required. There is a free monthly quota for accessing
+    Ads Transparency Center data. However, as there is no data on ads in Brazil, the
+    API does not meet the requirements for this question.
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: There is no official API for ads shown in Brazil, and the GUI does not support
+    data export. Ads can only be viewed through the interface, not extracted in structured
+    data formats.
+- code: AD_OC4
+  selected_answer: 'no'
+  notes: There is no official API for ads shown in Brazil available, so authentication
+    mechanisms are not applicable.
+- code: AD_OC5
+  selected_answer: 'no'
+  notes: Through the GUI, it is possible to access the page of a specific ad.
+- code: AD_OC6
+  selected_answer: 'no'
+  notes: The Ads Transparency Center allows users to search by advertiser name or
+    domain to view ads from verified advertisers. However, advertiser pages won't
+    appear if verification isn't complete or if no ads were shown in the past 365
+    days.
+- code: AD_OC7
+  selected_answer: 'no'
+  notes: The Ads Transparency Center GUI only allows data retrieval by advertiser
+    name or website, and currently does not support ad extraction using ad identifiers
+    or search terms.
+- code: AD_OC8
+  selected_answer: 'no'
+  notes: The platform displays data, such as dates, using locale-specific formats.
+    For example, the interface shows “2 de nov. de 2025”, which follows Portuguese
+    localization conventions. This indicates that the data presentation is localized
+    based on the user’s region or language settings, rather than being standardized
+    or locale-neutral.
+completeness_answers:
+- code: AD_OC10
+  selected_answer: 'no'
+  notes: The platform only shows the final advertiser's name, not additional sponsor
+    or funder information. Advertising agencies that create ads for clients are not
+    displayed.
+- code: AD_OC11
+  selected_answer: 'no'
+  notes: The platform only shows the last exhibition date, not detailed information
+    on the period during which ads were served.
+- code: AD_OC12
+  selected_answer: 'no'
+  notes: The Ads Transparency Center does not provide engagement metrics like views,
+    clicks, or interactions.
+- code: AD_OC13
+  selected_answer: 'no'
+  notes: In Brazil, the platform only shows ads from verified advertisers. In Europe
+    and Turkey, ads from non-verified advertisers are included as well.
+- code: AD_OC9
+  selected_answer: 'no'
+  notes: The interface discloses the page name and unique identifier, but there is
+    no URL associated with the advertiser.
+compliance_answers:
+- code: AD_OC14
+  selected_answer: 'no'
+  notes: Ads removed due to policy violations are not shown in the transparency center
+    and are not flagged as removed.
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: There is no indication that AI-generated content is labeled in the ad repository.
+- code: AD_OC16
+  selected_answer: 'no'
+  notes: 'Despite being limited in scope, the documentation can be accessed without
+    registration or login.
+
+    https://adstransparency.google.com/faq?region=BR'
+- code: AD_OC17
+  selected_answer: 'no'
+  notes: Despite being limited in scope, the documentation is clearly written and
+    exemplified.
+- code: AD_OC18
+  selected_answer: 'no'
+  notes: Yes, there is a link to its [Terms of Use](https://adstransparency.google.com/terms)
+    at the footer section of the page.
+- code: AD_OC19
+  selected_answer: 'no'
+  notes: Despite being limited in scope, there is documentation available in Portuguese.
+- code: AD_OC20
+  selected_answer: 'no'
+  notes: The platform does not provide API access.
+- code: AD_OC21
+  selected_answer: 'no'
+  notes: The platform does not provide API access.
+- code: AD_OC22
+  selected_answer: 'no'
+  notes: The platform does not provide API access.
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'no'
+  notes: The platform does not provide API access.
+- code: AD_OC24
+  selected_answer: 'no'
+  notes: We ran multiple parallel queries and confirmed that the results were consistent
+    and reproducible. However, it was not possible to evaluate cases in which content
+    had been deleted in the interim.
+- code: AD_OC25
+  selected_answer: 'no'
+  notes: We ran multiple parallel queries and confirmed that the results were consistent
+    with the parameters and filters used.
+relevance_answers:
+- code: AD_OC26
+  selected_answer: 'no'
+  notes: The platform supports filtering ads by date once a specific advertiser or
+    target URL is selected.
+- code: AD_OC27
+  selected_answer: 'no'
+  notes: The platform only differentiates between political and non-political ads,
+    not allowing filters by ad’s categories.
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: The platform’s most specific geographic filter is by country. Therefore not
+    meet the required standards of having subnational location filters.
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: The GUI platform doesn’t provide any audience engagement metrics.
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: The GUI platform doesn’t provide any audience engagement metrics.
+- code: AD_OC31
+  selected_answer: 'no'
+  notes: The GUI platform doesn’t provide any audience engagement metrics.
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: The GUI platform doesn’t provide any audience engagement metrics.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: The GUI platform doesn’t provide any ad investment and funding metrics.
