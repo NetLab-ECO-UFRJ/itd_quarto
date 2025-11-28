@@ -4,7 +4,7 @@ A Quarto-based research reporting system for evaluating social media platforms a
 
 ## Para fazer
 
-- importa data from Meta , YouTube, Reddit e LinkedIn
+- importa data from Meta, Reddit e LinkedIn
 - import evaluations from UK and UE
 - Review scripts that calculate the score
 
