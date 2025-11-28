@@ -6,105 +6,97 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'no'
-  notes: 'LinkedIn only offers an API for collecting your own posts. The objective
-    of the current API (Posts API) is to help business to manage their own pages and
-    profiles. LinkedIn informs that this API is "restricted to organizations in which
-    the authenticated member has one of the following company page roles: ADMINISTRATOR,
-    DIRECT_SPONSORED_CONTENT_POSTER, CONTENT_ADMIN". Profiles also can "retrieve posts,
-    comments, and likes on behalf of an authenticated member. [But] this permission
-    is restricted and is available to approved users only". We conducted tests to
-    confirm these limitations. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http'
+  notes: '-'
 - code: UGC_SC2
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_SC3
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_SC4
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts and does
-    not offer a graphical interface for extracting data. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC2
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC3
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC4
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC5
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC6
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC7
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC11
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC12
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC13
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC14
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC15
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC8
   selected_answer: no_or_not_applicable
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC9
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC17
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC18
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC19
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC21
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC23
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC24
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 - code: UGC_OC25
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'no'
-  notes: (SC1) LinkedIn only offers an API for collecting your own posts. https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http
+  notes: '-'

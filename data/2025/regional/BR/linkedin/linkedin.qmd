@@ -34,18 +34,11 @@ results_ugc, results_ads = load_platform_results(
 
 **Advertising transparency score:** `{python} f"{results_ads['total_score']:.0f}"` / `{python} f"{results_ads['total_max']:.0f}"` (`{python} f"{results_ads['total_percentage']:.0f}"`%)
 
-## User-Generated Content Summary
+## User-Generated Content 
 
-```{python}
-#| label: ugc-summary-table
-#| echo: false
-#| output: asis
+Not available.
 
-from utils.quarto_helpers import generate_summary_table
-generate_summary_table(results_ugc)
-```
-
-## Advertising Summary
+## Advertising 
 
 ```{python}
 #| label: ads-summary-table
@@ -54,8 +47,3 @@ generate_summary_table(results_ugc)
 
 generate_summary_table(results_ads)
 ```
-
-## References
-
-::: {#refs}
-:::

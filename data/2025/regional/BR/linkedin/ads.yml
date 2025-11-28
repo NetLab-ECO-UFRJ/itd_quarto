@@ -6,22 +6,20 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: full
-  notes: 'All ads can be extracted from the API. Source: https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+  notes: All ads can be extracted from the API.
 - code: AD_SC2
   selected_answer: 'no'
   notes: 'Although LinkedIn has a graphic user interface where users can view ad content,
-    it is not possible to export it data. Source: https://www.linkedin.com/ad-library'
+    it is not possible to export it data. '
 - code: AD_SC3
   selected_answer: 'no'
   notes: 'In terms of inactive ads, it is possible to obtain data from ads with latestImpressionAt
     in the past, but that information is only available at the response schema for
-    EU countries. Source: https://www.linkedin.com/ad-library/api/ads, https://www.linkedin.com/help/lms/answer/a1620070
-    and transparency-index/2025/advertising-framework/BR/br_linkedin_ads.ipynb at
-    main · NetLab-ECO-UFRJ/transparency-index'
+    EU countries. /api/ads, https://www.linkedin.com/help/lms/answer/a1620070 '
 accessibility_answers:
 - code: AD_OC1
   selected_answer: 'yes'
-  notes: 'It is possible to access and visualize ads using a GUI. Source: https://www.linkedin.com/ad-library'
+  notes: 'It is possible to access and visualize ads using a GUI. '
 - code: AD_OC2
   selected_answer: 'no'
   notes: The repository is free of charge.
@@ -29,65 +27,54 @@ accessibility_answers:
   selected_answer: 'no'
   notes: 'The endpoint returns only the ad''s URL and data about the advertiser, including
     `advertiserName`, `advertiserUrl` and `adPayer`, but neither the ad''s text nor
-    publication date. Through the GUI, it is impossible to extract any type of data.
-    Source: https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+    publication date. Through the GUI, it is impossible to extract any type of data. '
 - code: AD_OC4
   selected_answer: 'yes'
   notes: 'The platform’s ad repository API provides a form of authentication that
-    allows for renewal without the risk of data loss. Source: https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+    allows for renewal without the risk of data loss. '
 - code: AD_OC5
   selected_answer: 'no'
-  notes: 'Through the GUI, it is possible to access the page of a specific ad. On
-    the other hand, on the API, it is impossible to retrieve an ad by its ID. Source:
-    https://www.linkedin.com/ad-library and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+  notes: Through the GUI, it is possible to access the page of a specific ad. On the
+    other hand, on the API, it is impossible to retrieve an ad by its ID.
 - code: AD_OC6
   selected_answer: 'no'
-  notes: 'The search for advertisers only retrieves data that contains the searched
+  notes: The search for advertisers only retrieves data that contains the searched
     keyword instead of filtering data from a specific advertiser via their username
     or unique identifier.
-
-    Source: https://www.linkedin.com/ad-library and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
 - code: AD_OC7
   selected_answer: 'no'
   notes: 'We just  need to pass the parameter "keyword" through the API or search
     through the API.
 
-    Source: https://www.linkedin.com/ad-library and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+    '
 - code: AD_OC8
   selected_answer: 'no'
   notes: 'From the documentation: "All dates and timestamps are recorded in Coordinated
     Universal Time (UTC)". However, it cannot be demonstrated because time-related
-    fields are only available for EU countries. Sources: https://www.linkedin.com/ad-library
-    and https://www.linkedin.com/help/lms/answer/a1620070'
+    fields are only available for EU countries.   https://www.linkedin.com/help/lms/answer/a1620070'
 completeness_answers:
 - code: AD_OC10
   selected_answer: 'no'
-  notes: 'The platform provides data on the funder who paid for the ads. Source: https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb
-    and https://www.linkedin.com/ad-library'
+  notes: 'The platform provides data on the funder who paid for the ads. '
 - code: AD_OC11
   selected_answer: 'no'
   notes: 'The response schema firstImpressionAt and latestImpressionAt only for EU
     countries. Also, there is no information about data through the GUI outside the
     EU.
 
-    Source: https://www.linkedin.com/help/lms/answer/a1620070, https://www.linkedin.com/ad-library
-    and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+    https://www.linkedin.com/help/lms/answer/a1620070'
 - code: AD_OC12
   selected_answer: 'no'
-  notes: 'This is available only for EU countries for both API and GUI. Source: https://www.linkedin.com/help/lms/answer/a1620070,
-    https://www.linkedin.com/ad-library and https://www.linkedin.com/ad-library and
-    https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+  notes: This is available only for EU countries for both API and GUI. https://www.linkedin.com/help/lms/answer/a1620070
 - code: AD_OC13
   selected_answer: 'no'
   notes: 'The only fields about advertisers in response schema are: advertiserName,
     advertiserUrl and adPayer. Also, there is no information about verified or unverified
-    advertisers through the GUI. Sources: https://www.linkedin.com/ad-library/api/ads,
-    https://www.linkedin.com/ad-library and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+    advertisers through the GUI.'
 - code: AD_OC9
   selected_answer: 'no'
   notes: 'The platform provides the URLs of the LinkedIn’s pages or profiles of who
-    ran the ads. Source: https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb
-    and https://www.linkedin.com/ad-library'
+    ran the ads.  and '
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
@@ -97,96 +84,89 @@ compliance_answers:
     to access the ad page of a removed ad, but its content is removed. There is also
     no reference whatsoever to the date.
 
-    Sources: https://www.linkedin.com/ad-library/api/ads, https://www.linkedin.com/ad-library
-    and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+    /api/ads, '
 - code: AD_OC15
   selected_answer: 'no'
-  notes: 'There are no mentions to AI anywhere from both API and GUI. Source: https://www.linkedin.com/ad-library/api/ads,
-    https://www.linkedin.com/ad-library and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+  notes: 'There are no mentions to AI anywhere from both API and GUI. /api/ads, '
 - code: AD_OC16
   selected_answer: 'no'
-  notes: 'It is possible to access the documentation without login. Sources: https://www.linkedin.com/ad-library/api/ads
-    and https://www.linkedin.com/ad-library'
+  notes: 'It is possible to access the documentation without login. and '
 - code: AD_OC17
   selected_answer: 'no'
-  notes: 'The documentation lacks explanations and references. There is only one example
-    of response and it is for EU countries. Source: https://www.linkedin.com/ad-library/api/ads'
+  notes: The documentation lacks explanations and references. There is only one example
+    of response and it is for EU countries. /api/ads
 - code: AD_OC18
   selected_answer: 'no'
   notes: 'There is no reference to the specific terms of use of the API API or GUI.
-    Sources: https://www.linkedin.com/ad-library/api/ads and https://www.linkedin.com/ad-library'
+    and '
 - code: AD_OC19
   selected_answer: 'no'
   notes: 'Both API documentation and GUI are available in Portuguese. However, it
     is important to mention that the platform does not provide a way to change the
-    language according to the user preference directly from the interface. Source:
-    https://www.linkedin.com/ad-library/api/ads and https://www.linkedin.com/ad-library'
+    language according to the user preference directly from the interface. '
 - code: AD_OC20
   selected_answer: 'no'
-  notes: 'There is no reference to deprecation strategy to avoid breaking client applications.
-    Source: https://www.linkedin.com/ad-library/api/ads'
+  notes: There is no reference to deprecation strategy to avoid breaking client applications.
+    /api/ads
 - code: AD_OC21
   selected_answer: 'no'
-  notes: 'The platform’s ad repository API documentation details the response format
-    of the only endpoint available. Source: https://www.linkedin.com/ad-library/api/ads'
+  notes: The platform’s ad repository API documentation details the response format
+    of the only endpoint available. /api/ads
 - code: AD_OC22
   selected_answer: 'no'
-  notes: 'There is no reference to the quota or rate limits on documentation. Source:
-    https://www.linkedin.com/ad-library/api/ads'
+  notes: There is no reference to the quota or rate limits on documentation. /api/ads
 consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
   notes: 'Although the data retrieved by the API is similar to what is displayed on
-    the GUI, the platform does not offer enough information and manners to compare
-    properly. Source: https://www.linkedin.com/ad-library/api/ads and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb
-    and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+    the GUI, the platform does not offer enough information and manners to properly
+    compare. The only relevant fields are about advertisers in response schema: advertiserName,
+    advertiserUrl and adPayer, which are insufficient to compare data from API and
+    GUI based on the OC''s requirements.
+
+
+    The GUI search page shows a preview of each ad''s media and text, while the API
+    returns no information whatsoever about each ad''s content, only its URL and advertiser
+    data'
 - code: AD_OC24
   selected_answer: 'no'
   notes: 'The results returned by the platform are reproducible from both API and
     GUI. However, it is important to mention that the lack of information provided
-    makes it hard to properly verify the criteria. Source: https://www.linkedin.com/ad-library/api/ads
-    and https://github.com/NetLab-ECO-UFRJ/transparency-index/blob/main/2025/advertising-framework/BR/br_linkedin_ads.ipynb'
+    makes it hard to properly verify the criteria. '
 - code: AD_OC25
   selected_answer: 'no'
-  notes: 'The information cannot be verified through the API response alone or GUI.
+  notes: The information cannot be verified through the API response alone or GUI.
     The complete ad information is returned at the API response only for countries
     inside the EU, so it is the only information that could be verified programmatically.
     In Brazil, it is only possible to verify the information about the advertiser
     through the API; to verify the search query filter, only through scraping; and
-    it is impossible to verify data filters. Source: https://www.linkedin.com/ad-library/api/ads
-    and https://www.linkedin.com/help/lms/answer/a1620070'
+    it is impossible to verify data filters.  https://www.linkedin.com/help/lms/answer/a1620070
 relevance_answers:
 - code: AD_OC26
   selected_answer: 'no'
-  notes: 'The dateRange filter exists but the API''s response cannot be tested for
-    it because the response schema shows `firstImpressionAt` and `latestImpressionAt`
-    only for EU countries. Source: https://www.linkedin.com/help/lms/answer/a1620070'
+  notes: The dateRange filter exists but the API's response cannot be tested for it
+    because the response schema shows `firstImpressionAt` and `latestImpressionAt`
+    only for EU countries. https://www.linkedin.com/help/lms/answer/a1620070
 - code: AD_OC27
   selected_answer: 'no'
-  notes: 'There is no category parameter at the request schema or the GUI. Source:
-    https://www.linkedin.com/ad-library/api/ads'
+  notes: 'There is no category parameter at the request schema or the GUI. '
 - code: AD_OC28
   selected_answer: 'no'
-  notes: 'There is no information about subnational locations at the API or the GUI.
-    Source: https://www.linkedin.com/ad-library/api/ads'
+  notes: 'There is no information about subnational locations at the API or the GUI. '
 accuracy_answers:
 - code: AD_OC29
   selected_answer: 'no'
   notes: 'There are neither age nor gender parameters at the request schema or the
-    GUI. Source: https://www.linkedin.com/ad-library/api/ads and https://www.linkedin.com/ad-library'
+    GUI. '
 - code: AD_OC30
   selected_answer: 'no'
-  notes: 'There is no subnational option at the response schema or the GUI. Source:
-    https://www.linkedin.com/ad-library/api/ads and https://www.linkedin.com/ad-library'
+  notes: There is no subnational option at the response schema or the GUI.
 - code: AD_OC31
   selected_answer: 'no'
-  notes: 'This feature is only available for EU countries. Source: https://www.linkedin.com/ad-library
-    and https://www.linkedin.com/help/lms/answer/a1620070'
+  notes: This feature is only [available for EU countries](https://www.linkedin.com/help/lms/answer/a1620070).
 - code: AD_OC32
   selected_answer: 'no'
-  notes: 'This feature is only available for EU countries. Source: https://www.linkedin.com/ad-library
-    and https://www.linkedin.com/help/lms/answer/a1620070'
+  notes: This feature is only available for EU countries. https://www.linkedin.com/help/lms/answer/a1620070
 - code: AD_OC33
   selected_answer: 'no'
-  notes: 'There is no ad spending information at the response schema. Source: https://www.linkedin.com/ad-library/api/ads
-    and https://www.linkedin.com/ad-library'
+  notes: 'There is no ad spending information at the response schema. '
