@@ -1,0 +1,112 @@
+metadata:
+  platform: X
+  region_code: EU
+  scope: UGC
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: researchers_only
+  notes: X offers an API that allows collecting UGC. It is, however, extremely limited
+    in its free version (it allows for pulling 100 tweets per month).
+- code: UGC_SC2
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_SC3
+  selected_answer: 'no'
+  notes: ''
+- code: UGC_SC4
+  selected_answer: 'no'
+  notes: ''
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'no'
+  notes: ''
+- code: UGC_OC2
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC3
+  selected_answer: 'no'
+  notes: In theory, it is possible to renew tokens without fear of data loss. The
+    reality of rate limits (1 request every 15 minutes; 100 tweets per month) means
+    it is not possible to have continuous data collection.
+- code: UGC_OC4
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC5
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC6
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC7
+  selected_answer: 'yes'
+  notes: ''
+compliance_answers:
+- code: UGC_OC10
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC11
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC12
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC13
+  selected_answer: 'no'
+  notes: The documentation is only available in English.
+- code: UGC_OC14
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC15
+  selected_answer: 'no'
+  notes: ''
+- code: UGC_OC8
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC9
+  selected_answer: 'yes'
+  notes: https://developer.x.com/en/docs/x-api
+completeness_answers:
+- code: UGC_OC16
+  selected_answer: 'yes'
+  notes: While not exactly comments, the API's search feature allows users to search
+    for posts made in reply to a specific message.
+- code: UGC_OC17
+  selected_answer: 'yes'
+  notes: 'Data from Spaces is available, though it does not include the content itself:
+    [[https://docs.x.com/x-api/spaces/search-spaces]{.underline}](https://docs.x.com/x-api/spaces/search-spaces).'
+- code: UGC_OC18
+  selected_answer: 'no'
+  notes: The free tier of the API only allows retrieving posts made in the previous
+    12 months. Older data is available in the paid versions of the API.
+- code: UGC_OC19
+  selected_answer: 'no'
+  notes: That is far beyond the free tier limit (100 publications per month), and
+    even the basic version (15,000 publications per month), at 200 USD per month,
+    is not enough. That level of access is only obtainable in the API's pro version
+    (1 million publications per month), priced at 5,000 USD per month.
+consistency_answers:
+- code: UGC_OC20
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC21
+  selected_answer: 'yes'
+  notes: ''
+relevance_answers:
+- code: UGC_OC22
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC23
+  selected_answer: 'no'
+  notes: There are fields related to location in the API, but they are not consistently
+    populated.
+- code: UGC_OC24
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC25
+  selected_answer: 'yes'
+  notes: In the free version, however, this is limited to the last seven days.
+timeliness_answers:
+- code: UGC_OC26
+  selected_answer: 'yes'
+  notes: ''
