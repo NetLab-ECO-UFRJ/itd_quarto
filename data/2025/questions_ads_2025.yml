@@ -75,9 +75,12 @@ accessibility:
       browser-based tool that allows users to search, access, and view ad content.
     weight: 1.0
     answers:
-      - value: 'yes'
-        label: "Yes"
+      - value: full
+        label: "Yes, with full availability"
         weight: 1.0
+      - value: partial
+        label: "Yes, with partial availability"
+        weight: 0.5
       - value: 'no'
         label: "No"
         weight: 0.0

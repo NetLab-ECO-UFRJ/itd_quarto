@@ -68,19 +68,33 @@ class ExcelToYAMLTransformer:
         else:
             available_options = list(answer_options.keys()) if answer_options else []
 
-        if "full" in available_options and "partial" in available_options:
-            if "full" in raw_lower or raw_lower == "yes":
-                return "full"
-            elif "partial" in raw_lower:
-                return "partial"
-            else:
-                return "no"
+        # Priority 1: Check for "partial" keyword BEFORE checking for "full"
+        # This prevents "Yes, with partial availability" from matching "full"
+        if "partial" in available_options and "partial" in raw_lower:
+            return "partial"
 
-        elif "yes" in available_options:
+        # Priority 2: Check for "full" keyword
+        if "full" in available_options:
+            if "full" in raw_lower:
+                return "full"
+            # If only "yes" (not "full" or "partial"), map to "full" if that's expected
+            if raw_lower == "yes" and "yes" not in available_options:
+                return "full"
+
+        # Priority 3: Check for API/GUI specific answers
+        if "api" in available_options:
+            if "free api" in raw_lower or raw_lower == "api" or "through the api" in raw_lower:
+                return "api"
+
+        if "gui" in available_options:
+            if "free gui" in raw_lower or raw_lower == "gui" or "through the gui" in raw_lower:
+                return "gui"
+
+        # Priority 4: Check for yes/no answers
+        if "yes" in available_options:
             if "yes" in raw_lower:
                 return "yes"
             elif "no" in raw_lower:
-                # Check if 'no' is an available option
                 if "no" in available_options:
                     return "no"
                 else:
@@ -88,10 +102,26 @@ class ExcelToYAMLTransformer:
             else:
                 return "no_or_not_applicable"
 
-        else:
-            # Check if we have 'no_or_not_applicable' as an option
-            if "no_or_not_applicable" in available_options:
+        # Priority 5: Check for "no" answer
+        if "no" in available_options and ("no" in raw_lower or raw_lower == "no"):
+            return "no"
+
+        # Priority 6: Check for "no_or_not_applicable" answer
+        if "no_or_not_applicable" in available_options:
+            if "no or not applicable" in raw_lower or "not applicable" in raw_lower:
                 return "no_or_not_applicable"
+
+        # Priority 7: Check for "not_applicable" answer
+        if "not_applicable" in available_options:
+            if "not applicable" in raw_lower:
+                return "not_applicable"
+
+        # Default fallback
+        if "no_or_not_applicable" in available_options:
+            return "no_or_not_applicable"
+        elif "no" in available_options:
+            return "no"
+        else:
             return "no"
 
     def _find_question_definition(self, code: str, questions: Dict) -> Dict:

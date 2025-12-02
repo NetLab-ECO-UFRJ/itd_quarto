@@ -18,7 +18,7 @@ special-criteria_answers:
     EU countries. /api/ads, https://www.linkedin.com/help/lms/answer/a1620070 '
 accessibility_answers:
 - code: AD_OC1
-  selected_answer: 'yes'
+  selected_answer: partial
   notes: 'It is possible to access and visualize ads using a GUI. '
 - code: AD_OC2
   selected_answer: 'no'
