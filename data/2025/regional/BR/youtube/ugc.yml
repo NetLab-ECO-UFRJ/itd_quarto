@@ -18,11 +18,7 @@ special-criteria_answers:
 - code: UGC_SC3
   selected_answer: 'yes'
   notes: |-
-    The use of the YouTube API is limited by daily quotas per project in the Google Developers Console, but users can obtain credentials for free. [1] [2] [3]
-
-    [1]: https://developers.google.com/youtube/v3/getting-started
-    [2]: https://developers.google.com/youtube/registering_an_application
-    [3]: https://developers.google.com/youtube/v3/determine_quota_cost
+    The use of the YouTube API is limited by daily quotas per project in the [Google Developers Console](https://developers.google.com/youtube/v3/getting-started), but users can [obtain credentials for free](https://developers.google.com/youtube/registering_an_application). See the [quota cost documentation](https://developers.google.com/youtube/v3/determine_quota_cost) for details.
 - code: UGC_SC4
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for accessing or extracting
@@ -31,10 +27,7 @@ accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
   notes: |-
-    YouTube does not provide any form of access to or extraction of non-public user-generated content data in Brazil. [1] [2]
-
-    [1]: https://research.youtube/
-    [2]: https://developers.google.com/youtube/v3/docs#call-the-api
+    YouTube does not provide any form of access to or extraction of non-public user-generated content data in Brazil. See [YouTube Research](https://research.youtube/) and [API documentation](https://developers.google.com/youtube/v3/docs#call-the-api) for more information.
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: Responses to requests to the platform API provide the expected data in an
