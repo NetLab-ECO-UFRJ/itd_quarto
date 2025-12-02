@@ -33,8 +33,8 @@ accessibility_answers:
     API and GUI](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive).
 - code: AD_OC4
   selected_answer: 'yes'
-  notes: The platform offers forms that allows renewals of tokens without the risk
-    of data loss. https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens
+  notes: The platform offers forms that allows renewals of [tokens](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens)
+    without the risk of data loss.
 - code: AD_OC5
   selected_answer: gui
   notes: The platform only provides means to retrieve specific ads using its ID through
@@ -65,69 +65,71 @@ completeness_answers:
     (start date for all ads and end date for inactive ads). '
 - code: AD_OC12
   selected_answer: 'no'
-  notes: 'There''s no field to retrieve user interactions. A complete list of available
-    fields can be found in: https://developers.facebook.com/docs/graph-api/reference/archived-ad/'
+  notes: There's no field to retrieve user interactions. A complete list of [available
+    fields](https://developers.facebook.com/docs/graph-api/reference/archived-ad/)
+    can be found in the documentation.
 - code: AD_OC13
   selected_answer: gui
-  notes: 'There''s no field that indicates if a advertiser is verified on API. A complete
-    list of available fields can be found in: https://developers.facebook.com/docs/graph-
-    api/reference/archived-ad/. On the other hand, Meta provides detailed information
+  notes: There's no field that indicates if an advertiser is verified on API. A complete
+    list of [available fields](https://developers.facebook.com/docs/graph-api/reference/archived-ad/)
+    can be found in the documentation. On the other hand, Meta provides detailed information
     about the advertiser even if it does not clearly display that an advertiser is
-    verified on the GUI.'
+    verified on the GUI.
 - code: AD_OC9
   selected_answer: api
   notes: The platform always provides a unique identification for all advertisers
-    but, when an adversiter does not have a page on facebook, the platform only provides
+    but, when an advertiser does not have a page on facebook, the platform only provides
     the Instagram user ID in the page name field and the number zero in the page id
-    field.  and /?active_status=aII&ad_type=poIiticaI_and_issue_ads&country=BR&is_targeted_country=faIse&media_type=aII&q=6421398949&search_type=keyword_unordered
+    field.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
-  notes: 'Through the API, the platform only provides the information that an ad was
+  notes: Through the API, the platform only provides the information that an ad was
     removed if we set the parameter unmask removed content to false and it does not
     provide the removal date. The GUI has the information if the ad was removed but
-    does not specify the reason or the removal date. Souce:  /?active_status=active&ad_type=aII&country=GB&id=31639644339013411&is_targeted_country=faIse&media_type=aII&search_type=page'
+    does not specify the reason or the removal date.
 - code: AD_OC15
   selected_answer: gui
   notes: There's no field that indicates if an ad was created using AI in the API;
     during our tests, we did not find this information in the API's response. [The
-    complete list of available fields is public](https://developers.facebook.com/docs/graph-
-    api/reference/archived-ad/). Through the GUI, we found ads with the AI disclaimer.
-    This information, however, can not be extracted. /?id=351429144345136.
+    complete list of available fields is public](https://developers.facebook.com/docs/graph-api/reference/archived-ad/).
+    Through the GUI, we found ads with the AI disclaimer. This information, however,
+    cannot be extracted.
 - code: AD_OC16
   selected_answer: 'no'
-  notes: There are documentation for both GUI and API in open access.  and https://developers.facebook.com/docs/graph-
-    api/reference/v23.0/ads_archive
+  notes: There are [documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive)
+    for both GUI and API in open access.
 - code: AD_OC17
   selected_answer: 'no'
-  notes: There are clear documentation for both GUI and API in open access.  https://developers.facebook.com/docs/graph-
-    api/reference/v23.0/ads_archive
+  notes: There are clear [documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive)
+    for both GUI and API in open access.
 - code: AD_OC18
   selected_answer: 'no'
   notes: We did not found the terms of use specifically for the usage of API or ad
     repository.
 - code: AD_OC19
   selected_answer: 'no'
-  notes: 'The API documentation is only available in English -- there are only some
-    titles available in Portuguese, but text and descriptions are in English. On the
-    other hand, the GUI documentation is full available in Portuguese. https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive# '
+  notes: The [API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive)
+    is only available in English -- there are only some titles available in Portuguese,
+    but text and descriptions are in English. On the other hand, the GUI documentation
+    is fully available in Portuguese.
 - code: AD_OC20
   selected_answer: 'no'
-  notes: The platform has a documentation that informs the deprecation strategies
-    and shows all alterations that will occur with the release and expiration date.
-    https://developers.facebook.com/docs/graph-api/changelog
+  notes: The platform has [documentation](https://developers.facebook.com/docs/graph-api/changelog)
+    that informs the deprecation strategies and shows all alterations that will occur
+    with the release and expiration date.
 - code: AD_OC21
   selected_answer: 'no'
-  notes: The API documentation describe the response of the available endpoint, but
-    you need to click in a botton called "show response" and a pop-up will appear.
-    https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archived
+  notes: The [API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archived)
+    describes the response of the available endpoint, but you need to click in a
+    button called "show response" and a pop-up will appear.
 - code: AD_OC22
   selected_answer: 'no'
-  notes: 'Although the platform provides rate limits documentation, it is not specific
-    for the ad library API, making it harder to calculate the total quota available
-    for collecting ads. Meta has three types of request limitations: total of calls
-    (the only one that the documentation explain how to calculate), total of cpu time
-    and total time. https://developers.facebook.com/docs/graph-api/overview/rate-limiting/'
+  notes: Although the platform provides [rate limits documentation](https://developers.facebook.com/docs/graph-api/overview/rate-limiting/),
+    it is not specific for the ad library API, making it harder to calculate the
+    total quota available for collecting ads. Meta has three types of request limitations
+    - total of calls (the only one that the documentation explains how to calculate),
+    total of cpu time and total time.
 consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
@@ -179,7 +181,7 @@ accuracy_answers:
 - code: AD_OC31
   selected_answer: 'no'
   notes: The platform does not provide all targeting options that an advertiser can
-    select.  https://doi.org/10.1177/2053951721996046
+    select. 
 - code: AD_OC32
   selected_answer: 'no'
   notes: 'The platform provides intervals that are bigger than 10%. '
