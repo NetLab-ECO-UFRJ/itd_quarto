@@ -17,16 +17,16 @@ special-criteria_answers:
     by developers through its API.
 - code: UGC_SC3
   selected_answer: 'no'
-  notes: 'In February 2023, X/Twitter announced that it would begin charging for the
+  notes: In February 2023, X/Twitter announced that it would begin charging for the
     use of its API, which had previously been mostly free of charge. Currently, access
-    to the API is divided into four levels: (i) Free, which allows retrieval of data
+    to the API is divided into four levels - (i) Free, which allows retrieval of data
     from up to 100 posts per month; (ii) Basic, which, at a cost of USD 200 per month,
     allows retrieval of up to 15,000 posts; (iii) Pro, which, at a cost of USD 5,000
     per month, allows retrieval of up to 1,000,000 posts; and (iv) Enterprise, for which
     pricing and usage limits are negotiated directly with the platform. As the free plan
     offers extremely limited capabilities and is presented by the platform itself as a
     testing tier, we do not consider it sufficient to characterize access to the platform's
-    API as free of charge.'
+    API as free of charge.
 - code: UGC_SC4
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for accessing or extracting
