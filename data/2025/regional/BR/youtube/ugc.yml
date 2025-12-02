@@ -129,7 +129,7 @@ completeness_answers:
     limit would be even lower if we were only allowed to use fixed parameters on this
     endpoint. However, the API's daily quota is sufficient to monitor more than 10,000
     publications in 24 hours for other endpoints that do not depend on search (e.g.,
-    videos.list or playlistItems.list).
+    `videos.list` or `playlistItems.list`).
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'no'
