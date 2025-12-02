@@ -43,6 +43,7 @@ book:
     - part: "Brazil Assessments"
       chapters:
         - data/2025/regional/BR/linkedin/linkedin.qmd
+        - data/2025/regional/BR/meta/meta.qmd
         - data/2025/regional/BR/pinterest/pinterest.qmd
         - data/2025/regional/BR/snapchat/snapchat.qmd
         - data/2025/regional/BR/tiktok/tiktok.qmd
@@ -60,6 +61,7 @@ bibliography:
   - bib/bluesky.bib
   - bib/discord.bib
   - bib/kwai.bib
+  - bib/meta.bib
   # - bib/reddit.bib
   # - bib/tiktok.bib
   # - bib/whatsapp.bib

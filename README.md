@@ -4,7 +4,7 @@ A Quarto-based research reporting system for evaluating social media platforms a
 
 ## Para fazer
 
-- importa data from Meta, Reddit
+- importa data from Reddit (BR)
 - add emojis to partial answers
 - import evaluations from UK and UE
 - Review scripts that calculate the score
