@@ -6,8 +6,8 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'yes'
-  notes: "The platform does have an API (YouTube Data v3 API) that allows the extraction\
-    \ of public UGC. \nhttps://developers.google.com/youtube/v3/docs."
+  notes: The platform does have an API ([YouTube Data v3 API](https://developers.google.com/youtube/v3/docs))
+    that allows the extraction of public UGC.
 - code: UGC_SC2
   selected_answer: 'yes'
   notes: 'YouTube allows searching the entire universe of public videos available
@@ -17,16 +17,12 @@ special-criteria_answers:
     '
 - code: UGC_SC3
   selected_answer: 'yes'
-  notes: 'The use of the YouTube API is limited by daily quotas per project in the
-    Google Developers Console, but users can obtain credentials for free.
+  notes: |-
+    The use of the YouTube API is limited by daily quotas per project in the Google Developers Console, but users can obtain credentials for free. [1] [2] [3]
 
-    https://developers.google.com/youtube/v3/getting-started
-
-    https://developers.google.com/youtube/registering_an_application
-
-    https://developers.google.com/youtube/v3/determine_quota_cost
-
-    '
+    [1]: https://developers.google.com/youtube/v3/getting-started
+    [2]: https://developers.google.com/youtube/registering_an_application
+    [3]: https://developers.google.com/youtube/v3/determine_quota_cost
 - code: UGC_SC4
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for accessing or extracting
@@ -34,14 +30,11 @@ special-criteria_answers:
 accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
-  notes: 'YouTube does not provide any form of access to or extraction of non-public
-    user-generated content data in Brazil.
+  notes: |-
+    YouTube does not provide any form of access to or extraction of non-public user-generated content data in Brazil. [1] [2]
 
-    https://research.youtube/
-
-    https://developers.google.com/youtube/v3/docs#call-the-api
-
-    '
+    [1]: https://research.youtube/
+    [2]: https://developers.google.com/youtube/v3/docs#call-the-api
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: Responses to requests to the platform API provide the expected data in an
@@ -60,35 +53,18 @@ accessibility_answers:
     '
 - code: UGC_OC5
   selected_answer: 'yes'
-  notes: 'Every content author has a YouTube channel, and the YouTube Data API v3
-    provides methods for retrieving data for specific authors. The search endpoint
-    has a parameter to filter by channel ID. Another way to extract data from specific
-    users is to get their channel’s uploads playlist IDs, then use those on the “playlist
-    items” endpoint to retrieve metadata for videos on their respective channels.
-
-    https://developers.google.com/youtube/v3/docs/search/list
-
-    https://developers.google.com/youtube/v3/docs/playlistItems
-
-    '
+  notes: |-
+    Every content author has a YouTube channel, and the YouTube Data API v3 provides methods for retrieving data for specific authors. The [search endpoint](https://developers.google.com/youtube/v3/docs/search/list) has a parameter to filter by channel ID. Another way to extract data from specific users is to get their channel's uploads playlist IDs, then use those on the [`playlistItems` endpoint](https://developers.google.com/youtube/v3/docs/playlistItems) to retrieve metadata for videos on their respective channels.
 - code: UGC_OC6
   selected_answer: 'yes'
-  notes: 'The YouTube Data v3 API provides a search option for retrieving video data
-    that matches specific search terms or expressions.
-
-    https://developers.google.com/youtube/v3/docs/search
-
-    '
+  notes: The YouTube Data v3 API provides a [search option](https://developers.google.com/youtube/v3/docs/search)
+    for retrieving video data that matches specific search terms or expressions.
 - code: UGC_OC7
   selected_answer: 'yes'
-  notes: 'The API uses internationally standardized, locale-neutral formats for all
+  notes: The API uses internationally standardized, locale-neutral formats for all
     temporal and numerical data. All datetime values and video durations follow the
-    ISO 8601 standard.
-
-
-    https://developers.google.com/youtube/v3/docs/videos
-
-    '
+    ISO 8601 standard. See the [videos documentation](https://developers.google.com/youtube/v3/docs/videos)
+    for details.
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'yes'
@@ -98,112 +74,48 @@ compliance_answers:
     '
 - code: UGC_OC11
   selected_answer: 'yes'
-  notes: "The YouTube API documentation details its terms of use, including those\
-    \ specific to regions of the world. The document is linked at the bottom of the\
-    \ API documentation.\nhttps://developers.google.com/youtube/v3/docs \nhttps://developers.google.com/youtube/terms"
+  notes: |-
+    The YouTube API documentation details its terms of use, including those specific to regions of the world. The document is linked at the bottom of the [API documentation](https://developers.google.com/youtube/v3/docs), providing [terms of service](https://developers.google.com/youtube/terms).
 - code: UGC_OC12
   selected_answer: 'yes'
-  notes: 'Each method in the YouTube Data API v3 includes an example of its response
-    format.
-
-    https://developers.google.com/youtube/v3/docs/videos#resource-representation
-
-    https://developers.google.com/youtube/v3/docs/videos/list#response
-
-    '
+  notes: |-
+    Each method in the YouTube Data API v3 includes an example of its response format, such as the [resource representation](https://developers.google.com/youtube/v3/docs/videos#resource-representation) and [list response](https://developers.google.com/youtube/v3/docs/videos/list#response) for videos.
 - code: UGC_OC13
   selected_answer: 'yes'
-  notes: "Several possible translations of the documentation are available, including\
-    \ Portuguese. The language can be chosen in the upper-right corner of the page.\
-    \ \nhttps://developers.google.com/youtube/v3/docs/videos?hl=pt-br\n"
+  notes: Several possible translations of the documentation are available, including
+    [Portuguese](https://developers.google.com/youtube/v3/docs/videos?hl=pt-br). The
+    language can be chosen in the upper-right corner of the page.
 - code: UGC_OC14
   selected_answer: 'yes'
-  notes: 'The YouTube Data API v3 has a default quota of 10,000 points per day, with
-    each request consuming a portion of this quota. Different methods may have different
-    costs, which are detailed on their respective documentation pages. It is also
-    possible to increase a project''s daily quota by completing an audit form or participating
-    in YouTube’s researcher program.
-
-    https://developers.google.com/youtube/v3/getting-started#quota
-
-    https://support.google.com/youtube/contact/yt_api_form
-
-    https://research.youtube/
-
-    https://developers.google.com/youtube/v3/docs/comments/list
-
-    '
+  notes: |-
+    The YouTube Data API v3 has a [default quota of 10,000 points per day](https://developers.google.com/youtube/v3/getting-started#quota), with each request consuming a portion of this quota. Different methods may have different costs, which are detailed on their respective documentation pages (e.g., [`comments.list`](https://developers.google.com/youtube/v3/docs/comments/list)). It is also possible to increase a project's daily quota by completing an [audit form](https://support.google.com/youtube/contact/yt_api_form) or participating in [YouTube's researcher program](https://research.youtube/).
 - code: UGC_OC15
   selected_answer: 'no'
-  notes: 'YouTube lacks API-level methods for detecting or labeling AI-generated content
-    despite the existence of platform-level features. We found no official policy
-    or technical specification for AI-generated content in the YouTube Data API v3
-    documentation and terms of service.
-
-    https://support.google.com/youtube/answer/14328491
-
-    '
+  notes: YouTube lacks API-level methods for detecting or labeling AI-generated content
+    despite the existence of [platform-level features](https://support.google.com/youtube/answer/14328491).
+    We found no official policy or technical specification for AI-generated content
+    in the YouTube Data API v3 documentation and terms of service.
 - code: UGC_OC8
   selected_answer: 'yes'
-  notes: 'YouTube implements a formal deprecation strategy with defined grace periods,
-    removal dates, and migration guidance, as well as an RSS feed enabling update
-    notifications. The official Terms of Service (Section 14.2) state: "When YouTube
-    intends to make backwards incompatible changes to YouTube API services, YouTube
-    will announce those changes and try to continue to maintain the software code
-    for six (6) months from the date such backwards incompatible changes are announced."
-    Additionally, the revision history page documents all changes with dates and rationale,
-    clearly identifying deprecation announcements.
-
-    https://developers.google.com/youtube/terms/api-services-terms-of-service#youtube-api-services-terms-of-service
-
-    https://developers.google.com/youtube/v3/revision_history
-
-    '
+  notes: |-
+    YouTube implements a formal deprecation strategy with defined grace periods, removal dates, and migration guidance, as well as an RSS feed enabling update notifications. The official [Terms of Service (Section 14.2)](https://developers.google.com/youtube/terms/api-services-terms-of-service#youtube-api-services-terms-of-service) state: "When YouTube intends to make backwards incompatible changes to YouTube API services, YouTube will announce those changes and try to continue to maintain the software code for six (6) months from the date such backwards incompatible changes are announced." Additionally, the [revision history page](https://developers.google.com/youtube/v3/revision_history) documents all changes with dates and rationale, clearly identifying deprecation announcements.
 - code: UGC_OC9
   selected_answer: 'yes'
-  notes: 'The YouTube Data API v3 documentation can be accessed without authentication.
-    https://developers.google.com/youtube/v3/docs/
-
-    '
+  notes: The [YouTube Data API v3 documentation](https://developers.google.com/youtube/v3/docs/)
+    can be accessed without authentication.
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'yes'
-  notes: 'YouTube Data API v3 provides an endpoint to extract comment threads from
-    videos, each containing the top-level comment and up to 5 replies. If the top-level
-    comment has more than 5 replies, they can be extracted using the API''s comments
-    endpoint, filtering by the top-level comment ID (parent comment ID).
-
-    https://developers.google.com/youtube/v3/guides/implementation/comments
-
-    https://developers.google.com/youtube/v3/docs/commentThreads/list
-
-    https://developers.google.com/youtube/v3/docs/comments
-
-    '
+  notes: |-
+    YouTube Data API v3 provides an endpoint to extract [comment threads](https://developers.google.com/youtube/v3/docs/commentThreads/list) from videos, each containing the top-level comment and up to 5 replies. If the top-level comment has more than 5 replies, they can be extracted using the API's [comments endpoint](https://developers.google.com/youtube/v3/docs/comments), filtering by the top-level comment ID (parent comment ID). See the [implementation guide](https://developers.google.com/youtube/v3/guides/implementation/comments) for more details.
 - code: UGC_OC17
   selected_answer: 'no'
-  notes: 'Currently, YouTube does not have built-in support for ephemeral content.
-    The platform deprecated its Stories feature in June 2023.
-
-    https://support.google.com/youtube/thread/217640760/youtube-stories-are-going-away-on-6-26-2023
-
-    '
+  notes: Currently, YouTube does not have built-in support for ephemeral content.
+    The platform [deprecated its Stories feature in June 2023](https://support.google.com/youtube/thread/217640760/youtube-stories-are-going-away-on-6-26-2023).
 - code: UGC_OC18
   selected_answer: 'yes'
-  notes: 'The search endpoint includes parameters for selecting a time range for videos,
-    channels, and playlists. Therefore, the API allows collecting data from any videos
-    available on the platform, regardless of their publication date. However, Developer
-    Policies (Section III.E.4) demands API clients to “either delete or refresh stored
-    resource metadata from that API after 30 days," preventing long-term historical
-    analysis without continuous re-fetching. Also, from our experience, paginating
-    a channel’s videos from their uploads playlist (a possible endpoint for accessing
-    a channel’s historic data) can return no more than 20,000 videos, so while this
-    is a reasonably high count of videos, if a larger channel’s complete video history
-    is needed, this playlist endpoint might be insufficient.
-
-    https://developers.google.com/youtube/terms/developer-policies#e.-handling-youtube-data-and-content
-
-    '
+  notes: |-
+    The search endpoint includes parameters for selecting a time range for videos, channels, and playlists. Therefore, the API allows collecting data from any videos available on the platform, regardless of their publication date. However, [Developer Policies (Section III.E.4)](https://developers.google.com/youtube/terms/developer-policies#e.-handling-youtube-data-and-content) demands API clients to "either delete or refresh stored resource metadata from that API after 30 days," preventing long-term historical analysis without continuous re-fetching. Also, from our experience, paginating a channel's videos from their uploads playlist (a possible endpoint for accessing a channel's historic data) can return no more than 20,000 videos, so while this is a reasonably high count of videos, if a larger channel's complete video history is needed, this playlist endpoint might be insufficient.
 - code: UGC_OC19
   selected_answer: 'no'
   notes: The search list endpoint (for searching videos by query or channel ID) consumes
@@ -227,26 +139,11 @@ consistency_answers:
     The results differed in the order of the returned items.
 - code: UGC_OC21
   selected_answer: 'no'
-  notes: 'There are frequent inconsistencies, even in collections using fixed parameters.
-    In our tests, we found that the YouTube API does not necessarily honor user-defined
-    filters. For instance, the documentation about the “relevanceLanguage” filter
-    states that “results in other languages will still be returned if they are highly
-    relevant to the search query term”, meaning the language filter operates as a
-    soft preference rather than a strict constraint, allowing inconsistent results.
-    In our tests, we confirmed that when requesting videos in Portuguese, one of the
-    resulting items used English for its description and title. Also, comments were
-    written in English. Although the video had no spoken dialogue —only images and
-    English text —the previous statements already indicate that the video is targeted
-    for English-speaking audiences. Recent academic studies have also addressed these
-    consistency issues.
+  notes: |-
+    There are frequent inconsistencies, even in collections using fixed parameters. In our tests, we found that the YouTube API does not necessarily honor user-defined filters. For instance, the [documentation about the `relevanceLanguage` filter](https://developers.google.com/youtube/v3/docs/search/list) states that "results in other languages will still be returned if they are highly relevant to the search query term", meaning the language filter operates as a soft preference rather than a strict constraint, allowing inconsistent results. In our tests, we confirmed that when requesting videos in Portuguese, one of the resulting items used English for its description and title. Also, comments were written in English. Although the video had no spoken dialogue —only images and English text —the previous statements already indicate that the video is targeted for English-speaking audiences. Recent academic studies [1] [2] have also addressed these consistency issues.
 
-    https://developers.google.com/youtube/v3/docs/search/list
-
-    https://arxiv.org/abs/2506.04422
-
-    https://arxiv.org/pdf/2506.11727
-
-    '
+    [1]: https://arxiv.org/abs/2506.04422
+    [2]: https://arxiv.org/pdf/2506.11727
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'no'
@@ -260,37 +157,19 @@ relevance_answers:
     the information displayed on the platform’s user interface at all levels of detail
 - code: UGC_OC23
   selected_answer: 'no'
-  notes: 'The API does not support filtering by channel/publisher location. This feature
-    was deprecated from API v2. Currently, the “search.list” endpoint includes a location
-    parameter, but this applies to video geographic metadata (where content was filmed),
-    not channel/publisher location. The “regionCode” parameter "instructs the API
-    to return search results for videos that can be viewed in the specified country",
-    filtering by content availability region, not by publishers’ location.
-
-    https://developers.google.com/youtube/v3/revision_history#march-11,-2015
-
-    https://developers.google.com/youtube/v3/docs/search/list
-
-    '
+  notes: |-
+    The API does not support filtering by channel/publisher location. This feature was [deprecated from API v2](https://developers.google.com/youtube/v3/revision_history#march-11,-2015). Currently, the [`search.list` endpoint](https://developers.google.com/youtube/v3/docs/search/list) includes a location parameter, but this applies to video geographic metadata (where content was filmed), not channel/publisher location. The `regionCode` parameter "instructs the API to return search results for videos that can be viewed in the specified country", filtering by content availability region, not by publishers' location.
 - code: UGC_OC24
   selected_answer: 'yes'
-  notes: 'The API provides language-related filter parameters, but these influence
-    relevance sorting rather than implementing strict filters. In our tests, when
-    requesting videos in Portuguese, some videos were in English, and while some had
-    their pages automatically translated to Portuguese (including the audio tracks),
-    others did not.
-
-    https://developers.google.com/youtube/v3/docs/search/list#parameters
-
-    '
+  notes: The API provides [language-related filter parameters](https://developers.google.com/youtube/v3/docs/search/list#parameters),
+    but these influence relevance sorting rather than implementing strict filters.
+    In our tests, when requesting videos in Portuguese, some videos were in English,
+    and while some had their pages automatically translated to Portuguese (including
+    the audio tracks), others did not.
 - code: UGC_OC25
   selected_answer: 'yes'
-  notes: 'The API provides comprehensive temporal filtering through dedicated date-time
-    parameters.
-
-    https://developers.google.com/youtube/v3/docs/search/list
-
-    '
+  notes: The API provides comprehensive temporal filtering through [dedicated date-time
+    parameters](https://developers.google.com/youtube/v3/docs/search/list).
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'yes'
