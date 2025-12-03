@@ -28,7 +28,7 @@ results_ugc, results_ads = load_platform_results(
 
 ```
 
-**Region:** `{python} results_ugc['metadata'].get('region_code', 'N/A')`
+**Region:** `{python} results_ads['metadata'].get('region_code', 'N/A')`
 
 **User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
 
