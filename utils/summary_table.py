@@ -6,7 +6,7 @@ all platforms and regions for both UGC and Ads assessments.
 """
 
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional, Union
 from .scoring import calculate_platform_score
 
 
@@ -30,7 +30,7 @@ def get_score_class(score: float) -> str:
         return "score-zero"
 
 
-def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Optional[float | str]]]:
+def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Optional[Union[float, str]]]]:
     """
     Scan all assessment files and calculate scores.
 
