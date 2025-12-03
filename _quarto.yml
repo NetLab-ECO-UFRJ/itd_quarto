@@ -49,10 +49,9 @@ book:
         - data/2025/regional/BR/tiktok/tiktok.qmd
         - data/2025/regional/BR/x/x.qmd
         - data/2025/regional/BR/youtube/youtube.qmd
-        # - part: "European Union"
-        #   chapters: []
-        # - part: "United Kingdom"
-        #   chapters: []
+    - part: "UK Assessments"
+      chapters:
+        - data/2025/regional/UK/meta/meta.qmd
   # page-footer:
   #   center: "--- "
 
