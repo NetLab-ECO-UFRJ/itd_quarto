@@ -30,7 +30,7 @@ def get_score_class(score: float) -> str:
         return "score-zero"
 
 
-def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Optional[float]]]:
+def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Optional[float | str]]]:
     """
     Scan all assessment files and calculate scores.
 
@@ -42,6 +42,7 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
         Dictionary mapping platform names to region scores:
         {'Meta': {'BR': 45.2, 'EU': 38.7, 'UK': None}, ...}
         Global assessments fill all regions with the same value.
+        Special cases may have 'N/A' string instead of numeric score.
     """
     regional_dir = project_root / 'data' / '2025' / 'regional'
     global_dir = project_root / 'data' / '2025' / 'global'
@@ -76,6 +77,12 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
             platform_display = platform_mapping.get(platform_name.lower(), platform_name.title())
 
             if platform_display not in platforms:
+                continue
+
+            # Hardcoded rule: Bluesky Ads is always N/A
+            if platform_display == 'Bluesky' and scope == 'ads':
+                for region in regions:
+                    results[platform_display][region] = 'N/A'
                 continue
 
             assessment_file = platform_dir / f'{scope}.yml'
@@ -204,6 +211,8 @@ def generate_summary_heatmap(scope: str) -> str:
 
             if score is None:
                 html += f'            <td class="score-missing">—</td>\n'
+            elif score == 'N/A':
+                html += f'            <td class="score-missing">N/A</td>\n'
             else:
                 css_class = get_score_class(score)
                 html += f'            <td class="{css_class}">{score:.0f}</td>\n'
