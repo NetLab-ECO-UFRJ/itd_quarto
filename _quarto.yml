@@ -10,7 +10,7 @@ book:
   date: today
   repo-url: https://github.com/NetLab-ECO-UFRJ/transparency-index
   repo-actions: [issue]
-  code-copy: false
+  downloads: [pdf]
   chapters:
     - index.qmd
     # - chapters/executive-summary.qmd
@@ -78,8 +78,7 @@ format:
     toc-depth: 3
     number-sections: true
     code-fold: true
-    code-tools: true
-    code-copy: false
+    code-tools: false
     embed-resources: false
   pdf:
     documentclass: report
