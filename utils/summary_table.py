@@ -40,13 +40,14 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
 
     Returns:
         Dictionary mapping platform names to region scores:
-        {'Meta': {'Global': 45.2, 'BR': 45.2, 'EU': 38.7, 'UK': None}, ...}
+        {'Meta': {'BR': 45.2, 'EU': 38.7, 'UK': None}, ...}
+        Global assessments fill all regions with the same value.
     """
     regional_dir = project_root / 'data' / '2025' / 'regional'
     global_dir = project_root / 'data' / '2025' / 'global'
 
     platforms = ['Bluesky', 'Discord', 'Kwai', 'Telegram', 'Meta', 'YouTube', 'X', 'TikTok', 'LinkedIn', 'Pinterest', 'Snapchat']
-    regions = ['Global', 'BR', 'EU', 'UK']
+    regions = ['BR', 'EU', 'UK']
 
     results = {platform: {region: None for region in regions} for platform in platforms}
 
@@ -65,7 +66,7 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
         'snapchat': 'Snapchat'
     }
 
-    # Scan global assessments
+    # Scan global assessments - fill all regions with the same value
     if global_dir.exists():
         for platform_dir in global_dir.iterdir():
             if not platform_dir.is_dir():
@@ -88,13 +89,16 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
                     )
 
                     score = result.get('total_score', 0.0)
-                    results[platform_display]['Global'] = round(score, 1)
+                    score_rounded = round(score, 1)
+
+                    # Fill all regions with the same global score
+                    for region in regions:
+                        results[platform_display][region] = score_rounded
 
                 except Exception as e:
                     print(f"Warning: Failed to calculate score for {platform_display}/Global/{scope}: {e}")
-                    results[platform_display]['Global'] = None
 
-    # Scan regional assessments
+    # Scan regional assessments - these override global values if they exist
     for region in ['BR', 'EU', 'UK']:
         region_dir = regional_dir / region
         if not region_dir.exists():
@@ -150,40 +154,39 @@ def generate_summary_heatmap(scope: str) -> str:
 
     scope_display = 'UGC (User-Generated Content)' if scope == 'ugc' else 'Ads (Advertising)'
 
-    html = f'''
+    html = '''
 <style>
-.heatmap-table {{
+.heatmap-table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
     font-family: system-ui, -apple-system, sans-serif;
-}}
-.heatmap-table th, .heatmap-table td {{
+}
+.heatmap-table th, .heatmap-table td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: center;
     font-weight: 500;
-}}
-.heatmap-table th {{
+}
+.heatmap-table th {
     background-color: #f8f9fa;
     font-weight: 600;
-}}
-.heatmap-table td.platform-name {{
+}
+.heatmap-table td.platform-name {
     text-align: left;
     font-weight: 600;
-}}
-.score-high {{ background-color: #084298; color: white; }}
-.score-medium {{ background-color: #6c9bcf; color: white; }}
-.score-low {{ background-color: #cfe2ff; color: black; }}
-.score-zero {{ background-color: #f5f5f5; color: black; }}
-.score-missing {{ background-color: #e0e0e0; color: #666; font-style: italic; }}
+}
+.score-high { background-color: #084298 !important; color: white !important; }
+.score-medium { background-color: #6c9bcf !important; color: white !important; }
+.score-low { background-color: #cfe2ff !important; color: black !important; }
+.score-zero { background-color: #f5f5f5 !important; color: black !important; }
+.score-missing { background-color: #e0e0e0 !important; color: #666 !important; font-style: italic; }
 </style>
 
 <table class="heatmap-table">
     <thead>
         <tr>
             <th>Platform</th>
-            <th>Global</th>
             <th>Brazil (BR)</th>
             <th>EU</th>
             <th>UK</th>
@@ -196,7 +199,7 @@ def generate_summary_heatmap(scope: str) -> str:
         html += f'        <tr>\n'
         html += f'            <td class="platform-name">{platform}</td>\n'
 
-        for region in ['Global', 'BR', 'EU', 'UK']:
+        for region in ['BR', 'EU', 'UK']:
             score = regions.get(region)
 
             if score is None:
