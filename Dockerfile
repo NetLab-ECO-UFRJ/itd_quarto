@@ -30,6 +30,9 @@ RUN uv run quarto render && \
 # Production stage with nginx
 FROM nginx:alpine
 
+# Install wget for healthcheck
+RUN apk add --no-cache wget
+
 # Copy rendered output to nginx html directory
 COPY --from=builder /app/_output/. /usr/share/nginx/html/
 
