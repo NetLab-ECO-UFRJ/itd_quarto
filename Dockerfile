@@ -34,7 +34,7 @@ FROM nginx:alpine
 RUN apk add --no-cache wget apache2-utils
 
 # Create htpasswd file with admin:password
-RUN htpasswd -cb /etc/nginx/.htpasswd admin password
+RUN htpasswd -cb /etc/nginx/.htpasswd admin laguinho
 
 # Copy rendered output to nginx html directory
 COPY --from=builder /app/_output/. /usr/share/nginx/html/

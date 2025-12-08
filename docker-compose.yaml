@@ -8,7 +8,7 @@ services:
       - "traefik.http.services.web.loadbalancer.server.port=80"
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "--http-user=admin", "--http-password=password", "http://localhost/"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "--http-user=admin", "--http-password=laguinho", "http://localhost/"]
       interval: 30s
       timeout: 10s
       retries: 3
