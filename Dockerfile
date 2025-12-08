@@ -23,13 +23,15 @@ COPY . .
 RUN uv sync --frozen
 
 # Render the Quarto book
-RUN uv run quarto render
+RUN uv run quarto render && \
+    ls -la /app/_output && \
+    test -f /app/_output/index.html || (echo "ERROR: Quarto render failed or index.html not found" && exit 1)
 
 # Production stage with nginx
 FROM nginx:alpine
 
 # Copy rendered output to nginx html directory
-COPY --from=builder /app/_output /usr/share/nginx/html
+COPY --from=builder /app/_output/. /usr/share/nginx/html/
 
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
