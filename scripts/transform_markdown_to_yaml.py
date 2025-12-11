@@ -32,6 +32,7 @@ class MarkdownToYAMLTransformer:
         'ugc': {
             'yes, but only for approved researchers': 'researchers_only',
             'yes': 'yes',
+            'no or not applicable': 'no_or_not_applicable',
             'not applicable': 'not_applicable',
             'no': 'no',
         }
@@ -227,9 +228,7 @@ class MarkdownToYAMLTransformer:
                 for answer in category_data:
                     if 'selected_answer' in answer:
                         value = answer['selected_answer']
-                        if value == 'yes':
-                            answer['selected_answer'] = True
-                        elif value in ['no', 'not_applicable']:
+                        if value in ['yes', 'no', 'not_applicable']:
                             answer['selected_answer'] = QuotedString(value)
 
         with open(output_file, 'w', encoding='utf-8') as f:

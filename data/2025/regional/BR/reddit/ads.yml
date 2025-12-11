@@ -1,0 +1,126 @@
+metadata:
+  platform: Reddit
+  region_code: BR
+  scope: ADS
+  evaluation_date: 2025-10
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: 'no'
+  notes: The Reddit Ads API is a campaign management tool designed exclusively for
+    advertisers to programmatically create, manage, and report on their own campaigns.
+    The API endpoints provide advertisers access only to their own campaign data,
+    creative assets, and performance metrics; they do not provide endpoints to query,
+    search, or retrieve advertising content from other advertisers or to access a
+    platform-wide catalog of ads served on Reddit. [[https://ads-api.reddit.com/docs/]{.underline}](https://ads-api.reddit.com/docs/)
+    [[https://www.business.reddit.com/]{.underline}](https://www.business.reddit.com/)
+- code: AD_SC2
+  selected_answer: 'no'
+  notes: ''
+- code: AD_SC3
+  selected_answer: 'no'
+  notes: ''
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC2
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC4
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC5
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC6
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC7
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC8
+  selected_answer: 'no'
+  notes: ''
+completeness_answers:
+- code: AD_OC10
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC11
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC12
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC13
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC9
+  selected_answer: 'no'
+  notes: ''
+compliance_answers:
+- code: AD_OC14
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC16
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC17
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC18
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC19
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC20
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC21
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC22
+  selected_answer: 'no'
+  notes: ''
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC24
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC25
+  selected_answer: 'no'
+  notes: ''
+relevance_answers:
+- code: AD_OC26
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC27
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: ''
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC31
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: ''

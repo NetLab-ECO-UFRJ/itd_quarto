@@ -1,0 +1,162 @@
+metadata:
+  platform: Reddit
+  region_code: BR
+  scope: UGC
+  evaluation_date: 2025-10
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: 'yes'
+  notes: Reddit provides a Data API that enables programmatic extraction of public
+    user-generated content, including posts, comments, and subreddit information.
+    https://www.reddit.com/dev/api/ https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki
+    https://www.reddit.com/r/reddit.com/wiki/api/\#wiki\_read\_the\_full\_api\_terms\_and\_sign\_up\_for\_usage
+- code: UGC_SC2
+  selected_answer: 'no'
+  notes: It’s not possible to retrieve the full scope of public data through the platform’s
+    API. When trying to collect historical data, only a subset was returned by the
+    search endpoint. Our test requested all posts using “brexit” as a search term,
+    without specifying a time period to restrict results, the only parameter that
+    was set besides the query was sorting, because this is a required parameter. In
+    the first request attempt, we used the wrapper’s default (relevance), and in the
+    second attempt, we used the “new” sorting option. The total posts retrieved by
+    the requests was different in quantity, as well as the posts, and only a few posts
+    were retrieved by both requests. Changing the sorting parameter shouldn’t affect
+    the quantity of data retrieved.
+- code: UGC_SC3
+  selected_answer: 'yes'
+  notes: Reddit offers free APIs for non-commercial and research uses under specific
+    conditions, quota limits, and constraints.
+- code: UGC_SC4
+  selected_answer: 'no'
+  notes: 'The platform provides no official graphical user interface or tools for
+    researchers to extract data. All data access is API-based, requiring technical
+    implementation and programming skills. ## OTHER CRITERIA'
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'no'
+  notes: Reddit launched a Researchers Beta Program in 2024, but the initiative has
+    been inactive for months, and we could not find evidence that it provided access
+    to non-public data. https://www.reddit.com/r/reddit4researchers/comments/1co0mqa/our\_plans\_for\_researchers\_on\_reddit/
+    https://www.reddit.com/r/reddit4researchers/comments/1ffd56x/reddit\_for\_researchers\_beta\_program\_were\_live/
+    https://www.reddit.com/r/reddit4researchers/comments/1g5znj3/the\_reddit\_for\_researchers\_beta\_program\_is\_growing/
+- code: UGC_OC2
+  selected_answer: 'yes'
+  notes: The API returns data directly in JSON format within the API response payload
+    for all endpoints tested. https://www.reddit.com/dev/api/
+- code: UGC_OC3
+  selected_answer: 'yes'
+  notes: To access the API, it is necessary to create a developer or research account,
+    and once approved, the API can be used by informing the client ID, secret, and
+    user agent. No token renewal is needed for data access.
+- code: UGC_OC4
+  selected_answer: 'yes'
+  notes: The platform provides endpoints for retrieving individual posts using unique
+    identifiers or through the post url/permalink. https://www.reddit.com/dev/api/\#GET\_comments\_{article}
+- code: UGC_OC5
+  selected_answer: 'yes'
+  notes: The API provides endpoints for retrieving posts by specific authors. Posts
+    and comments can be filtered by author username, allowing the collection of all
+    public content from a specific user. https://www.reddit.com/dev/api/\#GET\_user\_{username}\_submitted
+- code: UGC_OC6
+  selected_answer: 'yes'
+  notes: The API includes search functionality through a dedicated endpoint. https://www.reddit.com/dev/api/\#GET\_search
+- code: UGC_OC7
+  selected_answer: 'yes'
+  notes: The API uses Unix epoch timestamps (UTC-based integers) for all temporal
+    data. https://praw.readthedocs.io/en/stable/search.html?q=%22Unix+Time%22\&check\_keywords=yes\&area=default\#
+compliance_answers:
+- code: UGC_OC10
+  selected_answer: 'no'
+  notes: The documentation is automatically-generated, hard to navigate, and lacks
+    comprehensive examples and a clear structure. Reddit does not provide an OpenAPI
+    specification, further limiting documentation clarity. https://www.reddit.com/dev/api/
+- code: UGC_OC11
+  selected_answer: 'yes'
+  notes: The wiki with human-generated documentation clearly links to the platform’s
+    terms of service at the top of the page. https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki
+- code: UGC_OC12
+  selected_answer: 'no'
+  notes: While the documentation lists available endpoints, it does not consistently
+    provide detailed specifications for response formats or comprehensive examples.
+    https://www.reddit.com/dev/api/
+- code: UGC_OC13
+  selected_answer: 'no'
+  notes: The API documentation is available only in English. https://www.reddit.com/dev/api/
+- code: UGC_OC14
+  selected_answer: 'yes'
+  notes: The documentation clearly specifies rate limits. https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki
+- code: UGC_OC15
+  selected_answer: 'no'
+  notes: Reddit's official API documentation contains no mention of AI-generated content
+    flags or labels in API responses. While Reddit partnered with researchers to develop
+    “models for detecting and managing AI-generated content”, this feature is not
+    documented as available in the API, and no fields for AI-content identification
+    appear in the documented response formats. https://www.reddit.com/dev/api https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki
+    https://www.reddit.com/r/reddit4researchers/comments/1g5znj3/the\_reddit\_for\_researchers\_beta\_program\_is\_growing/
+- code: UGC_OC8
+  selected_answer: no_or_not_applicable
+  notes: Reddit’s documentation states that “changes to the API can happen without
+    warning if necessary”. https://github.com/reddit-archive/reddit/wiki/API
+- code: UGC_OC9
+  selected_answer: 'yes'
+  notes: The API documentation is publicly accessible without requiring registration
+    or login. https://www.reddit.com/dev/api/ https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki
+    https://github.com/reddit-archive/reddit/wiki/API
+completeness_answers:
+- code: UGC_OC16
+  selected_answer: 'yes'
+  notes: The platform provides comprehensive access to comment data. Comments can
+    be retrieved via endpoints that return both the post and its comment tree, as
+    well as dedicated search endpoints for comments. https://www.reddit.com/dev/api/\#GET\_comments\_{article}
+    https://www.reddit.com/dev/api/\#GET\_user\_{username}\_comments
+- code: UGC_OC17
+  selected_answer: 'not_applicable'
+  notes: Reddit does not have temporary or ephemeral content.
+- code: UGC_OC18
+  selected_answer: 'yes'
+  notes: It is possible to extract historical data, though there is a limit of 1000
+    items returned across all listing endpoints. It is possible to extract historical
+    data, though it doesn’t seem to retrieve the full scope of historical data, only
+    a subset that is influenced by the sort parameter, as explained in SC02. https://www.reddit.com/dev/api/\#GET\_search
+- code: UGC_OC19
+  selected_answer: 'yes'
+  notes: Reddit’s Data API free tier currently limits 100 queries per minute (QPM)
+    per OAuth client ID. This translates to 144,000 requests per 24-hour period. We
+    conducted a two-hour test requesting data through the subreddit stream endpoint
+    and it was enough to collect more than 10.000 publications, although no data older
+    than the job start time was retrieved. https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki
+consistency_answers:
+- code: UGC_OC20
+  selected_answer: 'yes'
+  notes: We ran a test that made 5 requests to the search endpoint, using the same
+    parameters and search term, with 1 minute between each request. All responses
+    returned the same data.
+- code: UGC_OC21
+  selected_answer: 'yes'
+  notes: Although there are only a few parameters available to filter data, we tested
+    two (a time filter to collect data from the day before and sorting by newest data),
+    and both responses were consistent with the request parameters.
+relevance_answers:
+- code: UGC_OC22
+  selected_answer: 'yes'
+  notes: All key elements that are shown in the user interface are present in the
+    API response.
+- code: UGC_OC23
+  selected_answer: 'no'
+  notes: The platform does not provide any location-based filtering parameters for
+    posts or comments. https://www.reddit.com/dev/api/
+- code: UGC_OC24
+  selected_answer: 'no'
+  notes: The platform does not provide any language-based filtering parameters for
+    posts or comments.
+- code: UGC_OC25
+  selected_answer: 'no'
+  notes: While Reddit's API supports time-based filtering, it only accepts predefined
+    periods (hour, day, week, month, year, all) and does not support custom date ranges
+    with specific start and end dates.
+timeliness_answers:
+- code: UGC_OC26
+  selected_answer: 'yes'
+  notes: The platform provides near real-time access to newly published content. The
+    /new endpoint provides access to posts sorted chronologically by creation time,
+    and the API reflects new posts almost immediately after publication. https://www.reddit.com/dev/api/\#GET\_new

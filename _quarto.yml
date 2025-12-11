@@ -21,38 +21,39 @@ book:
     # - chapters/framework.qmd
     # - chapters/findings.qmd
     # - chapters/conclusion.qmd
-    - part: "Platforms"
-      chapters:
-        - chapters/platforms/bluesky.qmd
-        - chapters/platforms/discord.qmd
-        - chapters/platforms/kwai.qmd
-        - chapters/platforms/linkedin.qmd
-        - chapters/platforms/meta.qmd
-        - chapters/platforms/pinterest.qmd
-        # - chapters/platforms/reddit.qmd
-        - chapters/platforms/snapchat.qmd
-        - chapters/platforms/telegram.qmd
-        - chapters/platforms/tiktok.qmd 
-        - chapters/platforms/youtube.qmd
+    # - part: "Platforms"
+    #   chapters:
+    #     - chapters/platforms/bluesky.qmd
+    #     - chapters/platforms/discord.qmd
+    #     - chapters/platforms/kwai.qmd
+    #     - chapters/platforms/linkedin.qmd
+    #     - chapters/platforms/meta.qmd
+    #     - chapters/platforms/pinterest.qmd
+    #     # - chapters/platforms/reddit.qmd
+    #     - chapters/platforms/snapchat.qmd
+    #     - chapters/platforms/telegram.qmd
+    #     - chapters/platforms/tiktok.qmd 
+    #     - chapters/platforms/youtube.qmd
   appendices: 
-    - part: "Global Assessments"
-      chapters:
-        - data/2025/global/bluesky/bluesky.qmd
-        - data/2025/global/discord/discord.qmd
-        - data/2025/global/kwai/kwai.qmd
-        - data/2025/global/telegram/telegram.qmd
+    # - part: "Global Assessments"
+    #   chapters:
+    #     - data/2025/global/bluesky/bluesky.qmd
+    #     - data/2025/global/discord/discord.qmd
+    #     - data/2025/global/kwai/kwai.qmd
+    #     - data/2025/global/telegram/telegram.qmd
     - part: "Brazil Assessments"
       chapters:
-        - data/2025/regional/BR/linkedin/linkedin.qmd
-        - data/2025/regional/BR/meta/meta.qmd
-        - data/2025/regional/BR/pinterest/pinterest.qmd
+        # - data/2025/regional/BR/linkedin/linkedin.qmd
+        # - data/2025/regional/BR/meta/meta.qmd
+        # - data/2025/regional/BR/pinterest/pinterest.qmd
+        - data/2025/regional/BR/reddit/reddit.qmd
         - data/2025/regional/BR/snapchat/snapchat.qmd
         - data/2025/regional/BR/tiktok/tiktok.qmd
         - data/2025/regional/BR/x/x.qmd
         - data/2025/regional/BR/youtube/youtube.qmd
-    - part: "UK Assessments"
-      chapters:
-        - data/2025/regional/UK/meta/meta.qmd
+    # - part: "UK Assessments"
+    #   chapters:
+    #     - data/2025/regional/UK/meta/meta.qmd
   # page-footer:
   #   center: "--- "
 
@@ -62,7 +63,7 @@ bibliography:
   - bib/discord.bib
   - bib/kwai.bib
   - bib/meta.bib
-  # - bib/reddit.bib
+  - bib/reddit.bib
   # - bib/tiktok.bib
   # - bib/whatsapp.bib
 
