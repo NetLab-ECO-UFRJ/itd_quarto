@@ -1,6 +1,6 @@
 metadata:
   platform: Reddit
-  region_code: BR
+  region_code: BRAZIL
   scope: ADS
   evaluation_date: 2025-10
 special-criteria_answers:
@@ -11,8 +11,8 @@ special-criteria_answers:
     The API endpoints provide advertisers access only to their own campaign data,
     creative assets, and performance metrics; they do not provide endpoints to query,
     search, or retrieve advertising content from other advertisers or to access a
-    platform-wide catalog of ads served on Reddit. [[https://ads-api.reddit.com/docs/]{.underline}](https://ads-api.reddit.com/docs/)
-    [[https://www.business.reddit.com/]{.underline}](https://www.business.reddit.com/)
+    platform-wide catalog of ads served on Reddit. [Ads API docs](https://ads-api.reddit.com/docs/)
+    [Reddit Business](https://www.business.reddit.com/)
 - code: AD_SC2
   selected_answer: 'no'
   notes: ''
