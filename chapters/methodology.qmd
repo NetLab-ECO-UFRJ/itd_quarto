@@ -65,3 +65,37 @@ $$
 - **25-49%**: Limited compliance
 - **0-24%**: Poor compliance
 :::
+
+# Questionnaires
+
+```{python}
+#| echo: false
+#| output: asis
+
+import yaml
+from pathlib import Path
+
+def format_category_title(category):
+    return category.replace('_', ' ').title()
+
+def display_questions(yaml_file, title):
+    print(f"\n## {title}\n")
+
+    with open(yaml_file, 'r') as f:
+        data = yaml.safe_load(f)
+
+    for category, questions in data.items():
+        print(f"\n### {format_category_title(category)}\n")
+
+        for q in questions:
+            print(f"**{q['code']}**: {q['title']}\n")
+            print(f"*Description*: {q['description']}\n")
+            print(f"*Available answers*:\n")
+            for answer in q['answers']:
+                print(f"- {answer['label']} (weight: {answer['weight']})")
+            print("\n")
+
+display_questions('../data/2025/questions_ugc_2025.yml', 'User-Generated Content (UGC) Questions')
+display_questions('../data/2025/questions_ads_2025.yml', 'Advertising (Ads) Questions')
+```
+
