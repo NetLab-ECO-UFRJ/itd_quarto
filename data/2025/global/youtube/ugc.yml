@@ -102,7 +102,7 @@ completeness_answers:
   notes: |-
     YouTube Data API v3 provides an endpoint to extract [comment threads](https://developers.google.com/youtube/v3/docs/commentThreads/list) from videos, each containing the top-level comment and up to 5 replies. If the top-level comment has more than 5 replies, they can be extracted using the API's [comments endpoint](https://developers.google.com/youtube/v3/docs/comments), filtering by the top-level comment ID (parent comment ID). See the [implementation guide](https://developers.google.com/youtube/v3/guides/implementation/comments) for more details.
 - code: UGC_OC17
-  selected_answer: 'no'
+  selected_answer: 'not_applicable'
   notes: Currently, YouTube does not have built-in support for ephemeral content.
     The platform [deprecated its Stories feature in June 2023](https://support.google.com/youtube/thread/217640760/youtube-stories-are-going-away-on-6-26-2023).
 - code: UGC_OC18
