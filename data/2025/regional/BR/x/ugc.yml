@@ -115,7 +115,7 @@ compliance_answers:
   notes: The X/Twitter API documentation is publicly accessible to anyone.
 completeness_answers:
 - code: UGC_OC16
-  selected_answer: 'no'
+  selected_answer: 'not_applicable'
   notes: Although it could be argued that replies and quotes serve this function,
     X/Twitter does not have dedicated comment features like other social media platforms
     analyzed in this study.
