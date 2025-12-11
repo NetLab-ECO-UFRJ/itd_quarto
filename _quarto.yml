@@ -15,7 +15,7 @@ book:
     - index.qmd
     # - chapters/executive-summary.qmd
     # - chapters/recommendations.qmd
-    # - chapters/key-findings.qmd
+    - chapters/key-findings.qmd
     # - chapters/context.qmd
     # - chapters/methodology.qmd
     # - chapters/framework.qmd
