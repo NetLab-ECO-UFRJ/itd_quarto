@@ -153,6 +153,7 @@ def calculate_methodology_score(
 
     other_sum = 0.0
     other_questions_count = 0
+    applicable_count = 0
 
     for category_name, category_answers in answers_data.items():
         if category_name == 'metadata' or category_name == 'special-criteria_answers':
@@ -174,13 +175,17 @@ def calculate_methodology_score(
             other_sum += answer_weight
             other_questions_count += 1
 
+            if selected_value != 'not_applicable':
+                applicable_count += 1
+
     if other_questions_count != other_count:
         raise ValueError(
             f"Expected {other_count} other criteria for {question_type.upper()}, "
             f"but got {other_questions_count}"
         )
 
-    other_score = 25 * (other_sum / other_count)
+    denominator = applicable_count if applicable_count > 0 else other_count
+    other_score = 25 * (other_sum / denominator)
 
     total_score = special_score + other_score
 
