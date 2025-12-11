@@ -45,17 +45,6 @@ from utils.quarto_helpers import generate_summary_table
 generate_summary_table(results_ugc)
 ```
 
-## Advertising Summary
-
-```{python}
-#| label: ads-summary-table
-#| echo: false
-#| output: asis
-
-generate_summary_table(results_ads)
-```
-
-
-## Advertising 
+## Advertising
 
 Not available.
