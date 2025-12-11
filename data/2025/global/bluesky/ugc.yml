@@ -89,7 +89,7 @@ completeness_answers:
     Bluesky does not have dedicated comment features like other social media platforms
     analyzed in this study.
 - code: UGC_OC17
-  selected_answer: 'no'
+  selected_answer: 'not_applicable'
   notes: Bluesky does not have temporary content features.
 - code: UGC_OC18
   selected_answer: 'yes'
