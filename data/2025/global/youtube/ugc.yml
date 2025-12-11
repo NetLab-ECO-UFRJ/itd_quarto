@@ -136,15 +136,8 @@ consistency_answers:
     There are frequent inconsistencies, even in collections using fixed parameters. In our tests, we found that the YouTube API does not necessarily honor user-defined filters. For instance, the [documentation about the `relevanceLanguage` filter](https://developers.google.com/youtube/v3/docs/search/list) states that "results in other languages will still be returned if they are highly relevant to the search query term", meaning the language filter operates as a soft preference rather than a strict constraint, allowing inconsistent results. In our tests, we confirmed that when requesting videos in Portuguese, one of the resulting items used English for its description and title. Also, comments were written in English. Although the video had no spoken dialogue —only images and English text —the previous statements already indicate that the video is targeted for English-speaking audiences.
 relevance_answers:
 - code: UGC_OC22
-  selected_answer: 'no'
-  notes: We ran tests comparing metrics from video and live streamings and confirmed
-    that engagement metrics returned by the API are overall consistent with those
-    on the user interface, although they are rounded and might not reflect the actual
-    content available (e.g., total comment replies on the user interface can differ
-    from the actual retrievable replies available via API). However, the API does
-    not provide the metadata on AI-generated content, which is available through the
-    web interface. Therefore, the data returned by the API does not correspond to
-    the information displayed on the platform’s user interface at all levels of detail
+  selected_answer: 'yes'
+  notes: We ran tests comparing metrics from video and live streamings and confirmed that the numbers returned by the API are consistent with those on the user interface, although they are rounded and might not reflect the actual content available (e.g., total comment replies on the user interface can differ from the actual retrievable replies available via API).
 - code: UGC_OC23
   selected_answer: 'no'
   notes: |-
