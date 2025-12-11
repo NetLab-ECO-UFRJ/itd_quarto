@@ -33,162 +33,84 @@ special-criteria_answers:
 accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC2
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC3
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC4
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC5
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC6
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC7
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC11
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC12
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC13
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC14
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC15
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC8
   selected_answer: no_or_not_applicable
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC9
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC17
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC18
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC19
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC21
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC23
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC24
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 - code: UGC_OC25
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'no'
-  notes: Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details.
+  notes: '-'
