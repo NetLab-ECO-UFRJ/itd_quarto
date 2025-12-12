@@ -14,20 +14,29 @@ def get_score_class(score: float) -> str:
     """
     Determine CSS class based on score range.
 
+    Transparency Scale:
+    - Ideal (81-100): Efficient official solutions, APIs, well-documented
+    - Satisfactory (61-80): Available without financial restrictions, some limitations
+    - Regular (41-60): Some transparency measures, various limitations
+    - Precarious (21-40): Significant barriers, monitoring unfeasible for most
+    - Irrelevant or Zero (0-20): No transparency investment
+
     Args:
         score: Score value (0-100)
 
     Returns:
         CSS class name for color coding
     """
-    if score >= 76:
-        return "score-high"
-    elif score >= 51:
-        return "score-medium"
-    elif score >= 26:
-        return "score-low"
+    if score >= 81:
+        return "score-ideal"
+    elif score >= 61:
+        return "score-satisfactory"
+    elif score >= 41:
+        return "score-regular"
+    elif score >= 21:
+        return "score-precarious"
     else:
-        return "score-zero"
+        return "score-irrelevant"
 
 
 def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Optional[Union[float, str]]]]:
@@ -183,10 +192,11 @@ def generate_summary_heatmap(scope: str) -> str:
     text-align: left;
     font-weight: 600;
 }
-.score-high { background-color: #084298 !important; color: white !important; }
-.score-medium { background-color: #6c9bcf !important; color: white !important; }
-.score-low { background-color: #cfe2ff !important; color: black !important; }
-.score-zero { background-color: #f5f5f5 !important; color: black !important; }
+.score-ideal { background-color: #2d6a4f !important; color: white !important; }
+.score-satisfactory { background-color: #95d5b2 !important; color: black !important; }
+.score-regular { background-color: #ffd60a !important; color: black !important; }
+.score-precarious { background-color: #f77f00 !important; color: white !important; }
+.score-irrelevant { background-color: #d62828 !important; color: white !important; }
 .score-missing { background-color: #e0e0e0 !important; color: #666 !important; font-style: italic; }
 </style>
 
@@ -231,31 +241,59 @@ def generate_legend() -> str:
     Generate HTML legend for the heatmap color scheme.
 
     Returns:
-        HTML string with color legend
+        HTML string with color legend and transparency scale descriptions
     """
     return '''
 <div style="margin: 20px 0; padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
-    <h4 style="margin-top: 0;">Score Legend</h4>
-    <table style="width: 100%; max-width: 500px;">
+    <h4 style="margin-top: 0;">Transparency Scale</h4>
+    <table style="width: 100%; border-collapse: collapse;">
         <tr>
-            <td style="padding: 8px; background-color: #084298; color: white; text-align: center; border: 1px solid #ddd;">High</td>
-            <td style="padding: 8px;">76-100 points</td>
+            <td style="padding: 12px; background-color: #2d6a4f; color: white; font-weight: 600; border: 1px solid #ddd; width: 200px;">
+                Transparency <em>ideal</em><br>(81 to 100 points)
+            </td>
+            <td style="padding: 12px; border: 1px solid #ddd;">
+                Platforms with efficient official solutions for data collection, including APIs and a data collection interface, with well-documented examples and no obstacles to scraping. They usually publish regular transparency reports detailing violations and removals at the request of the state in Brazil.
+            </td>
         </tr>
         <tr>
-            <td style="padding: 8px; background-color: #6c9bcf; color: white; text-align: center; border: 1px solid #ddd;">Medium</td>
-            <td style="padding: 8px;">51-75 points</td>
+            <td style="padding: 12px; background-color: #95d5b2; color: black; font-weight: 600; border: 1px solid #ddd;">
+                Transparency <em>satisfactory</em><br>(61 to 80 points)
+            </td>
+            <td style="padding: 12px; border: 1px solid #ddd;">
+                Platforms that make data available without financial restrictions, but with limitations on the volume of data that can be requested and/or with quality problems, especially consistency. They publish transparency reports on their moderation actions in Brazil on a regular basis.
+            </td>
         </tr>
         <tr>
-            <td style="padding: 8px; background-color: #cfe2ff; color: black; text-align: center; border: 1px solid #ddd;">Low</td>
-            <td style="padding: 8px;">26-50 points</td>
+            <td style="padding: 12px; background-color: #ffd60a; color: black; font-weight: 600; border: 1px solid #ddd;">
+                Transparency <em>regular</em><br>(41 to 60 points)
+            </td>
+            <td style="padding: 12px; border: 1px solid #ddd;">
+                Platforms that present some measures of transparency and access to data, but with various limitations related to the type of content that can be accessed and the sample of the universe of public data that can be collected. In general, they publish transparency reports with moderation actions in Brazil, but without the expected detail.
+            </td>
         </tr>
         <tr>
-            <td style="padding: 8px; background-color: #f5f5f5; color: black; text-align: center; border: 1px solid #ddd;">Zero</td>
-            <td style="padding: 8px;">0-25 points</td>
+            <td style="padding: 12px; background-color: #f77f00; color: white; font-weight: 600; border: 1px solid #ddd;">
+                Transparency <em>precarious</em><br>(21 to 40 points)
+            </td>
+            <td style="padding: 12px; border: 1px solid #ddd;">
+                Platforms that impose significant technical, operational and/or financial barriers to their data access measures, making monitoring unfeasible for most researchers and interested parties. They are also not in the habit of publishing periodic transparency reports on their content moderation actions in Brazil.
+            </td>
         </tr>
         <tr>
-            <td style="padding: 8px; background-color: #e0e0e0; color: #666; text-align: center; border: 1px solid #ddd; font-style: italic;">—</td>
-            <td style="padding: 8px;">Not Yet Assessed</td>
+            <td style="padding: 12px; background-color: #d62828; color: white; font-weight: 600; border: 1px solid #ddd;">
+                Transparency <em>irrelevant or zero</em><br>(0 to 20 points)
+            </td>
+            <td style="padding: 12px; border: 1px solid #ddd;">
+                Platforms that don't invest in any transparency and data access measures. They receive few points thanks to the possibilities of data scraping, which are generally not officially allowed. They don't usually publish periodic transparency reports on their content moderation actions in Brazil.
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 12px; background-color: #e0e0e0; color: #666; font-weight: 600; border: 1px solid #ddd; font-style: italic;">
+                Not Yet Assessed
+            </td>
+            <td style="padding: 12px; border: 1px solid #ddd;">
+                Platform has not been assessed yet or data is not available for this region.
+            </td>
         </tr>
     </table>
 </div>

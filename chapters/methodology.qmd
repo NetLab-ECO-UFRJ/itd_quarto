@@ -59,11 +59,16 @@ $$
 
 
 ::: {.callout-note}
-## Score Interpretation
-- **75-100%**: Excellent compliance
-- **50-74%**: Moderate compliance
-- **25-49%**: Limited compliance
-- **0-24%**: Poor compliance
+## Transparency Scale Interpretation
+- **81-100 points**: *Transparency ideal* - Platforms with efficient official solutions for data collection, including APIs and a data collection interface, with well-documented examples and no obstacles to scraping. They usually publish regular transparency reports detailing violations and removals at the request of the state in Brazil.
+
+- **61-80 points**: *Transparency satisfactory* - Platforms that make data available without financial restrictions, but with limitations on the volume of data that can be requested and/or with quality problems, especially consistency. They publish transparency reports on their moderation actions in Brazil on a regular basis.
+
+- **41-60 points**: *Transparency regular* - Platforms that present some measures of transparency and access to data, but with various limitations related to the type of content that can be accessed and the sample of the universe of public data that can be collected. In general, they publish transparency reports with moderation actions in Brazil, but without the expected detail.
+
+- **21-40 points**: *Transparency precarious* - Platforms that impose significant technical, operational and/or financial barriers to their data access measures, making monitoring unfeasible for most researchers and interested parties. They are also not in the habit of publishing periodic transparency reports on their content moderation actions in Brazil.
+
+- **0-20 points**: *Transparency irrelevant or zero* - Platforms that don't invest in any transparency and data access measures. They receive few points thanks to the possibilities of data scraping, which are generally not officially allowed. They don't usually publish periodic transparency reports on their content moderation actions in Brazil.
 :::
 
 # Questionnaires
