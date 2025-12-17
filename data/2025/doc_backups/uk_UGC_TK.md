@@ -83,10 +83,6 @@ Yes, with a caveat that recent research has also found disparities in
 the data which can be reliably extracted through the platform's API
 ([[AI Forensics, 2025]{.underline}](https://arxiv.org/abs/2506.09746)).
 
-This has been tested on an example search but it did not verify every
-type of content which can be extracted and all associated fields in an
-exhaustive manner.
-
 **SC3: Is access to the platform's API free of charge?** - weight 0.30
 
 This item verifies whether API use is free of charge, since even modest
@@ -385,13 +381,13 @@ in the official languages of the assessed region. The assessment should
 review the documentation to confirm that complete and up-to-date
 versions are available in those languages.
 
--   Yes
+-   **Yes**
 
--   **No**
+-   No
 
 **Justification:**
 
-The TikTok API documentation is only available in English ([[TikTok,
+The TikTok API documentation is available in English ([[TikTok,
 n.d]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).)
 
 **OC14: Does the platform's API documentation detail the quota or rate
@@ -507,7 +503,7 @@ more than 12 months prior to the analysis can be retrieved.
 
 **Justification:**
 
-Historical data can be queried through the TikTok Research APIi up to at
+Historical data can be queried through the TikTok Research API up to at
 least 2019, however the time period queried at a given time can not be
 longer than 30 days ([[TikTok,
 n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-codebook)).

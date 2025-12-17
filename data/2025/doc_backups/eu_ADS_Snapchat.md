@@ -62,23 +62,27 @@ ads across all categories. The assessment should confirm that the
 endpoint allows the retrieval and storage of ad data without requiring
 privileged or internal access beyond standard developer registration.
 
--   **Yes, with full availability**
+-   Yes, with full availability
 
 -   Yes, with partial availability
 
--   No
+-   **No**
 
-**Justification**:
-
-Political Ads for the EU are not available. This can be argued to be
-equivalent to full availability in this case, as all ads are otherwise
-downloadable under every category that is actually available for
-purchase. Notably, Meta announced halting "political, electoral and
-social issue advertising in the EU in response to incoming European
-regulation" in October 2025 which likely explains why this is no longer
-available. Nevertheless, past political advertising predating this
-decision is also missing [[(Meta,
-2025]{.underline}](https://about.fb.com/news/2025/07/ending-political-electoral-and-social-issue-advertising-in-the-eu/)).
+In the EU, Snapchat provides an Ads Gallery API for advertisements and
+commercial content such as sponsored posts ([[Snapchat,
+n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/Introduction)).
+However, in practice, its functionality is limited and difficult to use.
+Despite multiple attempts by different researchers, the API could not be
+successfully tested and consistently returned a "too many requests"
+error. In principle, the API should offer at least one endpoint for
+accessing public advertising data, but in practice this functionality
+does not appear to be operational. Moreover, the API's scope is
+constrained: it is advertiser-centric, requiring searching by advertiser
+snapchat ID rather than brand name or creator. It is therefore not
+reliable for broad research use, and does not support comprehensive or
+historical extraction of advertising content served in the EU. The
+filtering is limited by advertiser, geography, and time (up to 12 months
+in the past, including live commercial content).
 
 **SC2: Does the platform provide a graphical user interface to its ad
 repository for extracting advertising content data?** - weight 0.30
@@ -96,7 +100,15 @@ users not only to view ad content but also to export its data.
 
 -   No
 
-No export functionality.
+Snapchat provides access to the Snap Ads Gallery which appears to
+provide access to EU ads which were delivered in the last 12 months as
+well as live commercial content ([[Snapchat,
+n.d.]{.underline}](https://adsgallery.snap.com)) . The option to extract
+data from the GUI does not appear to exist. In practice, despite
+multiple searches using different advertiser snapchat IDs, including
+brands such as "Mcdonalds", "Dior" or "Mcdo\_France" using various
+country filters including individual countries and "all EU countries",
+no data was returned by the GUI.
 
 **SC3: Can data from both active and inactive ads be extracted?** -
 weight 0.20
@@ -108,11 +120,18 @@ when both active and inactive ad data are delivered across all ad
 categories. The assessment should test the interface and endpoints to
 confirm whether both active and inactive ads can be retrieved.
 
--   **Yes, with full availability**
+-   Yes, with full availability
 
 -   Yes, with partial availability
 
--   No
+-   **No**
+
+As no data has been observed on the GUI, it is difficult to assess it
+via the GUI. The API documentation stipulates that only "active" or
+"paused" ads can be retrieved, without any further explanation about
+whether the "paused" category includes retracted or expired ads
+([[Snapchat,
+n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
 
 OTHER CRITERIA
 --------------
@@ -132,11 +151,14 @@ statuses, including both active and inactive ads. The assessment should
 confirm the availability of an official browser-based tool that allows
 users to search, access, and view ad content.
 
--   **Yes, with full availability**
+-   Yes, with full availability
 
 -   Yes, with partial availability
 
--   No
+-   **No**
+
+While ad visualisation appears possible in theory via the GUI, multiple
+tests returned no results.
 
 **OC2: Is access to the platform's ad repository free of charge?**
 
@@ -164,7 +186,7 @@ considered when assessing this item. The assessment should examine
 sample data responses from both the ad repository GUI and API to confirm
 that the requested public data is included in the returned payload.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
 -   **Yes, through the API**
 
@@ -181,13 +203,15 @@ platform's documentation or directly observe the authentication and
 renewal process to confirm that token updates do not interrupt or
 compromise data access.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-The platform's ad repository API allows renewals of tokens without the
-risk of data loss. ([[Meta,
-n.d]{.underline}](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens).)
+The Ads Library API does not provide a form of authentication and does
+not rely on OAuth or other token-based access ([[Snapchat,
+n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+It does not offer a renewal mechanism to support continuous or
+long-running data access.
 
 **OC5: Can data from an individual ad be retrieved from the platform?**
 
@@ -204,6 +228,11 @@ directly by its unique identifier.
 
 -   **No**
 
+In principle, the Ad Gallery API provides the GET
+[[https://adsapi.snapchat.com/v1/ads\_library/ads/{ad\_id]{.underline}](https://adsapi.snapchat.com/v1/ads_library/ads/%7Bad_id)}
+endpoint to retrieve data from a specific advertisement. In practice,
+the API does not yield any results due to a "too many requests" error.
+
 **OC6: Can data from ads served by a specific advertiser be retrieved
 from the platform?**
 
@@ -212,17 +241,14 @@ by a specific advertiser, via their username or unique identifier. The
 assessment should review the ad repository documentation and test any
 available feature to retrieve data from an individual advertiser.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
-The platform provides the means to retrieve specific advertisers using
-IDs or names through both the GUI and the API. However, the
-functionality on the GUI is clunky. For example, the filter option often
-does not list all possible advertisers. The user needs to fetch their
-Page ID and paste in the GUI URL directly.
+In theory, this should be supported through both the GUI and the API;
+however, neither are functioning at the time of this assessment.
 
 **OC7: Can ad data be retrieved from the platform using search terms?**
 
@@ -231,11 +257,14 @@ terms, enabling the creation of datasets based on those queries. The
 assessment should test search-related features to confirm that it
 accepts search queries using keywords.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+This is not supported by the GUI nor the API as all searches are by
+advertiser.
 
 **OC8: Does the platform use locale-neutral data representations?**
 
@@ -246,18 +275,17 @@ assessment should review the ad repository documentation and inspect
 sample responses to confirm the presence of standardized formats or
 accompanying metadata.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
-The time is offered in UTC. Timestamps are returned in coordinated
-universal time (UTC), respecting the standardized ISO 8601 formats.
-There is no automatic localised formatting, and locale data (e.g.,
-language or region) is not attached unless explicitly requested or
-inferred. Multiple currencies are used, though they are specified in
-standard ISO currency codes, not localized formatted strings.
+The API and Ad Gallery documentation does not provide any details about
+the format of data provided and this cannot be verified via the API nor
+the GUI as they do not appear to be functioning at the time of this
+assessment ([[Snapchat,
+n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
 
 ### COMPLETENESS
 
@@ -272,15 +300,19 @@ advertisers responsible for the identified ads. The assessment should
 confirm whether the advertiser's page name, URL, and unique identifier
 can be retrieved.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
-Advertisers are identified by their Page IDs and Page Names, which can
-be used to identify them on Meta's platforms. However, no direct link is
-provided.
+The Ad Gallery and Ad Gallery API documentations do not provide any
+detailed explanation of the kind of data which could be visible on the
+GUI or extracted via the API about advertisers beyond "advertiser
+name"([[Snapchat,
+n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+This cannot be verified via the API nor the GUI as they do not appear to
+be functioning at the time of this assessment.
 
 **OC10: Does the platform provide data on the funders who paid for
 ads?**
@@ -289,14 +321,17 @@ This item verifies whether the platform provides data on the individuals
 or organizations that paid for the identified ads. The assessment should
 confirm whether any sponsor information is retrievable.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
 -   Yes, through the API
 
--   No
+-   **No**
 
-Our API tests failed as that information was only available for
-political ads.
+The Ad Gallery and Ad Gallery API documentations do not mention
+providing data about ads' funders ([[Snapchat,
+n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+This cannot be verified via the API nor the GUI as they do not appear to
+be functioning at the time of this assessment.
 
 **OC11: Does the platform provide data on the period during which ads
 were served?**
@@ -306,11 +341,18 @@ which the identified ads ran. The assessment should review the extracted
 ad data to confirm that it includes start and end dates (or equivalent
 temporal markers) indicating the period of activity.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+The Ad Gallery and Ad Gallery API documentations appear to provide the
+"start and end date" of advertisements on the GUI and via the API
+([[Snapchat,
+n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+However, this cannot be verified via the API nor the GUI as they do not
+appear to be functioning at the time of this assessment.
 
 **OC12: Does the platform provide data on user engagement with ads?**
 
@@ -325,6 +367,10 @@ that engagement metrics are available and clearly linked to each ad.
 
 -   **No**
 
+The Ad Gallery API and GUI do not provide user engagement data. This
+cannot be verified via the API nor the GUI as they do not appear to be
+functioning at the time of this assessment.
+
 **OC13: Does the platform indicate whether ads were placed by verified
 or unverified advertisers?**
 
@@ -338,6 +384,11 @@ status field is present.
 -   Yes, through the API
 
 -   **No**
+
+The Ad Gallery API and GUI do not provide details about whether
+advertisers are verified. This cannot be verified via the API nor the
+GUI as they do not appear to be functioning at the time of this
+assessment.
 
 ### COMPLIANCE
 
@@ -361,9 +412,10 @@ details are clearly documented.
 
 -   **No**
 
-Removed ads only include text stating the content was removed or the
-page was disabled for not following advertising standards. No specific
-reason or date is provided.
+Information about ads removed due to violations of its guidelines or
+relevant legislation does not appear in the GUI nor the API
+documentation. This cannot be verified via the API nor the GUI as they
+do not appear to be functioning at the time of this assessment.
 
 **OC15: Does the platform indicate whether ad content was generated
 using artificial intelligence?**
@@ -379,11 +431,9 @@ of AI in ad production.
 
 -   **No**
 
-While Meta automatically labels ads that use Meta's internal AI creative
-tools when they appear [[(Meta,
-n.d]{.underline}](https://www.meta.com/en-gb/help/artificial-intelligence/355108217670024/?srsltid=AfmBOorflhUZfITM_Eo_gMXEsc5VeJYtFXi7zcKGSiXM1sNTuniYzyVs&utm_source=chatgpt.com).),
-Meta does not officially have a policy on whether or how this is
-labelled within their Ad Library.
+Information about AI-generated ads does not appear in the GUI nor the
+API documentation. This cannot be verified via the API nor the GUI as
+they do not appear to be functioning at the time of this assessment.
 
 **OC16: Is the platform's ad repository documentation published in open
 access?**
@@ -400,6 +450,8 @@ authentication barriers.
 
 -   No
 
+The API and GUI are published in open access.
+
 **OC17: Is the platform's ad repository documentation clearly written
 and exemplified?**
 
@@ -415,9 +467,10 @@ queries or outputs illustrating correct use.
 
 -   No
 
-The documentation includes only one example of a query and response
-flow. However, there are no explanations for what the fields in the GUI
-mean.
+The API documentation is clearly written and exemplified [[(Snapchat,
+n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api);
+however, the GUI documentation is minimal and is provided on the landing
+page [[(Snapchat, n.d]{.underline}](https://adsgallery.snap.com).)
 
 **OC18: Does the platform's ad repository documentation include or link
 to its terms of use?**
@@ -434,10 +487,9 @@ accessible.
 
 -   **No**
 
-The terms of Service are linked in the API documentation; however, no
-explicit terms are mentioned. It simply states that available ads will
-have the content of the ad creative, which is marked as subject to their
-Terms of Service.
+The terms of use are not linked in the API nor the GUI documentations
+[[(Snapchat,
+n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 
 **OC19: Does the platform provide its ad repository documentation in the
 official languages of the assessed region?**
@@ -453,7 +505,9 @@ and up-to-date versions are available in those languages.
 
 -   No
 
-You have to be logged in to change the language.
+The API documentation is only available in English, however the GUI
+documentation (although minimal) and the entire GUI is available in all
+24 official languages of the EU.
 
 **OC20: Does the platform implement a proper deprecation strategy to
 avoid breaking client applications while rolling out major changes in
@@ -467,12 +521,13 @@ instructions. This item applies only to breaking changes that require
 client updates, such as endpoint modifications, authentication updates,
 or the removal of features.
 
--   **Yes**
+-   Yes
 
--   No or not applicable
+-   **No or not applicable**
 
-Updates are described in the release notes, and include future
-deprecations: https://www.facebook.com/ads/library/api/releasenotes
+The Snapchat Ad Gallery API documentation does not appear to describe
+any deprecation strategies [[(Snapchat,
+n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 
 **OC21: Does the platform's ad repository API documentation detail the
 response format of each endpoint?\***
@@ -487,9 +542,8 @@ illustrated with sample outputs.
 
 -   No or not applicable
 
-There is only one endpoint. Only one example of its usage is provided.
-It does not cover possible errors or details about using the possible
-parameters.
+Detailed explanations are provided in the API documentation [[(Snapchat,
+n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 
 **OC22: Does the platform's ad repository API documentation detail the
 quota or rate limits applicable to each available endpoint?\***
@@ -506,10 +560,8 @@ overall usage restrictions (quotas) are clearly stated.
 
 -   **No or not applicable**
 
-No information about rate limits is available in the ad repository API
-documentation. Inside the answer to a FAQ there is a link to broader API
-documentation, which includes a page about rate limits, but it does not
-mention the ad repository.
+This information is not available in the API documentation [[(Snapchat,
+n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api);
 
 ### CONSISTENCY
 
@@ -529,9 +581,12 @@ assessment should compare API responses with the GUI to confirm that at
 least the following elements are consistent: authorship, full content,
 and serving information (e.g., spending, impressions).
 
--   **Yes**
+-   Yes
 
--   No or not applicable
+-   **No or not applicable**
+
+Due to the limited functionality of both the GUI and API at the time of
+this assessment, this cannot be verified.
 
 **OC24: Are the results returned by the platform consistently
 reproducible?**
@@ -542,11 +597,14 @@ collections performed similarly, including cases where content was
 deleted in the interim. The assessment should perform repeated queries
 to confirm the reproducibility of results.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+Due to the limited functionality of both the GUI and API at the time of
+this assessment, this cannot be verified.
 
 **OC25: Is the data returned by the platform consistent with the
 parameters and filters used in the request?**
@@ -557,14 +615,14 @@ the request. The assessment should run test queries with different
 filters to confirm that results consistently match the requested
 conditions.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
-Filtering options are limited when dealing with ads that are not
-Political, which are unavailable for the EU.
+Due to the limited functionality of both the GUI and API at the time of
+this assessment, this cannot be verified.
 
 ### RELEVANCE
 
@@ -581,11 +639,15 @@ the time period in which the ads were served. The assessment should test
 queries with temporal filters to confirm that results accurately reflect
 the specified date ranges.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+Although the API and GUI allow filtering by time, due to the limited
+functionality of both the GUI and API at the time of this assessment,
+this cannot be verified.
 
 **OC27: Does the platform allow filtering advertising data by ad
 category?**
@@ -595,14 +657,13 @@ any categories assigned at the time of ad creation. The assessment
 should run test queries with category filters to confirm that results
 align with the selected classifications.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No or not applicable
+-   **No or not applicable**
 
-However, not all of the categories assigned at the time of ad creation
-are offered as a filter.
+The API and GUI do not allow for filtering data by ad category.
 
 **OC28: Does the platform allow filtering advertising data by geographic
 location?**
@@ -618,8 +679,9 @@ results match the specified areas.
 
 -   **No**
 
-The API only allows segmentation lower than the country level on
-Political ads, which are unavailable in the EU.
+Although the API and GUI allow filtering by geographic location (by
+nation), due to the limited functionality of both the GUI and API at the
+time of this assessment, this cannot be verified.
 
 ### ACCURACY
 
@@ -634,11 +696,14 @@ gender of audiences reached. The assessment should review the ad records
 to confirm that these breakdowns are available and consistently
 reported.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+According to the API and GUI documentation, details about the audience
+reached are not provided.
 
 **OC30: Does the platform provide subnational geographic data on the
 audience reached by ads?**
@@ -653,6 +718,9 @@ and consistently reported.
 -   Yes, through the API
 
 -   **No**
+
+According to the API and GUI documentation, details about the audience
+reached are not provided.
 
 **OC31: Does the platform include data on audience targeting criteria
 defined by advertisers?**
@@ -670,7 +738,8 @@ reported.
 
 -   **No**
 
-Only age, gender, and geographic provided.
+According to the API and GUI documentation, details about the audience
+reached are not provided.
 
 **OC32: Does the platform provide granular volume ranges for ad
 impressions?**
@@ -693,7 +762,8 @@ data interfaces.
 
 -   **No**
 
-Only for the Political category, which is unavailable.
+According to the API and GUI documentation, details about ad impressions
+are not provided.
 
 **OC33: Does the platform provide granular investment ranges for ad
 spending?**
@@ -715,4 +785,5 @@ interfaces.
 
 -   **No**
 
-Only for the Political category, which is unavailable.
+According to the API and GUI documentation, details about the ad
+spending are not provided.

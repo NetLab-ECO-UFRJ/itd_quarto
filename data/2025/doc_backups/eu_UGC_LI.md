@@ -60,9 +60,14 @@ internal access beyond standard developer registration.
 
 -   Yes
 
--   Yes, but only for approved researchers
+-   **Yes, but only for approved researchers**
 
 -   No
+
+LinkedIn offers a \[Beta\] Researcher Access Program to comply with
+their legal requirements under article 40 of the European Union's
+Digital Services Act (DSA) ([[LinkedIn,
+n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)).
 
 **SC2: Can the full scope of public content data be extracted through
 the platform's API?** - weight 0.30
@@ -75,7 +80,7 @@ artificial restrictions that limit data completeness.
 
 -   Yes
 
--   Yes, but only for approved researchers
+-   **Yes, but only for approved researchers**
 
 -   No
 
@@ -89,7 +94,7 @@ are applied for API access.
 
 -   Yes
 
--   Yes, but only for approved researchers
+-   **Yes, but only for approved researchers**
 
 -   No
 
@@ -107,7 +112,9 @@ extracting public content data without programming.
 
 -   Yes, but only for approved researchers
 
--   No
+-   **No**
+
+No GUI is provided.
 
 OTHER CRITERIA
 --------------
@@ -130,7 +137,7 @@ through specific endpoints or other controlled access mechanisms.
 
 -   Yes
 
--   No
+-   **No**
 
 **OC2: Can the requested data be extracted directly from the platform's
 API response?**
@@ -144,7 +151,11 @@ payload itself.
 
 -   Yes
 
--   No
+-   **No**
+
+Verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 **OC3: Does the platform's API provide a form of authentication that
 allows for token renewal without the risk of data loss?**
@@ -158,7 +169,11 @@ compromise data access.
 
 -   Yes
 
--   No
+-   **No**
+
+Verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 **OC4: Does the platform's API offer an endpoint for extracting data
 from an individual publication?**
@@ -172,7 +187,14 @@ identifier.
 
 -   Yes
 
--   No
+-   **No**
+
+Although the LinkedIn Researcher API documentation suggests that data
+available includes "publications" ([[LinkedIn,
+n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)),,
+verification was not possible in practice, as API access was unavailable
+at the time of assessment due to a pending request and the absence of a
+response from the platform.
 
 **OC5: Does the platform's API offer an endpoint for extracting data
 from an individual author?**
@@ -185,7 +207,11 @@ individual author.
 
 -   Yes
 
--   No
+-   **No**
+
+Verification was not possible in practice, as API access was unavailable
+at the time of assessment due to a pending request and the absence of a
+response from the platform.
 
 **OC6: Does the platform's API provide an endpoint for extracting data
 based on search terms?**
@@ -198,7 +224,14 @@ matching public posts.
 
 -   Yes
 
--   No
+-   **No**
+
+The LinkedIn Researcher API documentation does not clearly provide an
+endpoint for extracting data based on search terms ([[LinkedIn,
+n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)).
+Verification was not possible in practice, as API access was unavailable
+at the time of assessment due to a pending request and the absence of a
+response from the platform.
 
 **OC7: Does the API use locale-neutral data representations?**
 
@@ -211,7 +244,14 @@ accompanying metadata.
 
 -   Yes
 
--   No
+-   **No**
+
+The LinkedIn Researcher API documentation does not provide any details
+on whether the API uses locale-neutral data representations ([[LinkedIn,
+n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)).
+Verification was not possible in practice, as API access was unavailable
+at the time of assessment due to a pending request and the absence of a
+response from the platform.
 
 ### COMPLIANCE
 
@@ -234,7 +274,11 @@ or the removal of features.
 
 -   Yes
 
--   No or not applicable
+-   **No or not applicable**
+
+The LinkedIn Researcher API documentation does not provide a proper
+deprecation strategy ([[LinkedIn,
+n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)).
 
 **OC9: Is the platform's API documentation published in open access?**
 
@@ -246,7 +290,18 @@ authentication.
 
 -   Yes
 
--   No
+-   **No**
+
+The LinkedIn Researcher API documentation is published in open access,
+however the full documentation providing explanations and examples is
+not available in open access ([[LinkedIn,
+n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)).
+Given that previous researcher access documentation was provided to
+users after being approved ([[LinkedIn,
+2023]{.underline}](https://www.linkedin.com/legal/l/research-api-terms)),
+it is likely that this documentation is not fully published in open
+access and therefore is not visible at the time of this assessment as
+full Researcher API access is not available.
 
 **OC10: Is the platform's API documentation clearly written and
 exemplified?**
@@ -259,7 +314,11 @@ that illustrate correct usage.
 
 -   Yes
 
--   No
+-   **No**
+
+The open access LinkedIn Researcher API documentation is not clearly
+written and exemplified ([[LinkedIn,
+n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)).
 
 **OC11: Does the platform's API documentation include or link to the API
 terms of use?**
@@ -269,9 +328,13 @@ the terms of use governing the API and its legal aspects. The assessment
 should review the documentation to confirm the presence of explicit
 legal terms that define permitted use and restrictions.
 
--   Yes
+-   **Yes**
 
 -   No
+
+The LinkedIn Researcher API documentation links to the API terms of use
+([[LinkedIn,
+2023]{.underline}](https://www.linkedin.com/legal/l/research-api-terms)),
 
 **OC12: Does the platform's API documentation detail the response format
 of each endpoint?**
@@ -284,7 +347,7 @@ illustrated with sample outputs.
 
 -   Yes
 
--   No
+-   **No**
 
 **OC13: Does the platform provide its API documentation in the official
 languages of the assessed region?**
@@ -296,7 +359,14 @@ versions are available in those languages.
 
 -   Yes
 
--   No
+-   **No**
+
+While LinkedIn Researcher API documentation is available in English,
+French, German, Spanish, Danish, Hungarian, Italian, Finnish, Italian,
+Romanian, Portuguese, Polish, Greek, Dutch, and Swedish ([[LinkedIn,
+2023]{.underline}](https://www.linkedin.com/legal/l/research-api-terms)),
+it is not available in all of the 24 official languages of the EU ([[EU,
+n.d.]{.underline}](https://european-union.europa.eu/principles-countries-history/languages_en)).
 
 **OC14: Does the platform's API documentation detail the quota or rate
 limits applicable to each available endpoint?**
@@ -310,7 +380,7 @@ stated, including variations by authentication level or endpoint type.
 
 -   Yes
 
--   No
+-   **No**
 
 **OC15: Does the platform provide a way to label content that has been
 generated with artificial intelligence?**
@@ -323,7 +393,7 @@ included in the extracted data.
 
 -   Yes
 
--   No
+-   **No**
 
 ### COMPLETENESS
 
@@ -342,9 +412,16 @@ commenting features.
 
 -   Yes
 
--   No
+-   **No**
 
 -   Not applicable
+
+Although the LinkedIn Researcher API documentation provides an endpoint
+for collecting comments ([[LinkedIn,
+n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)),
+verification was not possible in practice, as API access was unavailable
+at the time of assessment due to a pending request and the absence of a
+response from the platform.
 
 **OC17: Can data from temporary content be extracted through the
 platform's API?**
@@ -358,7 +435,7 @@ not have temporary content features.
 
 -   Yes
 
--   No
+-   **No**
 
 -   Not applicable
 
@@ -372,7 +449,12 @@ more than 12 months prior to the analysis can be retrieved.
 
 -   Yes
 
--   No
+-   **No**
+
+This information is not available on the API documentation website and
+verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 **OC19: Is the number of requests allowed by the API sufficient for
 monitoring more than 10,000 publications in 24 hours?**
@@ -384,7 +466,12 @@ to confirm that this volume of data can be collected continuously.
 
 -   Yes
 
--   No
+-   **No**
+
+This information is not available on the API documentation website and
+verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 ### CONSISTENCY
 
@@ -403,7 +490,12 @@ than 2 years) experiments published in peer-reviewed journals.
 
 -   Yes
 
--   No
+-   **No**
+
+This information is not available on the API documentation website and
+verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 **OC21: Is the data returned by the platform's API consistent with the
 parameters and filters used in the request?**
@@ -416,7 +508,12 @@ consistency of results or ground the response based on recent (less than
 
 -   Yes
 
--   No
+-   **No**
+
+This information is not available on the API documentation website and
+verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 ### RELEVANCE
 
@@ -437,7 +534,9 @@ referenced content (e.g., shares, mentions), are fully represented.
 
 -   Yes
 
--   No
+-   **No**
+
+There is no user interface provided by the LinkedIn Researcher program.
 
 **OC23: Does the platform's API allow for filtering data based on
 publisher location?**
@@ -449,7 +548,12 @@ filtered by publisher location.
 
 -   Yes
 
--   No
+-   **No**
+
+This information is not made clear on the API documentation website and
+verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 **OC24: Does the platform's API allow for filtering data based on
 content language?**
@@ -461,7 +565,12 @@ by content language.
 
 -   Yes
 
--   No
+-   **No**
+
+This information is not made clear on the API documentation website and
+verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 **OC25: Does the platform's API allow for filtering data by specific
 time periods?**
@@ -473,7 +582,12 @@ time ranges.
 
 -   Yes
 
--   No
+-   **No**
+
+This information is not made clear on the API documentation website and
+verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.
 
 ### TIMELINESS
 
@@ -491,4 +605,9 @@ allows the ready extraction of recent public posts data.
 
 -   Yes
 
--   No
+-   **No**
+
+This information is not made clear on the API documentation website and
+verification was not possible, as API access was unavailable at the time
+of assessment due to a pending request and no response from the
+platform.

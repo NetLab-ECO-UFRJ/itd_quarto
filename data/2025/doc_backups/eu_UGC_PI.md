@@ -62,7 +62,25 @@ internal access beyond standard developer registration.
 
 -   Yes, but only for approved researchers
 
--   No
+-   **No**
+
+Currently, Pinterest only provides access to the REST API 5.23.0, which
+is tailored to commercial purposes, enabling businesses to engage in
+content or ad management ([[Pinterest,
+n.d.)]{.underline}](https://developers.pinterest.com/docs/api/v5/introduction).
+Regarding researchers' access to Pinterest data under the EU's DSA,
+while Pinterest advises that more information can be found on DSA Data
+Access Portal ([[Pinterest,
+n.d.]{.underline}](https://help.pinterest.com/en-gb/article/digital-services-act)),
+it also provides a direct Researchers Intake Form "to request access to
+publicly available data on Pinterest" ([[Pinterest,
+2024]{.underline}](https://help.pinterest.com/en-gb/landing/researchers-intake-form)),
+without mentioning any separate API access for research purposes. Even
+if a researcher were to pursue API access through the DSA Data Access
+Portal, opened to EU researchers on 29 October 2025, which allows
+researchers to suggest API access as a data access mechanism, access to
+a new Pinterest API is unlikely given the platform's stated preference
+for providing data sets directly.
 
 **SC2: Can the full scope of public content data be extracted through
 the platform's API?** - weight 0.30
@@ -77,7 +95,12 @@ artificial restrictions that limit data completeness.
 
 -   Yes, but only for approved researchers
 
--   No
+-   **No**
+
+While Pinterest offers an official developer API that supports access to
+authenticated users' boards, pins, and certain content objects, it does
+not provide a general API endpoint for programmatic extraction of public
+user content unrelated to the authenticated account.
 
 **SC3: Is access to the platform's API free of charge?** - weight 0.30
 
@@ -91,7 +114,10 @@ are applied for API access.
 
 -   Yes, but only for approved researchers
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated account, this question is not applicable.
 
 **SC4: Does the platform offer a graphical interface for extracting
 data?** - weight 0.10
@@ -107,7 +133,10 @@ extracting public content data without programming.
 
 -   Yes, but only for approved researchers
 
--   No
+-   **No**
+
+Pinterest does not provide a graphical interface dedicated to extracting
+user-generated content data for research or analysis.
 
 OTHER CRITERIA
 --------------
@@ -130,7 +159,10 @@ through specific endpoints or other controlled access mechanisms.
 
 -   Yes
 
--   No
+-   **No**
+
+Pinterest's API does not enable access to non-public data to approved
+researchers.
 
 **OC2: Can the requested data be extracted directly from the platform's
 API response?**
@@ -144,7 +176,10 @@ payload itself.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated account, this question is not applicable.
 
 **OC3: Does the platform's API provide a form of authentication that
 allows for token renewal without the risk of data loss?**
@@ -158,7 +193,10 @@ compromise data access.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated account, this question is not applicable.
 
 **OC4: Does the platform's API offer an endpoint for extracting data
 from an individual publication?**
@@ -172,7 +210,11 @@ identifier.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC5: Does the platform's API offer an endpoint for extracting data
 from an individual author?**
@@ -185,7 +227,11 @@ individual author.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC6: Does the platform's API provide an endpoint for extracting data
 based on search terms?**
@@ -198,7 +244,11 @@ matching public posts.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC7: Does the API use locale-neutral data representations?**
 
@@ -211,7 +261,11 @@ accompanying metadata.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 ### COMPLIANCE
 
@@ -234,7 +288,11 @@ or the removal of features.
 
 -   Yes
 
--   No or not applicable
+-   **No or not applicable**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC9: Is the platform's API documentation published in open access?**
 
@@ -246,7 +304,11 @@ authentication.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC10: Is the platform's API documentation clearly written and
 exemplified?**
@@ -259,7 +321,11 @@ that illustrate correct usage.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC11: Does the platform's API documentation include or link to the API
 terms of use?**
@@ -271,7 +337,11 @@ legal terms that define permitted use and restrictions.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC12: Does the platform's API documentation detail the response format
 of each endpoint?**
@@ -284,7 +354,11 @@ illustrated with sample outputs.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC13: Does the platform provide its API documentation in the official
 languages of the assessed region?**
@@ -296,7 +370,11 @@ versions are available in those languages.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC14: Does the platform's API documentation detail the quota or rate
 limits applicable to each available endpoint?**
@@ -310,7 +388,11 @@ stated, including variations by authentication level or endpoint type.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC15: Does the platform provide a way to label content that has been
 generated with artificial intelligence?**
@@ -323,7 +405,11 @@ included in the extracted data.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 ### COMPLETENESS
 
@@ -344,7 +430,11 @@ commenting features.
 
 -   No
 
--   Not applicable
+-   **Not applicable**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC17: Can data from temporary content be extracted through the
 platform's API?**
@@ -360,7 +450,11 @@ not have temporary content features.
 
 -   No
 
--   Not applicable
+-   **Not applicable**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC18: Can historical data be extracted through the platform's API?**
 
@@ -372,7 +466,11 @@ more than 12 months prior to the analysis can be retrieved.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC19: Is the number of requests allowed by the API sufficient for
 monitoring more than 10,000 publications in 24 hours?**
@@ -384,7 +482,11 @@ to confirm that this volume of data can be collected continuously.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 ### CONSISTENCY
 
@@ -403,7 +505,11 @@ than 2 years) experiments published in peer-reviewed journals.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC21: Is the data returned by the platform's API consistent with the
 parameters and filters used in the request?**
@@ -416,7 +522,11 @@ consistency of results or ground the response based on recent (less than
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 ### RELEVANCE
 
@@ -437,7 +547,11 @@ referenced content (e.g., shares, mentions), are fully represented.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC23: Does the platform's API allow for filtering data based on
 publisher location?**
@@ -449,7 +563,11 @@ filtered by publisher location.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC24: Does the platform's API allow for filtering data based on
 content language?**
@@ -461,7 +579,11 @@ by content language.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 **OC25: Does the platform's API allow for filtering data by specific
 time periods?**
@@ -473,7 +595,11 @@ time ranges.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.
 
 ### TIMELINESS
 
@@ -491,4 +617,8 @@ allows the ready extraction of recent public posts data.
 
 -   Yes
 
--   No
+-   **No**
+
+As Pinterest's API does not enable programmatic extraction of public UGC
+data beyond the authenticated user's account, this question is not
+applicable.

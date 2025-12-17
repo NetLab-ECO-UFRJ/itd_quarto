@@ -84,7 +84,8 @@ users not only to view ad content but also to export its data.
 
 -   No
 
-No data export. <https://www.linkedin.com/ad-library>
+No data export functionality available.
+<https://www.linkedin.com/ad-library>
 
 **SC3: Can data from both active and inactive ads be extracted?** -
 weight 0.20
@@ -417,7 +418,8 @@ and up-to-date versions are available in those languages.
 
 While testing as a user from the Netherlands, the documentation was
 available in English. It does not offer an option to change the language
-manually.
+manually. When tested using a VPN, the language was not automatically
+changed.
 
 **OC20: Does the platform implement a proper deprecation strategy to
 avoid breaking client applications while rolling out major changes in

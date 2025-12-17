@@ -62,23 +62,26 @@ ads across all categories. The assessment should confirm that the
 endpoint allows the retrieval and storage of ad data without requiring
 privileged or internal access beyond standard developer registration.
 
--   **Yes, with full availability**
+-   Yes, with full availability
 
--   Yes, with partial availability
+-   **Yes, with partial availability**
 
 -   No
 
-**Justification**:
+This is available through the X API via Researcher's access for ads
+delivered in the European Union under Art. 40 of the Digital Services
+Act (DSA); however, access was not available at the time of assessment
+due to a pending request and the absence of a response from the
+platform., despite being requested within a reasonable timeframe ([[X,
+n.d.]{.underline}](https://help.x.com/en/rules-and-policies/dsa-vetted-researchers)).
 
-Political Ads for the EU are not available. This can be argued to be
-equivalent to full availability in this case, as all ads are otherwise
-downloadable under every category that is actually available for
-purchase. Notably, Meta announced halting "political, electoral and
-social issue advertising in the EU in response to incoming European
-regulation" in October 2025 which likely explains why this is no longer
-available. Nevertheless, past political advertising predating this
-decision is also missing [[(Meta,
-2025]{.underline}](https://about.fb.com/news/2025/07/ending-political-electoral-and-social-issue-advertising-in-the-eu/)).
+There appears to also be the possibility of accessing this Ad Repository
+via the normal, non-researcher API tier ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)),
+therefore via the "Free" tier. However, this access is severely limited
+to 500 posts per month ([[X,
+n.d.]{.underline}](https://developer.x.com/en)) and is therefore
+considered to be equivalent to partial availability.
 
 **SC2: Does the platform provide a graphical user interface to its ad
 repository for extracting advertising content data?** - weight 0.30
@@ -96,7 +99,16 @@ users not only to view ad content but also to export its data.
 
 -   No
 
-No export functionality.
+The X Ads Transparency Center was launched in 2023 to comply with the
+demands of the Digital Services Act (DSA) of the EU. For ads served in
+the EU, this Ad Transparency center includes critical information about
+funding, targeting and reach as well as the opportunity to export this
+information in comma separated values (CSV) format ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+
+Partial availability is assessed due to the inability to extract data
+despite multiple attempts, even though the documentation indicates that
+such extraction should be possible in principle.
 
 **SC3: Can data from both active and inactive ads be extracted?** -
 weight 0.20
@@ -108,11 +120,34 @@ when both active and inactive ad data are delivered across all ad
 categories. The assessment should test the interface and endpoints to
 confirm whether both active and inactive ads can be retrieved.
 
--   **Yes, with full availability**
+-   Yes, with full availability
 
 -   Yes, with partial availability
 
--   No
+-   **No**
+
+According to the official documentation, the X Ads Transparency Center
+provides access to advertisements from 2023 to the present day.
+Moreover, its documentation stipulates that it provides information
+related to inactive ads such as "ads halted from running on the
+platform" ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency))
+
+However, no data has been successfully collected so far. Multiple
+prominent advertisers such as Amazon, Apple and Netflix have been tested
+for countries such as France, Germany and Belgium, for varying periods
+of time including custom date, today, yesterday, the past 7 days, this
+quarter, the last quarter and the past year. None of these searches have
+yielded any results. This is consistent with the recent findings from
+the EU Commission, fining X for violations under the DSA, which includes
+"excessive delays in processing" data from its Ad Repository, thus
+undermining its purpose [[(EC,
+2025]{.underline}](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934)).
+Therefore it is difficult to confirm the full or partial availability of
+this information in practice.
+
+The API could not be evaluated as access was not granted at the time of
+this assessment.
 
 OTHER CRITERIA
 --------------
@@ -132,11 +167,20 @@ statuses, including both active and inactive ads. The assessment should
 confirm the availability of an official browser-based tool that allows
 users to search, access, and view ad content.
 
--   **Yes, with full availability**
+-   Yes, with full availability
 
--   Yes, with partial availability
+-   **Yes, with partial availability**
 
 -   No
+
+In principle, this information should be accessible via the graphical
+interface; however, it did not appear to be functioning correctly, as
+all searches attempted at the time of this assessment (December 2025)
+yielded empty csv files with nothing but a header.
+
+Moreover, theoretically, this could also be achieved via the API;
+however, this cannot be confirmed due to a lack of access at the of this
+assessment.
 
 **OC2: Is access to the platform's ad repository free of charge?**
 
@@ -153,6 +197,11 @@ repository.
 
 -   No
 
+The GUI is free but limited to ads delivered in the EU, while the API
+access is free but is subject to approval from X under article 40 of the
+DSA ([[X,
+n.d.]{.underline}](https://docs.google.com/forms/d/e/1FAIpQLSdo0O-D6Kxa3cV4g1JLz2T_0Sk3hdEnTdv8dJmibagCnzJ7kg/viewform)).
+
 **OC3: Can the requested data be extracted directly from the ad
 repository response?**
 
@@ -164,11 +213,16 @@ considered when assessing this item. The assessment should examine
 sample data responses from both the ad repository GUI and API to confirm
 that the requested public data is included in the returned payload.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+Theoretically, this could also be achieved via the GUI and the API;
+however, this cannot be confirmed due to a lack of access to the API at
+the time of this assessment as well as due to difficulties extracting
+any data from the GUI despite multiple attempts.
 
 **OC4: Does the platform's ad repository API provide a form of
 authentication that allows for renewal without the risk of data
@@ -181,13 +235,21 @@ platform's documentation or directly observe the authentication and
 renewal process to confirm that token updates do not interrupt or
 compromise data access.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-The platform's ad repository API allows renewals of tokens without the
-risk of data loss. ([[Meta,
-n.d]{.underline}](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens).)
+Theoretically, this could also be achieved via the Researcher API;
+however, this cannot be confirmed due to a lack of access at the of this
+assessment. This does not appear to be possible via non-researcher
+access ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+Moreover, currently, there is no publicly documented set of distinct
+rate limits for EU vetted researchers separate from standard X API
+developer rate limits, suggesting that the standard API limits may
+apply, meaning it may not always be possible to have continuous data
+collection due to stringent rate limits (1 request every 15 minutes; 100
+tweets per month).
 
 **OC5: Can data from an individual ad be retrieved from the platform?**
 
@@ -204,6 +266,11 @@ directly by its unique identifier.
 
 -   **No**
 
+The GUI does not support searching for specific advertisements using a
+unique identifier. This does not appear to be supported by the API
+access to the Ad Repository ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+
 **OC6: Can data from ads served by a specific advertiser be retrieved
 from the platform?**
 
@@ -212,17 +279,16 @@ by a specific advertiser, via their username or unique identifier. The
 assessment should review the ad repository documentation and test any
 available feature to retrieve data from an individual advertiser.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
-The platform provides the means to retrieve specific advertisers using
-IDs or names through both the GUI and the API. However, the
-functionality on the GUI is clunky. For example, the filter option often
-does not list all possible advertisers. The user needs to fetch their
-Page ID and paste in the GUI URL directly.
+Theoretically, this could also be achieved via the GUI and the API;
+however, this cannot be confirmed due to a lack of access to the API at
+the time of this assessment as well as due to difficulties extracting
+any data from the GUI despite multiple attempts.
 
 **OC7: Can ad data be retrieved from the platform using search terms?**
 
@@ -231,11 +297,16 @@ terms, enabling the creation of datasets based on those queries. The
 assessment should test search-related features to confirm that it
 accepts search queries using keywords.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+The GUI does not enable data extraction from the platform using search
+terms. This does not appear to be supported by the API access to the Ad
+Repository ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 
 **OC8: Does the platform use locale-neutral data representations?**
 
@@ -246,18 +317,14 @@ assessment should review the ad repository documentation and inspect
 sample responses to confirm the presence of standardized formats or
 accompanying metadata.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
-The time is offered in UTC. Timestamps are returned in coordinated
-universal time (UTC), respecting the standardized ISO 8601 formats.
-There is no automatic localised formatting, and locale data (e.g.,
-language or region) is not attached unless explicitly requested or
-inferred. Multiple currencies are used, though they are specified in
-standard ISO currency codes, not localized formatted strings.
+Official documentation does not explicitly confirm that the X Ads
+Repository uses locale-neutral data representation.
 
 ### COMPLETENESS
 
@@ -274,13 +341,20 @@ can be retrieved.
 
 -   **Yes, through the GUI**
 
--   **Yes, through the API**
+-   Yes, through the API
 
 -   No
 
-Advertisers are identified by their Page IDs and Page Names, which can
-be used to identify them on Meta's platforms. However, no direct link is
-provided.
+According to the official documentation, the X Ads Transparency Center
+"includes the following: Advertiser, Funding Entity, the Advertiser's
+Main Targeting Parameters for the advertisement, Impression, and Reach
+of Ad to provide transparency around advertisements on the platform"
+([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+Therefore, in principle, this could also be achieved via the GUI and the
+API alike; however, this cannot be confirmed due to a lack of access to
+the API at the time of this assessment as well as due to difficulties
+extracting any data from the GUI despite multiple attempts.
 
 **OC10: Does the platform provide data on the funders who paid for
 ads?**
@@ -289,14 +363,21 @@ This item verifies whether the platform provides data on the individuals
 or organizations that paid for the identified ads. The assessment should
 confirm whether any sponsor information is retrievable.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
 -   Yes, through the API
 
--   No
+-   **No**
 
-Our API tests failed as that information was only available for
-political ads.
+The X Ads Transparency Center "includes the following: Advertiser,
+Funding Entity, the Advertiser's Main Targeting Parameters for the
+advertisement, Impression, and Reach of Ad to provide transparency
+around advertisements on the platform" ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+Therefore, in principle, this could also be achieved via the GUI and the
+API alike; however, this cannot be confirmed due to a lack of access to
+the API at the time of this assessment as well as due to difficulties
+extracting any data from the GUI despite multiple attempts.
 
 **OC11: Does the platform provide data on the period during which ads
 were served?**
@@ -306,11 +387,21 @@ which the identified ads ran. The assessment should review the extracted
 ad data to confirm that it includes start and end dates (or equivalent
 temporal markers) indicating the period of activity.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+The X Ads Transparency Center "includes the following: Advertiser,
+Funding Entity, the Advertiser's Main Targeting Parameters for the
+advertisement, Impression, and Reach of Ad to provide transparency
+around advertisements on the platform" ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+Therefore, in principle, this could also be achieved via the GUI and the
+API alike; however, this cannot be confirmed due to a lack of access to
+the API at the time of this assessment as well as due to difficulties
+extracting any data from the GUI despite multiple attempts.
 
 **OC12: Does the platform provide data on user engagement with ads?**
 
@@ -325,6 +416,16 @@ that engagement metrics are available and clearly linked to each ad.
 
 -   **No**
 
+The X Ads Transparency Center "includes the following: Advertiser,
+Funding Entity, the Advertiser's Main Targeting Parameters for the
+advertisement, Impression, and Reach of Ad to provide transparency
+around advertisements on the platform" ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+Therefore, in principle, this could also be achieved via the GUI and the
+API alike; however, this cannot be confirmed due to a lack of access to
+the API at the time of this assessment as well as due to difficulties
+extracting any data from the GUI despite multiple attempts.
+
 **OC13: Does the platform indicate whether ads were placed by verified
 or unverified advertisers?**
 
@@ -338,6 +439,14 @@ status field is present.
 -   Yes, through the API
 
 -   **No**
+
+The GUI nor the API are documented as indicating whether advertisers
+were verified at the time their ads were served ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+Moreover, it is notable that, in general, X departs from online
+verification-labelling conventions by treating verification as a paid
+feature, making verification unusable on the platform ([[EU Comission,
+2024]{.underline}](https://ec.europa.eu/commission/presscorner/detail/en/ip_24_3761)).
 
 ### COMPLIANCE
 
@@ -361,9 +470,21 @@ details are clearly documented.
 
 -   **No**
 
-Removed ads only include text stating the content was removed or the
-page was disabled for not following advertising standards. No specific
-reason or date is provided.
+Theoretically, this is available via the GUI, as the headers "Facts And
+Circumstances Of Removal, Enforcement Action, Statement Of Reason"
+appear; however no data has been successfully collected so far. Multiple
+prominent advertisers such as Amazon, Apple and Netflix have been tested
+for countries such as France, Germany and Belgium, for varying periods
+of time including custom date, today, yesterday, the past 7 days, this
+quarter, the last quarter and the past year. However none of these
+searches have yielded any results. This is consistent with the recent
+findings from the EU Commission, fining X for violations under the DSA,
+which includes "excessive delays in processing" data from its Ad
+Repository, thus undermining its purpose [[(EC,
+2025]{.underline}](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934)).
+Theoretically, this could also be achieved via the API; however, this
+cannot be confirmed due to a lack of access to the API at the time of
+this assessment.
 
 **OC15: Does the platform indicate whether ad content was generated
 using artificial intelligence?**
@@ -379,11 +500,9 @@ of AI in ad production.
 
 -   **No**
 
-While Meta automatically labels ads that use Meta's internal AI creative
-tools when they appear [[(Meta,
-n.d]{.underline}](https://www.meta.com/en-gb/help/artificial-intelligence/355108217670024/?srsltid=AfmBOorflhUZfITM_Eo_gMXEsc5VeJYtFXi7zcKGSiXM1sNTuniYzyVs&utm_source=chatgpt.com).),
-Meta does not officially have a policy on whether or how this is
-labelled within their Ad Library.
+The GUI and the API do not indicate whether ad content was generated
+using artificial intelligence ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 
 **OC16: Is the platform's ad repository documentation published in open
 access?**
@@ -400,6 +519,10 @@ authentication barriers.
 
 -   No
 
+Though minimal, the GUI and API documentation appears to be open access
+([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+
 **OC17: Is the platform's ad repository documentation clearly written
 and exemplified?**
 
@@ -409,15 +532,15 @@ examples. The assessment should review the documentation to confirm the
 presence of detailed explanations, structured references, and sample
 queries or outputs illustrating correct use.
 
--   **Yes, the API documentation**
+-   Yes, the API documentation
 
 -   Yes, the GUI documentation
 
--   No
+-   **No**
 
-The documentation includes only one example of a query and response
-flow. However, there are no explanations for what the fields in the GUI
-mean.
+The GUI and API documentation are very minimal and provide no examples
+nor clear explanations about the fields provided ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 
 **OC18: Does the platform's ad repository documentation include or link
 to its terms of use?**
@@ -434,10 +557,11 @@ accessible.
 
 -   **No**
 
-The terms of Service are linked in the API documentation; however, no
-explicit terms are mentioned. It simply states that available ads will
-have the content of the ad creative, which is marked as subject to their
-Terms of Service.
+The X Ad Repository documentation does not include or link to its terms
+of use ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency),
+[[X,
+n.d.]{.underline}](https://ads.twitter.com/ads-repository?ref=BTC)).
 
 **OC19: Does the platform provide its ad repository documentation in the
 official languages of the assessed region?**
@@ -449,11 +573,14 @@ and up-to-date versions are available in those languages.
 
 -   Yes, the API documentation
 
--   **Yes, the GUI documentation**
+-   Yes, the GUI documentation
 
--   No
+-   **No**
 
-You have to be logged in to change the language.
+The X Ad Repository documentation is only available in English ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency),
+[[X,
+n.d.]{.underline}](https://ads.twitter.com/ads-repository?ref=BTC)).
 
 **OC20: Does the platform implement a proper deprecation strategy to
 avoid breaking client applications while rolling out major changes in
@@ -467,12 +594,13 @@ instructions. This item applies only to breaking changes that require
 client updates, such as endpoint modifications, authentication updates,
 or the removal of features.
 
--   **Yes**
+-   Yes
 
--   No or not applicable
+-   **No or not applicable**
 
-Updates are described in the release notes, and include future
-deprecations: https://www.facebook.com/ads/library/api/releasenotes
+The API documentation does not describe any deprecation strategies nor
+any changelogs or migration instructions ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 
 **OC21: Does the platform's ad repository API documentation detail the
 response format of each endpoint?\***
@@ -483,13 +611,12 @@ examples and potential errors. The assessment should review the
 documentation to confirm that response structures are described and
 illustrated with sample outputs.
 
--   **Yes**
+-   Yes
 
--   No or not applicable
+-   **No or not applicable**
 
-There is only one endpoint. Only one example of its usage is provided.
-It does not cover possible errors or details about using the possible
-parameters.
+The API documentation does not detail any response formats ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 
 **OC22: Does the platform's ad repository API documentation detail the
 quota or rate limits applicable to each available endpoint?\***
@@ -506,10 +633,9 @@ overall usage restrictions (quotas) are clearly stated.
 
 -   **No or not applicable**
 
-No information about rate limits is available in the ad repository API
-documentation. Inside the answer to a FAQ there is a link to broader API
-documentation, which includes a page about rate limits, but it does not
-mention the ad repository.
+The API documentation does not detail any applicable rate or daily
+limits ([[X,
+n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 
 ### CONSISTENCY
 
@@ -529,9 +655,14 @@ assessment should compare API responses with the GUI to confirm that at
 least the following elements are consistent: authorship, full content,
 and serving information (e.g., spending, impressions).
 
--   **Yes**
+-   Yes
 
--   No or not applicable
+-   **No or not applicable**
+
+In principle, the GUI information should be reflected by the API,
+however, this cannot be confirmed due to a lack of access to the API at
+the time of this assessment as well as due to difficulties extracting
+any data from the GUI despite multiple attempts.
 
 **OC24: Are the results returned by the platform consistently
 reproducible?**
@@ -542,11 +673,15 @@ collections performed similarly, including cases where content was
 deleted in the interim. The assessment should perform repeated queries
 to confirm the reproducibility of results.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+This cannot be confirmed due to a lack of access to the API at the time
+of this assessment as well as due to difficulties extracting any data
+from the GUI despite multiple attempts.
 
 **OC25: Is the data returned by the platform consistent with the
 parameters and filters used in the request?**
@@ -557,14 +692,15 @@ the request. The assessment should run test queries with different
 filters to confirm that results consistently match the requested
 conditions.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
-Filtering options are limited when dealing with ads that are not
-Political, which are unavailable for the EU.
+This cannot be confirmed due to a lack of access to the API at the time
+of this assessment as well as due to difficulties extracting any data
+from the GUI despite multiple attempts.
 
 ### RELEVANCE
 
@@ -581,11 +717,16 @@ the time period in which the ads were served. The assessment should test
 queries with temporal filters to confirm that results accurately reflect
 the specified date ranges.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+In principle, X allows the use of temporal filters through the GUI and
+API; however, this cannot be confirmed due to a lack of access to the
+API at the time of this assessment as well as due to difficulties
+extracting any data from the GUI despite multiple attempts.
 
 **OC27: Does the platform allow filtering advertising data by ad
 category?**
@@ -595,14 +736,13 @@ any categories assigned at the time of ad creation. The assessment
 should run test queries with category filters to confirm that results
 align with the selected classifications.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No or not applicable
+-   **No or not applicable**
 
-However, not all of the categories assigned at the time of ad creation
-are offered as a filter.
+The X Ad repository does not support filtering by ad category.
 
 **OC28: Does the platform allow filtering advertising data by geographic
 location?**
@@ -618,8 +758,8 @@ results match the specified areas.
 
 -   **No**
 
-The API only allows segmentation lower than the country level on
-Political ads, which are unavailable in the EU.
+The X Ad repository does not support filtering by subnational geographic
+locations; the only geographic filtering supported is by country.
 
 ### ACCURACY
 
@@ -634,11 +774,15 @@ gender of audiences reached. The assessment should review the ad records
 to confirm that these breakdowns are available and consistently
 reported.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+This cannot be verified due to a lack of access to the API at the time
+of this assessment as well as due to difficulties extracting any data
+from the GUI despite multiple attempts.
 
 **OC30: Does the platform provide subnational geographic data on the
 audience reached by ads?**
@@ -653,6 +797,10 @@ and consistently reported.
 -   Yes, through the API
 
 -   **No**
+
+This cannot be verified due to a lack of access to the API at the time
+of this assessment as well as due to difficulties extracting any data
+from the GUI despite multiple attempts.
 
 **OC31: Does the platform include data on audience targeting criteria
 defined by advertisers?**
@@ -670,7 +818,9 @@ reported.
 
 -   **No**
 
-Only age, gender, and geographic provided.
+This cannot be verified due to a lack of access to the API at the time
+of this assessment as well as due to difficulties extracting any data
+from the GUI despite multiple attempts.
 
 **OC32: Does the platform provide granular volume ranges for ad
 impressions?**
@@ -693,7 +843,9 @@ data interfaces.
 
 -   **No**
 
-Only for the Political category, which is unavailable.
+This cannot be verified due to a lack of access to the API at the time
+of this assessment as well as due to difficulties extracting any data
+from the GUI despite multiple attempts.
 
 **OC33: Does the platform provide granular investment ranges for ad
 spending?**
@@ -715,4 +867,4 @@ interfaces.
 
 -   **No**
 
-Only for the Political category, which is unavailable.
+The funding amounts are not reported in the GUI nor the API.

@@ -84,7 +84,7 @@ users not only to view ad content but also to export its data.
 
 -   No
 
-No export functionality.
+There is no export functionality.
 
 **SC3: Can data from both active and inactive ads be extracted?** -
 weight 0.20
@@ -169,9 +169,13 @@ platform's documentation or directly observe the authentication and
 renewal process to confirm that token updates do not interrupt or
 compromise data access.
 
--   Yes
+-   **Yes**
 
 -   No
+
+The platform's ad repository API allows renewals of tokens without the
+risk of data loss. ([[Meta,
+n.d]{.underline}](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens).)
 
 **OC5: Can data from an individual ad be retrieved from the platform?**
 
@@ -202,9 +206,11 @@ available feature to retrieve data from an individual advertiser.
 
 -   No
 
-Functionality on the GUI is clunky. The filter option often does not
-list all possible advertisers. The user needs to fetch their Page ID and
-paste in the GUI URL directly.
+The platform provides the means to retrieve specific advertisers using
+IDs or names through both the GUI and the API. However, the
+functionality on the GUI is clunky. For example, the filter option often
+does not list all possible advertisers. The user needs to fetch their
+Page ID and paste in the GUI URL directly.
 
 **OC7: Can ad data be retrieved from the platform using search terms?**
 
@@ -234,8 +240,12 @@ accompanying metadata.
 
 -   No
 
-Time information is offered in UTC. Multiple currencies are used, though
-they are specified.
+The time is offered in UTC. Timestamps are returned in coordinated
+universal time (UTC), respecting the standardized ISO 8601 formats.
+There is no automatic localised formatting, and locale data (e.g.,
+language or region) is not attached unless explicitly requested or
+inferred. Multiple currencies are used, though they are specified in
+standard ISO currency codes, not localized formatted strings.
 
 ### COMPLETENESS
 
@@ -357,6 +367,12 @@ of AI in ad production.
 
 -   **No**
 
+While Meta automatically labels ads that use Meta's internal AI creative
+tools when they appear [[(Meta,
+n.d]{.underline}](https://www.meta.com/en-gb/help/artificial-intelligence/355108217670024/?srsltid=AfmBOorflhUZfITM_Eo_gMXEsc5VeJYtFXi7zcKGSiXM1sNTuniYzyVs&utm_source=chatgpt.com).),
+Meta does not officially have a policy on whether or how this is
+labelled within their Ad Library.
+
 **OC16: Is the platform's ad repository documentation published in open
 access?**
 
@@ -388,7 +404,8 @@ queries or outputs illustrating correct use.
 -   No
 
 The documentation includes only one example of a query and response
-flow. There are no explanations for what the fields in the GUI mean.
+flow. However, there are no explanations for what the fields in the GUI
+mean.
 
 **OC18: Does the platform's ad repository documentation include or link
 to its terms of use?**
@@ -399,13 +416,13 @@ associated legal aspects. The assessment should review the documentation
 to confirm that explicit terms or references are provided and
 accessible.
 
--   **Yes, the API documentation**
+-   Yes, the API documentation
 
 -   Yes, the GUI documentation
 
--   No
+-   **No**
 
-Terms of Service are linked in the API documentation; however, no
+The terms of Service are linked in the API documentation; however, no
 explicit terms are mentioned. It simply states that available ads will
 have the content of the ad creative, which is marked as subject to their
 Terms of Service.
@@ -454,9 +471,9 @@ examples and potential errors. The assessment should review the
 documentation to confirm that response structures are described and
 illustrated with sample outputs.
 
--   Yes
+-   **Yes**
 
--   **No or not applicable**
+-   No or not applicable
 
 There is only one endpoint. Only one example of its usage is provided.
 It does not cover possible errors or details about using the possible
@@ -569,6 +586,9 @@ align with the selected classifications.
 
 -   No or not applicable
 
+However, not all of the categories assigned at the time of ad creation
+are offered as a filter.
+
 **OC28: Does the platform allow filtering advertising data by geographic
 location?**
 
@@ -583,9 +603,9 @@ results match the specified areas.
 
 -   **No**
 
-The API allows us to see filter using the different countries in the UK,
-not more granular than that. Also includes some rows with missing data
-regarding delivery by region.
+The API allows us to see filters using the different countries in the
+UK, not more granular than that. Also includes some rows with missing
+data regarding delivery by region.
 
 ### ACCURACY
 
@@ -616,7 +636,7 @@ and consistently reported.
 
 -   Yes, through the GUI
 
--   Yes, through the API
+-   **Yes, through the API**
 
 -   No
 

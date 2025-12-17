@@ -1,51 +1,3 @@
-**Formula/weighting method**
-============================
-
-Three different special criteria (SC) account for 75% of the score, each
-with a different weight, as described below. **If the platform meets the
-criteria but provides only partial ad data, it receives half of the
-possible points**. Partial ad data may include, but is not limited to,
-only providing data on "political" ads or on ads served by verified
-advertisers, for example.
-
-The remaining 25% of the score is based on 33 other criteria (OC), each
-carrying equal weight. Except for those marked with an asterisk, all
-these criteria allow multiple answers. **In such cases, the platform
-receives full points if the feature is available through both the API
-and the GUI; if it is available in only one, it receives half of the
-possible points**.
-
-The score distribution, based on special and other criteria, is as
-follows:
-
-$Score = ((SC1\ *\ 0.50)\  + \ (SC2\ *\ 0.30)\  + \ (SC3\ *\ 0.20))\ *\ 75\  + \ (\frac{OCFn\  + \ OCPn}{33}*25)$
-
-In which:
-
-> **SC*x*** denotes non-compliance (0), partial compliance (0.5), or
-> full compliance (1) with the respective special criterion
->
-> **OCF*n*** denotes the number of fully compliant cases (1 \* *n*)
-> among the other criteria
->
-> **OCP*n*** denotes the number of partially compliant cases (0.5 \*
-> *n*) among the other criteria
-
-Or as shown in the following table:
-
-  ----------------------------------------------------------------------
-  **Criteria**      **Maximum attainable points\   **Combined weight**
-                    (0--100)**                     
-  ----------------- ------------------------------ ---------------------
-  **SC1**           37,5                           75%
-
-  **SC2**           22,5                           
-
-  **SC3**           15                             
-
-  **OC1 -- OC33**   approx. 0,758 each             25%
-  ----------------------------------------------------------------------
-
 **Items**
 =========
 
@@ -62,23 +14,14 @@ ads across all categories. The assessment should confirm that the
 endpoint allows the retrieval and storage of ad data without requiring
 privileged or internal access beyond standard developer registration.
 
--   **Yes, with full availability**
+-   Yes, with full availability
 
 -   Yes, with partial availability
 
--   No
+-   **No**
 
-**Justification**:
-
-Political Ads for the EU are not available. This can be argued to be
-equivalent to full availability in this case, as all ads are otherwise
-downloadable under every category that is actually available for
-purchase. Notably, Meta announced halting "political, electoral and
-social issue advertising in the EU in response to incoming European
-regulation" in October 2025 which likely explains why this is no longer
-available. Nevertheless, past political advertising predating this
-decision is also missing [[(Meta,
-2025]{.underline}](https://about.fb.com/news/2025/07/ending-political-electoral-and-social-issue-advertising-in-the-eu/)).
+Google's Ads Transparency Center data is offered in a public dataset,
+accessible via BigQuery. However, it does not include data for the UK.
 
 **SC2: Does the platform provide a graphical user interface to its ad
 repository for extracting advertising content data?** - weight 0.30
@@ -96,7 +39,8 @@ users not only to view ad content but also to export its data.
 
 -   No
 
-No export functionality.
+Google offers an Ads Transparency Center GUI, but its export
+functionality is only available for political ads.
 
 **SC3: Can data from both active and inactive ads be extracted?** -
 weight 0.20
@@ -108,11 +52,13 @@ when both active and inactive ad data are delivered across all ad
 categories. The assessment should test the interface and endpoints to
 confirm whether both active and inactive ads can be retrieved.
 
--   **Yes, with full availability**
+-   Yes, with full availability
 
 -   Yes, with partial availability
 
--   No
+-   **No**
+
+Only for political ads through the GUI.
 
 OTHER CRITERIA
 --------------
@@ -138,6 +84,11 @@ users to search, access, and view ad content.
 
 -   No
 
+Google's Ads Transparency Center (GUI) provides more detailed
+information on political ads; however, it meets the criterion of
+providing information on both active and inactive ads. It is possible to
+search and view ad content.
+
 **OC2: Is access to the platform's ad repository free of charge?**
 
 This item verifies whether the ad repository API or GUI is free of
@@ -147,7 +98,7 @@ assessment should verify the platform's documentation and pricing
 policies to confirm that no fees are applied for access to the ad
 repository.
 
--   **Free API access**
+-   Free API access
 
 -   **Free GUI access**
 
@@ -164,11 +115,13 @@ considered when assessing this item. The assessment should examine
 sample data responses from both the ad repository GUI and API to confirm
 that the requested public data is included in the returned payload.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+It is only possible to export political ads' data.
 
 **OC4: Does the platform's ad repository API provide a form of
 authentication that allows for renewal without the risk of data
@@ -181,13 +134,11 @@ platform's documentation or directly observe the authentication and
 renewal process to confirm that token updates do not interrupt or
 compromise data access.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-The platform's ad repository API allows renewals of tokens without the
-risk of data loss. ([[Meta,
-n.d]{.underline}](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens).)
+There is no API.
 
 **OC5: Can data from an individual ad be retrieved from the platform?**
 
@@ -204,6 +155,10 @@ directly by its unique identifier.
 
 -   **No**
 
+The Ads Transparency Center GUI only allows searching by advertiser name
+or candidate name (for political ads). It is not possible to search for
+one specific ad.
+
 **OC6: Can data from ads served by a specific advertiser be retrieved
 from the platform?**
 
@@ -214,15 +169,9 @@ available feature to retrieve data from an individual advertiser.
 
 -   **Yes, through the GUI**
 
--   **Yes, through the API**
+-   Yes, through the API
 
 -   No
-
-The platform provides the means to retrieve specific advertisers using
-IDs or names through both the GUI and the API. However, the
-functionality on the GUI is clunky. For example, the filter option often
-does not list all possible advertisers. The user needs to fetch their
-Page ID and paste in the GUI URL directly.
 
 **OC7: Can ad data be retrieved from the platform using search terms?**
 
@@ -231,11 +180,14 @@ terms, enabling the creation of datasets based on those queries. The
 assessment should test search-related features to confirm that it
 accepts search queries using keywords.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+The Ads Transparency Center GUI only allows searching by advertiser name
+or candidate name (for political ads).
 
 **OC8: Does the platform use locale-neutral data representations?**
 
@@ -246,18 +198,14 @@ assessment should review the ad repository documentation and inspect
 sample responses to confirm the presence of standardized formats or
 accompanying metadata.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
-The time is offered in UTC. Timestamps are returned in coordinated
-universal time (UTC), respecting the standardized ISO 8601 formats.
-There is no automatic localised formatting, and locale data (e.g.,
-language or region) is not attached unless explicitly requested or
-inferred. Multiple currencies are used, though they are specified in
-standard ISO currency codes, not localized formatted strings.
+When filtering by date, a note states that the data is based on Pacific
+Time (PT). There is no such indication in the actual ad entries.
 
 ### COMPLETENESS
 
@@ -274,13 +222,12 @@ can be retrieved.
 
 -   **Yes, through the GUI**
 
--   **Yes, through the API**
+-   Yes, through the API
 
 -   No
 
-Advertisers are identified by their Page IDs and Page Names, which can
-be used to identify them on Meta's platforms. However, no direct link is
-provided.
+The interface discloses the page name and unique identifier, but there
+is no URL associated with the advertiser.
 
 **OC10: Does the platform provide data on the funders who paid for
 ads?**
@@ -289,14 +236,11 @@ This item verifies whether the platform provides data on the individuals
 or organizations that paid for the identified ads. The assessment should
 confirm whether any sponsor information is retrievable.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
 -   Yes, through the API
 
--   No
-
-Our API tests failed as that information was only available for
-political ads.
+-   **No**
 
 **OC11: Does the platform provide data on the period during which ads
 were served?**
@@ -306,11 +250,14 @@ which the identified ads ran. The assessment should review the extracted
 ad data to confirm that it includes start and end dates (or equivalent
 temporal markers) indicating the period of activity.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
+
+The interval in which the ads ran is only available for political ads.
+Other categories only include the date when it was last shown.
 
 **OC12: Does the platform provide data on user engagement with ads?**
 
@@ -325,6 +272,9 @@ that engagement metrics are available and clearly linked to each ad.
 
 -   **No**
 
+The only metric available is the number of views (as a range), but only
+for political ads.
+
 **OC13: Does the platform indicate whether ads were placed by verified
 or unverified advertisers?**
 
@@ -333,11 +283,14 @@ advertisers were verified at the time their ads were served. The
 assessment should review ad records to confirm that a verification
 status field is present.
 
--   Yes, through the GUI
+-   **Yes, through the GUI**
 
 -   Yes, through the API
 
--   **No**
+-   No
+
+However, this information is displayed only in the advertiser's profile,
+not in the individual ad record.
 
 ### COMPLIANCE
 
@@ -361,10 +314,6 @@ details are clearly documented.
 
 -   **No**
 
-Removed ads only include text stating the content was removed or the
-page was disabled for not following advertising standards. No specific
-reason or date is provided.
-
 **OC15: Does the platform indicate whether ad content was generated
 using artificial intelligence?**
 
@@ -379,12 +328,6 @@ of AI in ad production.
 
 -   **No**
 
-While Meta automatically labels ads that use Meta's internal AI creative
-tools when they appear [[(Meta,
-n.d]{.underline}](https://www.meta.com/en-gb/help/artificial-intelligence/355108217670024/?srsltid=AfmBOorflhUZfITM_Eo_gMXEsc5VeJYtFXi7zcKGSiXM1sNTuniYzyVs&utm_source=chatgpt.com).),
-Meta does not officially have a policy on whether or how this is
-labelled within their Ad Library.
-
 **OC16: Is the platform's ad repository documentation published in open
 access?**
 
@@ -394,7 +337,7 @@ registration or login. The assessment should attempt to access the
 documentation directly to confirm that it is fully available without
 authentication barriers.
 
--   **Yes, the API documentation**
+-   Yes, the API documentation
 
 -   **Yes, the GUI documentation**
 
@@ -409,15 +352,11 @@ examples. The assessment should review the documentation to confirm the
 presence of detailed explanations, structured references, and sample
 queries or outputs illustrating correct use.
 
--   **Yes, the API documentation**
+-   Yes, the API documentation
 
--   Yes, the GUI documentation
+-   **Yes, the GUI documentation**
 
 -   No
-
-The documentation includes only one example of a query and response
-flow. However, there are no explanations for what the fields in the GUI
-mean.
 
 **OC18: Does the platform's ad repository documentation include or link
 to its terms of use?**
@@ -430,14 +369,9 @@ accessible.
 
 -   Yes, the API documentation
 
--   Yes, the GUI documentation
+-   **Yes, the GUI documentation**
 
--   **No**
-
-The terms of Service are linked in the API documentation; however, no
-explicit terms are mentioned. It simply states that available ads will
-have the content of the ad creative, which is marked as subject to their
-Terms of Service.
+-   No
 
 **OC19: Does the platform provide its ad repository documentation in the
 official languages of the assessed region?**
@@ -453,8 +387,6 @@ and up-to-date versions are available in those languages.
 
 -   No
 
-You have to be logged in to change the language.
-
 **OC20: Does the platform implement a proper deprecation strategy to
 avoid breaking client applications while rolling out major changes in
 the API?\***
@@ -467,12 +399,11 @@ instructions. This item applies only to breaking changes that require
 client updates, such as endpoint modifications, authentication updates,
 or the removal of features.
 
--   **Yes**
+-   Yes
 
--   No or not applicable
+-   **No or not applicable**
 
-Updates are described in the release notes, and include future
-deprecations: https://www.facebook.com/ads/library/api/releasenotes
+There is no API.
 
 **OC21: Does the platform's ad repository API documentation detail the
 response format of each endpoint?\***
@@ -483,13 +414,9 @@ examples and potential errors. The assessment should review the
 documentation to confirm that response structures are described and
 illustrated with sample outputs.
 
--   **Yes**
+-   Yes
 
--   No or not applicable
-
-There is only one endpoint. Only one example of its usage is provided.
-It does not cover possible errors or details about using the possible
-parameters.
+-   **No or not applicable**
 
 **OC22: Does the platform's ad repository API documentation detail the
 quota or rate limits applicable to each available endpoint?\***
@@ -505,11 +432,6 @@ overall usage restrictions (quotas) are clearly stated.
 -   Yes
 
 -   **No or not applicable**
-
-No information about rate limits is available in the ad repository API
-documentation. Inside the answer to a FAQ there is a link to broader API
-documentation, which includes a page about rate limits, but it does not
-mention the ad repository.
 
 ### CONSISTENCY
 
@@ -529,9 +451,9 @@ assessment should compare API responses with the GUI to confirm that at
 least the following elements are consistent: authorship, full content,
 and serving information (e.g., spending, impressions).
 
--   **Yes**
+-   Yes
 
--   No or not applicable
+-   **No or not applicable**
 
 **OC24: Are the results returned by the platform consistently
 reproducible?**
@@ -544,7 +466,7 @@ to confirm the reproducibility of results.
 
 -   **Yes, through the GUI**
 
--   **Yes, through the API**
+-   Yes, through the API
 
 -   No
 
@@ -559,12 +481,9 @@ conditions.
 
 -   **Yes, through the GUI**
 
--   **Yes, through the API**
+-   Yes, through the API
 
 -   No
-
-Filtering options are limited when dealing with ads that are not
-Political, which are unavailable for the EU.
 
 ### RELEVANCE
 
@@ -583,7 +502,7 @@ the specified date ranges.
 
 -   **Yes, through the GUI**
 
--   **Yes, through the API**
+-   Yes, through the API
 
 -   No
 
@@ -595,21 +514,20 @@ any categories assigned at the time of ad creation. The assessment
 should run test queries with category filters to confirm that results
 align with the selected classifications.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No or not applicable
+-   **No or not applicable**
 
-However, not all of the categories assigned at the time of ad creation
-are offered as a filter.
+In the GUI, the only categories are political and non-political ads.
 
 **OC28: Does the platform allow filtering advertising data by geographic
 location?**
 
-This item assesses whether the ad repository allows filtering data by
-one or more subnational geographic locations where the ads were served.
-The assessment should test queries with location filters to confirm that
+This item verifies whether the ad repository allows filtering data by
+one or more geographic locations where the ads were served. The
+assessment should test queries with location filters to confirm that
 results match the specified areas.
 
 -   Yes, through the GUI
@@ -618,8 +536,7 @@ results match the specified areas.
 
 -   **No**
 
-The API only allows segmentation lower than the country level on
-Political ads, which are unavailable in the EU.
+The most specific geographic level is country.
 
 ### ACCURACY
 
@@ -634,11 +551,11 @@ gender of audiences reached. The assessment should review the ad records
 to confirm that these breakdowns are available and consistently
 reported.
 
--   **Yes, through the GUI**
+-   Yes, through the GUI
 
--   **Yes, through the API**
+-   Yes, through the API
 
--   No
+-   **No**
 
 **OC30: Does the platform provide subnational geographic data on the
 audience reached by ads?**
@@ -653,6 +570,8 @@ and consistently reported.
 -   Yes, through the API
 
 -   **No**
+
+The GUI platform doesn't provide any audience engagement metrics.
 
 **OC31: Does the platform include data on audience targeting criteria
 defined by advertisers?**
@@ -670,7 +589,7 @@ reported.
 
 -   **No**
 
-Only age, gender, and geographic provided.
+Only for political ads.
 
 **OC32: Does the platform provide granular volume ranges for ad
 impressions?**
@@ -693,7 +612,8 @@ data interfaces.
 
 -   **No**
 
-Only for the Political category, which is unavailable.
+Impressions are only available for political ads. Some intervals are
+greater than specified by the question.
 
 **OC33: Does the platform provide granular investment ranges for ad
 spending?**
@@ -715,4 +635,5 @@ interfaces.
 
 -   **No**
 
-Only for the Political category, which is unavailable.
+Ad spending information is only available for political ads. Some
+intervals are greater than specified by the question.

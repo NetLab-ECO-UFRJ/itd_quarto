@@ -136,6 +136,11 @@ through specific endpoints or other controlled access mechanisms.
 
 -   **No**
 
+The official API does allow the retrieval of direct messages, but only
+where the authenticated user is a participant, so this is out of scope
+[[(X,
+n.d.]{.underline}](https://docs.x.com/x-api/direct-messages/lookup/introduction)).
+
 **OC2: Can the requested data be extracted directly from the platform's
 API response?**
 
@@ -160,13 +165,19 @@ platform's documentation or directly observe the authentication and
 renewal process to confirm that token updates do not interrupt or
 compromise data access.
 
--   Yes
+-   **Yes (?)**
 
--   **No**
+-   No
 
-In theory, it is possible to renew tokens without fear of data loss. The
-reality of rate limits (1 request every 15 minutes; 100 tweets per
-month) means it is not possible to have continuous data collection.
+In theory, it is possible to renew tokens without fear of data loss as
+access relies on the standard X API authentication model, which supports
+long-lived access tokens and OAuth 2.0 refresh tokens that allow renewal
+without routine re-authorisation. The reality of rate limits (1 request
+every 15 minutes; 100 tweets per month) means it may not always be
+possible to have continuous data collection. Currently, there is no
+publicly documented set of distinct rate limits for EU vetted
+researchers separate from standard X API developer rate limits,
+suggesting that the standard API limits may apply.
 
 **OC4: Does the platform's API offer an endpoint for extracting data
 from an individual publication?**
@@ -352,11 +363,11 @@ test relevant endpoints to confirm that comments are retrievable as
 structured data. This item does not apply to platforms that do not have
 commenting features.
 
--   **Yes**
+-   Yes
 
 -   No
 
--   Not applicable
+-   **Not applicable (?)**
 
 While not exactly comments, the API's search feature allows users to
 search for posts made in reply to a specific message.
@@ -409,11 +420,11 @@ to confirm that this volume of data can be collected continuously.
 
 -   **No**
 
-That is far beyond the free tier limit (100 publications per month), and
-even the basic version (15,000 publications per month), at 200 USD per
-month, is not enough. That level of access is only obtainable in the
-API's pro version (1 million publications per month), priced at 5,000
-USD per month.
+That is far beyond the free tier limit (100 publications per month).
+That level of access is only obtainable in the API's paid versions. Its
+basic option allows for 15,000 publications per month, at 200 USD per
+month. The pro tier gives access to 1 million publications per month,
+priced at 5,000 USD monthly.
 
 ### CONSISTENCY
 

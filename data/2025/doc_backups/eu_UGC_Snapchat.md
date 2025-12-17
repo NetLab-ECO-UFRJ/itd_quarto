@@ -60,9 +60,20 @@ internal access beyond standard developer registration.
 
 -   Yes
 
--   **Yes, but only for approved researchers**
+-   Yes, but only for approved researchers
 
--   No
+-   **No**
+
+Currently, Snapchat does not provide an API for researchers for
+collecting public user-generated content data. To comply with the DSA,
+Snapchat advises going through the DSA Data Access Portal, indicating
+that "Snap will provide a protected cloud storage link for data access",
+without specific API access ([[Snapchat,
+n.d.]{.underline}](https://values.snap.com/privacy/transparency/researcher-access?lang=en-GB)).
+The DSA Data Access Portal, opened to EU researchers on 29 October 2025,
+allows researchers to suggest API access as a data access mechanism;
+however, approval is unlikely given the platform's stated preference for
+providing data via a cloud storage link.
 
 **SC2: Can the full scope of public content data be extracted through
 the platform's API?** - weight 0.30
@@ -75,17 +86,16 @@ artificial restrictions that limit data completeness.
 
 -   Yes
 
--   **Yes, but only for approved researchers**
+-   Yes, but only for approved researchers
 
--   No
+-   **No**
 
-Yes, with a caveat that recent research has also found disparities in
-the data which can be reliably extracted through the platform's API
-([[AI Forensics, 2025]{.underline}](https://arxiv.org/abs/2506.09746)).
-
-This has been tested on an example search but it did not verify every
-type of content which can be extracted and all associated fields in an
-exhaustive manner.
+Currently, Snapchat does not provide an API for researchers for
+collecting public user-generated content data. To comply with the DSA,
+Snapchat advises going through the DSA Data Access Portal, indicating
+that "Snap will provide a protected cloud storage link for data access",
+without specific API access ([[Snapchat,
+n.d.]{.underline}](https://values.snap.com/privacy/transparency/researcher-access?lang=en-GB))
 
 **SC3: Is access to the platform's API free of charge?** - weight 0.30
 
@@ -97,9 +107,12 @@ are applied for API access.
 
 -   Yes
 
--   **Yes, but only for approved researchers**
+-   Yes, but only for approved researchers
 
--   No
+-   **No**
+
+Not applicable as currently, Snapchat does not provide an API for
+collecting public user-generated content data.
 
 **SC4: Does the platform offer a graphical interface for extracting
 data?** - weight 0.10
@@ -116,6 +129,9 @@ extracting public content data without programming.
 -   Yes, but only for approved researchers
 
 -   **No**
+
+Currently, Snapchat does not provide a graphical interface for
+collecting public user-generated content data.
 
 OTHER CRITERIA
 --------------
@@ -140,11 +156,8 @@ through specific endpoints or other controlled access mechanisms.
 
 -   **No**
 
-**Justification:**
-
-TikTok does not provide any access to non-public data through its
-research API ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/about-research-api?)).
+Not applicable as currently, Snapchat does not provide an API for
+collecting public user-generated content data.
 
 **OC2: Can the requested data be extracted directly from the platform's
 API response?**
@@ -156,9 +169,12 @@ this assessment. The assessment should check sample API responses to
 confirm that the requested public data is included in the returned
 payload itself.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
+
+No, currently, Snapchat does not provide an API for collecting public
+user-generated content data.
 
 **OC3: Does the platform's API provide a form of authentication that
 allows for token renewal without the risk of data loss?**
@@ -170,17 +186,12 @@ platform's documentation or directly observe the authentication and
 renewal process to confirm that token updates do not interrupt or
 compromise data access.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:** TikTok's Research API issues 7200-second access
-tokens, but token renewal does not interrupt data collection because the
-API uses stateful pagination. The search\_id preserves the search
-context and the cursor maintains position within the result set,
-enabling seamless continuation of paginated retrieval after token
-refresh without duplication or loss. ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos/)).
+No, currently, Snapchat does not provide an API for collecting public
+user-generated content data.
 
 **OC4: Does the platform's API offer an endpoint for extracting data
 from an individual publication?**
@@ -192,16 +203,12 @@ review the API documentation and test available endpoints to confirm
 that an individual publication can be retrieved directly by its unique
 identifier.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The
-*[[https://open.tiktokapis.com/v2/research/video/query/]{.underline}](https://open.tiktokapis.com/v2/research/video/query/)*
-endpoint enables the retrieval of information about videos filtering by
-specific video id. This has been confirmed through code execution.
+No, currently, Snapchat does not provide an API for collecting public
+user-generated content data.
 
 **OC5: Does the platform's API offer an endpoint for extracting data
 from an individual author?**
@@ -216,15 +223,8 @@ individual author.
 
 -   **No**
 
-**Justification:** There is no specific endpoint that supports
-extracting data from an individual author (such as their videos),
-however there are endpoints for user information (e.g., bio, number of
-followers, number of videos posted, etc.) and there are bespoke
-endpoints for the user's liked videos, pinned videos, followers,
-following, reposted videos. Notably, there are no specific endpoints for
-a user's public content itself or comments. Trying to run this type of
-request using a workaround, such as by searching for videos using a
-specific username does not appear to work.
+No, currently, Snapchat does not provide an API for collecting public
+user-generated content data.
 
 **OC6: Does the platform's API provide an endpoint for extracting data
 based on search terms?**
@@ -235,16 +235,12 @@ of datasets of posts mentioning those terms. The assessment should test
 search-related endpoints to confirm that queries using keywords return
 matching public posts.
 
--   **Yes (?)**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The
-*[[https://open.tiktokapis.com/v2/research/video/query/]{.underline}](https://open.tiktokapis.com/v2/research/video/query/)*
-endpoint enables the retrieval of information about videos filtering by
-specific keywords. This has been confirmed through code execution.
+No, currently, Snapchat does not provide an API for collecting public
+user-generated content data.
 
 **OC7: Does the API use locale-neutral data representations?**
 
@@ -255,18 +251,12 @@ The assessment should review the API documentation and inspect sample
 responses to confirm the presence of standardized formats or
 accompanying metadata.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:** Based on a review of the TikTok Research API
-documentation, this API employs locale-neutral representation. Time such
-as the lower or upper bounds of video creation time is given in
-coordinated universal time (UTC), numbers such as follower counts are
-given in integers, time duration is given in UTC Unix epoch (in
-seconds), region codes follow the ISO 3166-1 alpha-2 conventions
-([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos)).
+No, currently, Snapchat does not provide an API for collecting public
+user-generated content data.
 
 ### COMPLIANCE
 
@@ -287,20 +277,12 @@ instructions. This item applies only to breaking changes that require
 client updates, such as endpoint modifications, authentication updates,
 or the removal of features.
 
--   **Yes**
+-   Yes
 
--   No or not applicable
+-   **No or not applicable**
 
-**Justification:**
-
-The TikTok API documentation includes a dedicated section on migrating
-to the latest version of the API ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/tiktok-api-v2-introduction?enter_method=left_navigation)),
-as well as a changelog which includes changes to the API ([[TikTok,
-n.d]{.underline}](https://developers.tiktok.com/doc/changelog).) and
-deprecation notices including a timeline and migration instructions
-([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/bulletin/migration-guidance-oauth-v1)).
+Not applicable as currently, Snapchat does not provide an API for
+collecting public user-generated content data.
 
 **OC9: Is the platform's API documentation published in open access?**
 
@@ -310,13 +292,22 @@ login. The assessment should check whether full documentation can be
 accessed freely online without requiring account creation or
 authentication.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:** The entirety of TikTok API documentation is publicly
-accessible to anyone at the "TikTok for Developers" website ([[TikTok,
-n.d]{.underline}](https://developers.tiktok.com/doc/overview?enter_method=left_navigation)).
+Not applicable as currently, Snapchat does not provide an API for
+collecting public user-generated content data for research purposes. The
+official APIs that Snapchat currently provides are aimed at business and
+developer use cases, including the Public Profile API, which can return
+metadata and statistics about public profiles under restricted access,
+and the Marketing (Ads) API and Conversions API, which are commercial
+APIs for advertising and conversion tracking. The Public Profile API is
+not openly available to all developers and typically requires
+allow-listing or partner access, while the Marketing and Conversions
+APIs are designed for managing and reporting on advertising campaigns
+rather than general content collection ([[Snapchat,
+n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Public-Profile-API/Introduction).
 
 **OC10: Is the platform's API documentation clearly written and
 exemplified?**
@@ -327,16 +318,12 @@ assessment should review the documentation to confirm the presence of
 detailed explanations, structured references, and sample code or queries
 that illustrate correct usage.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The TikTok API documentation is comprehensive and provides detailed
-explanations, endpoint descriptions, sample code and queries
-illustrating correct usage ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation)).
+Not applicable as currently Snapchat does not provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC11: Does the platform's API documentation include or link to the API
 terms of use?**
@@ -346,15 +333,12 @@ the terms of use governing the API and its legal aspects. The assessment
 should review the documentation to confirm the presence of explicit
 legal terms that define permitted use and restrictions.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The TikTok API documentation links to the developer "Terms and Policies"
-which include the "Developer terms of service" ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/our-guidelines-developer-guidelines?enter_method=left_navigation)).
+Not applicable as currently Snapchat does not provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC12: Does the platform's API documentation detail the response format
 of each endpoint?**
@@ -365,17 +349,12 @@ The assessment should review the documentation to confirm that, in all
 or most cases, response structures are explicitly described and
 illustrated with sample outputs.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-For each endpoint, the TikTok Developer documentation clearly describes
-the response format, specifying the structure of the returned JSON, the
-possible fields, their data types, and provides an example at the bottom
-of the page ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-video-comments?enter_method=left_navigation)).
+Not applicable as currently Snapchat does not provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC13: Does the platform provide its API documentation in the official
 languages of the assessed region?**
@@ -389,10 +368,8 @@ versions are available in those languages.
 
 -   **No**
 
-**Justification:**
-
-The TikTok API documentation is only available in English ([[TikTok,
-n.d]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).)
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC14: Does the platform's API documentation detail the quota or rate
 limits applicable to each available endpoint?**
@@ -404,18 +381,12 @@ overall usage limits (e.g., total API calls per month). The assessment
 should review the documentation to confirm that usage limits are clearly
 stated, including variations by authentication level or endpoint type.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The TikTok API documentation details the rate limits and daily quota
-limits for each access tier, specifying the number of requests possible
-and the time frame during which the limit applies ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-faq?enter_method=left_navigation);
-[[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit?enter_method=left_navigation))
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC15: Does the platform provide a way to label content that has been
 generated with artificial intelligence?**
@@ -426,22 +397,12 @@ given in the API response. The assessment should review the
 documentation and test API outputs to confirm that these flags are
 included in the extracted data.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-TikTok can automatically label content as "AI-Generated" or as "Creator
-Labelled as AI-Generated" ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation)).
-The "AI Generated" label refers to content which TikTok "identify as
-completely generated or significantly edited with AI," either "when a
-creator uses TikTok AI effects or uploads AI-generated content that has
-Content Credentials attached, a technology from the Coalition for
-Content Provenance and Authenticity (C2PA)." ([[TikTok,
-n.d.]{.underline}](https://support.tiktok.com/en/using-tiktok/creating-videos/ai-generated-content#2)).
-This has been confirmed through code execution.
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 ### COMPLETENESS
 
@@ -458,17 +419,14 @@ test relevant endpoints to confirm that comments are retrievable as
 structured data. This item does not apply to platforms that do not have
 commenting features.
 
--   **Yes**
+-   Yes
 
 -   No
 
--   Not applicable
+-   **Not applicable**
 
-**Justification:**
-
-The TikTok research API includes an endpoint for querying video comments
-([[https://open.tiktokapis.com/v2/research/video/comment/list/]{.underline}](https://open.tiktokapis.com/v2/research/video/comment/list/)).
-This has been confirmed via code execution.
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC17: Can data from temporary content be extracted through the
 platform's API?**
@@ -482,16 +440,12 @@ not have temporary content features.
 
 -   Yes
 
--   **No**
+-   No
 
--   Not applicable
+-   **Not applicable**
 
-**Justification:**
-
-Although temporary content exists on TikTok, such as stories, TikTok
-does not provide an endpoint or any fields which enable its extraction
-([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-codebook)).
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC18: Can historical data be extracted through the platform's API?**
 
@@ -501,16 +455,12 @@ request is made, to collect public user-generated content data. The
 assessment should review test endpoints to confirm that historical data
 more than 12 months prior to the analysis can be retrieved.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-Historical data can be queried through the TikTok Research APIi up to at
-least 2019, however the time period queried at a given time can not be
-longer than 30 days ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-codebook)).
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC19: Is the number of requests allowed by the API sufficient for
 monitoring more than 10,000 publications in 24 hours?**
@@ -520,17 +470,12 @@ and losses through the platform's API for requests that accumulate more
 than 10,000 publications in 24 hours. The assessment should test the API
 to confirm that this volume of data can be collected continuously.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The TikTok Research API allows for a daily limit of 1000 requests per
-day, meaning up to 100,000 records per day across all APIs. (The video
-and comments API can return 100 records per request). The daily quota
-gets reset at 12 AM UTC. ([[TikTok,
-n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-faq?enter_method=left_navigation)).
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 ### CONSISTENCY
 
@@ -547,14 +492,12 @@ assessment should conduct repeated test queries to confirm the
 reproducibility of results or ground the response based on recent (less
 than 2 years) experiments published in peer-reviewed journals.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-Data acquired via the TikTok Research API is consistently reproducible
-over time. This has been confirmed via code execution.
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC21: Is the data returned by the platform's API consistent with the
 parameters and filters used in the request?**
@@ -565,14 +508,12 @@ assessment should conduct repeated test queries to confirm the
 consistency of results or ground the response based on recent (less than
 2 years) experiments published in peer-reviewed journals.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The platform returns data which matches the parameters and filters
-applied.
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 ### RELEVANCE
 
@@ -591,16 +532,13 @@ interface to confirm that key elements, such as authorship, complete
 content, interaction counts (e.g., comments, shares, replies), and
 referenced content (e.g., shares, mentions), are fully represented.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The data extracted through the platform's API reflects what is displayed
-on the user interface at the moment it is collected, meaning that key
-elements such as authorship, full content, interaction metrics, and
-referenced content are consistent with what users see on the interface.
+Not applicable as Snapchat does not currently provide user interface nor
+an API for collecting public user-generated content data for research
+purposes.
 
 **OC23: Does the platform's API allow for filtering data based on
 publisher location?**
@@ -610,17 +548,12 @@ filters to data extraction. The assessment should test the endpoint for
 the main content type to confirm that data on public posts can be
 filtered by publisher location.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The TikTok Research API allows for filtering data based on publisher
-location. However, this is the location of "country where the video
-creator registered their account" and not the location of the publisher
-at the time of the publication of any and all of their videos ([[TikTok,
-n.d.)]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC24: Does the platform's API allow for filtering data based on
 content language?**
@@ -634,11 +567,8 @@ by content language.
 
 -   **No**
 
-**Justification:**
-
-The TikTok Research API does not support filtering data based on content
-language ([[TikTok,
-n.d.)]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 **OC25: Does the platform's API allow for filtering data by specific
 time periods?**
@@ -648,16 +578,12 @@ data extraction. The assessment should test the endpoint for the main
 content type to confirm that public post data can be filtered by custom
 time ranges.
 
--   **Yes**
+-   Yes
 
--   No
+-   **No**
 
-**Justification:**
-
-The TikTok Research API supports filtering data by specific time
-periods, however the length is limited to 30 days for each request
-([[TikTok,
-n.d.)]{.underline}](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
 
 ### TIMELINESS
 
@@ -677,13 +603,5 @@ allows the ready extraction of recent public posts data.
 
 -   **No**
 
-**Justification:**
-
-The TikTok Research API does not support the collection of data from
-specific content within one hour of its publication. Instead, the Video
-query API searches the full dataset, "archived data \[is used\] instead
-of the current online data". Moreover, according to the API
-documentation, "new videos take up to 48 hours to be added to the search
-engine, and statistics such as view count and follower count can take up
-to 10 days to update." ([[TikTok,
-n.d]{.underline}](https://developers.tiktok.com/doc/research-api-faq?enter_method=left_navigation).)
+Not applicable as Snapchat does not currently provide an API for
+collecting public user-generated content data for research purposes.
