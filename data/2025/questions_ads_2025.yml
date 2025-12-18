@@ -478,7 +478,7 @@ compliance:
       that require client updates, such as endpoint modifications, authentication updates, or the removal of features.
     weight: 1.0
     answers:
-      - value: yes
+      - value: 'yes'
         label: "Yes"
         weight: 1.0
       - value: 'no'
@@ -496,7 +496,7 @@ compliance:
       response structures are described and illustrated with sample outputs.
     weight: 1.0
     answers:
-      - value: yes
+      - value: 'yes'
         label: "Yes"
         weight: 1.0
       - value: 'no'
@@ -516,7 +516,7 @@ compliance:
       stated.
     weight: 1.0
     answers:
-      - value: yes
+      - value: 'yes'
         label: "Yes"
         weight: 1.0
       - value: 'no'
@@ -537,7 +537,7 @@ consistency:
       consistent: authorship, full content, and serving information (e.g., spending, impressions).
     weight: 1.0
     answers:
-      - value: yes
+      - value: 'yes'
         label: "Yes"
         weight: 1.0
       - value: 'no'
