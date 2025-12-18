@@ -1,0 +1,131 @@
+metadata:
+  platform: Li
+  region_code: EU
+  scope: ADS
+  evaluation_date: 2025-12
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: full
+  notes: ''
+- code: AD_SC2
+  selected_answer: partial
+  notes: No data export functionality available. <https://www.linkedin.com/ad-library>
+- code: AD_SC3
+  selected_answer: 'no'
+  notes: ''
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: full
+  notes: ''
+- code: AD_OC2
+  selected_answer: api
+  notes: ''
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: The ad\'s text and publication date aren't included.
+- code: AD_OC4
+  selected_answer: 'yes'
+  notes: ''
+- code: AD_OC5
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC6
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC7
+  selected_answer: api
+  notes: ''
+- code: AD_OC8
+  selected_answer: api
+  notes: Timestamps in Unix format (like 1763337597116).
+completeness_answers:
+- code: AD_OC10
+  selected_answer: api
+  notes: ''
+- code: AD_OC11
+  selected_answer: api
+  notes: ''
+- code: AD_OC12
+  selected_answer: api
+  notes: ''
+- code: AD_OC13
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC9
+  selected_answer: api
+  notes: ''
+compliance_answers:
+- code: AD_OC14
+  selected_answer: 'no'
+  notes: Not possible to search for restricted ads. No details or date specifying
+    when it was removed.
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC16
+  selected_answer: api
+  notes: The API documentation is openly available at <https://www.linkedin.com/ad-library/api/ads>.
+    There is some open documentation for the GUI in the form of an FAQ.
+- code: AD_OC17
+  selected_answer: api
+  notes: The documentation includes only one example of a query and response flow.
+    There are no examples for the GUI.
+- code: AD_OC18
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC19
+  selected_answer: 'no'
+  notes: While testing as a user from the Netherlands, the documentation was available
+    in English. It does not offer an option to change the language manually. When
+    tested using a VPN, the language was not automatically changed.
+- code: AD_OC20
+  selected_answer: 'not_applicable'
+  notes: The documentation does not include release notes or information about changes
+    in the API.
+- code: AD_OC21
+  selected_answer: 'not_applicable'
+  notes: There is only one endpoint. Only one example of its usage is provided. It
+    does not cover possible errors or details about using the possible parameters.
+- code: AD_OC22
+  selected_answer: 'not_applicable'
+  notes: No information about rate limits is available in the ad repository API documentation.
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'yes'
+  notes: ''
+- code: AD_OC24
+  selected_answer: api
+  notes: ''
+- code: AD_OC25
+  selected_answer: 'no'
+  notes: The information cannot be verified through the API response alone. Only the
+    advertiser details and adStatistics are returned at the API response, so these
+    are the only fields that could be verified programmatically without scraping the
+    ad page itself with the \`adUrl\` provided.
+relevance_answers:
+- code: AD_OC26
+  selected_answer: api
+  notes: ''
+- code: AD_OC27
+  selected_answer: 'not_applicable'
+  notes: ''
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: ''
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC31
+  selected_answer: api
+  notes: ''
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: This information is available, but it is not granular enough to meet the
+    criteria.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: There is no ad spending information in the response schema.
