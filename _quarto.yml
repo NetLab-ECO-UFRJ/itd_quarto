@@ -64,6 +64,7 @@ book:
         - data/2025/regional/UK/linkedin/linkedin.qmd
         - data/2025/regional/UK/meta/meta.qmd
         - data/2025/regional/UK/snapchat/snapchat.qmd
+        - data/2025/regional/UK/tiktok/tiktok.qmd
         - data/2025/regional/UK/x/x.qmd
         - data/2025/regional/UK/youtube/youtube.qmd
   # page-footer:

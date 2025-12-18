@@ -1,0 +1,50 @@
+---
+title: "TikTok"
+subtitle: "Platform Evaluation Report"
+ugc_answers_file: "data/2025/regional/UK/tiktok/ugc.yml"
+region_code: "UK"
+---
+
+```{python}
+#| label: setup
+#| include: false
+
+import sys
+from pathlib import Path
+
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from utils.scoring import calculate_platform_score
+from utils.quarto_helpers import generate_summary_table
+
+results_ugc = calculate_platform_score(
+    year='2025',
+    question_type='ugc',
+    answers_file="data/2025/regional/UK/tiktok/ugc.yml"
+)
+
+```
+
+**Region:** UK
+
+**User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
+
+**Advertising transparency score:** Not available
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-summary-table
+#| echo: false
+#| output: asis
+
+generate_summary_table(results_ugc)
+```
+
+## Advertising
+
+Not available.
