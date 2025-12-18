@@ -130,7 +130,7 @@ compliance_answers:
   notes: The Snapchat Ad Gallery API documentation does not appear to describe any
     deprecation strategies [[(Snapchat, n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 - code: AD_OC21
-  selected_answer: true
+  selected_answer: 'yes'
   notes: Detailed explanations are provided in the API documentation [[(Snapchat,
     n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 - code: AD_OC22

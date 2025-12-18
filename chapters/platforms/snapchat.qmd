@@ -10,6 +10,7 @@ Not applicable as Snapchat does not currently provide an API for collecting publ
 
 Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
     https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/
+    
     Snapchat mostly offers an Ads API for business purpose but provide a few
     endpoint for accessing its Ads Library. Nevertheless, these endpoint only retrieve
     ads from the European Union countries, as stated in its documentation. Also, it''s
