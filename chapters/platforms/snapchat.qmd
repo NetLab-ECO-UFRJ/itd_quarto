@@ -1,5 +1,13 @@
 # Snapchat
 
+## User-Generated Content Transparency Notes - EU
+
+Currently, Snapchat does not provide an API for researchers for collecting public user-generated content data. To comply with the DSA, Snapchat advises going through the DSA Data Access Portal, indicating that "Snap will provide a protected cloud storage link for data access", without specific API access (Snapchat, n.d.). The DSA Data Access Portal, opened to EU researchers on 29 October 2025, allows researchers to suggest API access as a data access mechanism; however, approval is unlikely given the platform's stated preference for providing data via a cloud storage link.
+
+Not applicable as Snapchat does not currently provide an API for collecting public user-generated content data for research purposes. The official APIs that Snapchat currently provides are aimed at business and developer use cases, including the Public Profile API, which can return metadata and statistics about public profiles under restricted access, and the Marketing (Ads) API and Conversions API, which are commercial APIs for advertising and conversion tracking. The Public Profile API is not openly available to all developers and typically requires allow-listing or partner access, while the Marketing and Conversions APIs are designed for managing and reporting on advertising campaigns rather than general content collection (Snapchat, n.d.).
+
+## Advertising Transparency Notes - Brazil
+
 Snapchat doesn''t provide API or GUI for ads that ran in Brazil. Source:
     https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api https://adsgallery.snap.com/
     Snapchat mostly offers an Ads API for business purpose but provide a few
