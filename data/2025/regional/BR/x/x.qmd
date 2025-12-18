@@ -1,7 +1,7 @@
 ---
 title: "X/Twitter"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/regional/BR/x/ugc.yml"
+ugc_answers_file: "data/2025/global/x/ugc.yml"
 ads_answers_file: "data/2025/regional/BR/x/ads.yml"
 ---
 
