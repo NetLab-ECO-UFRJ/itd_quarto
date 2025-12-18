@@ -1,6 +1,5 @@
 metadata:
   platform: Meta
-  region_code: BRAZIL
   scope: ADS
   evaluation_date: 2025-10
 special-criteria_answers:
@@ -121,13 +120,13 @@ compliance_answers:
 - code: AD_OC21
   selected_answer: 'no'
   notes: The [API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archived)
-    describes the response of the available endpoint, but you need to click in a
-    button called "show response" and a pop-up will appear.
+    describes the response of the available endpoint, but you need to click in a button
+    called "show response" and a pop-up will appear.
 - code: AD_OC22
   selected_answer: 'no'
   notes: Although the platform provides [rate limits documentation](https://developers.facebook.com/docs/graph-api/overview/rate-limiting/),
-    it is not specific for the ad library API, making it harder to calculate the
-    total quota available for collecting ads. Meta has three types of request limitations
+    it is not specific for the ad library API, making it harder to calculate the total
+    quota available for collecting ads. Meta has three types of request limitations
     - total of calls (the only one that the documentation explains how to calculate),
     total of cpu time and total time.
 consistency_answers:
@@ -181,7 +180,7 @@ accuracy_answers:
 - code: AD_OC31
   selected_answer: 'no'
   notes: The platform does not provide all targeting options that an advertiser can
-    select. 
+    select.
 - code: AD_OC32
   selected_answer: 'no'
   notes: 'The platform provides intervals that are bigger than 10%. '

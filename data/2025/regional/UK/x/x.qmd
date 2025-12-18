@@ -3,6 +3,7 @@ title: "X/Twitter"
 subtitle: "Platform Evaluation Report"
 ugc_answers_file: "data/2025/global/x/ugc.yml"
 ads_answers_file: "data/2025/regional/UK/x/ads.yml"
+region_code: "UK"
 ---
 
 ```{python}
@@ -28,7 +29,7 @@ results_ugc, results_ads = load_platform_results(
 
 ```
 
-**Region:** `{python} results_ugc['metadata'].get('region_code', 'N/A')`
+**Region:** UK
 
 **User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
 

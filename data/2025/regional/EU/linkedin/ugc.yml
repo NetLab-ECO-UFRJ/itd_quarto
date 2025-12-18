@@ -1,19 +1,18 @@
 metadata:
   platform: LinkedIn
-  region_code: EU
   scope: UGC
   evaluation_date: 2025-12
 special-criteria_answers:
 - code: UGC_SC1
-  selected_answer: 'researchers_only'
+  selected_answer: researchers_only
   notes: LinkedIn offers a \[Beta\] Researcher Access Program to comply with their
     legal requirements under article 40 of the European Union's Digital Services Act
     (DSA) ([[LinkedIn, n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)).
 - code: UGC_SC2
-  selected_answer: 'researchers_only'
+  selected_answer: researchers_only
   notes: ''
 - code: UGC_SC3
-  selected_answer: 'researchers_only'
+  selected_answer: researchers_only
   notes: ''
 - code: UGC_SC4
   selected_answer: 'no'
@@ -81,7 +80,7 @@ compliance_answers:
   selected_answer: 'no'
   notes: ''
 - code: UGC_OC8
-  selected_answer: 'no_or_not_applicable'
+  selected_answer: no_or_not_applicable
   notes: The LinkedIn Researcher API documentation does not provide a proper deprecation
     strategy ([[LinkedIn, n.d.]{.underline}](https://www.linkedin.com/help/linkedin/answer/a1645616)).
 - code: UGC_OC9

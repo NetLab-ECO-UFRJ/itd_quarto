@@ -3,6 +3,7 @@ title: "Snapchat"
 subtitle: "Platform Evaluation Report"
 ugc_answers_file: "data/2025/global/snapchat/ugc.yml"
 ads_answers_file: "data/2025/regional/EU/snapchat/ads.yml"
+region_code: "EU"
 ---
 
 ```{python}

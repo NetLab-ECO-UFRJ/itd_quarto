@@ -1,15 +1,14 @@
 metadata:
   platform: X
-  region_code: BRAZIL
   scope: UGC
   evaluation_date: 2025-11
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'yes'
-  notes: X/Twitter provides a longstanding API that has been extensively
-    documented and widely used for academic research. It
-    remains accessible to anyone with a registered developer account, although, as
-    will be discussed further, such access is now mostly paid.
+  notes: X/Twitter provides a longstanding API that has been extensively documented
+    and widely used for academic research. It remains accessible to anyone with a
+    registered developer account, although, as will be discussed further, such access
+    is now mostly paid.
 - code: UGC_SC2
   selected_answer: 'yes'
   notes: Historically, X/Twitter has ensured that any public conversation published
@@ -22,11 +21,11 @@ special-criteria_answers:
     to the API is divided into four levels - (i) Free, which allows retrieval of data
     from up to 100 posts per month; (ii) Basic, which, at a cost of USD 200 per month,
     allows retrieval of up to 15,000 posts; (iii) Pro, which, at a cost of USD 5,000
-    per month, allows retrieval of up to 1,000,000 posts; and (iv) Enterprise, for which
-    pricing and usage limits are negotiated directly with the platform. As the free plan
-    offers extremely limited capabilities and is presented by the platform itself as a
-    testing tier, we do not consider it sufficient to characterize access to the platform's
-    API as free of charge.
+    per month, allows retrieval of up to 1,000,000 posts; and (iv) Enterprise, for
+    which pricing and usage limits are negotiated directly with the platform. As the
+    free plan offers extremely limited capabilities and is presented by the platform
+    itself as a testing tier, we do not consider it sufficient to characterize access
+    to the platform's API as free of charge.
 - code: UGC_SC4
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for accessing or extracting
@@ -61,27 +60,27 @@ accessibility_answers:
     ID.
 - code: UGC_OC6
   selected_answer: 'yes'
-  notes: The GET /2/tweets/search/recent endpoint enables the retrieval
-    of comprehensive information about tweets published in the past seven days that
-    match specific search terms, while the GET /2/tweets/search/all endpoint,
-    available only to Pro and Enterprise API users, allows querying historical tweets
-    dating back to the launch of the platform.
+  notes: The GET /2/tweets/search/recent endpoint enables the retrieval of comprehensive
+    information about tweets published in the past seven days that match specific
+    search terms, while the GET /2/tweets/search/all endpoint, available only to Pro
+    and Enterprise API users, allows querying historical tweets dating back to the
+    launch of the platform.
 - code: UGC_OC7
   selected_answer: 'yes'
   notes: Based on a review of the X/Twitter API v2 documentation, the API employs
     largely locale-neutral representations for non-content metadata. Its structure
     and use of standardized formats ensure significant neutrality– for example, all
     timestamps (such as created_at) adhere to the ISO 8601 format and are returned
-    in Coordinated Universal Time (UTC). Similarly, the lang field uses
-    ISO 639-1 language codes, and country or regional codes follow standard ISO 3166-1
-    Alpha-2 conventions.
+    in Coordinated Universal Time (UTC). Similarly, the lang field uses ISO 639-1
+    language codes, and country or regional codes follow standard ISO 3166-1 Alpha-2
+    conventions.
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'yes'
   notes: The X/Twitter API documentation is comprehensive and includes all the necessary
     information, such as account-level limitations, permissions, detailed endpoint
-    descriptions, and both current and upcoming features. It also provides
-    a well-structured migration guide from the previous version to the current one.
+    descriptions, and both current and upcoming features. It also provides a well-structured
+    migration guide from the previous version to the current one.
 - code: UGC_OC11
   selected_answer: 'yes'
   notes: The X/Twitter API documentation includes an extensive set of developer terms,
@@ -115,7 +114,7 @@ compliance_answers:
   notes: The X/Twitter API documentation is publicly accessible to anyone.
 completeness_answers:
 - code: UGC_OC16
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: Although it could be argued that replies and quotes serve this function,
     X/Twitter does not have dedicated comment features like other social media platforms
     analyzed in this study.
@@ -126,9 +125,9 @@ completeness_answers:
     either by known identifiers or by keywords.
 - code: UGC_OC18
   selected_answer: 'no'
-  notes: Although the GET /2/tweets/search/all endpoint allows querying
-    historical tweets dating back to the launch of the platform, it is only available
-    to Pro and Enterprise API users.
+  notes: Although the GET /2/tweets/search/all endpoint allows querying historical
+    tweets dating back to the launch of the platform, it is only available to Pro
+    and Enterprise API users.
 - code: UGC_OC19
   selected_answer: 'no'
   notes: Although it is technically possible to monitor more than 10,000 posts in
@@ -140,8 +139,7 @@ consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
   notes: Excluding the seven-day limitation of the GET /2/tweets/search/recent endpoint,
-    data acquisitions using the X/Twitter API are consistently reproducible
-    over time.
+    data acquisitions using the X/Twitter API are consistently reproducible over time.
 - code: UGC_OC21
   selected_answer: 'yes'
   notes: The platform returns data which matches the parameters and filters applied.
@@ -160,14 +158,14 @@ relevance_answers:
     were unable to test or validate this functionality.
 - code: UGC_OC24
   selected_answer: 'yes'
-  notes: The GET /2/tweets/search/recent and GET /2/tweets/search/all
-    endpoints enable filtering of tweets according to content language
-    through the use of the lang parameter.
+  notes: The GET /2/tweets/search/recent and GET /2/tweets/search/all endpoints enable
+    filtering of tweets according to content language through the use of the lang
+    parameter.
 - code: UGC_OC25
   selected_answer: 'yes'
-  notes: The GET /2/tweets/search/recent, though limited to the last seven
-    days, and GET /2/tweets/search/all endpoints allow filtering of tweets
-    based on specific timeframes.
+  notes: The GET /2/tweets/search/recent, though limited to the last seven days, and
+    GET /2/tweets/search/all endpoints allow filtering of tweets based on specific
+    timeframes.
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'yes'

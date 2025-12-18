@@ -1,26 +1,26 @@
 metadata:
   platform: Telegram
-  region_code: GLOBAL
   scope: UGC
   evaluation_date: 2025-11
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'yes'
-  notes: 'The platform offers an [API](https://core.telegram.org/) that allows the collection of public data in
-    Telegram conversations.'
+  notes: The platform offers an [API](https://core.telegram.org/) that allows the
+    collection of public data in Telegram conversations.
 - code: UGC_SC2
   selected_answer: 'no'
-  notes: 'In Telegram, public user-generated content (UGC) cannot be globally discovered
-    or retrieved through the [API](https://core.telegram.org/) without prior participation or explicit identifiers.
-    Users can access content only from channels or groups where their bot or account
-    is already a member; there is no mechanism to expose all available channels and
-    groups. There are even specific error messages for cases where the user is not
-    part of the supergroup or channel from which data is being requested (see [channels.getFullChannel](https://core.telegram.org/method/channels.getFullChannel)). Therefore,
-    the API does not provide membership-free, platform-wide access to the full set
-    of public UGC.'
+  notes: In Telegram, public user-generated content (UGC) cannot be globally discovered
+    or retrieved through the [API](https://core.telegram.org/) without prior participation
+    or explicit identifiers. Users can access content only from channels or groups
+    where their bot or account is already a member; there is no mechanism to expose
+    all available channels and groups. There are even specific error messages for
+    cases where the user is not part of the supergroup or channel from which data
+    is being requested (see [channels.getFullChannel](https://core.telegram.org/method/channels.getFullChannel)).
+    Therefore, the API does not provide membership-free, platform-wide access to the
+    full set of public UGC.
 - code: UGC_SC3
   selected_answer: 'yes'
-  notes: 'All [Telegram APIs](https://core.telegram.org/) are free of charge.'
+  notes: All [Telegram APIs](https://core.telegram.org/) are free of charge.
 - code: UGC_SC4
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for accessing or extracting
@@ -36,120 +36,130 @@ accessibility_answers:
     appropriate format, without requiring redirection.
 - code: UGC_OC3
   selected_answer: 'yes'
-  notes: 'Telegram API access requires an access key that remains the same even after
+  notes: Telegram API access requires an access key that remains the same even after
     logging in multiple times. It will only change in specific situations, and the
-    API provides the [necessary methods to update it programmatically](https://core.telegram.org/tdlib/getting-started#:~:text=Authorization%20is%20an%20example%20of,description%20of%20the%20current%20AuthorizationState.).'
+    API provides the [necessary methods to update it programmatically](https://core.telegram.org/tdlib/getting-started#:~:text=Authorization%20is%20an%20example%20of,description%20of%20the%20current%20AuthorizationState.).
 - code: UGC_OC4
   selected_answer: 'yes'
-  notes: 'It is possible to extract data for a specific message using its unique identifier,
-    as long as the group or public channel it belongs to is known.'
+  notes: It is possible to extract data for a specific message using its unique identifier,
+    as long as the group or public channel it belongs to is known.
 - code: UGC_OC5
   selected_answer: 'yes'
-  notes: 'Telegram offers a [dedicated endpoint for searching for messages by author](https://core.telegram.org/method/messages.search),
-    as long as the group or public channel the message belongs to is known.'
+  notes: Telegram offers a [dedicated endpoint for searching for messages by author](https://core.telegram.org/method/messages.search),
+    as long as the group or public channel the message belongs to is known.
 - code: UGC_OC6
   selected_answer: 'yes'
-  notes: "Telegram offers an [endpoint for searching for messages](https://core.telegram.org/method/messages.searchGlobal) containing terms
-    of interest, but this is only available in public groups and channels that the
-    researcher already knows and/or participates in. Supposedly, Telegram offers a
-    paid tier with global search, but it hasn't been possible to test it because the
-    evaluation used the free tier across all platforms. See also [Telethon documentation](https://docs.telethon.dev/en/stable/modules/client.html#telethon.client.messages.MessageMethods.get_messages)."
+  notes: Telegram offers an [endpoint for searching for messages](https://core.telegram.org/method/messages.searchGlobal)
+    containing terms of interest, but this is only available in public groups and
+    channels that the researcher already knows and/or participates in. Supposedly,
+    Telegram offers a paid tier with global search, but it hasn't been possible to
+    test it because the evaluation used the free tier across all platforms. See also
+    [Telethon documentation](https://docs.telethon.dev/en/stable/modules/client.html#telethon.client.messages.MessageMethods.get_messages).
 - code: UGC_OC7
   selected_answer: 'yes'
-  notes: 'The publication dates returned by the Telegram API follow the ISO 8601 format.'
+  notes: The publication dates returned by the Telegram API follow the ISO 8601 format.
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'no'
-  notes: "The Telegram and TDLib API documentation is not clearly written or exemplified.
+  notes: The Telegram and TDLib API documentation is not clearly written or exemplified.
     While it provides a technical reference of available classes and methods, it lacks
     detailed explanations and practical examples demonstrating how to call endpoints
     or implement typical workflows. The documentation's structure assumes prior familiarity
     with Telegram's internal architecture, making it difficult for developers to understand
-    usage without relying on third-party resources or community libraries."
+    usage without relying on third-party resources or community libraries.
 - code: UGC_OC11
   selected_answer: 'yes'
-  notes: 'Terms of service are explicitly referenced in [API documentation](https://core.telegram.org/api/obtaining_api_id) and required
-    reading for developers obtaining "api_id" credentials. See [Terms of Service](https://core.telegram.org/api/terms).'
+  notes: Terms of service are explicitly referenced in [API documentation](https://core.telegram.org/api/obtaining_api_id)
+    and required reading for developers obtaining "api_id" credentials. See [Terms
+    of Service](https://core.telegram.org/api/terms).
 - code: UGC_OC12
   selected_answer: 'no'
-  notes: "The [Telegram TDLib API documentation](https://core.telegram.org/tdlib/docs/) does not consistently detail the response\
-    \ format of each endpoint. While it defines object schemas and return types, it\
-    \ lacks explicit response examples and per-endpoint error code descriptions."
+  notes: The [Telegram TDLib API documentation](https://core.telegram.org/tdlib/docs/)
+    does not consistently detail the response format of each endpoint. While it defines
+    object schemas and return types, it lacks explicit response examples and per-endpoint
+    error code descriptions.
 - code: UGC_OC13
   selected_answer: 'no'
-  notes: 'The [API documentation](https://core.telegram.org/tdlib/docs/) is available only in English.'
+  notes: The [API documentation](https://core.telegram.org/tdlib/docs/) is available
+    only in English.
 - code: UGC_OC14
   selected_answer: 'no'
-  notes: 'While Telegram provides [information on bot rate limits](https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this), the TDLib documentation
-    does not fully and explicitly detail the quotas or rate limits for each available
-    endpoint.'
+  notes: While Telegram provides [information on bot rate limits](https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this),
+    the TDLib documentation does not fully and explicitly detail the quotas or rate
+    limits for each available endpoint.
 - code: UGC_OC15
   selected_answer: 'no'
   notes: We found no official policy or technical specification for AI-generated content
     in Telegram’s API documentation and terms of service.
 - code: UGC_OC8
   selected_answer: no_or_not_applicable
-  notes: "We found no official documentation for TDLib that outlines a deprecation\
-    \ policy. While there is a [changelog](https://core.telegram.org/tdlib/Change_Log) on [GitHub](https://github.com/tdlib/td/blob/master/CHANGELOG.md), it documents only changes that\
-    \ have already been made to major releases. The document does not include removal\
-    \ dates and migration instructions for deprecated features (see [issue #3448](https://github.com/tdlib/td/issues/3448) and [issue #2215](https://github.com/tdlib/td/issues/2215))."
+  notes: 'We found no official documentation for TDLib that outlines a deprecation
+    policy. While there is a [changelog](https://core.telegram.org/tdlib/Change_Log)
+    on [GitHub](https://github.com/tdlib/td/blob/master/CHANGELOG.md), it documents
+    only changes that have already been made to major releases. The document does
+    not include removal dates and migration instructions for deprecated features (see
+    [issue #3448](https://github.com/tdlib/td/issues/3448) and [issue #2215](https://github.com/tdlib/td/issues/2215)).'
 - code: UGC_OC9
   selected_answer: 'yes'
-  notes: '[Telegram API documentation](https://core.telegram.org/methods) can be accessed without authentication.'
+  notes: '[Telegram API documentation](https://core.telegram.org/methods) can be accessed
+    without authentication.'
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'yes'
-  notes: 'Telegram allows [extracting comments](https://core.telegram.org/api/discussion#channel-comments) from channels with discussion features
-    enabled. Each comment is treated as a reply within a message thread, which can
-    be retrieved as structured data.'
+  notes: Telegram allows [extracting comments](https://core.telegram.org/api/discussion#channel-comments)
+    from channels with discussion features enabled. Each comment is treated as a reply
+    within a message thread, which can be retrieved as structured data.
 - code: UGC_OC17
   selected_answer: 'yes'
-  notes: 'Telegram allows extracting temporary content from groups and channels while
+  notes: Telegram allows extracting temporary content from groups and channels while
     it is still available, even if those messages are configured with an auto-delete
     timer. The auto-delete feature only removes messages after the expiration time,
     but during their active period, they remain accessible through the API as [regular
-    messages](https://core.telegram.org/method/messages.getHistory) or [stories](https://core.telegram.org/api/stories).'
+    messages](https://core.telegram.org/method/messages.getHistory) or [stories](https://core.telegram.org/api/stories).
 - code: UGC_OC18
   selected_answer: 'yes'
-  notes: "Telegram's TDLib and core API allow the extraction of historical data without
-    any fixed time limitation, including content older than one year."
+  notes: Telegram's TDLib and core API allow the extraction of historical data without
+    any fixed time limitation, including content older than one year.
 - code: UGC_OC19
   selected_answer: 'yes'
-  notes: "Telegram's API — including TDLib and the core \"messages.*\" methods — does
+  notes: Telegram's API — including TDLib and the core "messages.*" methods — does
     not impose strict global rate limits that would prevent continuous extraction
-    of large message volumes, such as 10,000 publications in 24 hours."
+    of large message volumes, such as 10,000 publications in 24 hours.
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
-  notes: 'The same request was made five consecutive times and the same results were retrieved.'
+  notes: The same request was made five consecutive times and the same results were
+    retrieved.
 - code: UGC_OC21
   selected_answer: 'yes'
-  notes: 'Our tests showed that the API results are consistent with the parameters
-    and filters used in the requests.'
+  notes: Our tests showed that the API results are consistent with the parameters
+    and filters used in the requests.
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'yes'
-  notes: 'Based on tests carried out, requests to the Telegram API, made at different
+  notes: Based on tests carried out, requests to the Telegram API, made at different
     times and by different people, return consistent data with minimal variation,
-    except for publications that have been removed or made private.'
+    except for publications that have been removed or made private.
 - code: UGC_OC23
   selected_answer: 'no'
   notes: Telegram’s TDLib and core API do not provide any parameters or endpoints
     that allow filtering messages or posts by the publisher’s geographic location.
 - code: UGC_OC24
   selected_answer: 'no'
-  notes: "Telegram's TDLib and core API do not include any parameters or methods that
-    enable filtering data based on the language of message content."
+  notes: Telegram's TDLib and core API do not include any parameters or methods that
+    enable filtering data based on the language of message content.
 - code: UGC_OC25
   selected_answer: 'yes'
-  notes: "Telegram's API, including TDLib, supports filtering data by specific time
+  notes: Telegram's API, including TDLib, supports filtering data by specific time
     periods through parameters that control message retrieval ranges. The API method
-    \"SearchRequest\" accepts parameters such as \"min_date\" and \"max_date\", allowing
+    "SearchRequest" accepts parameters such as "min_date" and "max_date", allowing
     clients to retrieve messages within custom date or ID intervals. Similarly, TDLib's
-    [\"getChatHistory\"](https://core.telegram.org/method/messages.getHistory#parameters) method allows fetching messages before or after a given message
-    ID or timestamp, enabling temporal filtering. See also [Telethon messages.search documentation](https://tl.telethon.dev/methods/messages/search.html)."
+    ["getChatHistory"](https://core.telegram.org/method/messages.getHistory#parameters)
+    method allows fetching messages before or after a given message ID or timestamp,
+    enabling temporal filtering. See also [Telethon messages.search documentation](https://tl.telethon.dev/methods/messages/search.html).
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'yes'
-  notes: "Telegram's TDLib and core APIs support near-real-time extraction of newly
-    published content through methods like [messages.getHistory](https://core.telegram.org/method/messages.getHistory) and [getUpdates](https://core.telegram.org/bots/api#getupdates)."
+  notes: Telegram's TDLib and core APIs support near-real-time extraction of newly
+    published content through methods like [messages.getHistory](https://core.telegram.org/method/messages.getHistory)
+    and [getUpdates](https://core.telegram.org/bots/api#getupdates).

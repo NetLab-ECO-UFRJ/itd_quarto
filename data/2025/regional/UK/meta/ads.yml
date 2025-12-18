@@ -1,6 +1,5 @@
 metadata:
   platform: Meta
-  region_code: UK
   scope: ADS
   evaluation_date: 2025-11
 special-criteria_answers:
@@ -100,7 +99,7 @@ compliance_answers:
   notes: There is only one endpoint. Only one example of its usage is provided. It
     does not cover possible errors or details about using the possible parameters.
 - code: AD_OC22
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: No information about rate limits is available in the ad repository API documentation.
     Inside the answer to a FAQ there is a link to broader API documentation, which
     includes a page about rate limits, but it does not mention the ad repository.

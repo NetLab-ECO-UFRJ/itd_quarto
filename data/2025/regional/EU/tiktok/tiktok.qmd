@@ -2,6 +2,7 @@
 title: "TikTok"
 subtitle: "Platform Evaluation Report"
 ugc_answers_file: "data/2025/regional/EU/tiktok/ugc.yml"
+region_code: "EU"
 ---
 
 ```{python}
@@ -28,7 +29,7 @@ results_ugc = calculate_platform_score(
 
 ```
 
-**Region:** `{python} results_ugc['metadata'].get('region_code', 'N/A')`
+**Region:** EU
 
 **User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
 

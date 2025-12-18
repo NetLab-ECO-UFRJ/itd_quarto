@@ -1,6 +1,5 @@
 metadata:
   platform: Snapchat
-  region_code: EU
   scope: ADS
   evaluation_date: 2025-12
 special-criteria_answers:
@@ -126,7 +125,7 @@ compliance_answers:
     (although minimal) and the entire GUI is available in all 24 official languages
     of the EU.
 - code: AD_OC20
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: The Snapchat Ad Gallery API documentation does not appear to describe any
     deprecation strategies [[(Snapchat, n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 - code: AD_OC21
@@ -134,11 +133,11 @@ compliance_answers:
   notes: Detailed explanations are provided in the API documentation [[(Snapchat,
     n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 - code: AD_OC22
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: This information is not available in the API documentation [[(Snapchat, n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api);
 consistency_answers:
 - code: AD_OC23
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: Due to the limited functionality of both the GUI and API at the time of this
     assessment, this cannot be verified.
 - code: AD_OC24
@@ -155,7 +154,7 @@ relevance_answers:
   notes: Although the API and GUI allow filtering by time, due to the limited functionality
     of both the GUI and API at the time of this assessment, this cannot be verified.
 - code: AD_OC27
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: The API and GUI do not allow for filtering data by ad category.
 - code: AD_OC28
   selected_answer: 'no'

@@ -3,6 +3,7 @@ title: "Bluesky"
 subtitle: "Platform Evaluation Report"
 ugc_answers_file: "data/2025/global/bluesky/ugc.yml"
 ads_answers_file: "data/2025/global/bluesky/ads.yml"
+region_code: "GLOBAL"
 ---
 
 ```{python}
@@ -28,7 +29,7 @@ results_ugc, results_ads = load_platform_results(
 
 ```
 
-**Region:** `{python} results_ugc['metadata'].get('region_code', 'N/A')`
+**Region:** GLOBAL
 
 **User-generated transparency score:** `{python} format_score(results_ugc)`
 

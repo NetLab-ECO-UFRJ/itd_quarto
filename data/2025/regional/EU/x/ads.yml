@@ -1,6 +1,5 @@
 metadata:
   platform: X
-  region_code: EU
   scope: ADS
   evaluation_date: 2025-12
 special-criteria_answers:
@@ -162,19 +161,19 @@ compliance_answers:
   notes: The X Ad Repository documentation is only available in English ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency),
     [[X, n.d.]{.underline}](https://ads.twitter.com/ads-repository?ref=BTC)).
 - code: AD_OC20
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: The API documentation does not describe any deprecation strategies nor any
     changelogs or migration instructions ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC21
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: The API documentation does not detail any response formats ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC22
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: The API documentation does not detail any applicable rate or daily limits
     ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 consistency_answers:
 - code: AD_OC23
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: In principle, the GUI information should be reflected by the API, however,
     this cannot be confirmed due to a lack of access to the API at the time of this
     assessment as well as due to difficulties extracting any data from the GUI despite
@@ -197,7 +196,7 @@ relevance_answers:
     of this assessment as well as due to difficulties extracting any data from the
     GUI despite multiple attempts.
 - code: AD_OC27
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: The X Ad repository does not support filtering by ad category.
 - code: AD_OC28
   selected_answer: 'no'

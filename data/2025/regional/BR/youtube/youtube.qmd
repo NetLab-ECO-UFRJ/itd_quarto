@@ -3,6 +3,7 @@ title: "Youtube"
 subtitle: "Platform Evaluation Report"
 ugc_answers_file: "data/2025/global/youtube/ugc.yml"
 ads_answers_file: "data/2025/regional/BR/youtube/ads.yml"
+region_code: "BRAZIL"
 ---
 
 ```{python}
