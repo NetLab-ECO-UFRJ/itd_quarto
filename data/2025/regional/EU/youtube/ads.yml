@@ -1,0 +1,144 @@
+metadata:
+  platform: Google
+  region_code: EU
+  scope: ADS
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: full
+  notes: ''
+- code: AD_SC2
+  selected_answer: partial
+  notes: Google offers an Ads Transparency Center GUI, but its export functionality
+    is only available for political ads.
+- code: AD_SC3
+  selected_answer: full
+  notes: ''
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: full
+  notes: ''
+- code: AD_OC2
+  selected_answer: api
+  notes: ''
+- code: AD_OC3
+  selected_answer: gui
+  notes: The BigQuery Google Ads Transparency tables have ads metadata, but they have
+    no fields for the actual content of the ads other than an URL pointing to each
+    ad\'s page on the Google Ads Transparency Center.
+- code: AD_OC4
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC5
+  selected_answer: api
+  notes: The Ads Transparency Center GUI only allows data retrieval by advertiser
+    name or website.
+- code: AD_OC6
+  selected_answer: api
+  notes: ''
+- code: AD_OC7
+  selected_answer: 'no'
+  notes: Since the BigQuery tables for ad transparency have no fields for the actual
+    content of the ads, it is not possible to retrieve data from the platform by applying
+    search terms to the content of ads.
+- code: AD_OC8
+  selected_answer: 'no'
+  notes: Dates are provided without time and timezone information. Also, no currency
+    info is provided.
+completeness_answers:
+- code: AD_OC10
+  selected_answer: api
+  notes: There are fields regarding who paid for ad campaigns, but most of the time,
+    it seems the value is an empty string. In our 100 samples, only 9 had filled values.
+- code: AD_OC11
+  selected_answer: api
+  notes: The platform only shows the last exhibition date, not detailed information
+    on the period during which ads were served.
+- code: AD_OC12
+  selected_answer: api
+  notes: The data shows upper and lower bounds for ad views. No other engagement metric
+    is provided.
+- code: AD_OC13
+  selected_answer: api
+  notes: ''
+- code: AD_OC9
+  selected_answer: api
+  notes: The interface and the API disclose the advertiser's name, but there is no
+    URL associated with the advertiser.
+compliance_answers:
+- code: AD_OC14
+  selected_answer: api
+  notes: ''
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: There are no fields regarding AI usage for creating or modifying ads
+- code: AD_OC16
+  selected_answer: api
+  notes: ''
+- code: AD_OC17
+  selected_answer: api
+  notes: ''
+- code: AD_OC18
+  selected_answer: api
+  notes: ''
+- code: AD_OC19
+  selected_answer: gui
+  notes: The API documentation was not completely changed to the local language. Some
+    menu buttons and text headers were updated, but not the bulk of the content.
+- code: AD_OC20
+  selected_answer: 'yes'
+  notes: There is a dedicated section in the documentation for changes in the API,
+    which contains "announcements about new or updated features, bug fixes, known
+    issues and deprecated functionality". ([[Google, n.d]{.underline}](https://console.cloud.google.com/projectselector2/bigquery/settings/user?supportedpurview=project).)
+- code: AD_OC21
+  selected_answer: 'not_applicable'
+  notes: There are no potential errors flagged and no examples of data, apart from
+    ready-to-run sample queries.
+- code: AD_OC22
+  selected_answer: 'yes'
+  notes: Each user is able to process 1TB of BigQuery data each month. However, this
+    is not dedicated only to this dataset. It would consume the user's overall BigQuery
+    quota.
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'yes'
+  notes: ''
+- code: AD_OC24
+  selected_answer: gui
+  notes: We ran multiple parallel queries and confirmed that the results were consistent
+    and reproducible. However, it was not possible to evaluate cases in which content
+    had been deleted in the interim.
+- code: AD_OC25
+  selected_answer: gui
+  notes: We ran multiple parallel queries and confirmed that the results were consistent
+    with the parameters and filters used.
+relevance_answers:
+- code: AD_OC26
+  selected_answer: api
+  notes: ''
+- code: AD_OC27
+  selected_answer: api
+  notes: In the GUI, the platform only differentiates between political and non-political
+    ads.
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: Filtering only works at the country level.
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: Information is only available at the country level and above.
+- code: AD_OC31
+  selected_answer: 'no'
+  notes: It only specifies whether targeting criteria across multiple categories (demographic,
+    geolocation, contextual signals, customer lists, and topics of interest) were
+    used or not. It does not specify which settings were used.
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: The audience engagement metrics are provided in larger intervals than specified
+    in the question.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: There are no fields regarding ad spending.

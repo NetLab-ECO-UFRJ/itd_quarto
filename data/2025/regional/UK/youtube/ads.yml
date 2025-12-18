@@ -1,0 +1,134 @@
+metadata:
+  platform: Google
+  region_code: UK
+  scope: ADS
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: 'no'
+  notes: Google's Ads Transparency Center data is offered in a public dataset, accessible
+    via BigQuery. However, it does not include data for the UK.
+- code: AD_SC2
+  selected_answer: partial
+  notes: Google offers an Ads Transparency Center GUI, but its export functionality
+    is only available for political ads.
+- code: AD_SC3
+  selected_answer: 'no'
+  notes: ''
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: full
+  notes: Google's Ads Transparency Center (GUI) provides more detailed information
+    on political ads; however, it meets the criterion of providing information on
+    both active and inactive ads. It is possible to search and view ad content.
+- code: AD_OC2
+  selected_answer: gui
+  notes: ''
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: It is only possible to export political ads' data.
+- code: AD_OC4
+  selected_answer: 'no'
+  notes: There is no API.
+- code: AD_OC5
+  selected_answer: 'no'
+  notes: The Ads Transparency Center GUI only allows searching by advertiser name
+    or candidate name (for political ads). It is not possible to search for one specific
+    ad.
+- code: AD_OC6
+  selected_answer: gui
+  notes: ''
+- code: AD_OC7
+  selected_answer: 'no'
+  notes: The Ads Transparency Center GUI only allows searching by advertiser name
+    or candidate name (for political ads).
+- code: AD_OC8
+  selected_answer: 'no'
+  notes: When filtering by date, a note states that the data is based on Pacific Time
+    (PT). There is no such indication in the actual ad entries.
+completeness_answers:
+- code: AD_OC10
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC11
+  selected_answer: 'no'
+  notes: The interval in which the ads ran is only available for political ads. Other
+    categories only include the date when it was last shown.
+- code: AD_OC12
+  selected_answer: 'no'
+  notes: The only metric available is the number of views (as a range), but only for
+    political ads.
+- code: AD_OC13
+  selected_answer: gui
+  notes: However, this information is displayed only in the advertiser's profile,
+    not in the individual ad record.
+- code: AD_OC9
+  selected_answer: gui
+  notes: The interface discloses the page name and unique identifier, but there is
+    no URL associated with the advertiser.
+compliance_answers:
+- code: AD_OC14
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC16
+  selected_answer: gui
+  notes: ''
+- code: AD_OC17
+  selected_answer: gui
+  notes: ''
+- code: AD_OC18
+  selected_answer: gui
+  notes: ''
+- code: AD_OC19
+  selected_answer: gui
+  notes: ''
+- code: AD_OC20
+  selected_answer: 'not_applicable'
+  notes: There is no API.
+- code: AD_OC21
+  selected_answer: 'not_applicable'
+  notes: ''
+- code: AD_OC22
+  selected_answer: 'not_applicable'
+  notes: ''
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'not_applicable'
+  notes: ''
+- code: AD_OC24
+  selected_answer: gui
+  notes: ''
+- code: AD_OC25
+  selected_answer: gui
+  notes: ''
+relevance_answers:
+- code: AD_OC26
+  selected_answer: gui
+  notes: ''
+- code: AD_OC27
+  selected_answer: 'not_applicable'
+  notes: In the GUI, the only categories are political and non-political ads.
+- code: AD_OC28
+  selected_answer: 'no'
+  notes: The most specific geographic level is country.
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: The GUI platform doesn't provide any audience engagement metrics.
+- code: AD_OC31
+  selected_answer: 'no'
+  notes: Only for political ads.
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: Impressions are only available for political ads. Some intervals are greater
+    than specified by the question.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: Ad spending information is only available for political ads. Some intervals
+    are greater than specified by the question.
