@@ -1,0 +1,106 @@
+metadata:
+  platform: Tk
+  region_code: EU
+  scope: UGC
+  evaluation_date: 2025-12
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: 'researchers_only'
+  notes: ''
+- code: UGC_SC2
+  selected_answer: 'researchers_only'
+  notes: Yes, with a caveat that recent research has also found disparities in the
+    data which can be reliably extracted through the platform's API ([[AI Forensics,
+    2025]{.underline}](https://arxiv.org/abs/2506.09746)). This has been tested on
+    an example search but it did not verify every type of content which can be extracted
+    and all associated fields in an exhaustive manner.
+- code: UGC_SC3
+  selected_answer: 'researchers_only'
+  notes: ''
+- code: UGC_SC4
+  selected_answer: 'no'
+  notes: ''
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'no'
+  notes: ''
+- code: UGC_OC2
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC3
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC4
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC5
+  selected_answer: 'no'
+  notes: ''
+- code: UGC_OC6
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC7
+  selected_answer: 'yes'
+  notes: ''
+compliance_answers:
+- code: UGC_OC10
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC11
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC12
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC13
+  selected_answer: 'no'
+  notes: ''
+- code: UGC_OC14
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC15
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC8
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC9
+  selected_answer: 'yes'
+  notes: ''
+completeness_answers:
+- code: UGC_OC16
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC17
+  selected_answer: 'no'
+  notes: ''
+- code: UGC_OC18
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC19
+  selected_answer: 'yes'
+  notes: ''
+consistency_answers:
+- code: UGC_OC20
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC21
+  selected_answer: 'yes'
+  notes: ''
+relevance_answers:
+- code: UGC_OC22
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC23
+  selected_answer: 'yes'
+  notes: ''
+- code: UGC_OC24
+  selected_answer: 'no'
+  notes: ''
+- code: UGC_OC25
+  selected_answer: 'yes'
+  notes: ''
+timeliness_answers:
+- code: UGC_OC26
+  selected_answer: 'no'
+  notes: ''
