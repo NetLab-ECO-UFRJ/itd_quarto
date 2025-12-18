@@ -51,6 +51,11 @@ book:
         - data/2025/regional/BR/tiktok/tiktok.qmd
         - data/2025/regional/BR/x/x.qmd
         - data/2025/regional/BR/youtube/youtube.qmd
+    - part: "EU Assessments"
+      chapters:
+        - data/2025/regional/EU/pi/pinterest.qmd
+        - data/2025/regional/EU/snapchat/snapchat.qmd
+        - data/2025/regional/EU/x/x.qmd
     # - part: "UK Assessments"
     #   chapters:
     #     - data/2025/regional/UK/meta/meta.qmd

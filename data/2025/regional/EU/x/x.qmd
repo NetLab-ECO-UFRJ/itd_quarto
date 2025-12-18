@@ -2,7 +2,7 @@
 title: "X/Twitter"
 subtitle: "Platform Evaluation Report"
 ugc_answers_file: "data/2025/global/x/ugc.yml"
-ads_answers_file: "data/2025/regional/BR/x/ads.yml"
+ads_answers_file: "data/2025/regional/EU/x/ads.yml"
 ---
 
 ```{python}
@@ -22,19 +22,19 @@ from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
     ugc_file="data/2025/global/x/ugc.yml",
-    ads_file="data/2025/regional/BR/x/ads.yml",
+    ads_file="data/2025/regional/EU/x/ads.yml",
     year='2025'
 )
 
 ```
 
-**Region:** `{python} results_ugc['metadata'].get('region_code', 'N/A')`
+**Region:** `{python} results_ads['metadata'].get('region_code', 'N/A')`
 
 **User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
 
 **Advertising transparency score:** `{python} f"{results_ads['total_score']:.0f}"` / `{python} f"{results_ads['total_max']:.0f}"` (`{python} f"{results_ads['total_percentage']:.0f}"`%)
 
-## User-Generated Content 
+## User-Generated Content
 
 ```{python}
 #| label: ugc-summary-table
@@ -45,6 +45,13 @@ from utils.quarto_helpers import generate_summary_table
 generate_summary_table(results_ugc)
 ```
 
-## Advertising 
+## Advertising
 
-Not available.
+```{python}
+#| label: ads-summary-table
+#| echo: false
+#| output: asis
+
+from utils.quarto_helpers import generate_summary_table
+generate_summary_table(results_ads)
+```
