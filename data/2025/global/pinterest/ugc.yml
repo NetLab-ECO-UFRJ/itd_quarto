@@ -1,8 +1,8 @@
 metadata:
-  platform: Pi
-  region_code: EU
+  platform: Pinterest
+  region_code: GLOBAL
   scope: UGC
-  evaluation_date: 2025-12
+  evaluation_date: 2025-10
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'no'
@@ -58,17 +58,17 @@ compliance_answers:
   selected_answer: 'no'
   notes: '-'
 - code: UGC_OC8
-  selected_answer: 'no_or_not_applicable'
+  selected_answer: no_or_not_applicable
   notes: '-'
 - code: UGC_OC9
   selected_answer: 'no'
   notes: '-'
 completeness_answers:
 - code: UGC_OC16
-  selected_answer: 'not_applicable'
+  selected_answer: 'no'
   notes: '-'
 - code: UGC_OC17
-  selected_answer: 'not_applicable'
+  selected_answer: 'no'
   notes: '-'
 - code: UGC_OC18
   selected_answer: 'no'
