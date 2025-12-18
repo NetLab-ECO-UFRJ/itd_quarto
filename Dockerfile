@@ -22,10 +22,17 @@ COPY . .
 # Install Python dependencies with uv
 RUN uv sync --frozen
 
-# Render the Quarto book
-RUN uv run quarto render && \
-    ls -la /app/_output && \
-    test -f /app/_output/index.html || (echo "ERROR: Quarto render failed or index.html not found" && exit 1)
+# Debug: List files to verify _freeze is present
+RUN echo "=== Files in /app ===" && ls -la /app && \
+    echo "=== _freeze directory ===" && ls -la /app/_freeze || echo "_freeze not found"
+
+# Render the Quarto book with verbose output
+RUN echo "=== Starting quarto render ===" && \
+    uv run quarto render --verbose 2>&1 || (echo "=== QUARTO RENDER FAILED ===" && exit 1)
+
+# Verify output was created
+RUN ls -la /app/_output && \
+    test -f /app/_output/index.html || (echo "ERROR: index.html not found" && exit 1)
 
 # Production stage with nginx
 FROM nginx:alpine
