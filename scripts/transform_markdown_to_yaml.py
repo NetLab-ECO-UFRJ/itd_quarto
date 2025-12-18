@@ -228,7 +228,11 @@ class MarkdownToYAMLTransformer:
                 for answer in category_data:
                     if 'selected_answer' in answer:
                         value = answer['selected_answer']
-                        if value in ['yes', 'no', 'not_applicable']:
+                        # Convert 'yes' to boolean True so it matches question definitions
+                        if value == 'yes':
+                            answer['selected_answer'] = True
+                        # Quote 'no' and 'not_applicable' to keep them as strings
+                        elif value in ['no', 'not_applicable']:
                             answer['selected_answer'] = QuotedString(value)
 
         with open(output_file, 'w', encoding='utf-8') as f:
