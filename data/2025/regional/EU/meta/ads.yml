@@ -1,6 +1,6 @@
 metadata:
   platform: Meta
-  region_code: UK
+  region_code: EU
   scope: ADS
   evaluation_date: 2025-11
 special-criteria_answers:
@@ -9,7 +9,7 @@ special-criteria_answers:
   notes: ''
 - code: AD_SC2
   selected_answer: partial
-  notes: There is no export functionality.
+  notes: No export functionality.
 - code: AD_SC3
   selected_answer: full
   notes: ''
@@ -48,9 +48,9 @@ accessibility_answers:
     they are specified in standard ISO currency codes, not localized formatted strings.
 completeness_answers:
 - code: AD_OC10
-  selected_answer: 'no'
-  notes: Buyer information decoupled from page information is only available for political
-    and social issues ads.
+  selected_answer: gui
+  notes: Our API tests failed as that information was only available for political
+    ads.
 - code: AD_OC11
   selected_answer: api
   notes: ''
@@ -89,7 +89,7 @@ compliance_answers:
     terms are mentioned. It simply states that available ads will have the content
     of the ad creative, which is marked as subject to their Terms of Service.
 - code: AD_OC19
-  selected_answer: api
+  selected_answer: gui
   notes: You have to be logged in to change the language.
 - code: AD_OC20
   selected_answer: 'yes'
@@ -113,7 +113,8 @@ consistency_answers:
   notes: ''
 - code: AD_OC25
   selected_answer: api
-  notes: ''
+  notes: Filtering options are limited when dealing with ads that are not Political,
+    which are unavailable for the EU.
 relevance_answers:
 - code: AD_OC26
   selected_answer: api
@@ -124,22 +125,21 @@ relevance_answers:
     offered as a filter.
 - code: AD_OC28
   selected_answer: 'no'
-  notes: The API allows us to see filters using the different countries in the UK,
-    not more granular than that. Also includes some rows with missing data regarding
-    delivery by region.
+  notes: The API only allows segmentation lower than the country level on Political
+    ads, which are unavailable in the EU.
 accuracy_answers:
 - code: AD_OC29
   selected_answer: api
   notes: ''
 - code: AD_OC30
-  selected_answer: api
+  selected_answer: 'no'
   notes: ''
 - code: AD_OC31
   selected_answer: 'no'
   notes: Only age, gender, and geographic provided.
 - code: AD_OC32
   selected_answer: 'no'
-  notes: Only for political ads and not granular enough.
+  notes: Only for the Political category, which is unavailable.
 - code: AD_OC33
   selected_answer: 'no'
-  notes: Only for political ads and not granular enough.
+  notes: Only for the Political category, which is unavailable.
