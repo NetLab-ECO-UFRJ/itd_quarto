@@ -1,7 +1,7 @@
 ---
 title: "TikTok"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/regional/EU/tk/ugc.yml"
+ugc_answers_file: "data/2025/regional/EU/tiktok/ugc.yml"
 ---
 
 ```{python}
@@ -23,7 +23,7 @@ from utils.quarto_helpers import generate_summary_table
 results_ugc = calculate_platform_score(
     year='2025',
     question_type='ugc',
-    answers_file="data/2025/regional/EU/tk/ugc.yml"
+    answers_file="data/2025/regional/EU/tiktok/ugc.yml"
 )
 
 ```
