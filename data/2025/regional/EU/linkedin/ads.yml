@@ -1,7 +1,8 @@
 metadata:
   platform: Li
+  region_code: EU
   scope: ADS
-  evaluation_date: 2025-12
+  evaluation_date: 2025-11
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: full
@@ -78,15 +79,15 @@ compliance_answers:
     in English. It does not offer an option to change the language manually. When
     tested using a VPN, the language was not automatically changed.
 - code: AD_OC20
-  selected_answer: not_applicable
+  selected_answer: 'not_applicable'
   notes: The documentation does not include release notes or information about changes
     in the API.
 - code: AD_OC21
-  selected_answer: not_applicable
+  selected_answer: 'not_applicable'
   notes: There is only one endpoint. Only one example of its usage is provided. It
     does not cover possible errors or details about using the possible parameters.
 - code: AD_OC22
-  selected_answer: not_applicable
+  selected_answer: 'not_applicable'
   notes: No information about rate limits is available in the ad repository API documentation.
 consistency_answers:
 - code: AD_OC23
@@ -106,7 +107,7 @@ relevance_answers:
   selected_answer: api
   notes: ''
 - code: AD_OC27
-  selected_answer: not_applicable
+  selected_answer: 'not_applicable'
   notes: ''
 - code: AD_OC28
   selected_answer: 'no'
