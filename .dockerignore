@@ -5,7 +5,7 @@ agents/
 /.quarto/
 *_cache/
 *_files/
-_freeze/
+# _freeze/ - Keep this for Docker builds to avoid re-executing code
 
 # Python
 __pycache__/
