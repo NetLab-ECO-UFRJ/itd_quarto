@@ -1,8 +1,8 @@
 ---
-title: "LinkedIn"
+title: "Linkedin"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/regional/EU/li/ugc.yml"
-ads_answers_file: "data/2025/regional/EU/li/ads.yml"
+ugc_answers_file: "data/2025/regional/UK/linkedin/ugc.yml"
+ads_answers_file: "data/2025/regional/UK/linkedin/ads.yml"
 ---
 
 ```{python}
@@ -18,11 +18,11 @@ while not (project_root / 'utils').exists() and project_root != project_root.par
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from utils.quarto_helpers import load_platform_results
+from utils.quarto_helpers import load_platform_results, generate_summary_table
 
 results_ugc, results_ads = load_platform_results(
-    ugc_file="data/2025/regional/EU/li/ugc.yml",
-    ads_file="data/2025/regional/EU/li/ads.yml",
+    ugc_file="data/2025/regional/UK/linkedin/ugc.yml",
+    ads_file="data/2025/regional/UK/linkedin/ads.yml",
     year='2025'
 )
 
@@ -34,24 +34,16 @@ results_ugc, results_ads = load_platform_results(
 
 **Advertising transparency score:** `{python} f"{results_ads['total_score']:.0f}"` / `{python} f"{results_ads['total_max']:.0f}"` (`{python} f"{results_ads['total_percentage']:.0f}"`%)
 
-## User-Generated Content
+## User-Generated Content 
 
-```{python}
-#| label: ugc-summary-table
-#| echo: false
-#| output: asis
+Not available.
 
-from utils.quarto_helpers import generate_summary_table
-generate_summary_table(results_ugc)
-```
-
-## Advertising
+## Advertising 
 
 ```{python}
 #| label: ads-summary-table
 #| echo: false
 #| output: asis
 
-from utils.quarto_helpers import generate_summary_table
 generate_summary_table(results_ads)
 ```
