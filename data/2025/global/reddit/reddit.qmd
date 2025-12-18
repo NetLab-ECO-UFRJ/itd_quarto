@@ -1,9 +1,9 @@
 ---
 title: "Reddit"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/regional/BR/reddit/ugc.yml"
-ads_answers_file: "data/2025/regional/BR/reddit/ads.yml"
-region_code: "BRAZIL"
+ugc_answers_file: "data/2025/global/reddit/ugc.yml"
+ads_answers_file: "data/2025/global/reddit/ads.yml"
+region_code: "GLOBAL"
 ---
 
 ```{python}
@@ -22,14 +22,14 @@ if str(project_root) not in sys.path:
 from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
-    ugc_file="data/2025/regional/BR/reddit/ugc.yml",
-    ads_file="data/2025/regional/BR/reddit/ads.yml",
+    ugc_file="data/2025/global/reddit/ugc.yml",
+    ads_file="data/2025/global/reddit/ads.yml",
     year='2025'
 )
 
 ```
 
-**Region:** BRAZIL
+**Region:** GLOBAL
 
 **User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
 
