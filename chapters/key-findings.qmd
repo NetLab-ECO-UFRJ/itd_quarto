@@ -49,7 +49,9 @@ display(HTML(generate_legend()))
 
 ## Key Observations
 
-- **Global Coverage:** 7 platforms assessed globally (Bluesky, Discord, Kwai, Pinterest, Reddit, Snapchat, Telegram), with scores applying to all regions
-- **Regional Assessments:** Regional-specific assessments for LinkedIn (BR, EU, UK), Meta (BR, EU, UK), TikTok (BR, EU, UK), X (BR, EU, UK), and YouTube (BR, EU, UK)
-- **Missing Assessments:** Gray cells (—) indicate platform/region combinations that have not yet been assessed
+- **Global Coverage:** 6 platforms assessed globally (Bluesky, Discord, Kwai, Pinterest, Reddit, Telegram), with scores applying uniformly to all regions
+- **Regional Assessments:** Regional-specific assessments vary by platform and region:
+  - LinkedIn, Meta, X, YouTube: Assessed separately for BR, EU, and UK
+  - TikTok: Partial regional assessments (some region/framework combinations pending)
+- **Missing Assessments:** Gray cells (—) indicate platform/region combinations not yet assessed or where data is not applicable
 - **Score Distribution:** Scores reflect both the availability of data access mechanisms and the quality of documentation and compliance

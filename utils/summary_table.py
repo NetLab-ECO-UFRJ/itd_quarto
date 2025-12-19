@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Union
 from .scoring import calculate_platform_score
 
+GLOBAL_PLATFORMS = ['Bluesky', 'Discord', 'Kwai', 'Pinterest', 'Reddit', 'Telegram']
+
 
 def get_score_class(score: float) -> str:
     """
@@ -62,6 +64,9 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
     """
     Scan all assessment files and calculate scores.
 
+    Global platforms (Bluesky, Discord, Kwai, Pinterest, Reddit, Telegram)
+    always show the same score across all regions.
+
     Args:
         project_root: Project root directory
         scope: Either 'ugc' or 'ads'
@@ -69,55 +74,51 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
     Returns:
         Dictionary mapping platform names to region scores:
         {'Meta': {'BR': 45.2, 'EU': 38.7, 'UK': None}, ...}
-        Global assessments fill all regions with the same value.
-        Special cases may have 'N/A' string instead of numeric score.
     """
     regional_dir = project_root / 'data' / '2025' / 'regional'
     global_dir = project_root / 'data' / '2025' / 'global'
     regions = ['BR', 'EU', 'UK']
-
     results = {}
 
-    # Scan global assessments - fill all regions with the same value
+    def calculate_score(assessment_file: Path) -> Optional[float]:
+        """Helper to calculate score from assessment file."""
+        try:
+            result = calculate_platform_score(
+                year='2025',
+                question_type=scope,
+                answers_file=str(assessment_file.relative_to(project_root))
+            )
+            return round(result.get('total_score', 0.0), 1)
+        except Exception as e:
+            print(f"Warning: Failed to calculate score for {assessment_file}: {e}")
+            return None
+
+    # Scan global assessments
     if global_dir.exists():
         for platform_dir in global_dir.iterdir():
             if not platform_dir.is_dir():
                 continue
 
-            platform_name = platform_dir.name
-            platform_display = normalize_platform_name(platform_name)
+            platform_display = normalize_platform_name(platform_dir.name)
 
             if platform_display not in results:
                 results[platform_display] = {region: None for region in regions}
 
-            # Hardcoded rule: Bluesky Ads is always N/A
+            # Special case: Bluesky Ads is always N/A
             if platform_display == 'Bluesky' and scope == 'ads':
                 for region in regions:
                     results[platform_display][region] = 'N/A'
                 continue
 
             assessment_file = platform_dir / f'{scope}.yml'
-
             if assessment_file.exists():
-                try:
-                    result = calculate_platform_score(
-                        year='2025',
-                        question_type=scope,
-                        answers_file=str(assessment_file.relative_to(project_root))
-                    )
-
-                    score = result.get('total_score', 0.0)
-                    score_rounded = round(score, 1)
-
-                    # Fill all regions with the same global score
+                score = calculate_score(assessment_file)
+                if score is not None:
                     for region in regions:
-                        results[platform_display][region] = score_rounded
+                        results[platform_display][region] = score
 
-                except Exception as e:
-                    print(f"Warning: Failed to calculate score for {platform_display}/Global/{scope}: {e}")
-
-    # Scan regional assessments - these override global values if they exist
-    for region in ['BR', 'EU', 'UK']:
+    # Scan regional assessments
+    for region in regions:
         region_dir = regional_dir / region
         if not region_dir.exists():
             continue
@@ -126,28 +127,29 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
             if not platform_dir.is_dir():
                 continue
 
-            platform_name = platform_dir.name
-            platform_display = normalize_platform_name(platform_name)
+            platform_display = normalize_platform_name(platform_dir.name)
 
             if platform_display not in results:
                 results[platform_display] = {reg: None for reg in regions}
 
             assessment_file = platform_dir / f'{scope}.yml'
-
             if assessment_file.exists():
-                try:
-                    result = calculate_platform_score(
-                        year='2025',
-                        question_type=scope,
-                        answers_file=str(assessment_file.relative_to(project_root))
-                    )
+                score = calculate_score(assessment_file)
+                if score is not None:
+                    results[platform_display][region] = score
 
-                    score = result.get('total_score', 0.0)
-                    results[platform_display][region] = round(score, 1)
-
-                except Exception as e:
-                    print(f"Warning: Failed to calculate score for {platform_display}/{region}/{scope}: {e}")
-                    results[platform_display][region] = None
+    # Enforce global platforms have same score across all regions
+    for platform in GLOBAL_PLATFORMS:
+        if platform in results:
+            # Find first non-None score from any region
+            global_score = next(
+                (results[platform][r] for r in regions if results[platform][r] is not None),
+                None
+            )
+            # Apply to all regions
+            if global_score is not None:
+                for region in regions:
+                    results[platform][region] = global_score
 
     return results
 
