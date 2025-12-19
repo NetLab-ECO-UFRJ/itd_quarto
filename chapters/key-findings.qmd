@@ -82,11 +82,3 @@ Platforms with no transparency and data access measures despite framework applic
 :::
 
 :::
-
-## Key Observations
-
-- **Global Coverage:** 6 platforms assessed globally (Bluesky, Discord, Kwai, Pinterest, Reddit, Telegram), with scores applying uniformly to all regions
-- **Regional Assessments:** Regional-specific assessments vary by platform and region:
-  - LinkedIn, Meta, X, YouTube: Assessed separately for BR, EU, and UK
-  - TikTok: Partial regional assessments (some region/framework combinations pending)
-- **Missing Assessments:** Gray cells (—) indicate platform/region combinations not yet assessed or where data is not applicable
