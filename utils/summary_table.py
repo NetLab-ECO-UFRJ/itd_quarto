@@ -56,7 +56,7 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
     regional_dir = project_root / 'data' / '2025' / 'regional'
     global_dir = project_root / 'data' / '2025' / 'global'
 
-    platforms = ['Bluesky', 'Discord', 'Kwai', 'Telegram', 'Meta', 'YouTube', 'X', 'TikTok', 'LinkedIn', 'Pinterest', 'Snapchat']
+    platforms = ['Bluesky', 'Discord', 'Kwai', 'LinkedIn', 'Meta', 'Pinterest', 'Reddit', 'Snapchat', 'Telegram', 'TikTok', 'X', 'YouTube']
     regions = ['BR', 'EU', 'UK']
 
     results = {platform: {region: None for region in regions} for platform in platforms}
@@ -66,14 +66,15 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
         'bluesky': 'Bluesky',
         'discord': 'Discord',
         'kwai': 'Kwai',
-        'telegram': 'Telegram',
-        'meta': 'Meta',
-        'youtube': 'YouTube',
-        'x': 'X',
-        'tiktok': 'TikTok',
         'linkedin': 'LinkedIn',
+        'meta': 'Meta',
         'pinterest': 'Pinterest',
-        'snapchat': 'Snapchat'
+        'reddit': 'Reddit',
+        'snapchat': 'Snapchat',
+        'telegram': 'Telegram',
+        'tiktok': 'TikTok',
+        'x': 'X',
+        'youtube': 'YouTube'
     }
 
     # Scan global assessments - fill all regions with the same value
