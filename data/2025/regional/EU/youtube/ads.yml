@@ -89,7 +89,7 @@ compliance_answers:
   selected_answer: 'yes'
   notes: There is a dedicated section in the documentation for changes in the API,
     which contains "announcements about new or updated features, bug fixes, known
-    issues and deprecated functionality". ([[Google, n.d]{.underline}](https://console.cloud.google.com/projectselector2/bigquery/settings/user?supportedpurview=project).)
+    issues and deprecated functionality" ([Google Cloud Console](https://console.cloud.google.com/projectselector2/bigquery/settings/user?supportedpurview=project)).
 - code: AD_OC21
   selected_answer: 'not_applicable'
   notes: There are no potential errors flagged and no examples of data, apart from

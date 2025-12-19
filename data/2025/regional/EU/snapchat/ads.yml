@@ -6,7 +6,7 @@ special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
   notes: 'In the EU, Snapchat provides an Ads Gallery API for advertisements and commercial
-    content such as sponsored posts ([[Snapchat, n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/Introduction)).
+    content such as sponsored posts ([Snapchat documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/Introduction)).
     However, in practice, its functionality is limited and difficult to use. Despite
     multiple attempts by different researchers, the API could not be successfully
     tested and consistently returned a "too many requests" error. In principle, the
@@ -22,7 +22,7 @@ special-criteria_answers:
   selected_answer: partial
   notes: Snapchat provides access to the Snap Ads Gallery which appears to provide
     access to EU ads which were delivered in the last 12 months as well as live commercial
-    content ([[Snapchat, n.d.]{.underline}](https://adsgallery.snap.com)) . The option
+    content ([Snapchat Ads Gallery](https://adsgallery.snap.com)). The option
     to extract data from the GUI does not appear to exist. In practice, despite multiple
     searches using different advertiser snapchat IDs, including brands such as "Mcdonalds",
     "Dior" or "Mcdo\_France" using various country filters including individual countries
@@ -44,12 +44,12 @@ accessibility_answers:
 - code: AD_OC4
   selected_answer: 'no'
   notes: The Ads Library API does not provide a form of authentication and does not
-    rely on OAuth or other token-based access ([[Snapchat, n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+    rely on OAuth or other token-based access ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
     It does not offer a renewal mechanism to support continuous or long-running data
     access.
 - code: AD_OC5
   selected_answer: 'no'
-  notes: In principle, the Ad Gallery API provides the GET [[https://adsapi.snapchat.com/v1/ads\_library/ads/{ad\_id]{.underline}](https://adsapi.snapchat.com/v1/ads_library/ads/%7Bad_id)}
+  notes: In principle, the Ad Gallery API provides the GET `https://adsapi.snapchat.com/v1/ads_library/ads/{ad_id}`
     endpoint to retrieve data from a specific advertisement. In practice, the API
     does not yield any results due to a "too many requests" error.
 - code: AD_OC6
@@ -63,19 +63,18 @@ accessibility_answers:
   selected_answer: 'no'
   notes: The API and Ad Gallery documentation does not provide any details about the
     format of data provided and this cannot be verified via the API nor the GUI as
-    they do not appear to be functioning at the time of this assessment ([[Snapchat,
-    n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+    they do not appear to be functioning at the time of this assessment ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
 completeness_answers:
 - code: AD_OC10
   selected_answer: 'no'
   notes: The Ad Gallery and Ad Gallery API documentations do not mention providing
-    data about ads' funders ([[Snapchat, n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+    data about ads' funders ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
     This cannot be verified via the API nor the GUI as they do not appear to be functioning
     at the time of this assessment.
 - code: AD_OC11
   selected_answer: 'no'
   notes: The Ad Gallery and Ad Gallery API documentations appear to provide the "start
-    and end date" of advertisements on the GUI and via the API ([[Snapchat, n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+    and end date" of advertisements on the GUI and via the API ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
     However, this cannot be verified via the API nor the GUI as they do not appear
     to be functioning at the time of this assessment.
 - code: AD_OC12
@@ -92,7 +91,7 @@ completeness_answers:
   selected_answer: 'no'
   notes: The Ad Gallery and Ad Gallery API documentations do not provide any detailed
     explanation of the kind of data which could be visible on the GUI or extracted
-    via the API about advertisers beyond "advertiser name"([[Snapchat, n.d.]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+    via the API about advertisers beyond "advertiser name" ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
     This cannot be verified via the API nor the GUI as they do not appear to be functioning
     at the time of this assessment.
 compliance_answers:
@@ -112,13 +111,11 @@ compliance_answers:
   notes: The API and GUI are published in open access.
 - code: AD_OC17
   selected_answer: api
-  notes: The API documentation is clearly written and exemplified [[(Snapchat, n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api);
-    however, the GUI documentation is minimal and is provided on the landing page
-    [[(Snapchat, n.d]{.underline}](https://adsgallery.snap.com).)
+  notes: The API documentation is clearly written and exemplified ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api));
+    however, the GUI documentation is minimal and is provided on the [landing page](https://adsgallery.snap.com).
 - code: AD_OC18
   selected_answer: 'no'
-  notes: The terms of use are not linked in the API nor the GUI documentations [[(Snapchat,
-    n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
+  notes: The terms of use are not linked in the [API nor the GUI documentations](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 - code: AD_OC19
   selected_answer: gui
   notes: The API documentation is only available in English, however the GUI documentation
@@ -126,15 +123,14 @@ compliance_answers:
     of the EU.
 - code: AD_OC20
   selected_answer: not_applicable
-  notes: The Snapchat Ad Gallery API documentation does not appear to describe any
-    deprecation strategies [[(Snapchat, n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
+  notes: The Snapchat Ad Gallery [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) does not appear to describe any
+    deprecation strategies.
 - code: AD_OC21
   selected_answer: 'yes'
-  notes: Detailed explanations are provided in the API documentation [[(Snapchat,
-    n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
+  notes: Detailed explanations are provided in the [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 - code: AD_OC22
   selected_answer: not_applicable
-  notes: This information is not available in the API documentation [[(Snapchat, n.d.)]{.underline}](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api);
+  notes: This information is not available in the [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 consistency_answers:
 - code: AD_OC23
   selected_answer: not_applicable

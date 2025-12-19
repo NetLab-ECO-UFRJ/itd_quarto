@@ -9,7 +9,7 @@ special-criteria_answers:
   notes: ''
 - code: AD_SC2
   selected_answer: partial
-  notes: No data export functionality available. <https://www.linkedin.com/ad-library>
+  notes: No data export functionality available via the [LinkedIn Ad Library](https://www.linkedin.com/ad-library).
 - code: AD_SC3
   selected_answer: 'no'
   notes: ''
@@ -64,7 +64,7 @@ compliance_answers:
   notes: ''
 - code: AD_OC16
   selected_answer: api
-  notes: The API documentation is openly available at <https://www.linkedin.com/ad-library/api/ads>.
+  notes: The [API documentation](https://www.linkedin.com/ad-library/api/ads) is openly available.
     There is some open documentation for the GUI in the form of an FAQ.
 - code: AD_OC17
   selected_answer: api

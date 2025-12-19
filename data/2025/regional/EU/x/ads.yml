@@ -9,11 +9,11 @@ special-criteria_answers:
     in the European Union under Art. 40 of the Digital Services Act (DSA); however,
     access was not available at the time of assessment due to a pending request and
     the absence of a response from the platform., despite being requested within a
-    reasonable timeframe ([[X, n.d.]{.underline}](https://help.x.com/en/rules-and-policies/dsa-vetted-researchers)).
+    reasonable timeframe ([X documentation](https://help.x.com/en/rules-and-policies/dsa-vetted-researchers)).
     There appears to also be the possibility of accessing this Ad Repository via the
-    normal, non-researcher API tier ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)),
+    normal, non-researcher API tier ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)),
     therefore via the "Free" tier. However, this access is severely limited to 500
-    posts per month ([[X, n.d.]{.underline}](https://developer.x.com/en)) and is therefore
+    posts per month ([X documentation](https://developer.x.com/en)) and is therefore
     considered to be equivalent to partial availability.
 - code: AD_SC2
   selected_answer: partial
@@ -21,7 +21,7 @@ special-criteria_answers:
     of the Digital Services Act (DSA) of the EU. For ads served in the EU, this Ad
     Transparency center includes critical information about funding, targeting and
     reach as well as the opportunity to export this information in comma separated
-    values (CSV) format ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    values (CSV) format ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
     Partial availability is assessed due to the inability to extract data despite
     multiple attempts, even though the documentation indicates that such extraction
     should be possible in principle.
@@ -39,7 +39,7 @@ accessibility_answers:
 - code: AD_OC2
   selected_answer: api
   notes: The GUI is free but limited to ads delivered in the EU, while the API access
-    is free but is subject to approval from X under article 40 of the DSA ([[X, n.d.]{.underline}](https://docs.google.com/forms/d/e/1FAIpQLSdo0O-D6Kxa3cV4g1JLz2T_0Sk3hdEnTdv8dJmibagCnzJ7kg/viewform)).
+    is free but is subject to approval from X under article 40 of the DSA ([X documentation](https://docs.google.com/forms/d/e/1FAIpQLSdo0O-D6Kxa3cV4g1JLz2T_0Sk3hdEnTdv8dJmibagCnzJ7kg/viewform)).
 - code: AD_OC3
   selected_answer: 'no'
   notes: Theoretically, this could also be achieved via the GUI and the API; however,
@@ -50,7 +50,7 @@ accessibility_answers:
   selected_answer: 'no'
   notes: Theoretically, this could also be achieved via the Researcher API; however,
     this cannot be confirmed due to a lack of access at the of this assessment. This
-    does not appear to be possible via non-researcher access ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    does not appear to be possible via non-researcher access ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
     Moreover, currently, there is no publicly documented set of distinct rate limits
     for EU vetted researchers separate from standard X API developer rate limits,
     suggesting that the standard API limits may apply, meaning it may not always be
@@ -60,7 +60,7 @@ accessibility_answers:
   selected_answer: 'no'
   notes: The GUI does not support searching for specific advertisements using a unique
     identifier. This does not appear to be supported by the API access to the Ad Repository
-    ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC6
   selected_answer: 'no'
   notes: Theoretically, this could also be achieved via the GUI and the API; however,
@@ -82,7 +82,7 @@ completeness_answers:
   notes: 'The X Ads Transparency Center "includes the following: Advertiser, Funding
     Entity, the Advertiser''s Main Targeting Parameters for the advertisement, Impression,
     and Reach of Ad to provide transparency around advertisements on the platform"
-    ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
     Therefore, in principle, this could also be achieved via the GUI and the API alike;
     however, this cannot be confirmed due to a lack of access to the API at the time
     of this assessment as well as due to difficulties extracting any data from the
@@ -92,7 +92,7 @@ completeness_answers:
   notes: 'The X Ads Transparency Center "includes the following: Advertiser, Funding
     Entity, the Advertiser''s Main Targeting Parameters for the advertisement, Impression,
     and Reach of Ad to provide transparency around advertisements on the platform"
-    ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
     Therefore, in principle, this could also be achieved via the GUI and the API alike;
     however, this cannot be confirmed due to a lack of access to the API at the time
     of this assessment as well as due to difficulties extracting any data from the
@@ -102,7 +102,7 @@ completeness_answers:
   notes: 'The X Ads Transparency Center "includes the following: Advertiser, Funding
     Entity, the Advertiser''s Main Targeting Parameters for the advertisement, Impression,
     and Reach of Ad to provide transparency around advertisements on the platform"
-    ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
     Therefore, in principle, this could also be achieved via the GUI and the API alike;
     however, this cannot be confirmed due to a lack of access to the API at the time
     of this assessment as well as due to difficulties extracting any data from the
@@ -110,16 +110,16 @@ completeness_answers:
 - code: AD_OC13
   selected_answer: 'no'
   notes: The GUI nor the API are documented as indicating whether advertisers were
-    verified at the time their ads were served ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    verified at the time their ads were served ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
     Moreover, it is notable that, in general, X departs from online verification-labelling
     conventions by treating verification as a paid feature, making verification unusable
-    on the platform ([[EU Comission, 2024]{.underline}](https://ec.europa.eu/commission/presscorner/detail/en/ip_24_3761)).
+    on the platform ([EU Commission](https://ec.europa.eu/commission/presscorner/detail/en/ip_24_3761)).
 - code: AD_OC9
   selected_answer: gui
   notes: 'According to the official documentation, the X Ads Transparency Center "includes
     the following: Advertiser, Funding Entity, the Advertiser''s Main Targeting Parameters
     for the advertisement, Impression, and Reach of Ad to provide transparency around
-    advertisements on the platform" ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    advertisements on the platform" ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
     Therefore, in principle, this could also be achieved via the GUI and the API alike;
     however, this cannot be confirmed due to a lack of access to the API at the time
     of this assessment as well as due to difficulties extracting any data from the
@@ -142,7 +142,7 @@ compliance_answers:
 - code: AD_OC15
   selected_answer: 'no'
   notes: The GUI and the API do not indicate whether ad content was generated using
-    artificial intelligence ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    artificial intelligence ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC16
   selected_answer: api
   notes: Though minimal, the GUI and API documentation appears to be open access ([[X,
@@ -150,27 +150,27 @@ compliance_answers:
 - code: AD_OC17
   selected_answer: 'no'
   notes: The GUI and API documentation are very minimal and provide no examples nor
-    clear explanations about the fields provided ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    clear explanations about the fields provided ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC18
   selected_answer: 'no'
   notes: The X Ad Repository documentation does not include or link to its terms of
-    use ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency),
-    [[X, n.d.]{.underline}](https://ads.twitter.com/ads-repository?ref=BTC)).
+    use ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency),
+    [X documentation](https://ads.twitter.com/ads-repository?ref=BTC)).
 - code: AD_OC19
   selected_answer: 'no'
-  notes: The X Ad Repository documentation is only available in English ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency),
-    [[X, n.d.]{.underline}](https://ads.twitter.com/ads-repository?ref=BTC)).
+  notes: The X Ad Repository documentation is only available in English ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency),
+    [X documentation](https://ads.twitter.com/ads-repository?ref=BTC)).
 - code: AD_OC20
   selected_answer: not_applicable
   notes: The API documentation does not describe any deprecation strategies nor any
-    changelogs or migration instructions ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    changelogs or migration instructions ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC21
   selected_answer: not_applicable
-  notes: The API documentation does not detail any response formats ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+  notes: The API documentation does not detail any response formats ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC22
   selected_answer: not_applicable
   notes: The API documentation does not detail any applicable rate or daily limits
-    ([[X, n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 consistency_answers:
 - code: AD_OC23
   selected_answer: not_applicable

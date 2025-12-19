@@ -9,8 +9,8 @@ special-criteria_answers:
 - code: UGC_SC2
   selected_answer: researchers_only
   notes: Yes, with a caveat that recent research has also found disparities in the
-    data which can be reliably extracted through the platform's API ([[AI Forensics,
-    2025]{.underline}](https://arxiv.org/abs/2506.09746)). This has been tested on
+    data which can be reliably extracted through the platform's API ([AI Forensics,
+    2025](https://arxiv.org/abs/2506.09746)). This has been tested on
     an example search but it did not verify every type of content which can be extracted
     and all associated fields in an exhaustive manner.
 - code: UGC_SC3
