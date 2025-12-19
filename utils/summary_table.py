@@ -39,6 +39,25 @@ def get_score_class(score: float) -> str:
         return "score-irrelevant"
 
 
+def normalize_platform_name(platform_name: str) -> str:
+    """
+    Normalize platform directory name to display name.
+
+    Args:
+        platform_name: Directory name (lowercase)
+
+    Returns:
+        Display name with proper capitalization
+    """
+    special_cases = {
+        'x': 'X',
+        'tiktok': 'TikTok',
+        'youtube': 'YouTube',
+        'linkedin': 'LinkedIn'
+    }
+    return special_cases.get(platform_name.lower(), platform_name.title())
+
+
 def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Optional[Union[float, str]]]]:
     """
     Scan all assessment files and calculate scores.
@@ -55,27 +74,9 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
     """
     regional_dir = project_root / 'data' / '2025' / 'regional'
     global_dir = project_root / 'data' / '2025' / 'global'
-
-    platforms = ['Bluesky', 'Discord', 'Kwai', 'LinkedIn', 'Meta', 'Pinterest', 'Reddit', 'Snapchat', 'Telegram', 'TikTok', 'X', 'YouTube']
     regions = ['BR', 'EU', 'UK']
 
-    results = {platform: {region: None for region in regions} for platform in platforms}
-
-    # Normalize platform names
-    platform_mapping = {
-        'bluesky': 'Bluesky',
-        'discord': 'Discord',
-        'kwai': 'Kwai',
-        'linkedin': 'LinkedIn',
-        'meta': 'Meta',
-        'pinterest': 'Pinterest',
-        'reddit': 'Reddit',
-        'snapchat': 'Snapchat',
-        'telegram': 'Telegram',
-        'tiktok': 'TikTok',
-        'x': 'X',
-        'youtube': 'YouTube'
-    }
+    results = {}
 
     # Scan global assessments - fill all regions with the same value
     if global_dir.exists():
@@ -84,10 +85,10 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
                 continue
 
             platform_name = platform_dir.name
-            platform_display = platform_mapping.get(platform_name.lower(), platform_name.title())
+            platform_display = normalize_platform_name(platform_name)
 
-            if platform_display not in platforms:
-                continue
+            if platform_display not in results:
+                results[platform_display] = {region: None for region in regions}
 
             # Hardcoded rule: Bluesky Ads is always N/A
             if platform_display == 'Bluesky' and scope == 'ads':
@@ -126,10 +127,10 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
                 continue
 
             platform_name = platform_dir.name
-            platform_display = platform_mapping.get(platform_name.lower(), platform_name.title())
+            platform_display = normalize_platform_name(platform_name)
 
-            if platform_display not in platforms:
-                continue
+            if platform_display not in results:
+                results[platform_display] = {reg: None for reg in regions}
 
             assessment_file = platform_dir / f'{scope}.yml'
 
@@ -253,7 +254,7 @@ def generate_legend() -> str:
                 Transparency <em>ideal</em><br>(81 to 100 points)
             </td>
             <td style="padding: 12px; border: 1px solid #ddd;">
-                Platforms with efficient official solutions for data collection, including APIs and a data collection interface, with well-documented examples and no obstacles to scraping. They usually publish regular transparency reports detailing violations and removals at the request of the state in Brazil.
+                Platforms with efficient official solutions for data collection, including APIs and a data collection interface, with well-documented examples.
             </td>
         </tr>
         <tr>
@@ -261,7 +262,7 @@ def generate_legend() -> str:
                 Transparency <em>satisfactory</em><br>(61 to 80 points)
             </td>
             <td style="padding: 12px; border: 1px solid #ddd;">
-                Platforms that make data available without financial restrictions, but with limitations on the volume of data that can be requested and/or with quality problems, especially consistency. They publish transparency reports on their moderation actions in Brazil on a regular basis.
+                Platforms that make data available with limitations on the volume of data that can be requested and/or with quality problems, especially consistency. 
             </td>
         </tr>
         <tr>
@@ -269,7 +270,7 @@ def generate_legend() -> str:
                 Transparency <em>regular</em><br>(41 to 60 points)
             </td>
             <td style="padding: 12px; border: 1px solid #ddd;">
-                Platforms that present some measures of transparency and access to data, but with various limitations related to the type of content that can be accessed and the sample of the universe of public data that can be collected. In general, they publish transparency reports with moderation actions in Brazil, but without the expected detail.
+                Platforms that present some measures of transparency and access to data, but with various limitations related to the type of content that can be accessed and the sample of the universe of public data that can be collected. 
             </td>
         </tr>
         <tr>
@@ -277,7 +278,7 @@ def generate_legend() -> str:
                 Transparency <em>precarious</em><br>(21 to 40 points)
             </td>
             <td style="padding: 12px; border: 1px solid #ddd;">
-                Platforms that impose significant technical, operational and/or financial barriers to their data access measures, making monitoring unfeasible for most researchers and interested parties. They are also not in the habit of publishing periodic transparency reports on their content moderation actions in Brazil.
+                Platforms that impose significant technical, operational and/or financial barriers to their data access measures, making monitoring unfeasible for most researchers and interested parties. 
             </td>
         </tr>
         <tr>
@@ -285,7 +286,7 @@ def generate_legend() -> str:
                 Transparency <em>irrelevant or zero</em><br>(0 to 20 points)
             </td>
             <td style="padding: 12px; border: 1px solid #ddd;">
-                Platforms that don't invest in any transparency and data access measures. They receive few points thanks to the possibilities of data scraping, which are generally not officially allowed. They don't usually publish periodic transparency reports on their content moderation actions in Brazil.
+                Platforms that don't invest in any transparency and data access measures. 
             </td>
         </tr>
         <tr>
