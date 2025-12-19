@@ -296,15 +296,15 @@ def generate_legend() -> str:
         </tr>
         <tr>
             <td style="padding: 12px; background-color: #d62828; color: white; font-weight: 600; border: 1px solid #ddd;">
-                Transparency <em>irrelevant or zero</em><br>(0 to 20 points)
+                Not available<br>(0 to 20 points)
             </td>
             <td style="padding: 12px; border: 1px solid #ddd;">
-                Platforms that don't invest in any transparency and data access measures. 
+                Platforms with no transparency and data access measures. 
             </td>
         </tr>
         <tr>
             <td style="padding: 12px; background-color: #e0e0e0; color: #666; font-weight: 600; border: 1px solid #ddd; font-style: italic;">
-                Not Yet Assessed
+                Not Applicable (N/A)
             </td>
             <td style="padding: 12px; border: 1px solid #ddd;">
                 Platform has not been assessed yet or data is not available for this region.

@@ -18,13 +18,11 @@ if str(project_root) not in sys.path:
 
 ## Assessment Overview
 
-This chapter provides a comprehensive overview of transparency assessments across all evaluated platforms and regions. The tables below summarize the transparency scores for both User-Generated Content (UGC) and Advertising (Ads) data access, enabling quick comparison across platforms and geographic regions.
+The tables below summarize the transparency scores for both User-Generated Content (UGC) and Advertising (Ads) data access, enabling quick comparison across platforms and geographic regions.
 
 Each score ranges from 0 to 100 points, combining weighted evaluations of special criteria (75% weight) and other operational criteria (25% weight). Higher scores indicate greater transparency and data accessibility for researchers and the public.
 
 ## UGC (User-Generated Content) Assessments
-
-The table below shows transparency scores for accessing user-generated content data across platforms and regions:
 
 ```{python}
 from utils.summary_table import generate_summary_heatmap, generate_legend
@@ -33,9 +31,7 @@ from IPython.display import HTML, display
 display(HTML(generate_summary_heatmap('ugc')))
 ```
 
-## Ads (Advertising) Assessments
-
-The table below shows transparency scores for accessing advertising data across platforms and regions:
+## Ads Assessments
 
 ```{python}
 display(HTML(generate_summary_heatmap('ads')))
@@ -54,4 +50,3 @@ display(HTML(generate_legend()))
   - LinkedIn, Meta, X, YouTube: Assessed separately for BR, EU, and UK
   - TikTok: Partial regional assessments (some region/framework combinations pending)
 - **Missing Assessments:** Gray cells (—) indicate platform/region combinations not yet assessed or where data is not applicable
-- **Score Distribution:** Scores reflect both the availability of data access mechanisms and the quality of documentation and compliance
