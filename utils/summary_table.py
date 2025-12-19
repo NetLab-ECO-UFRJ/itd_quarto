@@ -214,7 +214,18 @@ def generate_summary_heatmap(scope: str) -> str:
     <tbody>
 '''
 
-    for platform, regions in scores.items():
+    # Calculate average score for each platform for sorting
+    def calculate_average(regions_dict):
+        numeric_scores = [
+            score for score in regions_dict.values()
+            if score is not None and score != 'N/A' and isinstance(score, (int, float))
+        ]
+        return sum(numeric_scores) / len(numeric_scores) if numeric_scores else -1
+
+    # Sort platforms by average score (descending)
+    sorted_platforms = sorted(scores.items(), key=lambda x: calculate_average(x[1]), reverse=True)
+
+    for platform, regions in sorted_platforms:
         html += f'        <tr>\n'
         html += f'            <td class="platform-name">{platform}</td>\n'
 
