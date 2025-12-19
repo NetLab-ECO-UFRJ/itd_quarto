@@ -2,12 +2,6 @@
 
 A Quarto-based research reporting system for evaluating social media platforms across multiple regions using a weighted scoring methodology.
 
-## Para fazer
-
-- add emojis to partial answers
-- import evaluations from the UK and the EU
-- Review scripts that calculate the score
-
 ## Project Structure
 
 TBC
