@@ -123,7 +123,7 @@ relevance_answers:
 - code: AD_OC28
   selected_answer: 'no'
   notes: The API allows us to see filters using the different countries in the UK,
-    not more granular than that. Also includes some rows with missing data regarding
+    not more granular than that. It also includes some rows with missing data regarding
     delivery by region.
 accuracy_answers:
 - code: AD_OC29
@@ -134,7 +134,7 @@ accuracy_answers:
   notes: ''
 - code: AD_OC31
   selected_answer: 'no'
-  notes: Only age, gender, and geographic provided.
+  notes: Only age, gender, and geographic data provided.
 - code: AD_OC32
   selected_answer: 'no'
   notes: Only for political ads and not granular enough.

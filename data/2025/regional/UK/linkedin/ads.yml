@@ -9,7 +9,7 @@ special-criteria_answers:
 - code: AD_SC2
   selected_answer: 'no'
   notes: 'Although LinkedIn has a graphic user interface where users can view ad content,
-    it is not possible to export it data. '
+    it is not possible to export its data.'
 - code: AD_SC3
   selected_answer: 'no'
   notes: 'In terms of inactive ads, it is possible to obtain data from ads with latestImpressionAt
@@ -42,10 +42,8 @@ accessibility_answers:
     or unique identifier.
 - code: AD_OC7
   selected_answer: 'no'
-  notes: 'We just  need to pass the parameter "keyword" through the API or search
-    through the API.
-
-    '
+  notes: 'It is only necessary to pass the parameter "keyword" through the API or search
+    through the GUI.'
 - code: AD_OC8
   selected_answer: 'no'
   notes: 'From the documentation: "All dates and timestamps are recorded in Coordinated
@@ -57,7 +55,7 @@ completeness_answers:
   notes: 'The platform provides data on the funder who paid for the ads. '
 - code: AD_OC11
   selected_answer: 'no'
-  notes: 'The response schema firstImpressionAt and latestImpressionAt only for EU
+  notes: 'The response schema includes firstImpressionAt and latestImpressionAt only for EU
     countries. Also, there is no information about data through the [GUI outside the
     EU](https://www.linkedin.com/help/lms/answer/a1620070).'
 - code: AD_OC12
@@ -70,8 +68,8 @@ completeness_answers:
     advertisers through the GUI.'
 - code: AD_OC9
   selected_answer: 'no'
-  notes: 'The platform provides the URLs of the LinkedIn’s pages or profiles of who
-    ran the ads.  and '
+  notes: 'The platform provides the URLs of the LinkedIn pages or profiles of who
+    ran the ads.'
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
@@ -84,18 +82,17 @@ compliance_answers:
     /api/ads, '
 - code: AD_OC15
   selected_answer: 'no'
-  notes: 'There are no mentions to AI anywhere from both API and GUI. /api/ads, '
+  notes: 'There are no mentions of AI anywhere from both API and GUI.'
 - code: AD_OC16
   selected_answer: 'no'
-  notes: 'It is possible to access the documentation without login. and '
+  notes: 'It is possible to access the documentation without login.'
 - code: AD_OC17
   selected_answer: 'no'
   notes: The documentation lacks explanations and references. There is only one example
     of response and it is for EU countries. /api/ads
 - code: AD_OC18
   selected_answer: 'no'
-  notes: 'There is no reference to the specific terms of use of the API API or GUI.
-    and '
+  notes: 'There is no reference to the specific terms of use of the API or GUI.'
 - code: AD_OC19
   selected_answer: 'no'
   notes: 'Both API documentation and GUI are available in Portuguese. However, it
@@ -111,12 +108,12 @@ compliance_answers:
     of the only endpoint available. /api/ads
 - code: AD_OC22
   selected_answer: 'no'
-  notes: There is no reference to the quota or rate limits on documentation. /api/ads
+  notes: There is no reference to the quota or rate limits in the documentation.
 consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
   notes: 'Although the data retrieved by the API is similar to what is displayed on
-    the GUI, the platform does not offer enough information and manners to properly
+    the GUI, the platform does not offer enough information and means to properly
     compare. The only relevant fields are about advertisers in response schema: advertiserName,
     advertiserUrl and adPayer, which are insufficient to compare data from API and
     GUI based on the OC''s requirements.
@@ -124,7 +121,7 @@ consistency_answers:
 
     The GUI search page shows a preview of each ad''s media and text, while the API
     returns no information whatsoever about each ad''s content, only its URL and advertiser
-    data'
+    data.'
 - code: AD_OC24
   selected_answer: 'no'
   notes: 'The results returned by the platform are reproducible from both API and
