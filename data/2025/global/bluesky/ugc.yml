@@ -20,7 +20,7 @@ special-criteria_answers:
     public user-generated content data.
 accessibility_answers:
 - code: UGC_OC1
-  selected_answer: 'no'
+  selected_answer: 'not_applicable'
   notes: 'This question is not applicable for Bluesky, because:
 
     * There is no specific authentication for researchers.
