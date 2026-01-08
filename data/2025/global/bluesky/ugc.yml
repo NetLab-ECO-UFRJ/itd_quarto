@@ -5,15 +5,15 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'yes'
-  notes: The platform offers an API for collecting all UGC data via the [get-posts](https://docs.bsky.app/docs/api/app-bsky-feed-get-posts)
-    and [get-author-feed](https://docs.bsky.app/docs/api/app-bsky-feed-get-author-feed)
+  notes: The platform offers an API for collecting all UGC data via the [`get-posts`](https://docs.bsky.app/docs/api/app-bsky-feed-get-posts)
+    and [`get-author-feed`](https://docs.bsky.app/docs/api/app-bsky-feed-get-author-feed)
     endpoints.
 - code: UGC_SC2
   selected_answer: 'yes'
   notes: 'All public content data can be extracted through the API. '
 - code: UGC_SC3
   selected_answer: 'yes'
-  notes: The platforms requires only a BlueSky account to access the API
+  notes: The platform requires only a Bluesky account to access the API
 - code: UGC_SC4
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for accessing or extracting
@@ -21,15 +21,10 @@ special-criteria_answers:
 accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'not_applicable'
-  notes: 'This question is not applicable for Bluesky, because:
-
-    * There is no specific authentication for researchers.
-
-    * There is no private accounts or posts at Bluesky
-
-    * There are no private groups or discussion forums at Bluesky. There are only
-    one-on-one messages on the platform and messages from the user can be retrieved
-    using the [AT Protocol DM API](https://atproto.blue/en/latest/dm.html).'
+  notes: This question is not applicable for Bluesky because there is no specific
+    authentication for researchers, there are no private accounts or posts, and there
+    are no private groups or discussion forums. There are only one-on-one messages
+    on the platform, which can be retrieved using the [`AT Protocol DM API`](https://atproto.blue/en/latest/dm.html).
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: Responses to requests to the platform API provide the expected data in an
@@ -40,13 +35,13 @@ accessibility_answers:
     be accessed easily only using standard login.
 - code: UGC_OC4
   selected_answer: 'yes'
-  notes: 'The platform offers an endpoint for extrating data from an individual publication. '
+  notes: 'The platform offers an endpoint for extracting data from an individual publication. '
 - code: UGC_OC5
   selected_answer: 'yes'
-  notes: 'The platform offers an endpoint for extrating data from an individual author. '
+  notes: 'The platform offers an endpoint for extracting data from an individual author. '
 - code: UGC_OC6
   selected_answer: 'yes'
-  notes: 'The platform offers an endpoint for extrating data based on search terms. '
+  notes: 'The platform offers an endpoint for extracting data based on search terms. '
 - code: UGC_OC7
   selected_answer: 'yes'
   notes: "The only type of data that fits the description is the timestamp, which\
@@ -54,19 +49,20 @@ accessibility_answers:
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'no'
-  notes: The Bluesky's official API lacks explanation about its methods. For exemple,
-    the [get-messages endpoint](https://docs.bsky.app/docs/api/chat-bsky-convo-get-messages)
-    has no explanation.
+  notes: The Bluesky's official API lacks explanation about its methods. For example,
+    the [`get-messages`](https://docs.bsky.app/docs/api/chat-bsky-convo-get-messages)
+    endpoint has no explanation.
 - code: UGC_OC11
   selected_answer: 'no'
   notes: Although Bluesky includes links to its [Terms of Service](https://bsky.social/about/support/tos),
     [Privacy Policy](https://bsky.social/about/support/privacy-policy), and [Copyright](https://bsky.social/about/support/copyright)
     policies, none are specific for API usage. There is also a [Developer Guidelines](https://docs.bsky.app/docs/support/developer-guidelines)
-    page, but it includes only "recomendations" to developers.
+    page, but it includes only "recommendations" to developers.
 - code: UGC_OC12
   selected_answer: 'yes'
   notes: There is a response scheme for all endpoints in the documentation, such as
-    the [get-profile endpoint](https://docs.bsky.app/docs/api/app-bsky-actor-get-profile).
+    the [`get-profile`](https://docs.bsky.app/docs/api/app-bsky-actor-get-profile)
+    endpoint.
 - code: UGC_OC13
   selected_answer: 'no'
   notes: The [API documentation](https://docs.bsky.app/docs/get-started) is available
@@ -77,8 +73,8 @@ compliance_answers:
 - code: UGC_OC15
   selected_answer: 'no'
   notes: The Bluesky API only provides a way for post authors to self-label their
-    content using the [SelfLabel definition](https://atproto.blue/en/latest/atproto/atproto_client.models.com.atproto.label.defs.html#atproto_client.models.com.atproto.label.defs.SelfLabel).
-    However, there is no specific label for AI-generated content.
+    content using the [`SelfLabel`](https://atproto.blue/en/latest/atproto/atproto_client.models.com.atproto.label.defs.html#atproto_client.models.com.atproto.label.defs.SelfLabel)
+    definition. However, there is no specific label for AI-generated content.
 - code: UGC_OC8
   selected_answer: no_or_not_applicable
   notes: We did not find a change log in official API documentation, only reference
@@ -106,7 +102,7 @@ completeness_answers:
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
-  notes: 'The same request was made five times imediately after another and the same
+  notes: 'The same request was made five times immediately after another and the same
     results were retrieved. '
 - code: UGC_OC21
   selected_answer: 'yes'
@@ -127,4 +123,4 @@ relevance_answers:
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'yes'
-  notes: 'Data can be extrated in near real time in Bluesky. '
+  notes: 'Data can be extracted in near real time in Bluesky. '
