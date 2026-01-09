@@ -1,0 +1,215 @@
+metadata:
+  platform: TikTok
+  region_code: UK
+  scope: ADS
+  evaluation_date: 2025-11
+special-criteria_answers:
+- code: AD_SC1
+  selected_answer: 'no'
+  notes: ''
+- code: AD_SC2
+  selected_answer: partial
+  notes: TikTok provides access to a Commercial Content Library for the UK. This is
+    a GUI for its repository of all ads that are running on TikTok including ads that
+    are not presently active or paused by the advertisers (TikTok, n.d.) However there
+    is no export functionality.
+- code: AD_SC3
+  selected_answer: 'no'
+  notes: 'Although ads which are not currently active are visible on the Commercial
+    Content Library, no ads can be extracted through the GUI. Moreover, the functionality
+    of the API could not be confirmed at the time of this assessment as access was
+    not obtained despite multiple requests.'
+accessibility_answers:
+- code: AD_OC1
+  selected_answer: full
+  notes: ''
+- code: AD_OC2
+  selected_answer: api
+  notes: ''
+- code: AD_OC3
+  selected_answer: 'no'
+  notes: The requested data cannot be extracted directly from the ad repository response
+    as there is no way to extract data from the GUI. The API provides a way to extract
+    data, however this has not been confirmed as access was not obtained at the time
+    of this assessment.
+- code: AD_OC4
+  selected_answer: 'yes'
+  notes: The TikTok Commercial Content API supports renewable authentication via short-lived
+    access tokens (TikTok, n.d.).
+- code: AD_OC5
+  selected_answer: 'no'
+  notes: Data from an individual ad can be retrieved from the platform according to
+    the API documentation (TikTok, n.d.) ; however this has not been confirmed due
+    to lack of access to the API at the time of this assessment.
+- code: AD_OC6
+  selected_answer: 'no'
+  notes: Data from ads served by a specific advertiser can be retrieved from the platform
+    according to the API documentation by using the “advertiser\_business\_ids” filter
+    (TikTok, n.d.); however this has not been confirmed due to lack of access to the
+    API at the time of this assessment. There is no export functionality on the GUI,
+    though this information can be queried and viewed online.
+- code: AD_OC7
+  selected_answer: 'no'
+  notes: Data from ads filtered using search terms can be retrieved from the platform
+    according to the API documentation by using the “search\_term” filter (TikTok,
+    n.d.); however this has not been confirmed due to lack of access to the API at
+    the time of this assessment. There is no export functionality on the GUI, though
+    this information can be queried and viewed online.
+- code: AD_OC8
+  selected_answer: api
+  notes: Based on a review of the API documentation, this API employs locale-neutral
+    representation; however this has not been confirmed due to lack of access to the
+    API at the time of this assessment. The GUI also provides dates and country information
+    in a locale-neutral manner.
+completeness_answers:
+- code: AD_OC10
+  selected_answer: gui
+  notes: The GUI provides the funders’ name; however no data can be extracted from
+    the platform via the GUI. However, in some observed instances, the funder’s name
+    was not provided; however a string of numbers was instead provided, appearing
+    to be a business ID instead of a company’s name (e.g., An ad example linked here).
+    There is no way to find out which company corresponds to this ID using the search
+    function available on the GUI. According to the documentation, the API should
+    provide data regarding an ad’s funder via the “advertiser.paid\_for\_by” field.
+    However, this has not been confirmed due to lack of access to the API at the time
+    of this assessment.
+- code: AD_OC11
+  selected_answer: gui
+  notes: The GUI provides data on the period during which ads were served; however
+    no data can be extracted from the platform via the GUI. According to the documentation,
+    the API should provide data regarding when an ad was served via the “ad.first\_shown\_date”
+    and the “ad.last\_shown\_date” fields. However, this has not been confirmed due
+    to lack of access to the API at the time of this assessment.
+- code: AD_OC12
+  selected_answer: gui
+  notes: 'The GUI provides limited data on user engagement: it provides how many unique
+    users have seen an ad (however the ranges are quite broad, including anywhere
+    from “0-1k”) as well as the “Target audience size” which is “an estimate of how
+    many users meet the targeting and ad placement criteria that advertisers select
+    when creating their ad campaign”. Moreover, no data can be extracted from the
+    platform via the GUI. According to the documentation, the API should provide data
+    regarding the ad reach via the “unique\_users\_seen” field. However, this has
+    not been confirmed due to lack of access to the API at the time of this assessment.'
+- code: AD_OC13
+  selected_answer: gui
+  notes: This information is visible on the GUI as a blue tick next to the advertiser’s
+    name and logo. However when an advertiser’s TikTok profile is not linked, this
+    information is not available, such as when an advertiser is simply named and no
+    link is provided. This information cannot be extracted from the GUI. According
+    to the API documentation, the API does not provide data regarding whether an advertiser
+    is verified or not.
+- code: AD_OC9
+  selected_answer: gui
+  notes: 'The GUI provides partial data: it provides the advertiser’s name; however
+    no unique identifier is visible and the URL is not always available: when it is,
+    it is clickable and not immediately obvious to the user. No data can be extracted
+    from the platform via the GUI. According to the documentation, the API should
+    provide data regarding the business name and business id. However, this has not
+    been confirmed due to lack of access to the API at the time of this assessment.'
+compliance_answers:
+- code: AD_OC14
+  selected_answer: gui
+  notes: 'According to the documentation, on the GUI “Note: Some ads may display a
+    label that indicates it was removed because of a violation of our terms.” These
+    ads are not viewable, but some details may be visible, “such as the number of
+    unique users who have seen the ad at least once, or the targeting summary.” (TikTok,
+    n.d.). This information cannot be extracted from the GUI. According to the documentation,
+    the API provides data regarding an ad’s moderation or rejections via the “rejection\_info”
+    field which provides details such as “reasons” (the reason that an ad has been
+    rejected), “affected\_countries” (the affected regions where the listed rejection
+    reasons may apply), “reporting\_source” (the reporting or detection source, where
+    applicable), and “automated\_notice” (whether the moderation decision relied on
+    automated measures). However, this has not been confirmed due to lack of access
+    to the API at the time of this assessment.'
+- code: AD_OC15
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC16
+  selected_answer: api
+  notes: The API documentation (TikTok, n.d.) and the GUI documentation (TikTok, n.d.)
+    are openly available without requiring user registration or login information.
+- code: AD_OC17
+  selected_answer: api
+  notes: The API documentation (TikTok, n.d.) and the GUI documentation (TikTok, n.d.)
+    are clearly written and exemplified.
+- code: AD_OC18
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC19
+  selected_answer: api
+  notes: The API and GUI documentations are provided in English, the official language
+    of the UK.
+- code: AD_OC20
+  selected_answer: 'yes'
+  notes: The Commercial API is documented in the API documentation changelog (TikTok,
+    n.d.).
+- code: AD_OC21
+  selected_answer: 'yes'
+  notes: ''
+- code: AD_OC22
+  selected_answer: 'not_applicable'
+  notes: The quote or rate limits are not detailed in the API documentation.
+consistency_answers:
+- code: AD_OC23
+  selected_answer: 'not_applicable'
+  notes: This cannot be verified due to lack of access to the API at the time of this
+    assessment.
+- code: AD_OC24
+  selected_answer: gui
+  notes: This cannot be verified for the API due to lack of access at the time of
+    this assessment.
+- code: AD_OC25
+  selected_answer: gui
+  notes: This cannot be verified for the API due to lack of access at the time of
+    this assessment.
+relevance_answers:
+- code: AD_OC26
+  selected_answer: gui
+  notes: The GUI allows filtering data by the time period in which the ads were served;
+    however no data can be extracted from the platform via the GUI. According to the
+    documentation, the API should provide data regarding when an ad was served via
+    the “ad.first\_shown\_date” and the “ad.last\_shown\_date” fields. However, this
+    has not been confirmed due to lack of access to the API at the time of this assessment.
+- code: AD_OC27
+  selected_answer: 'not_applicable'
+  notes: Neither the GUI nor the API allow filtering by ad category.
+- code: AD_OC28
+  selected_answer: gui
+  notes: The GUI allows filtering data by geographical location; however no data can
+    be extracted from the platform via the GUI. According to the documentation, the
+    API should provide geographical location via the “country\_code” field. However,
+    this has not been confirmed due to lack of access to the API at the time of this
+    assessment.
+accuracy_answers:
+- code: AD_OC29
+  selected_answer: gui
+  notes: The GUI provides data on the age and gender of audiences reached; however
+    no data can be extracted from the platform via the GUI. According to the documentation,
+    the API should provide geographical location via the “targeting\_info” field which
+    provides information on gender and age. However, this has not been confirmed due
+    to lack of access to the API at the time of this assessment.
+- code: AD_OC30
+  selected_answer: 'no'
+  notes: ''
+- code: AD_OC31
+  selected_answer: gui
+  notes: The GUI provides information about additional targeting criteria such as
+    being part of a specific “audience” specified by the advertiser, sharing a specific
+    “interest”, having had specific “video interactions” or “creator interactions”.
+    According to the documentation, the API should provide targeting criteria defined
+    by advertisers via the “targeting\_info” field which provides information on whether
+    a user is part of an audience list uploaded by the advertiser, whether a user
+    has interacted with a video from a category provided by the advertiser, whether
+    a user followed or viewed creators from a specified category or whether the user
+    is grouped into a list of interests specified by the advertiser. However, this
+    has not been confirmed due to lack of access to the API at the time of this assessment.
+- code: AD_OC32
+  selected_answer: 'no'
+  notes: The GUI does not provide granular volume ranges for ad impressions. The ranges
+    observed on the GUI can go from “0-1K”, “10k-100k” and “300K-400K”. However, this
+    information is not available in the API documentation and this cannot be verified
+    through the API due to lack of access at the time of this assessment.
+- code: AD_OC33
+  selected_answer: 'no'
+  notes: No advertising expenditure information is provided through either the GUI
+    or the API.
