@@ -1,5 +1,6 @@
 metadata:
-  platform: Tk
+  platform: TikTok
+  region_code: EU
   scope: UGC
   evaluation_date: 2025-12
 special-criteria_answers:
