@@ -32,8 +32,7 @@ accessibility_answers:
     using the [AT Protocol DM API](https://atproto.blue/en/latest/dm.html).'
 - code: UGC_OC2
   selected_answer: 'yes'
-  notes: Responses to requests to the platform API provide the expected data in an
-    appropriate format, without requiring redirection.
+  notes: Platform API responses provide the expected data in an appropriate format without requiring redirection.
 - code: UGC_OC3
   selected_answer: 'yes'
   notes: Actually, Bluesky does not requires tokens to use the API. Everything can
