@@ -104,8 +104,8 @@ completeness_answers:
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
-  notes: 'The same request was made five times imediately after another and the same
-    results were retrieved. '
+  notes: 'The same request was made five times immediately after the other, 
+    and the same results were retrieved. '
 - code: UGC_OC21
   selected_answer: 'yes'
   notes: 'All results are coherent considering the query. '
