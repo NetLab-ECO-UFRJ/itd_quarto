@@ -121,7 +121,7 @@ relevance_answers:
   notes: 'Bluesky allows filtering based on language. '
 - code: UGC_OC25
   selected_answer: 'yes'
-  notes: 'Bluesky allows filtering based on data. '
+  notes: 'Bluesky allows filtering based on specific time periods. '
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'yes'
