@@ -47,8 +47,8 @@ accessibility_answers:
   notes: 'The platform offers an endpoint for extrating data based on search terms. '
 - code: UGC_OC7
   selected_answer: 'yes'
-  notes: "The only type of data that fits the description is the timestamp, which\
-    \ comes in isoformat with microseconds and standardized to UTC. \n"
+  notes: "The only type of data that fits the description is the timestamp, formatted\
+    \ according to ISO 8601 with microsecond precision and standardized to UTC. \n"
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'no'
