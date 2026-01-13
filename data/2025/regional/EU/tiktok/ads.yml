@@ -18,10 +18,10 @@ special-criteria_answers:
     However there is no export functionality.
 - code: AD_SC3
   selected_answer: 'no'
-  notes: 'Although ads which are not currently active are visible on the Commercial
+  notes: Although ads which are not currently active are visible on the Commercial
     Content Library, no ads can be extracted through the GUI. Moreover, the functionality
     of the API could not be confirmed at the time of this assessment as access was
-    not obtained despite multiple requests. ## OTHER CRITERIA'
+    not obtained despite multiple requests.
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
@@ -151,11 +151,11 @@ compliance_answers:
   selected_answer: 'yes'
   notes: ''
 - code: AD_OC22
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: The quote or rate limits are not detailed in the API documentation.
 consistency_answers:
 - code: AD_OC23
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: This cannot be verified due to lack of access to the API at the time of this
     assessment.
 - code: AD_OC24
@@ -175,7 +175,7 @@ relevance_answers:
     the “ad.first\_shown\_date” and the “ad.last\_shown\_date” fields. However, this
     has not been confirmed due to lack of access to the API at the time of this assessment.
 - code: AD_OC27
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: Neither the GUI nor the API allow filtering by ad category.
 - code: AD_OC28
   selected_answer: gui

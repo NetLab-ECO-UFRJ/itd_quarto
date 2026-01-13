@@ -9,7 +9,7 @@ special-criteria_answers:
   notes: ''
 - code: AD_SC2
   selected_answer: partial
-  notes: No data export functionality available. <https://www.linkedin.com/ad-library>
+  notes: No data export functionality available via the [LinkedIn Ad Library](https://www.linkedin.com/ad-library).
 - code: AD_SC3
   selected_answer: 'no'
   notes: ''
@@ -64,8 +64,8 @@ compliance_answers:
   notes: ''
 - code: AD_OC16
   selected_answer: both
-  notes: The API documentation is openly available at <https://www.linkedin.com/ad-library/api/ads>.
-    There is some open documentation for the GUI in the form of an FAQ.
+  notes: The [API documentation](https://www.linkedin.com/ad-library/api/ads) is openly
+    available. There is some open documentation for the GUI in the form of an FAQ.
 - code: AD_OC17
   selected_answer: api
   notes: The documentation includes only one example of a query and response flow.
@@ -79,15 +79,15 @@ compliance_answers:
     in English. It does not offer an option to change the language manually. When
     tested using a VPN, the language was not automatically changed.
 - code: AD_OC20
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: The documentation does not include release notes or information about changes
     in the API.
 - code: AD_OC21
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: There is only one endpoint. Only one example of its usage is provided. It
     does not cover possible errors or details about using the possible parameters.
 - code: AD_OC22
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: No information about rate limits is available in the ad repository API documentation.
 consistency_answers:
 - code: AD_OC23
@@ -107,7 +107,7 @@ relevance_answers:
   selected_answer: both
   notes: ''
 - code: AD_OC27
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: ''
 - code: AD_OC28
   selected_answer: 'no'

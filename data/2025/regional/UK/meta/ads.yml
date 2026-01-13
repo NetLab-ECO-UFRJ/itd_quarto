@@ -26,7 +26,7 @@ accessibility_answers:
 - code: AD_OC4
   selected_answer: 'yes'
   notes: The platform's ad repository API allows renewals of tokens without the risk
-    of data loss. ([[Meta, n.d]{.underline}](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens).)
+    of data loss ([Meta documentation](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens)).
 - code: AD_OC5
   selected_answer: 'no'
   notes: ''
@@ -73,7 +73,7 @@ compliance_answers:
 - code: AD_OC15
   selected_answer: 'no'
   notes: While Meta automatically labels ads that use Meta's internal AI creative
-    tools when they appear [[(Meta, n.d]{.underline}](https://www.meta.com/en-gb/help/artificial-intelligence/355108217670024/?srsltid=AfmBOorflhUZfITM_Eo_gMXEsc5VeJYtFXi7zcKGSiXM1sNTuniYzyVs&utm_source=chatgpt.com).),
+    tools when they appear ([Meta Help Center](https://www.meta.com/en-gb/help/artificial-intelligence/355108217670024/?srsltid=AfmBOorflhUZfITM_Eo_gMXEsc5VeJYtFXi7zcKGSiXM1sNTuniYzyVs&utm_source=chatgpt.com)),
     Meta does not officially have a policy on whether or how this is labelled within
     their Ad Library.
 - code: AD_OC16
@@ -93,14 +93,14 @@ compliance_answers:
   notes: You have to be logged in to change the language.
 - code: AD_OC20
   selected_answer: 'yes'
-  notes: 'Updates are described in the release notes, and include future deprecations:
-    https://www.facebook.com/ads/library/api/releasenotes'
+  notes: Updates are described in the [release notes](https://www.facebook.com/ads/library/api/releasenotes),
+    and include future deprecations.
 - code: AD_OC21
   selected_answer: 'yes'
   notes: There is only one endpoint. Only one example of its usage is provided. It
     does not cover possible errors or details about using the possible parameters.
 - code: AD_OC22
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: No information about rate limits is available in the ad repository API documentation.
     Inside the answer to a FAQ there is a link to broader API documentation, which
     includes a page about rate limits, but it does not mention the ad repository.
@@ -125,7 +125,7 @@ relevance_answers:
 - code: AD_OC28
   selected_answer: 'no'
   notes: The API allows us to see filters using the different countries in the UK,
-    not more granular than that. Also includes some rows with missing data regarding
+    not more granular than that. It also includes some rows with missing data regarding
     delivery by region.
 accuracy_answers:
 - code: AD_OC29
@@ -136,7 +136,7 @@ accuracy_answers:
   notes: ''
 - code: AD_OC31
   selected_answer: 'no'
-  notes: Only age, gender, and geographic provided.
+  notes: Only age, gender, and geographic data provided.
 - code: AD_OC32
   selected_answer: 'no'
   notes: Only for political ads and not granular enough.
