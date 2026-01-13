@@ -8,7 +8,7 @@ special-criteria_answers:
   notes: All ads can be extracted from the API.
 - code: AD_SC2
   selected_answer: 'no'
-  notes: 'Although LinkedIn has a graphic user interface where users can view ad content,
+  notes: 'Although LinkedIn provides a graphical user interface where users can view ad content,
     it is not possible to export its data.'
 - code: AD_SC3
   selected_answer: 'no'
