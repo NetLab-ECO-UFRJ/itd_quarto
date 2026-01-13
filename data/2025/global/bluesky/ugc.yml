@@ -95,8 +95,7 @@ completeness_answers:
   notes: 'It is possible to extract historical data through the API. '
 - code: UGC_OC19
   selected_answer: 'yes'
-  notes: 'During our tests, we were able to obtain almost 10,000 (over 9,900) publications
-    in only five minutes. '
+  notes: 'We were able to obtain over 10,000 publications in less than ten minutes. '
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
