@@ -97,6 +97,9 @@ accessibility:
       ad repository.
     weight: 1.0
     answers:
+      - value: both
+        label: "Free API and GUI access"
+        weight: 1.0
       - value: api
         label: "Free API access"
         weight: 0.5
@@ -120,6 +123,9 @@ accessibility:
       is included in the returned payload.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -161,6 +167,9 @@ accessibility:
       be retrieved directly by its unique identifier.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -182,6 +191,9 @@ accessibility:
       available feature to retrieve data from an individual advertiser.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -203,6 +215,9 @@ accessibility:
       using keywords.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -225,6 +240,9 @@ accessibility:
       standardized formats or accompanying metadata.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -247,6 +265,9 @@ completeness:
       retrieved.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -267,6 +288,9 @@ completeness:
       identified ads. The assessment should confirm whether any sponsor information is retrievable.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -288,6 +312,9 @@ completeness:
       temporal markers) indicating the period of activity.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -309,6 +336,9 @@ completeness:
       engagement metrics are available and clearly linked to each ad.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -329,6 +359,9 @@ completeness:
       ads were served. The assessment should review ad records to confirm that a verification status field is present.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -351,6 +384,9 @@ compliance:
       moderated ads are flagged and that the corresponding moderation details are clearly documented.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -372,6 +408,9 @@ compliance:
       production.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -393,6 +432,9 @@ compliance:
       directly to confirm that it is fully available without authentication barriers.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, both API and GUI documentation"
+        weight: 1.0
       - value: api
         label: "Yes, the API documentation"
         weight: 0.5
@@ -414,6 +456,9 @@ compliance:
       detailed explanations, structured references, and sample queries or outputs illustrating correct use.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, both API and GUI documentation"
+        weight: 1.0
       - value: api
         label: "Yes, the API documentation"
         weight: 0.5
@@ -435,6 +480,9 @@ compliance:
       that explicit terms or references are provided and accessible.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, both API and GUI documentation"
+        weight: 1.0
       - value: api
         label: "Yes, the API documentation"
         weight: 0.5
@@ -456,6 +504,9 @@ compliance:
       versions are available in those languages.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, both API and GUI documentation"
+        weight: 1.0
       - value: api
         label: "Yes, the API documentation"
         weight: 0.5
@@ -553,6 +604,9 @@ consistency:
       This item verifies whether data accessed and extracted via the platform’s ad repository at a given time is consistent with other collections performed similarly. The assessment should perform repeated queries to confirm the reproducibility of results or ground the response based on recent (less than 2 years) experiments published in peer-reviewed journals.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -574,6 +628,9 @@ consistency:
       confirm that results consistently match the requested conditions.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -596,6 +653,9 @@ relevance:
       specified date ranges.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -617,6 +677,9 @@ relevance:
       selected classifications.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -638,6 +701,9 @@ relevance:
       specified areas.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -659,6 +725,9 @@ accuracy:
       should review the ad records to confirm that these breakdowns are available and consistently reported.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -680,6 +749,9 @@ accuracy:
       consistently reported.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -702,6 +774,9 @@ accuracy:
       consistently reported.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -727,6 +802,9 @@ accuracy:
       platform's documentation or available data interfaces.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5
@@ -751,6 +829,9 @@ accuracy:
       value ranges using the platform's documentation or available data interfaces.
     weight: 1.0
     answers:
+      - value: both
+        label: "Yes, through both GUI and API"
+        weight: 1.0
       - value: gui
         label: "Yes, through the GUI"
         weight: 0.5

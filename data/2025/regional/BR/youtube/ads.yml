@@ -106,19 +106,19 @@ compliance_answers:
   selected_answer: 'no'
   notes: There is no indication that AI-generated content is labeled in the ad repository.
 - code: AD_OC16
-  selected_answer: 'no'
+  selected_answer: gui
   notes: Despite being limited in scope, the [documentation](https://adstransparency.google.com/faq?region=BR)
     can be accessed without registration or login.
 - code: AD_OC17
-  selected_answer: 'no'
+  selected_answer: gui
   notes: Despite being limited in scope, the documentation is clearly written and
     exemplified.
 - code: AD_OC18
-  selected_answer: 'no'
+  selected_answer: gui
   notes: There is a link to its [Terms of Use](https://adstransparency.google.com/terms)
     at the footer section of the page.
 - code: AD_OC19
-  selected_answer: 'no'
+  selected_answer: gui
   notes: Despite being limited in scope, there is documentation available in Portuguese.
 - code: AD_OC20
   selected_answer: 'no'

@@ -18,6 +18,9 @@ class MarkdownToYAMLTransformer:
         'ads': {
             'yes, with full availability': 'full',
             'yes, with partial availability': 'partial',
+            'yes, through both': 'both',
+            'both gui and api': 'both',
+            'both api and gui': 'both',
             'yes, through the gui': 'gui',
             'yes, through the api': 'api',
             'yes, the api documentation': 'api',
@@ -131,8 +134,12 @@ class MarkdownToYAMLTransformer:
                     if normalized not in normalized_answers:
                         normalized_answers.append(normalized)
 
-                if len(normalized_answers) > 1 and "api" in normalized_answers:
-                    normalized_answer = "api"
+                # If both 'gui' and 'api' are present, use 'both'
+                if 'gui' in normalized_answers and 'api' in normalized_answers:
+                    normalized_answer = 'both'
+                elif len(normalized_answers) > 1:
+                    # Multiple answers but not gui+api combo - pick first
+                    normalized_answer = normalized_answers[0]
                 else:
                     normalized_answer = normalized_answers[0]
 

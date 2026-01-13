@@ -1,5 +1,6 @@
 metadata:
   platform: Meta
+  region_code: UK
   scope: ADS
   evaluation_date: 2025-11
 special-criteria_answers:
@@ -17,10 +18,10 @@ accessibility_answers:
   selected_answer: full
   notes: ''
 - code: AD_OC2
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC3
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC4
   selected_answer: 'yes'
@@ -30,16 +31,16 @@ accessibility_answers:
   selected_answer: 'no'
   notes: ''
 - code: AD_OC6
-  selected_answer: api
+  selected_answer: both
   notes: The platform provides the means to retrieve specific advertisers using IDs
     or names through both the GUI and the API. However, the functionality on the GUI
     is clunky. For example, the filter option often does not list all possible advertisers.
     The user needs to fetch their Page ID and paste in the GUI URL directly.
 - code: AD_OC7
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC8
-  selected_answer: api
+  selected_answer: both
   notes: The time is offered in UTC. Timestamps are returned in coordinated universal
     time (UTC), respecting the standardized ISO 8601 formats. There is no automatic
     localised formatting, and locale data (e.g., language or region) is not attached
@@ -51,7 +52,7 @@ completeness_answers:
   notes: Buyer information decoupled from page information is only available for political
     and social issues ads.
 - code: AD_OC11
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC12
   selected_answer: 'no'
@@ -60,7 +61,7 @@ completeness_answers:
   selected_answer: 'no'
   notes: ''
 - code: AD_OC9
-  selected_answer: api
+  selected_answer: both
   notes: Advertisers are identified by their Page IDs and Page Names, which can be
     used to identify them on Meta's platforms. However, no direct link is provided.
 compliance_answers:
@@ -76,7 +77,7 @@ compliance_answers:
     Meta does not officially have a policy on whether or how this is labelled within
     their Ad Library.
 - code: AD_OC16
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC17
   selected_answer: api
@@ -88,11 +89,12 @@ compliance_answers:
     terms are mentioned. It simply states that available ads will have the content
     of the ad creative, which is marked as subject to their Terms of Service.
 - code: AD_OC19
-  selected_answer: api
+  selected_answer: both
   notes: You have to be logged in to change the language.
 - code: AD_OC20
   selected_answer: 'yes'
-  notes: Updates are described in the [release notes](https://www.facebook.com/ads/library/api/releasenotes), and include future deprecations.
+  notes: Updates are described in the [release notes](https://www.facebook.com/ads/library/api/releasenotes),
+    and include future deprecations.
 - code: AD_OC21
   selected_answer: 'yes'
   notes: There is only one endpoint. Only one example of its usage is provided. It
@@ -107,17 +109,17 @@ consistency_answers:
   selected_answer: 'yes'
   notes: ''
 - code: AD_OC24
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC25
-  selected_answer: api
+  selected_answer: both
   notes: ''
 relevance_answers:
 - code: AD_OC26
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC27
-  selected_answer: api
+  selected_answer: both
   notes: However, not all of the categories assigned at the time of ad creation are
     offered as a filter.
 - code: AD_OC28
@@ -127,7 +129,7 @@ relevance_answers:
     delivery by region.
 accuracy_answers:
 - code: AD_OC29
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC30
   selected_answer: api

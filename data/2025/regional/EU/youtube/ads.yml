@@ -19,7 +19,7 @@ accessibility_answers:
   selected_answer: full
   notes: ''
 - code: AD_OC2
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC3
   selected_answer: gui
@@ -34,7 +34,7 @@ accessibility_answers:
   notes: The Ads Transparency Center GUI only allows data retrieval by advertiser
     name or website.
 - code: AD_OC6
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC7
   selected_answer: 'no'
@@ -51,18 +51,18 @@ completeness_answers:
   notes: There are fields regarding who paid for ad campaigns, but most of the time,
     it seems the value is an empty string. In our 100 samples, only 9 had filled values.
 - code: AD_OC11
-  selected_answer: api
+  selected_answer: both
   notes: The platform only shows the last exhibition date, not detailed information
     on the period during which ads were served.
 - code: AD_OC12
-  selected_answer: api
+  selected_answer: both
   notes: The data shows upper and lower bounds for ad views. No other engagement metric
     is provided.
 - code: AD_OC13
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC9
-  selected_answer: api
+  selected_answer: both
   notes: The interface and the API disclose the advertiser's name, but there is no
     URL associated with the advertiser.
 compliance_answers:
@@ -73,13 +73,13 @@ compliance_answers:
   selected_answer: 'no'
   notes: There are no fields regarding AI usage for creating or modifying ads
 - code: AD_OC16
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC17
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC18
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC19
   selected_answer: gui
@@ -91,7 +91,7 @@ compliance_answers:
     which contains "announcements about new or updated features, bug fixes, known
     issues and deprecated functionality" ([Google Cloud Console](https://console.cloud.google.com/projectselector2/bigquery/settings/user?supportedpurview=project)).
 - code: AD_OC21
-  selected_answer: 'not_applicable'
+  selected_answer: not_applicable
   notes: There are no potential errors flagged and no examples of data, apart from
     ready-to-run sample queries.
 - code: AD_OC22
@@ -114,7 +114,7 @@ consistency_answers:
     with the parameters and filters used.
 relevance_answers:
 - code: AD_OC26
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC27
   selected_answer: api

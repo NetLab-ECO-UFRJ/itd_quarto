@@ -82,13 +82,21 @@ class ExcelToYAMLTransformer:
                 return "full"
 
         # Priority 3: Check for API/GUI specific answers
-        if "api" in available_options:
-            if "free api" in raw_lower or raw_lower == "api" or "through the api" in raw_lower:
-                return "api"
+        # First check if BOTH gui and api are mentioned
+        has_gui = ("free gui" in raw_lower or "through the gui" in raw_lower or
+                   "gui documentation" in raw_lower or raw_lower == "gui")
+        has_api = ("free api" in raw_lower or "through the api" in raw_lower or
+                   "api documentation" in raw_lower or raw_lower == "api")
 
-        if "gui" in available_options:
-            if "free gui" in raw_lower or raw_lower == "gui" or "through the gui" in raw_lower:
-                return "gui"
+        if has_gui and has_api and "both" in available_options:
+            return "both"
+
+        # Then check for individual values
+        if "api" in available_options and has_api:
+            return "api"
+
+        if "gui" in available_options and has_gui:
+            return "gui"
 
         # Priority 4: Check for yes/no answers
         if "yes" in available_options:
