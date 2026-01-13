@@ -1,5 +1,5 @@
 metadata:
-  platform: TikTok
+  platform: Tk
   region_code: UK
   scope: ADS
   evaluation_date: 2025-11
@@ -18,13 +18,13 @@ special-criteria_answers:
   notes: 'Although ads which are not currently active are visible on the Commercial
     Content Library, no ads can be extracted through the GUI. Moreover, the functionality
     of the API could not be confirmed at the time of this assessment as access was
-    not obtained despite multiple requests.'
+    not obtained despite multiple requests. ## OTHER CRITERIA'
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
   notes: ''
 - code: AD_OC2
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC3
   selected_answer: 'no'
@@ -56,7 +56,7 @@ accessibility_answers:
     the time of this assessment. There is no export functionality on the GUI, though
     this information can be queried and viewed online.
 - code: AD_OC8
-  selected_answer: api
+  selected_answer: both
   notes: Based on a review of the API documentation, this API employs locale-neutral
     representation; however this has not been confirmed due to lack of access to the
     API at the time of this assessment. The GUI also provides dates and country information
@@ -125,18 +125,18 @@ compliance_answers:
   selected_answer: 'no'
   notes: ''
 - code: AD_OC16
-  selected_answer: api
+  selected_answer: both
   notes: The API documentation (TikTok, n.d.) and the GUI documentation (TikTok, n.d.)
     are openly available without requiring user registration or login information.
 - code: AD_OC17
-  selected_answer: api
+  selected_answer: both
   notes: The API documentation (TikTok, n.d.) and the GUI documentation (TikTok, n.d.)
     are clearly written and exemplified.
 - code: AD_OC18
   selected_answer: 'no'
   notes: ''
 - code: AD_OC19
-  selected_answer: api
+  selected_answer: both
   notes: The API and GUI documentations are provided in English, the official language
     of the UK.
 - code: AD_OC20
