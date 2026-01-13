@@ -19,8 +19,8 @@ accessibility_answers:
   selected_answer: partial
   notes: 'It is possible to access and visualize ads using a GUI. '
 - code: AD_OC2
-  selected_answer: 'no'
-  notes: The repository is free of charge.
+  selected_answer: 'yes'
+  notes: 'Access to the repository is free of charge.'
 - code: AD_OC3
   selected_answer: 'no'
   notes: 'The endpoint returns only the ad''s URL and data about the advertiser, including
