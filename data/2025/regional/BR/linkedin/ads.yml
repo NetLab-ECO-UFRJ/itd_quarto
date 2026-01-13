@@ -25,7 +25,7 @@ accessibility_answers:
   selected_answer: 'no'
   notes: 'The endpoint returns only the ad''s URL and data about the advertiser, including
     `advertiserName`, `advertiserUrl` and `adPayer`, but neither the ad''s text nor
-    publication date. Through the GUI, it is impossible to extract any type of data. '
+    publication date.'
 - code: AD_OC4
   selected_answer: 'yes'
   notes: 'The platform’s ad repository API provides a form of authentication that
