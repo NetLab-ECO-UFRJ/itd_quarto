@@ -121,7 +121,8 @@ def generate_summary_table(results: Dict[str, Any]):
         print('<tbody>')
 
         for item in category_data['details']:
-            topic = item['question_text']
+            code = item['question_code']
+            topic = f"<strong style='font-family: monospace; font-size: 0.9em;'>{code}:</strong> {item['question_text']}"
             answer = item['selected_label']
             notes_text = (item.get('notes') or '').replace('\n', ' ').replace('\r', ' ')
             notes = markdown.markdown(notes_text, extensions=['extra'])
