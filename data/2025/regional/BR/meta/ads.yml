@@ -1,19 +1,20 @@
 metadata:
   platform: Meta
+  region_code: BRAZIL
   scope: ADS
   evaluation_date: 2025-10
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: partial
-  notes: Meta only delivers political and issue ads that circulate in Brazil. We
-    found ads that are not considered political and classified by the platform, however,
-    they were only ads that also ran in the EU. We couldn't retrieve any ads from other
-    specific categories listed by Meta rather than political and issue category.
+  notes: Meta only delivers political and issue ads that circulates in Brazil. We
+    found ads that are not considered political and issued by the platform, however,
+    it was only ads that also ran in the EU. We couldn't retrieve any ads from other
+    specific categories listed by Meta rather than political and issued category.
 - code: AD_SC2
   selected_answer: partial
   notes: 'There is a graphical user interface, called Meta Ad Library, but it only
-    allows data extraction for political and issue ads. Other ads are shown but cannot
-    be extracted.'
+    allows extraction from political and issue ads. Other ads are shown but cannot
+    be extracted. '
 - code: AD_SC3
   selected_answer: partial
   notes: 'We can retrieve both active and inactive ads, but only for political and
@@ -24,135 +25,135 @@ accessibility_answers:
   notes: We can access data from most of all ads, but for inactive ads, we can only
     view ads from political and issue category.
 - code: AD_OC2
-  selected_answer: api
+  selected_answer: both
   notes: Meta does not charge anything.
 - code: AD_OC3
-  selected_answer: api
+  selected_answer: both
   notes: We can retrieve all data regard the ad creative and authorship from [both
     API and GUI](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive).
 - code: AD_OC4
   selected_answer: 'yes'
-  notes: The platform offers forms that allow renewals of [tokens](https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens)
-    without the risk of data loss.
+  notes: The platform offers forms that allows renewals of tokens without the risk
+    of data loss. https://developers.facebook.com/docs/facebook-login/guides/access-tokens#usertokens
 - code: AD_OC5
   selected_answer: gui
   notes: The platform only provides means to retrieve specific ads using its ID through
     the GUI, but it is [not possible through the API](/?active_status=active&ad_type=political_and_issue_ads&country=BR&is_targeted_country=false&media_type=all&q=1362986028521549&search_type=keyword_unordered)
 - code: AD_OC6
-  selected_answer: api
-  notes: 'The platform provides means to retrieve specific advertisers using its ID
-    or name through [both GUI and API](/?active_status=active&ad_type=political_and_issue_ads&country=BR&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=651655564979252).'
+  selected_answer: both
+  notes: 'The platform provide means to retrieve specific advertisers using its ID
+    or name through [both GUI and API](/?active_status=active&ad_type=political_and_issue_ads&country=BR&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=651655564979252). '
 - code: AD_OC7
-  selected_answer: api
+  selected_answer: both
   notes: 'The [platform allows the use of search terms](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive)
-    to retrieve data. The terms should be up to 100 characters.'
+    to retrieve data. The terms should be a hundred
+
+    characters or less. '
 - code: AD_OC8
-  selected_answer: api
+  selected_answer: both
   notes: We analyzed date and currency fields and they came in the expected format.
     Date was ISO 8601 and currency was BRL.
 completeness_answers:
 - code: AD_OC10
-  selected_answer: api
+  selected_answer: both
   notes: The only information that the platform provides is a text informed by the
     advertiser; usually, a name. When this field is not retrieved, the ad violated
     Meta's advertising standards.
 - code: AD_OC11
-  selected_answer: api
+  selected_answer: both
   notes: 'The platform provides data on the period during which issue ads were served
     (start date for all ads and end date for inactive ads). '
 - code: AD_OC12
   selected_answer: 'no'
-  notes: There is no field to retrieve user interactions. A complete list of [available
-    fields](https://developers.facebook.com/docs/graph-api/reference/archived-ad/)
-    can be found in the documentation.
+  notes: 'There''s no field to retrieve user interactions. A complete list of available
+    fields can be found in: https://developers.facebook.com/docs/graph-api/reference/archived-ad/'
 - code: AD_OC13
   selected_answer: gui
-  notes: There is no field that indicates if an advertiser is verified on API. A complete
-    list of [available fields](https://developers.facebook.com/docs/graph-api/reference/archived-ad/)
-    can be found in the documentation. On the other hand, Meta provides detailed information
+  notes: 'There''s no field that indicates if a advertiser is verified on API. A complete
+    list of available fields can be found in: https://developers.facebook.com/docs/graph-
+    api/reference/archived-ad/. On the other hand, Meta provides detailed information
     about the advertiser even if it does not clearly display that an advertiser is
-    verified on the GUI.
+    verified on the GUI.'
 - code: AD_OC9
-  selected_answer: api
+  selected_answer: both
   notes: The platform always provides a unique identification for all advertisers
-    but, when an advertiser does not have a page on facebook, the platform only provides
+    but, when an adversiter does not have a page on facebook, the platform only provides
     the Instagram user ID in the page name field and the number zero in the page id
-    field.
+    field.  and /?active_status=aII&ad_type=poIiticaI_and_issue_ads&country=BR&is_targeted_country=faIse&media_type=aII&q=6421398949&search_type=keyword_unordered
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
-  notes: Through the API, the platform only provides the information that an ad was
+  notes: 'Through the API, the platform only provides the information that an ad was
     removed if we set the parameter unmask removed content to false and it does not
     provide the removal date. The GUI has the information if the ad was removed but
-    does not specify the reason or the removal date.
+    does not specify the reason or the removal date. Souce:  /?active_status=active&ad_type=aII&country=GB&id=31639644339013411&is_targeted_country=faIse&media_type=aII&search_type=page'
 - code: AD_OC15
   selected_answer: gui
-  notes: There is no field that indicates if an ad was created using AI in the API;
+  notes: There's no field that indicates if an ad was created using AI in the API;
     during our tests, we did not find this information in the API's response. [The
-    complete list of available fields is public](https://developers.facebook.com/docs/graph-api/reference/archived-ad/).
-    Through the GUI, we found ads with the AI disclaimer. This information, however,
-    cannot be extracted.
+    complete list of available fields is public](https://developers.facebook.com/docs/graph-
+    api/reference/archived-ad/). Through the GUI, we found ads with the AI disclaimer.
+    This information, however, can not be extracted. /?id=351429144345136.
 - code: AD_OC16
-  selected_answer: 'no'
-  notes: There is [documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive)
-    for both GUI and API in open access.
+  selected_answer: both
+  notes: There are documentation for both GUI and API in open access.  and https://developers.facebook.com/docs/graph-
+    api/reference/v23.0/ads_archive
 - code: AD_OC17
-  selected_answer: 'no'
-  notes: There is clear [documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive)
-    for both GUI and API in open access.
+  selected_answer: both
+  notes: There are clear documentation for both GUI and API in open access.  https://developers.facebook.com/docs/graph-
+    api/reference/v23.0/ads_archive
 - code: AD_OC18
   selected_answer: 'no'
-  notes: We did not find the terms of use specifically for the usage of API or ad
+  notes: We did not found the terms of use specifically for the usage of API or ad
     repository.
 - code: AD_OC19
-  selected_answer: 'no'
-  notes: The [API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive)
-    is only available in English -- there are only some titles available in Portuguese,
-    but text and descriptions are in English. On the other hand, the GUI documentation
-    is fully available in Portuguese.
+  selected_answer: gui
+  notes: 'The API documentation is only available in English -- there are only some
+    titles available in Portuguese, but text and descriptions are in English. On the
+    other hand, the GUI documentation is full available in Portuguese. https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive# '
 - code: AD_OC20
-  selected_answer: 'no'
-  notes: The platform has [documentation](https://developers.facebook.com/docs/graph-api/changelog)
-    that informs the deprecation strategies and shows all alterations that will occur
-    with the release and expiration date.
+  selected_answer: 'yes'
+  notes: The platform has a documentation that informs the deprecation strategies
+    and shows all alterations that will occur with the release and expiration date.
+    https://developers.facebook.com/docs/graph-api/changelog
 - code: AD_OC21
-  selected_answer: 'no'
-  notes: The [API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archived)
-    describes the response of the available endpoint, but you need to click in a button
-    called "show response" and a pop-up will appear.
+  selected_answer: 'yes'
+  notes: The API documentation describe the response of the available endpoint, but
+    you need to click in a botton called "show response" and a pop-up will appear.
+    https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archived
 - code: AD_OC22
   selected_answer: 'no'
-  notes: Although the platform provides [rate limits documentation](https://developers.facebook.com/docs/graph-api/overview/rate-limiting/),
-    it is not specific for the ad library API, making it harder to calculate the total
-    quota available for collecting ads. Meta has three types of request limitations
-    - total of calls (the only one that the documentation explains how to calculate),
-    total of cpu time and total time.
+  notes: 'Although the platform provides rate limits documentation, it is not specific
+    for the ad library API, making it harder to calculate the total quota available
+    for collecting ads. Meta has three types of request limitations: total of calls
+    (the only one that the documentation explain how to calculate), total of cpu time
+    and total time. https://developers.facebook.com/docs/graph-api/overview/rate-limiting/'
 consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
   notes: The API does not provide all the information available present in the GUI
     about advertisers that run ads in the political and issue category. In the GUI,
-    it shows detailed information such as phone number, address and email. It's not
+    it shows datailed information such as phone number, address and email. It's not
     possible to extract the media present in an ad through the API, the platform only
     provides a link to view the ad in the Ad library interface. Also, the API does
     not show the label of artificial generated content.
 - code: AD_OC24
-  selected_answer: api
+  selected_answer: both
   notes: 'We run a test that made 5 request with the same parameters and saved each
     response in a separate file and then compared if all ads were present in each
     file. We observe that all ads were present in every file. '
 - code: AD_OC25
-  selected_answer: api
+  selected_answer: both
   notes: 'We run a test that made 5 request with different parameters and compared
     the results with the set parameter. All responses were successfully validated
-    except for "delivery by region" that had null values in a few ads, but all ads
+    excepted for "delivery by region" that had null values in a few ads, but all ads
     that had value were consistent with the parameter. In the case of GUI, all ads
     in the interface were consistent with the filter, but we noticed that, when using
     quotes in search terms, we were able to export more data than informed in the
-    interface.'
+    interface. '
 relevance_answers:
 - code: AD_OC26
-  selected_answer: api
+  selected_answer: both
   notes: 'The platform allows the use of temporal filters to retrieve data. You can
     set a start and end date (as day as the lower granularity). '
 - code: AD_OC27
@@ -160,13 +161,13 @@ relevance_answers:
   notes: The platform only differentiates between political and non-political ads,
     not allowing filters by ad’s categories.
 - code: AD_OC28
-  selected_answer: api
+  selected_answer: both
   notes: The platform allows filtering advertising by geographic location. However,
     some ads had null values in the geographic location field, making it harder to
     validate this information.
 accuracy_answers:
 - code: AD_OC29
-  selected_answer: api
+  selected_answer: both
   notes: 'The platform provides age and gender data on audience, but it''s important
     to mention that the demographic distribution field, that shows the percentage
     of audience population, can come with null values. '
@@ -178,7 +179,7 @@ accuracy_answers:
 - code: AD_OC31
   selected_answer: 'no'
   notes: The platform does not provide all targeting options that an advertiser can
-    select.
+    select.  https://doi.org/10.1177/2053951721996046
 - code: AD_OC32
   selected_answer: 'no'
   notes: 'The platform provides intervals that are bigger than 10%. '
