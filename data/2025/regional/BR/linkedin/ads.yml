@@ -12,9 +12,8 @@ special-criteria_answers:
     it is not possible to export its data.'
 - code: AD_SC3
   selected_answer: 'no'
-  notes: 'In terms of inactive ads, it is possible to obtain data from ads with latestImpressionAt
-    in the past, but that information is only available at the response schema for
-    [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).'
+  notes: 'Although LinkedIn claims that it is possible to collect advertising data for up to one year after an ad stops running, 
+    this cannot be verified for ads that ran outside the [European Union](https://www.linkedin.com/help/lms/answer/a1620070).'
 accessibility_answers:
 - code: AD_OC1
   selected_answer: partial
