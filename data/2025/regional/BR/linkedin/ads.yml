@@ -41,8 +41,7 @@ accessibility_answers:
     or unique identifier.
 - code: AD_OC7
   selected_answer: 'no'
-  notes: 'It is only necessary to pass the parameter "keyword" through the API or search
-    through the GUI.'
+  notes: 'It is possible to use keywords to perform searches both through the API and the GUI.'
 - code: AD_OC8
   selected_answer: 'no'
   notes: 'From the documentation: "All dates and timestamps are recorded in Coordinated
