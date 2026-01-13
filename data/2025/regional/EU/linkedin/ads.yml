@@ -9,7 +9,7 @@ special-criteria_answers:
   notes: ''
 - code: AD_SC2
   selected_answer: partial
-  notes: No data export functionality available via the [LinkedIn Ad Library](https://www.linkedin.com/ad-library).
+  notes: No data export functionality available. <https://www.linkedin.com/ad-library>
 - code: AD_SC3
   selected_answer: 'no'
   notes: ''
@@ -18,7 +18,7 @@ accessibility_answers:
   selected_answer: full
   notes: ''
 - code: AD_OC2
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC3
   selected_answer: 'no'
@@ -33,26 +33,26 @@ accessibility_answers:
   selected_answer: 'no'
   notes: ''
 - code: AD_OC7
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC8
   selected_answer: api
   notes: Timestamps in Unix format (like 1763337597116).
 completeness_answers:
 - code: AD_OC10
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC11
   selected_answer: api
   notes: ''
 - code: AD_OC12
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC13
   selected_answer: 'no'
   notes: ''
 - code: AD_OC9
-  selected_answer: api
+  selected_answer: both
   notes: ''
 compliance_answers:
 - code: AD_OC14
@@ -63,8 +63,8 @@ compliance_answers:
   selected_answer: 'no'
   notes: ''
 - code: AD_OC16
-  selected_answer: api
-  notes: The [API documentation](https://www.linkedin.com/ad-library/api/ads) is openly available.
+  selected_answer: both
+  notes: The API documentation is openly available at <https://www.linkedin.com/ad-library/api/ads>.
     There is some open documentation for the GUI in the form of an FAQ.
 - code: AD_OC17
   selected_answer: api
@@ -94,7 +94,7 @@ consistency_answers:
   selected_answer: 'yes'
   notes: ''
 - code: AD_OC24
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC25
   selected_answer: 'no'
@@ -104,7 +104,7 @@ consistency_answers:
     ad page itself with the \`adUrl\` provided.
 relevance_answers:
 - code: AD_OC26
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC27
   selected_answer: 'not_applicable'
@@ -120,7 +120,7 @@ accuracy_answers:
   selected_answer: 'no'
   notes: ''
 - code: AD_OC31
-  selected_answer: api
+  selected_answer: both
   notes: ''
 - code: AD_OC32
   selected_answer: 'no'
