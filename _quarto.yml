@@ -18,6 +18,8 @@ book:
     - chapters/key-findings.qmd
     # - chapters/context.qmd
     - chapters/methodology.qmd
+    - chapters/responses-ugc.qmd
+    - chapters/responses-ads.qmd
     # - chapters/framework.qmd
     # - chapters/findings.qmd
     # - chapters/conclusion.qmd

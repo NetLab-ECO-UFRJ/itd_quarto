@@ -1,0 +1,24 @@
+---
+title: "UGC Responses by Question"
+---
+
+This chapter presents all platform responses for each question in the User-Generated Content (UGC) framework, organized by category. Each table shows how platforms responded to the same question, along with their justifications.
+
+```{python}
+#| label: ugc-responses
+#| echo: false
+#| output: asis
+
+import sys
+from pathlib import Path
+
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from utils.responses_aggregator import generate_responses_by_question
+
+generate_responses_by_question(question_type="ugc", year="2025")
+```
