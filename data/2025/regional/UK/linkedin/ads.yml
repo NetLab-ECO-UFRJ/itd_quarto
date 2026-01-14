@@ -1,5 +1,6 @@
 metadata:
   platform: Linkedin
+  region_code: BRAZIL
   scope: ADS
   evaluation_date: 2025-11
 special-criteria_answers:
@@ -12,27 +13,27 @@ special-criteria_answers:
     ad content, it is not possible to export its data.
 - code: AD_SC3
   selected_answer: 'no'
-  notes: In terms of inactive ads, it is possible to obtain data from ads with latestImpressionAt
-    in the past, but that information is only available at the response schema for
-    [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).
+  notes: Although LinkedIn claims that it is possible to collect advertising data
+    for up to one year after an ad stops running, this cannot be verified for ads
+    that ran outside the [European Union](https://www.linkedin.com/help/lms/answer/a1620070).
 accessibility_answers:
 - code: AD_OC1
-  selected_answer: partial
+  selected_answer: full
   notes: 'It is possible to access and visualize ads using a GUI. '
 - code: AD_OC2
-  selected_answer: 'no'
-  notes: The repository is free of charge.
+  selected_answer: both
+  notes: Access to the repository is free of charge.
 - code: AD_OC3
   selected_answer: 'no'
-  notes: 'The endpoint returns only the ad''s URL and data about the advertiser, including
-    `advertiserName`, `advertiserUrl` and `adPayer`, but neither the ad''s text nor
-    publication date. Through the GUI, it is impossible to extract any type of data. '
+  notes: The endpoint returns only the ad's URL and data about the advertiser, including
+    `advertiserName`, `advertiserUrl` and `adPayer`, but neither the ad's text nor
+    publication date.
 - code: AD_OC4
   selected_answer: 'yes'
   notes: 'The platform’s ad repository API provides a form of authentication that
     allows for renewal without the risk of data loss. '
 - code: AD_OC5
-  selected_answer: 'no'
+  selected_answer: gui
   notes: Through the GUI, it is possible to access the page of a specific ad. On the
     other hand, on the API, it is impossible to retrieve an ad by its ID.
 - code: AD_OC6
@@ -41,9 +42,9 @@ accessibility_answers:
     keyword instead of filtering data from a specific advertiser via their username
     or unique identifier.
 - code: AD_OC7
-  selected_answer: 'no'
-  notes: It is only necessary to pass the parameter "keyword" through the API or search
-    through the GUI.
+  selected_answer: both
+  notes: It is possible to use keywords to perform searches both through the API and
+    the GUI.
 - code: AD_OC8
   selected_answer: 'no'
   notes: 'From the documentation: "All dates and timestamps are recorded in Coordinated
@@ -51,16 +52,16 @@ accessibility_answers:
     fields are only available for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).'
 completeness_answers:
 - code: AD_OC9
-  selected_answer: 'no'
+  selected_answer: both
   notes: The platform provides the URLs of the LinkedIn pages or profiles of who ran
     the ads.
 - code: AD_OC10
-  selected_answer: 'no'
+  selected_answer: both
   notes: 'The platform provides data on the funder who paid for the ads. '
 - code: AD_OC11
   selected_answer: 'no'
   notes: The response schema includes firstImpressionAt and latestImpressionAt only
-    for EU countries. Also, there is no information about data through the [GUI outside
+    for EU countries. Also, there is no information about time periods through the [GUI outside
     the EU](https://www.linkedin.com/help/lms/answer/a1620070).
 - code: AD_OC12
   selected_answer: 'no'
@@ -85,17 +86,17 @@ compliance_answers:
   selected_answer: 'no'
   notes: There are no mentions of AI anywhere from both API and GUI.
 - code: AD_OC16
-  selected_answer: 'no'
+  selected_answer: both
   notes: It is possible to access the documentation without login.
 - code: AD_OC17
-  selected_answer: 'no'
+  selected_answer: gui
   notes: The documentation lacks explanations and references. There is only one example
     of response and it is for EU countries. /api/ads
 - code: AD_OC18
   selected_answer: 'no'
   notes: There is no reference to the specific terms of use of the API or GUI.
 - code: AD_OC19
-  selected_answer: 'no'
+  selected_answer: both
   notes: 'Both API documentation and GUI are available in Portuguese. However, it
     is important to mention that the platform does not provide a way to change the
     language according to the user preference directly from the interface. '
@@ -104,7 +105,7 @@ compliance_answers:
   notes: There is no reference to deprecation strategy to avoid breaking client applications.
     /api/ads
 - code: AD_OC21
-  selected_answer: 'no'
+  selected_answer: 'yes'
   notes: The platform’s ad repository API documentation details the response format
     of the only endpoint available. /api/ads
 - code: AD_OC22
@@ -114,7 +115,7 @@ consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
   notes: 'Although the data retrieved by the API is similar to what is displayed on
-    the GUI, the platform does not offer enough information and means to properly
+    the GUI, the platform does not offer enough information and manners to properly
     compare. The only relevant fields are about advertisers in response schema: advertiserName,
     advertiserUrl and adPayer, which are insufficient to compare data from API and
     GUI based on the OC''s requirements.
@@ -122,9 +123,9 @@ consistency_answers:
 
     The GUI search page shows a preview of each ad''s media and text, while the API
     returns no information whatsoever about each ad''s content, only its URL and advertiser
-    data.'
+    data'
 - code: AD_OC24
-  selected_answer: 'no'
+  selected_answer: both
   notes: 'The results returned by the platform are reproducible from both API and
     GUI. However, it is important to mention that the lack of information provided
     makes it hard to properly verify the criteria. '
