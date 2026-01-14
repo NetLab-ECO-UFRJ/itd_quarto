@@ -7,7 +7,7 @@ special-criteria_answers:
 - code: AD_SC1
   selected_answer: full
   notes: Data from all types of ads can be retrieved through the [LinkedIn Ad Library API]
-  (https://www.linkedin.com/ad-library/api). Mensagem de teste.
+  (https://www.linkedin.com/ad-library/api).
 - code: AD_SC2
   selected_answer: 'no'
   notes: Although [LinkedIn Ad Library GUI] (https://www.linkedin.com/ad-library/)
