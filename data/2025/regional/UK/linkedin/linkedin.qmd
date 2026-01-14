@@ -22,8 +22,8 @@ if str(project_root) not in sys.path:
 from utils.quarto_helpers import load_platform_results, generate_summary_table
 
 results_ugc, results_ads = load_platform_results(
-    ugc_file="data/2025/regional/UK/linkedin/ugc.yml",
-    ads_file="data/2025/regional/UK/linkedin/ads.yml",
+    ugc_file="data/2025/regional/BR/linkedin/ugc.yml",
+    ads_file="data/2025/regional/BR/linkedin/ads.yml",
     year='2025'
 )
 
