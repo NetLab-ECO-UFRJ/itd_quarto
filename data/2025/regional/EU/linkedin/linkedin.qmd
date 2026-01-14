@@ -1,8 +1,8 @@
 ---
 title: "LinkedIn"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/regional/EU/linkedin/ugc.yml"
-ads_answers_file: "data/2025/regional/EU/linkedin/ads.yml"
+ugc_answers_file: "data/2025/regional/BR/linkedin/ugc.yml" # Reuse the evaluation from Brazil
+ads_answers_file: "data/2025/regional/BR/linkedin/ads.yml" # Reuse the evaluation from Brazil
 region_code: "EU"
 ---
 
