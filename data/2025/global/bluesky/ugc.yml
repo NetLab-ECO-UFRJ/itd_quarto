@@ -31,8 +31,7 @@ accessibility_answers:
     without requiring redirection.
 - code: UGC_OC3
   selected_answer: 'yes'
-  notes: Bluesky does not require OAuth tokens to use its API. Instead, API access
-    is authenticated using standard login credentials.
+  notes: API access is authenticated using standard login credentials, not requiring OAuth tokens and allowing continuous access.
 - code: UGC_OC4
   selected_answer: 'yes'
   notes: 'The platform offers an endpoint for extracting data from an individual publication. '
@@ -57,9 +56,7 @@ compliance_answers:
     registration or login.
 - code: UGC_OC10
   selected_answer: 'no'
-  notes: The Bluesky's official API lacks explanation about its methods. For example,
-    the [`get-messages`](https://docs.bsky.app/docs/api/chat-bsky-convo-get-messages)
-    endpoint has no explanation.
+  notes: The Bluesky's official API lacks explanation about its methods. The documentation does not include practical examples such as sample code and queries. Descriptions and explanations were considered insufficient.
 - code: UGC_OC11
   selected_answer: 'no'
   notes: Although Bluesky includes links to its [Terms of Service](https://bsky.social/about/support/tos),
@@ -88,8 +85,7 @@ compliance_answers:
 completeness_answers:
 - code: UGC_OC16
   selected_answer: not_applicable
-  notes: Although it could be argued that replies and quotes serve this function,
-    Bluesky does not have dedicated comment features like other social media platforms
+  notes: Bluesky does not have dedicated comment features like other social media platforms
     analyzed in this study.
 - code: UGC_OC17
   selected_answer: not_applicable
