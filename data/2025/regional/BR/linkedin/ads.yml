@@ -6,163 +6,152 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: full
-  notes: Data from all types of ads can be retrieved through [LinkedIn’s Ad Library API] (https://www.linkedin.com/ad-library/api).
+  notes: Data from all types of ads can be retrieved through [LinkedIn Ad Library API]
+  (https://www.linkedin.com/ad-library/api).
 - code: AD_SC2
   selected_answer: 'no'
-  notes: Although LinkedIn provides a graphical user interface where users can view
-    ad content, it is not possible to export its data.
+  notes: Although [LinkedIn Ad Library GUI] (https://www.linkedin.com/ad-library/)
+  allows users to view ads served on the platform, it does not provide any means to export structured data.
 - code: AD_SC3
   selected_answer: 'no'
-  notes: Although LinkedIn claims that it is possible to collect advertising data
-    for up to one year after an ad stops running, this cannot be verified for ads
-    that ran outside the [European Union](https://www.linkedin.com/help/lms/answer/a1620070).
+  notes: Although LinkedIn claims that advertising data can be collected for up to one year after
+  an ad stops running,it is not possible to verify the running period of ads that were served
+  outside the [European Union](https://www.linkedin.com/help/lms/answer/a1620070).
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
-  notes: 'It is possible to access and visualize ads using a GUI. '
+  notes: 'Ad content can be accessed and viewed through [LinkedIn Ad Library GUI] (https://www.linkedin.com/ad-library/).'
 - code: AD_OC2
   selected_answer: both
-  notes: Access to the repository is free of charge.
+  notes: Access to LinkedIn Ad Library is free of charge.
 - code: AD_OC3
   selected_answer: 'no'
-  notes: The endpoint returns only the ad's URL and data about the advertiser, including
-    `advertiserName`, `advertiserUrl` and `adPayer`, but neither the ad's text nor
-    publication date.
+  notes: The [LinkedIn Ad Library API] (https://www.linkedin.com/ad-library/api)
+  returns only the ad URL and information about the advertiser—including their name,
+  page URL, and funder—but does not provide the ad creative or its publication date.
 - code: AD_OC4
   selected_answer: 'yes'
-  notes: 'The platform’s ad repository API provides a form of authentication that
-    allows for renewal without the risk of data loss. '
+  notes: '[LinkedIn Ad Library API] (https://www.linkedin.com/ad-library/api)
+  provides a form of authentication thatallows for renewal without the risk of data loss.'
 - code: AD_OC5
   selected_answer: gui
-  notes: Through the GUI, it is possible to access the page of a specific ad. On the
-    other hand, on the API, it is impossible to retrieve an ad by its ID.
+  notes: Through [LinkedIn Ad Library GUI] (https://www.linkedin.com/ad-library/),
+  it is possible to access the page of a specific ad.
+  By contrast, the API does not allow ads to be retrieved by their ID.
 - code: AD_OC6
   selected_answer: 'no'
-  notes: The search for advertisers only retrieves data that contains the searched
-    keyword instead of filtering data from a specific advertiser via their username
-    or unique identifier.
+  notes: On both LinkedIn Ad Library [GUI] (https://www.linkedin.com/ad-library/)]
+  and [API] (https://www.linkedin.com/ad-library/api),
+  the advertiser search function retrieves only records
+  containing the queried keyword, rather than allowing direct filtering by a specific
+  advertiser via their username or unique identifier.
 - code: AD_OC7
   selected_answer: both
-  notes: It is possible to use keywords to perform searches both through the API and
-    the GUI.
+  notes: It is possible to use keywords to perform searches both through
+  LinkedIn Ad Library [GUI] (https://www.linkedin.com/ad-library/)]
+  and [API] (https://www.linkedin.com/ad-library/api).
 - code: AD_OC8
   selected_answer: 'no'
-  notes: 'From the documentation: "All dates and timestamps are recorded in Coordinated
-    Universal Time (UTC)". However, it cannot be demonstrated because time-related
-    fields are only available for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).'
+  notes: This item cannot be verified, as time-related data are not available for ads
+  that ran outside the European Union.
 completeness_answers:
 - code: AD_OC9
   selected_answer: both
-  notes: The platform provides the URLs of the LinkedIn pages or profiles of who ran
-    the ads.
+  notes: The LinkedIn Ad Library provides URLs for the pages and profiles of
+  the entities that ran the ads.
 - code: AD_OC10
   selected_answer: both
-  notes: 'The platform provides data on the funder who paid for the ads. '
+  notes: 'The LinkedIn Ad Library provides the registered names of the ads’ funders.'
 - code: AD_OC11
   selected_answer: 'no'
-  notes: The response schema includes firstImpressionAt and latestImpressionAt only
-    for EU countries. Also, there is no information about time periods through the [GUI outside
-    the EU](https://www.linkedin.com/help/lms/answer/a1620070).
+  notes: The LinkedIn Ad Library does not provide any data on the running period of ads
+  that were only [served outside the European Union] (https://www.linkedin.com/help/lms/answer/a1620070).
 - code: AD_OC12
   selected_answer: 'no'
-  notes: This is available only for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070)
-    for both API and GUI.
+  notes: The LinkedIn Ad Library does not provide any data on user engagement with ads.
 - code: AD_OC13
   selected_answer: 'no'
-  notes: 'The only fields about advertisers in response schema are: advertiserName,
-    advertiserUrl and adPayer. Also, there is no information about verified or unverified
-    advertisers through the GUI.'
+  notes: The LinkedIn Ad Library does not provide any data on advertisers’ verification status.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
-  notes: 'Even though the very documentation''s Sample Response shows a case with
-    `isRestricted: True`, the API seems to return only ads with `isRestricted: False`
-    and it is not possible to search for restricted ads. Through the GUI, it is possible
-    to access the ad page of a removed ad, but its content is removed. There is also
-    no reference whatsoever to the date.
-
-    /api/ads, '
+  notes: Although moderated ads can be identified through the LinkedIn Ad Library,
+  the platform provides no information about their content or advertiser, only their unique ID.
+  Moreover, it offers no indication of the moderation date or the reasons for moderation.
 - code: AD_OC15
   selected_answer: 'no'
-  notes: There are no mentions of AI anywhere from both API and GUI.
+  notes: The LinkedIn Ad Library does not provide any information regarding the use of generative AI
+  in the creation or manipulation of ad content.
 - code: AD_OC16
   selected_answer: both
-  notes: It is possible to access the documentation without login.
+  notes: Any user can access [LinkedIn Ad Library’s documentation] (https://www.linkedin.com/help/linkedin/answer/a1517918).
 - code: AD_OC17
   selected_answer: gui
-  notes: The documentation lacks explanations and references. There is only one example
-    of response and it is for EU countries. /api/ads
+  notes: The [LinkedIn Ad Library API’s documentation] (https://www.linkedin.com/ad-library/api/ads) lacks sufficient explanations and references,
+  as it provides only a single response example, limited to ads served in European Union countries.
 - code: AD_OC18
   selected_answer: 'no'
-  notes: There is no reference to the specific terms of use of the API or GUI.
+  notes: The LinkedIn Ad Library does not reference any specific terms of use for either its API or its GUI.
 - code: AD_OC19
   selected_answer: both
-  notes: 'Both API documentation and GUI are available in Portuguese. However, it
-    is important to mention that the platform does not provide a way to change the
-    language according to the user preference directly from the interface. '
+  notes: The LinkedIn Ad Library’s documentation is displayed in the [language defined by the user] (https://www.linkedin.com/help/linkedin/answer/a522175).
 - code: AD_OC20
   selected_answer: 'no'
-  notes: There is no reference to deprecation strategy to avoid breaking client applications.
-    /api/ads
+  notes: The [LinkedIn Ad Library API’s documentation] (https://www.linkedin.com/ad-library/api/ads) does not describe any
+  deprecation strategy intended to prevent breaking changes in client applications.
 - code: AD_OC21
   selected_answer: 'yes'
-  notes: The platform’s ad repository API documentation details the response format
-    of the only endpoint available. /api/ads
+  notes: The [LinkedIn Ad Library API’s documentation] (https://www.linkedin.com/ad-library/api/ads) details the response format
+  of its sole available endpoint.
 - code: AD_OC22
   selected_answer: 'no'
-  notes: There is no reference to the quota or rate limits in the documentation.
+  notes: The [LinkedIn Ad Library API’s documentation] (https://www.linkedin.com/ad-library/api/ads)
+  does not specify any usage quotas or rate limits.
 consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
-  notes: 'Although the data retrieved by the API is similar to what is displayed on
-    the GUI, the platform does not offer enough information and manners to properly
-    compare. The only relevant fields are about advertisers in response schema: advertiserName,
-    advertiserUrl and adPayer, which are insufficient to compare data from API and
-    GUI based on the OC''s requirements.
-
-
-    The GUI search page shows a preview of each ad''s media and text, while the API
-    returns no information whatsoever about each ad''s content, only its URL and advertiser
-    data'
+  notes: Although the data retrieved via the LinkedIn Ad Library API broadly corresponds to what is displayed in the GUI,
+  the platform does not provide sufficient information or mechanisms to enable a proper comparison between the two.
+  The GUI search interface presents a preview of each ad’s media and text, whereas the API returns no information about
+  ad content, providing only the ad’s URL and advertiser metadata.
 - code: AD_OC24
   selected_answer: both
-  notes: 'The results returned by the platform are reproducible from both API and
-    GUI. However, it is important to mention that the lack of information provided
-    makes it hard to properly verify the criteria. '
+  notes: After performing multiple search tests using both the LinkedIn Ad Library API and GUI,
+  we determined that the platform returns consistent and reproducible results.
 - code: AD_OC25
   selected_answer: 'no'
-  notes: The information cannot be verified through the API response alone or GUI.
-    The complete ad information is returned at the API response only for countries
-    inside the EU, so it is the only information that could be verified programmatically.
-    In Brazil, it is only possible to verify the information about the advertiser
-    through the API; to verify the search query filter, only through scraping; and
-    it is impossible to verify data filters. [LinkedIn Help Center](https://www.linkedin.com/help/lms/answer/a1620070)
+  notes: This item cannot be verified through either the LinkedIn Ad Library API or GUI.
+  Because the platform provides no time-related data for ads that ran outside the European Union,
+  it is impossible to assess whether this parameter is correctly applied.
+  Moreover, since the API does not expose ad creative content, it is also not possible to verify whether ads
+  actually match the queried keywords.
 relevance_answers:
 - code: AD_OC26
   selected_answer: 'no'
-  notes: The dateRange filter exists but the API's response cannot be tested for it
-    because the response schema shows `firstImpressionAt` and `latestImpressionAt`
-    only for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).
+  notes: The LinkedIn Ad Library allows the application of a time-period filter.
+  However, because time-related data is not available for ads that ran outside the European Union,
+  this feature cannot be fully or reliably assessed.
 - code: AD_OC27
   selected_answer: 'no'
-  notes: 'There is no category parameter at the request schema or the GUI. '
+  notes: The LinkedIn Ad Library does not allow data to be filtered by ad category.
 - code: AD_OC28
   selected_answer: 'no'
-  notes: 'There is no information about subnational locations at the API or the GUI. '
+  notes: The LinkedIn Ad Library only allows data to be filtered by country.
 accuracy_answers:
 - code: AD_OC29
   selected_answer: 'no'
-  notes: 'There are neither age nor gender parameters at the request schema or the
-    GUI. '
+  notes: The LinkedIn Ad Library does not provide any age or gender information about an ad’s audience.
 - code: AD_OC30
   selected_answer: 'no'
-  notes: There is no subnational option at the response schema or the GUI.
+  notes: The LinkedIn Ad Library does not provide any subnational location data about an ad’s audience.
 - code: AD_OC31
   selected_answer: 'no'
-  notes: This feature is only [available for EU countries](https://www.linkedin.com/help/lms/answer/a1620070).
+  notes: The LinkedIn Ad Library provides audience targeting criteria data only for ads that were served within the
+  [European Union](https://www.linkedin.com/help/lms/answer/a1620070).
 - code: AD_OC32
   selected_answer: 'no'
-  notes: This feature is only available for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).
+  notes: The LinkedIn Ad Library provides impressions data only for ads that were served within the
+  [European Union](https://www.linkedin.com/help/lms/answer/a1620070).
 - code: AD_OC33
   selected_answer: 'no'
-  notes: 'There is no ad spending information at the response schema. '
+  notes: The LinkedIn Ad Library does not provide any data on ad spending.
