@@ -1,7 +1,7 @@
 ---
 title: "X/Twitter"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/global/x/ugc.yml"
+ugc_answers_file: "data/2025/global/BR/x/ugc.yml"
 ads_answers_file: "data/2025/regional/BR/x/ads.yml"
 region_code: "BRAZIL"
 ---
@@ -22,7 +22,7 @@ if str(project_root) not in sys.path:
 from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
-    ugc_file="data/2025/global/x/ugc.yml",
+    ugc_file="data/2025/global/BR/x/ugc.yml",
     ads_file="data/2025/regional/BR/x/ads.yml",
     year='2025'
 )
