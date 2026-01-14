@@ -47,6 +47,10 @@ accessibility_answers:
     unless explicitly requested or inferred. Multiple currencies are used, though
     they are specified in standard ISO currency codes, not localized formatted strings.
 completeness_answers:
+- code: AD_OC9
+  selected_answer: both
+  notes: Advertisers are identified by their Page IDs and Page Names, which can be
+    used to identify them on Meta's platforms. However, no direct link is provided.
 - code: AD_OC10
   selected_answer: gui
   notes: Our API tests failed as that information was only available for political
@@ -60,10 +64,6 @@ completeness_answers:
 - code: AD_OC13
   selected_answer: 'no'
   notes: ''
-- code: AD_OC9
-  selected_answer: both
-  notes: Advertisers are identified by their Page IDs and Page Names, which can be
-    used to identify them on Meta's platforms. However, no direct link is provided.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'

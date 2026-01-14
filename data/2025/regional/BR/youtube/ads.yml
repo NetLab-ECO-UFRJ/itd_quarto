@@ -76,6 +76,10 @@ accessibility_answers:
     based on the user’s region or language settings, rather than being standardized
     or locale-neutral.
 completeness_answers:
+- code: AD_OC9
+  selected_answer: gui
+  notes: The interface discloses the page name and unique identifier, but there is
+    no URL associated with the advertiser.
 - code: AD_OC10
   selected_answer: 'no'
   notes: The platform only shows the final advertiser's name, not additional sponsor
@@ -93,10 +97,6 @@ completeness_answers:
   selected_answer: gui
   notes: In Brazil, the platform only shows ads from verified advertisers. In Europe
     and Turkey, ads from non-verified advertisers are included as well.
-- code: AD_OC9
-  selected_answer: gui
-  notes: The interface discloses the page name and unique identifier, but there is
-    no URL associated with the advertiser.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'

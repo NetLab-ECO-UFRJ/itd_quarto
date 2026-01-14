@@ -22,9 +22,9 @@ special-criteria_answers:
   selected_answer: partial
   notes: Snapchat provides access to the Snap Ads Gallery which appears to provide
     access to EU ads which were delivered in the last 12 months as well as live commercial
-    content ([Snapchat Ads Gallery](https://adsgallery.snap.com)). The option
-    to extract data from the GUI does not appear to exist. In practice, despite multiple
-    searches using different advertiser snapchat IDs, including brands such as "Mcdonalds",
+    content ([Snapchat Ads Gallery](https://adsgallery.snap.com)). The option to extract
+    data from the GUI does not appear to exist. In practice, despite multiple searches
+    using different advertiser snapchat IDs, including brands such as "Mcdonalds",
     "Dior" or "Mcdo\_France" using various country filters including individual countries
     and "all EU countries", no data was returned by the GUI.
 - code: AD_SC3
@@ -63,8 +63,16 @@ accessibility_answers:
   selected_answer: 'no'
   notes: The API and Ad Gallery documentation does not provide any details about the
     format of data provided and this cannot be verified via the API nor the GUI as
-    they do not appear to be functioning at the time of this assessment ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+    they do not appear to be functioning at the time of this assessment ([Snapchat
+    API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
 completeness_answers:
+- code: AD_OC9
+  selected_answer: 'no'
+  notes: The Ad Gallery and Ad Gallery API documentations do not provide any detailed
+    explanation of the kind of data which could be visible on the GUI or extracted
+    via the API about advertisers beyond "advertiser name" ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+    This cannot be verified via the API nor the GUI as they do not appear to be functioning
+    at the time of this assessment.
 - code: AD_OC10
   selected_answer: 'no'
   notes: The Ad Gallery and Ad Gallery API documentations do not mention providing
@@ -87,13 +95,6 @@ completeness_answers:
   notes: The Ad Gallery API and GUI do not provide details about whether advertisers
     are verified. This cannot be verified via the API nor the GUI as they do not appear
     to be functioning at the time of this assessment.
-- code: AD_OC9
-  selected_answer: 'no'
-  notes: The Ad Gallery and Ad Gallery API documentations do not provide any detailed
-    explanation of the kind of data which could be visible on the GUI or extracted
-    via the API about advertisers beyond "advertiser name" ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
-    This cannot be verified via the API nor the GUI as they do not appear to be functioning
-    at the time of this assessment.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
@@ -123,8 +124,8 @@ compliance_answers:
     of the EU.
 - code: AD_OC20
   selected_answer: not_applicable
-  notes: The Snapchat Ad Gallery [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) does not appear to describe any
-    deprecation strategies.
+  notes: The Snapchat Ad Gallery [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)
+    does not appear to describe any deprecation strategies.
 - code: AD_OC21
   selected_answer: 'yes'
   notes: Detailed explanations are provided in the [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).

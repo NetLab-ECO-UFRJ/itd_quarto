@@ -38,6 +38,9 @@ accessibility_answers:
   selected_answer: not_applicable
   notes: null
 completeness_answers:
+- code: AD_OC9
+  selected_answer: not_applicable
+  notes: null
 - code: AD_OC10
   selected_answer: not_applicable
   notes: null
@@ -48,9 +51,6 @@ completeness_answers:
   selected_answer: not_applicable
   notes: null
 - code: AD_OC13
-  selected_answer: not_applicable
-  notes: null
-- code: AD_OC9
   selected_answer: not_applicable
   notes: null
 compliance_answers:

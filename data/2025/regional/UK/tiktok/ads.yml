@@ -62,6 +62,14 @@ accessibility_answers:
     API at the time of this assessment. The GUI also provides dates and country information
     in a locale-neutral manner.
 completeness_answers:
+- code: AD_OC9
+  selected_answer: gui
+  notes: 'The GUI provides partial data: it provides the advertiser’s name; however
+    no unique identifier is visible and the URL is not always available: when it is,
+    it is clickable and not immediately obvious to the user. No data can be extracted
+    from the platform via the GUI. According to the documentation, the API should
+    provide data regarding the business name and business id. However, this has not
+    been confirmed due to lack of access to the API at the time of this assessment.'
 - code: AD_OC10
   selected_answer: gui
   notes: The GUI provides the funders’ name; however no data can be extracted from
@@ -98,14 +106,6 @@ completeness_answers:
     link is provided. This information cannot be extracted from the GUI. According
     to the API documentation, the API does not provide data regarding whether an advertiser
     is verified or not.
-- code: AD_OC9
-  selected_answer: gui
-  notes: 'The GUI provides partial data: it provides the advertiser’s name; however
-    no unique identifier is visible and the URL is not always available: when it is,
-    it is clickable and not immediately obvious to the user. No data can be extracted
-    from the platform via the GUI. According to the documentation, the API should
-    provide data regarding the business name and business id. However, this has not
-    been confirmed due to lack of access to the API at the time of this assessment.'
 compliance_answers:
 - code: AD_OC14
   selected_answer: gui

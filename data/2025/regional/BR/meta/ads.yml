@@ -52,6 +52,12 @@ accessibility_answers:
   notes: We analyzed date and currency fields and they came in the expected format.
     Date was ISO 8601 and currency was BRL.
 completeness_answers:
+- code: AD_OC9
+  selected_answer: both
+  notes: The platform always provides a unique identification for all advertisers
+    but, when an advertiser does not have a page on facebook, the platform only provides
+    the Instagram user ID in the page name field and the number zero in the page id
+    field.
 - code: AD_OC10
   selected_answer: both
   notes: The only information that the platform provides is a text informed by the
@@ -73,12 +79,6 @@ completeness_answers:
     can be found in the documentation. On the other hand, Meta provides detailed information
     about the advertiser even if it does not clearly display that an advertiser is
     verified on the GUI.
-- code: AD_OC9
-  selected_answer: both
-  notes: The platform always provides a unique identification for all advertisers
-    but, when an advertiser does not have a page on facebook, the platform only provides
-    the Instagram user ID in the page name field and the number zero in the page id
-    field.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'

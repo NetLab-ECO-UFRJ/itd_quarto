@@ -51,6 +51,10 @@ accessibility_answers:
     Universal Time (UTC)". However, it cannot be demonstrated because time-related
     fields are only available for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).'
 completeness_answers:
+- code: AD_OC9
+  selected_answer: both
+  notes: The platform provides the URLs of the LinkedIn pages or profiles of who ran
+    the ads.
 - code: AD_OC10
   selected_answer: both
   notes: 'The platform provides data on the funder who paid for the ads. '
@@ -68,10 +72,6 @@ completeness_answers:
   notes: 'The only fields about advertisers in response schema are: advertiserName,
     advertiserUrl and adPayer. Also, there is no information about verified or unverified
     advertisers through the GUI.'
-- code: AD_OC9
-  selected_answer: both
-  notes: The platform provides the URLs of the LinkedIn pages or profiles of who ran
-    the ads.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'

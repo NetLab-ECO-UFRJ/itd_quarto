@@ -39,6 +39,9 @@ accessibility_answers:
   selected_answer: api
   notes: Timestamps in Unix format (like 1763337597116).
 completeness_answers:
+- code: AD_OC9
+  selected_answer: both
+  notes: ''
 - code: AD_OC10
   selected_answer: both
   notes: ''
@@ -50,9 +53,6 @@ completeness_answers:
   notes: ''
 - code: AD_OC13
   selected_answer: 'no'
-  notes: ''
-- code: AD_OC9
-  selected_answer: both
   notes: ''
 compliance_answers:
 - code: AD_OC14

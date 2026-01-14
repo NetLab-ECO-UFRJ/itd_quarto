@@ -59,6 +59,18 @@ accessibility_answers:
   selected_answer: 'yes'
   notes: The publication dates returned by the Telegram API follow the ISO 8601 format.
 compliance_answers:
+- code: UGC_OC8
+  selected_answer: no_or_not_applicable
+  notes: 'We found no official documentation for TDLib that outlines a deprecation
+    policy. While there is a [changelog](https://core.telegram.org/tdlib/Change_Log)
+    on [GitHub](https://github.com/tdlib/td/blob/master/CHANGELOG.md), it documents
+    only changes that have already been made to major releases. The document does
+    not include removal dates and migration instructions for deprecated features (see
+    [issue #3448](https://github.com/tdlib/td/issues/3448) and [issue #2215](https://github.com/tdlib/td/issues/2215)).'
+- code: UGC_OC9
+  selected_answer: 'yes'
+  notes: '[Telegram API documentation](https://core.telegram.org/methods) can be accessed
+    without authentication.'
 - code: UGC_OC10
   selected_answer: 'no'
   notes: The Telegram and TDLib API documentation is not clearly written or exemplified.
@@ -91,18 +103,6 @@ compliance_answers:
   selected_answer: 'no'
   notes: We found no official policy or technical specification for AI-generated content
     in Telegram’s API documentation and terms of service.
-- code: UGC_OC8
-  selected_answer: no_or_not_applicable
-  notes: 'We found no official documentation for TDLib that outlines a deprecation
-    policy. While there is a [changelog](https://core.telegram.org/tdlib/Change_Log)
-    on [GitHub](https://github.com/tdlib/td/blob/master/CHANGELOG.md), it documents
-    only changes that have already been made to major releases. The document does
-    not include removal dates and migration instructions for deprecated features (see
-    [issue #3448](https://github.com/tdlib/td/issues/3448) and [issue #2215](https://github.com/tdlib/td/issues/2215)).'
-- code: UGC_OC9
-  selected_answer: 'yes'
-  notes: '[Telegram API documentation](https://core.telegram.org/methods) can be accessed
-    without authentication.'
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'yes'

@@ -77,6 +77,16 @@ accessibility_answers:
   notes: Official documentation does not explicitly confirm that the X Ads Repository
     uses locale-neutral data representation.
 completeness_answers:
+- code: AD_OC9
+  selected_answer: gui
+  notes: 'According to the official documentation, the X Ads Transparency Center "includes
+    the following: Advertiser, Funding Entity, the Advertiser''s Main Targeting Parameters
+    for the advertisement, Impression, and Reach of Ad to provide transparency around
+    advertisements on the platform" ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    Therefore, in principle, this could also be achieved via the GUI and the API alike;
+    however, this cannot be confirmed due to a lack of access to the API at the time
+    of this assessment as well as due to difficulties extracting any data from the
+    GUI despite multiple attempts.'
 - code: AD_OC10
   selected_answer: 'no'
   notes: 'The X Ads Transparency Center "includes the following: Advertiser, Funding
@@ -114,16 +124,6 @@ completeness_answers:
     Moreover, it is notable that, in general, X departs from online verification-labelling
     conventions by treating verification as a paid feature, making verification unusable
     on the platform ([EU Commission](https://ec.europa.eu/commission/presscorner/detail/en/ip_24_3761)).
-- code: AD_OC9
-  selected_answer: gui
-  notes: 'According to the official documentation, the X Ads Transparency Center "includes
-    the following: Advertiser, Funding Entity, the Advertiser''s Main Targeting Parameters
-    for the advertisement, Impression, and Reach of Ad to provide transparency around
-    advertisements on the platform" ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
-    Therefore, in principle, this could also be achieved via the GUI and the API alike;
-    however, this cannot be confirmed due to a lack of access to the API at the time
-    of this assessment as well as due to difficulties extracting any data from the
-    GUI despite multiple attempts.'
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'

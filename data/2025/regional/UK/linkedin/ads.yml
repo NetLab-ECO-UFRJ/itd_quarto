@@ -8,13 +8,13 @@ special-criteria_answers:
   notes: All ads can be extracted from the API.
 - code: AD_SC2
   selected_answer: 'no'
-  notes: 'Although LinkedIn provides a graphical user interface where users can view ad content,
-    it is not possible to export its data.'
+  notes: Although LinkedIn provides a graphical user interface where users can view
+    ad content, it is not possible to export its data.
 - code: AD_SC3
   selected_answer: 'no'
-  notes: 'In terms of inactive ads, it is possible to obtain data from ads with latestImpressionAt
+  notes: In terms of inactive ads, it is possible to obtain data from ads with latestImpressionAt
     in the past, but that information is only available at the response schema for
-    [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).'
+    [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).
 accessibility_answers:
 - code: AD_OC1
   selected_answer: partial
@@ -42,34 +42,35 @@ accessibility_answers:
     or unique identifier.
 - code: AD_OC7
   selected_answer: 'no'
-  notes: 'It is only necessary to pass the parameter "keyword" through the API or search
-    through the GUI.'
+  notes: It is only necessary to pass the parameter "keyword" through the API or search
+    through the GUI.
 - code: AD_OC8
   selected_answer: 'no'
   notes: 'From the documentation: "All dates and timestamps are recorded in Coordinated
     Universal Time (UTC)". However, it cannot be demonstrated because time-related
     fields are only available for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070).'
 completeness_answers:
+- code: AD_OC9
+  selected_answer: 'no'
+  notes: The platform provides the URLs of the LinkedIn pages or profiles of who ran
+    the ads.
 - code: AD_OC10
   selected_answer: 'no'
   notes: 'The platform provides data on the funder who paid for the ads. '
 - code: AD_OC11
   selected_answer: 'no'
-  notes: 'The response schema includes firstImpressionAt and latestImpressionAt only for EU
-    countries. Also, there is no information about data through the [GUI outside the
-    EU](https://www.linkedin.com/help/lms/answer/a1620070).'
+  notes: The response schema includes firstImpressionAt and latestImpressionAt only
+    for EU countries. Also, there is no information about data through the [GUI outside
+    the EU](https://www.linkedin.com/help/lms/answer/a1620070).
 - code: AD_OC12
   selected_answer: 'no'
-  notes: This is available only for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070) for both API and GUI.
+  notes: This is available only for [EU countries](https://www.linkedin.com/help/lms/answer/a1620070)
+    for both API and GUI.
 - code: AD_OC13
   selected_answer: 'no'
   notes: 'The only fields about advertisers in response schema are: advertiserName,
     advertiserUrl and adPayer. Also, there is no information about verified or unverified
     advertisers through the GUI.'
-- code: AD_OC9
-  selected_answer: 'no'
-  notes: 'The platform provides the URLs of the LinkedIn pages or profiles of who
-    ran the ads.'
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
@@ -82,17 +83,17 @@ compliance_answers:
     /api/ads, '
 - code: AD_OC15
   selected_answer: 'no'
-  notes: 'There are no mentions of AI anywhere from both API and GUI.'
+  notes: There are no mentions of AI anywhere from both API and GUI.
 - code: AD_OC16
   selected_answer: 'no'
-  notes: 'It is possible to access the documentation without login.'
+  notes: It is possible to access the documentation without login.
 - code: AD_OC17
   selected_answer: 'no'
   notes: The documentation lacks explanations and references. There is only one example
     of response and it is for EU countries. /api/ads
 - code: AD_OC18
   selected_answer: 'no'
-  notes: 'There is no reference to the specific terms of use of the API or GUI.'
+  notes: There is no reference to the specific terms of use of the API or GUI.
 - code: AD_OC19
   selected_answer: 'no'
   notes: 'Both API documentation and GUI are available in Portuguese. However, it

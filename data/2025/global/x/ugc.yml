@@ -75,6 +75,15 @@ accessibility_answers:
     language codes, and country or regional codes follow standard ISO 3166-1 Alpha-2
     conventions.
 compliance_answers:
+- code: UGC_OC8
+  selected_answer: 'yes'
+  notes: The X/Twitter API documentation includes a dedicated section on migrating
+    from API v1.1 to v2, outlining the key differences and new features. Although
+    no deprecation timeline is provided, it states that v1.1 endpoints will remain
+    functional but will no longer receive new features or updates.
+- code: UGC_OC9
+  selected_answer: 'yes'
+  notes: The X/Twitter API documentation is publicly accessible to anyone.
 - code: UGC_OC10
   selected_answer: 'yes'
   notes: The X/Twitter API documentation is comprehensive and includes all the necessary
@@ -103,15 +112,6 @@ compliance_answers:
   notes: X/Twitter does not allow content generated with the assistance of artificial
     intelligence to be labeled. Consequently, this type of information cannot be retrieved
     via the API.
-- code: UGC_OC8
-  selected_answer: 'yes'
-  notes: The X/Twitter API documentation includes a dedicated section on migrating
-    from API v1.1 to v2, outlining the key differences and new features. Although
-    no deprecation timeline is provided, it states that v1.1 endpoints will remain
-    functional but will no longer receive new features or updates.
-- code: UGC_OC9
-  selected_answer: 'yes'
-  notes: The X/Twitter API documentation is publicly accessible to anyone.
 completeness_answers:
 - code: UGC_OC16
   selected_answer: not_applicable

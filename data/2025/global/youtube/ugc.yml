@@ -67,6 +67,21 @@ accessibility_answers:
     ISO 8601 standard. See the [videos documentation](https://developers.google.com/youtube/v3/docs/videos)
     for details.
 compliance_answers:
+- code: UGC_OC8
+  selected_answer: 'yes'
+  notes: 'YouTube implements a formal deprecation strategy with defined grace periods,
+    removal dates, and migration guidance, as well as an RSS feed enabling update
+    notifications. The official [Terms of Service (Section 14.2)](https://developers.google.com/youtube/terms/api-services-terms-of-service#youtube-api-services-terms-of-service)
+    state: "When YouTube intends to make backwards incompatible changes to YouTube
+    API services, YouTube will announce those changes and try to continue to maintain
+    the software code for six (6) months from the date such backwards incompatible
+    changes are announced." Additionally, the [revision history page](https://developers.google.com/youtube/v3/revision_history)
+    documents all changes with dates and rationale, clearly identifying deprecation
+    announcements.'
+- code: UGC_OC9
+  selected_answer: 'yes'
+  notes: The [YouTube Data API v3 documentation](https://developers.google.com/youtube/v3/docs/)
+    can be accessed without authentication.
 - code: UGC_OC10
   selected_answer: 'yes'
   notes: 'The YouTube API documentation provides clear examples of its use, including
@@ -104,21 +119,6 @@ compliance_answers:
     despite the existence of [platform-level features](https://support.google.com/youtube/answer/14328491).
     We found no official policy or technical specification for AI-generated content
     in the YouTube Data API v3 documentation and terms of service.
-- code: UGC_OC8
-  selected_answer: 'yes'
-  notes: 'YouTube implements a formal deprecation strategy with defined grace periods,
-    removal dates, and migration guidance, as well as an RSS feed enabling update
-    notifications. The official [Terms of Service (Section 14.2)](https://developers.google.com/youtube/terms/api-services-terms-of-service#youtube-api-services-terms-of-service)
-    state: "When YouTube intends to make backwards incompatible changes to YouTube
-    API services, YouTube will announce those changes and try to continue to maintain
-    the software code for six (6) months from the date such backwards incompatible
-    changes are announced." Additionally, the [revision history page](https://developers.google.com/youtube/v3/revision_history)
-    documents all changes with dates and rationale, clearly identifying deprecation
-    announcements.'
-- code: UGC_OC9
-  selected_answer: 'yes'
-  notes: The [YouTube Data API v3 documentation](https://developers.google.com/youtube/v3/docs/)
-    can be accessed without authentication.
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'yes'

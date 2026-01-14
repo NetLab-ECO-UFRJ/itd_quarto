@@ -38,6 +38,9 @@ accessibility_answers:
   selected_answer: 'no'
   notes: ''
 completeness_answers:
+- code: AD_OC9
+  selected_answer: 'no'
+  notes: ''
 - code: AD_OC10
   selected_answer: 'no'
   notes: ''
@@ -48,9 +51,6 @@ completeness_answers:
   selected_answer: 'no'
   notes: ''
 - code: AD_OC13
-  selected_answer: 'no'
-  notes: ''
-- code: AD_OC9
   selected_answer: 'no'
   notes: ''
 compliance_answers:
