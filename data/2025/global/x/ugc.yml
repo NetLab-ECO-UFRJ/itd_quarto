@@ -93,7 +93,7 @@ compliance_answers:
 - code: UGC_OC11
   selected_answer: 'yes'
   notes: The X/Twitter API documentation includes an extensive set of developer terms,
-    collectively referred to as the "Developer Agreement and Policy".
+    collectively referred to as the ["Developer Agreement and Policy"](https://developer.x.com/en/developer-terms/agreement-and-policy).
 - code: UGC_OC12
   selected_answer: 'yes'
   notes: For each endpoint, the X/Twitter API documentation clearly describes the
