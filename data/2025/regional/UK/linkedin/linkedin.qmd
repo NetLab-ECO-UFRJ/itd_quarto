@@ -1,8 +1,8 @@
 ---
 title: "LinkedIn"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/regional/BR/linkedin/ugc.yml"
-ads_answers_file: "data/2025/regional/BR/linkedin/ads.yml"
+ugc_answers_file: "data/2025/regional/UK/linkedin/ugc.yml"
+ads_answers_file: "data/2025/regional/UK/linkedin/ads.yml"
 region_code: "UK"
 ---
 
