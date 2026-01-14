@@ -128,13 +128,14 @@ def generate_summary_table(results: Dict[str, Any]):
             notes = markdown.markdown(notes_text, extensions=['extra'])
 
             answer_icon = ""
-            if answer.lower() in ["yes", "full"]:
+            answer_lower = answer.lower()
+            if answer_lower.startswith("yes") or answer_lower == "full":
                 answer_icon = "✅ "
-            elif answer.lower() in ["partial"]:
+            elif answer_lower.startswith("partial"):
                 answer_icon = "⚠️ "
-            elif answer.lower() in ["no", "no or not applicable"]:
+            elif answer_lower.startswith("no"):
                 answer_icon = "❌ "
-            elif answer.lower() in ["not applicable"]:
+            elif answer_lower == "not applicable":
                 answer_icon = "➖ "
 
             print('<tr style="border-bottom: 1px solid #eee;">')
