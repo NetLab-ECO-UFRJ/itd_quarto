@@ -61,7 +61,7 @@ completeness_answers:
 - code: AD_OC11
   selected_answer: 'no'
   notes: The response schema includes firstImpressionAt and latestImpressionAt only
-    for EU countries. Also, there is no information about data through the [GUI outside
+    for EU countries. Also, there is no information about time periods through the [GUI outside
     the EU](https://www.linkedin.com/help/lms/answer/a1620070).
 - code: AD_OC12
   selected_answer: 'no'
