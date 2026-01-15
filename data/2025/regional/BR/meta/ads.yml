@@ -6,15 +6,10 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: partial
-  notes: Meta only delivers political and issue ads that circulate in Brazil. We found
-    ads that are not considered political and classified by the platform, however,
-    they were only ads that also ran in the EU. We couldn't retrieve any ads from
-    other specific categories listed by Meta rather than political and issue category.
+  notes: The [Meta Ad Library API](https://www.facebook.com/ads/library/api/) permits the retrieval of data on ads labeled and classified as political or issue ads in Brazil. Other ads that are not categorized in this way can also be accessed through the API, but only if they were delivered to users located in the European Union.
 - code: AD_SC2
   selected_answer: partial
-  notes: There is a graphical user interface, called Meta Ad Library, but it only
-    allows data extraction for political and issue ads. Other ads are shown but cannot
-    be extracted.
+  notes: The [Meta Ad Library GUI](https://www.facebook.com/ads/library/) likewise permits structured data extraction only for ads labeled and classified as political or issue ads in Brazil. Other ads may be visible to users while they are actively being served on the platform, but their data cannot be extracted in a structured format.
 - code: AD_SC3
   selected_answer: partial
   notes: 'We can retrieve both active and inactive ads, but only for political and
