@@ -11,7 +11,7 @@ special-criteria_answers:
   selected_answer: 'no'
   notes: Although [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/) allows users to view ads served on the platform, it does not provide any means to export structured data.
 - code: AD_SC3
-  selected_answer: 'yes'
+  selected_answer: 'full'
   notes: Both the LinkedIn Ad Library GUI and API allow users to verify the most recent date on which an ad was served to a user.
 accessibility_answers:
 - code: AD_OC1
