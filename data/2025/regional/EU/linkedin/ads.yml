@@ -8,36 +8,36 @@ special-criteria_answers:
   selected_answer: full
   notes: ''
 - code: AD_SC2
-  selected_answer: partial
-  notes: No data export functionality available via the [LinkedIn Ad Library](https://www.linkedin.com/ad-library).
-- code: AD_SC3
   selected_answer: 'no'
-  notes: 'No clear distinction. You can set a filter based on when the latest impression was made.'
+  notes: Although [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/) allows users to view ads served on the platform, it does not provide any means to export structured data.
+- code: AD_SC3
+  selected_answer: 'yes'
+  notes: Both the LinkedIn Ad Library GUI and API allow users to verify the most recent date on which an ad was served to a user.
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
-  notes: ''
+  notes: Ad content can be accessed and viewed through [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/).
 - code: AD_OC2
   selected_answer: both
-  notes: ''
+  notes: Access to LinkedIn Ad Library is free of charge.
 - code: AD_OC3
   selected_answer: 'no'
-  notes: The ad\'s text and publication date aren't included.
+  notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) returns only the ad URL, the period during which it ran and information about the advertiser—including their name, page URL, and funder—but does not provide the ad creative itself.
 - code: AD_OC4
   selected_answer: 'yes'
-  notes: ''
+  notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) provides a form of authentication thatallows for renewal without the risk of data loss.
 - code: AD_OC5
-  selected_answer: 'no'
-  notes: ''
+  selected_answer: gui
+  notes: Through [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/), it is possible to access the page of a specific ad. By contrast, the API does not allow ads to be retrieved by their ID.
 - code: AD_OC6
   selected_answer: 'no'
-  notes: ''
+  notes: On both LinkedIn Ad Library [GUI](https://www.linkedin.com/ad-library/) and [API](https://www.linkedin.com/ad-library/api), the advertiser search function retrieves only records containing the queried keyword, rather than allowing direct filtering by a specific advertiser via their username or unique identifier.
 - code: AD_OC7
   selected_answer: both
-  notes: ''
+  notes: It is possible to use keywords to perform searches both through LinkedIn Ad Library [GUI](https://www.linkedin.com/ad-library/)] and [API](https://www.linkedin.com/ad-library/api).
 - code: AD_OC8
   selected_answer: api
-  notes: Timestamps in Unix format (like 1763337597116).
+  notes: Timestamps retrieved through the LinkedIn Ad Library API follow the Unix format (e.g., 1763337597116). By contrast, the LinkedIn Ad Library GUI returns abbreviated and extended date strings (e.g., “Jan 13, 2026 to Jan 15, 2026”), which hinders both readability and automated processing.
 completeness_answers:
 - code: AD_OC9
   selected_answer: both
