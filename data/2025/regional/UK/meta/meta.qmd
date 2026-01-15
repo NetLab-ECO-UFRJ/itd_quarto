@@ -2,7 +2,7 @@
 title: "Meta"
 subtitle: "Platform Evaluation Report"
 ugc_answers_file: "data/2025/global/meta/ugc.yml"
-ads_answers_file: "data/2025/regional/UK/meta/ads.yml"
+ads_answers_file: "data/2025/regional/EU/meta/ads.yml"
 region_code: "UK"
 ---
 
@@ -23,7 +23,7 @@ from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
     ugc_file="data/2025/global/meta/ugc.yml",
-    ads_file="data/2025/regional/UK/meta/ads.yml",
+    ads_file="data/2025/regional/EU/meta/ads.yml",
     year='2025'
 )
 

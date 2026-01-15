@@ -59,10 +59,7 @@ compliance_answers:
   notes: The Bluesky's official API lacks explanation about its methods. The documentation does not include practical examples such as sample code and queries. Descriptions and explanations were considered insufficient.
 - code: UGC_OC11
   selected_answer: 'no'
-  notes: Although Bluesky includes links to its [Terms of Service](https://bsky.social/about/support/tos),
-    [Privacy Policy](https://bsky.social/about/support/privacy-policy), and [Copyright](https://bsky.social/about/support/copyright)
-    policies, none are specific for API usage. There is also a [Developer Guidelines](https://docs.bsky.app/docs/support/developer-guidelines)
-    page, but it includes only "recommendations" to developers.
+  notes: Bluesky currently provides only general-purpose policies for use of the platform, including its [Terms of Service](https://bsky.social/about/support/tos), [Privacy Policy](https://bsky.social/about/support/privacy-policy), and [Copyright Policy](https://bsky.social/about/support/copyright). These documents govern federated instances and end-user applications of Bluesky but do not contain any explicit or dedicated provisions regulating API usage. For developers, Bluesky publishes [Developer Guidelines](https://docs.bsky.app/docs/support/developer-guidelines). However, these guidelines are not enforceable contractual terms specific to API access or integration.
 - code: UGC_OC12
   selected_answer: 'yes'
   notes: There is a response scheme for all endpoints in the documentation, such as
