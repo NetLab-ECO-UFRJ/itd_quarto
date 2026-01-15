@@ -129,7 +129,7 @@ def generate_summary_table(results: Dict[str, Any]):
 
             answer_icon = ""
             answer_lower = answer.lower()
-            if answer_lower.startswith("yes") or answer_lower == "full":
+            if answer_lower.startswith("yes") or answer_lower == "full" or answer_lower.startswith("free"):
                 answer_icon = "✅ "
             elif answer_lower.startswith("partial"):
                 answer_icon = "⚠️ "
