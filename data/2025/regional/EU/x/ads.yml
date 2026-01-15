@@ -5,123 +5,129 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
-  notes: This is available through the X API via Researcher's access for ads delivered
+  notes: According to X, this is available through the X API via Researcher's access for ads delivered
     in the European Union under Art. 40 of the Digital Services Act (DSA); however,
     access was not available at the time of assessment due to a pending request and
-    the absence of a response from the platform., despite being requested within a
+    the absence of a response from the platform, despite being requested within a
     reasonable timeframe ([X documentation](https://help.x.com/en/rules-and-policies/dsa-vetted-researchers)).
-    There appears to also be the possibility of accessing this Ad Repository via the
-    normal, non-researcher API tier ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)),
-    therefore via the "Free" tier. However, this access is severely limited to 500
-    posts per month ([X documentation](https://developer.x.com/en)) and is therefore
-    considered to be equivalent to partial availability.
 - code: AD_SC2
-  selected_answer: partial
+  selected_answer: 'no'
   notes: The X Ads Transparency Center was launched in 2023 to comply with the demands
     of the Digital Services Act (DSA) of the EU. For ads served in the EU, this Ad
-    Transparency center includes critical information about funding, targeting and
-    reach as well as the opportunity to export this information in comma separated
-    values (CSV) format ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
-    Partial availability is assessed due to the inability to extract data despite
+    Transparency center would include critical information about funding, targeting and
+    reach available in comma separated values (CSV) format files ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    This is the only way to get access to information about the ads, since X does not
+    show the data directly in the GUI. However, we could not extract data despite
     multiple attempts, even though the documentation indicates that such extraction
-    should be possible in principle.
+    should be possible in principle. Multiple prominent advertisers such as Amazon,
+    Apple and Netflix have been tested for countries such as France, Germany and Belgium,
+    for varying periods of time including custom date, today, yesterday, the past
+    7 days, this quarter, the last quarter and the past year. None of these
+    extraction have yielded empty csv files with nothing but a header. This is consistent
+    with the recent findings from the EU Commission, fining X for violations under the DSA, which includes
+    "excessive delays in processing" data from its Ad Repository, thus undermining
+    its purpose [[(EC, 2025]{.underline}](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934)).
 - code: AD_SC3
   selected_answer: 'no'
-  notes: ''
+  notes: 'This cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.'
 accessibility_answers:
 - code: AD_OC1
-  selected_answer: partial
-  notes: In principle, this information should be accessible via the graphical interface;
-    however, it did not appear to be functioning correctly, as all searches attempted
-    at the time of this assessment (December 2025) yielded empty csv files with nothing
-    but a header. Moreover, theoretically, this could also be achieved via the API;
-    however, this cannot be confirmed due to a lack of access at the of this assessment.
+  selected_answer: 'no'
+  notes: In principle, this criteria could be achieved via the file generated in
+    the graphical interface; however, it is not functioning correctly,
+    as all searches attempted at the time of this assessment (December 2025) yielded
+    empty csv files with nothing but a header. Moreover, theoretically, this could
+    also be achieved via the API; however, this cannot be confirmed due to a lack of
+    access at the time of this assessment.
 - code: AD_OC2
-  selected_answer: api
-  notes: The GUI is free but limited to ads delivered in the EU, while the API access
-    is free but is subject to approval from X under article 40 of the DSA ([X documentation](https://docs.google.com/forms/d/e/1FAIpQLSdo0O-D6Kxa3cV4g1JLz2T_0Sk3hdEnTdv8dJmibagCnzJ7kg/viewform)).
+  selected_answer: api, gui
+  notes: The GUI is free and limited to ads delivered in the EU, while the API access
+    is free and subject to approval from X under article 40 of the DSA ([X documentation](https://docs.google.com/forms/d/e/1FAIpQLSdo0O-D6Kxa3cV4g1JLz2T_0Sk3hdEnTdv8dJmibagCnzJ7kg/viewform)).
 - code: AD_OC3
   selected_answer: 'no'
-  notes: Theoretically, this could also be achieved via the GUI and the API; however,
-    this cannot be confirmed due to a lack of access to the API at the time of this
-    assessment as well as due to difficulties extracting any data from the GUI despite
-    multiple attempts.
+  notes: In principle, this criteria could be achieved via the file generated in
+    the graphical interface; however, it is not functioning correctly,
+    as all searches attempted at the time of this assessment (December 2025) yielded
+    empty csv files with nothing but a header. Moreover, theoretically, this could
+    also be achieved via the API; however, this cannot be confirmed due to a lack of
+    access at the time of this assessment.
 - code: AD_OC4
   selected_answer: 'no'
-  notes: Theoretically, this could also be achieved via the Researcher API; however,
-    this cannot be confirmed due to a lack of access at the of this assessment. This
-    does not appear to be possible via non-researcher access ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
-    Moreover, currently, there is no publicly documented set of distinct rate limits
-    for EU vetted researchers separate from standard X API developer rate limits,
-    suggesting that the standard API limits may apply, meaning it may not always be
-    possible to have continuous data collection due to stringent rate limits (1 request
-    every 15 minutes; 100 tweets per month).
+  notes: This cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
 - code: AD_OC5
   selected_answer: 'no'
   notes: The GUI does not support searching for specific advertisements using a unique
-    identifier. This does not appear to be supported by the API access to the Ad Repository
+    identifier. This does not appear to be supported by the API access to the Ad Repository either
     ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    Moreover, this cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
 - code: AD_OC6
   selected_answer: 'no'
-  notes: Theoretically, this could also be achieved via the GUI and the API; however,
-    this cannot be confirmed due to a lack of access to the API at the time of this
-    assessment as well as due to difficulties extracting any data from the GUI despite
-    multiple attempts.
+  notes:  In principle, this criteria could be achieved via the file generated in
+    the graphical interface; however, it is not functioning correctly,
+    as all searches attempted at the time of this assessment (December 2025) yielded
+    empty csv files with nothing but a header. Moreover, theoretically, this could
+    also be achieved via the API; however, this cannot be confirmed due to a lack of
+    access at the time of this assessment.
 - code: AD_OC7
   selected_answer: 'no'
   notes: The GUI does not enable data extraction from the platform using search terms.
     This does not appear to be supported by the API access to the Ad Repository ([[X,
     n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    Moreover, this cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
 - code: AD_OC8
   selected_answer: 'no'
   notes: Official documentation does not explicitly confirm that the X Ads Repository
-    uses locale-neutral data representation.
+    uses locale-neutral data representation. Moreover, this cannot be verified due to a lack
+    of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
 completeness_answers:
 - code: AD_OC9
-  selected_answer: gui
+  selected_answer: 'no'
   notes: 'According to the official documentation, the X Ads Transparency Center "includes
     the following: Advertiser, Funding Entity, the Advertiser''s Main Targeting Parameters
     for the advertisement, Impression, and Reach of Ad to provide transparency around
     advertisements on the platform" ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
-    Therefore, in principle, this could also be achieved via the GUI and the API alike;
-    however, this cannot be confirmed due to a lack of access to the API at the time
-    of this assessment as well as due to difficulties extracting any data from the
-    GUI despite multiple attempts.'
+    In principle, this criteria could be achieved via the file generated in
+    the graphical interface; however, it is not functioning correctly,
+    as all searches attempted at the time of this assessment (December 2025) yielded
+    empty csv files with nothing but a header. Moreover, theoretically, this could
+    also be achieved via the API; however, this cannot be confirmed due to a lack of
+    access at the time of this assessment.'
 - code: AD_OC10
   selected_answer: 'no'
   notes: 'The X Ads Transparency Center "includes the following: Advertiser, Funding
     Entity, the Advertiser''s Main Targeting Parameters for the advertisement, Impression,
     and Reach of Ad to provide transparency around advertisements on the platform"
     ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
-    Therefore, in principle, this could also be achieved via the GUI and the API alike;
-    however, this cannot be confirmed due to a lack of access to the API at the time
-    of this assessment as well as due to difficulties extracting any data from the
-    GUI despite multiple attempts.'
+    In principle, this criteria could be achieved via the file generated in
+    the graphical interface; however, it is not functioning correctly,
+    as all searches attempted at the time of this assessment (December 2025) yielded
+    empty csv files with nothing but a header. Moreover, theoretically, this could
+    also be achieved via the API; however, this cannot be confirmed due to a lack of
+    access at the time of this assessment.'
 - code: AD_OC11
   selected_answer: 'no'
-  notes: 'The X Ads Transparency Center "includes the following: Advertiser, Funding
-    Entity, the Advertiser''s Main Targeting Parameters for the advertisement, Impression,
-    and Reach of Ad to provide transparency around advertisements on the platform"
-    ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
-    Therefore, in principle, this could also be achieved via the GUI and the API alike;
-    however, this cannot be confirmed due to a lack of access to the API at the time
-    of this assessment as well as due to difficulties extracting any data from the
-    GUI despite multiple attempts.'
+  notes: 'This cannot be confirmed due to a lack of access at time the of this assessment.'
 - code: AD_OC12
   selected_answer: 'no'
-  notes: 'The X Ads Transparency Center "includes the following: Advertiser, Funding
-    Entity, the Advertiser''s Main Targeting Parameters for the advertisement, Impression,
-    and Reach of Ad to provide transparency around advertisements on the platform"
-    ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
-    Therefore, in principle, this could also be achieved via the GUI and the API alike;
-    however, this cannot be confirmed due to a lack of access to the API at the time
-    of this assessment as well as due to difficulties extracting any data from the
-    GUI despite multiple attempts.'
+  notes: 'This cannot be confirmed due to a lack of access at time the of this assessment.'
 - code: AD_OC13
   selected_answer: 'no'
-  notes: The GUI nor the API are documented as indicating whether advertisers were
+  notes: Neither the GUI or the API are documented as indicating whether advertisers were
     verified at the time their ads were served ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
-    Moreover, it is notable that, in general, X departs from online verification-labelling
+    This cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
+    It is notable that, in general, X departs from online verification-labelling
     conventions by treating verification as a paid feature, making verification unusable
     on the platform ([EU Commission](https://ec.europa.eu/commission/presscorner/detail/en/ip_24_3761)).
 compliance_answers:
@@ -129,23 +135,19 @@ compliance_answers:
   selected_answer: 'no'
   notes: Theoretically, this is available via the GUI, as the headers "Facts And Circumstances
     Of Removal, Enforcement Action, Statement Of Reason" appear; however no data has
-    been successfully collected so far. Multiple prominent advertisers such as Amazon,
-    Apple and Netflix have been tested for countries such as France, Germany and Belgium,
-    for varying periods of time including custom date, today, yesterday, the past
-    7 days, this quarter, the last quarter and the past year. However none of these
-    searches have yielded any results. This is consistent with the recent findings
-    from the EU Commission, fining X for violations under the DSA, which includes
-    "excessive delays in processing" data from its Ad Repository, thus undermining
-    its purpose [[(EC, 2025]{.underline}](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934)).
+    been successfully collected so far.
     Theoretically, this could also be achieved via the API; however, this cannot be
     confirmed due to a lack of access to the API at the time of this assessment.
 - code: AD_OC15
   selected_answer: 'no'
   notes: The GUI and the API do not indicate whether ad content was generated using
     artificial intelligence ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    Moreover, this cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
 - code: AD_OC16
-  selected_answer: api
-  notes: Though minimal, the GUI and API documentation appears to be open access ([[X,
+  selected_answer: api, gui
+  notes: Though minimal, the GUI and API documentation is open access ([[X,
     n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC17
   selected_answer: 'no'
@@ -161,47 +163,49 @@ compliance_answers:
   notes: The X Ad Repository documentation is only available in English ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency),
     [X documentation](https://ads.twitter.com/ads-repository?ref=BTC)).
 - code: AD_OC20
-  selected_answer: not_applicable
+  selected_answer: 'no'
   notes: The API documentation does not describe any deprecation strategies nor any
     changelogs or migration instructions ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC21
-  selected_answer: not_applicable
+  selected_answer: 'no'
   notes: The API documentation does not detail any response formats ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC22
-  selected_answer: not_applicable
+  selected_answer: 'no'
   notes: The API documentation does not detail any applicable rate or daily limits
     ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 consistency_answers:
 - code: AD_OC23
   selected_answer: not_applicable
-  notes: In principle, the GUI information should be reflected by the API, however,
-    this cannot be confirmed due to a lack of access to the API at the time of this
-    assessment as well as due to difficulties extracting any data from the GUI despite
-    multiple attempts.
+  notes: This cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
 - code: AD_OC24
   selected_answer: 'no'
-  notes: This cannot be confirmed due to a lack of access to the API at the time of
+  notes: This cannot be verified due to a lack of access to the API at the time of
     this assessment as well as due to difficulties extracting any data from the GUI
     despite multiple attempts.
 - code: AD_OC25
   selected_answer: 'no'
-  notes: This cannot be confirmed due to a lack of access to the API at the time of
+  notes: This cannot be verified due to a lack of access to the API at the time of
     this assessment as well as due to difficulties extracting any data from the GUI
     despite multiple attempts.
 relevance_answers:
 - code: AD_OC26
   selected_answer: 'no'
-  notes: In principle, X allows the use of temporal filters through the GUI and API;
-    however, this cannot be confirmed due to a lack of access to the API at the time
-    of this assessment as well as due to difficulties extracting any data from the
-    GUI despite multiple attempts.
+  notes: In principle, X allows the use of temporal filters through the GUI;
+    however no data has been successfully collected so far.
+    Theoretically, this could also be achieved via the API; however, this cannot be
+    confirmed due to a lack of access to the API at the time of this assessment.
 - code: AD_OC27
   selected_answer: not_applicable
   notes: The X Ad repository does not support filtering by ad category.
 - code: AD_OC28
   selected_answer: 'no'
   notes: The X Ad repository does not support filtering by subnational geographic
-    locations; the only geographic filtering supported is by country.
+    locations; the only geographic filtering supported is by country. Moreover, this
+    cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
 accuracy_answers:
 - code: AD_OC29
   selected_answer: 'no'
@@ -225,4 +229,7 @@ accuracy_answers:
     despite multiple attempts.
 - code: AD_OC33
   selected_answer: 'no'
-  notes: The funding amounts are not reported in the GUI nor the API.
+  notes: The funding amounts are not reported in the GUI nor the API. Moreover, this
+    cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
