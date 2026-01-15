@@ -12,7 +12,7 @@ special-criteria_answers:
   notes: Although [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/) allows users to view ads served on the platform, it does not provide any means to export structured data.
 - code: AD_SC3
   selected_answer: 'no'
-  notes: Although LinkedIn claims that advertising data can be collected for up to one year after an ad stops running,it is not possible to verify the running period of ads that were served outside the [European Union](https://www.linkedin.com/help/lms/answer/a1620070).
+  notes: Although LinkedIn claims that advertising data can be collected for up to one year after an ad stops running, it is not possible to verify the running period of ads that were served outside the [European Union](https://www.linkedin.com/help/lms/answer/a1620070).
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
@@ -66,7 +66,7 @@ compliance_answers:
   notes: Any user can access [LinkedIn Ad Library’s documentation](https://www.linkedin.com/help/linkedin/answer/a1517918).
 - code: AD_OC17
   selected_answer: gui
-  notes: The [LinkedIn Ad Library API’s documentation(https://www.linkedin.com/ad-library/api/ads) lacks sufficient explanations and references, as it provides only a single response example, limited to ads served in European Union countries.
+  notes: The [LinkedIn Ad Library API’s documentation](https://www.linkedin.com/ad-library/api/ads) lacks sufficient explanations and references, as it provides only a single response example, limited to ads served in European Union countries.
 - code: AD_OC18
   selected_answer: 'no'
   notes: The LinkedIn Ad Library does not reference any specific terms of use for either its API or its GUI.
