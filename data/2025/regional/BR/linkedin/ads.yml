@@ -31,7 +31,7 @@ accessibility_answers:
   notes: Through [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/), it is possible to access the page of a specific ad. By contrast, the API does not allow ads to be retrieved by their ID.
 - code: AD_OC6
   selected_answer: 'no'
-  notes: On both LinkedIn Ad Library [GUI](https://www.linkedin.com/ad-library/)] and [API](https://www.linkedin.com/ad-library/api), the advertiser search function retrieves only records containing the queried keyword, rather than allowing direct filtering by a specific advertiser via their username or unique identifier.
+  notes: On both LinkedIn Ad Library [GUI](https://www.linkedin.com/ad-library/) and [API](https://www.linkedin.com/ad-library/api), the advertiser search function retrieves only records containing the queried keyword, rather than allowing direct filtering by a specific advertiser via their username or unique identifier.
 - code: AD_OC7
   selected_answer: both
   notes: It is possible to use keywords to perform searches both through LinkedIn Ad Library [GUI](https://www.linkedin.com/ad-library/)] and [API](https://www.linkedin.com/ad-library/api).
