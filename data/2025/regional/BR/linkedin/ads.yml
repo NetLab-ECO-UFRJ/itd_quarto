@@ -22,7 +22,7 @@ accessibility_answers:
   notes: Access to LinkedIn Ad Library is free of charge.
 - code: AD_OC3
   selected_answer: 'no'
-  notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) returns only the ad URL and information about the advertiser—including their name, page URL, and funder—but does not provide the ad creative or its publication date.
+  notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) returns only the ad URL and information about the advertiser—including their name, page URL, and funder—but does not provide the ad creative or its publication date itself.
 - code: AD_OC4
   selected_answer: 'yes'
   notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) provides a form of authentication thatallows for renewal without the risk of data loss.
