@@ -4,7 +4,7 @@ metadata:
   evaluation_date: 2025-12
 special-criteria_answers:
 - code: AD_SC1
-  selected_answer: partial
+  selected_answer: 'no'
   notes: This is available through the X API via Researcher's access for ads delivered
     in the European Union under Art. 40 of the Digital Services Act (DSA); however,
     access was not available at the time of assessment due to a pending request and
