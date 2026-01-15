@@ -63,7 +63,7 @@ compliance_answers:
   notes: The LinkedIn Ad Library does not provide any information regarding the use of generative AI in the creation or manipulation of ad content.
 - code: AD_OC16
   selected_answer: both
-  notes: Any user can access [LinkedIn Ad Library’s documentation](https://www.linkedin.com/help/linkedin/answer/a1517918).
+  notes: Any user can access [LinkedIn Ad Library’s documentation](https://www.linkedin.com/help/linkedin/answer/a1517918). Some public documentation for the GUI is available in the form of an [FAQ](https://www.linkedin.com/ad-library).
 - code: AD_OC17
   selected_answer: gui
   notes: The [LinkedIn Ad Library API’s documentation](https://www.linkedin.com/ad-library/api/ads) lacks sufficient explanations and references, as it provides only a single response example, limited to ads served in European Union countries.
