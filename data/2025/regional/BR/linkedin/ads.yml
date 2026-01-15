@@ -25,7 +25,7 @@ accessibility_answers:
   notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) returns only the ad URL and information about the advertiser—including their name, page URL, and funder—but does not provide the ad creative or its publication date itself.
 - code: AD_OC4
   selected_answer: 'yes'
-  notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) provides a form of authentication thatallows for renewal without the risk of data loss.
+  notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) provides a form of authentication that allows for renewal without the risk of data loss.
 - code: AD_OC5
   selected_answer: gui
   notes: Through [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/), it is possible to access the page of a specific ad. By contrast, the API does not allow ads to be retrieved by their ID.
