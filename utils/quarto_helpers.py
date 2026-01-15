@@ -133,10 +133,11 @@ def generate_summary_table(results: Dict[str, Any]):
                 answer_icon = "✅ "
             elif answer_lower.startswith("partial"):
                 answer_icon = "⚠️ "
-            elif answer_lower.startswith("no"):
-                answer_icon = "❌ "
             elif answer_lower == "not applicable":
                 answer_icon = "➖ "
+            elif answer_lower == "no":
+                answer_icon = "❌ "
+
 
             print('<tr style="border-bottom: 1px solid #eee;">')
             print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; width: 45% !important;">{topic}</td>')
