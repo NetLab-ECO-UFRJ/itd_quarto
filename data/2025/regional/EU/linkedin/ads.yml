@@ -37,7 +37,7 @@ accessibility_answers:
   notes: It is possible to use keywords to perform searches both through LinkedIn Ad Library [GUI](https://www.linkedin.com/ad-library/)] and [API](https://www.linkedin.com/ad-library/api).
 - code: AD_OC8
   selected_answer: api
-  notes: Timestamps retrieved through the LinkedIn Ad Library API follow the Unix format (e.g., 1763337597116). By contrast, the LinkedIn Ad Library GUI returns abbreviated and extended date strings (e.g., “Jan 13, 2026 to Jan 15, 2026”), which hinders both readability and automated processing.
+  notes: Timestamps retrieved through the LinkedIn Ad Library API follow the Unix format (e.g., 1763337597116). By contrast, the LinkedIn Ad Library GUI returns abbreviated and extended date strings (e.g., “Jan 13, 2026 to Jan 15, 2026”), which hinders both readability and automated processing.aaa
 completeness_answers:
 - code: AD_OC9
   selected_answer: both
