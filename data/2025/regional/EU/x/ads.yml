@@ -197,8 +197,10 @@ relevance_answers:
     Theoretically, this could also be achieved via the API; however, this cannot be
     confirmed due to a lack of access to the API at the time of this assessment.
 - code: AD_OC27
-  selected_answer: not_applicable
-  notes: The X Ad repository does not support filtering by ad category.
+  selected_answer: 'no'
+  notes: This cannot be verified due to a lack of access to the API at the time of
+    this assessment as well as due to difficulties extracting any data from the GUI
+    despite multiple attempts.
 - code: AD_OC28
   selected_answer: 'no'
   notes: The X Ad repository does not support filtering by subnational geographic
