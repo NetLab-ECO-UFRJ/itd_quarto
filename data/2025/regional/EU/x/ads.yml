@@ -146,7 +146,7 @@ compliance_answers:
     this assessment as well as due to difficulties extracting any data from the GUI
     despite multiple attempts.
 - code: AD_OC16
-  selected_answer: api, gui
+  selected_answer: both
   notes: Though minimal, the GUI and API documentation is open access ([[X,
     n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC17
