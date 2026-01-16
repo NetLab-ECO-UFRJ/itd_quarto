@@ -48,8 +48,8 @@ accessibility_answers:
 compliance_answers:
 - code: UGC_OC8
   selected_answer: no_or_not_applicable
-  notes: We did not find a change log in official API documentation, only reference
-    for a change log from a developer
+  notes: The platform does not have a deprecation strategy in its documentation. While some deprecation announcements have been shared through GitHub Discussions,
+    the platform appears to primarily communicate breaking development changes via mailing lists and in-app account messages, which may be insufficient to ensure those changes are widely known.
 - code: UGC_OC9
   selected_answer: 'yes'
   notes: The [Bluesky API documentation](https://docs.bsky.app/) is accessible without
