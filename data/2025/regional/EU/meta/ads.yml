@@ -84,7 +84,7 @@ compliance_answers:
   notes: Although Meta provides [rate-limiting documentation](https://developers.facebook.com/docs/graph-api/overview/rate-limiting/), it is not specific to the Ad Library API, which makes it difficult to estimate the effective quota available for collecting advertising data.
 consistency_answers:
 - code: AD_OC23
-  selected_answer: 'no'
+  selected_answer: 'yes'
   notes: With the exception of ad media—such as images and videos—the content displayed in the Meta Ad Library GUI for ads served in the European Union corresponds to what is returned in structured form by its API.
 - code: AD_OC24
   selected_answer: both
