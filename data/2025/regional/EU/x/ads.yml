@@ -42,7 +42,7 @@ accessibility_answers:
     also be achieved via the API; however, this cannot be confirmed due to a lack of
     access at the time of this assessment.
 - code: AD_OC2
-  selected_answer: api, gui
+  selected_answer: both
   notes: The GUI is free and limited to ads delivered in the EU, while the API access
     is free and subject to approval from X under article 40 of the DSA ([X documentation](https://docs.google.com/forms/d/e/1FAIpQLSdo0O-D6Kxa3cV4g1JLz2T_0Sk3hdEnTdv8dJmibagCnzJ7kg/viewform)).
 - code: AD_OC3
