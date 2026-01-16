@@ -31,13 +31,13 @@ accessibility_answers:
   notes: The Meta Ad Library allows users to retrieve specific ads by their ID through the GUI, but this functionality is [not available through the API](/?active_status=active&ad_type=political_and_issue_ads&country=BR&is_targeted_country=false&media_type=all&q=1362986028521549&search_type=keyword_unordered).
 - code: AD_OC6
   selected_answer: both
-  notes: The Meta Ad Library enables the retrieval of specific advertisers by their unique ID through[both the GUI and the API](/?active_status=active&ad_type=political_and_issue_ads&country=BR&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=651655564979252).
+  notes: The Meta Ad Library enables the retrieval of specific advertisers by their unique ID through [both the GUI and the API](/?active_status=active&ad_type=political_and_issue_ads&country=BR&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=651655564979252).
 - code: AD_OC7
   selected_answer: both
-  notes: It is possible to use keywords to perform searches through both the [Meta Ad Library GUI and API](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive)].
+  notes: It is possible to use keywords to perform searches through both the [Meta Ad Library GUI and API](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive).
 - code: AD_OC8
   selected_answer: both
-  notes: 'We analyzed date and currency data extracted from both the Meta Ad Library GUI and API and found them to be in the expected formats: dates follow ISO 8601, and currency values are expressed in BRL.'
+  notes: Timestamps are returned in Coordinated Universal Time (UTC) using the ISO 8601 standard. They are not automatically localized, and no locale information (such as language or region) is attached unless explicitly requested or inferred. Monetary values may appear in multiple currencies, but these are always expressed using standard ISO currency codes rather than localized formats.
 completeness_answers:
 - code: AD_OC9
   selected_answer: both
@@ -57,7 +57,7 @@ completeness_answers:
 compliance_answers:
 - code: AD_OC14
   selected_answer: both
-  notes: Through the API, the Meta Ad Library indicates when an ad has been removed—provided that the appropriate parameters are set—while disclosing both the reason for removal and the ad’s final date of airing. The GUI likewise presents the reasons for an ad’s removal and its final airing date, and additionally allows users to view the ad content itself when it was removed for violating the company’s Advertising Standards or labeling guidelines.
+  notes: Through the API, the Meta Ad Library indicates when an ad has been removed—provided that the appropriate parameters are set—while disclosing both the reason for removal and the ad’s final date of airing. The GUI likewise presents the reasons for an ad’s removal and its final airing date, and additionally allows users to view the ad content itself when it was removed for violating the company’s [Advertising Standards](https://transparency.meta.com/policies/ad-standards/) or labeling guidelines.
 - code: AD_OC15
   selected_answer: gui
   notes: The Meta Ad Library API [response schema](https://developers.facebook.com/docs/graph-api/reference/archived-ad/) does not indicate whether ad content was created or manipulated using generative AI. The GUI, on the other hand, [explicitly discloses this information](https://www.facebook.com/government-nonprofits/blog/political-ads-ai-disclosure-policy) for ads labeled as political or issue ads, when such use is declared by the advertiser.
@@ -78,14 +78,14 @@ compliance_answers:
   notes: The Meta Ad Library provides a [changelog](https://developers.facebook.com/docs/graph-api/changelog) detailing deprecation strategies and listing all upcoming changes, along with their respective release and expiration dates.
 - code: AD_OC21
   selected_answer: 'yes'
-  notes: The [Meta Ad Library API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive) rovides a description of the response returned by the available endpoint.
+  notes: The [Meta Ad Library API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive) provides a description of the response returned by the available endpoint.
 - code: AD_OC22
   selected_answer: 'no'
   notes: Although Meta provides [rate-limiting documentation](https://developers.facebook.com/docs/graph-api/overview/rate-limiting/), it is not specific to the Ad Library API, which makes it difficult to estimate the effective quota available for collecting advertising data.
 consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
-  notes: The Meta Ad Library API does not expose all the information about advertisers that is available in the GUI for political and issue ads. While the GUI displays detailed advertiser information—such as phone number, address, and email—these fields are not accessible through the API. Likewise, it is not possible to extract the media contained in an ad via the API, which only provides a link to view the ad in the Ad Library interface. In addition, the API does not disclose whether ad content was generated using artificial intelligence.
+  notes: The Meta Ad Library API does not disclose whether the content of ads labeled as political or issue ads was generated or manipulated using artificial intelligence.
 - code: AD_OC24
   selected_answer: both
   notes: We conducted a test using the Meta Ad Library API by issuing five identical requests with the same parameters, saving each response to a separate file, and comparing whether all ads appeared consistently across the files. We observed that the full set of ads was present in every response. The GUI was likewise found to return consistent results across repeated queries.
@@ -101,11 +101,11 @@ relevance_answers:
   notes: The Meta Ad Library differentiates ads only as political or non-political in Brazil, without providing filters for more specific ad categories.
 - code: AD_OC28
   selected_answer: both
-  notes: The Meta Ad Library supports the use of a geographic location filter. However, some ads contain null values in the geographic location field, which complicates the validation of this information.
+  notes: The Meta Ad Library supports the use of a geographic location filter for ads labeled as political or issue ads. However, some ads contain null values in the geographic location field, which complicates the validation of this information.
 accuracy_answers:
 - code: AD_OC29
   selected_answer: both
-  notes: The Meta Ad Library provides age and gender data for the audience. However, it is important to note that the demographic distribution field, which indicates the percentage of the audience population, may sometimes contain null values.
+  notes: The Meta Ad Library provides age and gender data for the audience of ads labeled as political or issue ads. However, it is important to note that the demographic distribution field, which indicates the percentage of the audience population, may sometimes contain null values.
 - code: AD_OC30
   selected_answer: 'no'
   notes: Although the Meta Ad Library provides subnational geographic data on the audience reached by several ads, many others lack this information. No explanation is given for these omissions, and no explicit criteria can be inferred from the observed patterns.
