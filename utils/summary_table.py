@@ -7,9 +7,28 @@ all platforms and regions for both UGC and Ads assessments.
 
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Union
+import yaml
 from .scoring import calculate_platform_score
 
 GLOBAL_PLATFORMS = ['Bluesky', 'Discord', 'Kwai', 'Pinterest', 'Reddit', 'Telegram']
+
+REGION_CODE_MAP = {
+    'GLOBAL': ['BR', 'EU', 'UK'],
+    'BRAZIL': ['BR'],
+    'EU': ['EU'],
+    'UK': ['UK'],
+    'BR': ['BR'],
+}
+
+
+def parse_qmd_frontmatter(qmd_path: Path) -> dict:
+    """Extract YAML frontmatter from QMD file."""
+    content = qmd_path.read_text()
+    if content.startswith('---'):
+        end = content.find('---', 3)
+        if end != -1:
+            return yaml.safe_load(content[3:end]) or {}
+    return {}
 
 
 def get_score_class(score: float) -> str:
@@ -65,10 +84,10 @@ def normalize_platform_name(platform_name: str) -> str:
 
 def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Optional[Union[float, str]]]]:
     """
-    Scan all assessment files and calculate scores.
+    Scan QMD files and calculate scores based on frontmatter answer file paths.
 
-    Global platforms (Bluesky, Discord, Kwai, Pinterest, Reddit, Telegram)
-    always show the same score across all regions.
+    Reads ugc_answers_file/ads_answers_file and region_code from QMD frontmatter
+    to determine which answer files to use for each platform/region combination.
 
     Args:
         project_root: Project root directory
@@ -82,6 +101,7 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
     global_dir = project_root / 'data' / '2025' / 'global'
     regions = ['BR', 'EU', 'UK']
     results = {}
+    answer_file_key = f'{scope}_answers_file'
 
     def calculate_score(assessment_file: Path) -> Optional[float]:
         """Helper to calculate score from assessment file."""
@@ -96,7 +116,30 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
             print(f"Warning: Failed to calculate score for {assessment_file}: {e}")
             return None
 
-    # Scan global assessments
+    def process_qmd(qmd_path: Path, platform_display: str):
+        """Process a QMD file and update results based on frontmatter."""
+        frontmatter = parse_qmd_frontmatter(qmd_path)
+
+        answer_file_path = frontmatter.get(answer_file_key)
+        region_code = frontmatter.get('region_code', 'GLOBAL')
+
+        if not answer_file_path:
+            return
+
+        assessment_file = project_root / answer_file_path
+        if not assessment_file.exists():
+            return
+
+        if platform_display not in results:
+            results[platform_display] = {region: None for region in regions}
+
+        score = calculate_score(assessment_file)
+        if score is not None:
+            target_regions = REGION_CODE_MAP.get(region_code, [])
+            for region in target_regions:
+                results[platform_display][region] = score
+
+    # Scan global QMD files
     if global_dir.exists():
         for platform_dir in global_dir.iterdir():
             if not platform_dir.is_dir():
@@ -108,17 +151,10 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
             if platform_display == 'Bluesky' and scope == 'ads':
                 continue
 
-            if platform_display not in results:
-                results[platform_display] = {region: None for region in regions}
+            for qmd_file in platform_dir.glob('*.qmd'):
+                process_qmd(qmd_file, platform_display)
 
-            assessment_file = platform_dir / f'{scope}.yml'
-            if assessment_file.exists():
-                score = calculate_score(assessment_file)
-                if score is not None:
-                    for region in regions:
-                        results[platform_display][region] = score
-
-    # Scan regional assessments
+    # Scan regional QMD files
     for region in regions:
         region_dir = regional_dir / region
         if not region_dir.exists():
@@ -130,27 +166,8 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
 
             platform_display = normalize_platform_name(platform_dir.name)
 
-            if platform_display not in results:
-                results[platform_display] = {reg: None for reg in regions}
-
-            assessment_file = platform_dir / f'{scope}.yml'
-            if assessment_file.exists():
-                score = calculate_score(assessment_file)
-                if score is not None:
-                    results[platform_display][region] = score
-
-    # Enforce global platforms have same score across all regions
-    for platform in GLOBAL_PLATFORMS:
-        if platform in results:
-            # Find first non-None score from any region
-            global_score = next(
-                (results[platform][r] for r in regions if results[platform][r] is not None),
-                None
-            )
-            # Apply to all regions
-            if global_score is not None:
-                for region in regions:
-                    results[platform][region] = global_score
+            for qmd_file in platform_dir.glob('*.qmd'):
+                process_qmd(qmd_file, platform_display)
 
     return results
 
