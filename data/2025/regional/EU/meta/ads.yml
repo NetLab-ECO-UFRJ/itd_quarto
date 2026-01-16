@@ -78,7 +78,7 @@ compliance_answers:
   notes: The Meta Ad Library provides a [changelog](https://developers.facebook.com/docs/graph-api/changelog) detailing deprecation strategies and listing all upcoming changes, along with their respective release and expiration dates.
 - code: AD_OC21
   selected_answer: 'yes'
-  notes: The [Meta Ad Library API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive) rovides a description of the response returned by the available endpoint.
+  notes: The [Meta Ad Library API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive) provides a description of the response returned by the available endpoint.
 - code: AD_OC22
   selected_answer: 'no'
   notes: Although Meta provides [rate-limiting documentation](https://developers.facebook.com/docs/graph-api/overview/rate-limiting/), it is not specific to the Ad Library API, which makes it difficult to estimate the effective quota available for collecting advertising data.
