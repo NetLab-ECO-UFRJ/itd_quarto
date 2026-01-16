@@ -175,7 +175,7 @@ compliance_answers:
     ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 consistency_answers:
 - code: AD_OC23
-  selected_answer: not_applicable
+  selected_answer: 'no'
   notes: This cannot be verified due to a lack of access to the API at the time of
     this assessment as well as due to difficulties extracting any data from the GUI
     despite multiple attempts.
