@@ -73,7 +73,7 @@ compliance_answers:
   selected_answer: 'no'
   notes: The [Snapchat Ads Gallery API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) is available exclusively in English.
 - code: AD_OC20
-  selected_answer: not_applicable
+  selected_answer: 'no'
   notes: The [Snapchat Ads Gallery API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) does not appear to describe any deprecation strategies.
 - code: AD_OC21
   selected_answer: 'yes'
@@ -84,36 +84,36 @@ compliance_answers:
 consistency_answers:
 - code: AD_OC23
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC24
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC25
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 relevance_answers:
 - code: AD_OC26
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC27
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC28
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 accuracy_answers:
 - code: AD_OC29
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC30
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC31
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC32
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC33
   selected_answer: 'no'
-  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
