@@ -5,177 +5,115 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
-  notes: 'In the EU, Snapchat provides an Ads Gallery API for advertisements and commercial
-    content such as sponsored posts ([Snapchat documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/Introduction)).
-    However, in practice, its functionality is limited and difficult to use. Despite
-    multiple attempts by different researchers, the API could not be successfully
-    tested and consistently returned a "too many requests" error. In principle, the
-    API should offer at least one endpoint for accessing public advertising data,
-    but in practice this functionality does not appear to be operational. Moreover,
-    the API''s scope is constrained: it is advertiser-centric, requiring searching
-    by advertiser snapchat ID rather than brand name or creator. It is therefore not
-    reliable for broad research use, and does not support comprehensive or historical
-    extraction of advertising content served in the EU. The filtering is limited by
-    advertiser, geography, and time (up to 12 months in the past, including live commercial
-    content).'
+  notes: 'In the EU, Snapchat provides the [Ads Gallery API](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/Introduction) for collecting data on ads and commercial content, such as sponsored posts. In practice, however, its functionality is limited and difficult to use. Despite multiple attempts by different researchers, the API could not be successfully tested and consistently returned a `“too many requests”` error. In principle, the API should offer at least one endpoint for accessing public advertising data, but in practice this functionality does not appear to be operational. Moreover, the API’s scope is narrow and advertiser-centric: queries must be made using an advertiser’s Snapchat ID rather than a brand name or creator, which substantially restricts discoverability. As a result, the API is not suitable for broad research use and does not support comprehensive or historical extraction of advertising content served in the EU. Available filters are limited to advertiser, geography, and time period, with historical access restricted to a maximum of 12 months.'
 - code: AD_SC2
-  selected_answer: partial
-  notes: Snapchat provides access to the Snap Ads Gallery which appears to provide
-    access to EU ads which were delivered in the last 12 months as well as live commercial
-    content ([Snapchat Ads Gallery](https://adsgallery.snap.com)). The option to extract
-    data from the GUI does not appear to exist. In practice, despite multiple searches
-    using different advertiser snapchat IDs, including brands such as "Mcdonalds",
-    "Dior" or "Mcdo\_France" using various country filters including individual countries
-    and "all EU countries", no data was returned by the GUI.
+  selected_answer: 'no'
+  notes: Snapchat provides access to the [Snapchat Ads Gallery](https://adsgallery.snap.com), which appears to provide access to data on ads hich were delivered to users in the EU over the past 12 months. However, it is not possible to extract structured data from its GUI.
 - code: AD_SC3
   selected_answer: 'no'
-  notes: ''
+  notes: As we were unable to test the functionalities of the Snapchat Ads Gallery API or to extract structured data from its GUI, verification was not possible.
 accessibility_answers:
 - code: AD_OC1
   selected_answer: 'no'
-  notes: While ad visualisation appears possible in theory via the GUI, multiple tests
-    returned no results.
+  notes: While, in principle, the Snapchat Ads Gallery GUI allows users to view advertising content and related data served to users in the European Union over the past 12 months, multiple tests conducted independently by different researchers returned no results, rendering verification impossible.
 - code: AD_OC2
-  selected_answer: api
-  notes: ''
+  selected_answer: both
+  notes: Even though we were unable to make it function, either through the API or the GUI, access to the Snapchat Ads Gallery is free of charge.
 - code: AD_OC3
-  selected_answer: api
-  notes: ''
+  selected_answer: 'no'
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC4
   selected_answer: 'no'
-  notes: The Ads Library API does not provide a form of authentication and does not
-    rely on OAuth or other token-based access ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
-    It does not offer a renewal mechanism to support continuous or long-running data
-    access.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error.
 - code: AD_OC5
   selected_answer: 'no'
-  notes: In principle, the Ad Gallery API provides the GET `https://adsapi.snapchat.com/v1/ads_library/ads/{ad_id}`
-    endpoint to retrieve data from a specific advertisement. In practice, the API
-    does not yield any results due to a "too many requests" error.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC6
   selected_answer: 'no'
-  notes: In theory, this should be supported through both the GUI and the API; however,
-    neither are functioning at the time of this assessment.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC7
   selected_answer: 'no'
-  notes: This is not supported by the GUI nor the API as all searches are by advertiser.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC8
   selected_answer: 'no'
-  notes: The API and Ad Gallery documentation does not provide any details about the
-    format of data provided and this cannot be verified via the API nor the GUI as
-    they do not appear to be functioning at the time of this assessment ([Snapchat
-    API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 completeness_answers:
 - code: AD_OC9
   selected_answer: 'no'
-  notes: The Ad Gallery and Ad Gallery API documentations do not provide any detailed
-    explanation of the kind of data which could be visible on the GUI or extracted
-    via the API about advertisers beyond "advertiser name" ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
-    This cannot be verified via the API nor the GUI as they do not appear to be functioning
-    at the time of this assessment.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC10
   selected_answer: 'no'
-  notes: The Ad Gallery and Ad Gallery API documentations do not mention providing
-    data about ads' funders ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
-    This cannot be verified via the API nor the GUI as they do not appear to be functioning
-    at the time of this assessment.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC11
   selected_answer: 'no'
-  notes: The Ad Gallery and Ad Gallery API documentations appear to provide the "start
-    and end date" of advertisements on the GUI and via the API ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)).
-    However, this cannot be verified via the API nor the GUI as they do not appear
-    to be functioning at the time of this assessment.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC12
   selected_answer: 'no'
-  notes: The Ad Gallery API and GUI do not provide user engagement data. This cannot
-    be verified via the API nor the GUI as they do not appear to be functioning at
-    the time of this assessment.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC13
   selected_answer: 'no'
-  notes: The Ad Gallery API and GUI do not provide details about whether advertisers
-    are verified. This cannot be verified via the API nor the GUI as they do not appear
-    to be functioning at the time of this assessment.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
-  notes: Information about ads removed due to violations of its guidelines or relevant
-    legislation does not appear in the GUI nor the API documentation. This cannot
-    be verified via the API nor the GUI as they do not appear to be functioning at
-    the time of this assessment.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC15
   selected_answer: 'no'
-  notes: Information about AI-generated ads does not appear in the GUI nor the API
-    documentation. This cannot be verified via the API nor the GUI as they do not
-    appear to be functioning at the time of this assessment.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and multiple GUI-based tests conducted independently by different researchers returned no results.
 - code: AD_OC16
   selected_answer: api
-  notes: The API and GUI are published in open access.
+  notes: The documentation for the Snapchat Ads Gallery [API](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) is published in open access, but no documentation or FAQ was found for the GUI.
 - code: AD_OC17
   selected_answer: api
-  notes: The API documentation is clearly written and exemplified ([Snapchat API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api));
-    however, the GUI documentation is minimal and is provided on the [landing page](https://adsgallery.snap.com).
+  notes: The [Snapchat Ads Gallery API’s documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) is clearly written and exemplified.
 - code: AD_OC18
   selected_answer: 'no'
-  notes: The terms of use are not linked in the [API nor the GUI documentations](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
+  notes: The terms of use for the Snapchat Ads Gallery API are not linked in its official [documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 - code: AD_OC19
-  selected_answer: gui
-  notes: The API documentation is only available in English, however the GUI documentation
-    (although minimal) and the entire GUI is available in all 24 official languages
-    of the EU.
+  selected_answer: 'no'
+  notes: The [Snapchat Ads Gallery API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) is available exclusively in English.
 - code: AD_OC20
   selected_answer: not_applicable
-  notes: The Snapchat Ad Gallery [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api)
-    does not appear to describe any deprecation strategies.
+  notes: The [Snapchat Ads Gallery API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) does not appear to describe any deprecation strategies.
 - code: AD_OC21
   selected_answer: 'yes'
-  notes: Detailed explanations are provided in the [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
+  notes: Detailed explanations are provided in the [Snapchat Ads Gallery API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
 - code: AD_OC22
-  selected_answer: not_applicable
-  notes: This information is not available in the [API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
+  selected_answer: 'no'
+  notes: The [Snapchat Ads Gallery API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) does not detail the quota or rate limits applicable to each available endpoint.
 consistency_answers:
 - code: AD_OC23
-  selected_answer: not_applicable
-  notes: Due to the limited functionality of both the GUI and API at the time of this
-    assessment, this cannot be verified.
+  selected_answer: 'no'
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC24
   selected_answer: 'no'
-  notes: Due to the limited functionality of both the GUI and API at the time of this
-    assessment, this cannot be verified.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC25
   selected_answer: 'no'
-  notes: Due to the limited functionality of both the GUI and API at the time of this
-    assessment, this cannot be verified.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 relevance_answers:
 - code: AD_OC26
   selected_answer: 'no'
-  notes: Although the API and GUI allow filtering by time, due to the limited functionality
-    of both the GUI and API at the time of this assessment, this cannot be verified.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC27
-  selected_answer: not_applicable
-  notes: The API and GUI do not allow for filtering data by ad category.
+  selected_answer: 'no'
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC28
   selected_answer: 'no'
-  notes: Although the API and GUI allow filtering by geographic location (by nation),
-    due to the limited functionality of both the GUI and API at the time of this assessment,
-    this cannot be verified.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 accuracy_answers:
 - code: AD_OC29
   selected_answer: 'no'
-  notes: According to the API and GUI documentation, details about the audience reached
-    are not provided.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC30
   selected_answer: 'no'
-  notes: According to the API and GUI documentation, details about the audience reached
-    are not provided.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC31
   selected_answer: 'no'
-  notes: According to the API and GUI documentation, details about the audience reached
-    are not provided.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC32
   selected_answer: 'no'
-  notes: According to the API and GUI documentation, details about ad impressions
-    are not provided.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
 - code: AD_OC33
   selected_answer: 'no'
-  notes: According to the API and GUI documentation, details about the ad spending
-    are not provided.
+  notes: Verification was not possible because API access tests consistently returned a `“too many requests”` error, and the GUI does not allow for structured data extraction.
