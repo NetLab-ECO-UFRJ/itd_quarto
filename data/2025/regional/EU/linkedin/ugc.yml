@@ -15,7 +15,7 @@ special-criteria_answers:
   notes: The LinkedIn Researcher Access Program does not impose any fees on researchers.
 - code: UGC_SC4
   selected_answer: 'no'
-  notes: The platform does not provide a graphical interface for accessing or extracting public user-generated content data.
+  notes: The platform does not provide a graphical interface for extracting structured data on public user-generated content data.
 accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
