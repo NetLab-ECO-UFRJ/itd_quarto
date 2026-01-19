@@ -9,7 +9,7 @@ special-criteria_answers:
   notes: LinkedIn provides a [\[Beta\] Researcher Access Program](https://www.linkedin.com/help/linkedin/answer/a1645616) to comply with their legal requirements under article 40 of the European Union's Digital Services Act (DSA).
 - code: UGC_SC2
   selected_answer: 'no'
-  notes: We submitted a request to the LinkedIn Researcher Access Program in accordance with the platform’s documentation, but we never received any response. As a result, we cannot guarantee the proper functioning of its features or the quality of the data it returns, due to the impossibility of conducting empirical tests.
+  notes: We submitted a request to the LinkedIn Researcher Access Program in accordance with the [platform’s documentation](https://www.linkedin.com/help/linkedin/answer/a1645616), but we never received any response. As a result, we cannot guarantee the proper functioning of its features or the quality of the data it returns, due to the impossibility of conducting empirical tests.
 - code: UGC_SC3
   selected_answer: researchers_only
   notes: The LinkedIn Researcher Access Program does not impose any fees on researchers.
