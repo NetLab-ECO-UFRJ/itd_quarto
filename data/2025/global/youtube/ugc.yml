@@ -189,11 +189,11 @@ relevance_answers:
     replies available via API).
 - code: UGC_OC23
   selected_answer: 'no'
-  notes: The API does not support filtering by channel/publisher location. This feature
+  notes: The API does not support filtering by channel or publisher location. This feature
     was [deprecated from API v2](https://developers.google.com/youtube/v3/revision_history#march-11,-2015).
     Currently, the [`search.list` endpoint](https://developers.google.com/youtube/v3/docs/search/list)
-    includes a location parameter, but this applies to video geographic metadata (where
-    content was filmed), not channel/publisher location. The `regionCode` parameter
+    includes a location parameter, but this applies to the video geographic metadata,
+    not channel or publisher location. The `regionCode` parameter
     "instructs the API to return search results for videos that can be viewed in the
     specified country", filtering by content availability region, not by publishers'
     location.
