@@ -87,10 +87,10 @@ compliance_answers:
     of Service](https://core.telegram.org/api/terms).
 - code: UGC_OC12
   selected_answer: 'no'
-  notes: The [Telegram TDLib API documentation](https://core.telegram.org/tdlib/docs/)
-    does not consistently detail the response format of each endpoint. While it defines
-    object schemas and return types, it lacks explicit response examples and per-endpoint
-    error code descriptions.
+  notes: The Telegram and the TDLib API documentation do not consistently detail the response
+    format of each endpoint. While they define object schemas and return types, they lack
+    explicit response examples and per-endpoint error code descriptions. The [Telegram API's `messages.getHistory`](https://core.telegram.org/method/messages.getHistory)
+    and [TDLib's `getMessage`](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1get_message.html) methods are examples of this inconsistency, as they do not display expected response formats or error handling details.
 - code: UGC_OC13
   selected_answer: 'no'
   notes: The [API documentation](https://core.telegram.org/tdlib/docs/) is available
