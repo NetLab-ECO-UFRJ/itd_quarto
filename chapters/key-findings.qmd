@@ -45,38 +45,38 @@ Bluesky is excluded from the Ads assessment as the platform does not have advert
 
 ::: {.grid style="margin: 20px 0;"}
 
-::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #2d6a4f; color: white; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
+::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #ffffb2; color: black; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
 **Strong** (81 to 100 points)
 
 Platforms with efficient solutions for the collection of high-quality data.
 :::
 
-::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #95d5b2; color: black; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
+::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #fed976; color: black; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
 **Restricted** (61 to 80 points)
 
 Platforms that make data available with limitations on the volume of data that can be requested and/or with quality problems.
 :::
 
-::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #ffd60a; color: black; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
+::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #feb24c; color: black; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
 **Deficient** (41 to 60 points)
 
 Platforms that offer some transparency and data access, but with serious limitations related to the types of content that can be accessed and the sample of the universe of public data that can be collected.
 :::
 
-::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #f77f00; color: white; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
+::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #fd8d3c; color: black; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
 **Precarious** (21 to 40 points)
 
 Platforms that impose significant technical, operational and/or financial barriers to their data access measures, making monitoring unfeasible for most researchers and interested parties.
 :::
 
-::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #d62828; color: white; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
+::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #f03b20; color: black; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
 **Irrelevant** (1 to 20 points)
 
 Platforms with minimal or insufficient transparency and data access measures.
 :::
 
-::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #e0e0e0; color: #666; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
-**Not available** (0 points)
+::: {.g-col-12 .g-col-md-4 style="padding: 12px; background-color: #bd0026; color: white; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;"}
+**Absent** (0 points)
 
 Platforms with no transparency and data access measures despite framework applicability.
 :::
