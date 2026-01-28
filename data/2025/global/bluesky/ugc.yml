@@ -21,10 +21,8 @@ special-criteria_answers:
 accessibility_answers:
 - code: UGC_OC1
   selected_answer: not_applicable
-  notes: This question is not applicable for Bluesky because there is no specific
-    authentication for researchers, there are no private accounts or posts, and there
-    are no private groups or discussion forums. There are only one-on-one messages
-    on the platform, which can be retrieved using the [`AT Protocol DM API`](https://atproto.blue/en/latest/dm.html).
+  notes: This question is not applicable for Bluesky because there are no private accounts, posts or groups. One-on-one messages
+    can be retrieved using the [`AT Protocol DM API`](https://atproto.blue/en/latest/dm.html).
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: Platform API responses provide the expected data in an appropriate format
@@ -47,7 +45,7 @@ accessibility_answers:
     \ according to ISO 8601 with microsecond precision and standardized to UTC. \n"
 compliance_answers:
 - code: UGC_OC8
-  selected_answer: no_or_not_applicable
+  selected_answer: 'no'
   notes: The platform does not have a deprecation strategy in its documentation. While some deprecation announcements have been shared through GitHub Discussions,
     the platform appears to primarily communicate breaking development changes via mailing lists and in-app account messages, which may be insufficient to ensure those changes are widely known.
 - code: UGC_OC9
