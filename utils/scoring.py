@@ -105,12 +105,6 @@ def calculate_methodology_score(
     """
     Calculate score using the methodology formulas.
 
-    UGC: S_SC = 75 * Σ(w_i * SC_i) where w=[0.30,0.30,0.30,0.10]
-         S_OC = 25 * (Σ(OC_j) / 27)
-
-    Ads: S_SC = 75 * Σ(w_i * SC_i) where w=[0.50,0.30,0.20]
-         S_OC = 25 * (Σ(OC_j) / 34)
-
     Args:
         answers_data: Loaded answers containing special-criteria and other categories
         questions_dict: Dictionary of all questions

@@ -60,7 +60,7 @@ accessibility_answers:
   notes: The publication dates returned by the Telegram API follow the ISO 8601 format.
 compliance_answers:
 - code: UGC_OC8
-  selected_answer: no_or_not_applicable
+  selected_answer: 'no'
   notes: 'We found no official documentation for TDLib that outlines a deprecation
     policy. While there is a [changelog](https://core.telegram.org/tdlib/Change_Log)
     on [GitHub](https://github.com/tdlib/td/blob/master/CHANGELOG.md), it documents

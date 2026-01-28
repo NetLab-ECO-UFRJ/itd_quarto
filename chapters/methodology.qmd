@@ -15,8 +15,10 @@ where $w_1 = w_2 = w_3 = 0.30$ and $w_4 = 0.10$
 **Other Criteria Score (25% weight):**
 
 $$
-S_{OC} = 25 \cdot \frac{\sum_{j=1}^{27} OC_j}{27}
+S_{OC} = 25 \cdot \frac{\sum_{j=1}^{n} OC_j}{n_{applicable}}
 $$
+
+where $n$ = 26 (total other criteria) and $n_{applicable}$ = number of questions with applicable answers
 
 **Total Score:**
 
@@ -37,8 +39,10 @@ where $w_1 = 0.50$, $w_2 = 0.30$, and $w_3 = 0.20$
 **Other Criteria Score (25% weight):**
 
 $$
-S_{OC} = 25 \cdot \frac{\sum_{j=1}^{34} OC_j}{34}
+S_{OC} = 25 \cdot \frac{\sum_{j=1}^{n} OC_j}{n_{applicable}}
 $$
+
+where $n$ = 33 (total other criteria) and $n_{applicable}$ = number of questions with applicable answers
 
 **Total Score:**
 

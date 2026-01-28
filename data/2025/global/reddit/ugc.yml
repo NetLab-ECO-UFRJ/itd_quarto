@@ -41,7 +41,7 @@ accessibility_answers:
   notes: All temporal fields in the API are represented using [Unix epoch timestamps](https://praw.readthedocs.io/en/stable/search.html?q=%22Unix+Time%22&check_keywords=yes&area=default#), expressed as UTC-based integers, ensuring a consistent and platform-independent time format.
 compliance_answers:
 - code: UGC_OC8
-  selected_answer: no_or_not_applicable
+  selected_answer: 'no'
   notes: Reddit’s [API documentation](https://github.com/reddit-archive/reddit/wiki/API)
     states that “changes to the API can happen without warning if necessary”.
 - code: UGC_OC9

@@ -173,8 +173,8 @@ compliance:
     and migration instructions.
   weight: 1.0
   answers:
-  - value: no_or_not_applicable
-    label: No or not applicable
+  - value: 'no'
+    label: 'No'
     weight: 0.0
   - value: 'yes'
     label: 'Yes'
