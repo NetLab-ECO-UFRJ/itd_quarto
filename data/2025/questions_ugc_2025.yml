@@ -94,11 +94,8 @@ accessibility:
     label: 'Yes'
     weight: 1.0
 - code: UGC_OC3
-  title: Does the platform’s API provide a form of authentication that allows for
-    token renewal without the risk of data loss?
-  description: Verifies whether authentication tokens can be renewed without interrupting
-    data collection or causing loss of access, ensuring continuity and integrity of
-    monitoring and extraction.
+  title: Does the platform's API support renewable authentication mechanisms without risk of data loss?
+  description: Verifies whether the API's authentication mechanism (e.g., tokens, keys, or other access methods) can be renewed or updated without interrupting data collection, losing access, or compromising the continuity and integrity of monitoring and extraction.
   weight: 1.0
   answers:
   - value: 'no'
