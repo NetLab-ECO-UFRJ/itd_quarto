@@ -45,12 +45,12 @@ accessibility_answers:
     as long as the group or public channel it belongs to is known.
 - code: UGC_OC5
   selected_answer: 'yes'
-  notes: Telegram offers a [dedicated endpoint for searching for messages by author](https://core.telegram.org/method/messages.search),
+  notes: Telegram offers the [`messages.search` endpoint](https://core.telegram.org/method/messages.search) for searching for messages by author,
     as long as the group or public channel the message belongs to is known.
 - code: UGC_OC6
   selected_answer: 'yes'
-  notes: Telegram offers an [endpoint for searching for messages](https://core.telegram.org/method/messages.searchGlobal)
-    containing terms of interest, but this is only available in public groups and
+  notes: Telegram offers an [`messages.searchGlobal` endpoint](https://core.telegram.org/method/messages.searchGlobal)
+    for searching for messages containing terms of interest, but this is only available in public groups and
     channels that the researcher already knows and/or participates in. Supposedly,
     Telegram offers a paid tier with global search, but it hasn't been possible to
     test it because the evaluation used the free tier across all platforms. See also
@@ -78,8 +78,8 @@ compliance_answers:
     detailed explanations and practical examples demonstrating how to call endpoints
     or implement typical workflows. The documentation's structure assumes prior familiarity
     with Telegram's internal architecture, making it difficult for developers to understand
-    usage without relying on third-party resources or community libraries. The Telegram's [`getHistory`](https://core.telegram.org/method/messages.getHistory)
-    and TDLib's [`getMessage`](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1get_message.html) methods are examples of this lack of clarity, as it does not display expected results or practical use cases.
+    usage without relying on third-party resources or community libraries. The Telegram's [`messages.getHistory`](https://core.telegram.org/method/messages.getHistory)
+    and TDLib's [`getMessage`](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1get_message.html) methods are examples of this lack of clarity, as they do not display expected results or practical use cases.
 - code: UGC_OC11
   selected_answer: 'yes'
   notes: Terms of service are explicitly referenced in [API documentation](https://core.telegram.org/api/obtaining_api_id)
@@ -89,8 +89,8 @@ compliance_answers:
   selected_answer: 'no'
   notes: The Telegram and the TDLib API documentation do not consistently detail the response
     format of each endpoint. While they define object schemas and return types, they lack
-    explicit response examples and per-endpoint error code descriptions. The [Telegram API's `messages.getHistory`](https://core.telegram.org/method/messages.getHistory)
-    and [TDLib's `getMessage`](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1get_message.html) methods are examples of this inconsistency, as they do not display expected response formats or error handling details.
+    explicit response examples and per-endpoint error code descriptions. The Telegram API's [`messages.getHistory`](https://core.telegram.org/method/messages.getHistory)
+    and TDLib's [`getMessage`](https://core.telegram.org/tdlib/docs/classtd_1_1td__api_1_1get_message.html) methods are examples of this inconsistency, as they do not display expected response formats or error handling details.
 - code: UGC_OC13
   selected_answer: 'no'
   notes: The [API documentation](https://core.telegram.org/tdlib/docs/) is available
@@ -155,7 +155,7 @@ relevance_answers:
     periods through parameters that control message retrieval ranges. The API method
     "SearchRequest" accepts parameters such as "min_date" and "max_date", allowing
     clients to retrieve messages within custom date or ID intervals. Similarly, TDLib's
-    ["getChatHistory"](https://core.telegram.org/method/messages.getHistory#parameters)
+    [`getChatHistory`](https://core.telegram.org/method/messages.getHistory#parameters)
     method allows fetching messages before or after a given message ID or timestamp,
     enabling temporal filtering. See also [Telethon messages.search documentation](https://tl.telethon.dev/methods/messages/search.html).
 timeliness_answers:

@@ -51,7 +51,7 @@ accessibility_answers:
 - code: UGC_OC5
   selected_answer: 'yes'
   notes: Every content author has a YouTube channel, and the YouTube Data API v3 provides
-    methods for retrieving data for specific authors. The [search endpoint](https://developers.google.com/youtube/v3/docs/search/list)
+    methods for retrieving data for specific authors. The [`search` endpoint](https://developers.google.com/youtube/v3/docs/search/list)
     has a parameter to filter by channel ID. Another way to extract data from specific
     users is to get their channel's uploads playlist IDs, then use those on the [`playlistItems`
     endpoint](https://developers.google.com/youtube/v3/docs/playlistItems) to retrieve
@@ -122,10 +122,10 @@ compliance_answers:
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'yes'
-  notes: YouTube Data API v3 provides an endpoint to extract [comment threads](https://developers.google.com/youtube/v3/docs/commentThreads/list)
+  notes: YouTube Data API v3 provides an endpoint to extract [`commentThreads`](https://developers.google.com/youtube/v3/docs/commentThreads/list)
     from videos, each containing the top-level comment and up to 5 replies. If the
     top-level comment has more than 5 replies, they can be extracted using the API's
-    [comments endpoint](https://developers.google.com/youtube/v3/docs/comments), filtering
+    [`comments` endpoint](https://developers.google.com/youtube/v3/docs/comments), filtering
     by the top-level comment ID (parent comment ID). See the [implementation guide](https://developers.google.com/youtube/v3/guides/implementation/comments)
     for more details.
 - code: UGC_OC17
@@ -134,7 +134,7 @@ completeness_answers:
     The platform [deprecated its Stories feature in June 2023](https://support.google.com/youtube/thread/217640760/youtube-stories-are-going-away-on-6-26-2023).
 - code: UGC_OC18
   selected_answer: 'yes'
-  notes: The search endpoint includes parameters for selecting a time range for videos,
+  notes: The `search` endpoint includes parameters for selecting a time range for videos,
     channels, and playlists. Therefore, the API allows collecting data from any videos
     available on the platform, regardless of their publication date. However, [Developer
     Policies (Section III.E.4)](https://developers.google.com/youtube/terms/developer-policies#e.-handling-youtube-data-and-content)
@@ -147,24 +147,24 @@ completeness_answers:
     endpoint might be insufficient.
 - code: UGC_OC19
   selected_answer: 'no'
-  notes: The search list endpoint (for searching videos by query or channel ID) consumes
+  notes: The `search.list` endpoint (for searching videos by query or channel ID) consumes
     100 of the 10,000 daily points per request. Since each request can only return
     up to 50 videos, the maximum number of videos one can get by this method, per
     day, is 5,000. Therefore, if a monitoring task depends on search queries, this
     approach is insufficient to gather more than 5,000 publications per day. Also,
     there is a cap for the number of result pages retrieved for a set of parameters
-    when using the search list endpoint. Our tests had to change parameters to get
+    when using the `search.list` endpoint. Our tests had to change parameters to get
     more data pages and hit the daily quota limit; otherwise, the collected video
     limit would be even lower if we were only allowed to use fixed parameters on this
     endpoint. However, the API's daily quota is sufficient to monitor more than 10,000
-    publications in 24 hours for other endpoints that do not depend on search (e.g.,
+    publications in 24 hours for other endpoints that do not depend on `search` (e.g.,
     `videos.list` or `playlistItems.list`).
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'no'
   notes: The documentation does not guarantee that API results are consistently reproducible
     and explicitly acknowledges approximations in key metrics. We made the same request
-    to the search list endpoint multiple times, using “relevance” for the order parameter.
+    to the `search.list` endpoint multiple times, using "relevance" for the `order` parameter.
     The results differed in the order of the returned items.
 - code: UGC_OC21
   selected_answer: 'no'
@@ -172,7 +172,7 @@ consistency_answers:
     In our tests, we found that the YouTube API does not necessarily honor user-defined
     filters. For instance, the [documentation about the `relevanceLanguage` filter](https://developers.google.com/youtube/v3/docs/search/list)
     states that "results in other languages will still be returned if they are highly
-    relevant to the search query term", meaning the language filter operates as a
+    relevant to the search query term", meaning the `relevanceLanguage` filter operates as a
     soft preference rather than a strict constraint, allowing inconsistent results.
     In our tests, we confirmed that when requesting videos in Portuguese, one of the
     resulting items used English for its description and title. Also, comments were
@@ -192,7 +192,7 @@ relevance_answers:
   notes: The API does not support filtering by channel or publisher location. This feature
     was [deprecated from API v2](https://developers.google.com/youtube/v3/revision_history#march-11,-2015).
     Currently, the [`search.list` endpoint](https://developers.google.com/youtube/v3/docs/search/list)
-    includes a location parameter, but this applies to the video geographic metadata,
+    includes a `location` parameter, but this applies to the video geographic metadata,
     not channel or publisher location. The `regionCode` parameter
     "instructs the API to return search results for videos that can be viewed in the
     specified country", filtering by content availability region, not by publishers'

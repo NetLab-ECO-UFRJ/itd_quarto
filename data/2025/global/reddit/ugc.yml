@@ -29,13 +29,13 @@ accessibility_answers:
   notes: Access to the API requires the creation of a developer or research account. Once approved, the API can be used by providing a client ID, client secret, and user agent in each request. For read-only data collection, no token renewal is required, which simplifies authentication and facilitates continuous access to public content.
 - code: UGC_OC4
   selected_answer: 'yes'
-  notes: The platform provides dedicated endpoints—such as the [`GET comments endpoint`](https://www.reddit.com/dev/api/#GET_comments_{article})—for retrieving individual posts, either by using their unique identifiers or by supplying the post URL.
+  notes: The platform provides dedicated endpoints—such as [`GET /comments/{article}`](https://www.reddit.com/dev/api/#GET_comments_{article})—for retrieving individual posts, either by using their unique identifiers or by supplying the post URL.
 - code: UGC_OC5
   selected_answer: 'yes'
-  notes: The API also provides endpoints for retrieving content authored by specific users. Through the [`GET user submitted`](https://www.reddit.com/dev/api/#GET_user_{username}_submitted) endpoint, both posts and comments can be filtered by username, enabling the systematic collection of all public content produced by a given account.
+  notes: The API also provides endpoints for retrieving content authored by specific users. Through the [`GET /user/{username}/submitted`](https://www.reddit.com/dev/api/#GET_user_{username}_submitted) endpoint, both posts and comments can be filtered by username, enabling the systematic collection of all public content produced by a given account.
 - code: UGC_OC6
   selected_answer: 'yes'
-  notes: The API includes search functionality through a dedicated [search endpoint](https://www.reddit.com/dev/api/#GET_search).
+  notes: The API includes search functionality through a dedicated [`search` endpoint](https://www.reddit.com/dev/api/#GET_search).
 - code: UGC_OC7
   selected_answer: 'yes'
   notes: All temporal fields in the API are represented using [Unix epoch timestamps](https://praw.readthedocs.io/en/stable/search.html?q=%22Unix+Time%22&check_keywords=yes&area=default#), expressed as UTC-based integers, ensuring a consistent and platform-independent time format.
@@ -68,20 +68,20 @@ compliance_answers:
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'yes'
-  notes: The platform provides comprehensive access to [comment data](https://www.reddit.com/dev/api/#GET_comments_{article}). Comments can be retrieved both through endpoints that return a post together with its full comment tree and through dedicated [search endpoints](https://www.reddit.com/dev/api/#GET_user_{username}_comments) specifically designed for querying comments.
+  notes: The platform provides comprehensive access to [`comment` data](https://www.reddit.com/dev/api/#GET_comments_{article}). Comments can be retrieved both through endpoints that return a post together with its full comment tree and through dedicated [`search` endpoints](https://www.reddit.com/dev/api/#GET_user_{username}_comments) specifically designed for querying comments.
 - code: UGC_OC17
   selected_answer: not_applicable
   notes: 'Reddit does not offer temporary or ephemeral content: posts and comments remain publicly accessible unless they are deleted by users or removed by moderators.'
 - code: UGC_OC18
   selected_answer: 'yes'
-  notes: It is possible to extract historical data through Reddit’s Data API [search endpoint](https://www.reddit.com/dev/api/#GET_search). However, this mechanism does not appear to provide access to the full scope of historical content, returning instead only a subset of results that is influenced by the selected sorting parameter, as discussed above.
+  notes: It is possible to extract historical data through Reddit's Data API [`search` endpoint](https://www.reddit.com/dev/api/#GET_search). However, this mechanism does not appear to provide access to the full scope of historical content, returning instead only a subset of results that is influenced by the selected sorting parameter, as discussed above.
 - code: UGC_OC19
   selected_answer: 'yes'
-  notes: Reddit’s Data API [free tier](https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki) currently enforces a limit of 100 queries per minute (QPM) per OAuth client ID, amounting to a maximum of 144,000 requests over a 24-hour period. We conducted a two-hour test using the subreddit stream endpoint, which was sufficient to collect more than 10,000 publications. However, the endpoint did not return any content published prior to the start of the collection job, indicating that it is designed for real-time or forward-looking data acquisition rather than retrospective retrieval.
+  notes: Reddit's Data API [free tier](https://support.reddithelp.com/hc/en-us/articles/16160319875092-Reddit-Data-API-Wiki) currently enforces a limit of 100 queries per minute (QPM) per OAuth client ID, amounting to a maximum of 144,000 requests over a 24-hour period. We conducted a two-hour test using the `subreddit stream` endpoint, which was sufficient to collect more than 10,000 publications. However, the endpoint did not return any content published prior to the start of the collection job, indicating that it is designed for real-time or forward-looking data acquisition rather than retrospective retrieval.
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
-  notes: We conducted an additional test consisting of five consecutive requests to the search endpoint, all using identical parameters and the same search term, with a one-minute interval between each request. All five responses returned the same set of results, indicating that repeated queries with unchanged parameters do not yield new data over short time windows.
+  notes: We conducted an additional test consisting of five consecutive requests to the `search` endpoint, all using identical parameters and the same search term, with a one-minute interval between each request. All five responses returned the same set of results, indicating that repeated queries with unchanged parameters do not yield new data over short time windows.
 - code: UGC_OC21
   selected_answer: 'yes'
   notes: Although the API offers only a limited set of parameters for filtering results, we tested two of them—a temporal filter to retrieve data from the previous day and the option to sort results by newest first. In both cases, the responses were consistent with the specified parameters, indicating that these filtering mechanisms operate as documented.
@@ -101,4 +101,4 @@ relevance_answers:
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'yes'
-  notes: The platform’s API provides near real-time access to newly published content. The [`/new` endpoint](https://www.reddit.com/dev/api/#GET_new) returns posts sorted chronologically by their creation time, and newly published items become available through the API almost immediately after they appear on the platform.
+  notes: The platform's API provides near real-time access to newly published content. The [`/new` endpoint](https://www.reddit.com/dev/api/#GET_new) returns posts sorted chronologically by their creation time, and newly published items become available through the API shortly after they appear on the platform.

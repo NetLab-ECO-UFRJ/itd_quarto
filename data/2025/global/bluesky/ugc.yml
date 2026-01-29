@@ -74,7 +74,7 @@ compliance_answers:
   selected_answer: 'no'
   notes: The Bluesky API only provides a way for post authors to self-label their
     content using the [`SelfLabel`](https://atproto.blue/en/latest/atproto/atproto_client.models.com.atproto.label.defs.html#atproto_client.models.com.atproto.label.defs.SelfLabel)
-    definition. However, there is no specific label for AI-generated content.The current
+    definition. However, there is no specific label for AI-generated content. The current
     user interface only allows adding pre-defined labels to posts with media and does
     not include "AI-generated content" among the available options.
 completeness_answers:
