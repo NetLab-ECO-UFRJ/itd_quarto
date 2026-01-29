@@ -217,11 +217,13 @@ def get_answer_weight(question: Dict[str, Any], selected_value: str) -> float:
     Raises:
         ValueError: If selected_value not found in question's answers
     """
+    if selected_value == 'not_applicable':
+        return 0.0
+
     for answer in question['answers']:
         if answer['value'] == selected_value:
             return answer['weight']
 
-    # If not found, raise error
     raise ValueError(
         f"Answer value '{selected_value}' not found in question '{question['code']}'"
     )
@@ -238,8 +240,11 @@ def get_answer_label(question: Dict[str, Any], selected_value: str) -> str:
     Returns:
         Label text for the answer
     """
+    if selected_value == 'not_applicable':
+        return 'Not Applicable'
+
     for answer in question['answers']:
         if answer['value'] == selected_value:
             return answer['label']
 
-    return selected_value  # Fallback to value if label not found
+    return selected_value

@@ -17,9 +17,6 @@ special_criteria:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_SC2
     title: Does the platform provide a graphical user interface to its ad repository for extracting advertising content data?
@@ -38,9 +35,6 @@ special_criteria:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_SC3
@@ -61,9 +55,6 @@ special_criteria:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
 accessibility:
   - code: AD_OC1
@@ -83,9 +74,6 @@ accessibility:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC2
@@ -108,9 +96,6 @@ accessibility:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC3
@@ -135,9 +120,6 @@ accessibility:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC4
     title: Does the platform's ad repository API provide a form of authentication that allows for renewal without the risk of data loss?
@@ -153,9 +135,6 @@ accessibility:
         weight: 1.0
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC5
@@ -179,9 +158,6 @@ accessibility:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC6
     title: Can data from ads served by a specific advertiser be retrieved from the platform?
@@ -203,9 +179,6 @@ accessibility:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC7
     title: Can ad data be retrieved from the platform using search terms?
@@ -226,9 +199,6 @@ accessibility:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC8
@@ -252,9 +222,6 @@ accessibility:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
 completeness:
   - code: AD_OC9
@@ -277,9 +244,6 @@ completeness:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC10
     title: Does the platform provide data on the funders who paid for ads?
@@ -299,9 +263,6 @@ completeness:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC11
@@ -324,9 +285,6 @@ completeness:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC12
     title: Does the platform provide data on user engagement with ads?
@@ -348,9 +306,6 @@ completeness:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC13
     title: Does the platform indicate whether ads were placed by verified or unverified advertisers?
@@ -370,9 +325,6 @@ completeness:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
 compliance:
@@ -396,9 +348,6 @@ compliance:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC15
     title: Does the platform indicate whether ad content was generated using artificial intelligence?
@@ -419,9 +368,6 @@ compliance:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC16
@@ -444,9 +390,6 @@ compliance:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC17
     title: Is the platform's ad repository documentation clearly written and exemplified?
@@ -467,9 +410,6 @@ compliance:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC18
@@ -492,9 +432,6 @@ compliance:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC19
     title: Does the platform provide its ad repository documentation in the official languages of the assessed region?
@@ -516,9 +453,6 @@ compliance:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC20
     title: Does the platform implement a proper deprecation strategy to avoid breaking client applications while rolling out major changes in the API?
@@ -535,9 +469,6 @@ compliance:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC21
     title: Does the platform's ad repository API documentation detail the response format of each endpoint?
@@ -552,9 +483,6 @@ compliance:
         weight: 1.0
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC22
@@ -572,9 +500,6 @@ compliance:
         weight: 1.0
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
 consistency:
@@ -594,9 +519,6 @@ consistency:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC24
     title: Are the results returned by the platform consistently reproducible?
@@ -615,9 +537,6 @@ consistency:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC25
@@ -639,9 +558,6 @@ consistency:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
 relevance:
@@ -665,9 +581,6 @@ relevance:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC27
     title: Does the platform allow filtering advertising data by ad category?
@@ -688,9 +601,6 @@ relevance:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC28
@@ -713,9 +623,6 @@ relevance:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
 accuracy:
   - code: AD_OC29
@@ -736,9 +643,6 @@ accuracy:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC30
@@ -761,9 +665,6 @@ accuracy:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC31
     title: Does the platform include data on audience targeting criteria defined by advertisers?
@@ -785,9 +686,6 @@ accuracy:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
 
   - code: AD_OC32
@@ -814,9 +712,6 @@ accuracy:
       - value: 'no'
         label: "No"
         weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
-        weight: 0.0
 
   - code: AD_OC33
     title: Does the platform provide granular investment ranges for ad spending?
@@ -840,7 +735,4 @@ accuracy:
         weight: 0.5
       - value: 'no'
         label: "No"
-        weight: 0.0
-      - value: not_applicable
-        label: "Not applicable"
         weight: 0.0
