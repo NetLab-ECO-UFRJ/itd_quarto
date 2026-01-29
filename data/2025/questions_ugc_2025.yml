@@ -201,10 +201,8 @@ compliance:
     label: 'Yes'
     weight: 1.0
 - code: UGC_OC11
-  title: Does the platform’s API documentation include or link to the API terms of
-    use?
-  description: Verifies whether the documentation clearly states or links to the API
-    terms of use and other legal information defining permitted use and restrictions.
+  title: Does the platform’s documentation include or link to the API or data access terms of use?
+  description: Verifies whether the platform’s documentation clearly states, or provides a direct link to, the API's terms of use. The assessment should review the documentation to confirm the presence of explicit legal terms that define permitted data access, usage conditions, and any applicable restrictions.
   weight: 1.0
   answers:
   - value: 'no'
