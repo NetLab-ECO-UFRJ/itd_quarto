@@ -168,16 +168,7 @@ consistency_answers:
     The results differed in the order of the returned items.
 - code: UGC_OC21
   selected_answer: 'yes'
-  notes: Our tests showed that the data returned by Youtube API v3 is consistent with the parameters and filters requested.
-    We are aware that the relevance language filter for the search list endpoint might not return results only for the specified language, 
-    but the [documentation about the `relevanceLanguage` filter](https://developers.google.com/youtube/v3/docs/search/list)
-    states that "results in other languages will still be returned if they are highly
-    relevant to the search query term", meaning the language filter operates as a soft preference rather than a strict constraint. 
-    Since this is the disclosed behaviour by the documentation, we take that getting results in other languages while using this filter does not constitute a loss of consistency.
-    In our tests requesting five videos in Portuguese, we got results according to the expectations. 
-    Three out of five results were in the correct language, or had Portuguese translations available. 
-    One had no spoken audio, but had both the title and description in English without translations available, and 
-    another result had the title in Portuguese and no description, but English spoken audio without translated audio tracks or captions available.
+  notes: Our tests showed that the YouTube API v3 returns data consistent with the requested parameters and filters. The [documentation](https://developers.google.com/youtube/v3/docs/search/list) for `relevanceLanguage` states that "results in other languages will still be returned if they are highly relevant to the search query term", indicating it operates as a soft preference. Since this behavior is documented, returning other-language results does not constitute a loss of consistency. In our tests with Portuguese filters, 2 out of 5 results did not match the expected language or have translations available.
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'yes'
