@@ -167,18 +167,17 @@ consistency_answers:
     to the `search.list` endpoint multiple times, using "relevance" for the `order` parameter.
     The results differed in the order of the returned items.
 - code: UGC_OC21
-  selected_answer: 'no'
-  notes: There are frequent inconsistencies, even in collections using fixed parameters.
-    In our tests, we found that the YouTube API does not necessarily honor user-defined
-    filters. For instance, the [documentation about the `relevanceLanguage` filter](https://developers.google.com/youtube/v3/docs/search/list)
+  selected_answer: 'yes'
+  notes: Our tests showed that the data returned by Youtube API v3 is consistent with the parameters and filters requested.
+    We are aware that the relevance language filter for the search list endpoint might not return results only for the specified language, 
+    but the [documentation about the `relevanceLanguage` filter](https://developers.google.com/youtube/v3/docs/search/list)
     states that "results in other languages will still be returned if they are highly
-    relevant to the search query term", meaning the `relevanceLanguage` filter operates as a
-    soft preference rather than a strict constraint, allowing inconsistent results.
-    In our tests, we confirmed that when requesting videos in Portuguese, one of the
-    resulting items used English for its description and title. Also, comments were
-    written in English. Although the video had no spoken dialogue —only images and
-    English text —the previous statements already indicate that the video is targeted
-    for English-speaking audiences.
+    relevant to the search query term", meaning the language filter operates as a soft preference rather than a strict constraint. 
+    Since this is the disclosed behaviour by the documentation, we take that getting results in other languages while using this filter does not constitute a loss of consistency.
+    In our tests requesting five videos in Portuguese, we got results according to the expectations. 
+    Three out of five results were in the correct language, or had Portuguese translations available. 
+    One had no spoken audio, but had both the title and description in English without translations available, and 
+    another result had the title in Portuguese and no description, but English spoken audio without translated audio tracks or captions available.
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'yes'
