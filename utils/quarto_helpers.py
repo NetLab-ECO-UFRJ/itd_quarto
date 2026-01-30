@@ -133,7 +133,7 @@ def generate_summary_table(results: Dict[str, Any]):
                 answer_icon = "✅ "
             elif answer_lower.startswith("partial"):
                 answer_icon = "⚠️ "
-            elif answer_lower == "not applicable":
+            elif answer_lower == "not_applicable":
                 answer_icon = "➖ "
             elif answer_lower == "no":
                 answer_icon = "❌ "
