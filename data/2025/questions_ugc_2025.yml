@@ -356,9 +356,8 @@ relevance:
     label: 'Yes'
     weight: 1.0
 - code: UGC_OC23
-  title: Does the platform’s API allow for filtering data based on publisher location?
-  description: Verifies whether the API supports applying location-based filters so
-    that public posts can be filtered by publisher location.
+  title: Does the platform's API allow for filtering data based on content or its author location?
+  description: Verifies whether the API supports applying location-based filters to data extraction. The assessment should test the endpoint for the main content type to confirm that data on public posts can be filtered by content or author location.
   weight: 1.0
   answers:
   - value: 'no'
