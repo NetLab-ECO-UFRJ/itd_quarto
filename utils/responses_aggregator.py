@@ -7,6 +7,7 @@ import markdown
 from pathlib import Path
 from typing import Dict, Any, List
 from collections import OrderedDict
+from .quarto_helpers import get_answer_icon
 
 PROJECT_ROOT = Path(__file__).parent.parent
 
@@ -154,6 +155,8 @@ def aggregate_responses(year: str = "2025", question_type: str = "ugc") -> Dict[
                 answer_data = answers.get(q["code"], {})
                 answer_value = answer_data.get("selected_answer", "")
                 answer_label = q["answers"].get(answer_value, answer_value) if answer_value else ""
+                if answer_label == "not_applicable":
+                    answer_label = "Not Applicable"
 
                 question_entry["responses"].append({
                     "platform": meta["name"],
@@ -167,22 +170,6 @@ def aggregate_responses(year: str = "2025", question_type: str = "ugc") -> Dict[
             result["categories"][cat_name]["questions"].append(question_entry)
 
     return result
-
-
-def get_answer_icon(answer_label: str) -> str:
-    """Get icon for answer value."""
-    label_lower = answer_label.lower() if answer_label else ""
-    if label_lower in ["yes", "full", "both"]:
-        return "✅"
-    elif label_lower in ["partial", "yes, but only for approved researchers"]:
-        return "⚠️"
-    elif label_lower in ["no", "no or not applicable"]:
-        return "❌"
-    elif label_lower in ["not applicable"]:
-        return "➖"
-    elif "api" in label_lower or "gui" in label_lower:
-        return "🔧"
-    return ""
 
 
 def get_answer_sort_order(answer_label: str) -> int:
