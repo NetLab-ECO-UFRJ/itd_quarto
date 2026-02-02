@@ -44,14 +44,14 @@ accessibility_answers:
 - code: AD_OC6
   selected_answer: 'no'
   notes: Data from ads served by a specific advertiser can be retrieved from the platform
-    according to the API documentation by using the “advertiser\_business\_ids” filter
+    according to the API documentation by using the `advertiser_business_ids` filter
     (TikTok, n.d.); however this has not been confirmed due to lack of access to the
     API at the time of this assessment. There is no export functionality on the GUI,
     though this information can be queried and viewed online.
 - code: AD_OC7
   selected_answer: 'no'
   notes: Data from ads filtered using search terms can be retrieved from the platform
-    according to the API documentation by using the “search\_term” filter (TikTok,
+    according to the API documentation by using the `search_term` filter (TikTok,
     n.d.); however this has not been confirmed due to lack of access to the API at
     the time of this assessment. There is no export functionality on the GUI, though
     this information can be queried and viewed online.
@@ -72,31 +72,31 @@ completeness_answers:
     been confirmed due to lack of access to the API at the time of this assessment.'
 - code: AD_OC10
   selected_answer: gui
-  notes: The GUI provides the funders’ name; however no data can be extracted from
-    the platform via the GUI. However, in some observed instances, the funder’s name
+  notes: The GUI provides the funders' name; however no data can be extracted from
+    the platform via the GUI. However, in some observed instances, the funder's name
     was not provided; however a string of numbers was instead provided, appearing
-    to be a business ID instead of a company’s name (e.g., An ad example linked here).
+    to be a business ID instead of a company's name (e.g., An ad example linked here).
     There is no way to find out which company corresponds to this ID using the search
     function available on the GUI. According to the documentation, the API should
-    provide data regarding an ad’s funder via the “advertiser.paid\_for\_by” field.
+    provide data regarding an ad's funder via the `advertiser.paid_for_by` field.
     However, this has not been confirmed due to lack of access to the API at the time
     of this assessment.
 - code: AD_OC11
   selected_answer: gui
   notes: The GUI provides data on the period during which ads were served; however
     no data can be extracted from the platform via the GUI. According to the documentation,
-    the API should provide data regarding when an ad was served via the “ad.first\_shown\_date”
-    and the “ad.last\_shown\_date” fields. However, this has not been confirmed due
+    the API should provide data regarding when an ad was served via the `ad.first_shown_date`
+    and the `ad.last_shown_date` fields. However, this has not been confirmed due
     to lack of access to the API at the time of this assessment.
 - code: AD_OC12
   selected_answer: gui
   notes: 'The GUI provides limited data on user engagement: it provides how many unique
     users have seen an ad (however the ranges are quite broad, including anywhere
-    from “0-1k”) as well as the “Target audience size” which is “an estimate of how
+    from "0-1k") as well as the "Target audience size" which is "an estimate of how
     many users meet the targeting and ad placement criteria that advertisers select
-    when creating their ad campaign”. Moreover, no data can be extracted from the
+    when creating their ad campaign". Moreover, no data can be extracted from the
     platform via the GUI. According to the documentation, the API should provide data
-    regarding the ad reach via the “unique\_users\_seen” field. However, this has
+    regarding the ad reach via the `unique_users_seen` field. However, this has
     not been confirmed due to lack of access to the API at the time of this assessment.'
 - code: AD_OC13
   selected_answer: gui
@@ -109,16 +109,16 @@ completeness_answers:
 compliance_answers:
 - code: AD_OC14
   selected_answer: gui
-  notes: 'According to the documentation, on the GUI “Note: Some ads may display a
-    label that indicates it was removed because of a violation of our terms.” These
-    ads are not viewable, but some details may be visible, “such as the number of
-    unique users who have seen the ad at least once, or the targeting summary.” (TikTok,
+  notes: 'According to the documentation, on the GUI "Note: Some ads may display a
+    label that indicates it was removed because of a violation of our terms." These
+    ads are not viewable, but some details may be visible, "such as the number of
+    unique users who have seen the ad at least once, or the targeting summary." (TikTok,
     n.d.). This information cannot be extracted from the GUI. According to the documentation,
-    the API provides data regarding an ad’s moderation or rejections via the “rejection\_info”
-    field which provides details such as “reasons” (the reason that an ad has been
-    rejected), “affected\_countries” (the affected regions where the listed rejection
-    reasons may apply), “reporting\_source” (the reporting or detection source, where
-    applicable), and “automated\_notice” (whether the moderation decision relied on
+    the API provides data regarding an ad''s moderation or rejections via the `rejection_info`
+    field which provides details such as `reasons` (the reason that an ad has been
+    rejected), `affected_countries` (the affected regions where the listed rejection
+    reasons may apply), `reporting_source` (the reporting or detection source, where
+    applicable), and `automated_notice` (whether the moderation decision relied on
     automated measures). However, this has not been confirmed due to lack of access
     to the API at the time of this assessment.'
 - code: AD_OC15
@@ -168,7 +168,7 @@ relevance_answers:
   notes: The GUI allows filtering data by the time period in which the ads were served;
     however no data can be extracted from the platform via the GUI. According to the
     documentation, the API should provide data regarding when an ad was served via
-    the “ad.first\_shown\_date” and the “ad.last\_shown\_date” fields. However, this
+    the `ad.first_shown_date` and the `ad.last_shown_date` fields. However, this
     has not been confirmed due to lack of access to the API at the time of this assessment.
 - code: AD_OC27
   selected_answer: not_applicable
@@ -177,7 +177,7 @@ relevance_answers:
   selected_answer: gui
   notes: The GUI allows filtering data by geographical location; however no data can
     be extracted from the platform via the GUI. According to the documentation, the
-    API should provide geographical location via the “country\_code” field. However,
+    API should provide geographical location via the `country_code` field. However,
     this has not been confirmed due to lack of access to the API at the time of this
     assessment.
 accuracy_answers:
@@ -185,7 +185,7 @@ accuracy_answers:
   selected_answer: gui
   notes: The GUI provides data on the age and gender of audiences reached; however
     no data can be extracted from the platform via the GUI. According to the documentation,
-    the API should provide geographical location via the “targeting\_info” field which
+    the API should provide geographical location via the `targeting_info` field which
     provides information on gender and age. However, this has not been confirmed due
     to lack of access to the API at the time of this assessment.
 - code: AD_OC30
@@ -194,10 +194,10 @@ accuracy_answers:
 - code: AD_OC31
   selected_answer: gui
   notes: The GUI provides information about additional targeting criteria such as
-    being part of a specific “audience” specified by the advertiser, sharing a specific
-    “interest”, having had specific “video interactions” or “creator interactions”.
+    being part of a specific "audience" specified by the advertiser, sharing a specific
+    "interest", having had specific "video interactions" or "creator interactions".
     According to the documentation, the API should provide targeting criteria defined
-    by advertisers via the “targeting\_info” field which provides information on whether
+    by advertisers via the `targeting_info` field which provides information on whether
     a user is part of an audience list uploaded by the advertiser, whether a user
     has interacted with a video from a category provided by the advertiser, whether
     a user followed or viewed creators from a specified category or whether the user

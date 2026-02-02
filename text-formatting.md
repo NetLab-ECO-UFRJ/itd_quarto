@@ -1,3 +1,4 @@
-- API endpoints names should be rendered as inline code.
+- API endpoint names (e.g., `GET /2/tweets/:id`, `messages.search`) should be rendered as inline code.
+- API endpoint URLs should be rendered as in-text links (e.g., the [`/v2/research/video/query/`](https://open.tiktokapis.com/v2/research/video/query/) endpoint).
 - No bullet points allowed. Use regular sentences instead.
-
+- Links should always be placed as in-text links, not in academic-style like (author, year)

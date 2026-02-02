@@ -10,8 +10,7 @@ special-criteria_answers:
 - code: UGC_SC2
   selected_answer: researchers_only
   notes: Yes, with a caveat that recent research has also found disparities in the
-    data which can be reliably extracted through the platform's API ([[AI Forensics,
-    2025]{.underline}](https://arxiv.org/abs/2506.09746)). This has been tested on
+    data which can be reliably extracted through the platform's API ([AI Forensics](https://arxiv.org/abs/2506.09746)). This has been tested on
     an example search but it did not verify every type of content which can be extracted
     and all associated fields in an exhaustive manner.
 - code: UGC_SC3
@@ -23,8 +22,8 @@ special-criteria_answers:
 accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
-  notes: TikTok does not provide any access to non-public data through its research
-    API ([TikTok, n.d.](https://developers.tiktok.com/doc/about-research-api?)).
+  notes: TikTok does not provide any access to non-public data through its [research
+    API](https://developers.tiktok.com/doc/about-research-api?).
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: ''
@@ -32,12 +31,12 @@ accessibility_answers:
   selected_answer: 'yes'
   notes: TikTok's Research API issues 7200-second access tokens, but token renewal
     does not interrupt data collection because the API uses stateful pagination. The
-    search_id preserves the search context and the cursor maintains position within
+    `search_id` preserves the search context and the cursor maintains position within
     the result set, enabling seamless continuation of paginated retrieval after token
-    refresh without duplication or loss. ([TikTok, n.d.](https://developers.tiktok.com/doc/research-api-specs-query-videos/)).
+    refresh without duplication or loss ([TikTok documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos/)).
 - code: UGC_OC4
   selected_answer: 'yes'
-  notes: The https://open.tiktokapis.com/v2/research/video/query/ endpoint enables
+  notes: The [`/v2/research/video/query/`](https://open.tiktokapis.com/v2/research/video/query/) endpoint enables
     the retrieval of information about videos filtering by specific video id. This
     has been confirmed through code execution.
 - code: UGC_OC5
@@ -51,7 +50,7 @@ accessibility_answers:
     such as by searching for videos using a specific username does not appear to work.
 - code: UGC_OC6
   selected_answer: 'yes'
-  notes: The https://open.tiktokapis.com/v2/research/video/query/ endpoint enables
+  notes: The [`/v2/research/video/query/`](https://open.tiktokapis.com/v2/research/video/query/) endpoint enables
     the retrieval of information about videos filtering by specific keywords. This
     has been confirmed through code execution.
 - code: UGC_OC7
@@ -60,74 +59,70 @@ accessibility_answers:
     locale-neutral representation. Time such as the lower or upper bounds of video
     creation time is given in coordinated universal time (UTC), numbers such as follower
     counts are given in integers, time duration is given in UTC Unix epoch (in seconds),
-    region codes follow the ISO 3166-1 alpha-2 conventions ([TikTok, n.d.](https://developers.tiktok.com/doc/research-api-specs-query-videos)).
+    region codes follow the ISO 3166-1 alpha-2 conventions ([TikTok documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos)).
 compliance_answers:
 - code: UGC_OC8
   selected_answer: 'yes'
-  notes: The TikTok API documentation includes a dedicated section on migrating to
-    the latest version of the API ([TikTok, n.d.](https://developers.tiktok.com/doc/tiktok-api-v2-introduction?enter_method=left_navigation)),
-    as well as a changelog which includes changes to the API ([TikTok, n.d](https://developers.tiktok.com/doc/changelog).)
-    and deprecation notices including a timeline and migration instructions ([TikTok,
-    n.d.](https://developers.tiktok.com/bulletin/migration-guidance-oauth-v1)).
+  notes: The TikTok API documentation includes a dedicated section on [migrating to
+    the latest version of the API](https://developers.tiktok.com/doc/tiktok-api-v2-introduction),
+    as well as a [changelog](https://developers.tiktok.com/doc/changelog) which includes changes to the API
+    and [deprecation notices](https://developers.tiktok.com/bulletin/migration-guidance-oauth-v1) including a timeline and migration instructions.
 - code: UGC_OC9
   selected_answer: 'yes'
   notes: The entirety of TikTok API documentation is publicly accessible to anyone
-    at the "TikTok for Developers" website ([TikTok, n.d](https://developers.tiktok.com/doc/overview?enter_method=left_navigation)).
+    at the [TikTok for Developers](https://developers.tiktok.com/doc/overview) website.
 - code: UGC_OC10
   selected_answer: 'yes'
   notes: The TikTok API documentation is comprehensive and provides detailed explanations,
-    endpoint descriptions, sample code and queries illustrating correct usage ([TikTok,
-    n.d.](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation)).
+    endpoint descriptions, sample code and queries illustrating [correct usage](https://developers.tiktok.com/doc/research-api-specs-query-videos).
 - code: UGC_OC11
   selected_answer: 'yes'
-  notes: The TikTok API documentation links to the developer "Terms and Policies"
-    which include the "Developer terms of service" ([TikTok, n.d.](https://developers.tiktok.com/doc/our-guidelines-developer-guidelines?enter_method=left_navigation)).
+  notes: The TikTok API documentation links to the developer [Terms and Policies](https://developers.tiktok.com/doc/our-guidelines-developer-guidelines)
+    which include the Developer terms of service.
 - code: UGC_OC12
   selected_answer: 'yes'
   notes: For each endpoint, the TikTok Developer documentation clearly describes the
     response format, specifying the structure of the returned JSON, the possible fields,
-    their data types, and provides an example at the bottom of the page ([TikTok,
-    n.d.](https://developers.tiktok.com/doc/research-api-specs-query-video-comments?enter_method=left_navigation)).
+    their data types, and provides an [example](https://developers.tiktok.com/doc/research-api-specs-query-video-comments) at the bottom of the page.
 - code: UGC_OC13
   selected_answer: 'no'
-  notes: The TikTok API documentation is only available in English ([TikTok, n.d](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).)
+  notes: The [TikTok API documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos) is only available in English.
 - code: UGC_OC14
   selected_answer: 'yes'
-  notes: The TikTok API documentation details the rate limits and daily quota limits
+  notes: The TikTok API documentation details the [rate limits](https://developers.tiktok.com/doc/research-api-faq) and [daily quota limits](https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit)
     for each access tier, specifying the number of requests possible and the time
-    frame during which the limit applies ([TikTok, n.d.](https://developers.tiktok.com/doc/research-api-faq?enter_method=left_navigation);
-    [TikTok, n.d.](https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit?enter_method=left_navigation))
+    frame during which the limit applies.
 - code: UGC_OC15
   selected_answer: 'yes'
   notes: TikTok can automatically label content as "AI-Generated" or as "Creator Labelled
-    as AI-Generated" ([TikTok, n.d.](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation)).
+    as AI-Generated" ([API documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos)).
     The "AI Generated" label refers to content which TikTok "identify as completely
     generated or significantly edited with AI," either "when a creator uses TikTok
     AI effects or uploads AI-generated content that has Content Credentials attached,
-    a technology from the Coalition for Content Provenance and Authenticity (C2PA)."
-    ([TikTok, n.d.](https://support.tiktok.com/en/using-tiktok/creating-videos/ai-generated-content#2)).
+    a technology from the Coalition for Content Provenance and Authenticity (C2PA)"
+    ([support documentation](https://support.tiktok.com/en/using-tiktok/creating-videos/ai-generated-content#2)).
     This has been confirmed through code execution.
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'yes'
   notes: The TikTok research API includes an endpoint for querying video comments
-    (https://open.tiktokapis.com/v2/research/video/comment/list/). This has been confirmed
+    ([`/v2/research/video/comment/list/`](https://open.tiktokapis.com/v2/research/video/comment/list/)). This has been confirmed
     via code execution.
 - code: UGC_OC17
   selected_answer: 'no'
   notes: Although temporary content exists on TikTok, such as stories, TikTok does
-    not provide an endpoint or any fields which enable its extraction ([TikTok, n.d.](https://developers.tiktok.com/doc/research-api-codebook)).
+    not provide an endpoint or any fields which enable its extraction ([research API codebook](https://developers.tiktok.com/doc/research-api-codebook)).
 - code: UGC_OC18
   selected_answer: 'yes'
-  notes: Historical data can be queried through the TikTok Research APIi up to at
+  notes: Historical data can be queried through the TikTok Research API up to at
     least 2019, however the time period queried at a given time can not be longer
-    than 30 days ([TikTok, n.d.](https://developers.tiktok.com/doc/research-api-codebook)).
+    than 30 days ([research API codebook](https://developers.tiktok.com/doc/research-api-codebook)).
 - code: UGC_OC19
   selected_answer: 'yes'
   notes: The TikTok Research API allows for a daily limit of 1000 requests per day,
-    meaning up to 100,000 records per day across all APIs. (The video and comments
-    API can return 100 records per request). The daily quota gets reset at 12 AM UTC.
-    ([TikTok, n.d.](https://developers.tiktok.com/doc/research-api-faq?enter_method=left_navigation)).
+    meaning up to 100,000 records per day across all APIs (the video and comments
+    API can return 100 records per request). The daily quota gets reset at 12 AM UTC
+    ([research API FAQ](https://developers.tiktok.com/doc/research-api-faq)).
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
@@ -148,15 +143,15 @@ relevance_answers:
   notes: The TikTok Research API allows for filtering data based on publisher location.
     However, this is the location of "country where the video creator registered their
     account" and not the location of the publisher at the time of the publication
-    of any and all of their videos ([TikTok, n.d.)](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).
+    of any and all of their videos ([API documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos)).
 - code: UGC_OC24
   selected_answer: 'no'
   notes: The TikTok Research API does not support filtering data based on content
-    language ([TikTok, n.d.)](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).
+    language ([API documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos)).
 - code: UGC_OC25
   selected_answer: 'yes'
   notes: The TikTok Research API supports filtering data by specific time periods,
-    however the length is limited to 30 days for each request ([TikTok, n.d.)](https://developers.tiktok.com/doc/research-api-specs-query-videos?enter_method=left_navigation).
+    however the length is limited to 30 days for each request ([API documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos)).
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'no'
@@ -165,4 +160,4 @@ timeliness_answers:
     the full dataset, "archived data [is used] instead of the current online data".
     Moreover, according to the API documentation, "new videos take up to 48 hours
     to be added to the search engine, and statistics such as view count and follower
-    count can take up to 10 days to update." ([TikTok, n.d](https://developers.tiktok.com/doc/research-api-faq?enter_method=left_navigation).)
+    count can take up to 10 days to update" ([research API FAQ](https://developers.tiktok.com/doc/research-api-faq)).

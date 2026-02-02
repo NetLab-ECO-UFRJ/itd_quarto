@@ -26,7 +26,7 @@ special-criteria_answers:
     extraction have yielded empty csv files with nothing but a header. This is consistent
     with the recent findings from the EU Commission, fining X for violations under the DSA, which includes
     "excessive delays in processing" data from its Ad Repository, thus undermining
-    its purpose [[(EC, 2025]{.underline}](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934)).
+    its purpose ([EU Commission](https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2934)).
 - code: AD_SC3
   selected_answer: 'no'
   notes: 'This cannot be verified due to a lack of access to the API at the time of
@@ -77,8 +77,7 @@ accessibility_answers:
 - code: AD_OC7
   selected_answer: 'no'
   notes: The GUI does not enable data extraction from the platform using search terms.
-    This does not appear to be supported by the API access to the Ad Repository ([[X,
-    n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+    This does not appear to be supported by the API access to the Ad Repository ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
     Moreover, this cannot be verified due to a lack of access to the API at the time of
     this assessment as well as due to difficulties extracting any data from the GUI
     despite multiple attempts.
@@ -147,8 +146,7 @@ compliance_answers:
     despite multiple attempts.
 - code: AD_OC16
   selected_answer: both
-  notes: Though minimal, the GUI and API documentation is open access ([[X,
-    n.d.]{.underline}](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
+  notes: Though minimal, the GUI and API documentation is open access ([X documentation](https://business.x.com/en/help/ads-policies/product-policies/ads-transparency)).
 - code: AD_OC17
   selected_answer: 'no'
   notes: The GUI and API documentation are very minimal and provide no examples nor
