@@ -208,9 +208,9 @@ identifier. The assessment should review the API documentation and test
 relevant endpoints to confirm that data can be retrieved directly for an
 individual author.
 
--   Yes
+-   **Yes**
 
--   **No**
+-   No
 
 **Justification:** There is no specific endpoint that supports
 extracting data from an individual author (such as their videos),
@@ -218,9 +218,10 @@ however there are endpoints for user information (e.g., bio, number of
 followers, number of videos posted, etc.) and there are bespoke
 endpoints for the user's liked videos, pinned videos, followers,
 following, reposted videos. Notably, there are no specific endpoints for
-a user's public content itself or comments. Trying to run this type of
-request using a workaround, such as by searching for videos using a
-specific username does not appear to work.
+a user's public content itself or comments.
+
+However, when running a search for videos and sorting by username using
+the other endpoints such as the one for videos, this appears to work.
 
 **OC6: Does the platform's API provide an endpoint for extracting data
 based on search terms?**
@@ -527,6 +528,8 @@ day, meaning up to 100,000 records per day across all APIs. (The video
 and comments API can return 100 records per request). The daily quota
 gets reset at 12 AM UTC. ([[TikTok,
 n.d.]{.underline}](https://developers.tiktok.com/doc/research-api-faq?enter_method=left_navigation)).
+
+This has not been tested over 24 hours due to exceeding the daily quota.
 
 ### CONSISTENCY
 
