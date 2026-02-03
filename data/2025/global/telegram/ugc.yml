@@ -139,8 +139,7 @@ relevance_answers:
 - code: UGC_OC22
   selected_answer: 'yes'
   notes: Based on tests carried out, requests to the Telegram API, made at different
-    times and by different people, return consistent data with minimal variation,
-    except for publications that have been removed or made private.
+    times and by different people, return consistent data with minimal variation.
 - code: UGC_OC23
   selected_answer: 'no'
   notes: Telegram’s TDLib and core API do not provide any parameters or endpoints
