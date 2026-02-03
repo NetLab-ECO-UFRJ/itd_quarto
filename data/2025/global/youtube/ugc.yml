@@ -167,18 +167,8 @@ consistency_answers:
     to the `search.list` endpoint multiple times, using `relevance` for the `order` parameter.
     The results differed in the order of the returned items.
 - code: UGC_OC21
-  selected_answer: 'no'
-  notes: There are frequent inconsistencies, even in collections using fixed parameters.
-    In our tests, we found that the YouTube API does not necessarily honor user-defined
-    filters. For instance, the [documentation about the `relevanceLanguage` filter](https://developers.google.com/youtube/v3/docs/search/list)
-    states that "results in other languages will still be returned if they are highly
-    relevant to the search query term", meaning the `relevanceLanguage` filter operates as a
-    soft preference rather than a strict constraint, allowing inconsistent results.
-    In our tests, we confirmed that when requesting videos in Portuguese, one of the
-    resulting items used English for its description and title. Also, comments were
-    written in English. Although the video had no spoken dialogue—only images and
-    English text—the previous statements already indicate that the video is targeted
-    for English-speaking audiences.
+  selected_answer: 'yes'
+  notes: Our tests showed that the YouTube API v3 returns data consistent with the requested parameters and filters. The [documentation](https://developers.google.com/youtube/v3/docs/search/list) for `relevanceLanguage` states that "results in other languages will still be returned if they are highly relevant to the search query term", indicating it operates as a soft preference. Since this behavior is documented, returning other-language results does not constitute a loss of consistency. In our tests with Portuguese filters, 2 out of 5 results did not match the expected language or have translations available.
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'yes'
@@ -198,12 +188,13 @@ relevance_answers:
     specified country", filtering by content availability region, not by publishers'
     location.
 - code: UGC_OC24
-  selected_answer: 'yes'
-  notes: The API provides [language-related filter parameters](https://developers.google.com/youtube/v3/docs/search/list#parameters),
-    but these influence relevance sorting rather than implementing strict filters.
-    In our tests, when requesting videos in Portuguese, some videos were in English,
-    and while some had their pages automatically translated to Portuguese (including
-    the audio tracks), others did not.
+  selected_answer: 'no'
+  notes: The API does not provide a proper language filter. The [`relevanceLanguage`
+    parameter](https://developers.google.com/youtube/v3/docs/search/list#parameters)
+    operates as a soft preference rather than a strict constraint—the documentation
+    states that "results in other languages will still be returned if they are highly
+    relevant to the search query term." In our tests, when requesting videos in Portuguese,
+    some results were in English, confirming the filter does not enforce language selection.
 - code: UGC_OC25
   selected_answer: 'yes'
   notes: The API provides comprehensive temporal filtering through [dedicated date-time
