@@ -1,7 +1,7 @@
 ---
 title: "TikTok"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/regional/UK/tiktok/ugc.yml"
+ugc_answers_file: "data/2025/regional/EU/tiktok/ugc.yml"
 ads_answers_file: "data/2025/regional/UK/tiktok/ads.yml"
 region_code: "UK"
 ---
