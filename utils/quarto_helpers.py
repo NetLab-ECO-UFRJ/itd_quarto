@@ -14,6 +14,20 @@ import markdown
 from .scoring import calculate_platform_score
 
 
+def get_answer_icon(answer: str) -> str:
+    """Get icon for answer value based on answer text."""
+    answer_lower = answer.lower() if answer else ""
+    if answer_lower.startswith("yes") or answer_lower == "full" or answer_lower.startswith("free"):
+        return "✅"
+    elif answer_lower.startswith("partial"):
+        return "⚠️"
+    elif answer_lower == "not_applicable" or answer_lower == "not applicable":
+        return "➖"
+    elif answer_lower == "no" or answer_lower == "no or not applicable":
+        return "❌"
+    return ""
+
+
 def setup_quarto_environment() -> Path:
     """
     Auto-discover project root and setup sys.path for imports.
@@ -127,16 +141,9 @@ def generate_summary_table(results: Dict[str, Any]):
             notes_text = (item.get('notes') or '').replace('\n', ' ').replace('\r', ' ')
             notes = markdown.markdown(notes_text, extensions=['extra'])
 
-            answer_icon = ""
-            answer_lower = answer.lower()
-            if answer_lower.startswith("yes") or answer_lower == "full" or answer_lower.startswith("free"):
-                answer_icon = "✅ "
-            elif answer_lower.startswith("partial"):
-                answer_icon = "⚠️ "
-            elif answer_lower == "not applicable":
-                answer_icon = "➖ "
-            elif answer_lower == "no":
-                answer_icon = "❌ "
+            answer_icon = get_answer_icon(answer)
+            if answer_icon:
+                answer_icon += " "
 
 
             print('<tr style="border-bottom: 1px solid #eee;">')

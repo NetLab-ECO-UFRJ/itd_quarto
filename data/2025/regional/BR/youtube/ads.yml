@@ -11,7 +11,7 @@ special-criteria_answers:
 
 
     The publicly available tables from the BigQuery Ads Transparency Center dataset
-    are two: `bigquery-public-data.google_ads_transparency_center.creative_stats`
+    are `bigquery-public-data.google_ads_transparency_center.creative_stats`
     and `bigquery-public-data.google_ads_transparency_center.removed_creative_stats`.
     But as stated before, these tables contain no data when filtering for the Brazil
     region.

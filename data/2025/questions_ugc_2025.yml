@@ -94,11 +94,8 @@ accessibility:
     label: 'Yes'
     weight: 1.0
 - code: UGC_OC3
-  title: Does the platform’s API provide a form of authentication that allows for
-    token renewal without the risk of data loss?
-  description: Verifies whether authentication tokens can be renewed without interrupting
-    data collection or causing loss of access, ensuring continuity and integrity of
-    monitoring and extraction.
+  title: Does the platform's API support renewable authentication mechanisms without risk of data loss?
+  description: Verifies whether the API's authentication mechanism (e.g., tokens, keys, or other access methods) can be renewed or updated without interrupting data collection, losing access, or compromising the continuity and integrity of monitoring and extraction.
   weight: 1.0
   answers:
   - value: 'no'
@@ -201,10 +198,8 @@ compliance:
     label: 'Yes'
     weight: 1.0
 - code: UGC_OC11
-  title: Does the platform’s API documentation include or link to the API terms of
-    use?
-  description: Verifies whether the documentation clearly states or links to the API
-    terms of use and other legal information defining permitted use and restrictions.
+  title: Does the platform’s documentation include or link to the API or data access terms of use?
+  description: Verifies whether the platform’s documentation clearly states, or provides a direct link to, the API's terms of use. The assessment should review the documentation to confirm the presence of explicit legal terms that define permitted data access, usage conditions, and any applicable restrictions.
   weight: 1.0
   answers:
   - value: 'no'
@@ -361,9 +356,8 @@ relevance:
     label: 'Yes'
     weight: 1.0
 - code: UGC_OC23
-  title: Does the platform’s API allow for filtering data based on publisher location?
-  description: Verifies whether the API supports applying location-based filters so
-    that public posts can be filtered by publisher location.
+  title: Does the platform's API allow for filtering data based on content or its author location?
+  description: Verifies whether the API supports applying location-based filters to data extraction. The assessment should test the endpoint for the main content type to confirm that data on public posts can be filtered by content or author location.
   weight: 1.0
   answers:
   - value: 'no'

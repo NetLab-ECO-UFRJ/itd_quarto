@@ -123,7 +123,7 @@ completeness_answers:
     any fixed time limitation, including content older than one year.
 - code: UGC_OC19
   selected_answer: 'yes'
-  notes: Telegram's API — including TDLib and the core "messages.*" methods — does
+  notes: Telegram's API — including TDLib and the core `messages.*` methods — does
     not impose strict global rate limits that would prevent continuous extraction
     of large message volumes, such as 10,000 publications in 24 hours.
 consistency_answers:
@@ -153,11 +153,11 @@ relevance_answers:
   selected_answer: 'yes'
   notes: Telegram's API, including TDLib, supports filtering data by specific time
     periods through parameters that control message retrieval ranges. The API method
-    "SearchRequest" accepts parameters such as "min_date" and "max_date", allowing
+    `SearchRequest` accepts parameters such as `min_date` and `max_date`, allowing
     clients to retrieve messages within custom date or ID intervals. Similarly, TDLib's
     [`getChatHistory`](https://core.telegram.org/method/messages.getHistory#parameters)
     method allows fetching messages before or after a given message ID or timestamp,
-    enabling temporal filtering. See also [Telethon messages.search documentation](https://tl.telethon.dev/methods/messages/search.html).
+    enabling temporal filtering. See also [Telethon `messages.search` documentation](https://tl.telethon.dev/methods/messages/search.html).
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'yes'

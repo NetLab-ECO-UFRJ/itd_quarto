@@ -45,24 +45,24 @@ accessibility_answers:
     fear of data loss during extraction or monitoring. However, if we take into account
     the restrictions of the Basic Access tier – such as the 100-tweet monthly cap,
     the rate limit of 1 request every 15 minutes on the main tweet retrieval endpoint,
-    and limited access to certain endpoints (e.g., GET /2/tweets/search/all is not
+    and limited access to certain endpoints (e.g., `GET /2/tweets/search/all` is not
     available for Basic Access tier users) –, then the answer is no. Even if tokens
     are renewed, these tier-based restrictions tied to the app/user prevent continuous
     and comprehensive data collection.
 - code: UGC_OC4
   selected_answer: 'yes'
-  notes: The GET /2/tweets/:id endpoint enables the retrieval of comprehensive information
+  notes: The `GET /2/tweets/:id` endpoint enables the retrieval of comprehensive information
     about a single tweet, as identified by the provided ID.
 - code: UGC_OC5
   selected_answer: 'yes'
-  notes: The GET /2/users/:id/tweets endpoint enables the retrieval of comprehensive
+  notes: The `GET /2/users/:id/tweets` endpoint enables the retrieval of comprehensive
     information about tweets made by a specific user, as identified by the provided
     ID.
 - code: UGC_OC6
   selected_answer: 'yes'
-  notes: The GET /2/tweets/search/recent endpoint enables the retrieval of comprehensive
+  notes: The `GET /2/tweets/search/recent` endpoint enables the retrieval of comprehensive
     information about tweets published in the past seven days that match specific
-    search terms, while the GET /2/tweets/search/all endpoint, available only to Pro
+    search terms, while the `GET /2/tweets/search/all` endpoint, available only to Pro
     and Enterprise API users, allows querying historical tweets dating back to the
     launch of the platform.
 - code: UGC_OC7
@@ -70,8 +70,8 @@ accessibility_answers:
   notes: Based on a review of the X/Twitter API v2 documentation, the API employs
     largely locale-neutral representations for non-content metadata. Its structure
     and use of standardized formats ensure significant neutrality– for example, all
-    timestamps (such as created_at) adhere to the ISO 8601 format and are returned
-    in Coordinated Universal Time (UTC). Similarly, the lang field uses ISO 639-1
+    timestamps (such as `created_at`) adhere to the ISO 8601 format and are returned
+    in Coordinated Universal Time (UTC). Similarly, the `lang` field uses ISO 639-1
     language codes, and country or regional codes follow standard ISO 3166-1 Alpha-2
     conventions.
 compliance_answers:
@@ -125,7 +125,7 @@ completeness_answers:
     either by known identifiers or by keywords.
 - code: UGC_OC18
   selected_answer: 'no'
-  notes: Although the GET /2/tweets/search/all endpoint allows querying historical
+  notes: Although the `GET /2/tweets/search/all` endpoint allows querying historical
     tweets dating back to the launch of the platform, it is only available to Pro
     and Enterprise API users.
 - code: UGC_OC19
@@ -138,7 +138,7 @@ completeness_answers:
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
-  notes: Excluding the seven-day limitation of the GET /2/tweets/search/recent endpoint,
+  notes: Excluding the seven-day limitation of the `GET /2/tweets/search/recent` endpoint,
     data acquisitions using the X/Twitter API are consistently reproducible over time.
 - code: UGC_OC21
   selected_answer: 'yes'
@@ -153,18 +153,18 @@ relevance_answers:
 - code: UGC_OC23
   selected_answer: 'no'
   notes: The X/Twitter API v2 documentation indicates that it is possible to filter
-    data by publisher location using the profile_region field. However, this filter
+    data by publisher location using the `profile_region` field. However, this filter
     is not available to users or developers on the Basic Access tier. Therefore, we
     were unable to test or validate this functionality.
 - code: UGC_OC24
   selected_answer: 'yes'
-  notes: The GET /2/tweets/search/recent and GET /2/tweets/search/all endpoints enable
-    filtering of tweets according to content language through the use of the lang
+  notes: The `GET /2/tweets/search/recent` and `GET /2/tweets/search/all` endpoints enable
+    filtering of tweets according to content language through the use of the `lang`
     parameter.
 - code: UGC_OC25
   selected_answer: 'yes'
-  notes: The GET /2/tweets/search/recent, though limited to the last seven days, and
-    GET /2/tweets/search/all endpoints allow filtering of tweets based on specific
+  notes: The `GET /2/tweets/search/recent`, though limited to the last seven days, and
+    `GET /2/tweets/search/all` endpoints allow filtering of tweets based on specific
     timeframes.
 timeliness_answers:
 - code: UGC_OC26
