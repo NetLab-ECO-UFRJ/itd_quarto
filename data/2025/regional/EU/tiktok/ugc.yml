@@ -6,7 +6,7 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: researchers_only
-  notes: ''
+  notes: 'TikTok provides an API that allow independent and academic researchers ([TikTok, s.d.](https://developers.tiktok.com/doc/about-research-api))'
 - code: UGC_SC2
   selected_answer: researchers_only
   notes: Yes, with a caveat that recent research has also found disparities in the
@@ -26,7 +26,7 @@ accessibility_answers:
     API](https://developers.tiktok.com/doc/about-research-api?).
 - code: UGC_OC2
   selected_answer: 'yes'
-  notes: ''
+  notes: 'During our tests, we were able to extract data directly from the API response'
 - code: UGC_OC3
   selected_answer: 'yes'
   notes: TikTok's Research API issues 7200-second access tokens, but token renewal
@@ -141,7 +141,7 @@ relevance_answers:
 - code: UGC_OC23
   selected_answer: 'yes'
   notes: The TikTok Research API allows for filtering data based on publisher location.
-    However, this is the location of "country where the video creator registered their
+    This is the location of "country where the video creator registered their
     account" and not the location of the publisher at the time of the publication
     of any and all of their videos ([API documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos)).
 - code: UGC_OC24
