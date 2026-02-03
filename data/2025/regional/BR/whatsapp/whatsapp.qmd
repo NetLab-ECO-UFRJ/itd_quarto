@@ -37,14 +37,7 @@ results_ugc, results_ads = load_platform_results(
 
 ## User-Generated Content
 
-```{python}
-#| label: ugc-summary-table
-#| echo: false
-#| output: asis
-
-from utils.quarto_helpers import generate_summary_table
-generate_summary_table(results_ugc)
-```
+Not available.
 
 ## Advertising
 
