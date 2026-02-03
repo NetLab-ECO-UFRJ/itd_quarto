@@ -244,7 +244,7 @@ class MarkdownToYAMLTransformer:
 
         print(f"✓ Created: {output_file}")
 
-    def transform(self, markdown_file: str, evaluation_date: str):
+    def transform(self, markdown_file: str, evaluation_date: str, platform_override: str = None):
         """Process markdown file and generate YAML output."""
         print("Starting transformation...\n")
 
@@ -254,6 +254,12 @@ class MarkdownToYAMLTransformer:
 
         print(f"Processing: {markdown_path.name}")
         assessment = self.parse_markdown_file(markdown_path, evaluation_date)
+
+        if platform_override:
+            assessment['platform'] = platform_override.lower()
+
+        if self.scope_type == "global":
+            assessment['region_code'] = "GLOBAL"
 
         yaml_data = self._generate_yaml_content(assessment)
         self._write_yaml_file(assessment['platform'], assessment['scope'], yaml_data)
@@ -286,6 +292,10 @@ def main():
         required=True,
         help="Evaluation date in YYYY-MM format (e.g., 2025-11)"
     )
+    parser.add_argument(
+        "--platform",
+        help="Override platform name (default: derived from filename)"
+    )
 
     args = parser.parse_args()
 
@@ -300,7 +310,8 @@ def main():
     )
     transformer.transform(
         markdown_file=args.markdown_file,
-        evaluation_date=args.evaluation_date
+        evaluation_date=args.evaluation_date,
+        platform_override=args.platform
     )
 
 
