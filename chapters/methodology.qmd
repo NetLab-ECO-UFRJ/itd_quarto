@@ -2,6 +2,28 @@
 title: "Methodology"
 ---
 
+# Platforms Evaluated
+
+| Owner           | Platform   | UGC                                                                 | Ads                                                                 |
+|-----------------|------------|----------------------------------------------------------------------|----------------------------------------------------------------------|
+| Alphabet Inc.   | YouTube    | [YouTube Data API v3](https://developers.google.com/youtube/v3/docs) | [Ads Transparency Center](https://adstransparency.google.com/)       |
+| Bluesky PBC     | Bluesky    | [Bluesky Developer APIs](https://docs.bsky.app/)                     | Not Applicable                                                      |
+| ByteDance       | TikTok     | [TikTok Developer APIs](https://developers.tiktok.com/)              | [TikTok Commercial Content API](https://developers.tiktok.com/products/commercial-content-api) |
+| Discord Inc.    | Discord    | [Discord API](https://discord.com/developers/docs/intro)             | Not Available                                                       |
+| Kuaishou        | Kwai       | [Kuaishou Open Platform API](https://open.kuaishou.com/platform/openApi) | Not Available                                                   |
+| Meta            | Facebook   | [Meta Content Library API](https://developers.facebook.com/docs/content-library-and-api/content-library-api/) | [Meta Ad Library API](https://www.facebook.com/ads/library/api/) |
+| Meta            | Instagram  | [Meta Content Library API](https://developers.facebook.com/docs/content-library-and-api/content-library-api/) | [Meta Ad Library API](https://www.facebook.com/ads/library/api/) |
+| Meta            | Threads    | [Threads API](https://developers.facebook.com/docs/threads-api)      | Not Available                                                       |
+| Meta            | WhatsApp   | [WhatsApp Business Platform API](https://developers.facebook.com/docs/whatsapp) | Not Available                                           |
+| Microsoft       | LinkedIn   | [LinkedIn Developer APIs](https://learn.microsoft.com/linkedin/)     | [LinkedIn Marketing API](https://learn.microsoft.com/linkedin/marketing/) |
+| Pinterest       | Pinterest  | [Pinterest API v5](https://developers.pinterest.com/docs/api/v5/)    | [Pinterest Ads API](https://developers.pinterest.com/docs/redoc/ads/) |
+| Reddit Inc.     | Reddit     | [Reddit API](https://www.reddit.com/dev/api/)                        | [Reddit Ads API](https://ads-api.reddit.com/docs/)                  |
+| Snap Inc.       | Snapchat   | [Snapchat Public Profile API](https://developers.snap.com/api/public-profile-api) | [Snap Marketing API](https://developers.snap.com/api/marketing-api) |
+| Telegram        | Telegram   | [Telegram Bot API](https://core.telegram.org/bots/api)               | Not Available                                                       |
+| X Corp.         | X          | [X API](https://developer.x.com/en/docs/x-api)                       | [EU Ads Transparency Center](https://ads.x.com/transparency)        |
+
+# Scoring Methodology
+
 # UGC
 
 **Special Criteria Score (75% weight):**
@@ -88,4 +110,3 @@ def display_questions(yaml_file, title):
 display_questions('../data/2025/questions_ugc_2025.yml', 'User-Generated Content (UGC) Questions')
 display_questions('../data/2025/questions_ads_2025.yml', 'Advertising (Ads) Questions')
 ```
-

@@ -1,0 +1,11 @@
+# Instagram
+
+Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
+    extracting data is not allowed and violates the terms of usage. You can produce
+    analysis and only the result of this analysis can be downloaded. See the [API
+    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
+    for details
+
+[@Cotter2021]
+
+https://www.facebook.com/ads/library

@@ -29,7 +29,9 @@ book:
     #     - chapters/platforms/discord.qmd
     #     - chapters/platforms/kwai.qmd
     #     - chapters/platforms/linkedin.qmd
-    #     - chapters/platforms/meta.qmd
+    #     - chapters/platforms/facebook.qmd
+    #     - chapters/platforms/instagram.qmd
+    #     - chapters/platforms/threads.qmd
     #     - chapters/platforms/pinterest.qmd
     #     # - chapters/platforms/reddit.qmd
     #     - chapters/platforms/snapchat.qmd
@@ -48,7 +50,9 @@ book:
     - part: "Brazil Assessments"
       chapters:
         - data/2025/regional/BR/linkedin/linkedin.qmd
-        - data/2025/regional/BR/meta/meta.qmd
+        - data/2025/regional/BR/facebook/facebook.qmd
+        - data/2025/regional/BR/instagram/instagram.qmd
+        - data/2025/regional/BR/threads/threads.qmd
         - data/2025/regional/BR/snapchat/snapchat.qmd
         - data/2025/regional/BR/tiktok/tiktok.qmd
         - data/2025/regional/BR/whatsapp/whatsapp.qmd
@@ -57,7 +61,9 @@ book:
     - part: "EU Assessments"
       chapters:
         - data/2025/regional/EU/linkedin/linkedin.qmd
-        - data/2025/regional/EU/meta/meta.qmd
+        - data/2025/regional/EU/facebook/facebook.qmd
+        - data/2025/regional/EU/instagram/instagram.qmd
+        - data/2025/regional/EU/threads/threads.qmd
         - data/2025/regional/EU/snapchat/snapchat.qmd
         - data/2025/regional/EU/tiktok/tiktok.qmd
         - data/2025/regional/EU/whatsapp/whatsapp.qmd
@@ -66,7 +72,9 @@ book:
     - part: "UK Assessments"
       chapters:
         - data/2025/regional/UK/linkedin/linkedin.qmd
-        - data/2025/regional/UK/meta/meta.qmd
+        - data/2025/regional/UK/facebook/facebook.qmd
+        - data/2025/regional/UK/instagram/instagram.qmd
+        - data/2025/regional/UK/threads/threads.qmd
         - data/2025/regional/UK/snapchat/snapchat.qmd
         - data/2025/regional/UK/tiktok/tiktok.qmd
         - data/2025/regional/UK/whatsapp/whatsapp.qmd

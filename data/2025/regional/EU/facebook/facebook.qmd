@@ -1,7 +1,7 @@
 ---
-title: "WhatsApp"
+title: "Facebook"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/global/whatsapp/ugc.yml"
+ugc_answers_file: "data/2025/global/facebook/ugc.yml"
 ads_answers_file: "data/2025/regional/EU/meta/ads.yml"
 region_code: "EU"
 ---
@@ -19,10 +19,10 @@ while not (project_root / 'utils').exists() and project_root != project_root.par
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from utils.quarto_helpers import load_platform_results, generate_summary_table
+from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
-    ugc_file="data/2025/global/whatsapp/ugc.yml",
+    ugc_file="data/2025/global/facebook/ugc.yml",
     ads_file="data/2025/regional/EU/meta/ads.yml",
     year='2025'
 )
@@ -37,7 +37,14 @@ results_ugc, results_ads = load_platform_results(
 
 ## User-Generated Content
 
-Not available.
+```{python}
+#| label: ugc-summary-table
+#| echo: false
+#| output: asis
+
+from utils.quarto_helpers import generate_summary_table
+generate_summary_table(results_ugc)
+```
 
 ## Advertising
 

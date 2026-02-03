@@ -1,9 +1,9 @@
 ---
-title: "WhatsApp"
+title: "Threads"
 subtitle: "Platform Evaluation Report"
-ugc_answers_file: "data/2025/global/whatsapp/ugc.yml"
-ads_answers_file: "data/2025/regional/EU/meta/ads.yml"
-region_code: "EU"
+ugc_answers_file: "data/2025/global/threads/ugc.yml"
+ads_answers_file: "data/2025/regional/UK/meta/ads.yml"
+region_code: "UK"
 ---
 
 ```{python}
@@ -19,17 +19,17 @@ while not (project_root / 'utils').exists() and project_root != project_root.par
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from utils.quarto_helpers import load_platform_results, generate_summary_table
+from utils.quarto_helpers import load_platform_results
 
 results_ugc, results_ads = load_platform_results(
-    ugc_file="data/2025/global/whatsapp/ugc.yml",
-    ads_file="data/2025/regional/EU/meta/ads.yml",
+    ugc_file="data/2025/global/threads/ugc.yml",
+    ads_file="data/2025/regional/UK/meta/ads.yml",
     year='2025'
 )
 
 ```
 
-**Region:** EU
+**Region:** UK
 
 **User-generated transparency score:** `{python} f"{results_ugc['total_score']:.0f}"` / `{python} f"{results_ugc['total_max']:.0f}"` (`{python} f"{results_ugc['total_percentage']:.0f}"`%)
 
@@ -37,7 +37,14 @@ results_ugc, results_ads = load_platform_results(
 
 ## User-Generated Content
 
-Not available.
+```{python}
+#| label: ugc-summary-table
+#| echo: false
+#| output: asis
+
+from utils.quarto_helpers import generate_summary_table
+generate_summary_table(results_ugc)
+```
 
 ## Advertising
 

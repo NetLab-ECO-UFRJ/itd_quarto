@@ -1,0 +1,101 @@
+metadata:
+  platform: Instagram
+  scope: UGC
+  evaluation_date: 2025-10
+special-criteria_answers:
+- code: UGC_SC1
+  selected_answer: 'no'
+  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/). Analyses may be conducted within the tool, but only their aggregated results can be extracted.
+- code: UGC_SC2
+  selected_answer: 'no'
+  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/). Moreover, the public content available for analysis is restricted to a subset of pages and profiles that either meet a minimum [follower threshold](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview) or are otherwise verified by the platform.
+- code: UGC_SC3
+  selected_answer: 'no'
+  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/).
+- code: UGC_SC4
+  selected_answer: 'yes'
+  notes: In addition to the `Meta Content Library API`, the company also provides the [`Meta Content Library User Interface`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), which enables approved researchers to visualize and extract structured data on user-generated content across Meta platforms.
+accessibility_answers:
+- code: UGC_OC1
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC2
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC3
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC4
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC5
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC6
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC7
+  selected_answer: 'no'
+  notes: '-'
+compliance_answers:
+- code: UGC_OC8
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC9
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC10
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC11
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC12
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC13
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC14
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC15
+  selected_answer: 'no'
+  notes: '-'
+completeness_answers:
+- code: UGC_OC16
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC17
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC18
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC19
+  selected_answer: 'no'
+  notes: '-'
+consistency_answers:
+- code: UGC_OC20
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC21
+  selected_answer: 'no'
+  notes: '-'
+relevance_answers:
+- code: UGC_OC22
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC23
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC24
+  selected_answer: 'no'
+  notes: '-'
+- code: UGC_OC25
+  selected_answer: 'no'
+  notes: '-'
+timeliness_answers:
+- code: UGC_OC26
+  selected_answer: 'no'
+  notes: '-'

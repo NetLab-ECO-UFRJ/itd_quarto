@@ -37,8 +37,9 @@ The system supports multi-regional analysis, recognizing that platform practices
 This framework can be applied to any social media platform, including:
 
 - Reddit
-- Facebook/Meta
+- Facebook
 - Instagram
+- Threads
 - TikTok
 - Twitter/X
 - YouTube
