@@ -10,8 +10,6 @@ from typing import Dict, List, Tuple, Optional, Union
 import yaml
 from .scoring import calculate_platform_score
 
-GLOBAL_PLATFORMS = ['Bluesky', 'Discord', 'Kwai', 'Pinterest', 'Reddit', 'Telegram']
-
 REGION_CODE_MAP = {
     'GLOBAL': ['BR', 'EU', 'UK'],
     'BRAZIL': ['BR'],
@@ -77,7 +75,8 @@ def normalize_platform_name(platform_name: str) -> str:
         'x': 'X',
         'tiktok': 'TikTok',
         'youtube': 'YouTube',
-        'linkedin': 'LinkedIn'
+        'linkedin': 'LinkedIn',
+        'whatsapp': 'WhatsApp'
     }
     return special_cases.get(platform_name.lower(), platform_name.title())
 

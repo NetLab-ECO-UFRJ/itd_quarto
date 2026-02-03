@@ -41,6 +41,10 @@ display(HTML(generate_summary_heatmap('ads')))
 Bluesky is excluded from the Ads assessment as the platform does not have advertising.
 :::
 
+::: {.callout-note}
+WhatsApp uses Meta's Content Library for Ads assessments.
+:::
+
 ## Score Legend
 
 ::: {.grid style="margin: 20px 0;"}
