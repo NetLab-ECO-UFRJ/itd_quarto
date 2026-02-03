@@ -6,7 +6,7 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: researchers_only
-  notes: 'TikTok provides an API that allow independent and academic researchers ([TikTok, s.d.](https://developers.tiktok.com/doc/about-research-api))'
+  notes: TikTok provides an API that allow independent and academic researchers ([TikTok, s.d.](https://developers.tiktok.com/doc/about-research-api))
 - code: UGC_SC2
   selected_answer: researchers_only
   notes: Yes, with a caveat that recent research has also found disparities in the
