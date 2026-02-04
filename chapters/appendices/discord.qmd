@@ -4,8 +4,7 @@ subtitle: "Platform Appendix"
 platform_slug: "discord"
 ugc_answers_files:
   - data/2025/global/discord/ugc.yml
-ads_answers_files:
-  - data/2025/global/discord/ads.yml
+ads_answers_files: []
 ---
 
 ```{python}

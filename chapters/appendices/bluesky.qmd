@@ -4,8 +4,7 @@ subtitle: "Platform Appendix"
 platform_slug: "bluesky"
 ugc_answers_files:
   - data/2025/global/bluesky/ugc.yml
-ads_answers_files:
-  - data/2025/global/bluesky/ads.yml
+ads_answers_files: []
 ---
 
 ```{python}

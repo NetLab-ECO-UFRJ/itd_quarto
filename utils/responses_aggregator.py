@@ -373,6 +373,7 @@ def generate_platform_question_sections(
             print('<tbody>')
 
             for region in display_regions:
+                region_label = "Global" if region == "GLOBAL" else region
                 answer_data = answers_by_region.get(region, {}).get(q["code"], {})
                 answer_value = (answer_data.get("selected_answer") or "").strip()
                 if not answer_value:
@@ -389,7 +390,7 @@ def generate_platform_question_sections(
                     notes = markdown.markdown(notes_text, extensions=['extra'])
 
                 print('<tr style="border-bottom:1px solid #eee;">')
-                print(f'<td style="padding:8px; vertical-align:top;"><strong>{region}</strong></td>')
+                print(f'<td style="padding:8px; vertical-align:top;"><strong>{region_label}</strong></td>')
                 print(f'<td style="padding:8px; vertical-align:top;">{answer_label}</td>')
                 print(f'<td style="padding:8px; vertical-align:top; word-wrap:break-word; overflow-wrap:break-word;">{notes}</td>')
                 print('</tr>')
