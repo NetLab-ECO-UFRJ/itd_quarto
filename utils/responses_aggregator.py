@@ -357,7 +357,7 @@ def generate_platform_question_sections(
         for q in cat_data["questions"]:
             print(f"\n{h} {q['code']}: {q['title']}\n")
             print('```{=html}')
-            print('<table style="width:100%; table-layout:fixed; border-collapse:collapse; font-size:0.9em;">')
+            print('<table style="width:100% !important; table-layout:fixed; border-collapse:collapse; font-size:0.9em;">')
             print('<colgroup>')
             print('<col style="width:120px;">')
             print('<col style="width:160px;">')
@@ -365,8 +365,8 @@ def generate_platform_question_sections(
             print('</colgroup>')
             print('<thead>')
             print('<tr style="border-bottom:2px solid #ddd;">')
-            print('<th style="text-align:left; padding:8px;">Region</th>')
-            print('<th style="text-align:left; padding:8px;">Answer</th>')
+            print('<th style="text-align:left; padding:8px; width:120px;">Region</th>')
+            print('<th style="text-align:left; padding:8px; width:160px;">Answer</th>')
             print('<th style="text-align:left; padding:8px;">Note</th>')
             print('</tr>')
             print('</thead>')
@@ -394,8 +394,8 @@ def generate_platform_question_sections(
                     notes = markdown.markdown(notes_text, extensions=['extra'])
 
                 print('<tr style="border-bottom:1px solid #eee;">')
-                print(f'<td style="padding:8px; vertical-align:top;"><strong>{region_label}</strong></td>')
-                print(f'<td style="padding:8px; vertical-align:top;">{answer_icon}{answer_label}</td>')
+                print(f'<td style="padding:8px; vertical-align:top; width:120px;"><strong>{region_label}</strong></td>')
+                print(f'<td style="padding:8px; vertical-align:top; width:160px;">{answer_icon}{answer_label}</td>')
                 print(f'<td style="padding:8px; vertical-align:top; word-wrap:break-word; overflow-wrap:break-word;">{notes}</td>')
                 print('</tr>')
 
