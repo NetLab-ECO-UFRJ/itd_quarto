@@ -1,0 +1,57 @@
+---
+title: "YouTube"
+subtitle: "Platform Appendix"
+platform_slug: "youtube"
+ugc_answers_files:
+  - data/2025/global/youtube/ugc.yml
+ads_answers_files:
+  - data/2025/regional/BR/youtube/ads.yml
+  - data/2025/regional/EU/youtube/ads.yml
+  - data/2025/regional/UK/youtube/ads.yml
+---
+
+```{python}
+#| label: setup
+#| include: false
+
+import sys
+from pathlib import Path
+
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
+from utils.responses_aggregator import generate_platform_question_sections
+```
+
+## User-Generated Content
+
+```{python}
+#| label: ugc-questions
+#| echo: false
+#| output: asis
+
+generate_platform_question_sections(
+    platform="youtube",
+    question_type="ugc",
+    year="2025",
+    heading_level=3,
+)
+```
+
+## Advertising
+
+```{python}
+#| label: ads-questions
+#| echo: false
+#| output: asis
+
+generate_platform_question_sections(
+    platform="youtube",
+    question_type="ads",
+    year="2025",
+    heading_level=3,
+)
+```
