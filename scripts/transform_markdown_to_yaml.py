@@ -259,7 +259,7 @@ class MarkdownToYAMLTransformer:
             assessment['platform'] = platform_override.lower()
 
         if self.scope_type == "global":
-            assessment['region_code'] = "GLOBAL"
+            assessment['region_code'] = "Global"
 
         yaml_data = self._generate_yaml_content(assessment)
         self._write_yaml_file(assessment['platform'], assessment['scope'], yaml_data)

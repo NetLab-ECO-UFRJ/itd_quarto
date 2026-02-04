@@ -5,7 +5,7 @@ Aggregates responses across all platforms for comparison views.
 import yaml
 import markdown
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional, Tuple
 from collections import OrderedDict
 from .quarto_helpers import get_answer_icon
 
@@ -41,6 +41,32 @@ def get_all_platforms(year: str = "2025") -> List[Dict[str, Any]]:
                         })
 
     return platforms
+
+
+def get_available_regions(year: str = "2025") -> List[str]:
+    """Get sorted region codes available under data/<year>/regional."""
+    regional_dir = PROJECT_ROOT / "data" / year / "regional"
+    if not regional_dir.exists():
+        return []
+    return sorted([p.name for p in regional_dir.iterdir() if p.is_dir()])
+
+
+def get_available_platforms(year: str = "2025") -> List[str]:
+    """Get sorted unique platform slugs across global and regional scopes."""
+    platforms = set()
+    global_dir = PROJECT_ROOT / "data" / year / "global"
+    if global_dir.exists():
+        for platform_dir in global_dir.iterdir():
+            if platform_dir.is_dir():
+                platforms.add(platform_dir.name)
+    regional_dir = PROJECT_ROOT / "data" / year / "regional"
+    if regional_dir.exists():
+        for region_dir in regional_dir.iterdir():
+            if region_dir.is_dir():
+                for platform_dir in region_dir.iterdir():
+                    if platform_dir.is_dir():
+                        platforms.add(platform_dir.name)
+    return sorted(platforms)
 
 
 def load_questions_ordered(year: str = "2025", question_type: str = "ugc") -> OrderedDict:
@@ -90,6 +116,45 @@ def load_platform_answers(platform_path: Path, question_type: str) -> Dict[str, 
                     }
 
     return answers_by_code
+
+
+def load_platform_answers_by_region(
+    platform: str,
+    year: str = "2025",
+    question_type: str = "ugc",
+    regions: Optional[List[str]] = None,
+    include_global: bool = True,
+) -> Dict[str, Dict[str, Any]]:
+    """Load answers for a platform across regions and optional global scope."""
+    answers_by_region: Dict[str, Dict[str, Any]] = {}
+
+    if include_global:
+        global_path = PROJECT_ROOT / "data" / year / "global" / platform
+        answers_by_region["GLOBAL"] = load_platform_answers(global_path, question_type)
+
+    regions_list = regions if regions is not None else get_available_regions(year)
+    for region in regions_list:
+        regional_path = PROJECT_ROOT / "data" / year / "regional" / region / platform
+        answers_by_region[region] = load_platform_answers(regional_path, question_type)
+
+    return answers_by_region
+
+
+def get_platform_coverage(
+    platform: str,
+    year: str = "2025",
+    question_type: str = "ugc",
+    regions: Optional[List[str]] = None,
+) -> Tuple[bool, List[str]]:
+    """Return (has_global, region_list_with_data) for the given platform and question type."""
+    has_global = (PROJECT_ROOT / "data" / year / "global" / platform / f"{question_type}.yml").exists()
+    regions_list = regions if regions is not None else get_available_regions(year)
+    regions_with_data = []
+    for region in regions_list:
+        regional_file = PROJECT_ROOT / "data" / year / "regional" / region / platform / f"{question_type}.yml"
+        if regional_file.exists():
+            regions_with_data.append(region)
+    return has_global, regions_with_data
 
 
 def aggregate_responses(year: str = "2025", question_type: str = "ugc") -> Dict[str, Any]:
@@ -241,4 +306,94 @@ def generate_responses_by_question(question_type: str = "ugc", year: str = "2025
             print('</tbody>')
             print('</table>')
             print('</div>')
+            print('```\n')
+
+
+def generate_platform_question_sections(
+    platform: str,
+    question_type: str = "ugc",
+    year: str = "2025",
+    regions: Optional[List[str]] = None,
+    include_global: bool = True,
+    heading_level: int = 3,
+):
+    """Generate per-question sections for a single platform with region rows."""
+    questions = load_questions_ordered(year, question_type)
+    has_global, regions_with_data = get_platform_coverage(
+        platform=platform,
+        year=year,
+        question_type=question_type,
+        regions=regions,
+    )
+    include_global = include_global and has_global
+    answers_by_region = load_platform_answers_by_region(
+        platform=platform,
+        year=year,
+        question_type=question_type,
+        regions=regions_with_data,
+        include_global=include_global,
+    )
+
+    display_regions = []
+    if include_global:
+        display_regions.append("GLOBAL")
+    display_regions.extend(regions_with_data)
+
+    if not display_regions:
+        print("\n**Coverage:** Not assessed\n")
+        return
+
+    if include_global and regions_with_data:
+        coverage_label = f"Global + {', '.join(regions_with_data)}"
+    elif include_global:
+        coverage_label = "Global"
+    else:
+        coverage_label = ", ".join(regions_with_data)
+    print(f"\n**Coverage:** {coverage_label}\n")
+
+    h = "#" * heading_level
+
+    for cat_data in questions.values():
+        for q in cat_data["questions"]:
+            print(f"\n{h} {q['code']}: {q['title']}\n")
+            print('```{=html}')
+            print('<table style="width:100%; table-layout:fixed; border-collapse:collapse; font-size:0.9em;">')
+            print('<colgroup>')
+            print('<col style="width:120px;">')
+            print('<col style="width:160px;">')
+            print('<col style="width:auto;">')
+            print('</colgroup>')
+            print('<thead>')
+            print('<tr style="border-bottom:2px solid #ddd;">')
+            print('<th style="text-align:left; padding:8px;">Region</th>')
+            print('<th style="text-align:left; padding:8px;">Answer</th>')
+            print('<th style="text-align:left; padding:8px;">Note</th>')
+            print('</tr>')
+            print('</thead>')
+            print('<tbody>')
+
+            for region in display_regions:
+                answer_data = answers_by_region.get(region, {}).get(q["code"], {})
+                answer_value = (answer_data.get("selected_answer") or "").strip()
+                if not answer_value:
+                    answer_label = "Not assessed"
+                elif answer_value in ["not_applicable", "not applicable"]:
+                    answer_label = "Not applicable"
+                else:
+                    answer_label = q["answers"].get(answer_value, answer_value)
+
+                notes_text = (answer_data.get("notes") or "").replace('\n', ' ').replace('\r', ' ')
+                if not notes_text or notes_text == "-":
+                    notes = "-"
+                else:
+                    notes = markdown.markdown(notes_text, extensions=['extra'])
+
+                print('<tr style="border-bottom:1px solid #eee;">')
+                print(f'<td style="padding:8px; vertical-align:top;"><strong>{region}</strong></td>')
+                print(f'<td style="padding:8px; vertical-align:top;">{answer_label}</td>')
+                print(f'<td style="padding:8px; vertical-align:top; word-wrap:break-word; overflow-wrap:break-word;">{notes}</td>')
+                print('</tr>')
+
+            print('</tbody>')
+            print('</table>')
             print('```\n')
