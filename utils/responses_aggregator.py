@@ -383,6 +383,10 @@ def generate_platform_question_sections(
                 else:
                     answer_label = q["answers"].get(answer_value, answer_value)
 
+                answer_icon = get_answer_icon(answer_label)
+                if answer_icon:
+                    answer_icon += " "
+
                 notes_text = (answer_data.get("notes") or "").replace('\n', ' ').replace('\r', ' ')
                 if not notes_text or notes_text == "-":
                     notes = "-"
@@ -391,7 +395,7 @@ def generate_platform_question_sections(
 
                 print('<tr style="border-bottom:1px solid #eee;">')
                 print(f'<td style="padding:8px; vertical-align:top;"><strong>{region_label}</strong></td>')
-                print(f'<td style="padding:8px; vertical-align:top;">{answer_label}</td>')
+                print(f'<td style="padding:8px; vertical-align:top;">{answer_icon}{answer_label}</td>')
                 print(f'<td style="padding:8px; vertical-align:top; word-wrap:break-word; overflow-wrap:break-word;">{notes}</td>')
                 print('</tr>')
 
