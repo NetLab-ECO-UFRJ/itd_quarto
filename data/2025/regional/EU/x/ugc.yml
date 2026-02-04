@@ -34,7 +34,7 @@ accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
   notes: X/Twitter does not provide any form of access to or extraction of non-public
-    user-generated content data in Brazil.
+    user-generated content data.
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: Responses to requests to the platform API provide the expected data in an
