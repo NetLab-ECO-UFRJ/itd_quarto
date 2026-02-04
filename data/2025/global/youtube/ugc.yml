@@ -29,7 +29,7 @@ accessibility_answers:
 - code: UGC_OC1
   selected_answer: 'no'
   notes: YouTube does not provide any form of access to or extraction of non-public
-    user-generated content data in Brazil. See [YouTube Research](https://research.youtube/)
+    user-generated content data. See [YouTube Research](https://research.youtube/)
     and [API documentation](https://developers.google.com/youtube/v3/docs#call-the-api)
     for more information.
 - code: UGC_OC2
