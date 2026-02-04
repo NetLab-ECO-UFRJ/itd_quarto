@@ -39,47 +39,22 @@ book:
     #     - chapters/platforms/tiktok.qmd 
     #     - chapters/platforms/youtube.qmd
   appendices: 
-    - part: "Global Assessments"
-      chapters:
-        - data/2025/global/bluesky/bluesky.qmd
-        - data/2025/global/discord/discord.qmd
-        - data/2025/global/kwai/kwai.qmd
-        - data/2025/global/pinterest/pinterest.qmd
-        - data/2025/global/reddit/reddit.qmd
-        - data/2025/global/telegram/telegram.qmd
-    - part: "Brazil Assessments"
-      chapters:
-        - data/2025/regional/BR/linkedin/linkedin.qmd
-        - data/2025/regional/BR/facebook/facebook.qmd
-        - data/2025/regional/BR/instagram/instagram.qmd
-        - data/2025/regional/BR/threads/threads.qmd
-        - data/2025/regional/BR/snapchat/snapchat.qmd
-        - data/2025/regional/BR/tiktok/tiktok.qmd
-        - data/2025/regional/BR/whatsapp/whatsapp.qmd
-        - data/2025/regional/BR/x/x.qmd
-        - data/2025/regional/BR/youtube/youtube.qmd
-    - part: "EU Assessments"
-      chapters:
-        - data/2025/regional/EU/linkedin/linkedin.qmd
-        - data/2025/regional/EU/facebook/facebook.qmd
-        - data/2025/regional/EU/instagram/instagram.qmd
-        - data/2025/regional/EU/threads/threads.qmd
-        - data/2025/regional/EU/snapchat/snapchat.qmd
-        - data/2025/regional/EU/tiktok/tiktok.qmd
-        - data/2025/regional/EU/whatsapp/whatsapp.qmd
-        - data/2025/regional/EU/x/x.qmd
-        - data/2025/regional/EU/youtube/youtube.qmd
-    - part: "UK Assessments"
-      chapters:
-        - data/2025/regional/UK/linkedin/linkedin.qmd
-        - data/2025/regional/UK/facebook/facebook.qmd
-        - data/2025/regional/UK/instagram/instagram.qmd
-        - data/2025/regional/UK/threads/threads.qmd
-        - data/2025/regional/UK/snapchat/snapchat.qmd
-        - data/2025/regional/UK/tiktok/tiktok.qmd
-        - data/2025/regional/UK/whatsapp/whatsapp.qmd
-        - data/2025/regional/UK/x/x.qmd
-        - data/2025/regional/UK/youtube/youtube.qmd
+    - chapters/appendices/bluesky.qmd
+    - chapters/appendices/discord.qmd
+    - chapters/appendices/facebook.qmd
+    - chapters/appendices/instagram.qmd
+    - chapters/appendices/kwai.qmd
+    - chapters/appendices/linkedin.qmd
+    - chapters/appendices/meta.qmd
+    - chapters/appendices/pinterest.qmd
+    - chapters/appendices/reddit.qmd
+    - chapters/appendices/snapchat.qmd
+    - chapters/appendices/telegram.qmd
+    - chapters/appendices/threads.qmd
+    - chapters/appendices/tiktok.qmd
+    - chapters/appendices/whatsapp.qmd
+    - chapters/appendices/x.qmd
+    - chapters/appendices/youtube.qmd
   # page-footer:
   #   center: "--- "
 
