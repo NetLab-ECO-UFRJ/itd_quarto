@@ -10,7 +10,6 @@ Provides functions to simplify Python code blocks in QMD files by:
 import sys
 from pathlib import Path
 from typing import Dict, Any, Tuple
-import markdown
 from .scoring import calculate_platform_score
 
 
@@ -107,54 +106,6 @@ def format_score(results: Dict[str, Any]) -> str:
         max_score = results['total_max']
         percentage = results['total_percentage']
         return f"{score:.0f} / {max_score:.0f} ({percentage:.0f}%)"
-
-
-def generate_summary_table(results: Dict[str, Any]):
-    """
-    Generate separate summary tables for each category showing questions with answers and notes.
-
-    Args:
-        results: Results dictionary from calculate_platform_score
-    """
-    for category_name, category_data in results['categories'].items():
-        print(f"\n### {category_data['label']}\n")
-        print('```{=html}')
-        print('<table style="width: 100% !important; max-width: 100% !important; table-layout: fixed; border-collapse: collapse; font-size: 0.9em;">')
-        print('<colgroup>')
-        print('<col style="width: 45% !important;">')
-        print('<col style="width: 15% !important;">')
-        print('<col style="width: 40% !important;">')
-        print('</colgroup>')
-        print('<thead>')
-        print('<tr style="border-bottom: 2px solid #ddd;">')
-        print('<th style="text-align: left; padding: 8px; width: 45% !important;">Question</th>')
-        print('<th style="text-align: left; padding: 8px; width: 15% !important;">Answer</th>')
-        print('<th style="text-align: left; padding: 8px; width: 40% !important;">Notes</th>')
-        print('</tr>')
-        print('</thead>')
-        print('<tbody>')
-
-        for item in category_data['details']:
-            code = item['question_code']
-            topic = f"<strong style='font-family: monospace; font-size: 0.9em;'>{code}:</strong> {item['question_text']}"
-            answer = item['selected_label']
-            notes_text = (item.get('notes') or '').replace('\n', ' ').replace('\r', ' ')
-            notes = markdown.markdown(notes_text, extensions=['extra'])
-
-            answer_icon = get_answer_icon(answer)
-            if answer_icon:
-                answer_icon += " "
-
-
-            print('<tr style="border-bottom: 1px solid #eee;">')
-            print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; width: 45% !important;">{topic}</td>')
-            print(f'<td style="padding: 8px; vertical-align: top; width: 15% !important;">{answer_icon}{answer}</td>')
-            print(f'<td style="padding: 8px; vertical-align: top; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word; max-width: 0; width: 40% !important;">{notes}</td>')
-            print('</tr>')
-
-        print('</tbody>')
-        print('</table>')
-        print('```\n')
 
 
 def generate_category_scores(results: Dict[str, Any], heading_level: int = 3):

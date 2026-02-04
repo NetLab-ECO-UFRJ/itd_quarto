@@ -30,8 +30,6 @@ class ExcelToYAMLTransformer:
             raise ValueError("For regional scope, region_code must be provided")
 
         self.questions_dir = base_dir / "data" / "2025"
-        self.template_dir = base_dir / "templates"
-
         self.questions_ads = self._load_questions("questions_ads_2025.yml")
         self.questions_ugc = self._load_questions("questions_ugc_2025.yml")
 
@@ -279,43 +277,6 @@ class ExcelToYAMLTransformer:
 
         print(f"✓ Created: {output_file}")
 
-    def _create_qmd_from_template(self, platform: str) -> bool:
-        """
-        Create QMD file from template if both ads.yml and ugc.yml exist.
-        Returns True if QMD was created, False otherwise.
-        """
-        platform_dir = self.output_dir / platform
-        ads_file = platform_dir / "ads.yml"
-        ugc_file = platform_dir / "ugc.yml"
-
-        if not ads_file.exists() or not ugc_file.exists():
-            return False
-
-        template_file = self.template_dir / "platform_template.qmd"
-        if not template_file.exists():
-            print(f"⚠ Warning: Template file not found: {template_file}")
-            return False
-
-        with open(template_file, 'r', encoding='utf-8') as f:
-            template_content = f.read()
-
-        platform_title = platform.capitalize()
-
-        if self.scope_type == "regional":
-            platform_path = f"data/2025/regional/{self.region_code}/{platform}"
-        else:
-            platform_path = f"data/2025/global/{platform}"
-
-        qmd_content = template_content.replace("data/2025/global/{PLATFORM_NAME}", platform_path)
-        qmd_content = qmd_content.replace("{PLATFORM_TITLE}", platform_title)
-
-        output_file = platform_dir / f"{platform}.qmd"
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(qmd_content)
-
-        print(f"✓ Created QMD: {output_file}")
-        return True
-
     def transform_all(self, platform_filter: str, ads_file: str = None, ugc_file: str = None):
         """Process all Excel files and generate YAML outputs."""
         print("Starting transformation...\n")
@@ -350,21 +311,6 @@ class ExcelToYAMLTransformer:
 
             filtered_count = len([a for a in assessments if a['platform'] == platform_filter.lower()])
             print(f"  Processed {filtered_count} {scope.upper()} assessment(s) for {platform_filter}\n")
-
-        print("\nGenerating QMD files from template...")
-        qmd_created = []
-        qmd_skipped = []
-
-        for platform in sorted(platforms_processed):
-            if self._create_qmd_from_template(platform):
-                qmd_created.append(platform)
-            else:
-                qmd_skipped.append(platform)
-                print(f"  Skipped {platform}: missing ads.yml or ugc.yml")
-
-        print(f"\n✓ Created {len(qmd_created)} QMD files")
-        if qmd_skipped:
-            print(f"  Skipped {len(qmd_skipped)} platforms (incomplete data)")
 
         print("\nTransformation complete!")
 
