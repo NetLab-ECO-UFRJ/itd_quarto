@@ -4,7 +4,10 @@ subtitle: "Platform Appendix"
 platform_slug: "whatsapp"
 ugc_answers_files:
   - data/2025/global/whatsapp/ugc.yml
-ads_answers_files: []
+ads_answers_files:
+  - data/2025/regional/BR/whatsapp/ads.yml
+  - data/2025/regional/EU/whatsapp/ads.yml
+  - data/2025/regional/UK/whatsapp/ads.yml
 ---
 
 ```{python}
