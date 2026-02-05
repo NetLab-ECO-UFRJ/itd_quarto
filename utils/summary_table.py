@@ -10,8 +10,6 @@ from typing import Dict, List, Tuple, Optional, Union
 import yaml
 from .scoring import calculate_platform_score
 
-GLOBAL_PLATFORMS = ['Bluesky', 'Discord', 'Kwai', 'Pinterest', 'Reddit', 'Telegram']
-
 REGION_CODE_MAP = {
     'GLOBAL': ['BR', 'EU', 'UK'],
     'BRAZIL': ['BR'],
@@ -41,7 +39,7 @@ def get_score_class(score: float) -> str:
     - Deficient (41-60): Some transparency measures, various limitations
     - Precarious (21-40): Significant barriers, monitoring unfeasible for most
     - Irrelevant (1-20): Minimal or insufficient transparency measures
-    - Absent (0): No transparency despite framework applicability
+    - Not Available (0): No transparency despite framework applicability
 
     Args:
         score: Score value (0-100)
@@ -50,7 +48,7 @@ def get_score_class(score: float) -> str:
         CSS class name for color coding
     """
     if score == 0:
-        return "score-absent"
+        return "score-not-available"
     elif score >= 81:
         return "score-ideal"
     elif score >= 61:
@@ -77,7 +75,8 @@ def normalize_platform_name(platform_name: str) -> str:
         'x': 'X',
         'tiktok': 'TikTok',
         'youtube': 'YouTube',
-        'linkedin': 'LinkedIn'
+        'linkedin': 'LinkedIn',
+        'whatsapp': 'WhatsApp'
     }
     return special_cases.get(platform_name.lower(), platform_name.title())
 
@@ -97,11 +96,11 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
         Dictionary mapping platform names to region scores:
         {'Meta': {'BR': 45.2, 'EU': 38.7, 'UK': None}, ...}
     """
-    regional_dir = project_root / 'data' / '2025' / 'regional'
-    global_dir = project_root / 'data' / '2025' / 'global'
+    appendices_dir = project_root / 'chapters' / 'appendices'
     regions = ['BR', 'EU', 'UK']
     results = {}
     answer_file_key = f'{scope}_answers_file'
+    answer_files_key = f'{scope}_answers_files'
 
     def calculate_score(assessment_file: Path) -> Optional[float]:
         """Helper to calculate score from assessment file."""
@@ -116,58 +115,72 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
             print(f"Warning: Failed to calculate score for {assessment_file}: {e}")
             return None
 
-    def process_qmd(qmd_path: Path, platform_display: str):
-        """Process a QMD file and update results based on frontmatter."""
-        frontmatter = parse_qmd_frontmatter(qmd_path)
+    def get_region_code_from_path(path_str: str) -> Optional[str]:
+        parts = Path(path_str).parts
+        if 'global' in parts:
+            return 'GLOBAL'
+        if 'regional' in parts:
+            try:
+                idx = parts.index('regional')
+                return parts[idx + 1]
+            except (ValueError, IndexError):
+                return None
+        return None
 
-        answer_file_path = frontmatter.get(answer_file_key)
-        region_code = frontmatter.get('region_code', 'GLOBAL')
-
-        if not answer_file_path:
-            return
-
-        assessment_file = project_root / answer_file_path
-        if not assessment_file.exists():
-            return
-
+    def process_answer_files(platform_display: str, answer_files: List[str]):
+        """Process answer file paths, applying global first then regional overrides."""
         if platform_display not in results:
             results[platform_display] = {region: None for region in regions}
 
-        score = calculate_score(assessment_file)
-        if score is not None:
+        def sort_key(p: str) -> int:
+            return 0 if get_region_code_from_path(p) == 'GLOBAL' else 1
+
+        for answer_file_path in sorted(answer_files, key=sort_key):
+            region_code = get_region_code_from_path(answer_file_path)
+            if not region_code:
+                continue
+
+            assessment_file = project_root / answer_file_path
+            if not assessment_file.exists():
+                continue
+
+            score = calculate_score(assessment_file)
+            if score is None:
+                continue
+
             target_regions = REGION_CODE_MAP.get(region_code, [])
             for region in target_regions:
                 results[platform_display][region] = score
 
-    # Scan global QMD files
-    if global_dir.exists():
-        for platform_dir in global_dir.iterdir():
-            if not platform_dir.is_dir():
-                continue
+    # Scan appendix QMD files
+    if appendices_dir.exists():
+        for qmd_file in sorted(appendices_dir.glob('*.qmd')):
+            frontmatter = parse_qmd_frontmatter(qmd_file)
 
-            platform_display = normalize_platform_name(platform_dir.name)
+            platform_title = frontmatter.get('title')
+            platform_display = platform_title or normalize_platform_name(qmd_file.stem)
 
             # Skip Bluesky for Ads assessments (no advertising)
             if platform_display == 'Bluesky' and scope == 'ads':
                 continue
 
-            for qmd_file in platform_dir.glob('*.qmd'):
-                process_qmd(qmd_file, platform_display)
+            answer_files = frontmatter.get(answer_files_key) or []
+            if isinstance(answer_files, str):
+                answer_files = [answer_files]
 
-    # Scan regional QMD files
-    for region in regions:
-        region_dir = regional_dir / region
-        if not region_dir.exists():
-            continue
+            answer_files = [p for p in answer_files if p]
 
-        for platform_dir in region_dir.iterdir():
-            if not platform_dir.is_dir():
+            # Backward-compatible single file key
+            single_file = frontmatter.get(answer_file_key)
+            if single_file:
+                answer_files.append(single_file)
+
+            answer_files = [p for p in answer_files if p]
+
+            if not answer_files:
                 continue
 
-            platform_display = normalize_platform_name(platform_dir.name)
-
-            for qmd_file in platform_dir.glob('*.qmd'):
-                process_qmd(qmd_file, platform_display)
+            process_answer_files(platform_display, answer_files)
 
     return results
 
@@ -214,12 +227,12 @@ def generate_summary_heatmap(scope: str) -> str:
     text-align: left;
     font-weight: 600;
 }
-.score-ideal { background-color: #ffffb2 !important; color: black !important; }
-.score-satisfactory { background-color: #fed976 !important; color: black !important; }
-.score-regular { background-color: #feb24c !important; color: black !important; }
-.score-precarious { background-color: #fd8d3c !important; color: black !important; }
-.score-irrelevant { background-color: #f03b20 !important; color: black !important; }
-.score-absent { background-color: #bd0026 !important; color: white !important; }
+.score-ideal { background-color: #308BF2 !important; color: white !important; }
+.score-satisfactory { background-color: #43B5DF !important; color: white !important; }
+.score-regular { background-color: #F3CE49 !important; color: black !important; }
+.score-precarious { background-color: #F88C4A !important; color: white !important; }
+.score-irrelevant { background-color: #F64A9B !important; color: white !important; }
+.score-not-available { background-color: #F3496B !important; color: white !important; }
 .score-missing { background-color: #e0e0e0 !important; color: #666 !important; font-style: italic; }
 </style>
 
@@ -268,5 +281,3 @@ def generate_summary_heatmap(scope: str) -> str:
 '''
 
     return html
-
-
