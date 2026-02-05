@@ -227,12 +227,12 @@ def generate_summary_heatmap(scope: str) -> str:
     text-align: left;
     font-weight: 600;
 }
-.score-ideal { background-color: #308BF2 !important; color: white !important; }
-.score-satisfactory { background-color: #43B5DF !important; color: white !important; }
-.score-regular { background-color: #F3CE49 !important; color: black !important; }
-.score-precarious { background-color: #F88C4A !important; color: white !important; }
-.score-irrelevant { background-color: #F64A9B !important; color: white !important; }
-.score-not-available { background-color: #F3496B !important; color: white !important; }
+.score-ideal { background-color: #308BF2 !important; color: #143A66 !important; font-weight: 600 !important; }
+.score-satisfactory { background-color: #43B5DF !important; color: #1F5366 !important; font-weight: 600 !important; }
+.score-regular { background-color: #F3CE49 !important; color: #66571F !important; font-weight: 600 !important; }
+.score-precarious { background-color: #F88C4A !important; color: #663A1F !important; font-weight: 600 !important; }
+.score-irrelevant { background-color: #F64A9B !important; color: #661F40 !important; font-weight: 600 !important; }
+.score-not-available { background-color: #F3496B !important; color: #661F2D !important; font-weight: 600 !important; }
 .score-missing { background-color: #e0e0e0 !important; color: #666 !important; font-style: italic; }
 </style>
 
