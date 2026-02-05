@@ -209,15 +209,16 @@ def generate_summary_heatmap(scope: str) -> str:
 <style>
 .heatmap-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 2px;
     margin: 20px 0;
     font-family: system-ui, -apple-system, sans-serif;
 }
 .heatmap-table th, .heatmap-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
+    padding: 10px 12px;
     text-align: center;
     font-weight: 500;
+    border-radius: 3px;
 }
 .heatmap-table th {
     background-color: #f8f9fa;
@@ -226,6 +227,7 @@ def generate_summary_heatmap(scope: str) -> str:
 .heatmap-table td.platform-name {
     text-align: left;
     font-weight: 600;
+    background-color: #f8f9fa;
 }
 .score-ideal { background-color: #308BF2 !important; color: #143A66 !important; font-weight: 600 !important; }
 .score-satisfactory { background-color: #43B5DF !important; color: #1F5366 !important; font-weight: 600 !important; }
