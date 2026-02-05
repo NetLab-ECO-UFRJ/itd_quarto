@@ -2,10 +2,15 @@
 title: "Reddit"
 subtitle: "Platform Appendix"
 platform_slug: "reddit"
-ugc_answers_files:
-  - data/2025/global/reddit/ugc.yml
-ads_answers_files:
-  - data/2025/global/reddit/ads.yml
+sources:
+  ugc:
+    BR: data/2025/global/reddit/ugc.yml
+    EU: data/2025/global/reddit/ugc.yml
+    UK: data/2025/global/reddit/ugc.yml
+  ads:
+    BR: data/2025/global/reddit/ads.yml
+    EU: data/2025/global/reddit/ads.yml
+    UK: data/2025/global/reddit/ads.yml
 ---
 
 ```{python}

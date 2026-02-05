@@ -7,7 +7,7 @@ import markdown
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Tuple
 from collections import OrderedDict
-from .quarto_helpers import get_answer_icon
+from .quarto_helpers import get_answer_icon, get_platform_sources
 
 PROJECT_ROOT = Path(__file__).parent.parent
 
@@ -115,6 +115,25 @@ def load_platform_answers(platform_path: Path, question_type: str) -> Dict[str, 
                         "notes": answer.get("notes") or ""
                     }
 
+    return answers_by_code
+
+
+def load_platform_answers_from_file(filepath: Path) -> Dict[str, Any]:
+    """Load answers from a full YAML file path."""
+    if not filepath.exists():
+        return {}
+    with open(filepath, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+    answers_by_code = {}
+    for key, value in data.items():
+        if key.endswith("_answers") and isinstance(value, list):
+            for answer in value:
+                code = answer.get("code")
+                if code:
+                    answers_by_code[code] = {
+                        "selected_answer": answer.get("selected_answer", ""),
+                        "notes": answer.get("notes") or ""
+                    }
     return answers_by_code
 
 
@@ -313,42 +332,26 @@ def generate_platform_question_sections(
     platform: str,
     question_type: str = "ugc",
     year: str = "2025",
-    regions: Optional[List[str]] = None,
-    include_global: bool = True,
     heading_level: int = 3,
 ):
-    """Generate per-question sections for a single platform with region rows."""
+    """Generate per-question sections for a single platform with region rows.
+
+    Reads the `sources` frontmatter from the platform's appendix QMD to
+    determine which YAML file to load for each region.
+    """
     questions = load_questions_ordered(year, question_type)
-    has_global, regions_with_data = get_platform_coverage(
-        platform=platform,
-        year=year,
-        question_type=question_type,
-        regions=regions,
-    )
-    include_global = include_global and has_global
-    answers_by_region = load_platform_answers_by_region(
-        platform=platform,
-        year=year,
-        question_type=question_type,
-        regions=regions_with_data,
-        include_global=include_global,
-    )
 
-    display_regions = []
-    if include_global:
-        display_regions.append("GLOBAL")
-    display_regions.extend(regions_with_data)
-
-    if not display_regions:
+    sources = get_platform_sources(platform, question_type, PROJECT_ROOT)
+    if not sources:
         print("\n**Coverage:** Not assessed\n")
         return
 
-    if include_global and regions_with_data:
-        coverage_label = f"Global + {', '.join(regions_with_data)}"
-    elif include_global:
-        coverage_label = "Global"
-    else:
-        coverage_label = ", ".join(regions_with_data)
+    answers_by_region: Dict[str, Dict[str, Any]] = {}
+    for region, filepath in sources.items():
+        answers_by_region[region] = load_platform_answers_from_file(PROJECT_ROOT / filepath)
+
+    display_regions = list(sources.keys())
+    coverage_label = ", ".join(display_regions)
     print(f"\n**Coverage:** {coverage_label}\n")
 
     h = "#" * heading_level
@@ -373,7 +376,6 @@ def generate_platform_question_sections(
             print('<tbody>')
 
             for region in display_regions:
-                region_label = "Global" if region == "GLOBAL" else region
                 answer_data = answers_by_region.get(region, {}).get(q["code"], {})
                 answer_value = (answer_data.get("selected_answer") or "").strip()
                 if not answer_value:
@@ -394,7 +396,7 @@ def generate_platform_question_sections(
                     notes = markdown.markdown(notes_text, extensions=['extra'])
 
                 print('<tr style="border-bottom:1px solid #eee;">')
-                print(f'<td style="padding:8px; vertical-align:top; width:120px;"><strong>{region_label}</strong></td>')
+                print(f'<td style="padding:8px; vertical-align:top; width:120px;"><strong>{region}</strong></td>')
                 print(f'<td style="padding:8px; vertical-align:top; width:160px;">{answer_icon}{answer_label}</td>')
                 print(f'<td style="padding:8px; vertical-align:top; word-wrap:break-word; overflow-wrap:break-word;">{notes}</td>')
                 print('</tr>')

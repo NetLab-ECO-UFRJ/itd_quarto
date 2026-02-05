@@ -2,14 +2,15 @@
 title: "TikTok"
 subtitle: "Platform Appendix"
 platform_slug: "tiktok"
-ugc_answers_files:
-  - data/2025/regional/BR/tiktok/ugc.yml
-  - data/2025/regional/EU/tiktok/ugc.yml
-  - data/2025/regional/UK/tiktok/ugc.yml
-ads_answers_files:
-  - data/2025/regional/BR/tiktok/ads.yml
-  - data/2025/regional/EU/tiktok/ads.yml
-  - data/2025/regional/UK/tiktok/ads.yml
+sources:
+  ugc:
+    BR: data/2025/regional/BR/tiktok/ugc.yml
+    EU: data/2025/regional/EU/tiktok/ugc.yml
+    UK: data/2025/regional/UK/tiktok/ugc.yml
+  ads:
+    BR: data/2025/regional/BR/tiktok/ads.yml
+    EU: data/2025/regional/EU/tiktok/ads.yml
+    UK: data/2025/regional/UK/tiktok/ads.yml
 ---
 
 ```{python}

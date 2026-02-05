@@ -2,14 +2,15 @@
 title: "X/Twitter"
 subtitle: "Platform Appendix"
 platform_slug: "x"
-ugc_answers_files:
-  - data/2025/regional/BR/x/ugc.yml
-  - data/2025/regional/EU/x/ugc.yml
-  - data/2025/regional/UK/x/ugc.yml
-ads_answers_files:
-  - data/2025/regional/BR/x/ads.yml
-  - data/2025/regional/EU/x/ads.yml
-  - data/2025/regional/UK/x/ads.yml
+sources:
+  ugc:
+    BR: data/2025/regional/BR/x/ugc.yml
+    EU: data/2025/regional/EU/x/ugc.yml
+    UK: data/2025/regional/UK/x/ugc.yml
+  ads:
+    BR: data/2025/regional/BR/x/ads.yml
+    EU: data/2025/regional/EU/x/ads.yml
+    UK: data/2025/regional/UK/x/ads.yml
 ---
 
 ```{python}

@@ -2,12 +2,15 @@
 title: "Meta"
 subtitle: "Platform Appendix"
 platform_slug: "meta"
-ugc_answers_files:
-  - data/2025/global/meta/ugc.yml
-ads_answers_files:
-  - data/2025/regional/BR/meta/ads.yml
-  - data/2025/regional/EU/meta/ads.yml
-  - data/2025/regional/UK/meta/ads.yml
+sources:
+  ugc:
+    BR: data/2025/global/meta/ugc.yml
+    EU: data/2025/global/meta/ugc.yml
+    UK: data/2025/global/meta/ugc.yml
+  ads:
+    BR: data/2025/regional/BR/meta/ads.yml
+    EU: data/2025/regional/EU/meta/ads.yml
+    UK: data/2025/regional/UK/meta/ads.yml
 ---
 
 ```{python}
