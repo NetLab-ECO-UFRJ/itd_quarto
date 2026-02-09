@@ -1,19 +1,41 @@
 """
 Scoring utilities for Social Media Evaluation project.
 
-Implements the methodology scoring system:
-- UGC: 75% special criteria (4 items: 0.30, 0.30, 0.30, 0.10) + 25% other criteria (26 items)
-- Ads: 75% special criteria (3 items: 0.50, 0.30, 0.20) + 25% other criteria (33 items)
 """
 
 from typing import Dict, List, Any, Tuple
 from .loader import load_questions, load_answers, load_categories, get_answer_weight, get_answer_label
 
 
-UGC_SPECIAL_WEIGHTS = [0.30, 0.30, 0.30, 0.10]
-UGC_OTHER_COUNT = 26
-ADS_SPECIAL_WEIGHTS = [0.50, 0.30, 0.20]
-ADS_OTHER_COUNT = 33
+def get_question_family_prefix(question_type: str) -> str:
+    """Return the code family prefix used in master question codes."""
+    code_prefix_map = {
+        'ugc': 'UGC',
+        'ads': 'AD'
+    }
+    family_prefix = code_prefix_map.get(question_type)
+    if not family_prefix:
+        raise ValueError(f"Invalid question_type: {question_type}")
+
+    return family_prefix
+
+
+def get_expected_special_codes(questions_dict: Dict[str, Any], question_type: str) -> set:
+    """Get expected special-criteria question codes from loaded master questions."""
+    family_prefix = get_question_family_prefix(question_type)
+    special_prefix = f"{family_prefix}_SC"
+    return {q.get('code', '') for q in questions_dict.values() if q.get('code', '').startswith(special_prefix)}
+
+
+def get_expected_other_count(questions_dict: Dict[str, Any], question_type: str) -> int:
+    """
+    Count "other criteria" questions from the loaded master question set.
+
+    Other criteria are identified by OC question codes (e.g., UGC_OC2, AD_OC18).
+    """
+    family_prefix = get_question_family_prefix(question_type)
+    prefix = f"{family_prefix}_OC"
+    return sum(1 for q in questions_dict.values() if q.get('code', '').startswith(prefix))
 
 
 def calculate_question_score(question: Dict[str, Any], selected_value: str) -> float:
@@ -115,33 +137,41 @@ def calculate_methodology_score(
     """
     special_answers = answers_data.get('special-criteria_answers', [])
 
-    if question_type == 'ugc':
-        weights = UGC_SPECIAL_WEIGHTS
-        other_count = UGC_OTHER_COUNT
-    elif question_type == 'ads':
-        weights = ADS_SPECIAL_WEIGHTS
-        other_count = ADS_OTHER_COUNT
-    else:
-        raise ValueError(f"Invalid question_type for methodology scoring: {question_type}")
+    get_question_family_prefix(question_type)  # Validate input early
 
-    if len(special_answers) != len(weights):
+    other_count = get_expected_other_count(questions_dict, question_type)
+    expected_special_codes = get_expected_special_codes(questions_dict, question_type)
+
+    if len(special_answers) != len(expected_special_codes):
         raise ValueError(
-            f"Expected {len(weights)} special criteria for {question_type.upper()}, "
+            f"Expected {len(expected_special_codes)} special criteria for {question_type.upper()}, "
             f"but got {len(special_answers)}"
         )
 
     special_weighted_sum = 0.0
-    for i, answer_item in enumerate(special_answers):
+    seen_special_codes = set()
+    for answer_item in special_answers:
         question_code = answer_item['code']
         selected_value = answer_item['selected_answer']
 
         if question_code not in questions_dict:
             raise ValueError(f"Question code '{question_code}' not found")
+        if question_code not in expected_special_codes:
+            raise ValueError(
+                f"Question code '{question_code}' is not a special criterion for {question_type.upper()}"
+            )
 
         question = questions_dict[question_code]
         answer_weight = get_answer_weight(question, selected_value)
 
-        special_weighted_sum += weights[i] * answer_weight
+        special_weighted_sum += question['weight'] * answer_weight
+        seen_special_codes.add(question_code)
+
+    if seen_special_codes != expected_special_codes:
+        missing_codes = sorted(expected_special_codes - seen_special_codes)
+        raise ValueError(
+            f"Missing special criteria answers for {question_type.upper()}: {', '.join(missing_codes)}"
+        )
 
     special_score = 75 * special_weighted_sum
 
