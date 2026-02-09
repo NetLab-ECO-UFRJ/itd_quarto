@@ -16,9 +16,6 @@ special-criteria_answers:
   selected_answer: 'yes'
   notes: In addition to the `Meta Content Library API`, the company also provides the [`Meta Content Library User Interface`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), which enables approved researchers to visualize and extract structured data on user-generated content across Meta platforms.
 accessibility_answers:
-- code: UGC_OC1
-  selected_answer: 'no'
-  notes: '-'
 - code: UGC_OC2
   selected_answer: 'no'
   notes: '-'

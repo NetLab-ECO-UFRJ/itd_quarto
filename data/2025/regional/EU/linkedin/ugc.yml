@@ -17,9 +17,6 @@ special-criteria_answers:
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for extracting structured data on public user-generated content data.
 accessibility_answers:
-- code: UGC_OC1
-  selected_answer: 'no'
-  notes: The [LinkedIn Researcher Access Program](https://www.linkedin.com/help/linkedin/answer/a1645616) does not provide access to any non-public user-generated content.
 - code: UGC_OC2
   selected_answer: 'no'
   notes: Verification was not possible because API access was unavailable at the time of assessment, due to a pending request and the absence of any response from the platform.

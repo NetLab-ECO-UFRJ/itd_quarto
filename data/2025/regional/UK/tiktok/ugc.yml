@@ -20,10 +20,6 @@ special-criteria_answers:
   selected_answer: 'no'
   notes: ''
 accessibility_answers:
-- code: UGC_OC1
-  selected_answer: 'no'
-  notes: TikTok does not provide any access to non-public data through its [research
-    API](https://developers.tiktok.com/doc/about-research-api?).
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: ''

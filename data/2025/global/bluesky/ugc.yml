@@ -16,9 +16,6 @@ special-criteria_answers:
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for accessing or extracting public user-generated content data.
 accessibility_answers:
-- code: UGC_OC1
-  selected_answer: not_applicable
-  notes: This question is not applicable for Bluesky because there are no private accounts, posts or groups. One-on-one messages can be retrieved using the [`AT Protocol DM API`](https://atproto.blue/en/latest/dm.html).
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: Responses to requests to the platform API provide the expected data in an appropriate format, without requiring redirection.

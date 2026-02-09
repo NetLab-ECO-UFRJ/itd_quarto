@@ -65,21 +65,6 @@ special_criteria:
     label: 'Yes'
     weight: 1.0
 accessibility:
-- code: UGC_OC1
-  title: Does the platform offer any type of access to non-public data (e.g., private
-    groups, not direct messages) to approved researchers?
-  description: Verifies whether, beyond public data, the API permits extraction of
-    non-public content (such as posts and comments in private groups or forums) for
-    approved researchers, using controlled access mechanisms and adequate data protection
-    measures.
-  weight: 1.0
-  answers:
-  - value: 'no'
-    label: 'No'
-    weight: 0.0
-  - value: 'yes'
-    label: 'Yes'
-    weight: 1.0
 - code: UGC_OC2
   title: Can the requested data be extracted directly from the platform’s API response?
   description: Verifies whether the API returns structured data directly in its response

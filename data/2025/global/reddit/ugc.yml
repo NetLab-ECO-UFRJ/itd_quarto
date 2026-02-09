@@ -16,10 +16,6 @@ special-criteria_answers:
   selected_answer: 'no'
   notes: The platform does not provide a graphical interface for accessing or extracting public user-generated content data.
 accessibility_answers:
-- code: UGC_OC1
-  selected_answer: 'no'
-  notes: In 2024, Reddit announced a [Researchers Beta Program](https://www.reddit.com/r/reddit4researchers/comments/1ffd56x/reddit_for_researchers_beta_program_were_live/). However, the initiative has remained inactive [for several months](https://www.reddit.com/r/reddit4researchers/comments/1g5znj3/the_reddit_for_researchers_beta_program_is_growing/), and we found no evidence that it grants [access
-    to non-public data](https://www.reddit.com/r/reddit4researchers/comments/1co0mqa/our_plans_for_researchers_on_reddit/).
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: The API returns data directly in JSON format within the API response payload

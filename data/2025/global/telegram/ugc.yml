@@ -26,10 +26,6 @@ special-criteria_answers:
   notes: The platform does not provide a graphical interface for accessing or extracting
     public user-generated content data.
 accessibility_answers:
-- code: UGC_OC1
-  selected_answer: 'no'
-  notes: Telegram does not provide any form of access to or extraction of non-public
-    user-generated content data.
 - code: UGC_OC2
   selected_answer: 'yes'
   notes: Responses to requests to the platform API provide the expected data in an

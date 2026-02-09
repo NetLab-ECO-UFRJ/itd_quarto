@@ -16,9 +16,6 @@ special-criteria_answers:
   selected_answer: 'no'
   notes: ''
 accessibility_answers:
-- code: UGC_OC1
-  selected_answer: 'no'
-  notes: ''
 - code: UGC_OC2
   selected_answer: 'no'
   notes: ''
