@@ -56,13 +56,13 @@ Not available
 from utils.summary_table import generate_summary_heatmap
 from IPython.display import HTML, display
 
-display(HTML(generate_summary_heatmap('ugc', include_average_row=False, show_values=False)))
+display(HTML(generate_summary_heatmap('ugc', include_average_row=True, show_values=True)))
 ```
 
 ## Ads Assessments
 
 ```{python}
-display(HTML(generate_summary_heatmap('ads', include_average_row=False, show_values=False)))
+display(HTML(generate_summary_heatmap('ads', include_average_row=True, show_values=True)))
 ```
 
 ::: {.callout-note}
