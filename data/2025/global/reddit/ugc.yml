@@ -101,4 +101,4 @@ relevance_answers:
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'yes'
-  notes: The platform's API provides near real-time access to newly published content. The [`/new` endpoint](https://www.reddit.com/dev/api/#GET_new) returns posts sorted chronologically by their creation time, and newly published items become available through the API shortly after they appear on the platform.
+  notes: The platform’s API provides near real-time access to newly published content. The [`/new` endpoint](https://www.reddit.com/dev/api/#GET_new) returns posts sorted chronologically by their creation time, and newly published items become available through the API shortly after they appear on the platform.
