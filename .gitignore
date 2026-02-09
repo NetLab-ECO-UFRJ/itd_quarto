@@ -8,6 +8,8 @@ _output/
 *_cache/
 *_files/
 _freeze/
+/*.html
+chapters/**/*.html
 
 # Python
 __pycache__/
