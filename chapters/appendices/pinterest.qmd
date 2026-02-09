@@ -10,7 +10,7 @@ sources:
   ads:
     BR: data/2025/global/pinterest/ads.yml
     EU: data/2025/global/pinterest/ads.yml
-    UK: data/2025/global/pinterest/ads.yml
+    UK: data/2025/regional/UK/pinterest/ads.yml
 ---
 
 ```{python}
