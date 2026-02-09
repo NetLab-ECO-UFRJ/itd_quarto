@@ -2,10 +2,15 @@
 title: "Kwai"
 subtitle: "Platform Appendix"
 platform_slug: "kwai"
-ugc_answers_files:
-  - data/2025/global/kwai/ugc.yml
-ads_answers_files:
-  - data/2025/global/kwai/ads.yml
+sources:
+  ugc:
+    BR: data/2025/global/kwai/ugc.yml
+    EU: data/2025/global/kwai/ugc.yml
+    UK: data/2025/global/kwai/ugc.yml
+  ads:
+    BR: data/2025/global/kwai/ads.yml
+    EU: data/2025/global/kwai/ads.yml
+    UK: data/2025/global/kwai/ads.yml
 ---
 
 ```{python}

@@ -9,24 +9,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Union
 import yaml
 from .scoring import calculate_platform_score
-
-REGION_CODE_MAP = {
-    'GLOBAL': ['BR', 'EU', 'UK'],
-    'BRAZIL': ['BR'],
-    'EU': ['EU'],
-    'UK': ['UK'],
-    'BR': ['BR'],
-}
-
-
-def parse_qmd_frontmatter(qmd_path: Path) -> dict:
-    """Extract YAML frontmatter from QMD file."""
-    content = qmd_path.read_text()
-    if content.startswith('---'):
-        end = content.find('---', 3)
-        if end != -1:
-            return yaml.safe_load(content[3:end]) or {}
-    return {}
+from .quarto_helpers import parse_qmd_frontmatter
 
 
 def get_score_class(score: float) -> str:
@@ -83,10 +66,10 @@ def normalize_platform_name(platform_name: str) -> str:
 
 def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Optional[Union[float, str]]]]:
     """
-    Scan QMD files and calculate scores based on frontmatter answer file paths.
+    Scan QMD files and calculate scores based on `sources` frontmatter.
 
-    Reads ugc_answers_file/ads_answers_file and region_code from QMD frontmatter
-    to determine which answer files to use for each platform/region combination.
+    Reads sources.<scope> dict from each appendix QMD to get
+    {region: filepath} mappings, then calculates scores.
 
     Args:
         project_root: Project root directory
@@ -97,90 +80,47 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
         {'Meta': {'BR': 45.2, 'EU': 38.7, 'UK': None}, ...}
     """
     appendices_dir = project_root / 'chapters' / 'appendices'
-    regions = ['BR', 'EU', 'UK']
+    all_regions = ['BR', 'EU', 'UK']
     results = {}
-    answer_file_key = f'{scope}_answers_file'
-    answer_files_key = f'{scope}_answers_files'
 
-    def calculate_score(assessment_file: Path) -> Optional[float]:
-        """Helper to calculate score from assessment file."""
+    if not appendices_dir.exists():
+        return results
+
+    score_cache: Dict[str, Optional[float]] = {}
+
+    def calculate_score(filepath: str) -> Optional[float]:
+        if filepath in score_cache:
+            return score_cache[filepath]
+        assessment_file = project_root / filepath
+        if not assessment_file.exists():
+            score_cache[filepath] = None
+            return None
         try:
             result = calculate_platform_score(
                 year='2025',
                 question_type=scope,
-                answers_file=str(assessment_file.relative_to(project_root))
+                answers_file=filepath
             )
-            return round(result.get('total_score', 0.0), 1)
+            val = round(result.get('total_score', 0.0), 1)
         except Exception as e:
-            print(f"Warning: Failed to calculate score for {assessment_file}: {e}")
-            return None
+            print(f"Warning: Failed to calculate score for {filepath}: {e}")
+            val = None
+        score_cache[filepath] = val
+        return val
 
-    def get_region_code_from_path(path_str: str) -> Optional[str]:
-        parts = Path(path_str).parts
-        if 'global' in parts:
-            return 'GLOBAL'
-        if 'regional' in parts:
-            try:
-                idx = parts.index('regional')
-                return parts[idx + 1]
-            except (ValueError, IndexError):
-                return None
-        return None
+    for qmd_file in sorted(appendices_dir.glob('*.qmd')):
+        frontmatter = parse_qmd_frontmatter(qmd_file)
+        platform_display = frontmatter.get('title') or normalize_platform_name(qmd_file.stem)
 
-    def process_answer_files(platform_display: str, answer_files: List[str]):
-        """Process answer file paths, applying global first then regional overrides."""
-        if platform_display not in results:
-            results[platform_display] = {region: None for region in regions}
+        sources = frontmatter.get('sources', {})
+        mapping = sources.get(scope, {})
+        if not mapping:
+            continue
 
-        def sort_key(p: str) -> int:
-            return 0 if get_region_code_from_path(p) == 'GLOBAL' else 1
-
-        for answer_file_path in sorted(answer_files, key=sort_key):
-            region_code = get_region_code_from_path(answer_file_path)
-            if not region_code:
-                continue
-
-            assessment_file = project_root / answer_file_path
-            if not assessment_file.exists():
-                continue
-
-            score = calculate_score(assessment_file)
-            if score is None:
-                continue
-
-            target_regions = REGION_CODE_MAP.get(region_code, [])
-            for region in target_regions:
-                results[platform_display][region] = score
-
-    # Scan appendix QMD files
-    if appendices_dir.exists():
-        for qmd_file in sorted(appendices_dir.glob('*.qmd')):
-            frontmatter = parse_qmd_frontmatter(qmd_file)
-
-            platform_title = frontmatter.get('title')
-            platform_display = platform_title or normalize_platform_name(qmd_file.stem)
-
-            # Skip Bluesky for Ads assessments (no advertising)
-            if platform_display == 'Bluesky' and scope == 'ads':
-                continue
-
-            answer_files = frontmatter.get(answer_files_key) or []
-            if isinstance(answer_files, str):
-                answer_files = [answer_files]
-
-            answer_files = [p for p in answer_files if p]
-
-            # Backward-compatible single file key
-            single_file = frontmatter.get(answer_file_key)
-            if single_file:
-                answer_files.append(single_file)
-
-            answer_files = [p for p in answer_files if p]
-
-            if not answer_files:
-                continue
-
-            process_answer_files(platform_display, answer_files)
+        results[platform_display] = {r: None for r in all_regions}
+        for region, filepath in mapping.items():
+            if region in all_regions:
+                results[platform_display][region] = calculate_score(filepath)
 
     return results
 

@@ -2,11 +2,15 @@
 title: "Snapchat"
 subtitle: "Platform Appendix"
 platform_slug: "snapchat"
-ugc_answers_files:
-  - data/2025/global/snapchat/ugc.yml
-ads_answers_files:
-  - data/2025/global/snapchat/ads.yml
-  - data/2025/regional/EU/snapchat/ads.yml
+sources:
+  ugc:
+    BR: data/2025/global/snapchat/ugc.yml
+    EU: data/2025/global/snapchat/ugc.yml
+    UK: data/2025/global/snapchat/ugc.yml
+  ads:
+    BR: data/2025/global/snapchat/ads.yml
+    EU: data/2025/regional/EU/snapchat/ads.yml
+    UK: data/2025/global/snapchat/ads.yml
 ---
 
 ```{python}

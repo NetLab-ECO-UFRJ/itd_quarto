@@ -2,10 +2,15 @@
 title: "Discord"
 subtitle: "Platform Appendix"
 platform_slug: "discord"
-ugc_answers_files:
-  - data/2025/global/discord/ugc.yml
-ads_answers_files:
-  - data/2025/global/discord/ads.yml
+sources:
+  ugc:
+    BR: data/2025/global/discord/ugc.yml
+    EU: data/2025/global/discord/ugc.yml
+    UK: data/2025/global/discord/ugc.yml
+  ads:
+    BR: data/2025/global/discord/ads.yml
+    EU: data/2025/global/discord/ads.yml
+    UK: data/2025/global/discord/ads.yml
 ---
 
 ```{python}

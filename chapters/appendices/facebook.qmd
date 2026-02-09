@@ -2,12 +2,15 @@
 title: "Facebook"
 subtitle: "Platform Appendix"
 platform_slug: "facebook"
-ugc_answers_files:
-  - data/2025/global/facebook/ugc.yml
-ads_answers_files:
-  - data/2025/regional/BR/facebook/ads.yml
-  - data/2025/regional/EU/facebook/ads.yml
-  - data/2025/regional/UK/facebook/ads.yml
+sources:
+  ugc:
+    BR: data/2025/global/facebook/ugc.yml
+    EU: data/2025/global/facebook/ugc.yml
+    UK: data/2025/global/facebook/ugc.yml
+  ads:
+    BR: data/2025/regional/BR/facebook/ads.yml
+    EU: data/2025/regional/EU/facebook/ads.yml
+    UK: data/2025/regional/UK/facebook/ads.yml
 ---
 
 ```{python}

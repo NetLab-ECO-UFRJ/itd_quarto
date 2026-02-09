@@ -2,10 +2,15 @@
 title: "Telegram"
 subtitle: "Platform Appendix"
 platform_slug: "telegram"
-ugc_answers_files:
-  - data/2025/global/telegram/ugc.yml
-ads_answers_files:
-  - data/2025/global/telegram/ads.yml
+sources:
+  ugc:
+    BR: data/2025/global/telegram/ugc.yml
+    EU: data/2025/global/telegram/ugc.yml
+    UK: data/2025/global/telegram/ugc.yml
+  ads:
+    BR: data/2025/global/telegram/ads.yml
+    EU: data/2025/global/telegram/ads.yml
+    UK: data/2025/global/telegram/ads.yml
 ---
 
 ```{python}

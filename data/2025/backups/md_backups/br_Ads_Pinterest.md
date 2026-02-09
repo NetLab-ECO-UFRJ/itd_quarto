@@ -1,5 +1,3 @@
-# **Items**
-
 ## SPECIAL CRITERIA
 
 **SC1: Does the platform provide an API to access its ad repository and
@@ -18,21 +16,16 @@ privileged or internal access beyond standard developer registration.
 
   - > **No**
 
-Google provides access to data from its Ads Transparency Center via
-BigQuery, but no data is available for ads shown in Brazil. Therefore,
-the platform does not meet the evaluation requirements in Brazil.
+**Justification:**
 
-The publicly available tables from the BigQuery Ads Transparency Center
-dataset are two:
-“bigquery-public-data.google\_ads\_transparency\_center.creative\_stats”
-and
-"bigquery-public-data.google\_ads\_transparency\_center.removed\_creative\_stats".
-But as stated before, these tables contain no data when filtering for
-the Brazil region.
-
-[<span class="underline">https://cloud.google.com/bigquery?hl=pt\_br</span>](https://cloud.google.com/bigquery?hl=pt_br)
-
-[<span class="underline">https://adstransparency.google.com/?hl=pt-BR\&region=BR</span>](https://adstransparency.google.com/?hl=pt-BR&region=BR)
+Although Pinterest maintains a public Ads Repository, it does not make
+this data available through an Ads Repository API.
+[<span class="underline">Previous versions of the Pinterest
+API</span>](https://assets.mofoprod.net/network/documents/Full_Disclosure_Stress_Testing_Tech_Platforms_Ad_Repositories_3FepU2u.pdf),
+deprecated as of 2022, included endpoints for accessing advertising
+data, but this capability is not present in the current
+[<span class="underline">Pinterest API
+v5</span>](https://developers.pinterest.com/docs/api/v5/introduction/?).
 
 **SC2: Does the platform provide a graphical user interface to its ad
 repository for extracting advertising content data?** - weight 0.30
@@ -50,11 +43,11 @@ users not only to view ad content but also to export its data.
 
   - > **No**
 
-Google provides the Ads Transparency Center, which is a web-based GUI
-that allows users to search and view ads from Google products, including
-YouTube. Users can filter by advertiser, date range, region, and ad
-format to view advertising content, but the tool does not provide native
-export functionality for ad data.
+**Justification:**
+
+Although Pinterest maintains a public Ads Repository, it does not allow
+data to be extracted in a structured format, limiting access to viewing
+ad content only.
 
 **SC3: Can data from both active and inactive ads be extracted?** -
 weight 0.20
@@ -72,7 +65,12 @@ confirm whether both active and inactive ads can be retrieved.
 
   - > **No**
 
-\<repete resposta acima\>
+**Justification:**
+
+Although Pinterest maintains a public Ads Repository, it does not allow
+data to be extracted in a structured format, either through its
+graphical user interface or via an API, limiting access to viewing ad
+content only.
 
 ## OTHER CRITERIA
 
@@ -91,18 +89,18 @@ statuses, including both active and inactive ads. The assessment should
 confirm the availability of an official browser-based tool that allows
 users to search, access, and view ad content.
 
-  - > Yes, with full availability
+  - > **Yes, with full availability**
 
-  - > **Yes, with partial availability**
+  - > Yes, with partial availability
 
   - > No
 
-The Ads Transparency Center is a browser-based tool that lets users
-access and view ads across Google platforms, such as YouTube. It
-includes ads from verified advertisers shown within the past 365 days
-(or up to seven years for political ads) and from unverified advertisers
-in Europe and Turkey. Therefore, Brazilian users have limited
-availability due to the restrictions on unverified advertisers.
+**Justification:**
+
+The [<span class="underline">Pinterest Ads
+Repository</span>](https://ads.pinterest.com/ads-repository/) publicly
+provides, through its GUI, all ads served to users in Brazil in the last
+year, both active and inactive.
 
 **OC2: Is access to the platform’s ad repository free of charge?**
 
@@ -119,11 +117,10 @@ repository.
 
   - No
 
-The Ads Transparency Center GUI is publicly available and free to use,
-with no payment or subscription required. There is a free monthly quota
-for accessing Ads Transparency Center data. However, as there is no data
-on ads in Brazil, the API does not meet the requirements for this
-question.
+**Justification:**
+
+The Pinterest Ads Repository is freely accessible, but no API exists,
+and access is limited to its GUI.
 
 **OC3: Can the requested data be extracted directly from the ad
 repository response?**
@@ -142,9 +139,10 @@ that the requested public data is included in the returned payload.
 
   - > **No**
 
-There is no official API for ads shown in Brazil, and the GUI does not
-support data export. Ads can only be viewed through the interface, not
-extracted in structured data formats.
+**Justification:**
+
+The Pinterest Ads Repository does not allow the extraction of structured
+data.
 
 **OC4: Does the platform’s ad repository API provide a form of
 authentication that allows for renewal without the risk of data
@@ -161,8 +159,10 @@ compromise data access.
 
   - > **No**
 
-There is no official API for ads shown in Brazil available, so
-authentication mechanisms are not applicable.
+**Justification:**
+
+The Pinterest Ads Repository offers no API access under any
+circumstances.
 
 **OC5: Can data from an individual ad be retrieved from the platform?**
 
@@ -173,15 +173,16 @@ assessment should review the ad repository documentation and test
 available features to confirm that an individual ad can be retrieved
 directly by its unique identifier.
 
-  - > Yes, through the GUI
+  - > **Yes, through the GUI**
 
   - > Yes, through the API
 
-  - > **No**
+  - > No
 
-The Ads Transparency Center GUI only allows data retrieval by advertiser
-name or website, and currently does not support ad extraction using ad
-identifiers or search terms.
+**Justification:**
+
+The Pinterest Ads Repository allows users to retrieve specific ads by
+their ID through the GUI.
 
 **OC6: Can data from ads served by a specific advertiser be retrieved
 from the platform?**
@@ -197,10 +198,10 @@ available feature to retrieve data from an individual advertiser.
 
   - > No
 
-The Ads Transparency Center allows users to search by advertiser name or
-domain to view ads from verified advertisers. However, advertiser pages
-won't appear if verification isn't complete or if no ads were shown in
-the past 365 days.
+**Justification:**
+
+The Pinterest Ads Repository allows users to retrieve ads by selecting
+specific advertisers.
 
 **OC7: Can ad data be retrieved from the platform using search terms?**
 
@@ -215,9 +216,10 @@ accepts search queries using keywords.
 
   - > **No**
 
-The Ads Transparency Center GUI only allows data retrieval by advertiser
-name or website, and currently does not support ad extraction using ad
-identifiers or search terms.
+**Justification:**
+
+The Pinterest Ads Repository does not allow ads to be retrieved using
+search terms.
 
 **OC8: Does the platform use locale-neutral data representations?**
 
@@ -228,17 +230,16 @@ assessment should review the ad repository documentation and inspect
 sample responses to confirm the presence of standardized formats or
 accompanying metadata.
 
-  - > Yes, through the GUI
+  - > **Yes, through the GUI**
 
   - > Yes, through the API
 
-  - > **No**
+  - > No
 
-The platform displays data, such as dates, using locale-specific
-formats. For example, the interface shows “2 de nov. de 2025”, which
-follows Portuguese localization conventions. This indicates that the
-data presentation is localized based on the user’s region or language
-settings, rather than being standardized or locale-neutral
+**Justification:**
+
+The Pinterest Ads Repository GUI displays dates in ISO 8601 format
+(YYYY-MM-DD).
 
 ### COMPLETENESS
 
@@ -259,8 +260,10 @@ can be retrieved.
 
   - > No
 
-The interface discloses the page name and unique identifier, but there
-is no URL associated with the advertiser.
+**Justification:**
+
+Advertiser identities are accurately disclosed in the Pinterest Ads
+Repository.
 
 **OC10: Does the platform provide data on the funders who paid for
 ads?**
@@ -275,9 +278,10 @@ confirm whether any sponsor information is retrievable.
 
   - > **No**
 
-The platform only shows the final advertiser's name, not additional
-sponsor or funder information. Advertising agencies that create ads for
-clients are not displayed.
+**Justification:**
+
+The Pinterest Ads Repository does not disclose who paid for ads served
+on the platform.
 
 **OC11: Does the platform provide data on the period during which ads
 were served?**
@@ -287,14 +291,16 @@ which the identified ads ran. The assessment should review the extracted
 ad data to confirm that it includes start and end dates (or equivalent
 temporal markers) indicating the period of activity.
 
-  - > Yes, through the GUI
+  - > **Yes, through the GUI**
 
   - > Yes, through the API
 
-  - > **No**
+  - > No
 
-The platform only shows the last exhibition date, not detailed
-information on the period during which ads were served.
+**Justification:**
+
+The Pinterest Ads Repository discloses the start and end dates of ad
+delivery to users on the platform.
 
 **OC12: Does the platform provide data on user engagement with ads?**
 
@@ -309,8 +315,10 @@ that engagement metrics are available and clearly linked to each ad.
 
   - > **No**
 
-The Ads Transparency Center does not provide engagement metrics like
-views, clicks, or interactions.
+**Justification:**
+
+The Pinterest Ads Repository does not provide any data on user
+engagement with ads.
 
 **OC13: Does the platform indicate whether ads were placed by verified
 or unverified advertisers?**
@@ -320,15 +328,16 @@ advertisers were verified at the time their ads were served. The
 assessment should review ad records to confirm that a verification
 status field is present.
 
-  - > **Yes, through the GUI**
+  - > Yes, through the GUI
 
   - > Yes, through the API
 
-  - > No
+  - > **No**
 
-In Brazil, the platform only shows ads from verified advertisers. In
-Europe and Turkey, ads from non-verified advertisers are included as
-well.
+**Justification:**
+
+The Pinterest Ads Repository does not disclose any information on
+advertisers’ verification status.
 
 ### COMPLIANCE
 
@@ -352,8 +361,10 @@ details are clearly documented.
 
   - > **No**
 
-Ads removed due to policy violations are not shown in the transparency
-center and are not flagged as removed.
+**Justification:**
+
+We did not identify any ads flagged as removed or moderated during our
+testing of the Pinterest Ads Repository.
 
 **OC15: Does the platform indicate whether ad content was generated
 using artificial intelligence?**
@@ -369,8 +380,10 @@ of AI in ad production.
 
   - > **No**
 
-There is no indication that AI-generated content is labeled in the ad
-repository.
+**Justification:**
+
+The Pinterest Ads Repository does not provide any information regarding
+the use of generative AI in the creation or manipulation of ad content.
 
 **OC16: Is the platform’s ad repository documentation published in open
 access?**
@@ -383,14 +396,17 @@ authentication barriers.
 
   - > Yes, the API documentation
 
-  - > **Yes, the GUI documentation**
+  - > Yes, the GUI documentation
 
-  - > No
+  - > **No**
 
-Despite being limited in scope, the documentation can be accessed
-without registration or login.
+**Justification:**
 
-[<span class="underline">https://adstransparency.google.com/faq?region=BR</span>](https://adstransparency.google.com/faq?region=BR)
+No documentation for the Pinterest Ads Repository could be identified.
+The repository’s GUI only references a [<span class="underline">broken
+link</span>](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository)
+that previously directed users to deprecated versions of the Pinterest
+API, which included endpoints for collecting ad data.
 
 **OC17: Is the platform’s ad repository documentation clearly written
 and exemplified?**
@@ -403,12 +419,17 @@ queries or outputs illustrating correct use.
 
   - > Yes, the API documentation
 
-  - > **Yes, the GUI documentation**
+  - > Yes, the GUI documentation
 
-  - > No
+  - > **No**
 
-Despite being limited in scope, the documentation is clearly written and
-exemplified.
+**Justification:**
+
+No documentation for the Pinterest Ads Repository could be identified.
+The repository’s GUI only references a [<span class="underline">broken
+link</span>](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository)
+that previously directed users to deprecated versions of the Pinterest
+API, which included endpoints for collecting ad data.
 
 **OC18: Does the platform’s ad repository documentation include or link
 to its terms of use?**
@@ -421,14 +442,17 @@ accessible.
 
   - > Yes, the API documentation
 
-  - > **Yes, the GUI documentation**
+  - > Yes, the GUI documentation
 
-  - > No
+  - > **No**
 
-Yes, there is a link to its Terms of Use at the footer section of the
-page.
+**Justification:**
 
-[<span class="underline">https://adstransparency.google.com/terms</span>](https://adstransparency.google.com/terms)
+No documentation for the Pinterest Ads Repository could be identified.
+The repository’s GUI only references a [<span class="underline">broken
+link</span>](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository)
+that previously directed users to deprecated versions of the Pinterest
+API, which included endpoints for collecting ad data.
 
 **OC19: Does the platform provide its ad repository documentation in the
 official languages of the assessed region?**
@@ -440,12 +464,17 @@ and up-to-date versions are available in those languages.
 
   - > Yes, the API documentation
 
-  - > **Yes, the GUI documentation**
+  - > Yes, the GUI documentation
 
-  - > No
+  - > **No**
 
-Despite being limited in scope, there is documentation available in
-Portuguese.
+**Justification:**
+
+No documentation for the Pinterest Ads Repository could be identified.
+The repository’s GUI only references a [<span class="underline">broken
+link</span>](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository)
+that previously directed users to deprecated versions of the Pinterest
+API, which included endpoints for collecting ad data.
 
 **OC20: Does the platform implement a proper deprecation strategy to
 avoid breaking client applications while rolling out major changes in
@@ -463,7 +492,10 @@ or the removal of features.
 
   - > **No or not applicable**
 
-The platform does not provide API access.
+**Justification:**
+
+The Pinterest Ads Repository offers no API access under any
+circumstances.
 
 **OC21: Does the platform’s ad repository API documentation detail the
 response format of each endpoint?\***
@@ -478,7 +510,10 @@ illustrated with sample outputs.
 
   - > **No or not applicable**
 
-The platform does not provide API access.
+**Justification:**
+
+The Pinterest Ads Repository offers no API access under any
+circumstances.
 
 **OC22: Does the platform’s ad repository API documentation detail the
 quota or rate limits applicable to each available endpoint?\***
@@ -495,7 +530,10 @@ overall usage restrictions (quotas) are clearly stated.
 
   - > **No or not applicable**
 
-The platform does not provide API access.
+**Justification:**
+
+The Pinterest Ads Repository offers no API access under any
+circumstances.
 
 ### CONSISTENCY
 
@@ -519,7 +557,10 @@ and serving information (e.g., spending, impressions).
 
   - > **No or not applicable**
 
-The platform does not provide API access.
+**Justification:**
+
+The Pinterest Ads Repository offers no API access under any
+circumstances.
 
 **OC24: Are the results returned by the platform consistently
 reproducible?**
@@ -536,9 +577,10 @@ to confirm the reproducibility of results.
 
   - > No
 
-We ran multiple parallel queries and confirmed that the results were
-consistent and reproducible. However, it was not possible to evaluate
-cases in which content had been deleted in the interim.
+**Justification:**
+
+The Pinterest Ads Repository GUI was found to return consistent results
+across repeated queries.
 
 **OC25: Is the data returned by the platform consistent with the
 parameters and filters used in the request?**
@@ -555,8 +597,10 @@ conditions.
 
   - > No
 
-We ran multiple parallel queries and confirmed that the results were
-consistent with the parameters and filters used.
+**Justification:**
+
+Results obtained from the Pinterest Ads Repository were consistent with
+the filters and parameters defined throughout the testing process.
 
 ### RELEVANCE
 
@@ -579,8 +623,12 @@ the specified date ranges.
 
   - > No
 
-The platform supports filtering ads by date once a specific advertiser
-or target URL is selected.
+**Justification:**
+
+The Pinterest Ads Repository allows users to filter results by
+specifying ad delivery start and end dates. However, the maximum
+allowable interval between these dates is 30 days, which substantially
+limits research and inquiry capabilities.
 
 **OC27: Does the platform allow filtering advertising data by ad
 category?**
@@ -590,14 +638,17 @@ any categories assigned at the time of ad creation. The assessment
 should run test queries with category filters to confirm that results
 align with the selected classifications.
 
-  - > Yes, through the GUI
+  - > **Yes, through the GUI**
 
   - > Yes, through the API
 
-  - > **No or not applicable**
+  - > No or not applicable
 
-The platform only differentiates between political and non-political
-ads, not allowing filters by ad’s categories.
+**Justification:**
+
+The Pinterest Ads Repository allows users to filter results by thematic
+categories, including “Animals”, “Architecture”, “Arts”, “Health”, and
+others.
 
 **OC28: Does the platform allow filtering advertising data by geographic
 location?**
@@ -613,8 +664,9 @@ results match the specified areas.
 
   - > **No**
 
-The platform’s most specific geographic filter is by country. Therefore
-not meet the required standards of having subnational location filters.
+**Justification:**
+
+The Pinterest Ads Repository only allows data to be filtered by country.
 
 ### ACCURACY
 
@@ -635,7 +687,10 @@ reported.
 
   - > **No**
 
-The GUI platform doesn’t provide any audience engagement metrics.
+**Justification:**
+
+The Pinterest Ads Repository does not provide any age or gender
+information about an ad’s audience.
 
 **OC30: Does the platform provide subnational geographic data on the
 audience reached by ads?**
@@ -651,7 +706,10 @@ and consistently reported.
 
   - > **No**
 
-The GUI platform doesn’t provide any audience engagement metrics.
+**Justification:**
+
+The Pinterest Ads Repository does not provide any subnational location
+data about an ad’s audience.
 
 **OC31: Does the platform include data on audience targeting criteria
 defined by advertisers?**
@@ -663,13 +721,18 @@ behaviors, and keywords). The assessment should review ad records to
 confirm that these targeting parameters are available and consistently
 reported.
 
-  - > Yes, through the GUI
+  - > **Yes, through the GUI**
 
   - > Yes, through the API
 
-  - > **No**
+  - > No
 
-The GUI platform doesn’t provide any audience engagement metrics.
+**Justification:**
+
+The Pinterest Ads Repository provides visibility into the audience
+targeting criteria defined by advertisers, such as age, gender,
+interests, postal codes, geographic areas, keywords, and other
+parameters.
 
 **OC32: Does the platform provide granular volume ranges for ad
 impressions?**
@@ -692,7 +755,10 @@ data interfaces.
 
   - > **No**
 
-The GUI platform doesn’t provide any audience engagement metrics.
+**Justification:**
+
+The Pinterest Ads Repository provides data on ad impressions, but not a
+sufficiently granular level.
 
 **OC33: Does the platform provide granular investment ranges for ad
 spending?**
@@ -713,4 +779,7 @@ using the platform’s documentation or available data interfaces.
 
   - > **No**
 
-The GUI platform doesn’t provide any ad investment and funding metrics.
+**Justification:**
+
+The Pinterest Ads Repository does not provide data on ad spending in the
+European Union.
