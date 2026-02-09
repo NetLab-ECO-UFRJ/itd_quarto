@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "x"
 sources:
   ugc:
-    BR: data/2025/regional/BR/x/ugc.yml
-    EU: data/2025/regional/EU/x/ugc.yml
-    UK: data/2025/regional/UK/x/ugc.yml
+    BR: data/regional/BR/x/ugc.yml
+    EU: data/regional/EU/x/ugc.yml
+    UK: data/regional/UK/x/ugc.yml
   ads:
-    BR: data/2025/regional/BR/x/ads.yml
-    EU: data/2025/regional/EU/x/ads.yml
-    UK: data/2025/regional/UK/x/ads.yml
+    BR: data/regional/BR/x/ads.yml
+    EU: data/regional/EU/x/ads.yml
+    UK: data/regional/UK/x/ads.yml
 ---
 
 ```{python}

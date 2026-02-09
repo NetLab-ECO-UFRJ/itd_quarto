@@ -14,6 +14,19 @@ from typing import Dict, List, Any
 PROJECT_ROOT = Path(__file__).parent.parent
 
 
+def _resolve_question_file(year: str, question_type: str) -> Path:
+    """Resolve question file path for flat and legacy data layouts."""
+    filename = f"questions_{question_type}_{year}.yml"
+    candidates = [
+        PROJECT_ROOT / "data" / filename,
+        PROJECT_ROOT / "data" / year / filename,
+    ]
+    for path in candidates:
+        if path.exists():
+            return path
+    return candidates[0]
+
+
 def load_questions(year: str = "2025", question_type: str = "all") -> Dict[str, Any]:
     """
     Load questions configuration from separate UGC and ADS files.
@@ -46,16 +59,15 @@ def load_questions(year: str = "2025", question_type: str = "all") -> Dict[str, 
     # Determine which files to load
     files_to_load = []
     if question_type in ["ugc", "all"]:
-        files_to_load.append(f"data/{year}/questions_ugc_{year}.yml")
+        files_to_load.append(_resolve_question_file(year, "ugc"))
     if question_type in ["ads", "all"]:
-        files_to_load.append(f"data/{year}/questions_ads_{year}.yml")
+        files_to_load.append(_resolve_question_file(year, "ads"))
 
     if not files_to_load:
         raise ValueError(f"Invalid question_type: {question_type}. Must be 'ugc', 'ads', or 'all'")
 
     # Load each file
-    for questions_path in files_to_load:
-        full_path = PROJECT_ROOT / questions_path
+    for full_path in files_to_load:
         with open(full_path, 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
 
@@ -108,16 +120,15 @@ def load_categories(year: str = "2025", question_type: str = "all") -> List[Dict
     # Determine which files to load
     files_to_load = []
     if question_type in ["ugc", "all"]:
-        files_to_load.append(f"data/{year}/questions_ugc_{year}.yml")
+        files_to_load.append(_resolve_question_file(year, "ugc"))
     if question_type in ["ads", "all"]:
-        files_to_load.append(f"data/{year}/questions_ads_{year}.yml")
+        files_to_load.append(_resolve_question_file(year, "ads"))
 
     if not files_to_load:
         raise ValueError(f"Invalid question_type: {question_type}. Must be 'ugc', 'ads', or 'all'")
 
     # Load each file and merge categories (deduplicate by name)
-    for questions_path in files_to_load:
-        full_path = PROJECT_ROOT / questions_path
+    for full_path in files_to_load:
         with open(full_path, 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
 
@@ -152,7 +163,7 @@ def load_answers(platform: str = None, region: str = None, year: str = "2025",
         scope: Either 'regional' or 'global' (default: 'regional')
         question_type: Type of answers to load - 'ugc' or 'ads' (optional, for split files)
         answers_dir: Override directory containing answer files (optional, legacy)
-        answers_file: Direct path to answer file (e.g., 'data/2025/global/kwai/ugc.yml')
+        answers_file: Direct path to answer file (e.g., 'data/global/kwai/ugc.yml')
                      If provided, all path auto-discovery is skipped
 
     Returns:
@@ -169,26 +180,47 @@ def load_answers(platform: str = None, region: str = None, year: str = "2025",
         # Use direct file path
         filepath = PROJECT_ROOT / answers_file
     elif answers_dir is None:
-        if scope == "global":
-            # Global structure: data/2025/global/platform/platform_ugc/ads.yml or platform_ugc/ads.yml
-            if question_type:
-                filename = f"{platform.lower()}_{question_type.lower()}.yml"
-            else:
-                filename = f"{platform.lower()}.yml"
+        data_roots = [
+            PROJECT_ROOT / "data",
+            PROJECT_ROOT / "data" / year,
+        ]
 
-            # Try platform subfolder first (e.g., kwai/ads.yml)
-            filepath = PROJECT_ROOT / "data" / year / "global" / platform.lower() / filename
-            if not filepath.exists():
-                # Fall back to root global folder (e.g., platform_ads.yml)
-                filepath = PROJECT_ROOT / "data" / year / "global" / filename
-        else:
-            # Regional structure: data/2025/regional/REGION/platform/platform_region_ugc/ads.yml
+        if scope == "global":
+            # Global structure candidates:
+            # - data/global/<platform>/<question_type>.yml
+            # - data/global/<platform>/<platform>_<question_type>.yml (legacy)
+            # - data/global/<platform>.yml
             if question_type:
-                filename = f"{platform.lower()}_{region.lower()}_{question_type.lower()}.yml"
+                filenames = [
+                    f"{question_type.lower()}.yml",
+                    f"{platform.lower()}_{question_type.lower()}.yml",
+                ]
             else:
-                filename = f"{platform.lower()}_{region.lower()}.yml"
-            filepath = (PROJECT_ROOT / "data" / year / "regional" /
-                       region.upper() / platform.lower() / filename)
+                filenames = [f"{platform.lower()}.yml"]
+
+            candidates = []
+            for root in data_roots:
+                for filename in filenames:
+                    candidates.append(root / "global" / platform.lower() / filename)
+                    candidates.append(root / "global" / filename)
+            filepath = next((p for p in candidates if p.exists()), candidates[0])
+        else:
+            # Regional structure candidates:
+            # - data/regional/<REGION>/<platform>/<question_type>.yml
+            # - data/regional/<REGION>/<platform>/<platform>_<region>_<question_type>.yml (legacy)
+            if question_type:
+                filenames = [
+                    f"{question_type.lower()}.yml",
+                    f"{platform.lower()}_{region.lower()}_{question_type.lower()}.yml",
+                ]
+            else:
+                filenames = [f"{platform.lower()}_{region.lower()}.yml"]
+
+            candidates = []
+            for root in data_roots:
+                for filename in filenames:
+                    candidates.append(root / "regional" / region.upper() / platform.lower() / filename)
+            filepath = next((p for p in candidates if p.exists()), candidates[0])
     else:
         # Legacy path support
         filename = f"{platform.lower()}_{region.lower()}.yml"

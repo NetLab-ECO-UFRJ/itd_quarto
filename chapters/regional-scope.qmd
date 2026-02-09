@@ -16,7 +16,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 ```
 
-This chapter lists source mappings in appendix frontmatter for UGC and Ads. Paths are shortened by removing the leading `data/2025/` prefix.
+This chapter lists source mappings in appendix frontmatter for UGC and Ads. 
 
 ```{python}
 #| echo: false

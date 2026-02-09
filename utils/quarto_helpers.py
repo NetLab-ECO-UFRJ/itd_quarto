@@ -103,8 +103,8 @@ def load_platform_results(
     Load and calculate both UGC and ADS scores for a platform.
 
     Args:
-        ugc_file: Path to UGC answers YAML file (e.g., 'data/2025/global/kwai/ugc.yml')
-        ads_file: Path to ADS answers YAML file (e.g., 'data/2025/global/kwai/ads.yml')
+        ugc_file: Path to UGC answers YAML file (e.g., 'data/global/kwai/ugc.yml')
+        ads_file: Path to ADS answers YAML file (e.g., 'data/global/kwai/ads.yml')
         year: Evaluation year (default: '2025')
 
     Returns:

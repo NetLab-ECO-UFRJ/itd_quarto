@@ -91,6 +91,6 @@ def display_questions(yaml_file, title):
                 print(f"- {answer['label']} (weight: {answer['weight']})")
             print("\n")
 
-display_questions('../data/2025/questions_ugc_2025.yml', 'User-Generated Content (UGC) Questions')
-display_questions('../data/2025/questions_ads_2025.yml', 'Advertising (Ads) Questions')
+display_questions('../data/questions_ugc_2025.yml', 'User-Generated Content (UGC) Questions')
+display_questions('../data/questions_ads_2025.yml', 'Advertising (Ads) Questions')
 ```

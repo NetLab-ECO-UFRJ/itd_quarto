@@ -18,18 +18,18 @@ import argparse
 class ExcelToYAMLTransformer:
     def __init__(self, base_dir: Path, scope_type: str = "global", region_code: Optional[str] = None):
         self.base_dir = base_dir
-        self.xlsx_dir = base_dir / "data" / "2025" / "xlsx_backups"
+        self.xlsx_dir = base_dir / "data" / "backups" / "xlsx"
         self.scope_type = scope_type.lower()
         self.region_code = region_code.upper() if region_code else None
 
         if self.scope_type == "global":
-            self.output_dir = base_dir / "data" / "2025" / "global"
+            self.output_dir = base_dir / "data" / "global"
         elif self.scope_type == "regional" and self.region_code:
-            self.output_dir = base_dir / "data" / "2025" / "regional" / self.region_code
+            self.output_dir = base_dir / "data" / "regional" / self.region_code
         else:
             raise ValueError("For regional scope, region_code must be provided")
 
-        self.questions_dir = base_dir / "data" / "2025"
+        self.questions_dir = base_dir / "data"
         self.questions_ads = self._load_questions("questions_ads_2025.yml")
         self.questions_ugc = self._load_questions("questions_ugc_2025.yml")
 
@@ -337,12 +337,12 @@ def main():
     parser.add_argument(
         "--ads-file",
         required=True,
-        help="ADS Excel filename in xlsx_backups"
+        help="ADS Excel filename in backups/xlsx"
     )
     parser.add_argument(
         "--ugc-file",
         required=True,
-        help="UGC Excel filename in xlsx_backups"
+        help="UGC Excel filename in backups/xlsx"
     )
 
     args = parser.parse_args()

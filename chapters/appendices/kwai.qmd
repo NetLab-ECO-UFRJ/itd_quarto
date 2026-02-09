@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "kwai"
 sources:
   ugc:
-    BR: data/2025/global/kwai/ugc.yml
-    EU: data/2025/global/kwai/ugc.yml
-    UK: data/2025/global/kwai/ugc.yml
+    BR: data/global/kwai/ugc.yml
+    EU: data/global/kwai/ugc.yml
+    UK: data/global/kwai/ugc.yml
   ads:
-    BR: data/2025/global/kwai/ads.yml
-    EU: data/2025/global/kwai/ads.yml
-    UK: data/2025/global/kwai/ads.yml
+    BR: data/global/kwai/ads.yml
+    EU: data/global/kwai/ads.yml
+    UK: data/global/kwai/ads.yml
 ---
 
 ```{python}

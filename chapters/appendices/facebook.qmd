@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "facebook"
 sources:
   ugc:
-    BR: data/2025/global/facebook/ugc.yml
-    EU: data/2025/global/facebook/ugc.yml
-    UK: data/2025/global/facebook/ugc.yml
+    BR: data/global/facebook/ugc.yml
+    EU: data/global/facebook/ugc.yml
+    UK: data/global/facebook/ugc.yml
   ads:
-    BR: data/2025/regional/BR/facebook/ads.yml
-    EU: data/2025/regional/EU/facebook/ads.yml
-    UK: data/2025/regional/UK/facebook/ads.yml
+    BR: data/regional/BR/facebook/ads.yml
+    EU: data/regional/EU/facebook/ads.yml
+    UK: data/regional/UK/facebook/ads.yml
 ---
 
 ```{python}

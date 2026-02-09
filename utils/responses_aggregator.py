@@ -12,11 +12,38 @@ from .quarto_helpers import get_answer_icon, get_platform_sources
 PROJECT_ROOT = Path(__file__).parent.parent
 
 
+def _get_data_root(year: str) -> Path:
+    """Resolve data root for flat and legacy layouts."""
+    flat_root = PROJECT_ROOT / "data"
+    legacy_root = PROJECT_ROOT / "data" / year
+
+    if (flat_root / "global").exists() or (flat_root / "regional").exists():
+        return flat_root
+    if legacy_root.exists():
+        return legacy_root
+    return flat_root
+
+
+def _resolve_question_file(year: str, question_type: str) -> Path:
+    """Resolve questions file path for flat and legacy layouts."""
+    filename = f"questions_{question_type}_{year}.yml"
+    data_root = _get_data_root(year)
+    candidates = [
+        data_root / filename,
+        PROJECT_ROOT / "data" / year / filename,
+    ]
+    for path in candidates:
+        if path.exists():
+            return path
+    return candidates[0]
+
+
 def get_all_platforms(year: str = "2025") -> List[Dict[str, Any]]:
     """Get all platform directories with their metadata."""
     platforms = []
 
-    global_dir = PROJECT_ROOT / "data" / year / "global"
+    data_root = _get_data_root(year)
+    global_dir = data_root / "global"
     if global_dir.exists():
         for platform_dir in sorted(global_dir.iterdir()):
             if platform_dir.is_dir():
@@ -27,7 +54,7 @@ def get_all_platforms(year: str = "2025") -> List[Dict[str, Any]]:
                     "region": None
                 })
 
-    regional_dir = PROJECT_ROOT / "data" / year / "regional"
+    regional_dir = data_root / "regional"
     if regional_dir.exists():
         for region_dir in sorted(regional_dir.iterdir()):
             if region_dir.is_dir():
@@ -44,8 +71,8 @@ def get_all_platforms(year: str = "2025") -> List[Dict[str, Any]]:
 
 
 def get_available_regions(year: str = "2025") -> List[str]:
-    """Get sorted region codes available under data/<year>/regional."""
-    regional_dir = PROJECT_ROOT / "data" / year / "regional"
+    """Get sorted region codes available under data/regional."""
+    regional_dir = _get_data_root(year) / "regional"
     if not regional_dir.exists():
         return []
     return sorted([p.name for p in regional_dir.iterdir() if p.is_dir()])
@@ -54,12 +81,13 @@ def get_available_regions(year: str = "2025") -> List[str]:
 def get_available_platforms(year: str = "2025") -> List[str]:
     """Get sorted unique platform slugs across global and regional scopes."""
     platforms = set()
-    global_dir = PROJECT_ROOT / "data" / year / "global"
+    data_root = _get_data_root(year)
+    global_dir = data_root / "global"
     if global_dir.exists():
         for platform_dir in global_dir.iterdir():
             if platform_dir.is_dir():
                 platforms.add(platform_dir.name)
-    regional_dir = PROJECT_ROOT / "data" / year / "regional"
+    regional_dir = data_root / "regional"
     if regional_dir.exists():
         for region_dir in regional_dir.iterdir():
             if region_dir.is_dir():
@@ -71,8 +99,7 @@ def get_available_platforms(year: str = "2025") -> List[str]:
 
 def load_questions_ordered(year: str = "2025", question_type: str = "ugc") -> OrderedDict:
     """Load questions preserving category order."""
-    filename = f"questions_{question_type}_{year}.yml"
-    filepath = PROJECT_ROOT / "data" / year / filename
+    filepath = _resolve_question_file(year, question_type)
 
     with open(filepath, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
@@ -146,14 +173,15 @@ def load_platform_answers_by_region(
 ) -> Dict[str, Dict[str, Any]]:
     """Load answers for a platform across regions and optional global scope."""
     answers_by_region: Dict[str, Dict[str, Any]] = {}
+    data_root = _get_data_root(year)
 
     if include_global:
-        global_path = PROJECT_ROOT / "data" / year / "global" / platform
+        global_path = data_root / "global" / platform
         answers_by_region["GLOBAL"] = load_platform_answers(global_path, question_type)
 
     regions_list = regions if regions is not None else get_available_regions(year)
     for region in regions_list:
-        regional_path = PROJECT_ROOT / "data" / year / "regional" / region / platform
+        regional_path = data_root / "regional" / region / platform
         answers_by_region[region] = load_platform_answers(regional_path, question_type)
 
     return answers_by_region
@@ -166,11 +194,12 @@ def get_platform_coverage(
     regions: Optional[List[str]] = None,
 ) -> Tuple[bool, List[str]]:
     """Return (has_global, region_list_with_data) for the given platform and question type."""
-    has_global = (PROJECT_ROOT / "data" / year / "global" / platform / f"{question_type}.yml").exists()
+    data_root = _get_data_root(year)
+    has_global = (data_root / "global" / platform / f"{question_type}.yml").exists()
     regions_list = regions if regions is not None else get_available_regions(year)
     regions_with_data = []
     for region in regions_list:
-        regional_file = PROJECT_ROOT / "data" / year / "regional" / region / platform / f"{question_type}.yml"
+        regional_file = data_root / "regional" / region / platform / f"{question_type}.yml"
         if regional_file.exists():
             regions_with_data.append(region)
     return has_global, regions_with_data

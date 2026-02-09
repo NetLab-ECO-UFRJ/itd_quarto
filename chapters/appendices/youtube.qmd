@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "youtube"
 sources:
   ugc:
-    BR: data/2025/global/youtube/ugc.yml
-    EU: data/2025/global/youtube/ugc.yml
-    UK: data/2025/global/youtube/ugc.yml
+    BR: data/global/youtube/ugc.yml
+    EU: data/global/youtube/ugc.yml
+    UK: data/global/youtube/ugc.yml
   ads:
-    BR: data/2025/regional/BR/youtube/ads.yml
-    EU: data/2025/regional/EU/youtube/ads.yml
-    UK: data/2025/regional/UK/youtube/ads.yml
+    BR: data/regional/BR/youtube/ads.yml
+    EU: data/regional/EU/youtube/ads.yml
+    UK: data/regional/UK/youtube/ads.yml
 ---
 
 ```{python}

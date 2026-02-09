@@ -2,7 +2,7 @@
 Generate a table of source links in appendix frontmatter.
 
 Shows all mappings for UGC and Ads, with paths shortened by removing
-the leading data/2025 prefix.
+the leading data/ prefix.
 """
 
 from pathlib import Path
@@ -13,7 +13,7 @@ from .quarto_helpers import parse_qmd_frontmatter
 
 
 def _shorten_path(path: str) -> str:
-    prefix = "data/2025/"
+    prefix = "data/"
     return path[len(prefix):] if path.startswith(prefix) else path
 
 

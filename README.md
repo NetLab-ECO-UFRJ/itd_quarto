@@ -60,15 +60,15 @@ The project includes a script to import platform assessment data from Excel file
 
 ```bash
 # Remove existing platform data 
-rm -rf data/2025/global/*
+rm -rf data/global/*
 
 # For regional data 
-rm -rf data/2025/regional/BR/*
+rm -rf data/regional/BR/*
 ```
 
 ### Excel File Location
 
-Place your Excel files in the `data/2025/xlsx_backups/` directory. The script expects two files:
+Place your Excel files in the `data/backups/xlsx/` directory. The script expects two files:
 - One for UGC (User-Generated Content) framework responses
 - One for ADS (Advertising) framework responses
 
@@ -122,12 +122,12 @@ Note: Both global and regional scopes now use the same Excel file parameters.
 
 ### What the Script Does
 
-1. **Reads Excel files** from `data/2025/xlsx_backups/`
+1. **Reads Excel files** from `data/backups/xlsx/`
 2. **Creates YAML files** with normalized answers:
-   - `data/2025/global/{platform}/ugc.yml`
-   - `data/2025/global/{platform}/ads.yml`
+   - `data/global/{platform}/ugc.yml`
+   - `data/global/{platform}/ads.yml`
 3. **Generates QMD report** from template:
-   - `data/2025/global/{platform}/{platform}.qmd`
+   - `data/global/{platform}/{platform}.qmd`
 
 ### After Import
 
@@ -136,13 +136,13 @@ Once imported, update `_quarto.yml` to include the new platform in the book chap
 ```yaml
 - part: "Global Assessments"
   chapters:
-    - data/2025/global/bluesky/bluesky.qmd
+    - data/global/bluesky/bluesky.qmd
 ```
 
 Then render the report:
 
 ```bash
-uv run quarto render data/2025/global/bluesky/bluesky.qmd --to html
+uv run quarto render data/global/bluesky/bluesky.qmd --to html
 ```
 
 ## Python API

@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "instagram"
 sources:
   ugc:
-    BR: data/2025/global/instagram/ugc.yml
-    EU: data/2025/global/instagram/ugc.yml
-    UK: data/2025/global/instagram/ugc.yml
+    BR: data/global/instagram/ugc.yml
+    EU: data/global/instagram/ugc.yml
+    UK: data/global/instagram/ugc.yml
   ads:
-    BR: data/2025/regional/BR/instagram/ads.yml
-    EU: data/2025/regional/EU/instagram/ads.yml
-    UK: data/2025/regional/UK/instagram/ads.yml
+    BR: data/regional/BR/instagram/ads.yml
+    EU: data/regional/EU/instagram/ads.yml
+    UK: data/regional/UK/instagram/ads.yml
 ---
 
 ```{python}

@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "pinterest"
 sources:
   ugc:
-    BR: data/2025/global/pinterest/ugc.yml
-    EU: data/2025/global/pinterest/ugc.yml
-    UK: data/2025/global/pinterest/ugc.yml
+    BR: data/global/pinterest/ugc.yml
+    EU: data/global/pinterest/ugc.yml
+    UK: data/global/pinterest/ugc.yml
   ads:
-    BR: data/2025/global/pinterest/ads.yml
-    EU: data/2025/global/pinterest/ads.yml
-    UK: data/2025/regional/UK/pinterest/ads.yml
+    BR: data/global/pinterest/ads.yml
+    EU: data/global/pinterest/ads.yml
+    UK: data/regional/UK/pinterest/ads.yml
 ---
 
 ```{python}

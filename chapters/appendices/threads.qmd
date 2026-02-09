@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "threads"
 sources:
   ugc:
-    BR: data/2025/global/threads/ugc.yml
-    EU: data/2025/global/threads/ugc.yml
-    UK: data/2025/global/threads/ugc.yml
+    BR: data/global/threads/ugc.yml
+    EU: data/global/threads/ugc.yml
+    UK: data/global/threads/ugc.yml
   ads:
-    BR: data/2025/regional/BR/threads/ads.yml
-    EU: data/2025/regional/EU/threads/ads.yml
-    UK: data/2025/regional/UK/threads/ads.yml
+    BR: data/regional/BR/threads/ads.yml
+    EU: data/regional/EU/threads/ads.yml
+    UK: data/regional/UK/threads/ads.yml
 ---
 
 ```{python}

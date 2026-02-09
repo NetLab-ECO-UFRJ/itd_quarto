@@ -43,18 +43,18 @@ class MarkdownToYAMLTransformer:
 
     def __init__(self, base_dir: Path, scope_type: str = "global", region_code: Optional[str] = None):
         self.base_dir = base_dir
-        self.markdown_dir = base_dir / "data" / "2025" / "doc_backups"
+        self.markdown_dir = base_dir / "data" / "backups" / "md_backups"
         self.scope_type = scope_type.lower()
         self.region_code = region_code.upper() if region_code else None
 
         if self.scope_type == "global":
-            self.output_dir = base_dir / "data" / "2025" / "global"
+            self.output_dir = base_dir / "data" / "global"
         elif self.scope_type == "regional" and self.region_code:
-            self.output_dir = base_dir / "data" / "2025" / "regional" / self.region_code
+            self.output_dir = base_dir / "data" / "regional" / self.region_code
         else:
             raise ValueError("For regional scope, region_code must be provided")
 
-        questions_dir = base_dir / "data" / "2025"
+        questions_dir = base_dir / "data"
         self.questions_ads = self._load_yaml(questions_dir / "questions_ads_2025.yml")
         self.questions_ugc = self._load_yaml(questions_dir / "questions_ugc_2025.yml")
 
@@ -275,7 +275,7 @@ def main():
     parser.add_argument(
         "--markdown-file",
         required=True,
-        help="Markdown filename in doc_backups/markdown (e.g., eu_ADS_Meta.md)"
+        help="Markdown filename in backups/md_backups/markdown (e.g., eu_ADS_Meta.md)"
     )
     parser.add_argument(
         "--scope-type",

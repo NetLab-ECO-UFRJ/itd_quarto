@@ -262,7 +262,7 @@ def calculate_platform_score(
         scope: Either 'regional' or 'global' (default: 'regional')
         question_type: Type of questions to evaluate - 'ugc', 'ads', or 'all' (default: 'all')
         answers_dir: Override directory with answer files (optional, for legacy support)
-        answers_file: Direct path to answer file (e.g., 'data/2025/global/kwai/ugc.yml')
+        answers_file: Direct path to answer file (e.g., 'data/global/kwai/ugc.yml')
                      If provided, platform/region/scope are ignored for path discovery
 
     Returns:

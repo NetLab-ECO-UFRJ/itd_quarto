@@ -4,9 +4,9 @@ subtitle: "Platform Appendix"
 platform_slug: "bluesky"
 sources:
   ugc:
-    BR: data/2025/global/bluesky/ugc.yml
-    EU: data/2025/global/bluesky/ugc.yml
-    UK: data/2025/global/bluesky/ugc.yml
+    BR: data/global/bluesky/ugc.yml
+    EU: data/global/bluesky/ugc.yml
+    UK: data/global/bluesky/ugc.yml
 ---
 
 ```{python}

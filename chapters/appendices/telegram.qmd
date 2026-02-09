@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "telegram"
 sources:
   ugc:
-    BR: data/2025/global/telegram/ugc.yml
-    EU: data/2025/global/telegram/ugc.yml
-    UK: data/2025/global/telegram/ugc.yml
+    BR: data/global/telegram/ugc.yml
+    EU: data/global/telegram/ugc.yml
+    UK: data/global/telegram/ugc.yml
   ads:
-    BR: data/2025/global/telegram/ads.yml
-    EU: data/2025/global/telegram/ads.yml
-    UK: data/2025/global/telegram/ads.yml
+    BR: data/global/telegram/ads.yml
+    EU: data/global/telegram/ads.yml
+    UK: data/global/telegram/ads.yml
 ---
 
 ```{python}

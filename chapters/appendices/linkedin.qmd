@@ -4,13 +4,13 @@ subtitle: "Platform Appendix"
 platform_slug: "linkedin"
 sources:
   ugc:
-    BR: data/2025/regional/BR/linkedin/ugc.yml
-    EU: data/2025/regional/EU/linkedin/ugc.yml
-    UK: data/2025/regional/BR/linkedin/ugc.yml
+    BR: data/regional/BR/linkedin/ugc.yml
+    EU: data/regional/EU/linkedin/ugc.yml
+    UK: data/regional/BR/linkedin/ugc.yml
   ads:
-    BR: data/2025/global/linkedin/ads.yml
-    EU: data/2025/regional/EU/linkedin/ads.yml
-    UK: data/2025/global/linkedin/ads.yml
+    BR: data/global/linkedin/ads.yml
+    EU: data/regional/EU/linkedin/ads.yml
+    UK: data/global/linkedin/ads.yml
 ---
 
 ```{python}
