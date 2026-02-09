@@ -1,3 +1,70 @@
+# **Formula/weighting method**
+
+Three different special criteria (SC) account for 75% of the score, each
+with a different weight, as described below. **If the platform meets the
+criteria but provides only partial ad data, it receives half of the
+possible points**. Partial ad data may include, but is not limited to,
+only providing data on “political” ads or on ads served by verified
+advertisers, for example.
+
+The remaining 25% of the score is based on 33 other criteria (OC), each
+carrying equal weight. Except for those marked with an asterisk, all
+these criteria allow multiple answers. **In such cases, the platform
+receives full points if the feature is available through both the API
+and the GUI; if it is available in only one, it receives half of the
+possible points**.
+
+The score distribution, based on special and other criteria, is as
+follows:
+
+\(Score = ((SC1\ *\ 0.50)\  + \ (SC2\ *\ 0.30)\  + \ (SC3\ *\ 0.20))\ *\ 75\  + \ (\frac{OCFn\  + \ OCPn}{33}*25)\)
+
+In which:
+
+> **SC*x*** denotes non-compliance (0), partial compliance (0.5), or
+> full compliance (1) with the respective special criterion
+> 
+> **OCF*n*** denotes the number of fully compliant cases (1 \* *n*)
+> among the other criteria
+> 
+> **OCP*n*** denotes the number of partially compliant cases (0.5 \*
+> *n*) among the other criteria
+
+Or as shown in the following table:
+
+<table>
+<thead>
+<tr class="header">
+<th><strong>Criteria</strong></th>
+<th><strong>Maximum attainable points<br />
+(0–100)</strong></th>
+<th><strong>Combined weight</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SC1</strong></td>
+<td>37,5</td>
+<td>75%</td>
+</tr>
+<tr class="even">
+<td><strong>SC2</strong></td>
+<td>22,5</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>SC3</strong></td>
+<td>15</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>OC1 – OC33</strong></td>
+<td>approx. 0,758 each</td>
+<td>25%</td>
+</tr>
+</tbody>
+</table>
+
 # **Items**
 
 ## SPECIAL CRITERIA
@@ -12,27 +79,14 @@ ads across all categories. The assessment should confirm that the
 endpoint allows the retrieval and storage of ad data without requiring
 privileged or internal access beyond standard developer registration.
 
-  - > Yes, with full availability
+  - > **Yes, with full availability**
 
   - > Yes, with partial availability
 
-  - > **No**
+  - > No
 
-Google provides access to data from its Ads Transparency Center via
-BigQuery, but no data is available for ads shown in Brazil. Therefore,
-the platform does not meet the evaluation requirements in Brazil.
-
-The publicly available tables from the BigQuery Ads Transparency Center
-dataset are two:
-“bigquery-public-data.google\_ads\_transparency\_center.creative\_stats”
-and
-"bigquery-public-data.google\_ads\_transparency\_center.removed\_creative\_stats".
-But as stated before, these tables contain no data when filtering for
-the Brazil region.
-
-[<span class="underline">https://cloud.google.com/bigquery?hl=pt\_br</span>](https://cloud.google.com/bigquery?hl=pt_br)
-
-[<span class="underline">https://adstransparency.google.com/?hl=pt-BR\&region=BR</span>](https://adstransparency.google.com/?hl=pt-BR&region=BR)
+The platform provides an API for its commercial content however it’s
+only available for vetted researchers.
 
 **SC2: Does the platform provide a graphical user interface to its ad
 repository for extracting advertising content data?** - weight 0.30
@@ -46,15 +100,16 @@ users not only to view ad content but also to export its data.
 
   - > Yes, with full availability
 
-  - > Yes, with partial availability
+  - > **Yes, with partial availability**
 
-  - > **No**
+  - > No
 
-Google provides the Ads Transparency Center, which is a web-based GUI
-that allows users to search and view ads from Google products, including
-YouTube. Users can filter by advertiser, date range, region, and ad
-format to view advertising content, but the tool does not provide native
-export functionality for ad data.
+TikTok provides access to a Commercial Content Library for all EU
+countries. This is a GUI for its repository of all ads that are running
+on TikTok including ads that are not presently active or paused by the
+advertisers ([<span class="underline">TikTok,
+n.d.</span>](https://library.tiktok.com/)) However there is no export
+functionality.
 
 **SC3: Can data from both active and inactive ads be extracted?** -
 weight 0.20
@@ -70,9 +125,11 @@ confirm whether both active and inactive ads can be retrieved.
 
   - > Yes, with partial availability
 
-  - > **No**
+  - > No
 
-\<repete resposta acima\>
+As for the documentation, it is possible to to extract both active and
+inactive ads, however there’s no available parameter that allows to
+retrieve ads by their status.
 
 ## OTHER CRITERIA
 
@@ -91,18 +148,11 @@ statuses, including both active and inactive ads. The assessment should
 confirm the availability of an official browser-based tool that allows
 users to search, access, and view ad content.
 
-  - > Yes, with full availability
+  - > **Yes, with full availability**
 
-  - > **Yes, with partial availability**
+  - > Yes, with partial availability
 
   - > No
-
-The Ads Transparency Center is a browser-based tool that lets users
-access and view ads across Google platforms, such as YouTube. It
-includes ads from verified advertisers shown within the past 365 days
-(or up to seven years for political ads) and from unverified advertisers
-in Europe and Turkey. Therefore, Brazilian users have limited
-availability due to the restrictions on unverified advertisers.
 
 **OC2: Is access to the platform’s ad repository free of charge?**
 
@@ -113,17 +163,15 @@ assessment should verify the platform’s documentation and pricing
 policies to confirm that no fees are applied for access to the ad
 repository.
 
-  - Free API access
+  - **Free API access**
 
   - **Free GUI access**
 
   - No
 
-The Ads Transparency Center GUI is publicly available and free to use,
-with no payment or subscription required. There is a free monthly quota
-for accessing Ads Transparency Center data. However, as there is no data
-on ads in Brazil, the API does not meet the requirements for this
-question.
+The Graphical user interface and API are free to use but to access the
+API, researchers must complete a form stating their reasons for using
+the API and need the platform approval.
 
 **OC3: Can the requested data be extracted directly from the ad
 repository response?**
@@ -138,13 +186,16 @@ that the requested public data is included in the returned payload.
 
   - > Yes, through the GUI
 
-  - > Yes, through the API
+  - > **Yes, through the API**
 
-  - > **No**
+  - > No
 
-There is no official API for ads shown in Brazil, and the GUI does not
-support data export. Ads can only be viewed through the interface, not
-extracted in structured data formats.
+It is possible to extract the content and its authorship directly from
+the API response. Since the ad format is mainly video, no field for
+content in text is available, but it’s possible to access an ad media
+through links. However, the requested data cannot be extracted directly
+from the ad repository response as there is no way to extract data from
+the GUI.
 
 **OC4: Does the platform’s ad repository API provide a form of
 authentication that allows for renewal without the risk of data
@@ -157,12 +208,13 @@ platform’s documentation or directly observe the authentication and
 renewal process to confirm that token updates do not interrupt or
 compromise data access.
 
-  - > Yes
+  - > **Yes**
 
-  - > **No**
+  - > No
 
-There is no official API for ads shown in Brazil available, so
-authentication mechanisms are not applicable.
+Tiktok only allows access to its data for a determined period of time,
+but during this period authentication renewal can be done automatically,
+without risk of data loss.
 
 **OC5: Can data from an individual ad be retrieved from the platform?**
 
@@ -173,15 +225,14 @@ assessment should review the ad repository documentation and test
 available features to confirm that an individual ad can be retrieved
 directly by its unique identifier.
 
-  - > Yes, through the GUI
+  - > **Yes, through the GUI**
 
-  - > Yes, through the API
+  - > **Yes, through the API**
 
-  - > **No**
+  - > No
 
-The Ads Transparency Center GUI only allows data retrieval by advertiser
-name or website, and currently does not support ad extraction using ad
-identifiers or search terms.
+There is no export functionality on the GUI, though this information can
+be queried and viewed online.
 
 **OC6: Can data from ads served by a specific advertiser be retrieved
 from the platform?**
@@ -193,14 +244,14 @@ available feature to retrieve data from an individual advertiser.
 
   - > **Yes, through the GUI**
 
-  - > Yes, through the API
+  - > **Yes, through the API**
 
   - > No
 
-The Ads Transparency Center allows users to search by advertiser name or
-domain to view ads from verified advertisers. However, advertiser pages
-won't appear if verification isn't complete or if no ads were shown in
-the past 365 days.
+It is possible to retrieve ads by a specific advertiser using their
+business advertiser identifier in both GUI and API, although in GUI the
+identifier needs to be set in the repository url. But in GUI, it is
+possible to search for an advertiser’s name in the search box as well.
 
 **OC7: Can ad data be retrieved from the platform using search terms?**
 
@@ -209,15 +260,13 @@ terms, enabling the creation of datasets based on those queries. The
 assessment should test search-related features to confirm that it
 accepts search queries using keywords.
 
-  - > Yes, through the GUI
+  - > **Yes, through the GUI**
 
-  - > Yes, through the API
+  - > **Yes, through the API**
 
-  - > **No**
+  - > No
 
-The Ads Transparency Center GUI only allows data retrieval by advertiser
-name or website, and currently does not support ad extraction using ad
-identifiers or search terms.
+It is possible to retrieve ads using search terms in both API and GUI.
 
 **OC8: Does the platform use locale-neutral data representations?**
 
@@ -228,17 +277,17 @@ assessment should review the ad repository documentation and inspect
 sample responses to confirm the presence of standardized formats or
 accompanying metadata.
 
-  - > Yes, through the GUI
+  - > **Yes, through the GUI**
 
-  - > Yes, through the API
+  - > **Yes, through the API**
 
-  - > **No**
+  - > No
 
-The platform displays data, such as dates, using locale-specific
-formats. For example, the interface shows “2 de nov. de 2025”, which
-follows Portuguese localization conventions. This indicates that the
-data presentation is localized based on the user’s region or language
-settings, rather than being standardized or locale-neutral
+Countries abbreviations are provided in a standardized format in both
+API and GUI. In the API, date information is given as a string
+containing the year, month and date all together with no separator, and
+although this date representation complies with the basic rules of ISO
+8601, this format may not be supported by all parsers.
 
 ### COMPLETENESS
 
@@ -253,14 +302,11 @@ advertisers responsible for the identified ads. The assessment should
 confirm whether the advertiser’s page name, URL, and unique identifier
 can be retrieved.
 
-  - > **Yes, through the GUI**
+  - > Yes, through the GUI
 
   - > Yes, through the API
 
   - > No
-
-The interface discloses the page name and unique identifier, but there
-is no URL associated with the advertiser.
 
 **OC10: Does the platform provide data on the funders who paid for
 ads?**
@@ -273,11 +319,7 @@ confirm whether any sponsor information is retrievable.
 
   - > Yes, through the API
 
-  - > **No**
-
-The platform only shows the final advertiser's name, not additional
-sponsor or funder information. Advertising agencies that create ads for
-clients are not displayed.
+  - > No
 
 **OC11: Does the platform provide data on the period during which ads
 were served?**
@@ -291,10 +333,7 @@ temporal markers) indicating the period of activity.
 
   - > Yes, through the API
 
-  - > **No**
-
-The platform only shows the last exhibition date, not detailed
-information on the period during which ads were served.
+  - > No
 
 **OC12: Does the platform provide data on user engagement with ads?**
 
@@ -307,10 +346,7 @@ that engagement metrics are available and clearly linked to each ad.
 
   - > Yes, through the API
 
-  - > **No**
-
-The Ads Transparency Center does not provide engagement metrics like
-views, clicks, or interactions.
+  - > No
 
 **OC13: Does the platform indicate whether ads were placed by verified
 or unverified advertisers?**
@@ -320,15 +356,11 @@ advertisers were verified at the time their ads were served. The
 assessment should review ad records to confirm that a verification
 status field is present.
 
-  - > **Yes, through the GUI**
+  - > Yes, through the GUI
 
   - > Yes, through the API
 
   - > No
-
-In Brazil, the platform only shows ads from verified advertisers. In
-Europe and Turkey, ads from non-verified advertisers are included as
-well.
 
 ### COMPLIANCE
 
@@ -350,10 +382,7 @@ details are clearly documented.
 
   - > Yes, through the API
 
-  - > **No**
-
-Ads removed due to policy violations are not shown in the transparency
-center and are not flagged as removed.
+  - > No
 
 **OC15: Does the platform indicate whether ad content was generated
 using artificial intelligence?**
@@ -367,10 +396,7 @@ of AI in ad production.
 
   - > Yes, through the API
 
-  - > **No**
-
-There is no indication that AI-generated content is labeled in the ad
-repository.
+  - > No
 
 **OC16: Is the platform’s ad repository documentation published in open
 access?**
@@ -383,14 +409,9 @@ authentication barriers.
 
   - > Yes, the API documentation
 
-  - > **Yes, the GUI documentation**
+  - > Yes, the GUI documentation
 
   - > No
-
-Despite being limited in scope, the documentation can be accessed
-without registration or login.
-
-[<span class="underline">https://adstransparency.google.com/faq?region=BR</span>](https://adstransparency.google.com/faq?region=BR)
 
 **OC17: Is the platform’s ad repository documentation clearly written
 and exemplified?**
@@ -403,12 +424,9 @@ queries or outputs illustrating correct use.
 
   - > Yes, the API documentation
 
-  - > **Yes, the GUI documentation**
+  - > Yes, the GUI documentation
 
   - > No
-
-Despite being limited in scope, the documentation is clearly written and
-exemplified.
 
 **OC18: Does the platform’s ad repository documentation include or link
 to its terms of use?**
@@ -421,14 +439,9 @@ accessible.
 
   - > Yes, the API documentation
 
-  - > **Yes, the GUI documentation**
+  - > Yes, the GUI documentation
 
   - > No
-
-Yes, there is a link to its Terms of Use at the footer section of the
-page.
-
-[<span class="underline">https://adstransparency.google.com/terms</span>](https://adstransparency.google.com/terms)
 
 **OC19: Does the platform provide its ad repository documentation in the
 official languages of the assessed region?**
@@ -440,12 +453,9 @@ and up-to-date versions are available in those languages.
 
   - > Yes, the API documentation
 
-  - > **Yes, the GUI documentation**
+  - > Yes, the GUI documentation
 
   - > No
-
-Despite being limited in scope, there is documentation available in
-Portuguese.
 
 **OC20: Does the platform implement a proper deprecation strategy to
 avoid breaking client applications while rolling out major changes in
@@ -461,9 +471,7 @@ or the removal of features.
 
   - > Yes
 
-  - > **No or not applicable**
-
-The platform does not provide API access.
+  - > No or not applicable
 
 **OC21: Does the platform’s ad repository API documentation detail the
 response format of each endpoint?\***
@@ -476,9 +484,7 @@ illustrated with sample outputs.
 
   - > Yes
 
-  - > **No or not applicable**
-
-The platform does not provide API access.
+  - > No or not applicable
 
 **OC22: Does the platform’s ad repository API documentation detail the
 quota or rate limits applicable to each available endpoint?\***
@@ -493,9 +499,7 @@ overall usage restrictions (quotas) are clearly stated.
 
   - > Yes
 
-  - > **No or not applicable**
-
-The platform does not provide API access.
+  - > No or not applicable
 
 ### CONSISTENCY
 
@@ -517,9 +521,7 @@ and serving information (e.g., spending, impressions).
 
   - > Yes
 
-  - > **No or not applicable**
-
-The platform does not provide API access.
+  - > No or not applicable
 
 **OC24: Are the results returned by the platform consistently
 reproducible?**
@@ -530,15 +532,11 @@ collections performed similarly, including cases where content was
 deleted in the interim. The assessment should perform repeated queries
 to confirm the reproducibility of results.
 
-  - > **Yes, through the GUI**
+  - > Yes, through the GUI
 
   - > Yes, through the API
 
   - > No
-
-We ran multiple parallel queries and confirmed that the results were
-consistent and reproducible. However, it was not possible to evaluate
-cases in which content had been deleted in the interim.
 
 **OC25: Is the data returned by the platform consistent with the
 parameters and filters used in the request?**
@@ -549,14 +547,11 @@ the request. The assessment should run test queries with different
 filters to confirm that results consistently match the requested
 conditions.
 
-  - > **Yes, through the GUI**
+  - > Yes, through the GUI
 
   - > Yes, through the API
 
   - > No
-
-We ran multiple parallel queries and confirmed that the results were
-consistent with the parameters and filters used.
 
 ### RELEVANCE
 
@@ -573,14 +568,11 @@ the time period in which the ads were served. The assessment should test
 queries with temporal filters to confirm that results accurately reflect
 the specified date ranges.
 
-  - > **Yes, through the GUI**
+  - > Yes, through the GUI
 
   - > Yes, through the API
 
   - > No
-
-The platform supports filtering ads by date once a specific advertiser
-or target URL is selected.
 
 **OC27: Does the platform allow filtering advertising data by ad
 category?**
@@ -594,27 +586,21 @@ align with the selected classifications.
 
   - > Yes, through the API
 
-  - > **No or not applicable**
-
-The platform only differentiates between political and non-political
-ads, not allowing filters by ad’s categories.
+  - > No or not applicable
 
 **OC28: Does the platform allow filtering advertising data by geographic
 location?**
 
-This item verifies whether the ad repository allows filtering data by
-one or more geographic locations where the ads were served. The
-assessment should test queries with location filters to confirm that
+This item assesses whether the ad repository allows filtering data by
+one or more subnational geographic locations where the ads were served.
+The assessment should test queries with location filters to confirm that
 results match the specified areas.
 
   - > Yes, through the GUI
 
   - > Yes, through the API
 
-  - > **No**
-
-The platform’s most specific geographic filter is by country. Therefore
-not meet the required standards of having subnational location filters.
+  - > No
 
 ### ACCURACY
 
@@ -633,9 +619,7 @@ reported.
 
   - > Yes, through the API
 
-  - > **No**
-
-The GUI platform doesn’t provide any audience engagement metrics.
+  - > No
 
 **OC30: Does the platform provide subnational geographic data on the
 audience reached by ads?**
@@ -649,9 +633,7 @@ and consistently reported.
 
   - > Yes, through the API
 
-  - > **No**
-
-The GUI platform doesn’t provide any audience engagement metrics.
+  - > No
 
 **OC31: Does the platform include data on audience targeting criteria
 defined by advertisers?**
@@ -667,9 +649,7 @@ reported.
 
   - > Yes, through the API
 
-  - > **No**
-
-The GUI platform doesn’t provide any audience engagement metrics.
+  - > No
 
 **OC32: Does the platform provide granular volume ranges for ad
 impressions?**
@@ -690,9 +670,7 @@ data interfaces.
 
   - > Yes, through the API
 
-  - > **No**
-
-The GUI platform doesn’t provide any audience engagement metrics.
+  - > No
 
 **OC33: Does the platform provide granular investment ranges for ad
 spending?**
@@ -711,6 +689,4 @@ using the platform’s documentation or available data interfaces.
 
   - > Yes, through the API
 
-  - > **No**
-
-The GUI platform doesn’t provide any ad investment and funding metrics.
+  - > No

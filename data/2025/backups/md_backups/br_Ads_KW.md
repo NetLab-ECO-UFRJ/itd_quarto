@@ -1,5 +1,4 @@
-SPECIAL CRITERIA
-----------------
+## SPECIAL CRITERIA
 
 **SC1: Does the platform provide an API to access its ad repository and
 extract data on advertising content?** - weight 0.50
@@ -11,11 +10,11 @@ ads across all categories. The assessment should confirm that the
 endpoint allows the retrieval and storage of ad data without requiring
 privileged or internal access beyond standard developer registration.
 
--   Yes, with full availability
+  - > Yes, with full availability
 
--   Yes, with partial availability
+  - > Yes, with partial availability
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -24,8 +23,8 @@ country. At one point, the platform briefly introduced a transparency
 tool for political and electoral ads in Brazil, in order to comply with
 Resolution No. 23.732/2024 of the Brazilian Electoral Court (TSE), but
 the tool was discontinued approximately one month after its launch
-([[Nóbrega,
-2024]{.underline}](https://desinformante.com.br/kwai-anuncios-politicos/)).
+([<span class="underline">Nóbrega,
+2024</span>](https://desinformante.com.br/kwai-anuncios-politicos/)).
 
 **SC2: Does the platform provide a graphical user interface to its ad
 repository for extracting advertising content data?** - weight 0.30
@@ -37,11 +36,11 @@ delivers information on ads across all categories. The assessment should
 confirm the availability of an official browser-based tool that allows
 users not only to view ad content but also to export its data.
 
--   Yes, with full availability
+  - > Yes, with full availability
 
--   Yes, with partial availability
+  - > Yes, with partial availability
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -59,11 +58,11 @@ when both active and inactive ad data are delivered across all ad
 categories. The assessment should test the interface and endpoints to
 confirm whether both active and inactive ads can be retrieved.
 
--   Yes, with full availability
+  - > Yes, with full availability
 
--   Yes, with partial availability
+  - > Yes, with partial availability
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -71,8 +70,7 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-OTHER CRITERIA
---------------
+## OTHER CRITERIA
 
 ### ACCESSIBILITY
 
@@ -89,11 +87,11 @@ statuses, including both active and inactive ads. The assessment should
 confirm the availability of an official browser-based tool that allows
 users to search, access, and view ad content.
 
--   Yes, with full availability
+  - > Yes, with full availability
 
--   Yes, with partial availability
+  - > Yes, with partial availability
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -101,20 +99,20 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-**OC2: Is access to the platform's ad repository free of charge?**
+**OC2: Is access to the platform’s ad repository free of charge?**
 
 This item verifies whether the ad repository API or GUI is free of
 charge, since even modest fees can create barriers or force researchers
 in low-resourced settings to narrow the scope of their work. The
-assessment should verify the platform's documentation and pricing
+assessment should verify the platform’s documentation and pricing
 policies to confirm that no fees are applied for access to the ad
 repository.
 
--   Free API access
+  - Free API access
 
--   Free GUI access
+  - Free GUI access
 
--   **No**
+  - **No**
 
 **Justification:**
 
@@ -125,7 +123,7 @@ access in any context.
 **OC3: Can the requested data be extracted directly from the ad
 repository response?**
 
-This item verifies whether the platform's ad repository returns
+This item verifies whether the platform’s ad repository returns
 structured data on ad content and authorship directly in the response,
 rather than providing a link that redirects to the data. Audiovisual
 media files and data (e.g., images, videos, and audio) should not be
@@ -133,11 +131,11 @@ considered when assessing this item. The assessment should examine
 sample data responses from both the ad repository GUI and API to confirm
 that the requested public data is included in the returned payload.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -145,20 +143,20 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-**OC4: Does the platform's ad repository API provide a form of
+**OC4: Does the platform’s ad repository API provide a form of
 authentication that allows for renewal without the risk of data
 loss?\***
 
 This item verifies whether the tokens provided for API use can be
 renewed without the risk of data loss, ensuring continuity and integrity
 of data access and monitoring. The assessment should check the
-platform's documentation or directly observe the authentication and
+platform’s documentation or directly observe the authentication and
 renewal process to confirm that token updates do not interrupt or
 compromise data access.
 
--   Yes
+  - > Yes
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -175,11 +173,11 @@ assessment should review the ad repository documentation and test
 available features to confirm that an individual ad can be retrieved
 directly by its unique identifier.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -195,11 +193,11 @@ by a specific advertiser, via their username or unique identifier. The
 assessment should review the ad repository documentation and test any
 available feature to retrieve data from an individual advertiser.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -214,11 +212,11 @@ terms, enabling the creation of datasets based on those queries. The
 assessment should test search-related features to confirm that it
 accepts search queries using keywords.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -235,11 +233,11 @@ assessment should review the ad repository documentation and inspect
 sample responses to confirm the presence of standardized formats or
 accompanying metadata.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -257,14 +255,14 @@ advertisers who ran ads?**
 
 This item verifies whether the platform discloses information on the
 advertisers responsible for the identified ads. The assessment should
-confirm whether the advertiser's page name, URL, and unique identifier
+confirm whether the advertiser’s page name, URL, and unique identifier
 can be retrieved.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -279,11 +277,11 @@ This item verifies whether the platform provides data on the individuals
 or organizations that paid for the identified ads. The assessment should
 confirm whether any sponsor information is retrievable.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -299,11 +297,11 @@ which the identified ads ran. The assessment should review the extracted
 ad data to confirm that it includes start and end dates (or equivalent
 temporal markers) indicating the period of activity.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -318,11 +316,11 @@ number of user interactions with ads (e.g., likes, comments, shares,
 clicks). The assessment should review the extracted ad data to confirm
 that engagement metrics are available and clearly linked to each ad.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -338,11 +336,11 @@ advertisers were verified at the time their ads were served. The
 assessment should review ad records to confirm that a verification
 status field is present.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -366,11 +364,11 @@ removal and the date. The assessment should review ad records to confirm
 that moderated ads are flagged and that the corresponding moderation
 details are clearly documented.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -386,11 +384,11 @@ involved in generating the content. The assessment should review ad
 records to confirm the presence of a field or label indicating the use
 of AI in ad production.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -398,7 +396,7 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-**OC16: Is the platform's ad repository documentation published in open
+**OC16: Is the platform’s ad repository documentation published in open
 access?**
 
 This item verifies whether the platform makes its ad repository
@@ -407,11 +405,11 @@ registration or login. The assessment should attempt to access the
 documentation directly to confirm that it is fully available without
 authentication barriers.
 
--   Yes, the API documentation
+  - > Yes, the API documentation
 
--   Yes, the GUI documentation
+  - > Yes, the GUI documentation
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -419,20 +417,20 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-**OC17: Is the platform's ad repository documentation clearly written
+**OC17: Is the platform’s ad repository documentation clearly written
 and exemplified?**
 
-This item verifies whether the documentation for the platform's ad
+This item verifies whether the documentation for the platform’s ad
 repository is clear, complete, and provides practical implementation
 examples. The assessment should review the documentation to confirm the
 presence of detailed explanations, structured references, and sample
 queries or outputs illustrating correct use.
 
--   Yes, the API documentation
+  - > Yes, the API documentation
 
--   Yes, the GUI documentation
+  - > Yes, the GUI documentation
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -440,7 +438,7 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-**OC18: Does the platform's ad repository documentation include or link
+**OC18: Does the platform’s ad repository documentation include or link
 to its terms of use?**
 
 This item verifies whether the documentation clearly and unambiguously
@@ -449,11 +447,11 @@ associated legal aspects. The assessment should review the documentation
 to confirm that explicit terms or references are provided and
 accessible.
 
--   Yes, the API documentation
+  - > Yes, the API documentation
 
--   Yes, the GUI documentation
+  - > Yes, the GUI documentation
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -469,11 +467,11 @@ documentation in the official languages of the region being assessed.
 The assessment should review the documentation to confirm that complete
 and up-to-date versions are available in those languages.
 
--   Yes, the API documentation
+  - > Yes, the API documentation
 
--   Yes, the GUI documentation
+  - > Yes, the GUI documentation
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -485,7 +483,7 @@ access in any context.
 avoid breaking client applications while rolling out major changes in
 the API?\***
 
-This item verifies whether the platform's documentation describes a
+This item verifies whether the platform’s documentation describes a
 deprecation strategy with a grace period before removing features. The
 assessment should review changelogs to confirm that deprecated features
 are listed with deprecation and removal dates and include migration
@@ -493,9 +491,9 @@ instructions. This item applies only to breaking changes that require
 client updates, such as endpoint modifications, authentication updates,
 or the removal of features.
 
--   Yes
+  - > Yes
 
--   **No or not applicable**
+  - > **No or not applicable**
 
 **Justification:**
 
@@ -503,18 +501,18 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-**OC21: Does the platform's ad repository API documentation detail the
+**OC21: Does the platform’s ad repository API documentation detail the
 response format of each endpoint?\***
 
-This item verifies whether the platform's ad repository API
+This item verifies whether the platform’s ad repository API
 documentation specifies the format of each possible response, including
 examples and potential errors. The assessment should review the
 documentation to confirm that response structures are described and
 illustrated with sample outputs.
 
--   Yes
+  - > Yes
 
--   **No or not applicable**
+  - > **No or not applicable**
 
 **Justification:**
 
@@ -522,10 +520,10 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-**OC22: Does the platform's ad repository API documentation detail the
+**OC22: Does the platform’s ad repository API documentation detail the
 quota or rate limits applicable to each available endpoint?\***
 
-This item verifies whether the platform's ad repository API
+This item verifies whether the platform’s ad repository API
 documentation specifies the limits for each endpoint, including any
 variations based on authentication level or endpoint type. Rate and
 quota limits define the maximum number of requests allowed within a
@@ -533,9 +531,9 @@ given period (e.g., 1,000 requests per hour). The assessment should
 review the documentation to confirm that request caps (rate limits) and
 overall usage restrictions (quotas) are clearly stated.
 
--   Yes
+  - > Yes
 
--   **No or not applicable**
+  - > **No or not applicable**
 
 **Justification:**
 
@@ -550,9 +548,9 @@ the same format in every occurrence and if it is compatible with the
 previous data.*
 
 **OC23: Does the data retrieved by the API reflect what is displayed on
-the platform's ad repository GUI?\***
+the platform’s ad repository GUI?\***
 
-This item verifies whether the data returned by the platform's ad
+This item verifies whether the data returned by the platform’s ad
 repository API corresponds to the information displayed on its GUI in
 all its levels of detail. It should be possible to identify in the API
 response information such as authorship, complete content, and other
@@ -561,9 +559,9 @@ assessment should compare API responses with the GUI to confirm that at
 least the following elements are consistent: authorship, full content,
 and serving information (e.g., spending, impressions).
 
--   Yes
+  - > Yes
 
--   **No or not applicable**
+  - > **No or not applicable**
 
 **Justification:**
 
@@ -575,16 +573,16 @@ access in any context.
 reproducible?**
 
 This item verifies whether data accessed and extracted via the
-platform's ad repository at a given time is consistent with other
+platform’s ad repository at a given time is consistent with other
 collections performed similarly, including cases where content was
 deleted in the interim. The assessment should perform repeated queries
 to confirm the reproducibility of results.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -601,11 +599,11 @@ the request. The assessment should run test queries with different
 filters to confirm that results consistently match the requested
 conditions.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -618,7 +616,7 @@ access in any context.
 *Relevance evaluates how helpful the data is and how applicable for use
 it is, also considering future applications. This dimension also
 evaluates the extent to which the content and coverage of data meet the
-user's needs.*
+user’s needs.*
 
 **OC26: Does the platform allow the use of temporal filters to retrieve
 data on ads?**
@@ -628,11 +626,11 @@ the time period in which the ads were served. The assessment should test
 queries with temporal filters to confirm that results accurately reflect
 the specified date ranges.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -648,11 +646,11 @@ any categories assigned at the time of ad creation. The assessment
 should run test queries with category filters to confirm that results
 align with the selected classifications.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No or not applicable**
+  - > **No or not applicable**
 
 **Justification:**
 
@@ -668,11 +666,11 @@ one or more geographic locations where the ads were served. The
 assessment should test queries with location filters to confirm that
 results match the specified areas.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -693,11 +691,11 @@ gender of audiences reached. The assessment should review the ad records
 to confirm that these breakdowns are available and consistently
 reported.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -713,11 +711,11 @@ geographic location of audiences reached. The assessment should review
 the ad records to confirm that such location breakdowns are available
 and consistently reported.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -735,11 +733,11 @@ behaviors, and keywords). The assessment should review ad records to
 confirm that these targeting parameters are available and consistently
 reported.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -759,14 +757,14 @@ in intervals no larger than 1,000; between 10,000 and 100,000 in
 intervals no larger than 10,000; between 100,000 and 1 million or above,
 in intervals no larger than 100,000. The assessment should measure
 whether the reported intervals remain within this threshold across the
-different value ranges using the platform's documentation or available
+different value ranges using the platform’s documentation or available
 data interfaces.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -780,19 +778,18 @@ spending?**
 This item verifies whether the ad repository provides spending values
 for ads, using ranges that closely approximate the actual amounts.
 Intervals should be no larger than 10% of the upper bound of the value
-range they represent. For example, values up to \$100 should be
-displayed in intervals no larger than \$10; between \$100 and \$1,000 in
-intervals no larger than \$100; and between \$1,000 and \$10,000 in
-intervals no larger than \$1,000. The assessment should measure whether
-the reported intervals remain within this threshold across the different
-value ranges using the platform's documentation or available data
-interfaces.
+range they represent. For example, values up to $100 should be displayed
+in intervals no larger than $10; between $100 and $1,000 in intervals no
+larger than $100; and between $1,000 and $10,000 in intervals no larger
+than $1,000. The assessment should measure whether the reported
+intervals remain within this threshold across the different value ranges
+using the platform’s documentation or available data interfaces.
 
--   Yes, through the GUI
+  - > Yes, through the GUI
 
--   Yes, through the API
+  - > Yes, through the API
 
--   **No**
+  - > **No**
 
 **Justification:**
 
@@ -800,9 +797,8 @@ As the platform does not provide an ad repository anywhere in the world,
 this item does not apply to our assessment of transparency and data
 access in any context.
 
-REFERENCES
-----------
+## REFERENCES
 
 Nóbrega, L. (2024, May 16). *Kwai veta anúncios políticos para as
 eleições de 2024*. desinformante.
-[[https://desinformante.com.br/kwai-anuncios-politicos/]{.underline}](https://desinformante.com.br/kwai-anuncios-politicos/)
+[<span class="underline">https://desinformante.com.br/kwai-anuncios-politicos/</span>](https://desinformante.com.br/kwai-anuncios-politicos/)
