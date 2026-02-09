@@ -11,19 +11,6 @@ This evaluation system assesses platforms across two critical dimensions:
 
 - **Advertising (ADS)**: Ad transparency tools, political ad labeling, and targeting restrictions
 
-### Global and regional assessments
-
-XXX 
-
-## Method
-
-Platforms are evaluated using a two-level weighting system:
-
-- **Question weights** (1.0 to 2.5+) reflect importance
-- **Answer weights** (0.0 to 1.0) reflect implementation quality
-- **Scores** = question weight × answer weight
-
-Results are presented as both raw scores and percentages for easy interpretation.
 
 ## How to Cite
 
