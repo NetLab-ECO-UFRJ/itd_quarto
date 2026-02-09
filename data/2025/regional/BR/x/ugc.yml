@@ -5,7 +5,7 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'yes'
-  notes: X/Twitter provides a longstanding API that has been extensively documented
+  notes: X/Twitter provides a longstanding [API](https://docs.x.com/overview) that has been extensively documented
     and widely used for academic research. It remains accessible to anyone with a
     registered developer account, although, as will be discussed further, such access
     is now mostly paid.
@@ -77,13 +77,13 @@ accessibility_answers:
 compliance_answers:
 - code: UGC_OC8
   selected_answer: 'yes'
-  notes: The X/Twitter API documentation includes a dedicated section on migrating
+  notes: The X/Twitter API documentation includes a dedicated [section](https://docs.x.com/x-api/migrate/overview) on migrating
     from API v1.1 to v2, outlining the key differences and new features. Although
     no deprecation timeline is provided, it states that v1.1 endpoints will remain
     functional but will no longer receive new features or updates.
 - code: UGC_OC9
   selected_answer: 'yes'
-  notes: The X/Twitter API documentation is publicly accessible to anyone.
+  notes: The X/Twitter API documentation is publicly accessible to anyone via this [page](https://developer.x.com/en/docs/x-api).
 - code: UGC_OC10
   selected_answer: 'yes'
   notes: The X/Twitter API documentation is comprehensive and includes all the necessary
@@ -96,7 +96,7 @@ compliance_answers:
     collectively referred to as the ["Developer Agreement and Policy"](https://developer.x.com/en/developer-terms/agreement-and-policy).
 - code: UGC_OC12
   selected_answer: 'yes'
-  notes: For each endpoint, the X/Twitter API documentation clearly describes the
+  notes: For each endpoint, the [X/Twitter API documentation](https://www.postman.com/xapidevelopers/x-api-public-workspace/collection/r90eid4/x-api-v2) clearly describes the
     response format, specifying the structure of the returned JSON, the possible fields,
     their data types, and when they may or may not appear.
 - code: UGC_OC13
@@ -104,7 +104,7 @@ compliance_answers:
   notes: The API documentation is available only in English.
 - code: UGC_OC14
   selected_answer: 'yes'
-  notes: The X/Twitter API documentation clearly outlines the rate limits and quotas
+  notes: The [X/Twitter API documentation](https://docs.x.com/x-api/getting-started/about-x-api) clearly outlines the rate limits and quotas
     for each access tier, specifying how many requests can be made, within what time
     frame, and which resources or endpoints are affected.
 - code: UGC_OC15
