@@ -20,6 +20,7 @@ book:
     - chapters/methodology.qmd
     - chapters/responses-ugc.qmd
     - chapters/responses-ads.qmd
+    - chapters/regional-scope.qmd
     # - chapters/framework.qmd
     # - chapters/findings.qmd
     # - chapters/conclusion.qmd
