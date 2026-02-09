@@ -8,9 +8,9 @@ sources:
     EU: data/2025/regional/EU/linkedin/ugc.yml
     UK: data/2025/regional/BR/linkedin/ugc.yml
   ads:
-    BR: data/2025/regional/BR/linkedin/ads.yml
+    BR: data/2025/global/linkedin/ads.yml
     EU: data/2025/regional/EU/linkedin/ads.yml
-    UK: data/2025/regional/BR/linkedin/ads.yml
+    UK: data/2025/global/linkedin/ads.yml
 ---
 
 ```{python}
