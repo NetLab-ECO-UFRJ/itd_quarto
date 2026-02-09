@@ -62,6 +62,17 @@ $$
 - Special Criteria: $SC_i \in \{0, 0.5, 1\}$ where 0.5 is awarded for partial ad data
 - Other Criteria: $OC_j \in \{0, 0.5, 1\}$ where 0.5 is awarded when feature is available through only API or GUI, and 1.0 when available through both
 
+# Score Interpretation
+
+The final score is interpreted using the following ranges:
+
+- **Strong (81 to 100 points):** Platforms with efficient solutions for the collection of high-quality data.
+- **Restricted (61 to 80 points):** Platforms that make data available with limitations on the volume of data that can be requested and/or with quality problems.
+- **Deficient (41 to 60 points):** Platforms that offer some transparency and data access, but with serious limitations related to the types of content that can be accessed and the sample of the universe of public data that can be collected.
+- **Precarious (21 to 40 points):** Platforms that impose significant technical, operational and/or financial barriers to their data access measures, making monitoring unfeasible for most researchers and interested parties.
+- **Irrelevant (1 to 20 points):** Platforms with minimal or insufficient transparency and data access measures.
+- **Not available (0 points):** Platforms with no transparency and data access measures despite framework applicability.
+
 # Questionnaires
 
 ```{python}
