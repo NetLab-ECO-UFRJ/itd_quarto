@@ -125,12 +125,18 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
     return results
 
 
-def generate_summary_heatmap(scope: str) -> str:
+def generate_summary_heatmap(
+    scope: str,
+    include_average_row: bool = True,
+    show_values: bool = True
+) -> str:
     """
     Generate HTML heatmap table for UGC or Ads assessments.
 
     Args:
         scope: Either 'ugc' or 'ads'
+        include_average_row: If True, adds per-region average row at the bottom
+        show_values: If True, shows numeric values inside cells; if False, shows colors only
 
     Returns:
         HTML string with styled table
@@ -142,8 +148,6 @@ def generate_summary_heatmap(scope: str) -> str:
         project_root = project_root.parent
 
     scores = scan_assessments(project_root, scope)
-
-    scope_display = 'UGC (User-Generated Content)' if scope == 'ugc' else 'Ads (Advertising)'
 
     html = '''
 <style>
@@ -176,6 +180,11 @@ def generate_summary_heatmap(scope: str) -> str:
 .score-irrelevant { background-color: #F64A9B !important; color: #661F40 !important; font-weight: 600 !important; }
 .score-not-available { background-color: #F3496B !important; color: #661F2D !important; font-weight: 600 !important; }
 .score-missing { background-color: #e0e0e0 !important; color: #666 !important; font-style: italic; }
+.average-row td {
+    background-color: #4a4a4a !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
 </style>
 
 <table class="heatmap-table">
@@ -201,6 +210,18 @@ def generate_summary_heatmap(scope: str) -> str:
     # Sort platforms by average score (descending)
     sorted_platforms = sorted(scores.items(), key=lambda x: calculate_average(x[1]), reverse=True)
 
+    region_averages = {}
+    if include_average_row:
+        for region in ['BR', 'EU', 'UK']:
+            region_scores = [
+                regions.get(region)
+                for _, regions in sorted_platforms
+                if isinstance(regions.get(region), (int, float))
+            ]
+            region_averages[region] = (
+                round(sum(region_scores) / len(region_scores), 1) if region_scores else None
+            )
+
     for platform, regions in sorted_platforms:
         html += f'        <tr>\n'
         html += f'            <td class="platform-name">{platform}</td>\n'
@@ -209,14 +230,30 @@ def generate_summary_heatmap(scope: str) -> str:
             score = regions.get(region)
 
             if score is None:
-                html += f'            <td class="score-missing">—</td>\n'
+                display_text = '—' if show_values else '&nbsp;'
+                html += f'            <td class="score-missing">{display_text}</td>\n'
             elif score == 'N/A':
-                html += f'            <td class="score-missing">N/A</td>\n'
+                display_text = 'N/A' if show_values else '&nbsp;'
+                html += f'            <td class="score-missing">{display_text}</td>\n'
             else:
                 css_class = get_score_class(score)
-                html += f'            <td class="{css_class}">{score:.0f}</td>\n'
+                display_text = f'{score:.0f}' if show_values else '&nbsp;'
+                html += f'            <td class="{css_class}">{display_text}</td>\n'
 
         html += f'        </tr>\n'
+
+    if include_average_row:
+        html += '        <tr class="average-row">\n'
+        html += '            <td class="platform-name"><strong>Average</strong></td>\n'
+        for region in ['BR', 'EU', 'UK']:
+            avg = region_averages.get(region)
+            if avg is None:
+                display_text = '—' if show_values else '&nbsp;'
+                html += f'            <td>{display_text}</td>\n'
+            else:
+                display_text = f'<strong>{avg:.1f}</strong>' if show_values else '&nbsp;'
+                html += f'            <td>{display_text}</td>\n'
+        html += '        </tr>\n'
 
     html += '''    </tbody>
 </table>
