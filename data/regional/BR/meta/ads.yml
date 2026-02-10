@@ -114,7 +114,7 @@ accuracy_answers:
   notes: The Meta Ad Library does not provide data for all targeting criteria that an advertiser can select in Brazil.
 - code: AD_OC32
   selected_answer: 'no'
-  notes: The Meta Ad Library provides data on [ad impressions](https://www.facebook.com/ads/library/api/), but not a sufficiently granular level.
+  notes: The Meta Ad Library provides data on [ad impressions](https://www.facebook.com/ads/library/api/), but not at a sufficiently granular level.
 - code: AD_OC33
   selected_answer: 'no'
   notes: The Meta Ad Library provides data on [ad spending](https://www.facebook.com/ads/library/api/), but not at a sufficiently granular level.
