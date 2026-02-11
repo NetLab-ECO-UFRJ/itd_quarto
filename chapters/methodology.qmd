@@ -2,6 +2,18 @@
 title: "Methodology"
 ---
 
+# Scope
+
+
+
+## Out of scope topics
+
+- Not transparency reports.Diff from https://www.accessnow.org/campaign/transparency-reporting-index/
+
+- Only active transparency. We do not consider data scraping methods that may be employed by researchers. These approaches are far from ideal and may expose researchers to heightened legal scrutiny and harassment in jurisdictions where they are not regulated (Bruns, 2019; Freelon, 2018), even though this might not be the case for the EU (Keller, 2025a). Similarly, we do not account for other forms of transparency that platforms may provide, such as content moderation transparency reports (see Urman & Makhortykh, 2023).
+
+- Only public data. ur analysis is also largely limited to so-called “publicly accessible data,” namely data generated from content with public visibility that can be accessed by any user. We nevertheless acknowledge that, even in this case, significant ethical boundaries and considerations for scholarly research remain and must be taken into account (Bruns, 2019; Garimella; Tyson, 2018; Keller, 2025b; Townsend & Wallace, 2016; United Nations, 2024). 
+
 # Platforms Evaluated
 
 - Get latest table from Google Docs
