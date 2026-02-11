@@ -5,32 +5,21 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
-  notes: 'Google provides access to data from its Ads Transparency Center via [BigQuery](https://cloud.google.com/bigquery?hl=pt_br),
+  notes: 'Google provides access to data from its [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) via [BigQuery](https://cloud.google.com/bigquery?hl=pt_br),
     but no data is available for ads shown in Brazil. Therefore, the platform does
-    not meet the evaluation requirements in Brazil.
-
-
-    The publicly available tables from the BigQuery Ads Transparency Center dataset
+    not meet the evaluation requirements in Brazil. The publicly available tables from the BigQuery Ads Transparency Center dataset
     are `bigquery-public-data.google_ads_transparency_center.creative_stats`
     and `bigquery-public-data.google_ads_transparency_center.removed_creative_stats`.
-    But as stated before, these tables contain no data when filtering for the Brazil
-    region.
-
-
-    See [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR)
-    for more information.'
+    But these tables contain no data when filtering for the Brazil region.'
 - code: AD_SC2
   selected_answer: 'no'
-  notes: Google provides the Ads Transparency Center, which is a web-based GUI that
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), which is a web-based GUI that
     allows users to search and view ads from Google products, including YouTube. Users
     can filter by advertiser, date range, region, and ad format to view advertising
     content, but the tool does not provide native export functionality for ad data.
 - code: AD_SC3
   selected_answer: 'no'
-  notes: Google provides the Ads Transparency Center, which is a web-based GUI that
-    allows users to search and view ads from Google products, including YouTube. Users
-    can filter by advertiser, date range, region, and ad format to view advertising
-    content, but the tool does not provide native export functionality for ad data.
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) does not provide native export features for ad data, either for active or inactive ads.
 accessibility_answers:
 - code: AD_OC1
   selected_answer: partial
