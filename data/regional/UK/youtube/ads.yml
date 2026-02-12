@@ -7,7 +7,7 @@ special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
   notes: Google's Ads Transparency Center data is offered in a public dataset, accessible
-    via BigQuery. However, it does not include data for the UK.
+    via BigQuery. However, it does not include data for the UK. The Google Ads API works primarily a campaign management interface for advertisers, enabling them to programmatically create, manage, and report on ads in their own Google Ads accounts. It does not function as a public ad repository and is not intended for transparency or third-party ad discovery.
 - code: AD_SC2
   selected_answer: partial
   notes: Google offers an Ads Transparency Center GUI, but its export functionality

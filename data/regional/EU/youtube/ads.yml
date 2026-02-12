@@ -6,26 +6,24 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: full
-  notes: ''
+  notes: 'It is possible to access and extract data using the [Google Big Query](https://cloud.google.com/bigquery) API or via [Google Storage](https://console.cloud.google.com/storage/browser/ads-transparency-center/api-data;tab=objects?prefix=&forceOnObjectsSortingFiltering=false).'
 - code: AD_SC2
-  selected_answer: partial
-  notes: Google offers an Ads Transparency Center GUI, but its export functionality
-    is only available for political ads.
+  selected_answer: no
+  notes: Google offers an [Ads Transparency Center](https://adstransparency.google.com/) GUI that allows browsing and accessing data but lacks export functionality. It is possible to visualize and download data from the tables `creative_stats` and `removed_creative_stats` on [Google BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_ads_transparency_center&page=dataset), but exporting the dataset using this platform requires programming skills to build structured queries (SQL).
 - code: AD_SC3
   selected_answer: full
-  notes: ''
+  notes: 'On 24 Nov 2025, we were able to extract ad data through the BigQuery API from June 2023 to 23 Nov 2025.'
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
-  notes: ''
+  notes: 'The [Ads Transparency Center](https://adstransparency.google.com/) provides more detailed information on political ads; however, it meets the criterion of providing information on both active and inactive ads. It is possible to search and view ad content.'
 - code: AD_OC2
   selected_answer: both
-  notes: ''
+  notes: 'The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) GUI is publicly available and free to use, with
+    no payment or subscription required.'
 - code: AD_OC3
   selected_answer: gui
-  notes: The BigQuery Google Ads Transparency tables have ads metadata, but they have
-    no fields for the actual content of the ads other than an URL pointing to each
-    ad\'s page on the Google Ads Transparency Center.
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) GUI returns structured data on ad content and authorship directly in the response, rather than providing a link that redirects to the data. However, the tables on [Google BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_ads_transparency_center&page=dataset) contain ad metadata but no fields for the actual ad content, other than a URL pointing to each ad's page on the Google Ads Transparency Center.
 - code: AD_OC4
   selected_answer: 'no'
   notes: ''
