@@ -9,12 +9,12 @@ special-criteria_answers:
   notes: The platform provides a Commercial Content API to access its ad repository
     and extract data. However, the functionality of the API could not be confirmed
     at the time of this assessment as access was not obtained despite multiple requests
-    (TikTok, n.d.).
+    .
 - code: AD_SC2
   selected_answer: partial
   notes: TikTok provides access to a Commercial Content Library for all EU countries.
     This is a GUI for its repository of all ads that are running on TikTok including
-    ads that are not presently active or paused by the advertisers (TikTok, n.d.)
+    ads that are not presently active or paused by the advertisers 
     However there is no export functionality.
 - code: AD_SC3
   selected_answer: 'no'
@@ -38,18 +38,18 @@ accessibility_answers:
 - code: AD_OC4
   selected_answer: 'yes'
   notes: The TikTok Commercial Content API supports renewable authentication via short-lived
-    access tokens (TikTok, n.d.).
+    access tokens .
 - code: AD_OC5
   selected_answer: 'no'
   notes: Data from an individual ad can be retrieved from the platform according to
-    the API documentation (TikTok, n.d.); however this has not been confirmed due
+    the API documentation ; however this has not been confirmed due
     to lack of access to the API at the time of this assessment. There is no export
     functionality on the GUI, though this information can be queried and viewed online.
 - code: AD_OC6
   selected_answer: 'no'
   notes: Data from ads served by a specific advertiser can be retrieved from the platform
     according to the API documentation by using the `advertiser_business_ids` filter
-    (TikTok, n.d.); however this has not been confirmed due to lack of access to the
+    ; however this has not been confirmed due to lack of access to the
     API at the time of this assessment. There is no export functionality on the GUI,
     though this information can be queried and viewed online.
 - code: AD_OC7
@@ -127,22 +127,22 @@ compliance_answers:
   notes: ''
 - code: AD_OC16
   selected_answer: both
-  notes: The API documentation (TikTok, n.d.) and the GUI documentation (TikTok, n.d.)
+  notes: The API documentation  and the GUI documentation 
     are openly available without requiring user registration or login information.
 - code: AD_OC17
   selected_answer: both
-  notes: The API documentation (TikTok, n.d.) and the GUI documentation (TikTok, n.d.)
+  notes: The API documentation  and the GUI documentation 
     are clearly written and exemplified.
 - code: AD_OC18
   selected_answer: api
   notes: The API documentation provides an overarching link to “developer guidelines”
-    linking to the developer Terms of Service (TikTok, n.d.). However the GUI documentation
+    linking to the developer Terms of Service . However the GUI documentation
     does not.
 - code: AD_OC19
   selected_answer: 'no'
   notes: 'The GUI documentation is not available in all 24 official languages of the
-    EU, it is available in 23 out of 24: there is no Maltese (TikTok, n.d.). The API
-    documentation is only available in English, missing 23 languages (TikTok, n.d.).'
+    EU, it is available in 23 out of 24: there is no Maltese . The API
+    documentation is only available in English, missing 23 languages .'
 - code: AD_OC20
   selected_answer: 'yes'
   notes: The Commercial API is documented in the API documentation changelog (TikTok,
