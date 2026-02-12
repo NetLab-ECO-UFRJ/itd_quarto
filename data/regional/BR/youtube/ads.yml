@@ -23,16 +23,16 @@ special-criteria_answers:
 accessibility_answers:
 - code: AD_OC1
   selected_answer: partial
-  notes: The Ads Transparency Center is a browser-based tool that lets users access
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) is a browser-based tool that lets users access
     and view ads across Google platforms, such as YouTube. It includes ads from verified
     advertisers shown within the past 365 days (or up to seven years for political
     ads) and from unverified advertisers in Europe and Turkey. Therefore, Brazilian
     users have limited availability due to the restrictions on unverified advertisers.
 - code: AD_OC2
   selected_answer: gui
-  notes: The Ads Transparency Center GUI is publicly available and free to use, with
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) GUI is publicly available and free to use, with
     no payment or subscription required. There is a free monthly quota for accessing
-    Ads Transparency Center data. However, as there is no data on ads in Brazil, the
+    [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) data. However, as there is no data on ads in Brazil, the
     API does not meet the requirements for this question.
 - code: AD_OC3
   selected_answer: 'no'
@@ -48,13 +48,13 @@ accessibility_answers:
   notes: Through the GUI, it is possible to access the page of a specific ad.
 - code: AD_OC6
   selected_answer: gui
-  notes: The Ads Transparency Center allows users to search by advertiser name or
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) allows users to search by advertiser name or
     domain to view ads from verified advertisers. However, advertiser pages won't
     appear if verification isn't complete or if no ads were shown in the past 365
     days.
 - code: AD_OC7
   selected_answer: 'no'
-  notes: The Ads Transparency Center GUI only allows data retrieval by advertiser
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) GUI only allows data retrieval by advertiser
     name or website, and currently does not support ad extraction using ad identifiers
     or search terms.
 - code: AD_OC8
