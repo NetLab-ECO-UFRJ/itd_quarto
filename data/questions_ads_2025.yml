@@ -21,10 +21,7 @@ special_criteria:
   - code: AD_SC2
     title: Does the platform provide a graphical user interface to its ad repository for extracting advertising content data?
     description: >
-      This item verifies whether the platform provides a graphical user interface (GUI) for extracting ad data in a
-      structured format for external use. Full availability is considered granted when the GUI delivers information
-      on ads across all categories. The assessment should confirm the availability of an official browser-based tool
-      that allows users not only to view ad content but also to export its data.
+      This item verifies whether the platform provides a graphical user interface (GUI) that enables the extraction of structured data without programming. Full availability is considered granted when the GUI delivers information on ads across all categories. The assessment should confirm the availability of an official browser-based tool that allows users not only to view ad content but also to export its data.
     weight: 0.30
     answers:
       - value: full

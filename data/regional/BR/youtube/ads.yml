@@ -16,7 +16,7 @@ special-criteria_answers:
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), which is a web-based GUI that
     allows users to search and view ads from Google products, including YouTube. Users
     can filter by advertiser, date range, region, and ad format to view advertising
-    content, but the tool does not provide native export functionality for ad data.
+    content, but the tool does not provide native export functionality for ad data. Data from the Ads Transparency Center available on BigQuery does not cover Brazilian ads, and although a browser-based tool, BigQuery requires programming knowledge to extract data.
 - code: AD_SC3
   selected_answer: 'no'
   notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) does not provide native export features for ad data, either for active or inactive ads.
