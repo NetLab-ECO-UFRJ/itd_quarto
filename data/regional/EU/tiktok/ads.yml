@@ -98,7 +98,7 @@ compliance_answers:
     requirements of this assessment.
 - code: AD_OC15
   selected_answer: 'no'
-  notes: The TikTok Commercial Library does not provide any information regarding
+  notes: The TikTok Commercial Content Library does not provide any information regarding
     the use of generative AI in the creation or manipulation of ad content.
 - code: AD_OC16
   selected_answer: both
@@ -107,7 +107,7 @@ compliance_answers:
     authentication.
 - code: AD_OC17
   selected_answer: both
-  notes: Both the TikTok Commercial Content Library API and GUI documentations are
+  notes: Both the TikTok Commercial Content Library API and GUI documentation are
     clearly structured and comprehensively documented, including detailed descriptions
     of access mechanisms, request parameters, endpoints, search functionalities, references,
     retrieved data fields, and illustrative usage scenarios.
