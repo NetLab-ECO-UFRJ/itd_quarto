@@ -7,11 +7,7 @@ special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
   notes: >-
-    Although Pinterest maintains a public Ads Repository, it does not make
-    this data available through an Ads Repository API. Previous versions of
-    the Pinterest API, deprecated as of 2022, included endpoints for accessing
-    advertising data, but this capability is not present in the current
-    Pinterest API v5.
+    Although Pinterest maintains a public Ads Repository, it does not make this data available through an Ads Repository API. [Previous versions of the Pinterest API](https://assets.mofoprod.net/network/documents/Full_Disclosure_Stress_Testing_Tech_Platforms_Ad_Repositories_3FepU2u.pdf), deprecated as of 2022, included endpoints for accessing advertising data, but this capability is not present in the current [Pinterest API v5](https://developers.pinterest.com/docs/api/v5/introduction/?).
 - code: AD_SC2
   selected_answer: 'no'
   notes: >-
@@ -29,8 +25,7 @@ accessibility_answers:
 - code: AD_OC1
   selected_answer: full
   notes: >-
-    The Pinterest Ads Repository publicly provides, through its GUI, all ads
-    served to users in Brazil in the last year, both active and inactive.
+    The [Pinterest Ads Repository](https://ads.pinterest.com/ads-repository/) publicly provides, through its GUI, all ads served to users in Brazil in the last year, both active and inactive.
 - code: AD_OC2
   selected_answer: gui
   notes: >-
@@ -106,31 +101,19 @@ compliance_answers:
 - code: AD_OC16
   selected_answer: 'no'
   notes: >-
-    No documentation for the Pinterest Ads Repository could be identified.
-    The repository's GUI only references a broken link that previously
-    directed users to deprecated versions of the Pinterest API, which
-    included endpoints for collecting ad data.
+    No documentation for the Pinterest Ads Repository could be identified. The repository's GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
 - code: AD_OC17
   selected_answer: 'no'
   notes: >-
-    No documentation for the Pinterest Ads Repository could be identified.
-    The repository's GUI only references a broken link that previously
-    directed users to deprecated versions of the Pinterest API, which
-    included endpoints for collecting ad data.
+    No documentation for the Pinterest Ads Repository could be identified. The repository's GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
 - code: AD_OC18
   selected_answer: 'no'
   notes: >-
-    No documentation for the Pinterest Ads Repository could be identified.
-    The repository's GUI only references a broken link that previously
-    directed users to deprecated versions of the Pinterest API, which
-    included endpoints for collecting ad data.
+    No documentation for the Pinterest Ads Repository could be identified. The repository's GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
 - code: AD_OC19
   selected_answer: 'no'
   notes: >-
-    No documentation for the Pinterest Ads Repository could be identified.
-    The repository's GUI only references a broken link that previously
-    directed users to deprecated versions of the Pinterest API, which
-    included endpoints for collecting ad data.
+    No documentation for the Pinterest Ads Repository could be identified. The repository's GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
 - code: AD_OC20
   selected_answer: 'no'
   notes: >-
