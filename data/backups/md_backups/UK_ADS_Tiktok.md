@@ -211,7 +211,7 @@ This item verifies whether the platform provides its ad repository documentation
 - **Yes, the GUI documentation**  
 - No
 
-The [TikTok Commercial Content API documentation](https://developers.tiktok.com/products/commercial-content-api) is only available in English. On the other hand, the [TikTok Commercial Content Library GUI documentation](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/commercial-content-library) is available in all the official EU languages.
+Both the TikTok Commercial Content Library [API](https://developers.tiktok.com/products/commercial-content-api) and [GUI](https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/commercial-content-library) documentations are available in English.
 
 **OC20: Does the platform implement a proper deprecation strategy to avoid breaking client applications while rolling out major changes in the API?\***   
 This item verifies whether the platform’s documentation describes a deprecation strategy with a grace period before removing features. The assessment should review changelogs to confirm that deprecated features are listed with deprecation and removal dates and include migration instructions. This item applies only to breaking changes that require client updates, such as endpoint modifications, authentication updates, or the removal of features.
