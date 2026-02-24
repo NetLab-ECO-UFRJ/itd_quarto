@@ -5,58 +5,35 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
-  notes: 'Google provides access to data from its [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) via [BigQuery](https://cloud.google.com/bigquery?hl=pt_br),
-    but no data is available for ads shown in Brazil. Therefore, the platform does
-    not meet the evaluation requirements in Brazil. The publicly available tables from the BigQuery Ads Transparency Center dataset
-    are `bigquery-public-data.google_ads_transparency_center.creative_stats`
-    and `bigquery-public-data.google_ads_transparency_center.removed_creative_stats`.
-    But these tables contain no data when filtering for the Brazil region.'
+  notes: 'Google provides access to data from its [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) via [BigQuery](https://cloud.google.com/bigquery?hl=pt_br), but no data is available for ads shown in Brazil.'
 - code: AD_SC2
-  selected_answer: 'no'
-  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), which is a web-based GUI that
-    allows users to search and view ads from Google products, including YouTube. Users
-    can filter by advertiser, date range, region, and ad format to view advertising
-    content, but the tool does not provide native export functionality for ad data. Data from the Ads Transparency Center available on BigQuery does not cover Brazilian ads, and although a browser-based tool, BigQuery requires programming knowledge to extract data.
+  selected_answer: partial
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in Brazil, the data export feature is limited to ads labeled as political that were shown to users in the country.
 - code: AD_SC3
-  selected_answer: 'no'
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) does not provide native export features for ad data, either for active or inactive ads.
-accessibility_answers:
+  selected_answer: partial
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) allows the extraction of data on ads labeled as political that were served at any point over the past seven years. However, it does not provide export capabilities for other types of ads, and our tests using the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br) did not return any results.
+  accessibility_answers:
 - code: AD_OC1
   selected_answer: partial
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) is a browser-based tool that lets users access
-    and view ads across Google platforms, such as YouTube. It includes ads from verified
-    advertisers shown within the past 365 days (or up to seven years for political
-    ads) and from unverified advertisers in Europe and Turkey. Therefore, Brazilian
-    users have limited availability due to the restrictions on unverified advertisers.
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. It includes ads from verified advertisers shown within the past 365 days (or up to seven years for ads labeled as political), as well as ads from unverified advertisers in Europe and Turkey. As a result, availability for Brazilian users is more limited due to restrictions on unverified advertisers.
 - code: AD_OC2
-  selected_answer: gui
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) GUI is publicly available and free to use, with
-    no payment or subscription required. There is a free monthly quota for accessing
-    [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) data. However, as there is no data on ads in Brazil, the
-    API does not meet the requirements for this question.
+  selected_answer: both
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) web interface is publicly available and free to use, with no payment or subscription required. The same applies to extracting ad data via the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br), but we were unable to properly verify the availability of data on ads served to users in Brazil.
 - code: AD_OC3
   selected_answer: 'no'
-  notes: There is no official API for ads shown in Brazil, and the GUI does not support
-    data export. Ads can only be viewed through the interface, not extracted in structured
-    data formats.
+  notes: Although it is possible to extract structured data on ads labeled as political in Brazil through the [Ads Transparency Center GUI](https://adstransparency.google.com/?hl=pt-BR&region=BR), it is not possible to retrieve any structured information on the content of those ads, as the output only provides a URL linking to each ad’s page on the Ads Transparency Center.
 - code: AD_OC4
   selected_answer: 'no'
-  notes: There is no official API for ads shown in Brazil available, so authentication
-    mechanisms are not applicable.
+  notes: As we were not able to assess any data on ads served to users in Brazil through the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br), authentication mechanisms could not be further evaluated.
 - code: AD_OC5
   selected_answer: gui
-  notes: Through the GUI, it is possible to access the page of a specific ad.
+  notes: It is possible to retrieve data for a specific ad through the [Ads Transparency Center](https://adstransparency.google.com). Although the interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
 - code: AD_OC6
   selected_answer: gui
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) allows users to search by advertiser name or
-    domain to view ads from verified advertisers. However, advertiser pages won't
-    appear if verification isn't complete or if no ads were shown in the past 365
-    days.
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) allows users to search by advertiser name or domain to view ads from verified advertisers. However, advertiser pages cannot be retrieved if verification is incomplete or if no ads were shown in the past 365 days. In theory, it is possible to return data on ads from specific advertisers via the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br), but we were unable to assess any data on ads served to users in Brazil through it.
 - code: AD_OC7
   selected_answer: 'no'
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) GUI only allows data retrieval by advertiser
-    name or website, and currently does not support ad extraction using ad identifiers
-    or search terms.
+  notes: The [Google Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) does not allow ads to be retrieved using search terms.
 - code: AD_OC8
   selected_answer: 'no'
   notes: The platform displays data, such as dates, using locale-specific formats.

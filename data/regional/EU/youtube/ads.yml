@@ -6,39 +6,35 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: full
-  notes: 'It is possible to access and extract data using the [Google Big Query](https://cloud.google.com/bigquery) API or via [Google Storage](https://console.cloud.google.com/storage/browser/ads-transparency-center/api-data;tab=objects?prefix=&forceOnObjectsSortingFiltering=false).'
+  notes: 'It is possible to access and extract data on ads shown across Google platforms through the [Google Big Query](https://cloud.google.com/bigquery) or via [Google Cloud Storage](https://console.cloud.google.com/storage/browser/ads-transparency-center/api-data;tab=objects?prefix=&forceOnObjectsSortingFiltering=false).'
 - code: AD_SC2
   selected_answer: no
-  notes: Google offers an [Ads Transparency Center](https://adstransparency.google.com/) GUI that allows browsing and accessing data but lacks export functionality. It is possible to visualize and download data from the tables `creative_stats` and `removed_creative_stats` on [Google BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_ads_transparency_center&page=dataset), but exporting the dataset using this platform requires programming skills to build structured queries (SQL).
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in the EU, the Ads Transparency Center cannot be used to export data on any type of ads.
 - code: AD_SC3
   selected_answer: full
-  notes: 'On 24 Nov 2025, we were able to extract ad data through the BigQuery API from June 2023 to 23 Nov 2025.'
+  notes: We were able to successfully extract data on ads served in the EU from June 2023 to November 2025 through the [Google BigQuery](https://cloud.google.com/bigquery). Although [Google no longer allows political ads to be served in the EU](https://support.google.com/adspolicy/answer/16409999?hl=en), the API does not distinguish between political and non-political ads at the time of extraction.
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
-  notes: 'The [Ads Transparency Center](https://adstransparency.google.com/) provides more detailed information on political ads; however, it meets the criterion of providing information on both active and inactive ads. It is possible to search and view ad content.'
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?region=GB), a web-based interface that allows users to search for and view ads across Google products, including YouTube. It includes ads from verified advertisers shown within the past 365 days (or up to seven years for political ads), as well as ads from unverified advertisers in Europe and Turkey.
 - code: AD_OC2
   selected_answer: both
-  notes: 'The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) GUI is publicly available and free to use, with
-    no payment or subscription required.'
+  notes: Both the [Ads Transparency Center](https://adstransparency.google.com) web interface and [Google BigQuery](https://cloud.google.com/bigquery) are publicly available and free to use, with no payment or subscription required, and could be properly tested and assessed.
 - code: AD_OC3
-  selected_answer: gui
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) GUI returns structured data on ad content and authorship directly in the response, rather than providing a link that redirects to the data. However, the tables on [Google BigQuery](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=google_ads_transparency_center&page=dataset) contain ad metadata but no fields for the actual ad content, other than a URL pointing to each ad's page on the Google Ads Transparency Center.
-- code: AD_OC4
   selected_answer: 'no'
-  notes: ''
+  notes: Although it is possible to extract structured data on ads served to users in the EU through the [Google BigQuery](https://cloud.google.com/bigquery), it is not possible to retrieve structured information on the content of those ads, as the output only provides a URL linking to each ad’s page on the Ads Transparency Center.
+- code: AD_OC4
+  selected_answer: 'yes'
+  notes: We did not encounter any authentication issues when using the [Google BigQuery](https://cloud.google.com/bigquery) to extract data on ads served to users in the EU, as users only need an active project on Google Cloud Platform to access and run the queries.
 - code: AD_OC5
-  selected_answer: api
-  notes: The Ads Transparency Center GUI only allows data retrieval by advertiser
-    name or website.
+  selected_answer: both
+  notes: It is possible to retrieve data for a specific ad through both the [Ads Transparency Center](https://adstransparency.google.com) and the [Google BigQuery](https://cloud.google.com/bigquery). Although the interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
 - code: AD_OC6
   selected_answer: both
-  notes: ''
+  notes: The [Ads Transparency Center](https://adstransparency.google.com) allows users to search by advertiser name or domain to view ads from advertisers that were active within the past year. It is also possible to return data on ads from specific advertisers via the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br).
 - code: AD_OC7
   selected_answer: 'no'
-  notes: Since the BigQuery tables for ad transparency have no fields for the actual
-    content of the ads, it is not possible to retrieve data from the platform by applying
-    search terms to the content of ads.
+  notes: The [Google Ads Transparency Center](https://adstransparency.google.com) does not allow ads to be retrieved using search terms.
 - code: AD_OC8
   selected_answer: 'no'
   notes: Dates are provided without time and timezone information. Also, no currency
