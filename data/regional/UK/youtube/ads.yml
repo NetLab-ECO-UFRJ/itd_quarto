@@ -12,14 +12,14 @@ special-criteria_answers:
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?region=GB), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in the UK, the data export feature is limited to ads labeled as political that were shown to users in the country.
 - code: AD_SC3
   selected_answer: partial
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?region=GB) allows the extraction of data on ads labeled as political that were served at any point over the past seven years. However, it does not provide export capabilities for other types of ads, and our tests using [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br) did not return any results.
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?region=GB) allows the extraction of data on ads labeled as political that were served at any point over the past seven years. However, it does not provide export capabilities for other types of ads, and our tests using [Google BigQuery](https://cloud.google.com/bigquery) did not return any results.
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?region=GB), a web-based interface that allows users to search for and view ads across Google products, including YouTube. It includes ads from verified advertisers shown within the past 365 days (or up to seven years for political ads), as well as ads from unverified advertisers in Europe, including the UK, and Turkey.
 - code: AD_OC2
   selected_answer: both
-  notes: The Google Ads Transparency Center web interface is publicly available and free to use, with no payment or subscription required. The same applies to extracting ad data via [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br), but we were unable to properly verify the availability of data on ads served to users in the UK.
+  notes: The Google Ads Transparency Center web interface is publicly available and free to use, with no payment or subscription required. The same applies to extracting ad data via [Google BigQuery](https://cloud.google.com/bigquery), but we were unable to properly verify the availability of data on ads served to users in the UK.
 - code: AD_OC3
   selected_answer: 'no'
   notes: Although it is possible to extract structured data on ads labeled as political in the UK through the Google Ads Transparency Center, it is not possible to retrieve any structured information on the content of those ads, as the output only provides a URL linking to each ad’s page on the Ads Transparency Center.
