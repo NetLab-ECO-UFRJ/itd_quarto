@@ -9,7 +9,7 @@ special-criteria_answers:
   notes: 'Google provides access to data from its [Ads Transparency Center](https://adstransparency.google.com/?region=GB) via [BigQuery](https://cloud.google.com/bigquery), but no data is available for ads shown in the United Kingdom.'
 - code: AD_SC2
   selected_answer: partial
-  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?region=GB), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in the UK, the data export feature is limited to political ads that were shown to users in the country.
+  notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?region=GB), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in the UK, the data export feature is limited to ads labeled as political that were shown to users in the country.
 - code: AD_SC3
   selected_answer: partial
   notes: The [Ads Transparency Center](https://adstransparency.google.com/?region=GB) allows the extraction of data on political ads that were served at any point over the past seven years. However, it does not provide export capabilities for other types of ads, and our tests using [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br) did not return any results.
