@@ -8,7 +8,7 @@ special-criteria_answers:
   selected_answer: full
   notes: 'It is possible to access and extract data on ads shown across Google platforms through [Google Big Query](https://cloud.google.com/bigquery) or via [Google Cloud Storage](https://console.cloud.google.com/storage/browser/ads-transparency-center/api-data;tab=objects?prefix=&forceOnObjectsSortingFiltering=false).'
 - code: AD_SC2
-  selected_answer: no
+  selected_answer: 'no'
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in the EU, the Ads Transparency Center cannot be used to export data on any type of ads.
 - code: AD_SC3
   selected_answer: full
