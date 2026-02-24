@@ -12,116 +12,109 @@ special-criteria_answers:
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?region=GB), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in the UK, the data export feature is limited to political ads that were shown to users in the country.
 - code: AD_SC3
   selected_answer: partial
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?region=GB) allows the extraction of data on political ads that were served at any point over the past seven years. However, it does not provide export capabilities for other types of ads, and our tests using the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br) did not return any results.
+  notes: The [Ads Transparency Center](https://adstransparency.google.com/?region=GB) allows the extraction of data on political ads that were served at any point over the past seven years. However, it does not provide export capabilities for other types of ads, and our tests using [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br) did not return any results.
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?region=GB), a web-based interface that allows users to search for and view ads across Google products, including YouTube. It includes ads from verified advertisers shown within the past 365 days (or up to seven years for political ads), as well as ads from unverified advertisers in Europe, including the UK, and Turkey.
 - code: AD_OC2
   selected_answer: both
-  notes: The [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) web interface is publicly available and free to use, with no payment or subscription required. The same applies to extracting ad data via the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br), but we were unable to properly verify the availability of data on ads served to users in the UK.
+  notes: The Google Ads Transparency Center web interface is publicly available and free to use, with no payment or subscription required. The same applies to extracting ad data via [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br), but we were unable to properly verify the availability of data on ads served to users in the UK.
 - code: AD_OC3
   selected_answer: 'no'
-  notes: Although it is possible to extract structured data on ads labeled as political in the UK through the [Ads Transparency Center GUI](https://adstransparency.google.com/?hl=pt-BR&region=BR), it is not possible to retrieve any structured information on the content of those ads, as the output only provides a URL linking to each ad’s page on the Ads Transparency Center.
+  notes: Although it is possible to extract structured data on ads labeled as political in the UK through the Google Ads Transparency Center, it is not possible to retrieve any structured information on the content of those ads, as the output only provides a URL linking to each ad’s page on the Ads Transparency Center.
 - code: AD_OC4
   selected_answer: 'no'
-  notes: As we were not able to assess any data on ads served to users in the UK through the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br), authentication mechanisms could not be further evaluated.
+  notes: As we were not able to assess any data on ads served to users in the UK through Google BigQuery, authentication mechanisms could not be further evaluated.
 - code: AD_OC5
   selected_answer: gui
-  notes: It is possible to retrieve data for a specific ad through the [Ads Transparency Center](https://adstransparency.google.com). Although the interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
+  notes: It is possible to retrieve data for a specific ad through the Google Ads Transparency Center. Although the interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
 - code: AD_OC6
   selected_answer: gui
-  notes: The [Ads Transparency Center](https://adstransparency.google.com) allows users to search by advertiser name or domain to view ads from advertisers that were active within the past year. In theory, it is possible to return data on ads from specific advertisers via the [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br), but we were unable to assess any data on ads served to users in Brazil through it.
+  notes: The Google Ads Transparency Center allows users to search by advertiser name or domain to view ads from advertisers that were active within the past year. In theory, it is possible to return data on ads from specific advertisers via Google BigQuery, but we were unable to assess any data on ads served to users in Brazil through it.
 - code: AD_OC7
   selected_answer: 'no'
-  notes: The [Google Ads Transparency Center](https://adstransparency.google.com) does not allow ads to be retrieved using search terms.
+  notes: The Google Ads Transparency Center does not allow ads to be retrieved using search terms.
 - code: AD_OC8
   selected_answer: 'no'
-  notes: When filtering by date, a note states that the data is based on Pacific Time
-    (PT). There is no such indication in the actual ad entries.
+  notes: The Google Ads Transparency Center displays data, such as dates, using locale-specific formats. For example, the interface may show “Nov 12, 2025,” which follows English localization conventions. This indicates that data presentation is localized according to the user’s region or language settings rather than being standardized or locale-neutral.
 completeness_answers:
 - code: AD_OC9
   selected_answer: gui
-  notes: The interface discloses the page name and unique identifier, but there is
-    no URL associated with the advertiser.
+  notes: The Google Ads Transparency Center discloses the page name and unique identifier associated with each advertiser. It is also possible to access all available ads from a specific advertiser on a dedicated page.
 - code: AD_OC10
   selected_answer: 'no'
-  notes: ''
+  notes: The Google Ads Transparency Center only discloses the advertiser’s name and does not provide additional information about sponsors or funders.
 - code: AD_OC11
-  selected_answer: 'no'
-  notes: The interval in which the ads ran is only available for political ads. Other
-    categories only include the date when it was last shown.
+  selected_answer: gui
+  notes: The Google Ads Transparency Center discloses the start and end dates for ads labeled as political. For all other ads, it only provides the last date on which the ad was shown and does not include detailed information on the full period during which the ad was served.
 - code: AD_OC12
   selected_answer: 'no'
-  notes: The only metric available is the number of views (as a range), but only for
-    political ads.
+  notes: The Google Ads Transparency Center does not provide any data on user engagement with ads.
 - code: AD_OC13
   selected_answer: gui
-  notes: However, this information is displayed only in the advertiser's profile,
-    not in the individual ad record.
+  notes: In the UK, the Google Ads Transparency Center distinguishes between verified and unverified advertisers.
 compliance_answers:
 - code: AD_OC14
-  selected_answer: 'no'
-  notes: ''
+  selected_answer: gui
+  notes: The Google Ads Transparency Center discloses information on moderated ads labeled as political, including the reason for moderation and the date on which they were last served.
 - code: AD_OC15
   selected_answer: 'no'
-  notes: ''
+  notes: The Google Ads Transparency Center does not provide any information regarding the use of generative AI in the creation or manipulation of ad content.
 - code: AD_OC16
-  selected_answer: gui
-  notes: ''
+  selected_answer: both
+  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) an be accessed without registration or login. Although we were unable to use it to retrieve ads served to users in the UK, the [Political Advertising on Google dataset documentation](https://console.cloud.google.com/marketplace/details/transparency-report/google-political-ads?filter=solution-type:dataset&q=ad&id=0c422e45-5809-4373-b2f4-ce31204c2f4c&project=monitoramento-de-canais) for Google BigQuery is also publicly available.
 - code: AD_OC17
-  selected_answer: gui
-  notes: ''
+  selected_answer: both
+  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is clearly written and exemplified. Although we were unable to use it to retrieve ads served to users in the UK, the [Political Advertising on Google dataset documentation](https://console.cloud.google.com/marketplace/details/transparency-report/google-political-ads?filter=solution-type:dataset&q=ad&id=0c422e45-5809-4373-b2f4-ce31204c2f4c&project=monitoramento-de-canais) for Google BigQuery is also publicly available and includes demonstration queries and usage examples.
 - code: AD_OC18
-  selected_answer: gui
-  notes: ''
+  selected_answer: both
+  notes: While the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) clearly redirects users to its [terms of service](https://adstransparency.google.com/terms), the [Political Advertising on Google dataset documentation](https://console.cloud.google.com/marketplace/details/transparency-report/google-political-ads?filter=solution-type:dataset&q=ad&id=0c422e45-5809-4373-b2f4-ce31204c2f4c&project=monitoramento-de-canais) for Google BigQuery states that “there are no restrictions on the use of this data. It is provided "AS IS" without any warranty, express or implied, from Google. Google disclaims all liability for any damages, direct or indirect, resulting from the use of this dataset.”.
 - code: AD_OC19
-  selected_answer: gui
-  notes: ''
+  selected_answer: both
+  notes: Both the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) and the [Political Advertising on Google dataset documentation](https://console.cloud.google.com/marketplace/details/transparency-report/google-political-ads?filter=solution-type:dataset&q=ad&id=0c422e45-5809-4373-b2f4-ce31204c2f4c&project=monitoramento-de-canais) are available in English.
 - code: AD_OC20
-  selected_answer: not_applicable
-  notes: There is no API.
+  selected_answer: 'yes'
+  notes: Although we were unable to use it to retrieve ads served to users in the UK, the Google Cloud Console provides a dedicated [“Release Notes”](https://console.cloud.google.com/release-notes) page to inform users about announcements of new or updated features, bug fixes, known issues, and deprecated functionality across its services.
 - code: AD_OC21
   selected_answer: not_applicable
-  notes: ''
+  notes: Because ad data is programmatically extracted from a relational database through Google BigQuery using SQL queries, there are no dataset-specific endpoints to be explored.
 - code: AD_OC22
-  selected_answer: not_applicable
-  notes: ''
+  selected_answer: 'yes'
+  notes: Although we were unable to use it to retrieve ads served to users in the UK, each user can process up to 1 TB of data per month through the Google BigQuery free tier.
 consistency_answers:
 - code: AD_OC23
-  selected_answer: not_applicable
-  notes: ''
+  selected_answer: 'no'
+  notes: As we were unable to properly verify the availability of data on ads served to users in the UK via Google BigQuery, this item cannot be assessed.
 - code: AD_OC24
   selected_answer: gui
-  notes: ''
+  notes: We ran multiple parallel queries in the Ads Transparency Center and confirmed that the results were consistent and reproducible.
 - code: AD_OC25
   selected_answer: gui
-  notes: ''
+  notes: We ran multiple parallel queries in the Ads Transparency Center and confirmed that the results were consistent with the specified parameters and filters.
 relevance_answers:
 - code: AD_OC26
   selected_answer: gui
-  notes: ''
+  notes: The Google Ads Transparency Center supports filtering ads by date after a specific advertiser or target domain has been selected.
 - code: AD_OC27
-  selected_answer: not_applicable
-  notes: In the GUI, the only categories are political and non-political ads.
+  selected_answer: 'no'
+  notes: The Google Ads Transparency Center only distinguishes between ads labeled as political and non-political and does not provide filters based on ad categories.
 - code: AD_OC28
   selected_answer: 'no'
-  notes: The most specific geographic level is country.
+  notes: Filtering is only available at the country level in the Google Ads Transparency Center.
 accuracy_answers:
 - code: AD_OC29
   selected_answer: 'no'
-  notes: ''
+  notes: The Google Ads Transparency Center does not provide any age or gender information about an ad’s audience.
 - code: AD_OC30
   selected_answer: 'no'
-  notes: The GUI platform doesn't provide any audience engagement metrics.
+  notes: The Google Ads Transparency Center does not provide any subnational location data about an ad’s audience.
 - code: AD_OC31
-  selected_answer: 'no'
-  notes: Only for political ads.
+  selected_answer: gui
+  notes: The Google Ads Transparency Center displays the targeting criteria set by advertisers for ads labeled as political that were served to users in the UK, including demographic information, geographic locations, and so-called contextual signals.
 - code: AD_OC32
   selected_answer: 'no'
-  notes: Impressions are only available for political ads. Some intervals are greater
-    than specified by the question.
+  notes: The Google Ads Transparency Center provides data on the number of impressions in the UK for ads labeled as political, but not at a sufficiently granular level.
 - code: AD_OC33
   selected_answer: 'no'
-  notes: Ad spending information is only available for political ads. Some intervals
-    are greater than specified by the question.
+  notes: The Google Ads Transparency Center provides data on spending in the UK for ads labeled as political, but not at a sufficiently granular level.
