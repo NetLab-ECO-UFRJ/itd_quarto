@@ -31,13 +31,13 @@ accessibility_answers:
   notes: It is possible to retrieve data for a specific ad through the Google Ads Transparency Center. Although the interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
 - code: AD_OC6
   selected_answer: gui
-  notes: The Google Ads Transparency Center allows users to search by advertiser name or domain to view ads from advertisers that were active within the past year. In theory, it is possible to return data on ads from specific advertisers via Google BigQuery, but we were unable to assess any data on ads served to users in Brazil through it.
+  notes: The Google Ads Transparency Center allows users to search by advertiser name or domain to view ads from advertisers that were active within the past year. In theory, it is possible to return data on ads from specific advertisers via Google BigQuery, but we were unable to assess any data on ads served to users in the UK through it.
 - code: AD_OC7
   selected_answer: 'no'
   notes: The Google Ads Transparency Center does not allow ads to be retrieved using search terms.
 - code: AD_OC8
   selected_answer: 'no'
-  notes: The Google Ads Transparency Center displays data, such as dates, using locale-specific formats. For example, the interface may show “Nov 12, 2025,” which follows English localization conventions. This indicates that data presentation is localized according to the user’s region or language settings rather than being standardized or locale-neutral.
+  notes: The Google Ads Transparency Center displays data, such as dates, using locale-specific formats. For example, the interface may show “Nov 12, 2025”, which follows English localization conventions. This indicates that data presentation is localized according to the user’s region or language settings rather than being standardized or locale-neutral.
 completeness_answers:
 - code: AD_OC9
   selected_answer: gui

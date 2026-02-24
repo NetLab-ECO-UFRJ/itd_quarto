@@ -25,19 +25,19 @@ accessibility_answers:
   notes: Although it is possible to extract structured data on ads served to users in the EU through Google BigQuery, it is not possible to retrieve structured information on the content of those ads, as the output only provides a URL linking to each ad’s page on the Ads Transparency Center.
 - code: AD_OC4
   selected_answer: 'yes'
-  notes: We did not encounter any authentication issues when using Google BigQuery to extract data on ads served to users in the EU, as users only need an active project on Google Cloud Platform to access and run the queries.
+  notes: We did not encounter any authentication issues when using Google BigQuery to extract data on ads served to users in the EU, as users only need an active project on Google Cloud Platform to access and run queries.
 - code: AD_OC5
   selected_answer: both
   notes: It is possible to retrieve data for a specific ad through both the Google Ads Transparency Center and Google BigQuery. Although the interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
 - code: AD_OC6
   selected_answer: both
-  notes: The Google Ads Transparency Center allows users to search by advertiser name or domain to view ads from advertisers that were active within the past year. It is also possible to return data on ads from specific advertisers via Google BigQuery.
+  notes: The Google Ads Transparency Center allows users to search by advertiser name or domain to view ads from advertisers that were active within the past year. It is also possible to retrieve data on ads from specific advertisers via Google BigQuery.
 - code: AD_OC7
   selected_answer: 'no'
   notes: The Google Ads Transparency Center does not allow ads to be retrieved using search terms.
 - code: AD_OC8
   selected_answer: api
-  notes: The Google Ads Transparency Center displays data, such as dates, using locale-specific formats. For example, the interface may show “Nov 12, 2025,” which follows English localization conventions. This indicates that data presentation is localized according to the user’s region or language settings rather than being standardized or locale-neutral. However, timestamps returned by Google BigQuery are provided in Coordinated Universal Time (UTC) and follow the ISO 8601 standard.
+  notes: The Google Ads Transparency Center displays data, such as dates, using locale-specific formats. For example, the interface may show “Nov 12, 2025”, which follows English localization conventions. This indicates that data presentation is localized according to the user’s region or language settings rather than being standardized or locale-neutral. However, timestamps returned by Google BigQuery are provided in Coordinated Universal Time (UTC) and follow the ISO 8601 standard.
 completeness_answers:
 - code: AD_OC9
   selected_answer: both
