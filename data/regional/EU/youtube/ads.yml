@@ -56,8 +56,8 @@ completeness_answers:
   notes: In the EU, the Google Ads Transparency Center distinguishes between verified and unverified advertisers. This also applies to ad data retrieved via Google BigQuery.
 compliance_answers:
 - code: AD_OC14
-  selected_answer: api
-  notes: Through Google BigQuery, it is possible to retrieve the reasons for each ad disapproval, as well as the dates when the ads were last shown in each region where they appeared.
+  selected_answer: both
+  notes: Both the Ads Transparency Center and the Google BigQuery dataset display and return flags for moderated ads, including the reasons for the decision, the internal category assigned to the reason, whether the moderation was proactive, and the date on which the ad was last served.
 - code: AD_OC15
   selected_answer: 'no'
   notes: The Google Ads Transparency Center does not provide any information regarding the use of generative AI in the creation or manipulation of ad content.
