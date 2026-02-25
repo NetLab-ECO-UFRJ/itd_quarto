@@ -46,7 +46,7 @@ book:
     - chapters/appendices/instagram.qmd
     - chapters/appendices/kwai.qmd
     - chapters/appendices/linkedin.qmd
-    - chapters/appendices/meta.qmd
+#    - chapters/appendices/meta.qmd
     - chapters/appendices/pinterest.qmd
     - chapters/appendices/reddit.qmd
     - chapters/appendices/snapchat.qmd
