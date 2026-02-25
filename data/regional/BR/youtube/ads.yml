@@ -12,7 +12,7 @@ special-criteria_answers:
 - code: AD_SC3
   selected_answer: 'no'
   notes: It is not possible to extract structured, up-to-date data on ads served to users in Brazil through either the [Google Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) or [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br).
-  accessibility_answers:
+accessibility_answers:
 - code: AD_OC1
   selected_answer: partial
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. It includes ads from verified advertisers shown within the past 365 days, as well as ads from unverified advertisers in Europe and Turkey. As a result, availability for Brazilian users is more limited due to restrictions on unverified advertisers.
