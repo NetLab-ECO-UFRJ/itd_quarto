@@ -6,7 +6,7 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: full
-  notes: 'It is possible to access and extract data on ads shown across Google platforms through [Google Big Query](https://cloud.google.com/bigquery) or via [Google Cloud Storage](https://console.cloud.google.com/storage/browser/ads-transparency-center/api-data;tab=objects?prefix=&forceOnObjectsSortingFiltering=false).'
+  notes: 'It is possible to access and extract data on ads shown across Google platforms through [Google Big Query](https://cloud.google.com/bigquery) or via [Google Cloud Storage](https://console.cloud.google.com/storage/browser/ads-transparency-center/api-data).'
 - code: AD_SC2
   selected_answer: 'no'
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in the EU, the Ads Transparency Center cannot be used to export data on any type of ads. Previously, it was possible to extract data on ads labeled as political, but this is no longer possible following [Google’s ban on political ads in the EU](https://www.techpolicy.press/what-data-reveals-about-meta-and-googles-political-ad-ban-in-the-eu/).
@@ -63,16 +63,16 @@ compliance_answers:
   notes: The Google Ads Transparency Center does not provide any information regarding the use of generative AI in the creation or manipulation of ad content.
 - code: AD_OC16
   selected_answer: both
-  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) can be accessed without registration or login. The [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center?hl=es-419&pli=1&project=monitoramento-de-canais) for Google BigQuery is also publicly available.
+  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) can be accessed without registration or login. The [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center) for Google BigQuery is also publicly available.
 - code: AD_OC17
   selected_answer: both
-  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is clearly written and exemplified. The [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center?hl=es-419&pli=1&project=monitoramento-de-canais) for Google BigQuery is also publicly available and includes demonstration queries and usage examples.
+  notes: Despite its limited scope, the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is clearly written and exemplified. The [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center) for Google BigQuery is also publicly available and includes demonstration queries and usage examples.
 - code: AD_OC18
   selected_answer: both
-  notes: The [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) clearly redirects users to its terms of service, while the [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center?hl=es-419&pli=1&project=monitoramento-de-canais) for Google BigQuery states that it is subject to the [Google Terms of Service](https://policies.google.com/terms) and the [Ads Transparency Center Additional Terms](https://adstransparency.google.com/terms).
+  notes: The [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) clearly redirects users to its terms of service, while the [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center) for Google BigQuery states that it is subject to the [Google Terms of Service](https://policies.google.com/terms) and the [Ads Transparency Center Additional Terms](https://adstransparency.google.com/terms).
 - code: AD_OC19
   selected_answer: gui
-  notes: While the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is available in the EU local languages, the [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center?hl=es-419&pli=1&project=monitoramento-de-canais) for Google BigQuery is not.
+  notes: While the [Google Ads Transparency Center documentation](https://adstransparency.google.com/faq) is available in the EU local languages, the [Google Ads Transparency Center dataset documentation](https://console.cloud.google.com/marketplace/product/bigquery-public-data/google-ads-transparency-center) for Google BigQuery is not.
 - code: AD_OC20
   selected_answer: 'yes'
   notes: The Google Cloud Console provides a dedicated [“Release Notes”](https://console.cloud.google.com/release-notes) page to inform users about announcements of new or updated features, bug fixes, known issues, and deprecated functionality across its services.
