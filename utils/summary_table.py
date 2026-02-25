@@ -44,6 +44,30 @@ def get_score_class(score: float) -> str:
         return "score-irrelevant"
 
 
+PLATFORM_ICON_OVERRIDES = {
+    'kwai': 'kuaishou',
+    'linkedin': 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg',
+}
+
+SIMPLEICONS_CDN = 'https://cdn.simpleicons.org'
+
+
+def get_platform_icon(platform_display: str, size: int = 16) -> str:
+    """Return an <img> tag for the platform's brand icon via Simple Icons CDN."""
+    key = platform_display.lower().split('/')[0].strip()
+    override = PLATFORM_ICON_OVERRIDES.get(key)
+    if override and override.startswith('http'):
+        url = override
+    else:
+        slug = override or key
+        url = f'{SIMPLEICONS_CDN}/{slug}/000000'
+    return (
+        f'<img src="{url}" '
+        f'alt="{platform_display}" width="{size}" height="{size}" '
+        f'style="vertical-align: middle; margin-right: 6px;">'
+    )
+
+
 def normalize_platform_name(platform_name: str) -> str:
     """
     Normalize platform directory name to display name.
@@ -224,7 +248,8 @@ def generate_summary_heatmap(
 
     for platform, regions in sorted_platforms:
         html += f'        <tr>\n'
-        html += f'            <td class="platform-name">{platform}</td>\n'
+        icon = get_platform_icon(platform)
+        html += f'            <td class="platform-name">{icon}{platform}</td>\n'
 
         for region in ['BR', 'EU', 'UK']:
             score = regions.get(region)
