@@ -5,16 +5,16 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'no'
-  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/). Analyses may be conducted within the tool, but only their aggregated results can be extracted.
+  notes: Although Meta provides the [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), it does not allow the extraction of structured data or the analysis of user-generated content from Threads. These functions are [only available through its accompanying web interface](https://transparency.meta.com/researchtools/meta-content-library/).
 - code: UGC_SC2
   selected_answer: 'no'
-  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/). Moreover, the public content available for analysis is restricted to a subset of pages and profiles that either meet a minimum [follower threshold](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview) or are otherwise verified by the platform.
+  notes: Although Meta provides the [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), it does not allow the extraction of structured data or the analysis of user-generated content from Threads. These functions are [only available through its accompanying web interface](https://transparency.meta.com/researchtools/meta-content-library/).
 - code: UGC_SC3
   selected_answer: 'no'
-  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/).
+  notes: Although Meta provides the [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), it does not allow the extraction of structured data or the analysis of user-generated content from Threads. These functions are [only available through its accompanying web interface](https://transparency.meta.com/researchtools/meta-content-library/).
 - code: UGC_SC4
-  selected_answer: 'yes'
-  notes: In addition to the `Meta Content Library API`, the company also provides the [`Meta Content Library User Interface`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), which enables approved researchers to visualize and extract structured data on user-generated content across Meta platforms.
+  selected_answer: 'no'
+  notes: Even though the Meta Content Library User Interface allows users to query public Threads user-generated content, specifically posts shared by public profiles with 100 or more followers, [it does not enable structured data extraction for Threads in the same way it does for Facebook and Instagram](https://developers.facebook.com/docs/content-library-and-api/content-library).
 accessibility_answers:
 - code: UGC_OC2
   selected_answer: 'no'
