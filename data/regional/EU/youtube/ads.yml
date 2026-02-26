@@ -84,8 +84,8 @@ compliance_answers:
   notes: Each user can process up to 1 TB of data per month through the Google BigQuery free tier.
 consistency_answers:
 - code: AD_OC23
-  selected_answer: 'yes'
-  notes: All information returned by the Google BigQuery dataset is also reflected in the Ads Transparency Center web interface, including the advertiser name, ad funder (when available), ad topic, targeting criteria, and ad impressions.
+  selected_answer: 'no'
+  notes: Most of the information returned by the Google BigQuery dataset is also reflected in the Ads Transparency Center web interface, including the advertiser name, ad funder (when available), ad topic, and ad impressions. However, because BigQuery only indicates whether targeting criteria were used, without detailing how they were configured, unlike the web interface, there is a clear gap between the information provided by the two tools.
 - code: AD_OC24
   selected_answer: both
   notes: We ran multiple parallel queries in the Ads Transparency Center and confirmed that the results were consistent and reproducible. Moreover, multiple requests to extract data from the Google BigQuery dataset also returned consistent and reproducible results.
