@@ -84,8 +84,8 @@ compliance_answers:
   notes: Each user can process up to 1 TB of data per month through the Google BigQuery free tier.
 consistency_answers:
 - code: AD_OC23
-  selected_answer: 'no'
-  notes: Most of the information returned by the Google BigQuery dataset is also reflected in the Ads Transparency Center web interface, including the advertiser name, ad funder (when available), ad topic, and ad impressions. However, because BigQuery only indicates whether targeting criteria were used, without detailing how they were configured, unlike the web interface, there is a clear gap between the information provided by the two tools.
+  selected_answer: 'yes'
+  notes: All information returned by the Google BigQuery dataset is also reflected in the Ads Transparency Center web interface, including the advertiser name, ad funder (when available), ad topic, and ad impressions.
 - code: AD_OC24
   selected_answer: both
   notes: We ran multiple parallel queries in the Ads Transparency Center and confirmed that the results were consistent and reproducible. Moreover, multiple requests to extract data from the Google BigQuery dataset also returned consistent and reproducible results.
@@ -110,8 +110,8 @@ accuracy_answers:
   selected_answer: 'no'
   notes: The Google Ads Transparency Center does not provide any subnational location data about an ad’s audience.
 - code: AD_OC31
-  selected_answer: gui
-  notes: The Google Ads Transparency Center displays the targeting criteria set by advertisers for ads served to users in the EU, including demographic information, geographic locations, contextual signals, customer lists, and topics of interest. By contrast, the Google BigQuery dataset only indicates whether targeting criteria were used and does not provide details on how they were configured by advertisers.
+  selected_answer: 'no'
+  notes: Neither the Google Ads Transparency Center nor the Google BigQuery dataset displays the exact configuration of the targeting criteria used for ads served to users in the EU, as both only indicate whether targeting was applied.
 - code: AD_OC32
   selected_answer: 'no'
   notes: The Google Ads Transparency Center provides data on the number of ad impressions in the EU, but not at a sufficiently granular level.
