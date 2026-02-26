@@ -41,7 +41,7 @@ accessibility_answers:
 completeness_answers:
 - code: AD_OC9
   selected_answer: both
-  notes: The Google Ads Transparency Center and Google BigQuery, in the case of ads labeled as political, results disclose the page name and unique identifier associated with each advertiser. It is also possible to access all available ads from a specific advertiser on a dedicated page.
+  notes: The Google Ads Transparency Center and Google BigQuery results, in the case of ads labeled as political, disclose the page name and unique identifier associated with each advertiser. It is also possible to access all available ads from a specific advertiser on a dedicated page.
 - code: AD_OC10
   selected_answer: 'no'
   notes: The Google Ads Transparency Center only discloses the advertiser’s name and does not provide additional information about sponsors or funders.
