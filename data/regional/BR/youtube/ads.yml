@@ -5,7 +5,7 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: 'no'
-  notes: In theory, it is possible to access data on political ads that were served in Brazil from the [Google Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) via [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br). However, [as Google banned political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), this feature does not return up-to-date data. In practice, our tests with Google BigQuery did not return any results, whether for older or more recent data.
+  notes: In theory, it is possible to access data on ads labeled as political that were served in Brazil from the [Google Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR) via [Google BigQuery](https://cloud.google.com/bigquery?hl=pt_br). However, [as Google banned political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), this feature does not return up-to-date data.
 - code: AD_SC2
   selected_answer: 'no'
   notes: Google provides the [Ads Transparency Center](https://adstransparency.google.com/?hl=pt-BR&region=BR), a web-based interface that allows users to search for and view ads across Google products, including YouTube. The tool lets users filter results by advertiser, date range, region, and ad format to explore advertising content. However, in Brazil, the data export feature is limited to ads labeled as political that were shown to users in the country. [As Google banned political ads in Brazil in 2024](https://netlab.eco.ufrj.br/post/nota-tecnica-google), this feature does not return up-to-date ad data.
