@@ -6,94 +6,94 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country. Although Meta is expected to integrate public WhatsApp channels into the Meta Content Library in the near future, it had not done so by the time our analysis was conducted, and no specific timeframe has been announced. As a result, research on the platform still relies on data scraping (see Schaffner et al., 2024).
+  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data. Although Meta is expected to integrate public WhatsApp channels into the Meta Content Library in the near future, it had not done so by the time our analysis was conducted, and no specific timeframe has been announced. As a result, research on the platform still relies on [data scraping](https://arxiv.org/abs/2401.15221).
 - code: UGC_SC2
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data.
 - code: UGC_SC3
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data.
 - code: UGC_SC4
   selected_answer: 'no'
-  notes: In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data, WhatsApp likewise does not offer a graphical interface for this purpose.
+  notes: In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data, WhatsApp likewise does not offer a graphical interface for this purpose. Although Meta is expected to integrate public WhatsApp channels into the Meta Content Library in the near future, it had not done so by the time our analysis was conducted, and no specific timeframe has been announced.
 accessibility_answers:
 - code: UGC_OC2
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC3
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC4
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC5
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC6
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC7
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 compliance_answers:
 - code: UGC_OC10
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC11
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC12
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC13
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC14
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC15
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC8
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC9
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 completeness_answers:
 - code: UGC_OC16
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC17
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC18
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC19
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC21
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 relevance_answers:
 - code: UGC_OC22
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC23
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC24
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 - code: UGC_OC25
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
 timeliness_answers:
 - code: UGC_OC26
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country (see Schaffner et al., 2024).
+  notes: '-'
