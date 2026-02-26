@@ -5,16 +5,16 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'no'
-  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/). Analyses may be conducted within the tool, but only their aggregated results can be extracted.
+  notes: Although Meta provides the [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/). Analyses may be conducted within the tool, but only their aggregated results can be extracted.
 - code: UGC_SC2
   selected_answer: 'no'
-  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/). Moreover, the public content available for analysis is restricted to a subset of pages and profiles that either meet a minimum [follower threshold](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview) or are otherwise verified by the platform.
+  notes: Although Meta provides the [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/). Moreover, the public content available for analysis is restricted to a subset of pages and profiles that either meet a minimum [follower threshold](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview) or are otherwise verified by the platform.
 - code: UGC_SC3
   selected_answer: 'no'
-  notes: Although Meta provides the [`Meta Content Library API`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/).
+  notes: Although Meta provides the [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), extracting structured data from it is not permitted and violates its [terms and conditions](https://transparency.meta.com/researchtools/product-terms-meta-research/).
 - code: UGC_SC4
   selected_answer: 'yes'
-  notes: In addition to the `Meta Content Library API`, the company also provides the [`Meta Content Library User Interface`](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), which enables approved researchers to visualize and extract structured data on user-generated content across Meta platforms.
+  notes: In addition to the Meta Content Library API, the company also provides the [Meta Content Library User Interface](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api), which enables approved researchers to visualize and extract structured data on user-generated content across Meta platforms. The tool allows [data extraction](https://developers.facebook.com/docs/content-library-and-api/content-library) from Instagram posts made by business and creator accounts with at least 25,000 followers, personal accounts with at least 25,000 followers, and any business, creator, or personal account with a verified badge.
 accessibility_answers:
 - code: UGC_OC2
   selected_answer: 'no'
