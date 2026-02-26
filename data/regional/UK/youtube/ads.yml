@@ -57,7 +57,7 @@ completeness_answers:
 compliance_answers:
 - code: AD_OC14
   selected_answer: gui
-  notes: The Google Ads Transparency Center discloses information on moderated ads labeled as political, including the reason for moderation and the date on which they were last served. However, the [Google BigQuery dataset](https://console.cloud.google.com/marketplace/details/transparency-report/google-political-ads) does not provide any information in this regard.
+  notes: The Google Ads Transparency Center discloses information on moderated ads labeled as political, including the reason for moderation and the date on which they were last served. However, the Google BigQuery dataset does not provide any information in this regard.
 - code: AD_OC15
   selected_answer: 'no'
   notes: The Google Ads Transparency Center does not provide any information regarding the use of generative AI in the creation or manipulation of ad content.
