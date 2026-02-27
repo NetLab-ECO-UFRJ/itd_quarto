@@ -8,9 +8,9 @@ sources:
     EU: data/global/whatsapp/ugc.yml
     UK: data/global/whatsapp/ugc.yml
   ads:
-    BR: data/regional/BR/whatsapp/ads.yml
-    EU: data/regional/EU/whatsapp/ads.yml
-    UK: data/regional/UK/whatsapp/ads.yml
+    BR: data/regional/BR/meta/ads.yml
+    EU: data/regional/EU/meta/ads.yml
+    UK: data/regional/UK/meta/ads.yml
 ---
 
 ```{python}

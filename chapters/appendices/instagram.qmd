@@ -8,9 +8,9 @@ sources:
     EU: data/global/instagram/ugc.yml
     UK: data/global/instagram/ugc.yml
   ads:
-    BR: data/regional/BR/instagram/ads.yml
-    EU: data/regional/EU/instagram/ads.yml
-    UK: data/regional/UK/instagram/ads.yml
+    BR: data/regional/BR/meta/ads.yml
+    EU: data/regional/EU/meta/ads.yml
+    UK: data/regional/UK/meta/ads.yml
 ---
 
 ```{python}

@@ -8,9 +8,9 @@ sources:
     EU: data/global/threads/ugc.yml
     UK: data/global/threads/ugc.yml
   ads:
-    BR: data/regional/BR/threads/ads.yml
-    EU: data/regional/EU/threads/ads.yml
-    UK: data/regional/UK/threads/ads.yml
+    BR: data/regional/BR/meta/ads.yml
+    EU: data/regional/EU/meta/ads.yml
+    UK: data/regional/UK/meta/ads.yml
 ---
 
 ```{python}
