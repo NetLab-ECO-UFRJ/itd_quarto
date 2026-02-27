@@ -65,7 +65,7 @@ compliance_answers:
   notes: The documentation for the Snapchat Ads Gallery [API](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) is published in open access, but no documentation or FAQ was found for the GUI.
 - code: AD_OC17
   selected_answer: api
-  notes: The [Snapchat Ads Gallery API’s documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) is clearly written and exemplified.
+  notes: The [Snapchat Ads Gallery API documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api) is clearly written and exemplified.
 - code: AD_OC18
   selected_answer: 'no'
   notes: The terms of use for the Snapchat Ads Gallery API are not linked in its official [documentation](https://developers.snap.com/api/marketing-api/Ads-Gallery-Api/using-the-api).
