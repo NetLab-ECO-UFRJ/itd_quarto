@@ -6,23 +6,23 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: full
-  notes: Data from all types of ads can be retrieved through the [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api).
+  notes: Data from all types of ads can be retrieved through the [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) and remains available for collection for up to one year after the ad’s last impression.
 - code: AD_SC2
   selected_answer: 'no'
-  notes: Although [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/) allows users to view ads served on the platform, it does not provide any means to export structured data.
+  notes: Although the [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/) allows users to view ads served on the platform for up to one year after their last impression, it does not provide any means to export structured data.
 - code: AD_SC3
   selected_answer: 'full'
-  notes: Both the LinkedIn Ad Library GUI and API allow users to verify the most recent date on which an ad was served to a user.
+  notes: Both the LinkedIn Ad Library GUI and API allow users to see the most recent date an ad was served, enabling verification that data can be retrieved for both active and inactive ads.
 accessibility_answers:
 - code: AD_OC1
   selected_answer: full
-  notes: Ad content can be accessed and viewed through the [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/).
+  notes: The [LinkedIn Ad Library GUI](https://www.linkedin.com/ad-library/) allows users to query and filter ads served to LinkedIn users for up to one year after their last impression.
 - code: AD_OC2
   selected_answer: both
-  notes: Access to the LinkedIn Ad Library is free of charge.
+  notes: Access to the LinkedIn Ad Library, via both the API and the GUI, is free of charge.
 - code: AD_OC3
   selected_answer: 'no'
-  notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) returns only the ad URL, the period during which it ran and information about the advertiser—including their name, page URL, and funder—but does not provide the ad creative itself.
+  notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) returns only the ad URL, the period during which it ran and information about the advertiser—including their name, page URL, publication date and funder—but does not provide the ad creative itself.
 - code: AD_OC4
   selected_answer: 'yes'
   notes: The [LinkedIn Ad Library API](https://www.linkedin.com/ad-library/api) provides a form of authentication thatallows for renewal without the risk of data loss.
