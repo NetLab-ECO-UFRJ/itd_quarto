@@ -25,7 +25,7 @@ accessibility_answers:
   notes: Although it is possible to extract structured data on ads labeled as political in the UK through the Google Ads Transparency Center and Google BigQuery, it is not possible to retrieve any structured information on the content of those ads, as the output only provides a URL linking to each ad’s page on the Ads Transparency Center.
 - code: AD_OC4
   selected_answer: 'yes'
-  notes: We did not encounter any authentication issues when using Google BigQuery to extract data on ads served to users in the EU, as users only need an active project on Google Cloud Platform to access and run queries.
+  notes: We did not encounter any authentication issues when using Google BigQuery to extract data on ads served to users in the UK, as users only need an active project on Google Cloud Platform to access and run queries.
 - code: AD_OC5
   selected_answer: both
   notes: It is possible to retrieve data for a specific ad through both the Google Ads Transparency Center and, in the case of ads labeled as political, Google BigQuery. Although the web interface does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
