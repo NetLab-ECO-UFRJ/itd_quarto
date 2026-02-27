@@ -6,7 +6,7 @@ metadata:
 special-criteria_answers:
 - code: AD_SC1
   selected_answer: partial
-  notes: The [Meta Ad Library API](https://www.facebook.com/ads/library/api/) permits the retrieval of data on ads labeled and classified as political or issue ads in Brazil. Other ads that are not categorized in this way can also be accessed through the API, but only if they were delivered to users located in the European Union or the United Kingdom.
+  notes: The [Meta Ad Library API](https://www.facebook.com/ads/library/api/) permits the retrieval of data on ads labeled and classified as political or issue ads served in Brazil through Meta’s platforms—including Facebook, Instagram, Threads, WhatsApp, and Audience Network—which are stored and remain accessible for up to seven years. Other ads that are not categorized as such can also be accessed through the API, but only if they were delivered to users in the European Union or the United Kingdom.
 - code: AD_SC2
   selected_answer: partial
   notes: The [Meta Ad Library GUI](https://www.facebook.com/ads/library/) likewise permits structured data extraction only for ads labeled and classified as political or issue ads in Brazil. Other ads may be visible to users while they are actively being served on the platform, but their data cannot be extracted in a structured format.
@@ -19,7 +19,7 @@ accessibility_answers:
   notes: The [Meta Ad Library GUI](https://www.facebook.com/ads/library/) allows users to view and extract data on ads labeled and classified as political or issue ads in Brazil for up to seven years, whereas other ads can be viewed only while they are actively being served to users on the company’s platforms.
 - code: AD_OC2
   selected_answer: both
-  notes: Access to the Meta Ad Library is free of charge.
+  notes: Access to the Meta Ad Library, both through its API and GUI, is free of charge.
 - code: AD_OC3
   selected_answer: both
   notes: It is possible to extract structured data on both ad creatives and authorship through the [Meta Ad Library API and GUI](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive).
@@ -37,7 +37,7 @@ accessibility_answers:
   notes: It is possible to use keywords to perform searches through both the [Meta Ad Library GUI and API](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive).
 - code: AD_OC8
   selected_answer: both
-  notes: Timestamps are returned in Coordinated Universal Time (UTC) using the ISO 8601 standard. They are not automatically localized, and no locale information (such as language or region) is attached unless explicitly requested or inferred. Monetary values may appear in multiple currencies, but these are always expressed using standard ISO currency codes rather than localized formats.
+  notes: Timestamps for ads labeled and classified as political or issue ads are returned in Coordinated Universal Time (UTC) using the ISO 8601 standard. They are not automatically localized, and no locale information (such as language or region) is attached unless explicitly requested or inferred. Monetary values may appear in multiple currencies, but these are always expressed using standard ISO currency codes rather than localized formats.
 completeness_answers:
 - code: AD_OC9
   selected_answer: both
@@ -57,7 +57,7 @@ completeness_answers:
 compliance_answers:
 - code: AD_OC14
   selected_answer: both
-  notes: Through the API, the Meta Ad Library indicates when an ad has been removed—provided that the appropriate parameters are set—while disclosing both the reason for removal and the ad’s final date of airing. The GUI likewise presents the reasons for an ad’s removal and its final airing date, and additionally allows users to view the ad content itself when it was removed for violating the company’s [Advertising Standards](https://transparency.meta.com/policies/ad-standards/) or labeling guidelines.
+  notes: Through the API, the Meta Ad Library indicates when an ad labeled and classified as political or issue ad has been removed—provided that the appropriate parameters are set—while disclosing both the reason for removal and the ad’s final date of airing. The GUI likewise presents the reasons for an ad’s removal and its final airing date, and additionally allows users to view the ad content itself when it was removed for violating the company’s [Advertising Standards](https://transparency.meta.com/policies/ad-standards/) or labeling guidelines.
 - code: AD_OC15
   selected_answer: gui
   notes: The Meta Ad Library API [response schema](https://developers.facebook.com/docs/graph-api/reference/archived-ad/) does not indicate whether ad content was created or manipulated using generative AI. The GUI, on the other hand, [explicitly discloses this information](https://www.facebook.com/government-nonprofits/blog/political-ads-ai-disclosure-policy) for ads labeled as political or issue ads, when such use is declared by the advertiser.
@@ -75,7 +75,7 @@ compliance_answers:
   notes: The [API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive) is available only in English, with just a few headings translated into Portuguese, while the body text and descriptions remain in English. By contrast, the GUI documentation is fully available in Portuguese.
 - code: AD_OC20
   selected_answer: 'yes'
-  notes: The Meta Ad Library provides a [changelog](https://developers.facebook.com/docs/graph-api/changelog) detailing deprecation strategies and listing all upcoming changes, along with their respective release and expiration dates.
+  notes: The Meta Ad Library provides a [changelog](https://developers.facebook.com/docs/graph-api/changelog) for its API detailing deprecation strategies and listing all upcoming changes, along with their respective release and expiration dates.
 - code: AD_OC21
   selected_answer: 'yes'
   notes: The [Meta Ad Library API documentation](https://developers.facebook.com/docs/graph-api/reference/v23.0/ads_archive) provides a description of the response returned by the available endpoint.
@@ -113,8 +113,8 @@ accuracy_answers:
   selected_answer: 'no'
   notes: The Meta Ad Library does not provide data for all targeting criteria that an advertiser can select in Brazil.
 - code: AD_OC32
-  selected_answer: 'no'
-  notes: The Meta Ad Library provides data on [ad impressions](https://www.facebook.com/ads/library/api/), but not at a sufficiently granular level.
+  selected_answer: both
+  notes: The Meta Ad Library provides data on the total number of users reached by each ad labeled and classified as political or issue ad in Brazil.
 - code: AD_OC33
   selected_answer: 'no'
   notes: The Meta Ad Library provides data on [ad spending](https://www.facebook.com/ads/library/api/), but not at a sufficiently granular level.
