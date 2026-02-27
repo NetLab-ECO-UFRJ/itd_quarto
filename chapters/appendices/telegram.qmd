@@ -6,7 +6,7 @@ sources:
   ugc:
     BR: data/global/telegram/ugc.yml
     EU: data/global/telegram/ugc.yml
-    UK: data/regional/uk/telegram/ugc.yml
+    UK: data/regional/UK/telegram/ugc.yml
   ads:
     BR: data/global/telegram/ads.yml
     EU: data/global/telegram/ads.yml

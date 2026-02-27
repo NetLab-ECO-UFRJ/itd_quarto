@@ -1,13 +1,15 @@
 """
-Generate summary heatmap tables for transparency assessments.
+Generate summary heatmap tables and overview charts for transparency assessments.
 
-Provides functions to create HTML heatmap tables showing scores across
-all platforms and regions for both UGC and Ads assessments.
+Provides functions to create HTML heatmap tables and matplotlib dot plots
+showing scores across all platforms and regions for both UGC and Ads assessments.
 """
 
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Union
 import yaml
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 from .scoring import calculate_platform_score
 from .quarto_helpers import parse_qmd_frontmatter
 
@@ -149,6 +151,104 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
     return results
 
 
+SCORE_BANDS = [
+    (0, 1, '#F3496B', 'N/A'),
+    (1, 20, '#F64A9B', 'Irrelevant'),
+    (20, 40, '#F88C4A', 'Precarious'),
+    (40, 60, '#F3CE49', 'Deficient'),
+    (60, 80, '#43B5DF', 'Restricted'),
+    (80, 100, '#308BF2', 'Strong'),
+]
+
+REGION_COLORS = {
+    'BR': '#1b9e77',
+    'EU': '#d95f02',
+    'UK': '#7570b3',
+}
+
+
+def _find_project_root() -> Path:
+    project_root = Path.cwd()
+    while not (project_root / 'utils').exists() and project_root != project_root.parent:
+        project_root = project_root.parent
+    return project_root
+
+
+def _compute_region_averages(scores: Dict) -> Dict[str, Optional[float]]:
+    averages = {}
+    for region in ['BR', 'EU', 'UK']:
+        vals = [
+            regions[region] for _, regions in scores.items()
+            if isinstance(regions.get(region), (int, float))
+        ]
+        averages[region] = round(sum(vals) / len(vals), 1) if vals else None
+    return averages
+
+
+def generate_overview_dotplot():
+    """Generate grouped horizontal bar chart showing average scores per region for UGC and ADS."""
+    project_root = _find_project_root()
+
+    ugc_scores = scan_assessments(project_root, 'ugc')
+    ads_scores = scan_assessments(project_root, 'ads')
+
+    ugc_avgs = _compute_region_averages(ugc_scores)
+    ads_avgs = _compute_region_averages(ads_scores)
+
+    scopes = [('Ads', ads_avgs), ('UGC', ugc_avgs)]
+    regions = list(REGION_COLORS.keys())
+    n_regions = len(regions)
+    bar_height = 0.22
+    group_gap = 0.15
+
+    fig, ax = plt.subplots(figsize=(7, 2.6))
+
+    for lo, hi, color, label in SCORE_BANDS:
+        ax.axvspan(lo, hi, color=color, alpha=0.18)
+        ax.text((lo + hi) / 2, len(scopes) * (n_regions * bar_height + group_gap) - 0.05,
+                label, ha='center', va='bottom', fontsize=7,
+                color='#555', fontweight='600')
+
+    for scope_idx, (scope_label, avgs) in enumerate(scopes):
+        group_center = scope_idx * (n_regions * bar_height + group_gap)
+        for i, region in enumerate(regions):
+            y = group_center + i * bar_height
+            val = avgs.get(region) or 0
+            ax.barh(y, val, height=bar_height * 0.85, color=REGION_COLORS[region],
+                    edgecolor='white', linewidth=0.5, zorder=3)
+            if val > 0:
+                ax.text(val + 1, y, f'{val:.0f}', va='center', ha='left',
+                        fontsize=7.5, color='#333', fontweight='500')
+
+    y_ticks = []
+    y_labels = []
+    for scope_idx, (scope_label, _) in enumerate(scopes):
+        center = scope_idx * (n_regions * bar_height + group_gap) + (n_regions - 1) * bar_height / 2
+        y_ticks.append(center)
+        y_labels.append(scope_label)
+
+    ax.set_yticks(y_ticks)
+    ax.set_yticklabels(y_labels, fontsize=11, fontweight='600')
+    ax.set_xlim(0, 100)
+    top = len(scopes) * (n_regions * bar_height + group_gap)
+    ax.set_ylim(-0.25, top + 0.15)
+    ax.set_xlabel('Average Score', fontsize=10)
+    ax.tick_params(axis='x', labelsize=9)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+
+    legend_handles = [
+        mpatches.Patch(color=color, label=region)
+        for region, color in REGION_COLORS.items()
+    ]
+    ax.legend(handles=legend_handles, loc='lower right', fontsize=8,
+              framealpha=0.9, edgecolor='#ccc')
+
+    plt.tight_layout()
+    return fig
+
+
 def generate_summary_heatmap(
     scope: str,
     include_average_row: bool = True,
@@ -243,7 +343,7 @@ def generate_summary_heatmap(
                 if isinstance(regions.get(region), (int, float))
             ]
             region_averages[region] = (
-                round(sum(region_scores) / len(region_scores), 1) if region_scores else None
+                round(sum(region_scores) / len(region_scores)) if region_scores else None
             )
 
     for platform, regions in sorted_platforms:
@@ -276,7 +376,7 @@ def generate_summary_heatmap(
                 display_text = '—' if show_values else '&nbsp;'
                 html += f'            <td>{display_text}</td>\n'
             else:
-                display_text = f'<strong>{avg:.1f}</strong>' if show_values else '&nbsp;'
+                display_text = f'<strong>{avg:.0f}</strong>' if show_values else '&nbsp;'
                 html += f'            <td>{display_text}</td>\n'
         html += '        </tr>\n'
 
