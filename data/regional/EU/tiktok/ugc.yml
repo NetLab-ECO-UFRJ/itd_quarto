@@ -50,7 +50,7 @@ compliance_answers:
   notes: The TikTok Research API documentation links to the [Developer Guidelines](https://developers.tiktok.com/doc/our-guidelines-developer-guidelines), which include the Developer Terms of Service.
 - code: UGC_OC12
   selected_answer: 'yes'
-  notes: For each endpoint, the TikTok DResearch API documentation clearly describes the response format, specifying the structure of the returned JSON, the possible fields, their data types, and provides an [example](https://developers.tiktok.com/doc/research-api-specs-query-video-comments) at the bottom of the page.
+  notes: For each endpoint, the TikTok Research API documentation clearly describes the response format, specifying the structure of the returned JSON, the possible fields, their data types, and provides an [example](https://developers.tiktok.com/doc/research-api-specs-query-video-comments) at the bottom of the page.
 - code: UGC_OC13
   selected_answer: 'no'
   notes: The [TikTok Research API documentation](https://developers.tiktok.com/doc/research-api-specs-query-videos) is only available in English.
