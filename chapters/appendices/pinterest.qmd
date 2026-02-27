@@ -8,8 +8,8 @@ sources:
     EU: data/global/pinterest/ugc.yml
     UK: data/global/pinterest/ugc.yml
   ads:
-    BR: data/global/pinterest/ads.yml
-    EU: data/global/pinterest/ads.yml
+    BR: data/regional/BR/pinterest/ads.yml
+    EU: data/regional/EU/pinterest/ads.yml
     UK: data/regional/UK/pinterest/ads.yml
 ---
 

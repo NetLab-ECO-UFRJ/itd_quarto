@@ -25,7 +25,7 @@ accessibility_answers:
 - code: AD_OC1
   selected_answer: full
   notes: >-
-    The [Pinterest Ads Repository](https://ads.pinterest.com/ads-repository/) publicly provides, through its GUI, all ads served to users in Brazil in the last year, both active and inactive.
+    The [Pinterest Ads Repository](https://ads.pinterest.com/ads-repository/) publicly provides, through its GUI, all ads served to users in the European Union in the last year, both active and inactive.
 - code: AD_OC2
   selected_answer: gui
   notes: >-
@@ -44,8 +44,7 @@ accessibility_answers:
 - code: AD_OC5
   selected_answer: gui
   notes: >-
-    The Pinterest Ads Repository allows users to retrieve specific ads by
-    their ID through the GUI.
+    Although the Pinterest Ads Repository does not allow users to search for an ad by its ID, a specific ad can be accessed directly via its URL, which can be easily formatted.
 - code: AD_OC6
   selected_answer: gui
   notes: >-
@@ -86,7 +85,7 @@ completeness_answers:
   selected_answer: 'no'
   notes: >-
     The Pinterest Ads Repository does not disclose any information on
-    advertisers' verification status.
+    advertisers’ verification status.
 compliance_answers:
 - code: AD_OC14
   selected_answer: 'no'
@@ -101,19 +100,19 @@ compliance_answers:
 - code: AD_OC16
   selected_answer: 'no'
   notes: >-
-    No documentation for the Pinterest Ads Repository could be identified. The repository's GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
+    No documentation for the Pinterest Ads Repository could be identified. The repository’s GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
 - code: AD_OC17
   selected_answer: 'no'
   notes: >-
-    No documentation for the Pinterest Ads Repository could be identified. The repository's GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
+    No documentation for the Pinterest Ads Repository could be identified. The repository’s GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
 - code: AD_OC18
   selected_answer: 'no'
   notes: >-
-    No documentation for the Pinterest Ads Repository could be identified. The repository's GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
+    No documentation for the Pinterest Ads Repository could be identified. The repository’s GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
 - code: AD_OC19
   selected_answer: 'no'
   notes: >-
-    No documentation for the Pinterest Ads Repository could be identified. The repository's GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
+    No documentation for the Pinterest Ads Repository could be identified. The repository’s GUI only references a [broken link](https://developers.pinterest.com/docs/api/v4/#tag/ads_repository) that previously directed users to deprecated versions of the Pinterest API, which included endpoints for collecting ad data.
 - code: AD_OC20
   selected_answer: 'no'
   notes: >-
@@ -157,7 +156,7 @@ relevance_answers:
   selected_answer: gui
   notes: >-
     The Pinterest Ads Repository allows users to filter results by thematic
-    categories, including "Animals", "Architecture", "Arts", "Health", and
+    categories, including “Animals”, “Architecture”, “Arts”, “Health”, and
     others.
 - code: AD_OC28
   selected_answer: 'no'
@@ -168,12 +167,12 @@ accuracy_answers:
   selected_answer: 'no'
   notes: >-
     The Pinterest Ads Repository does not provide any age or gender
-    information about an ad's audience.
+    information about an ad’s audience.
 - code: AD_OC30
   selected_answer: 'no'
   notes: >-
     The Pinterest Ads Repository does not provide any subnational location
-    data about an ad's audience.
+    data about an ad’s audience.
 - code: AD_OC31
   selected_answer: gui
   notes: >-
@@ -189,5 +188,4 @@ accuracy_answers:
 - code: AD_OC33
   selected_answer: 'no'
   notes: >-
-    The Pinterest Ads Repository does not provide data on ad spending in the
-    European Union.
+    The Pinterest Ads Repository does not provide data on ad spending.
