@@ -6,16 +6,16 @@ metadata:
 special-criteria_answers:
 - code: UGC_SC1
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data. Although Meta is expected to integrate public WhatsApp channels into the Meta Content Library in the near future, it had not done so by the time our analysis was conducted, and no specific timeframe has been announced. As a result, research on the platform still relies on [data scraping](https://arxiv.org/abs/2401.15221).
+  notes: WhatsApp and the Meta Content Library do not provide an API that enables programmatic access to or extraction of public user-generated content data. 
 - code: UGC_SC2
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data.
+  notes: WhatsApp and the Meta Content Library do not provide an API that enables programmatic access to or extraction of public user-generated content data.
 - code: UGC_SC3
   selected_answer: 'no'
-  notes: WhatsApp does not provide an API that enables programmatic access to or extraction of public user-generated content data.
+  notes: WhatsApp and the Meta Content Library do not provide an API that enables programmatic access to or extraction of public user-generated content data.
 - code: UGC_SC4
   selected_answer: 'no'
-  notes: In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data, WhatsApp likewise does not offer a graphical interface for this purpose. Although Meta is expected to integrate public WhatsApp channels into the Meta Content Library in the near future, it had not done so by the time our analysis was conducted, and no specific timeframe has been announced.
+  notes: WhatsApp and the Meta Content Library do not provide a graphical interface that enables programmatic access to or extraction of public user-generated content data. 
 accessibility_answers:
 - code: UGC_OC2
   selected_answer: 'no'
