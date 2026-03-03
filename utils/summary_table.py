@@ -127,7 +127,7 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
                 question_type=scope,
                 answers_file=filepath
             )
-            val = round(result.get('total_score', 0.0), 1)
+            val = round(result.get('total_score', 0.0))
         except Exception as e:
             print(f"Warning: Failed to calculate score for {filepath}: {e}")
             val = None
@@ -181,7 +181,7 @@ def _compute_region_averages(scores: Dict) -> Dict[str, Optional[float]]:
             regions[region] for _, regions in scores.items()
             if isinstance(regions.get(region), (int, float))
         ]
-        averages[region] = round(sum(vals) / len(vals), 1) if vals else None
+        averages[region] = round(sum(vals) / len(vals)) if vals else None
     return averages
 
 
