@@ -18,11 +18,11 @@ book:
     - chapters/key-findings.qmd
     # - chapters/context.qmd
     - chapters/methodology.qmd
-    - chapters/responses-ugc.qmd
-    - chapters/responses-ads.qmd
-    - chapters/regional-scope.qmd
+    - part: "Findings"
+      chapters:
+        - chapters/responses-ugc.qmd
+        - chapters/responses-ads.qmd
     # - chapters/framework.qmd
-    # - chapters/findings.qmd
     # - chapters/conclusion.qmd
     - part: "Platforms"
       chapters:
@@ -51,8 +51,11 @@ bibliography:
   - bib/kwai.bib
   - bib/meta.bib
   - bib/reddit.bib
-  # - bib/tiktok.bib
-  # - bib/whatsapp.bib
+  - bib/linkedin.bib
+  - bib/tiktok.bib
+  - bib/twitter.bib
+  - bib/whatsapp.bib
+  - bib/x.bib
 
 # Render each chapter in its own scope so citations stay with the file
 # file-scope: true

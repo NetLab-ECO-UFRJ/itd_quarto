@@ -204,6 +204,8 @@ def generate_overview_dotplot():
     fig, ax = plt.subplots(figsize=(7, 2.6))
 
     for lo, hi, color, label in SCORE_BANDS:
+        if label == 'N/A':
+            continue
         ax.axvspan(lo, hi, color=color, alpha=0.18)
         ax.text((lo + hi) / 2, len(scopes) * (n_regions * bar_height + group_gap) - 0.05,
                 label, ha='center', va='bottom', fontsize=7,
@@ -214,9 +216,12 @@ def generate_overview_dotplot():
         for i, region in enumerate(regions):
             y = group_center + i * bar_height
             val = avgs.get(region) or 0
-            ax.barh(y, val, height=bar_height * 0.85, color=REGION_COLORS[region],
-                    edgecolor='white', linewidth=0.5, zorder=3)
-            if val > 0:
+            if val == 0:
+                ax.text(0, y, 'N/A', va='center', ha='left',
+                        fontsize=7.5, color='#999', fontweight='500', zorder=4)
+            else:
+                ax.barh(y, val, height=bar_height * 0.85, color=REGION_COLORS[region],
+                        edgecolor='white', linewidth=0.5, zorder=3)
                 ax.text(val + 1, y, f'{val:.0f}', va='center', ha='left',
                         fontsize=7.5, color='#333', fontweight='500')
 
@@ -230,6 +235,8 @@ def generate_overview_dotplot():
     ax.set_yticks(y_ticks)
     ax.set_yticklabels(y_labels, fontsize=11, fontweight='600')
     ax.set_xlim(0, 100)
+    ax.set_xticks([0, 20, 40, 60, 80, 100])
+    ax.set_xticklabels(['N/A', '20', '40', '60', '80', '100'])
     top = len(scopes) * (n_regions * bar_height + group_gap)
     ax.set_ylim(-0.25, top + 0.15)
     ax.set_xlabel('Average Score', fontsize=10)
