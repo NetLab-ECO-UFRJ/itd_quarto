@@ -79,6 +79,7 @@ format:
 
 execute:
   freeze: auto
+  parallel: true
   echo: false
   warning: false
   message: false
