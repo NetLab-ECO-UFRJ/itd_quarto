@@ -398,11 +398,11 @@ def generate_responses_summary(question_type: str = "ugc", year: str = "2025"):
     ax.set_yticklabels(categories, fontsize=9)
     ax.set_xlim(0, 115)
     ax.set_xlabel('% of Assessed Responses', fontsize=9)
-    ax.set_title(f'{framework} — Answer Distribution by Category', fontsize=11, fontweight='600', pad=25)
+    ax.set_title(f'{framework} — Answer Distribution by Category', fontsize=11, fontweight='600', pad=35)
     ax.invert_yaxis()
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
-    ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=4, fontsize=8, framealpha=0.9)
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.22), ncol=4, fontsize=8, framealpha=0.9)
     ax.set_xticks([0, 25, 50, 75, 100])
     ax.set_xticklabels(['0%', '25%', '50%', '75%', '100%'])
 

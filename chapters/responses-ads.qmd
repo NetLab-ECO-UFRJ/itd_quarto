@@ -27,8 +27,6 @@ from utils.responses_aggregator import generate_responses_summary
 generate_responses_summary(question_type="ads", year="2025")
 ```
 
-## Responses by Question
-
 ```{python}
 #| label: ads-responses
 #| echo: false
