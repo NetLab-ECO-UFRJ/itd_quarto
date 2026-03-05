@@ -152,8 +152,7 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
 
 
 SCORE_BANDS = [
-    (0, 1, '#F3496B', 'N/A'),
-    (1, 20, '#F64A9B', 'Irrelevant'),
+    (0, 20, '#F64A9B', 'Irrelevant'),
     (20, 40, '#F88C4A', 'Precarious'),
     (40, 60, '#F3CE49', 'Deficient'),
     (60, 80, '#43B5DF', 'Restricted'),
@@ -216,10 +215,7 @@ def generate_overview_dotplot():
         for i, region in enumerate(regions):
             y = group_center + i * bar_height
             val = avgs.get(region) or 0
-            if val == 0:
-                ax.text(0, y, 'N/A', va='center', ha='left',
-                        fontsize=7.5, color='#999', fontweight='500', zorder=4)
-            else:
+            if val > 0:
                 ax.barh(y, val, height=bar_height * 0.85, color=REGION_COLORS[region],
                         edgecolor='white', linewidth=0.5, zorder=3)
                 ax.text(val + 1, y, f'{val:.0f}', va='center', ha='left',
@@ -236,7 +232,6 @@ def generate_overview_dotplot():
     ax.set_yticklabels(y_labels, fontsize=11, fontweight='600')
     ax.set_xlim(0, 100)
     ax.set_xticks([0, 20, 40, 60, 80, 100])
-    ax.set_xticklabels(['N/A', '20', '40', '60', '80', '100'])
     top = len(scopes) * (n_regions * bar_height + group_gap)
     ax.set_ylim(-0.25, top + 0.15)
     ax.set_xlabel('Average Score', fontsize=10)
