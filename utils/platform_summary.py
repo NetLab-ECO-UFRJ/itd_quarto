@@ -26,6 +26,8 @@ def _find_project_root() -> Path:
 
 
 def get_score_band_label(score: float) -> str:
+    if score == 0:
+        return "Not Available"
     for lo, hi, _, label in SCORE_BANDS:
         if lo <= score < hi:
             return label
@@ -35,6 +37,8 @@ def get_score_band_label(score: float) -> str:
 
 
 def _get_score_band_color(score: float) -> str:
+    if score == 0:
+        return "#F3496B"
     for lo, hi, color, _ in SCORE_BANDS:
         if lo <= score < hi:
             return color
