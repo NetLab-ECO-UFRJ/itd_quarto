@@ -38,6 +38,9 @@ def _resolve_question_file(year: str, question_type: str) -> Path:
     return candidates[0]
 
 
+EXCLUDED_SLUGS = {"meta"}
+
+
 def get_all_platforms(year: str = "2025") -> List[Dict[str, Any]]:
     """Get all platform directories with their metadata."""
     platforms = []
@@ -46,7 +49,7 @@ def get_all_platforms(year: str = "2025") -> List[Dict[str, Any]]:
     global_dir = data_root / "global"
     if global_dir.exists():
         for platform_dir in sorted(global_dir.iterdir()):
-            if platform_dir.is_dir():
+            if platform_dir.is_dir() and platform_dir.name not in EXCLUDED_SLUGS:
                 platforms.append({
                     "name": platform_dir.name.title(),
                     "path": platform_dir,
@@ -59,7 +62,7 @@ def get_all_platforms(year: str = "2025") -> List[Dict[str, Any]]:
         for region_dir in sorted(regional_dir.iterdir()):
             if region_dir.is_dir():
                 for platform_dir in sorted(region_dir.iterdir()):
-                    if platform_dir.is_dir():
+                    if platform_dir.is_dir() and platform_dir.name not in EXCLUDED_SLUGS:
                         platforms.append({
                             "name": platform_dir.name.title(),
                             "path": platform_dir,
@@ -283,6 +286,129 @@ def aggregate_responses(year: str = "2025", question_type: str = "ugc") -> Dict[
             result["categories"][cat_name]["questions"].append(question_entry)
 
     return result
+
+
+def _classify_answer(label: str) -> str:
+    l = (label or "").lower().strip()
+    if not l:
+        return "empty"
+    if l.startswith("yes") or l in ["full", "both"] or l.startswith("free"):
+        return "yes"
+    if l == "no" or l == "no or not applicable":
+        return "no"
+    if "partial" in l:
+        return "partial"
+    if "not applicable" in l:
+        return "na"
+    if "api" in l or "gui" in l:
+        return "partial"
+    return "no"
+
+
+def generate_responses_summary(question_type: str = "ugc", year: str = "2025"):
+    """Generate visual summary with stat cards and stacked bar chart."""
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as mpatches
+    import numpy as np
+
+    data = aggregate_responses(year, question_type)
+
+    cat_stats = OrderedDict()
+    total_yes = 0
+    total_answered = 0
+    total_platforms = set()
+
+    for cat_name, cat_data in data["categories"].items():
+        yes = 0; no = 0; partial = 0; na = 0
+        for q in cat_data["questions"]:
+            for r in q["responses"]:
+                total_platforms.add(r["platform"])
+                cls = _classify_answer(r["answer_label"])
+                if cls == "yes": yes += 1
+                elif cls == "no": no += 1
+                elif cls == "partial": partial += 1
+                elif cls == "na": na += 1
+        answered = yes + no + partial + na
+        cat_stats[cat_data["label"]] = {
+            "yes": yes, "no": no, "partial": partial, "na": na,
+            "total": answered,
+        }
+        total_yes += yes + partial
+        total_answered += answered
+
+    overall_rate = round(100 * total_yes / total_answered) if total_answered else 0
+
+    best_cat = max(cat_stats.items(), key=lambda x: (x[1]["yes"] + x[1]["partial"]) / x[1]["total"] if x[1]["total"] else 0)
+    worst_cat = min(cat_stats.items(), key=lambda x: (x[1]["yes"] + x[1]["partial"]) / x[1]["total"] if x[1]["total"] else 1)
+
+    framework = "UGC" if question_type == "ugc" else "Advertising"
+
+    print(f"""
+```{{=html}}
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 160px; border-radius: 8px; padding: 16px 20px; background: #f8f9fa; border: 1px solid #e0e0e0; text-align: center;">
+    <div style="font-size: 2rem; font-weight: 700; color: {'#1b9e77' if overall_rate > 50 else '#d95f02'};">{overall_rate}%</div>
+    <div style="font-size: 0.85rem; color: #666;">Overall Positive Rate</div>
+  </div>
+  <div style="flex: 1; min-width: 160px; border-radius: 8px; padding: 16px 20px; background: #f8f9fa; border: 1px solid #e0e0e0; text-align: center;">
+    <div style="font-size: 1.1rem; font-weight: 700; color: #1b9e77;">{best_cat[0]}</div>
+    <div style="font-size: 0.85rem; color: #666;">Strongest Category</div>
+  </div>
+  <div style="flex: 1; min-width: 160px; border-radius: 8px; padding: 16px 20px; background: #f8f9fa; border: 1px solid #e0e0e0; text-align: center;">
+    <div style="font-size: 1.1rem; font-weight: 700; color: #d95f02;">{worst_cat[0]}</div>
+    <div style="font-size: 0.85rem; color: #666;">Weakest Category</div>
+  </div>
+</div>
+```
+""")
+
+    categories = list(cat_stats.keys())
+    yes_vals = [cat_stats[c]["yes"] for c in categories]
+    partial_vals = [cat_stats[c]["partial"] for c in categories]
+    no_vals = [cat_stats[c]["no"] for c in categories]
+    na_vals = [cat_stats[c]["na"] for c in categories]
+    totals = [cat_stats[c]["total"] for c in categories]
+
+    yes_pct = [100 * v / t if t else 0 for v, t in zip(yes_vals, totals)]
+    partial_pct = [100 * v / t if t else 0 for v, t in zip(partial_vals, totals)]
+    no_pct = [100 * v / t if t else 0 for v, t in zip(no_vals, totals)]
+    na_pct = [100 * v / t if t else 0 for v, t in zip(na_vals, totals)]
+
+    y = np.arange(len(categories))
+    bar_h = 0.6
+
+    fig, ax = plt.subplots(figsize=(8, max(2.5, len(categories) * 0.55)))
+
+    left = np.zeros(len(categories))
+    ax.barh(y, yes_pct, bar_h, left=left, color='#1b9e77', label='Yes', zorder=3)
+    left += yes_pct
+    ax.barh(y, partial_pct, bar_h, left=left, color='#66c2a5', label='Partial', zorder=3)
+    left += partial_pct
+    ax.barh(y, no_pct, bar_h, left=left, color='#d95f02', label='No', zorder=3)
+    left += no_pct
+    if any(v > 0 for v in na_pct):
+        ax.barh(y, na_pct, bar_h, left=left, color='#cccccc', label='N/A', zorder=3)
+
+    for i, cat in enumerate(categories):
+        t = totals[i]
+        y_count = yes_vals[i] + partial_vals[i]
+        ax.text(101, i, f'{y_count}/{t}', va='center', ha='left', fontsize=8, color='#555')
+
+    ax.set_yticks(y)
+    ax.set_yticklabels(categories, fontsize=9)
+    ax.set_xlim(0, 115)
+    ax.set_xlabel('% of Assessed Responses', fontsize=9)
+    ax.set_title(f'{framework} — Answer Distribution by Category', fontsize=11, fontweight='600', pad=25)
+    ax.invert_yaxis()
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=4, fontsize=8, framealpha=0.9)
+    ax.set_xticks([0, 25, 50, 75, 100])
+    ax.set_xticklabels(['0%', '25%', '50%', '75%', '100%'])
+
+    plt.tight_layout()
+    plt.show()
+    plt.close(fig)
 
 
 def get_answer_sort_order(answer_label: str) -> int:
