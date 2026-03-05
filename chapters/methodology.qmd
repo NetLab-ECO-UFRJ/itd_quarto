@@ -2,18 +2,6 @@
 title: "Methodology"
 ---
 
-# Scope
-
-
-
-## Out of scope topics
-
-- Not transparency reports.Diff from https://www.accessnow.org/campaign/transparency-reporting-index/
-
-- Only active transparency. We do not consider data scraping methods that may be employed by researchers. These approaches are far from ideal and may expose researchers to heightened legal scrutiny and harassment in jurisdictions where they are not regulated (Bruns, 2019; Freelon, 2018), even though this might not be the case for the EU (Keller, 2025a). Similarly, we do not account for other forms of transparency that platforms may provide, such as content moderation transparency reports (see Urman & Makhortykh, 2023).
-
-- Only public data. ur analysis is also largely limited to so-called “publicly accessible data,” namely data generated from content with public visibility that can be accessed by any user. We nevertheless acknowledge that, even in this case, significant ethical boundaries and considerations for scholarly research remain and must be taken into account (Bruns, 2019; Garimella; Tyson, 2018; Keller, 2025b; Townsend & Wallace, 2016; United Nations, 2024). 
-
 # Platforms Evaluated
 
 - Get latest table from Google Docs
@@ -76,14 +64,7 @@ $$
 
 # Score Interpretation
 
-The final score is interpreted using the following ranges:
-
-- **Strong (81 to 100 points):** Platforms with efficient solutions for the collection of high-quality data.
-- **Restricted (61 to 80 points):** Platforms that make data available with limitations on the volume of data that can be requested and/or with quality problems.
-- **Deficient (41 to 60 points):** Platforms that offer some transparency and data access, but with serious limitations related to the types of content that can be accessed and the sample of the universe of public data that can be collected.
-- **Precarious (21 to 40 points):** Platforms that impose significant technical, operational and/or financial barriers to their data access measures, making monitoring unfeasible for most researchers and interested parties.
-- **Irrelevant (1 to 20 points):** Platforms with minimal or insufficient transparency and data access measures.
-- **Not available (0 points):** Platforms with no transparency and data access measures despite framework applicability.
+Get from Policy Report.
 
 # Questionnaires
 

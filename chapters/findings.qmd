@@ -3,16 +3,4 @@ title: "Findings"
 subtitle: "XX"
 ---
 
-XXX
-
-## Cross-Platform Analysis
-
-XXX
-
-## Regional Variations
-
-XXX
-
-## Key Patterns
-
-XXX
+Get from Policy Report.
