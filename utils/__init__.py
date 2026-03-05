@@ -24,6 +24,8 @@ from .quarto_helpers import (
     generate_category_scores
 )
 
+from .platform_summary import generate_platform_summary
+
 __all__ = [
     'load_questions',
     'load_answers',
@@ -35,5 +37,6 @@ __all__ = [
     'calculate_platform_score',
     'setup_quarto_environment',
     'load_platform_results',
-    'generate_category_scores'
+    'generate_category_scores',
+    'generate_platform_summary'
 ]

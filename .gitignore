@@ -1,6 +1,8 @@
 # LLM assistants
 agents/
 CLAUDE.md
+.playwright-mcp/
+AGENTS.md
 
 # Quarto output
 _output/

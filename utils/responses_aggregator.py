@@ -383,11 +383,13 @@ def generate_platform_question_sections(
     coverage_label = ", ".join(display_regions)
     print(f"\n**Coverage:** {coverage_label}\n")
 
-    h = "#" * heading_level
+    cat_h = "#" * heading_level
+    q_h = "#" * (heading_level + 1)
 
     for cat_data in questions.values():
+        print(f"\n{cat_h} {cat_data['label']}\n")
         for q in cat_data["questions"]:
-            print(f"\n{h} {q['code']}: {q['title']}\n")
+            print(f"\n{q_h} {q['code']}: {q['title']}\n")
             print('```{=html}')
             print('<table style="width:100% !important; table-layout:fixed; border-collapse:collapse; font-size:0.9em;">')
             print('<colgroup>')
