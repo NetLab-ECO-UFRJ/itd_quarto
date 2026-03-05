@@ -325,16 +325,16 @@ def generate_responses_summary(question_type: str = "ugc", year: str = "2025"):
                 total_platforms.add(r["platform"])
                 cls = _classify_answer(r["answer_label"])
                 if cls == "yes": yes += 1
-                elif cls == "no": no += 1
                 elif cls == "partial": partial += 1
                 elif cls == "na": na += 1
-        answered = yes + no + partial + na
+                else: no += 1  # includes empty/missing as negative
+        total = yes + no + partial + na
         cat_stats[cat_data["label"]] = {
             "yes": yes, "no": no, "partial": partial, "na": na,
-            "total": answered,
+            "total": total,
         }
         total_yes += yes + partial
-        total_answered += answered
+        total_answered += total
 
     overall_rate = round(100 * total_yes / total_answered) if total_answered else 0
 
@@ -346,10 +346,6 @@ def generate_responses_summary(question_type: str = "ugc", year: str = "2025"):
     print(f"""
 ```{{=html}}
 <div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 160px; border-radius: 8px; padding: 16px 20px; background: #f8f9fa; border: 1px solid #e0e0e0; text-align: center;">
-    <div style="font-size: 2rem; font-weight: 700; color: {'#1b9e77' if overall_rate > 50 else '#d95f02'};">{overall_rate}%</div>
-    <div style="font-size: 0.85rem; color: #666;">Overall Positive Rate</div>
-  </div>
   <div style="flex: 1; min-width: 160px; border-radius: 8px; padding: 16px 20px; background: #f8f9fa; border: 1px solid #e0e0e0; text-align: center;">
     <div style="font-size: 1.1rem; font-weight: 700; color: #1b9e77;">{best_cat[0]}</div>
     <div style="font-size: 0.85rem; color: #666;">Strongest Category</div>
