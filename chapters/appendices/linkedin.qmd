@@ -1,6 +1,5 @@
 ---
 title: "LinkedIn"
-subtitle: "Platform Appendix"
 platform_slug: "linkedin"
 sources:
   ugc:
@@ -13,21 +12,44 @@ sources:
     UK: data/global/linkedin/ads.yml
 ---
 
+## Advertising Transparency Notes
+
+Advertising scope includes mixed answers; notes remain in the assessment YAML.
+
+## User-Generated Content Transparency Notes
+
+- LinkedIn only offers an API for collecting your own posts. The objective of the current API (Posts API) is to help business to manage their own pages and profiles. LinkedIn informs that this API is "restricted to organizations in which the authenticated member has one of the following company page roles: ADMINISTRATOR, DIRECT_SPONSORED_CONTENT_POSTER, CONTENT_ADMIN". Profiles also can "retrieve posts, comments, and likes on behalf of an authenticated member. [But] this permission is restricted and is available to approved users only". We conducted tests to confirm these limitations [1].
+- (SC1) LinkedIn only offers an [API for collecting your own posts](https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http).
+- (SC1) LinkedIn only offers an API for collecting your own posts and does not offer a graphical interface for extracting data [1].
+
+[1]: [LinkedIn Posts API Documentation](https://web.archive.org/web/20251010121628/https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api?view=li-lms-2025-09&tabs=http)
+
+## Transparency Assessment
+
+
 ```{python}
 #| label: setup
 #| include: false
-
 import sys
 from pathlib import Path
-
 project_root = Path.cwd()
 while not (project_root / 'utils').exists() and project_root != project_root.parent:
     project_root = project_root.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
-
 from utils.responses_aggregator import generate_platform_question_sections
 ```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("linkedin")
+```
+
+## Detailed Assessment
+
 
 ## User-Generated Content
 
@@ -35,7 +57,6 @@ from utils.responses_aggregator import generate_platform_question_sections
 #| label: ugc-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="linkedin",
     question_type="ugc",
@@ -50,7 +71,6 @@ generate_platform_question_sections(
 #| label: ads-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="linkedin",
     question_type="ads",
@@ -58,3 +78,8 @@ generate_platform_question_sections(
     heading_level=3,
 )
 ```
+
+## References
+
+::: {#refs}
+:::

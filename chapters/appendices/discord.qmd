@@ -1,6 +1,5 @@
 ---
 title: "Discord"
-subtitle: "Platform Appendix"
 platform_slug: "discord"
 sources:
   ugc:
@@ -13,21 +12,34 @@ sources:
     UK: data/global/discord/ads.yml
 ---
 
+Traditionally, Discord had established itself as a platform that did not allow advertising anywhere in the world [@Allyn_2021]. However, this scenario began to change in recent years [@Discord_advertising] – particularly in 2025, with the introduction of opt-in branded video ads tied to gaming perks [@Adegbola_2025]. Nevertheless, the platform does not provide a public ad repository in any part of the world. The Discord API exists, but it is primarily designed for the development of bots and applications intended for specific servers [@discord_api_docs]. To integrate these bots, server administrators must authorize their inclusion and define which channels they can access and what permissions they are granted. Once authorized, a bot can interact with textual content, such as messages and channel metadata, according to the intents enabled for it [@discord_message_content_intent_policy; @discord_message_content_privileged_intent_faq]. Because it is a highly permissioned system with restricted and pre-authorized access, the Discord API is not suited for transparency initiatives or systematic research on public interest data. In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data, Discord likewise does not offer a graphical interface for this purpose. Furthermore, Discord does not provide any form of access to or extraction of non-public user-generated content data, either in Brazil or in any other country. As the platform does not provide an ad repository or suitable API for data access anywhere in the world, assessment items do not apply to our evaluation of transparency and data access in any context. Consequently, all assessment criteria receive negative scores, reflecting the complete absence of appropriate transparency mechanisms.
+
+## Transparency Assessment
+
+
 ```{python}
 #| label: setup
 #| include: false
-
 import sys
 from pathlib import Path
-
 project_root = Path.cwd()
 while not (project_root / 'utils').exists() and project_root != project_root.parent:
     project_root = project_root.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
-
 from utils.responses_aggregator import generate_platform_question_sections
 ```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("discord")
+```
+
+## Detailed Assessment
+
 
 ## User-Generated Content
 
@@ -35,7 +47,6 @@ from utils.responses_aggregator import generate_platform_question_sections
 #| label: ugc-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="discord",
     question_type="ugc",
@@ -50,7 +61,6 @@ generate_platform_question_sections(
 #| label: ads-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="discord",
     question_type="ads",
@@ -58,3 +68,8 @@ generate_platform_question_sections(
     heading_level=3,
 )
 ```
+
+## References
+
+::: {#refs}
+:::

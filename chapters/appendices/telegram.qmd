@@ -1,6 +1,5 @@
 ---
 title: "Telegram"
-subtitle: "Platform Appendix"
 platform_slug: "telegram"
 sources:
   ugc:
@@ -13,21 +12,34 @@ sources:
     UK: data/global/telegram/ads.yml
 ---
 
+Telegram provides an API for third-party apps to display sponsored messages that replicate Telegram functionality. However, the API endpoints do not provide access to a comprehensive ad database. The ad-related endpoints return only active ads in known channels so that the Telegram clients can show them to their users. Telegram also offers the [Telegram Ad Platform](ads.telegram.org) for creating and managing sponsored messages in public channels, enabling advertisers to manage their ads and budgets and monitor performance. However, this is also not a public ad repository for extracting data about all advertising content promoted on the platform.
+
+## Transparency Assessment
+
+
 ```{python}
 #| label: setup
 #| include: false
-
 import sys
 from pathlib import Path
-
 project_root = Path.cwd()
 while not (project_root / 'utils').exists() and project_root != project_root.parent:
     project_root = project_root.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
-
 from utils.responses_aggregator import generate_platform_question_sections
 ```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("telegram")
+```
+
+## Detailed Assessment
+
 
 ## User-Generated Content
 
@@ -35,7 +47,6 @@ from utils.responses_aggregator import generate_platform_question_sections
 #| label: ugc-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="telegram",
     question_type="ugc",
@@ -50,7 +61,6 @@ generate_platform_question_sections(
 #| label: ads-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="telegram",
     question_type="ads",
@@ -58,3 +68,8 @@ generate_platform_question_sections(
     heading_level=3,
 )
 ```
+
+## References
+
+::: {#refs}
+:::

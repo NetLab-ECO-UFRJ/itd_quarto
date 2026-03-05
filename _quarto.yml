@@ -24,37 +24,23 @@ book:
     # - chapters/framework.qmd
     # - chapters/findings.qmd
     # - chapters/conclusion.qmd
-    # - part: "Platforms"
-    #   chapters:
-    #     - chapters/platforms/bluesky.qmd
-    #     - chapters/platforms/discord.qmd
-    #     - chapters/platforms/kwai.qmd
-    #     - chapters/platforms/linkedin.qmd
-    #     - chapters/platforms/facebook.qmd
-    #     - chapters/platforms/instagram.qmd
-    #     - chapters/platforms/threads.qmd
-    #     - chapters/platforms/pinterest.qmd
-    #     # - chapters/platforms/reddit.qmd
-    #     - chapters/platforms/snapchat.qmd
-    #     - chapters/platforms/telegram.qmd
-    #     - chapters/platforms/tiktok.qmd 
-    #     - chapters/platforms/youtube.qmd
-  appendices: 
-    - chapters/appendices/bluesky.qmd
-    - chapters/appendices/discord.qmd
-    - chapters/appendices/facebook.qmd
-    - chapters/appendices/instagram.qmd
-    - chapters/appendices/kwai.qmd
-    - chapters/appendices/linkedin.qmd
-    - chapters/appendices/pinterest.qmd
-    - chapters/appendices/reddit.qmd
-    - chapters/appendices/snapchat.qmd
-    - chapters/appendices/telegram.qmd
-    - chapters/appendices/threads.qmd
-    - chapters/appendices/tiktok.qmd
-    - chapters/appendices/whatsapp.qmd
-    - chapters/appendices/x.qmd
-    - chapters/appendices/youtube.qmd
+    - part: "Platforms"
+      chapters:
+        - chapters/appendices/bluesky.qmd
+        - chapters/appendices/discord.qmd
+        - chapters/appendices/facebook.qmd
+        - chapters/appendices/instagram.qmd
+        - chapters/appendices/kwai.qmd
+        - chapters/appendices/linkedin.qmd
+        - chapters/appendices/pinterest.qmd
+        - chapters/appendices/reddit.qmd
+        - chapters/appendices/snapchat.qmd
+        - chapters/appendices/telegram.qmd
+        - chapters/appendices/threads.qmd
+        - chapters/appendices/tiktok.qmd
+        - chapters/appendices/whatsapp.qmd
+        - chapters/appendices/x.qmd
+        - chapters/appendices/youtube.qmd
   # page-footer:
   #   center: "--- "
 

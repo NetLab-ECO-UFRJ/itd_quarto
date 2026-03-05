@@ -1,6 +1,5 @@
 ---
 title: "YouTube"
-subtitle: "Platform Appendix"
 platform_slug: "youtube"
 sources:
   ugc:
@@ -13,21 +12,36 @@ sources:
     UK: data/regional/UK/youtube/ads.yml
 ---
 
+https://arxiv.org/abs/2506.04422
+
+    https://arxiv.org/pdf/2506.11727
+
+## Transparency Assessment
+
+
 ```{python}
 #| label: setup
 #| include: false
-
 import sys
 from pathlib import Path
-
 project_root = Path.cwd()
 while not (project_root / 'utils').exists() and project_root != project_root.parent:
     project_root = project_root.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
-
 from utils.responses_aggregator import generate_platform_question_sections
 ```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("youtube")
+```
+
+## Detailed Assessment
+
 
 ## User-Generated Content
 
@@ -35,7 +49,6 @@ from utils.responses_aggregator import generate_platform_question_sections
 #| label: ugc-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="youtube",
     question_type="ugc",
@@ -50,7 +63,6 @@ generate_platform_question_sections(
 #| label: ads-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="youtube",
     question_type="ads",
@@ -58,3 +70,8 @@ generate_platform_question_sections(
     heading_level=3,
 )
 ```
+
+## References
+
+::: {#refs}
+:::

@@ -1,3 +1,0 @@
-# Reddit
-
-The Reddit Ads API is a campaign management tool designed exclusively for advertisers to programmatically create, manage, and report on their own campaigns. The API endpoints provide advertisers access only to their own campaign data, creative assets, and performance metrics; they do not provide endpoints to query, search, or retrieve advertising content from other advertisers or to access a platform-wide catalog of ads served on Reddit. 

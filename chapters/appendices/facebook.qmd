@@ -1,6 +1,5 @@
 ---
 title: "Facebook"
-subtitle: "Platform Appendix"
 platform_slug: "facebook"
 sources:
   ugc:
@@ -13,21 +12,42 @@ sources:
     UK: data/regional/UK/meta/ads.yml
 ---
 
+Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
+    extracting data is not allowed and violates the terms of usage. You can produce
+    analysis and only the result of this analysis can be downloaded. See the [API
+    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
+    for details
+
+[@Cotter2021]
+
+https://www.facebook.com/ads/library
+
+## Transparency Assessment
+
+
 ```{python}
 #| label: setup
 #| include: false
-
 import sys
 from pathlib import Path
-
 project_root = Path.cwd()
 while not (project_root / 'utils').exists() and project_root != project_root.parent:
     project_root = project_root.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
-
 from utils.responses_aggregator import generate_platform_question_sections
 ```
+
+```{python}
+#| label: platform-summary
+#| echo: false
+#| output: asis
+from utils.platform_summary import generate_platform_summary
+generate_platform_summary("facebook")
+```
+
+## Detailed Assessment
+
 
 ## User-Generated Content
 
@@ -35,7 +55,6 @@ from utils.responses_aggregator import generate_platform_question_sections
 #| label: ugc-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="facebook",
     question_type="ugc",
@@ -50,7 +69,6 @@ generate_platform_question_sections(
 #| label: ads-questions
 #| echo: false
 #| output: asis
-
 generate_platform_question_sections(
     platform="facebook",
     question_type="ads",
@@ -58,3 +76,8 @@ generate_platform_question_sections(
     heading_level=3,
 )
 ```
+
+## References
+
+::: {#refs}
+:::
