@@ -72,10 +72,7 @@ completeness_answers:
   notes: Historical data can be queried through the [TikTok Research API](https://developers.tiktok.com/doc/research-api-codebook) back to at least 2019. However, each query can cover a maximum time span of 30 days.
 - code: UGC_OC19
   selected_answer: 'yes'
-  notes: The TikTok Research API allows for a daily limit of 1000 requests per day,
-    meaning up to 100,000 records per day across all APIs (the video and comments
-    API can return 100 records per request). The daily quota gets reset at 12 AM UTC
-    ([research API FAQ](https://developers.tiktok.com/doc/research-api-faq)).
+  notes: Although we were not able to properly assess this item before our access to the TikTok Research API expired, the [API documentation](https://developers.tiktok.com/doc/research-api-faq) indicates that it is subject to a rate limit of 1,000 requests per day, corresponding to a maximum of 100,000 data records. This information has also been reported by [other researchers](https://ora.uniurb.it/handle/11576/2759111).
 consistency_answers:
 - code: UGC_OC20
   selected_answer: 'yes'
