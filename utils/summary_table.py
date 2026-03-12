@@ -46,6 +46,11 @@ def get_score_class(score: float) -> str:
         return "score-irrelevant"
 
 
+VLOP_PLATFORMS = {
+    'facebook', 'instagram', 'linkedin', 'pinterest',
+    'snapchat', 'tiktok', 'x', 'youtube',
+}
+
 PLATFORM_ICON_OVERRIDES = {
     'kwai': 'kuaishou',
     'linkedin': 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg',
@@ -311,6 +316,19 @@ def generate_summary_heatmap(
     color: #ffffff !important;
     font-weight: 700 !important;
 }
+.vlop-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background-color: #003399;
+    color: #ffffff;
+    vertical-align: middle;
+    margin-left: 5px;
+    line-height: 1.4;
+}
 </style>
 
 <table class="heatmap-table">
@@ -351,7 +369,9 @@ def generate_summary_heatmap(
     for platform, regions in sorted_platforms:
         html += f'        <tr>\n'
         icon = get_platform_icon(platform)
-        html += f'            <td class="platform-name">{icon}{platform}</td>\n'
+        vlop_key = platform.lower().split('/')[0].strip()
+        vlop_badge = '<span class="vlop-badge" title="Very Large Online Platform (EU DSA)">VLOP</span>' if vlop_key in VLOP_PLATFORMS else ''
+        html += f'            <td class="platform-name">{icon}{platform}{vlop_badge}</td>\n'
 
         for region in ['BR', 'EU', 'UK']:
             score = regions.get(region)
@@ -369,7 +389,7 @@ def generate_summary_heatmap(
 
         html += f'        </tr>\n'
 
-    if include_average_row:
+    if include_average_row and show_values:
         html += '        <tr class="average-row">\n'
         html += '            <td class="platform-name"><strong>Average</strong></td>\n'
         for region in ['BR', 'EU', 'UK']:
@@ -384,6 +404,10 @@ def generate_summary_heatmap(
 
     html += '''    </tbody>
 </table>
+<p style="font-size: 12px; color: #555; margin-top: 4px;">
+  <span class="vlop-badge">VLOP</span>
+  &nbsp;Very Large Online Platform designated under the EU Digital Services Act (DSA), subject to enhanced transparency and accountability obligations.
+</p>
 '''
 
     return html
