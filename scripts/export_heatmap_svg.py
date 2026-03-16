@@ -37,8 +37,6 @@ SCORE_COLORS = {
     'score-missing':       ('#e0e0e0', '#666666'),
 }
 
-AVERAGE_ROW_BG = '#4a4a4a'
-AVERAGE_ROW_FG = '#ffffff'
 HEADER_BG = '#f8f9fa'
 HEADER_FG = '#333333'
 PLATFORM_BG = '#f8f9fa'
@@ -64,7 +62,6 @@ def _escape(text: str) -> str:
 
 def generate_heatmap_svg(
     scope: str,
-    include_average_row: bool = True,
 ) -> str:
     """Generate an SVG string for the heatmap table."""
     scores = scan_assessments(project_root, scope)
@@ -76,17 +73,7 @@ def generate_heatmap_svg(
 
     sorted_platforms = sorted(scores.items(), key=lambda x: avg_score(x[1]), reverse=True)
 
-    # Compute region averages
-    region_averages = {}
-    if include_average_row:
-        for region in REGIONS:
-            vals = [
-                regions[region] for _, regions in sorted_platforms
-                if isinstance(regions.get(region), (int, float))
-            ]
-            region_averages[region] = round(sum(vals) / len(vals)) if vals else None
-
-    num_rows = len(sorted_platforms) + (1 if include_average_row else 0)
+    num_rows = len(sorted_platforms)
     total_w = COL_PLATFORM_W + len(REGIONS) * COL_SCORE_W + (len(REGIONS)) * CELL_PAD + CELL_PAD
     total_h = HEADER_H + num_rows * (ROW_H + CELL_PAD) + CELL_PAD
 
@@ -151,29 +138,6 @@ def generate_heatmap_svg(
                 f'rx="{CELL_RADIUS}" fill="{bg}"/>'
             )
 
-    # Average row
-    if include_average_row:
-        y = HEADER_H + CELL_PAD + len(sorted_platforms) * (ROW_H + CELL_PAD)
-        x = CELL_PAD
-
-        parts.append(
-            f'<rect x="{x}" y="{y}" width="{COL_PLATFORM_W}" height="{ROW_H}" '
-            f'rx="{CELL_RADIUS}" fill="{AVERAGE_ROW_BG}"/>'
-        )
-        parts.append(
-            f'<text x="{x + 12}" y="{y + ROW_H / 2 + 5}" font-size="{FONT_SIZE}" '
-            f'font-weight="700" fill="{AVERAGE_ROW_FG}">Average</text>'
-        )
-
-        for i, region in enumerate(REGIONS):
-            rx = CELL_PAD + COL_PLATFORM_W + CELL_PAD + i * (COL_SCORE_W + CELL_PAD)
-            avg = region_averages.get(region)
-
-            parts.append(
-                f'<rect x="{rx}" y="{y}" width="{COL_SCORE_W}" height="{ROW_H}" '
-                f'rx="{CELL_RADIUS}" fill="{AVERAGE_ROW_BG}"/>'
-            )
-
     parts.append('</svg>')
     return '\n'.join(parts)
 
@@ -188,10 +152,6 @@ def main():
         '-o', '--output-dir', type=Path, default=project_root / 'output',
         help='Output directory (default: output/)'
     )
-    parser.add_argument(
-        '--no-average', action='store_true',
-        help='Omit the average row'
-    )
     args = parser.parse_args()
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -199,10 +159,7 @@ def main():
     scopes = ['ugc', 'ads'] if args.scope == 'both' else [args.scope]
 
     for scope in scopes:
-        svg = generate_heatmap_svg(
-            scope=scope,
-            include_average_row=not args.no_average,
-        )
+        svg = generate_heatmap_svg(scope=scope)
         out_path = args.output_dir / f'heatmap_{scope}.svg'
         out_path.write_text(svg, encoding='utf-8')
         print(f'Exported: {out_path}')
