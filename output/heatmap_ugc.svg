@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="476" height="752" viewBox="0 0 476 752" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<rect x="4" y="0" width="160" height="44" rx="3" fill="#f8f9fa"/>
+<text x="16" y="27.0" font-size="13" font-weight="600" fill="#333333">Platform</text>
+<rect x="168" y="0" width="100" height="44" rx="3" fill="#f8f9fa"/>
+<text x="218.0" y="27.0" font-size="13" font-weight="600" fill="#333333" text-anchor="middle">Brazil</text>
+<rect x="272" y="0" width="100" height="44" rx="3" fill="#f8f9fa"/>
+<text x="322.0" y="27.0" font-size="13" font-weight="600" fill="#333333" text-anchor="middle">EU</text>
+<rect x="376" y="0" width="100" height="44" rx="3" fill="#f8f9fa"/>
+<text x="426.0" y="27.0" font-size="13" font-weight="600" fill="#333333" text-anchor="middle">UK</text>
+<rect x="4" y="48" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="73.0" font-size="13" font-weight="600" fill="#222222">YouTube</text>
+<rect x="168" y="48" width="100" height="40" rx="3" fill="#308BF2"/>
+<rect x="272" y="48" width="100" height="40" rx="3" fill="#308BF2"/>
+<rect x="376" y="48" width="100" height="40" rx="3" fill="#308BF2"/>
+<rect x="4" y="92" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="117.0" font-size="13" font-weight="600" fill="#222222">Bluesky</text>
+<rect x="168" y="92" width="100" height="40" rx="3" fill="#308BF2"/>
+<rect x="272" y="92" width="100" height="40" rx="3" fill="#308BF2"/>
+<rect x="376" y="92" width="100" height="40" rx="3" fill="#308BF2"/>
+<rect x="4" y="136" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="161.0" font-size="13" font-weight="600" fill="#222222">X/Twitter</text>
+<rect x="168" y="136" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="272" y="136" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="376" y="136" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="4" y="180" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="205.0" font-size="13" font-weight="600" fill="#222222">Telegram</text>
+<rect x="168" y="180" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="272" y="180" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="376" y="180" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="4" y="224" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="249.0" font-size="13" font-weight="600" fill="#222222">Reddit</text>
+<rect x="168" y="224" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="272" y="224" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="376" y="224" width="100" height="40" rx="3" fill="#43B5DF"/>
+<rect x="4" y="268" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="293.0" font-size="13" font-weight="600" fill="#222222">TikTok</text>
+<rect x="168" y="268" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="272" y="268" width="100" height="40" rx="3" fill="#F3CE49"/>
+<rect x="376" y="268" width="100" height="40" rx="3" fill="#F3CE49"/>
+<rect x="4" y="312" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="337.0" font-size="13" font-weight="600" fill="#222222">LinkedIn</text>
+<rect x="168" y="312" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="272" y="312" width="100" height="40" rx="3" fill="#F88C4A"/>
+<rect x="376" y="312" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="4" y="356" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="381.0" font-size="13" font-weight="600" fill="#222222">Facebook</text>
+<rect x="168" y="356" width="100" height="40" rx="3" fill="#F64A9B"/>
+<rect x="272" y="356" width="100" height="40" rx="3" fill="#F64A9B"/>
+<rect x="376" y="356" width="100" height="40" rx="3" fill="#F64A9B"/>
+<rect x="4" y="400" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="425.0" font-size="13" font-weight="600" fill="#222222">Instagram</text>
+<rect x="168" y="400" width="100" height="40" rx="3" fill="#F64A9B"/>
+<rect x="272" y="400" width="100" height="40" rx="3" fill="#F64A9B"/>
+<rect x="376" y="400" width="100" height="40" rx="3" fill="#F64A9B"/>
+<rect x="4" y="444" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="469.0" font-size="13" font-weight="600" fill="#222222">Discord</text>
+<rect x="168" y="444" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="272" y="444" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="376" y="444" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="4" y="488" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="513.0" font-size="13" font-weight="600" fill="#222222">Kwai</text>
+<rect x="168" y="488" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="272" y="488" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="376" y="488" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="4" y="532" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="557.0" font-size="13" font-weight="600" fill="#222222">Pinterest</text>
+<rect x="168" y="532" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="272" y="532" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="376" y="532" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="4" y="576" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="601.0" font-size="13" font-weight="600" fill="#222222">Snapchat</text>
+<rect x="168" y="576" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="272" y="576" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="376" y="576" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="4" y="620" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="645.0" font-size="13" font-weight="600" fill="#222222">Threads</text>
+<rect x="168" y="620" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="272" y="620" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="376" y="620" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="4" y="664" width="160" height="40" rx="3" fill="#f8f9fa"/>
+<text x="16" y="689.0" font-size="13" font-weight="600" fill="#222222">WhatsApp</text>
+<rect x="168" y="664" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="272" y="664" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="376" y="664" width="100" height="40" rx="3" fill="#F3496B"/>
+<rect x="4" y="708" width="160" height="40" rx="3" fill="#4a4a4a"/>
+<text x="16" y="733.0" font-size="13" font-weight="700" fill="#ffffff">Average</text>
+<rect x="168" y="708" width="100" height="40" rx="3" fill="#4a4a4a"/>
+<rect x="272" y="708" width="100" height="40" rx="3" fill="#4a4a4a"/>
+<rect x="376" y="708" width="100" height="40" rx="3" fill="#4a4a4a"/>
+</svg>
