@@ -19,12 +19,12 @@ def get_score_class(score: float) -> str:
     Determine CSS class based on score range.
 
     Transparency Scale:
-    - Strong (81-100): Efficient official solutions, APIs, well-documented
-    - Restricted (61-80): Available with limitations
-    - Deficient (41-60): Some transparency measures, various limitations
-    - Precarious (21-40): Significant barriers, monitoring unfeasible for most
-    - Irrelevant (1-20): Minimal or insufficient transparency measures
-    - Not Available (0): No transparency despite framework applicability
+    - Meaningful (81-100): Well-established, openly accessible data infrastructure enabling systematic collection
+    - Limited (61-80): Functional access tools with notable limitations (paywalls, restricted scope, etc.)
+    - Deficient (41-60): Partial transparency resources with significant gaps preventing reliable research
+    - Minimal (21-40): Only minimal data access, most features absent or severely constrained
+    - Negligible (1-20): Negligible transparency infrastructure, nearly all criteria unmet
+    - Not Available (0): No data access mechanisms despite framework applicability
 
     Args:
         score: Score value (0-100)
@@ -157,11 +157,11 @@ def scan_assessments(project_root: Path, scope: str) -> Dict[str, Dict[str, Opti
 
 
 SCORE_BANDS = [
-    (0, 20, '#F64A9B', 'Irrelevant'),
-    (20, 40, '#F88C4A', 'Precarious'),
+    (0, 20, '#F64A9B', 'Negligible'),
+    (20, 40, '#F88C4A', 'Minimal'),
     (40, 60, '#F3CE49', 'Deficient'),
-    (60, 80, '#43B5DF', 'Restricted'),
-    (80, 100, '#308BF2', 'Strong'),
+    (60, 80, '#43B5DF', 'Limited'),
+    (80, 100, '#308BF2', 'Meaningful'),
 ]
 
 REGION_COLORS = {
@@ -254,6 +254,125 @@ def generate_overview_dotplot():
 
     plt.tight_layout()
     return fig
+
+
+def _get_icon_url(platform_display: str) -> str:
+    """Return the Simple Icons CDN URL for a platform."""
+    key = platform_display.lower().split('/')[0].strip()
+    override = PLATFORM_ICON_OVERRIDES.get(key)
+    if override and override.startswith('http'):
+        return override
+    slug = override or key
+    return f'{SIMPLEICONS_CDN}/{slug}/000000'
+
+
+# Score units that map to one icon width at the fixed chart width (700px, icon=22px).
+_ICON_OVERLAP_THRESHOLD = 4
+
+
+def _assign_lanes(items: List[Tuple[str, float]]) -> List[List[Tuple[str, float]]]:
+    """
+    Assign (platform, score) pairs to horizontal lanes to prevent icon overlap.
+
+    Sorts by score and places each icon in the first lane where no existing
+    icon is within _ICON_OVERLAP_THRESHOLD score units.
+    """
+    lanes: List[List[Tuple[str, float]]] = []
+    for platform, score in sorted(items, key=lambda x: x[1]):
+        placed = False
+        for lane in lanes:
+            if all(abs(score - s) >= _ICON_OVERLAP_THRESHOLD for _, s in lane):
+                lane.append((platform, score))
+                placed = True
+                break
+        if not placed:
+            lanes.append([(platform, score)])
+    return lanes
+
+
+def generate_icon_dotplot(scope: str) -> str:
+    """
+    Generate an HTML icon dot plot for UGC or ADS assessments.
+
+    Each section represents a region (Brazil, EU, UK). Icons are stacked into
+    multiple lanes per region to avoid overlap. The container has a fixed width
+    so icons are not stretched across the full page.
+
+    Args:
+        scope: Either 'ugc' or 'ads'
+
+    Returns:
+        HTML string with the icon dot plot
+    """
+    project_root = _find_project_root()
+    scores = scan_assessments(project_root, scope)
+
+    region_labels = {
+        'BR': 'Brazil',
+        'EU': 'European Union',
+        'UK': 'United Kingdom',
+    }
+
+    ICON_SIZE = 22
+    LANE_H = ICON_SIZE + 6  # px per lane
+
+    band_bg = ''.join(
+        f'<div style="position:absolute;left:{lo}%;width:{hi - lo}%;'
+        f'top:0;bottom:0;background:{color};opacity:0.18;pointer-events:none;"></div>'
+        for lo, hi, color, _ in SCORE_BANDS
+    )
+
+    tick_marks = ''.join(
+        f'<span style="position:absolute;left:{t}%;transform:translateX(-50%);'
+        f'font-size:10px;color:#888;">{t}</span>'
+        for t in [0, 20, 40, 60, 80, 100]
+    )
+
+    rows_html = ''
+    for region, label in region_labels.items():
+        items = [
+            (platform, float(region_scores[region]))
+            for platform, region_scores in scores.items()
+            if isinstance(region_scores.get(region), (int, float))
+        ]
+        lanes = _assign_lanes(items)
+        track_height = max(len(lanes) * LANE_H, LANE_H)
+
+        icons_html = ''
+        for lane_idx, lane in enumerate(lanes):
+            top_px = lane_idx * LANE_H + (LANE_H - ICON_SIZE) // 2
+            for platform, score in lane:
+                url = _get_icon_url(platform)
+                icons_html += (
+                    f'<img src="{url}" alt="{platform}" '
+                    f'width="{ICON_SIZE}" height="{ICON_SIZE}" '
+                    f'title="{platform}: {score:.0f}" '
+                    f'style="position:absolute;left:{score}%;top:{top_px}px;'
+                    f'transform:translateX(-50%);display:block;">'
+                )
+
+        rows_html += (
+            f'<div style="display:flex;align-items:center;margin:10px 0;">'
+            f'<div style="width:130px;flex-shrink:0;font-weight:600;font-size:13px;'
+            f'color:#333;align-self:center;">{label}</div>'
+            f'<div style="position:relative;width:700px;height:{track_height}px;'
+            f'background:#f8f9fa;border:1px solid #e0e0e0;border-radius:4px;'
+            f'flex-shrink:0;">'
+            f'{band_bg}{icons_html}'
+            f'</div>'
+            f'</div>'
+        )
+
+    return (
+        f'<div style="margin:20px 0;font-family:system-ui,-apple-system,sans-serif;'
+        f'overflow-x:auto;">'
+        f'{rows_html}'
+        f'<div style="margin-left:130px;position:relative;width:700px;'
+        f'height:18px;margin-top:2px;">'
+        f'{tick_marks}'
+        f'</div>'
+        f'</div>'
+    )
 
 
 def generate_summary_heatmap(

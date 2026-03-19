@@ -1,7 +1,7 @@
 special_criteria:
 - code: UGC_SC1
-  title: Does the platform offer an API for collecting public user-generated content
-    data?
+  title: Does the platform provide an API that enables the structured extraction of
+    public user-generated content data for independent analysis?
   description: Verifies whether the platform provides an API with at least one endpoint
     for programmatically extracting public user-generated content to the users’ infrastructure,
     without requiring privileged or internal access beyond standard developer registration.

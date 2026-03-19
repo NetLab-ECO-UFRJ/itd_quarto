@@ -23,15 +23,20 @@ The tables below summarize the transparency scores for both User-Generated Conte
 Each score ranges from 0 to 100 points, combining weighted evaluations of special criteria (75% weight) and other operational criteria (25% weight). Higher scores indicate greater transparency and data accessibility for researchers and the public.
 
 ```{python}
-#| label: fig-overview-dotplot
-#| fig-cap: "Average transparency scores by region"
+#| label: fig-ugc-dotplot
+#| fig-cap: "UGC transparency scores by region"
 
-from utils.summary_table import generate_overview_dotplot
-import matplotlib.pyplot as plt
+from utils.summary_table import generate_icon_dotplot
+from IPython.display import HTML, display
 
-fig = generate_overview_dotplot()
-plt.show()
-plt.close(fig)
+display(HTML(generate_icon_dotplot('ugc')))
+```
+
+```{python}
+#| label: fig-ads-dotplot
+#| fig-cap: "Ads transparency scores by region"
+
+display(HTML(generate_icon_dotplot('ads')))
 ```
 
 ::: {.grid style="margin: 20px 0;"}
@@ -41,11 +46,11 @@ Not available
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F64A9B; color: #661F40; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Irrelevant
+Negligible
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F88C4A; color: #663A1F; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Precarious
+Minimal
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F3CE49; color: #66571F; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
@@ -53,11 +58,11 @@ Deficient
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #43B5DF; color: #1F5366; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Restricted
+Limited
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #308BF2; color: #143A66; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Strong
+Meaningful
 :::
 
 :::

@@ -32,7 +32,7 @@ def get_score_band_label(score: float) -> str:
         if lo <= score < hi:
             return label
     if score >= 100:
-        return "Strong"
+        return "Meaningful"
     return "N/A"
 
 

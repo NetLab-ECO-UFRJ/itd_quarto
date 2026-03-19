@@ -1,6 +1,6 @@
 special_criteria:
   - code: AD_SC1
-    title: Does the platform provide an API to access its ad repository and extract data on advertising content?
+    title: Does the platform provide an API to access its ad repository and extract data on advertising content for independent analysis?
     description: >
       This item verifies whether the platform provides an ad repository API with at least one endpoint for
       programmatically extracting advertising data. Full availability is confirmed when the API returns information
