@@ -35,37 +35,6 @@ uv run quarto render        # full book → _output/
 uv run quarto preview       # live reload
 ```
 
-## Importing data from Excel
-
-```bash
-# Remove existing platform data before reimporting
-rm -rf data/global/<platform>
-
-# Global scope
-uv run python scripts/transform_excel_to_yaml.py \
-  --platform bluesky \
-  --scope-type global \
-  --ads-file "Advertising Framework (respostas).xlsx" \
-  --ugc-file "UGC Framework (respostas).xlsx"
-
-# Regional scope
-uv run python scripts/transform_excel_to_yaml.py \
-  --platform x \
-  --scope-type regional \
-  --region BR \
-  --ads-file "Advertising Framework (respostas).xlsx" \
-  --ugc-file "UGC Framework (respostas).xlsx"
-```
-
-Excel files go in `data/backups/xlsx/`. After import, add the new platform to `_quarto.yml`.
-
-## Project structure
-
-```
-data/
-├── questions_ugc_2025.yml / questions_ads_2025.yml   # framework definitions
-├── global/<platform>/ugc.yml, ads.yml                # global assessments
-└── regional/<REGION>/<platform>/ugc.yml, ads.yml     # regional assessments
 
 utils/         # scoring, loading, and rendering helpers
 scripts/       # Excel → YAML import scripts
