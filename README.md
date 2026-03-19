@@ -1,115 +1,54 @@
-# Social Media Platform Evaluation System
+# Data Transparency Index (private repo)
 
-A Quarto-based research reporting system for evaluating social media platforms across multiple regions using a weighted scoring methodology.
+A Quarto-based research reporting system for evaluating social media platform transparency across multiple regions, produced by [NetLab/UFRJ](https://netlab.eco.ufrj.br).
 
-## Project Structure
+Assessments cover two frameworks: **User-Generated Content (UGC)** and **Advertising (ADS)** data transparency, scored using a weighted methodology (0–100).
 
-TBC
+## Public repo
 
-## Technical setup
+The published report lives at [`NetLab-ECO-UFRJ/transparency_index`](https://github.com/NetLab-ECO-UFRJ/transparency_index), deployed via GitHub Pages. That repo is maintained as the `public` branch of this repo and contains only the Quarto landing page — no assessment data, scripts, or utilities.
 
-### Prerequisites
-- Python 3.9+
-- Quarto 1.3+
-- uv (Python package manager)
-
-### Setup
+To update the public repo:
 ```bash
-# Clone repository
-git clone <repository-url>
-cd social-media-eval
+git checkout public
+# make changes
+git push --force public public:main
+git checkout main
+```
 
+## Setup
+
+```bash
 # Install uv if not already installed
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Install Python dependencies
 uv sync
 
-# Install Quarto
-# Visit https://quarto.org/docs/get-started/
+# Install Quarto: https://quarto.org/docs/get-started/
 ```
 
-### Render Reports
+## Rendering
 
 ```bash
-# Render to HTML (uv ensures Python dependencies are available)
-uv run quarto render
-
-# Render to PDF
-uv run quarto render --to pdf
-
-# Preview with live reload
-uv run quarto preview
-
-# Or activate the virtual environment first
-source .venv/bin/activate
-quarto render
+uv run quarto render        # full book → _output/
+uv run quarto preview       # live reload
 ```
 
-Output will be in `_output/` directory.
-
-## Importing Data from Excel
-
-### Overview
-
-The project includes a script to import platform assessment data from Excel files and generate YAML files and QMD reports automatically.
-
-### Before Importing
-
-**Important:** To avoid conflicts or issues with existing data, remove the platform directory before reimporting.
+## Importing data from Excel
 
 ```bash
-# Remove existing platform data 
-rm -rf data/global/*
+# Remove existing platform data before reimporting
+rm -rf data/global/<platform>
 
-# For regional data 
-rm -rf data/regional/BR/*
-```
-
-### Excel File Location
-
-Place your Excel files in the `data/backups/xlsx/` directory. The script expects two files:
-- One for UGC (User-Generated Content) framework responses
-- One for ADS (Advertising) framework responses
-
-### Import Commands
-
-#### Bulk Import (All Platforms)
-
-Import all global platforms:
-
-```bash
-for platform in telegram bluesky discord kwai; do uv run python scripts/transform_excel_to_yaml.py --platform $platform --scope-type global --ads-file "Advertising Framework (respostas).xlsx" --ugc-file "UGC Framework (respostas).xlsx"; done
-```
-
-Import regional in Brazil:
-
-```bash
-for platform in x tiktok linkedin pinterest snapchat; do uv run python scripts/transform_excel_to_yaml.py --platform $platform --scope-type regional --region br --ads-file "Advertising Framework (respostas).xlsx" --ugc-file "UGC Framework (respostas).xlsx"; done
-```
-
-This command:
-- Imports **global scope**: Telegram, Bluesky, Discord, TikTok, Kwai, LinkedIn, Pinterest, Snapchat
-
-#### Individual Platform Import
-
-##### Global Scope
-
-For global assessments:
-
-```bash
+# Global scope
 uv run python scripts/transform_excel_to_yaml.py \
   --platform bluesky \
   --scope-type global \
   --ads-file "Advertising Framework (respostas).xlsx" \
   --ugc-file "UGC Framework (respostas).xlsx"
-```
 
-##### Regional Scope
-
-For regional assessments:
-
-```bash
+# Regional scope
 uv run python scripts/transform_excel_to_yaml.py \
   --platform x \
   --scope-type regional \
@@ -118,67 +57,17 @@ uv run python scripts/transform_excel_to_yaml.py \
   --ugc-file "UGC Framework (respostas).xlsx"
 ```
 
-Note: Both global and regional scopes now use the same Excel file parameters.
+Excel files go in `data/backups/xlsx/`. After import, add the new platform to `_quarto.yml`.
 
-### What the Script Does
+## Project structure
 
-1. **Reads Excel files** from `data/backups/xlsx/`
-2. **Creates YAML files** with normalized answers:
-   - `data/global/{platform}/ugc.yml`
-   - `data/global/{platform}/ads.yml`
-3. **Generates QMD report** from template:
-   - `data/global/{platform}/{platform}.qmd`
-
-### After Import
-
-Once imported, update `_quarto.yml` to include the new platform in the book chapters:
-
-```yaml
-- part: "Global Assessments"
-  chapters:
-    - data/global/bluesky/bluesky.qmd
 ```
+data/
+├── questions_ugc_2025.yml / questions_ads_2025.yml   # framework definitions
+├── global/<platform>/ugc.yml, ads.yml                # global assessments
+└── regional/<REGION>/<platform>/ugc.yml, ads.yml     # regional assessments
 
-Then render the report:
-
-```bash
-uv run quarto render data/global/bluesky/bluesky.qmd --to html
+utils/         # scoring, loading, and rendering helpers
+scripts/       # Excel → YAML import scripts
+chapters/      # report chapters and platform appendices
 ```
-
-## Python API
-
-### Load Data
-```python
-from utils.loader import load_questions, load_answers
-
-# Load all questions
-questions = load_questions()
-
-# Load platform answers
-answers = load_answers('reddit', 'BR')
-```
-
-### Calculate Scores
-```python
-from utils.scoring import calculate_platform_score
-
-# Calculate all scores for a platform
-results = calculate_platform_score('reddit', 'BR')
-
-print(f"Total: {results['total_score']:.2f} / {results['total_max']:.2f}")
-
-# Access category-specific scores
-for category_name, category_data in results['categories'].items():
-    print(f"{category_data['label']}: {category_data['percentage']:.1f}%")
-```
-## License
-
-XXXXX
-
-## Contributing
-
-XXXXX
-
-## Contact
-
-XXXXXXx
