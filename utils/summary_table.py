@@ -375,6 +375,200 @@ def generate_icon_dotplot(scope: str) -> str:
     )
 
 
+def generate_overview_chart():
+    """
+    Generate a matplotlib figure showing platform transparency scores as a
+    vertical beeswarm for UGC and ADS, faceted by region.
+
+    Two subplots (UGC left, ADS right). X axis = regions. Y axis = score 0-100.
+    Each platform is a coloured dot (score-band colour) with a 3-letter label.
+    Beeswarm jitter prevents vertical overlap within each region column.
+
+    Returns:
+        matplotlib Figure
+    """
+    project_root = _find_project_root()
+    ugc_scores = scan_assessments(project_root, 'ugc')
+    ads_scores = scan_assessments(project_root, 'ads')
+
+    REGIONS = ['BR', 'EU', 'UK']
+    REGION_LABELS = ['Brazil', 'European\nUnion', 'United\nKingdom']
+
+    SCORE_COLOR_MAP = [
+        (80, '#308BF2'),
+        (60, '#43B5DF'),
+        (40, '#F3CE49'),
+        (20, '#F88C4A'),
+        (0,  '#F64A9B'),
+    ]
+
+    def score_color(s):
+        for threshold, color in SCORE_COLOR_MAP:
+            if s >= threshold:
+                return color
+        return SCORE_COLOR_MAP[-1][1]
+
+    def beeswarm(items, y_radius=3.0, x_step=0.07):
+        """Return list of (x_offset, score, platform) sorted by score."""
+        sorted_items = sorted(items, key=lambda t: t[1])
+        placed = []  # list of (x, y) already placed
+        result = []
+        candidates = [0]
+        for n in range(1, 12):
+            candidates += [n * x_step, -n * x_step]
+        for platform, score in sorted_items:
+            chosen = candidates[-1]
+            for offset in candidates:
+                collision = any(
+                    ((offset - px) / x_step) ** 2 + ((score - py) / y_radius) ** 2 < 1.0
+                    for px, py in placed
+                )
+                if not collision:
+                    chosen = offset
+                    break
+            placed.append((chosen, score))
+            result.append((chosen, score, platform))
+        return result
+
+    fig, axes = plt.subplots(1, 2, figsize=(11, 7), sharey=True)
+    fig.subplots_adjust(wspace=0.06)
+
+    for ax, (title, scope_scores) in zip(axes, [('UGC', ugc_scores), ('ADS', ads_scores)]):
+        # Score band backgrounds
+        for lo, hi, color, band_label in SCORE_BANDS:
+            ax.axhspan(lo, hi, color=color, alpha=0.12, zorder=0)
+            ax.text(-0.48, (lo + hi) / 2, band_label, fontsize=7,
+                    color='#999', va='center', fontstyle='italic')
+
+        for r_idx, region in enumerate(REGIONS):
+            items = [
+                (normalize_platform_name(platform.lower().split('/')[0].strip()),
+                 float(region_scores[region]))
+                for platform, region_scores in scope_scores.items()
+                if isinstance(region_scores.get(region), (int, float))
+            ]
+            if not items:
+                continue
+
+            for x_off, score, platform in beeswarm(items):
+                x = r_idx + x_off
+                c = score_color(score)
+                ax.scatter(x, score, color=c, s=520, zorder=4,
+                           edgecolors='white', linewidths=0.8)
+                abbr = platform[:3].upper()
+                ax.text(x, score, abbr, fontsize=6, ha='center', va='center',
+                        zorder=5, color='white', fontweight='bold')
+
+        # Vertical separators
+        for x in [0.5, 1.5]:
+            ax.axvline(x, color='#e8e8e8', linewidth=1, zorder=1)
+
+        ax.set_title(title, fontsize=13, fontweight='bold', pad=12)
+        ax.set_xticks(range(len(REGIONS)))
+        ax.set_xticklabels(REGION_LABELS, fontsize=10)
+        ax.set_xlim(-0.5, len(REGIONS) - 0.5)
+        ax.set_ylim(-2, 102)
+        ax.set_yticks([0, 20, 40, 60, 80, 100])
+        ax.tick_params(axis='x', length=0)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['bottom'].set_visible(False)
+
+    axes[0].set_ylabel('Score', fontsize=10)
+    plt.tight_layout()
+    return fig
+
+
+def generate_vertical_dotplot(scope: str) -> str:
+    """
+    Generate a vertical HTML icon dot plot for UGC or ADS assessments.
+
+    Regions are columns (Brazil, EU, UK). The score axis runs vertically
+    (0 at bottom, 100 at top). Icons are placed at their score height and
+    spread into horizontal sub-lanes when scores are too close to avoid overlap.
+
+    Args:
+        scope: Either 'ugc' or 'ads'
+
+    Returns:
+        HTML string with the vertical dot plot
+    """
+    project_root = _find_project_root()
+    scores = scan_assessments(project_root, scope)
+
+    ICON_SIZE = 20
+    TRACK_H = 320
+    LANE_W = ICON_SIZE + 4
+    SCORE_THRESHOLD = 5  # score units before horizontal spreading
+
+    region_meta = {
+        'BR': ('🇧🇷', 'Brazil', REGION_COLORS['BR']),
+        'EU': ('🇪🇺', 'European Union', REGION_COLORS['EU']),
+        'UK': ('🇬🇧', 'United Kingdom', REGION_COLORS['UK']),
+    }
+
+    # Horizontal score band strips (top to bottom = high to low score)
+    band_bg = ''.join(
+        f'<div style="position:absolute;top:{100 - hi}%;height:{hi - lo}%;'
+        f'left:0;right:0;background:{color};opacity:0.18;pointer-events:none;"></div>'
+        for lo, hi, color, _ in SCORE_BANDS
+    )
+
+    # Y-axis tick labels
+    y_axis = ''.join(
+        f'<div style="position:absolute;top:{100 - t}%;right:6px;'
+        f'transform:translateY(-50%);font-size:9px;color:#aaa;line-height:1;">{t}</div>'
+        for t in [0, 20, 40, 60, 80, 100]
+    )
+
+    columns_html = ''
+    for region, (flag, label, color) in region_meta.items():
+        items = [
+            (platform, float(region_scores[region]))
+            for platform, region_scores in scores.items()
+            if isinstance(region_scores.get(region), (int, float))
+        ]
+
+        # Assign to horizontal lanes based on vertical score proximity
+        lanes = _assign_lanes(items)
+        n_lanes = max(len(lanes), 1)
+        track_w = n_lanes * LANE_W
+
+        icons_html = ''
+        for lane_idx, lane in enumerate(lanes):
+            left_px = lane_idx * LANE_W + LANE_W // 2
+            for platform, score in lane:
+                url = _get_icon_url(platform)
+                top_pct = 100 - score
+                icons_html += (
+                    f'<img src="{url}" alt="{platform}" '
+                    f'width="{ICON_SIZE}" height="{ICON_SIZE}" '
+                    f'title="{platform}: {score:.0f}" '
+                    f'style="position:absolute;left:{left_px}px;top:{top_pct}%;'
+                    f'transform:translate(-50%,-50%);display:block;">'
+                )
+
+        columns_html += (
+            f'<div style="display:flex;flex-direction:column;align-items:center;">'
+            f'<div style="font-weight:700;font-size:12px;color:{color};'
+            f'margin-bottom:8px;text-align:center;">{flag}<br>{label}</div>'
+            f'<div style="position:relative;width:{track_w}px;height:{TRACK_H}px;'
+            f'background:#f8f9fa;border:1px solid #e0e0e0;border-radius:4px;">'
+            f'{band_bg}{icons_html}'
+            f'</div>'
+            f'</div>'
+        )
+
+    return (
+        f'<div style="margin:20px 0;font-family:system-ui,-apple-system,sans-serif;'
+        f'display:flex;gap:0;align-items:flex-start;overflow-x:auto;">'
+        f'<div style="position:relative;height:{TRACK_H}px;width:28px;'
+        f'margin-top:52px;flex-shrink:0;">{y_axis}</div>'
+        f'<div style="display:flex;gap:20px;">{columns_html}</div>'
+        f'</div>'
+    )
+
+
 def generate_summary_heatmap(
     scope: str,
     include_average_row: bool = True,

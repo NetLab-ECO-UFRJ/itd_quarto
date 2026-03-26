@@ -23,20 +23,15 @@ The tables below summarize the transparency scores for both User-Generated Conte
 Each score ranges from 0 to 100 points, combining weighted evaluations of special criteria (75% weight) and other operational criteria (25% weight). Higher scores indicate greater transparency and data accessibility for researchers and the public.
 
 ```{python}
-#| label: fig-ugc-dotplot
-#| fig-cap: "UGC transparency scores by region"
+#| label: fig-overview-chart
+#| fig-cap: "Platform transparency scores by region"
 
-from utils.summary_table import generate_icon_dotplot
-from IPython.display import HTML, display
+from utils.summary_table import generate_overview_chart
+import matplotlib.pyplot as plt
 
-display(HTML(generate_icon_dotplot('ugc')))
-```
-
-```{python}
-#| label: fig-ads-dotplot
-#| fig-cap: "Ads transparency scores by region"
-
-display(HTML(generate_icon_dotplot('ads')))
+fig = generate_overview_chart()
+plt.show()
+plt.close(fig)
 ```
 
 ::: {.grid style="margin: 20px 0;"}
