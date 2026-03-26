@@ -18,7 +18,7 @@ book:
     - chapters/key-findings.qmd
     # - chapters/context.qmd
     - chapters/methodology.qmd
-    - chapters/transparency-information-integrity.qmd
+    - chapters/information-integrity.qmd
     - part: "Findings"
       chapters:
         - chapters/responses-ugc.qmd
