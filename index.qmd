@@ -14,20 +14,19 @@ This evaluation system assesses platforms across two critical dimensions:
 
 ## How to Cite
 
-If you use this evaluation framework or report in your research or work, please cite as:
+If you use this report in your research or work, please cite as:
 
 ```bibtex
-@misc{netlab_platform_eval_2025,
-  title = {Social Media Platform Evaluation: Comparative Analysis Framework},
-  author = {{NetLab}},
-  year = {2025},
-  url = {https://example.com/platform-evaluation},
-  note = {Accessed: YYYY-MM-DD}
+@techreport{santini2026datanotfound,
+  title        = {Data Not Found: Social Media Data Transparency for Information Integrity},
+  author       = {Santini, Rose Marie and Leal, Humberto and Salles, Diogo and Bel{\'i}sario, Adriano and Mattos, Bruno and Pinho, Diego},
+  year         = {2026},
+  institution  = {NetLab UFRJ \& Minderoo Centre for Technology and Democracy},
 }
 ```
 
 **APA Style:**
-NetLab. (2025). *Social Media Platform Evaluation: Comparative Analysis Framework*. Retrieved from https://example.com/platform-evaluation
+Santini, R. M., Leal, H., Salles, D., Belisário, A., Mattos, B., & Pinho, D. (2026). *Data Not Found: Social Media Data Transparency for Information Integrity*. NetLab UFRJ & Minderoo Centre for Technology and Democracy.
 
 **ABNT Style:**
-NETLAB. *Social Media Platform Evaluation: Comparative Analysis Framework*. 2025. Disponível em: https://example.com/platform-evaluation. Acesso em: DD MMM. YYYY.
+SANTINI, Rose Marie et al. *Data Not Found: Social Media Data Transparency for Information Integrity*. NetLab UFRJ & Minderoo Centre for Technology and Democracy, 2026.

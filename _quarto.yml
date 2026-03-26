@@ -4,9 +4,9 @@ project:
   # render: 
 
 book:
-  title: "Data Transparency Index"
-  #subtitle: "XX"
-  author: "NetLab/UFRJ"
+  title: "Data Not Found"
+  subtitle: "Social Media Data Transparency for Information Integrity"
+  author: "NetLab/Federal University of Rio de Janeiro and Minderoo Center for Technology and Democracy/University of Cambridge"
   date: today
   repo-url: https://github.com/NetLab-ECO-UFRJ/transparency-index
   repo-actions: [issue]
