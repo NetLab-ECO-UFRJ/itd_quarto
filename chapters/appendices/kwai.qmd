@@ -12,8 +12,6 @@ sources:
     UK: data/global/kwai/ads.yml
 ---
 
-Kwai does not provide an ad repository, either in Brazil or in any other country. At one point, the platform briefly introduced a transparency tool for political and electoral ads in Brazil, in order to comply with Resolution No. 23.732/2024 of the Brazilian Electoral Court (TSE), but the tool was discontinued approximately one month after its launch (Nóbrega, 2024). Additionally, Kwai does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country [@Hale_2024_AnalyzingMisinformation]. Only third-party, scraping-based APIs are available, which fall outside the scope of this work. In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data, Kwai likewise does not offer a graphical interface for this purpose. Furthermore, Kwai does not provide any form of access to or extraction of non-public user-generated content data, either in Brazil or in any other country. As the platform does not provide an ad repository or any API for data access anywhere in the world, assessment items do not apply to our evaluation of transparency and data access in any context. Consequently, all assessment criteria receive negative scores, reflecting the complete absence of data access and transparency mechanisms.
-
 ## Transparency Assessment
 
 
@@ -37,6 +35,8 @@ from utils.responses_aggregator import generate_platform_question_sections
 from utils.platform_summary import generate_platform_summary
 generate_platform_summary("kwai")
 ```
+
+Kwai was assessed under both the UGC and ADS frameworks across the BR, EU, and UK scopes, with all three drawing from the same global dataset. Across both frameworks, every assessment criterion received a negative response: all four UGC special criteria (UGC_SC1–SC4), which together carry 75% of the UGC score weight, returned "no," as did all three ADS special criteria (AD_SC1–AD_SC3), which carry 75% of the ADS score weight. Kwai provides neither a public API enabling programmatic access to user-generated content [@Hale_2024_AnalyzingMisinformation] nor any graphical interface for data access, and it does not operate an advertising repository in any assessed jurisdiction; a brief political-ad transparency tool launched in Brazil was discontinued within approximately one month of its launch [@nobrega_kwai_2024]. All secondary criteria across accessibility, compliance, completeness, consistency, relevance, timeliness, and accuracy likewise scored "no." Both frameworks therefore produce a score of 0, placing Kwai in the Not Available band, which renders systematic, independent research into platform content and advertising on Kwai infeasible under the conditions assessed.
 
 ## Detailed Assessment
 

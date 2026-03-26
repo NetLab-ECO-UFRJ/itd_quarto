@@ -12,38 +12,6 @@ sources:
     UK: data/regional/UK/pinterest/ads.yml
 ---
 
-## Advertising Transparency Notes - Brazil
-
-The platform only provides an API dedicated to business to manage your own ads. Source: https://developers.pinterest.com/docs/api/v5/introduction/?
-
-The platform does not offer a GUI.
-
-As the platform does not provide an ad repository anywhere in the world, this item does not apply to our assessment of transparency and data access in any context.
-
-## Advertising Transparency Notes - EU
-
-Currently, Pinterest only provides access to the REST API 5.23.0, which is tailored to commercial purposes, enabling businesses to engage in content or ad management (Pinterest, n.d.). While this API gives users and/or advertisers the ability to manage ads and measure performance, it does not work as a general ad library API for querying or extracting all ads or advertising content programmatically.
-
-Pinterest does not provide a public API that offers systematic access to an ad repository or the ability to extract advertising content data for broad research purposes.
-
-## User-Generated Content Transparency Notes - Brazil
-
-Pinterest does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country. It only provides management for "pins" of the "operation user_account". The only possible exception could be the /search/partner/pins endpoint, but it is still in beta and was not considered. Also, the documentation provides insufficient explanations about its behavior, but seems to be related to request for content from brand partnerships. Source: https://developers.pinterest.com/docs/api/v5/search_partner_pins, https://developers.pinterest.com/docs/key-concepts/using-beta-and-restricted-features/ and https://help.pinterest.com/business/article/approve-or-remove-paid-partnership-tags
-
-Pinterest does not provide an API that enables programmatic access to or extraction of public user-generated content data, either in Brazil or in any other country
-
-In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data, Pinterest likewise does not offer a graphical interface for this purpose.
-
-## User-Generated Content Transparency Notes - EU
-
-Currently, Pinterest only provides access to the REST API 5.23.0, which is tailored to commercial purposes, enabling businesses to engage in content or ad management (Pinterest, n.d.). Regarding researchers' access to Pinterest data under the EU's DSA, while Pinterest advises that more information can be found on DSA Data Access Portal (Pinterest, n.d.), it also provides a direct Researchers Intake Form "to request access to publicly available data on Pinterest" (Pinterest, 2024), without mentioning any separate API access for research purposes. Even if a researcher were to pursue API access through the DSA Data Access Portal, opened to EU researchers on 29 October 2025, which allows researchers to suggest API access as a data access mechanism, access to a new Pinterest API is unlikely given the platform's stated preference for providing data sets directly.
-
-While Pinterest offers an official developer API that supports access to authenticated users' boards, pins, and certain content objects, it does not provide a general API endpoint for programmatic extraction of public user content unrelated to the authenticated account.
-
-As Pinterest's API does not enable programmatic extraction of public UGC data beyond the authenticated account, this question is not applicable.
-
-Pinterest's API does not enable access to non-public data to approved researchers.
-
 ## Transparency Assessment
 
 
@@ -67,6 +35,8 @@ from utils.responses_aggregator import generate_platform_question_sections
 from utils.platform_summary import generate_platform_summary
 generate_platform_summary("pinterest")
 ```
+
+Pinterest was assessed under the UGC framework (globally, applied uniformly to Brazil, EU, and UK) and the ADS framework (regionally, for Brazil, EU, and UK). The UGC assessment yields a score in the Not Available band: all four special criteria (UGC_SC1–SC4), which together carry 75% of the framework weight, received "no" answers, as Pinterest's current API — `REST API v5` — is scoped exclusively to authenticated account management and does not enable programmatic extraction of public user-generated content data in any jurisdiction; no GUI mechanism for this purpose was identified either. On the ADS framework, Brazil and EU scores fall in the Precarious to Deficient range: Pinterest operates a public Ads Repository that provides GUI-accessible coverage of active and inactive ads, discloses advertiser identities and delivery dates, supports filtering by date interval and thematic category, and returns consistent results across repeated queries. However, all three high-weight ADS special criteria (AD_SC1–SC3) scored "no," as the repository offers no API access and permits no structured data extraction; the current `Pinterest API v5` deprecated the ad repository endpoints that existed in earlier versions. Additional gaps include the absence of payer disclosure, engagement metrics, AI content labeling, and advertiser verification data. For the UK, the Ads Repository returns no results at all, rendering the ADS assessment fully Not Available for that jurisdiction. Taken together, Pinterest's transparency posture is severely constrained for research purposes across all assessed frameworks and regions, with GUI browsability of ads in Brazil and the EU representing the sole positive element of practical use.
 
 ## Detailed Assessment
 

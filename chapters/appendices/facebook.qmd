@@ -12,16 +12,6 @@ sources:
     UK: data/regional/UK/meta/ads.yml
 ---
 
-Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. You can produce
-    analysis and only the result of this analysis can be downloaded. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details
-
-[@Cotter2021]
-
-https://www.facebook.com/ads/library
-
 ## Transparency Assessment
 
 
@@ -45,6 +35,8 @@ from utils.responses_aggregator import generate_platform_question_sections
 from utils.platform_summary import generate_platform_summary
 generate_platform_summary("facebook")
 ```
+
+Facebook (Meta) was assessed under both the UGC and ADS frameworks across Brazil, the European Union, and the United Kingdom. For the UGC framework, the same global dataset was applied to all three regions. All three high-weight UGC special criteria (UGC_SC1–SC3) received a "no" answer: although Meta operates the `Meta Content Library API`, terms and conditions prohibit structured data extraction to users' own infrastructure and access is limited to a pre-approved Secure Research Environment, making it unavailable for independent research purposes. The sole partial credit under UGC comes from UGC_SC4, acknowledging a `Meta Content Library` user interface restricted to approved researchers and accounts meeting minimum follower thresholds. All other UGC criteria scored "no," placing the platform in the Irrelevant band for content transparency. The ADS picture is more differentiated by region: the `Meta Ad Library API` (`ads_archive` endpoint) receives full scores on AD_SC1 and AD_SC3 for EU and UK, covering all ad types served over the past year; Brazil, however, is limited to political and issue ads, yielding partial scores on all three ADS special criteria. Across all regions, the library provides free access, unique advertiser identifiers, ad delivery periods, and audience reach data, but lacks engagement metrics, granular spending data, complete targeting criteria, and specific rate-limit documentation. The ADS framework places Meta in the Restricted or Deficient band depending on the region, while the UGC framework reflects a near-absence of accessible content transparency for independent research.
 
 ## Detailed Assessment
 

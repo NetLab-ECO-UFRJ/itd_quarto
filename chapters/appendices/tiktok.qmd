@@ -12,18 +12,6 @@ sources:
     UK: data/regional/UK/tiktok/ads.yml
 ---
 
-The platform provides an API to access its ad repository, but it only includes data from ads served to users in the European Economic Area, Switzerland and the United Kingdom. The TikTok Commercial Content Library (n.d.), launched in 2023 to comply with the Digital Services Act (DSA), does not include data from other regions (TikTok, n.d.).
-
-As the platform's ad repository only includes data from ads served to users in the European Union (TikTok, n.d.), this item does not apply to the assessment of transparency and data access in the Brazilian context.
-
-TikTok does offer research tools, but access is limited to researchers who are based in or affiliated with academic institutions in the United States, the European Economic Area, the United Kingdom, or Switzerland, as well as those affiliated with non-profit or independent research institutions, organizations, associations, or bodies within the European Union (TikTok, n.d.). As Brazil – and most of the world – fall outside this scope, researchers in other regions are limited to data scraping capabilities (Chemillier et al., 2022).
-
-TikTok does not provide an API that enables programmatic access to or extraction of public user-generated content data for researchers based in Brazil or affiliated with Brazilian institutions (TikTok, n.d.).
-
-In the same way that it does not provide an API enabling programmatic access to or extraction of public user-generated content data for researchers based in Brazil or affiliated with Brazilian institutions, TikTok likewise does not offer a graphical interface for this purpose.
-
-TikTok does not provide any form of access to or extraction of non-public user-generated content data for researchers based in Brazil or affiliated with Brazilian institutions.
-
 ## Transparency Assessment
 
 
@@ -47,6 +35,8 @@ from utils.responses_aggregator import generate_platform_question_sections
 from utils.platform_summary import generate_platform_summary
 generate_platform_summary("tiktok")
 ```
+
+TikTok was assessed under both the UGC and ADS frameworks across three regions: Brazil (BR), the European Union (EU), and the United Kingdom (UK). For Brazil, both frameworks score at the Not Available level: the platform's Research API is restricted to researchers affiliated with institutions in the United States, the European Economic Area, the United Kingdom, or Switzerland, explicitly excluding Brazilian institutions, and the Commercial Content Library covers only ads served to users in the EU and UK. For the EU and UK, the UGC framework is supported by a Research API that enables programmatic extraction of public video data via the [`/v2/research/video/query/`](https://open.tiktokapis.com/v2/research/video/query/) endpoint, with well-documented compliance features including a public changelog, rate-limit disclosures, and AI-generated content labels; however, no graphical interface is provided for UGC data access, retrieval by individual author is unreliable, content language filtering is absent, and new videos may take up to 48 hours to be indexed. For the ADS framework in the EU and UK, the Commercial Content Library API scores full on the criterion for programmatic access to an ad repository and on archive depth covering both active and inactive ads up to one year after last delivery, while structured data extraction via GUI is not available; the library discloses advertiser and funder identities and delivery dates but does not provide engagement metrics, advertiser verification status, AI-disclosure data, ad-category filtering, audience demographics, or spending information. The geographic asymmetry between regions — where access is conditioned on regulatory jurisdiction rather than researcher need — is the defining constraint across both frameworks and substantially limits the comparability of platform transparency research across regions.
 
 ## Detailed Assessment
 

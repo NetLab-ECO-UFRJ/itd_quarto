@@ -36,6 +36,8 @@ from utils.platform_summary import generate_platform_summary
 generate_platform_summary("whatsapp")
 ```
 
+WhatsApp was assessed under both the UGC and ADS frameworks across Brazil, the European Union, and the United Kingdom. For UGC, the global assessment applies uniformly to all three regions: all four special criteria (UGC_SC1–SC4) received "no" answers, indicating that neither WhatsApp nor the Meta Content Library provides any API or graphical interface enabling programmatic access to or extraction of public user-generated content data, which places the platform in the Not Available band for UGC transparency. For ADS, the assessment draws on the Meta Ad Library, which serves ads across Meta's platforms including WhatsApp. In the EU and UK, AD_SC1 (API access) and AD_SC3 (active and inactive ad coverage) score full — the `ads_archive` endpoint retrieves all ad types delivered over the past year — while in Brazil all three special criteria score partial, as programmatic extraction is restricted to ads classified as political or issue ads. Across all regions, strengths include free access, keyword and advertiser-ID search, standardized timestamps, consistent query results, and a maintained API changelog. Key gaps include the absence of engagement data, no terms of service specific to the Ad Library, non-specific rate-limit documentation, incomplete targeting criteria disclosure, and insufficient ad spending granularity. The asymmetry between UGC and ADS performance — the former entirely absent, the latter partially functional and region-dependent — limits the platform's utility for cross-framework transparency research.
+
 ## Detailed Assessment
 
 

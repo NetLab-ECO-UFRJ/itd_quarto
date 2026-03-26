@@ -12,16 +12,6 @@ sources:
     UK: data/regional/UK/meta/ads.yml
 ---
 
-Although Meta offers [Meta Content Library API](https://web.archive.org/web/20251010131827/https://developers.facebook.com/docs/content-library-and-api),
-    extracting data is not allowed and violates the terms of usage. You can produce
-    analysis and only the result of this analysis can be downloaded. See the [API
-    overview](https://web.archive.org/web/20251010132741/https://developers.facebook.com/docs/content-library-and-api/content-library-api/overview)
-    for details
-
-[@Cotter2021]
-
-https://www.facebook.com/ads/library
-
 ## Transparency Assessment
 
 
@@ -45,6 +35,8 @@ from utils.responses_aggregator import generate_platform_question_sections
 from utils.platform_summary import generate_platform_summary
 generate_platform_summary("instagram")
 ```
+
+Instagram was assessed under both the UGC and ADS frameworks across three regions (BR, EU, and UK). For UGC, a single global dataset is applied to all regions: all four special criteria (UGC_SC1–SC4, which together carry 75% of the score weight) received negative or heavily restricted answers, as the `Meta Content Library API` does not permit structured data extraction to users' own infrastructure and limits access to accounts meeting follower thresholds or holding verification status; UGC_SC4 is the sole partial exception, acknowledging a researcher-facing interface that allows some extraction but only for approved academics. All remaining UGC criteria scored negative, yielding a score in the Irrelevant band and rendering Instagram's user-generated content essentially inaccessible for systematic research. For advertising transparency, the picture varies by jurisdiction: in the EU and UK the `Meta Ad Library API` provides full programmatic access to ads of any type (AD_SC1 and AD_SC3 scored full), whereas in Brazil access via the same API is limited to political and issue ads (AD_SC1 scored partial). GUI-based structured extraction is unavailable in the EU (AD_SC2 = no), and partial in Brazil and the UK. The library consistently provides advertiser identifiers, ad period data, removal reasons, and audience reach figures across all regions; persistent gaps include the absence of user engagement data, incomplete targeting-criteria disclosure, missing spending granularity, and no rate-limit documentation specific to the Ad Library. Overall, Instagram presents a strongly asymmetric transparency posture: advertising disclosure is considerably more developed than UGC access, and even the former remains constrained in Brazil relative to the EU and UK.
 
 ## Detailed Assessment
 

@@ -12,8 +12,6 @@ sources:
     UK: data/global/telegram/ads.yml
 ---
 
-Telegram provides an API for third-party apps to display sponsored messages that replicate Telegram functionality. However, the API endpoints do not provide access to a comprehensive ad database. The ad-related endpoints return only active ads in known channels so that the Telegram clients can show them to their users. Telegram also offers the [Telegram Ad Platform](ads.telegram.org) for creating and managing sponsored messages in public channels, enabling advertisers to manage their ads and budgets and monitor performance. However, this is also not a public ad repository for extracting data about all advertising content promoted on the platform.
-
 ## Transparency Assessment
 
 
@@ -37,6 +35,8 @@ from utils.responses_aggregator import generate_platform_question_sections
 from utils.platform_summary import generate_platform_summary
 generate_platform_summary("telegram")
 ```
+
+Telegram was assessed under the UGC framework for the BR, EU, and UK regions, and under the ADS framework for all three regions. The ADS framework received a score of zero across every criterion: all three special criteria and all 33 other criteria returned negative answers, indicating that Telegram does not offer any form of advertising transparency repository or programmatic access to ad data. Under the UGC framework, Telegram's principal strength is the availability of a free, openly documented API (`messages.*` methods and TDLib) that enables structured extraction of public content data without charge. The API also supports author-based search via `messages.search`, keyword search via `messages.searchGlobal`, temporal filtering, historical data retrieval without time limits, and near-real-time content access. The most significant limitation is that the API does not permit membership-free, platform-wide content discovery: access is restricted to channels and groups in which the requesting account or bot is already a member, with `channels.getFullChannel` returning errors for non-member requests. No graphical interface for data extraction exists, and documentation quality is uneven, lacking deprecation policies, per-endpoint rate-limit specifications, and practical usage examples. The UGC score places Telegram in the Restricted band, reflecting functional but structurally constrained API access; the ADS score of zero signals a complete absence of advertising transparency infrastructure, which substantially limits research into sponsored content on the platform.
 
 ## Detailed Assessment
 

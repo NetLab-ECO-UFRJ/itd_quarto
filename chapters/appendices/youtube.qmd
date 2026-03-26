@@ -12,10 +12,6 @@ sources:
     UK: data/regional/UK/youtube/ads.yml
 ---
 
-https://arxiv.org/abs/2506.04422
-
-    https://arxiv.org/pdf/2506.11727
-
 ## Transparency Assessment
 
 
@@ -39,6 +35,8 @@ from utils.responses_aggregator import generate_platform_question_sections
 from utils.platform_summary import generate_platform_summary
 generate_platform_summary("youtube")
 ```
+
+YouTube was assessed under both the UGC and ADS frameworks. The UGC assessment applies globally and covers all three assessed regions (BR, EU, and UK). On UGC special criteria, the `YouTube Data API v3` scores positively on three of four items: it enables programmatic extraction of publicly available content (UGC_SC1), supports full-corpus search (UGC_SC2), and provides free credentials with documented daily quota allocation (UGC_SC3); the absence of a graphical interface for UGC data extraction (UGC_SC4) accounts for the sole zero-scoring special criterion. Across the secondary criteria, the API performs well on compliance, completeness, and timeliness, with structured responses, publicly accessible documentation in multiple languages, a formal deprecation policy, and near-real-time data availability; notable gaps include non-deterministic `search.list` results, the absence of API-level AI-generated content labeling, and no strict language filter. On ADS, performance diverges sharply by region: in the EU, both Google BigQuery and the Google Ads Transparency Center provide functional programmatic access, making it the strongest ADS context; in the UK, access is limited to political ads via BigQuery, with all three special criteria scored partial; in Brazil, a ban on political advertising rendered both tools unable to return current ad data, resulting in zero scores across all three ADS special criteria. Despite its limitations, the transparency for UGC allows longitudinal content research across all regions, while the gap for advertisment transparency outside the UE and the UK constitutes a structural barrier for Brazil and other countries.
 
 ## Detailed Assessment
 

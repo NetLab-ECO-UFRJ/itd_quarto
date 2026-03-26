@@ -12,75 +12,6 @@ sources:
     UK: data/regional/UK/x/ads.yml
 ---
 
-## User-Generated Content Transparency Notes
-
-X/Twitter provides a longstanding API [@x_x_nodate] that has been extensively documented and widely used for academic research [see @10.1145/3428757.3429104]. It remains accessible to anyone with a registered developer account, although, as will be discussed further, such access is now mostly paid [@mimizuka2025postpostapiagestudyingdigital].
-
-Historically, X/Twitter has ensured that any public conversation published on the platform generates publicly available data that can be accessed and explored by developers through its API [@johnson_twitter_2018].
-
-In February 2023, X/Twitter announced that it would begin charging for the use of its API [@nobrega_twitter_2023], which had previously been mostly free of charge [@mimizuka2025postpostapiagestudyingdigital]. Currently, access to the API is divided into four levels: (i) Free, which allows retrieval of data from up to 100 posts per month; (ii) Basic, which, at a cost of USD 200 per month, allows retrieval of up to 15,000 posts; (iii) Pro, which, at a cost of USD 5,000 per month, allows retrieval of up to 1,000,000 posts; and (iv) Enterprise, for which pricing and usage limits are negotiated directly with the platform [@x_access_nodate]. As the free plan offers extremely limited capabilities and is presented by the platform itself as a testing tier [@x_x_nodate], we do not consider it sufficient to characterize access to the platform's API as free of charge.
-
-The platform does not provide a graphical interface for accessing or extracting public user-generated content data.
-
-X/Twitter does not provide any form of access to or extraction of non-public user-generated content data in Brazil [@x_data_privacy_nodate].
-
-Responses to requests to the platform API provide the expected data in an appropriate format, without requiring redirection.
-
-If we consider only the limits of each tier, then tokens can be renewed without fear of data loss during extraction or monitoring. However, if we take into account the restrictions of the Basic Access tier – such as the 100-tweet monthly cap, the rate limit of 1 request every 15 minutes on the main tweet retrieval endpoint, and limited access to certain endpoints (e.g., GET /2/tweets/search/all is not available for Basic Access tier users) –, then the answer is no. Even if tokens are renewed, these tier-based restrictions tied to the app/user prevent continuous and comprehensive data collection.
-
-The GET /2/tweets/:id endpoint [@x_get_nodate] enables the retrieval of comprehensive information about a single tweet, as identified by the provided ID.
-
-The GET /2/users/:id/tweets endpoint [@x_get_nodate-1] enables the retrieval of comprehensive information about tweets made by a specific user, as identified by the provided ID.
-
-The GET /2/tweets/search/recent endpoint [@x_search_nodate-1] enables the retrieval of comprehensive information about tweets published in the past seven days that match specific search terms, while the GET /2/tweets/search/all endpoint [@x_search_nodate], available only to Pro and Enterprise API users, allows querying historical tweets dating back to the launch of the platform.
-
-Based on a review of the X/Twitter API v2 documentation, the API employs largely locale-neutral representations for non-content metadata. Its structure and use of standardized formats ensure significant neutrality– for example, all timestamps (such as created_at) adhere to the ISO 8601 format and are returned in Coordinated Universal Time (UTC) [@x_timezones_nodate]. Similarly, the lang field uses ISO 639-1 language codes [@x_get_nodate-2], and country or regional codes follow standard ISO 3166-1 Alpha-2 conventions [@x_rules_nodate].
-
-The X/Twitter API documentation [@x_x_nodate] is comprehensive and includes all the necessary information, such as account-level limitations, permissions, detailed endpoint descriptions, and both current and upcoming features. It also provides a well-structured migration guide from the previous version to the current one [@x_migration_nodate].
-
-The X/Twitter API documentation includes an extensive set of developer terms, collectively referred to as the "Developer Agreement and Policy" [@x_developer_nodate].
-
-For each endpoint, the X/Twitter API documentation clearly describes the response format, specifying the structure of the returned JSON, the possible fields, their data types, and when they may or may not appear [@x_x_nodate-1].
-
-The API documentation is available only in English [@x_x_nodate].
-
-The X/Twitter API documentation clearly outlines the rate limits and quotas for each access tier, specifying how many requests can be made, within what time frame, and which resources or endpoints are affected [@x_access_nodate].
-
-X/Twitter does not allow content generated with the assistance of artificial intelligence to be labeled. Consequently, this type of information cannot be retrieved via the API.
-
-The X/Twitter API documentation includes a dedicated section on migrating from API v1.1 to v2, outlining the key differences and new features. Although no deprecation timeline is provided, it states that v1.1 endpoints will remain functional but will no longer receive new features or updates [@x_migration_nodate; @x_x_nodate-2].
-
-The X/Twitter API documentation is publicly accessible to anyone [@x_x_nodate].
-
-Although it could be argued that replies and quotes serve this function, X/Twitter does not have dedicated comment features like other social media platforms analyzed in this study.
-
-The X/Twitter API allows the retrieval of Spaces, live audio conversations that remain available for a limited period of time, through specific endpoints, either by known identifiers or by keywords [@x_spaces_nodate].
-
-Although the GET /2/tweets/search/all endpoint [@x_search_nodate] allows querying historical tweets dating back to the launch of the platform, it is only available to Pro and Enterprise API users.
-
-Although it is technically possible to monitor more than 10,000 posts in 24 hours using the X/Twitter API, the cost makes this impractical. The Basic Access tier, priced at USD 200 per month, allows retrieval of only 15,000 posts per month, which severely restricts large-scale monitoring, unless users opt for the Pro Access tier, which costs USD 5,000 per month [@x_access_nodate].
-
-Excluding the seven-day limitation of the GET /2/tweets/search/recent endpoint [@x_search_nodate-1], data acquisitions using the X/Twitter API are consistently reproducible over time.
-
-The platform returns data which matches the parameters and filters applied.
-
-The data extracted through the platform's API reflects what is displayed on the user interface at the moment it is collected, meaning that key elements such as authorship, full content, interaction metrics, and referenced content are consistent with what users see on the interface.
-
-The X/Twitter API v2 documentation indicates that it is possible to filter data by publisher location using the profile_region field. However, this filter is not available to users or developers on the Basic Access tier. Therefore, we were unable to test or validate this functionality [@x_rules_nodate].
-
-The GET /2/tweets/search/recent [@x_search_nodate-1] and GET /2/tweets/search/all [@x_search_nodate] endpoints enable filtering of tweets according to content language through the use of the lang parameter.
-
-The GET /2/tweets/search/recent endpoint [@x_search_nodate-1], though limited to the last seven days, and GET /2/tweets/search/all endpoint [@x_search_nodate] allow filtering of tweets based on specific timeframes.
-
-In our tests, we found that the delay between content appearing on the user interface and being accessible through the API was minimal, typically less than one hour.
-
-## Advertising Transparency Notes
-
-As the platform's ad repository only includes data from ads served to users in the European Union [@x_business_ads_nodate], this item does not apply to the assessment of transparency and data access in the Brazilian context.
-
-The X Ads Repository [@x_x_nodate] includes a graphical user interface that allows users to extract advertising content data, but it is limited to ads served to users within the European Union.
-
-The platform provides an API to access its ad repository, but it only includes data from ads served to users in the European Union. The X Ads Repository, launched in 2023 to comply with the Digital Services Act (DSA), does not include data from other regions [@x_business_ads_nodate].
 
 ## Transparency Assessment
 
@@ -105,6 +36,8 @@ from utils.responses_aggregator import generate_platform_question_sections
 from utils.platform_summary import generate_platform_summary
 generate_platform_summary("x")
 ```
+
+X was assessed under both the UGC and ADS frameworks across three regions (BR, EU, and UK). On the UGC dimension, the platform scores in the Restricted band across all regions: it provides a documented API that exposes public post data — satisfying the two highest-weight special criteria (UGC_SC1 and UGC_SC2) — and performs well on secondary criteria covering data format compliance, endpoint coverage, consistent data returns, and near-real-time availability. However, two special criteria are unmet: API access is not free of charge and no graphical interface for UGC data extraction exists (UGC_SC4); additionally, full-archive search via `GET /2/tweets/search/all`, large-scale monitoring, and geographic filtering are restricted to paid tiers that most researchers cannot access. On the ADS dimension, X scores at or near the Irrelevant band in BR and UK, where no ad repository is provided [@x_business_ads_nodate]; in the EU, despite the existence of the X Ads Repository launched under DSA obligations, all three ADS special criteria received a negative assessment — API access was not granted during the evaluation period and the GUI consistently returned empty CSV files — rendering the repository non-functional in practice. The resulting profile places X as a platform with moderate UGC transparency constrained by cost barriers and with advertising transparency that is effectively unavailable outside the EU and non-functional within it, posing significant limitations for systematic comparative research.
 
 ## Detailed Assessment
 
