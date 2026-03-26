@@ -3,6 +3,7 @@ agents/
 CLAUDE.md
 .playwright-mcp/
 AGENTS.md
+.superpowers/
 
 # Quarto output
 _output/
