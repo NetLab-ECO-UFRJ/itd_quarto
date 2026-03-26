@@ -2,10 +2,6 @@
 title: "Methodology"
 ---
 
-# Methodology
-
-*Scope and boundaries of the analysis*
-
 Our methodological approach to systematically assess data transparency mechanisms, tools, and policies on social media platforms is grounded in data quality principles ([Batini & Scannapieco, 2016](https://link.springer.com/book/10.1007/978-3-319-24106-7)) and designed to be replicable, comparable, and applicable across different platforms and regulatory contexts. It is based on the premise that transparency extends beyond the mere existence of public data, encompassing the conditions under which such data can be accessed, understood, used, and verified, while respecting applicable privacy and data protection frameworks.
 
 Building on this premise, we developed and applied a comprehensive framework to evaluate which types of publicly accessible, public-interest social media data are made available by each assessed platform, covering both UGC and advertising content. Publicly accessible data are defined as content with public visibility—such as posts, comments, channels, public profiles, metadata, and engagement indicators—that can be accessed by any user. Accordingly, private communications, encrypted content, and any data requiring individual consent are explicitly excluded. Social media advertising is treated as inherently public-facing, as it is designed for broad dissemination through paid promotion. By contrast, public UGC, while also publicly accessible, is approached with greater ethical sensitivity due to its contextual and potentially personal nature.
@@ -130,35 +126,6 @@ $$
 \text{Total Score} = S_{SC} + S_{OC}
 $$
 
-# Regional Scope
-
-```{python}
-#| label: regional-setup
-#| include: false
-
-import sys
-from pathlib import Path
-
-project_root = Path.cwd()
-while not (project_root / 'utils').exists() and project_root != project_root.parent:
-    project_root = project_root.parent
-if str(project_root) not in sys.path:
-    sys.path.insert(0, str(project_root))
-```
-
-This chapter lists source mappings in appendix frontmatter for UGC and Ads.
-
-```{python}
-#| label: regional-scope
-#| echo: false
-#| output: asis
-
-from utils.regional_scope import generate_unexpected_links_table
-from IPython.display import HTML, display
-
-display(HTML(generate_unexpected_links_table()))
-```
-
 # Questionnaires
 
 ```{python}
@@ -191,3 +158,36 @@ def display_questions(yaml_file, title):
 display_questions('../data/questions_ugc_2025.yml', 'User-Generated Content (UGC) Questions')
 display_questions('../data/questions_ads_2025.yml', 'Advertising (Ads) Questions')
 ```
+
+
+<!-- 
+# Regional Scope
+
+```{python}
+#| label: regional-setup
+#| include: false
+
+import sys
+from pathlib import Path
+
+project_root = Path.cwd()
+while not (project_root / 'utils').exists() and project_root != project_root.parent:
+    project_root = project_root.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+```
+ -->
+
+<!-- # Data mapping
+This chapter lists source mappings in appendix frontmatter for UGC and Ads.
+
+```{python}
+#| label: regional-scope
+#| echo: false
+#| output: asis
+
+from utils.regional_scope import generate_unexpected_links_table
+from IPython.display import HTML, display
+
+display(HTML(generate_unexpected_links_table()))
+``` -->

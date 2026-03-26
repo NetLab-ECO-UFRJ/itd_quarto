@@ -33,7 +33,7 @@ SCORE_COLORS = {
     'score-regular':       ('#F3CE49', '#66571F'),
     'score-precarious':    ('#F88C4A', '#663A1F'),
     'score-irrelevant':    ('#F64A9B', '#661F40'),
-    'score-not-available': ('#F3496B', '#661F2D'),
+    'score-not-available': ('none', '#555555'),
     'score-missing':       ('#e0e0e0', '#666666'),
 }
 

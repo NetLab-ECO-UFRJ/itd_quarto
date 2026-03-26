@@ -622,7 +622,7 @@ def generate_summary_heatmap(
 .score-regular { background-color: #F3CE49 !important; color: #66571F !important; font-weight: 600 !important; }
 .score-precarious { background-color: #F88C4A !important; color: #663A1F !important; font-weight: 600 !important; }
 .score-irrelevant { background-color: #F64A9B !important; color: #661F40 !important; font-weight: 600 !important; }
-.score-not-available { background-color: #F3496B !important; color: #661F2D !important; font-weight: 600 !important; }
+.score-not-available { background-color: transparent !important; color: #555 !important; font-weight: 600 !important; border: 1px dashed #aaa !important; }
 .score-missing { background-color: #e0e0e0 !important; color: #666 !important; font-style: italic; }
 .average-row td {
     background-color: #4a4a4a !important;

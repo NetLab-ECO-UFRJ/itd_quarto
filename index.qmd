@@ -1,20 +1,20 @@
 ---
-title: "Foreword"
-subtitle: "Comparative Analysis Framework"
+title: "About this Report"
+subtitle: "Social Media Data Transparency for Information Integrity"
 ---
 
-This book presents a systematic framework for evaluating social media platforms across multiple regions, with a focus on accountability, transparency, and user protection.
+This report is the result of a collaboration between NetLab UFRJ, a research laboratory within the Federal University of Rio de Janeiro (Brazil), and the Minderoo Centre for Technology and Democracy at the University of Cambridge (United Kingdom).
 
-This evaluation system assesses platforms across two critical dimensions:
+Founded in 2013, NetLab UFRJ is one of Brazil’s leading internet research laboratories. It is dedicated to investigating and diagnosing the phenomenon of digital disinformation and its consequences in the country, with a focus on producing empirical evidence to generate social impact and inform public debate. Learn more on NetLab UFRJ’s [official website](https://www.netlab.eco.br).
 
-- **User-Generated Content (UGC)**: Content moderation policies, reporting mechanisms, and transparency
-
-- **Advertising (ADS)**: Ad transparency tools, political ad labeling, and targeting restrictions
+The Minderoo Centre for Technology and Democracy is an independent team of researchers based at the University of Cambridge who are rethinking the power relationships between digital technologies, society, and the planet, with the aim of informing policy and shaping public decision-making. Learn more on the Minderoo Centre for Technology and Democracy’s [official website](https://www.minderoo.org/technology-and-democracy).
 
 
 ## How to Cite
 
 If you use this report in your research or work, please cite as:
+
+Santini, R. M., Leal, H., Salles, D., Belisário, A., Mattos, B., & Pinho, D. (2026). *Data Not Found: Social Media Data Transparency for Information Integrity*. NetLab UFRJ & Minderoo Centre for Technology and Democracy.
 
 ```bibtex
 @techreport{santini2026datanotfound,
@@ -24,9 +24,3 @@ If you use this report in your research or work, please cite as:
   institution  = {NetLab UFRJ \& Minderoo Centre for Technology and Democracy},
 }
 ```
-
-**APA Style:**
-Santini, R. M., Leal, H., Salles, D., Belisário, A., Mattos, B., & Pinho, D. (2026). *Data Not Found: Social Media Data Transparency for Information Integrity*. NetLab UFRJ & Minderoo Centre for Technology and Democracy.
-
-**ABNT Style:**
-SANTINI, Rose Marie et al. *Data Not Found: Social Media Data Transparency for Information Integrity*. NetLab UFRJ & Minderoo Centre for Technology and Democracy, 2026.

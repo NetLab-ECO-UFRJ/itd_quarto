@@ -22,42 +22,30 @@ The tables below summarize the transparency scores for both User-Generated Conte
 
 Each score ranges from 0 to 100 points, combining weighted evaluations of special criteria (75% weight) and other operational criteria (25% weight). Higher scores indicate greater transparency and data accessibility for researchers and the public.
 
-```{python}
-#| label: fig-overview-chart
-#| fig-cap: "Platform transparency scores by region"
-
-from utils.summary_table import generate_overview_chart
-import matplotlib.pyplot as plt
-
-fig = generate_overview_chart()
-plt.show()
-plt.close(fig)
-```
-
 ::: {.grid style="margin: 20px 0;"}
 
-::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F3496B; color: #661F2D; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Not available
+::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: transparent; color: #555; border: 1px dashed #aaa; border-radius: 5px; text-align: center; font-weight: 600;"}
+Not available (0)
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F64A9B; color: #661F40; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Negligible
+Negligible (1–20)
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F88C4A; color: #663A1F; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Minimal
+Minimal (21–40)
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #F3CE49; color: #66571F; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Deficient
+Deficient (41–60)
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #43B5DF; color: #1F5366; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Limited
+Limited (61–80)
 :::
 
 ::: {.g-col-6 .g-col-md-2 style="padding: 10px; background-color: #308BF2; color: #143A66; border: 1px solid #ddd; border-radius: 5px; text-align: center; font-weight: 600;"}
-Meaningful
+Meaningful (81–100)
 :::
 
 :::
